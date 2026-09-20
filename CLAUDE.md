@@ -1,8 +1,9 @@
 # Bharat Darshan
 
-Interactive isometric 3D map of India (geography + culture layers), mobile first.
-Read [docs/PLAN.md](docs/PLAN.md) before doing anything: it holds the decisions,
-architecture, data sources, budgets, roadmap, open questions and current status.
+Interactive isometric 3D map of India (geography + culture layers), mobile first,
+English + Hindi. Read [docs/PLAN.md](docs/PLAN.md) before doing anything: it holds
+the decisions, architecture, data sources, budgets, roadmap, open questions and
+current status.
 
 ## Decisions already made (see PLAN.md section 2 for the reasoning)
 
@@ -12,22 +13,34 @@ architecture, data sources, budgets, roadmap, open questions and current status.
 - Two semantic levels (country, state) with lazily loaded state packages. No
   street-level detail.
 - Tap + bottom sheet is the core interaction; hover is a desktop enhancement.
-- Layers are data: four layer types (terrain, choropleth, lines, points) driven by a
-  manifest. Adding a layer should not need engine changes.
+- Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.yaml`
+  plus data files). The engine knows layer types (terrain, choropleth, lines,
+  points), never layer ids. Adding a layer must not need changes under `src/`.
+- Stylised look: a hand-made clay / paper model. No imagery, no realism.
+- English + Hindi from the first screen. Every user-facing string and content field
+  exists in both.
+- Content is AI-drafted and human-reviewed: items carry `sources` and a `status`;
+  only `reviewed` items ship.
 
 ## Rules
 
+- **Dependencies:** the owner avoids them. Plain JS ES modules: no TypeScript, no
+  JSX, no UI framework, no codegen. three.js is the only runtime dependency and Vite
+  the only build tool. Store, router, i18n, bottom sheet and gestures are small
+  in-repo modules. The pipeline stays light too (Python stdlib + numpy + pillow until
+  a step truly needs more). Do not add a dependency without asking.
 - **Boundaries:** only Survey of India-compliant external boundaries (all of J&K and
   Ladakh including Aksai Chin; Arunachal Pradesh). Never swap in default Natural
   Earth or OSM country outlines, including in share images and placeholders.
-- **Engine / UI split:** `src/engine` never imports React; UI code never touches
-  three.js objects. They meet in the store.
-- **Mobile budgets are requirements:** JS <= ~350 KB gz, first-view data <= ~1.5 MB,
-  render on demand, DPR capped. See PLAN.md section 7.
+- **Engine / UI split:** `src/engine` never touches the DOM outside its canvas and
+  label container; UI code never touches three.js objects. They meet in the store.
+- **Mobile budgets are requirements:** JS <= ~300 KB gz, first-view data <= ~1.5 MB,
+  render on demand, DPR capped. See PLAN.md section 8.
 - **Data:** everything is pre-projected offline to EPSG:7755. Raw downloads and
   pipeline caches stay out of git.
 - **Content:** every media item needs credit, licence and source. Cite sources for
   facts; keep a neutral tone on contested topics.
+- **Commits:** one feature or concern per commit.
 
 ## Workflow
 
