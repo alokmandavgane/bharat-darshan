@@ -517,6 +517,19 @@ docs/DEPLOY.md).
 - 2026-09-20: hosting decided: Cloudflare Pages at darshan.alokm.com. Project
   settings, caching headers, limits and the setup steps are in
   [docs/DEPLOY.md](DEPLOY.md). This closes open question 2.
+- 2026-09-20, third session: Phase 1 begun with picking and tap selection. Picking
+  runs on the CPU: the pointer ray marches down the surface the mesh actually draws
+  (the heightmap sampled at the mesh vertices), then the ID raster names the unit.
+  Touch taps get the small-region bias from section 3: a 6 px grid inside 24 px,
+  smallest unit under 12,000 km² wins. A tap selects; the state's fill lifts warm and
+  its outline firms up (a one-texel look-around in the ID raster, in the shader); the
+  sheet head shows the name in the current language, the other names under it, and the
+  unit type, with a close button; Escape clears. Fine pointers get a hover highlight
+  and a tooltip. The selection lives in the URL as `?state=<slug>` (replaceState) so
+  reloads and shared links keep it; double tap still zooms and does not select.
+  `?quality=low|medium|high` forces a tier, for device testing. Verified headless:
+  click on plains and hills, hover + tooltip, touch bias (Goa from a tap 19 px away),
+  Escape, URL restore.
 
 ### What exists
 
@@ -530,9 +543,11 @@ docs/DEPLOY.md).
   1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`.
 - `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
   names (Hindi spellings pending review), native-script names where they differ.
-- `src/engine/`: pack decoder, textures, camera maths, tweens, quality tiers, the
-  terrain shaders and the engine facade. `src/state/`: store and URL. `src/i18n/`:
-  `en.json`, `hi.json`, `t()`. `src/ui/`: gestures, bottom sheet, shell, CSS.
+- `src/engine/`: pack decoder, textures, camera maths, picking, tweens, quality
+  tiers, the terrain shaders and the engine facade. `src/state/`: store and URL.
+  `src/i18n/`: `en.json`, `hi.json`, `t()`. `src/ui/`: gestures, bottom sheet, shell,
+  CSS. Taps and pointer moves go through the store (`tap`, `pointer`) and come back as
+  `selection` and `hover`; the UI never calls the engine.
 - Verified headless (Chromium + SwiftShader through Playwright): no shader errors,
   phone and desktop layouts in both languages, sheet snaps, relief toggle animation,
   drag / wheel / orbit gestures, the 2048 tier swapping in. Screenshots and the
@@ -568,6 +583,10 @@ docs/DEPLOY.md).
   come later.
 - The grid rectangle is a visible board with a 50 km slab under it, crisp-edged, sides
   shaded by the same north-west light. A soft fade looked like a blurred picture.
+- Picking samples the mesh surface, not the raw raster: with a 256² grid on phones the
+  raster has peaks the mesh never draws, and a ray against them lands the selection
+  in front of where the finger is. `area_km2` in `states.json` is counted from raster
+  pixels (within a few percent); it ranks units for the touch bias and is not shown.
 
 ### Next
 
@@ -575,8 +594,9 @@ docs/DEPLOY.md).
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
    and band edges in `src/engine/shaders/terrain.frag.glsl`.
-2. Phase 1: state picking (pointer ray against the CPU heightfield, then the ID
-   raster), tap / hover highlight (the shader already takes `uSelected` and
-   `uHover`), peek cards from `states.json`, camera and layers in the URL, poster
-   image, context-loss test on iOS, state fact cards in both languages.
+2. Phase 1, remaining: state fact cards (structured, sourced facts in both languages:
+   capital, languages, districts, area from an official table), the fly-in state
+   view with lazy packages and the lifted block, camera and layers in the URL, HTML
+   labels, poster image, context-loss test on iOS, list and search so every unit is
+   reachable without hitting it.
 3. Settle open questions 5-7.

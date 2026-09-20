@@ -14,7 +14,9 @@ Never replace these with default Natural Earth / OSM outlines (PLAN.md D6).
 
 Outputs, per tier H (public/data/regions/), all on the project grid (pipeline/lib/grid.py):
   states-ids-{H}.bin.gz   uint8 state id per pixel, 0 = outside India (sample NEAREST)
-  states.json             id -> slug, ISO 3166-2, type, names, bbox + anchor in scene km, area
+  states.json             id -> slug, ISO 3166-2, type, names, bbox + anchor in scene km, and
+                          area_km2 counted from raster pixels (within a few percent; it ranks
+                          units for touch hit-testing and is not a fact to display)
 The border distance fields are made in step 2, which knows where the coast is.
 A colour preview goes to pipeline/tmp/preview-states-{H}.png for eyeballing.
 """
