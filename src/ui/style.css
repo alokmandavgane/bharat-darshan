@@ -305,8 +305,27 @@ body[data-level="state"] .sheet-head { cursor: default; }
   overflow-wrap: anywhere;
   color: var(--accent-deep);
 }
-.sheet-alt { color: var(--muted); margin: 0; font-size: 0.9rem; }
-.sheet-subtitle { color: var(--muted); margin: 0; font-size: 0.95rem; text-align: right; }
+.sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
+.sheet-alt:not([hidden]) + .sheet-subtitle:not(:empty)::before { content: "· "; }
+/* the info button: about the map, and the review status of a card (drafts turn it terracotta) */
+.sheet-info {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-soft);
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.sheet-info::before { content: ""; position: absolute; inset: -8px; }   /* a 44 px touch target */
+.sheet-info svg { width: 16px; height: 16px; }
+.sheet-info:hover, .sheet-info[aria-expanded="true"] { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
+.sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
 .sheet-explore {
   font: inherit;
   font-weight: 700;
@@ -335,8 +354,9 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-close:hover { background: rgba(120, 80, 40, 0.14); }
 .sheet-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet-body {
-  flex: 1;
+  flex: none;                       /* height set by sheet.js: the visible part below the head */
   overflow: hidden;
+  overscroll-behavior: contain;
   padding: 0 20px calc(24px + var(--safe-bottom));
   border-top: 1px solid var(--line);
 }
@@ -346,6 +366,19 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-body ul { margin: 0; padding-left: 18px; }
 .sheet-body li { margin-bottom: 6px; color: var(--muted); font-size: 0.95rem; }
 .sheet-body a { color: var(--accent); }
+.about {
+  margin: 12px 0 4px;
+  padding: 12px 14px 10px;
+  border-radius: 14px;
+  background: rgba(120, 80, 40, 0.06);
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.about p { margin: 0 0 8px; }
+.about h2 { margin: 12px 0 6px; }
+.about ul { padding-left: 16px; }
+.about li { font-size: 0.85rem; margin-bottom: 4px; }
+.about-draft { color: var(--accent); font-weight: 600; }
 
 /* --- fact card --- */
 .facts dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; }
@@ -354,7 +387,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .facts dd { margin: 0; }
 .facts-blurb { margin-top: 14px; }
 .facts-sources, .facts-pending { color: var(--muted); font-size: 0.85rem; }
-.facts-draft { color: var(--accent); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
 
 /* --- list of every unit --- */
 .search {
@@ -386,6 +418,40 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .unit-list button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 .unit-list-name { font-weight: 600; }
 .unit-list-alt { color: var(--muted); font-size: 0.85rem; }
+
+/* --- corner controls: play the tour; reset the view (a compass needle that turns with the map) --- */
+.corner {
+  position: absolute;
+  left: calc(var(--safe-left) + 12px);
+  bottom: calc(var(--sheet-peek, 88px) + 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  isolation: isolate;               /* an open sheet covers the buttons, icons included */
+}
+.corner-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--accent-deep);
+}
+.corner-button svg { width: 20px; height: 20px; fill: currentColor; }
+.corner-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.tour-button[aria-pressed="true"] {
+  background: linear-gradient(180deg, #d1683c, var(--accent-deep));
+  color: var(--accent-ink);
+  border-color: transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
+}
+.tour-button .icon-pause, .tour-button[aria-pressed="true"] .icon-play { display: none; }
+.tour-button[aria-pressed="true"] .icon-pause { display: block; }
+.compass { transform: rotate(var(--yaw, 0deg)); transition: transform 120ms linear; }
+.needle-n { fill: var(--accent); }
+.needle-s { fill: currentColor; fill-opacity: 0.4; }
 
 /* --- markers of point layers: clay tokens standing on the terrain ---
    The button is a zero-size anchor moved with transform: translate(); the token is a
@@ -541,7 +607,8 @@ body[data-level="state"] .sheet-head { cursor: default; }
     transform: none !important;
   }
   .sheet-grip { display: none; }
-  .sheet-body { overflow-y: auto !important; }
+  .sheet-body { flex: 1 1 auto; min-height: 0; height: auto !important; overflow-y: auto !important; }
+  .corner { left: 20px; bottom: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -550,7 +617,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
 
 /* --- poster mode: the share-image render (tools/share-image.mjs, ?poster=1) --- */
 body[data-poster="1"] .menu-button, body[data-poster="1"] .sheet, body[data-poster="1"] .status,
-body[data-poster="1"] .labels, body[data-poster="1"] .tooltip { display: none !important; }
+body[data-poster="1"] .labels, body[data-poster="1"] .tooltip, body[data-poster="1"] .corner { display: none !important; }
 body[data-poster="1"] .topbar { top: 0; bottom: 0; padding: 0; align-items: center; }
 body[data-poster="1"] .wordmark {
   position: absolute;

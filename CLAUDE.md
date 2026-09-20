@@ -56,4 +56,7 @@ sandbox there is no display, but Playwright's Chromium renders WebGL2 through
 SwiftShader (`--use-angle=swiftshader --enable-unsafe-swiftshader`), which catches
 shader errors and layout mistakes; use `?quality=low` there, SwiftShader cannot keep
 up with the desktop tier. `pipeline/tmp/preview-*.png` shows the rasters. `window.bd`
-exposes the store and engine for checks from the console or a script.
+exposes the store and engine for checks from the console or a script. Headless
+Chromium idles requestAnimationFrame unless something draws, so camera flights stall
+there: force frames (mouse moves) or check the end state, and prefer `channel:
+'chromium'` (new headless) over the headless shell for anything animated.

@@ -70,33 +70,54 @@
       </section>
     </div>
 
+    <div class="corner">
+      <button class="corner-button tour-button paper" type="button" hidden aria-pressed="false" data-i18n-aria-label="tour.play" data-i18n-title="tour.play">
+        <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5h3.5v13H7zM13.5 5.5H17v13h-3.5z"/></svg>
+      </button>
+      <button class="corner-button reset-button paper" type="button" data-i18n-aria-label="view.reset" data-i18n-title="view.reset">
+        <svg class="compass" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5"/>
+          <path class="needle-n" d="M12 3.2 15 12H9z"/>
+          <path class="needle-s" d="M12 20.8 9 12h6z"/>
+        </svg>
+      </button>
+    </div>
+
     <section class="sheet paper" data-snap="peek" aria-label="Details">
       <div class="sheet-grip" role="button" tabindex="0" data-i18n-aria-label="sheet.grip"></div>
       <div class="sheet-head">
         <div class="sheet-titles">
           <h1 class="sheet-title" aria-live="polite">India</h1>
-          <p class="sheet-alt" hidden></p>
+          <p class="sheet-meta">
+            <span class="sheet-alt" hidden></span>
+            <span class="sheet-subtitle"></span>
+          </p>
         </div>
-        <p class="sheet-subtitle"></p>
+        <button class="sheet-info" type="button" aria-expanded="false" aria-controls="about" data-i18n-aria-label="sheet.about.heading" data-i18n-title="sheet.about.heading">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.5" r="1.6" fill="currentColor"/><path d="M9.5 10.5H13V18M9.5 18h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         <button class="sheet-explore" type="button" hidden data-i18n="sheet.explore">Explore</button>
         <button class="sheet-close" type="button" hidden data-i18n-aria-label="sheet.close">×</button>
       </div>
       <div class="sheet-body">
+        <div class="about" id="about" hidden>
+          <p class="about-draft" hidden data-i18n="facts.draft.long"></p>
+          <p data-i18n="sheet.about.body"></p>
+          <p data-i18n="sheet.next"></p>
+          <h2 data-i18n="sheet.credits.heading">Data and credits</h2>
+          <ul>
+            <li data-i18n="sheet.credits.boundaries"></li>
+            <li data-i18n="sheet.credits.terrain"></li>
+            <li data-i18n="sheet.credits.code"></li>
+            <li data-i18n="sheet.credits.font"></li>
+          </ul>
+        </div>
         <div class="facts" hidden></div>
         <div class="unit-list-wrap">
           <input class="search" type="search" autocomplete="off" data-i18n-placeholder="list.search" data-i18n-aria-label="list.search">
           <ul class="unit-list"></ul>
         </div>
-        <h2 data-i18n="sheet.about.heading">About this map</h2>
-        <p data-i18n="sheet.about.body"></p>
-        <p data-i18n="sheet.next"></p>
-        <h2 data-i18n="sheet.credits.heading">Data and credits</h2>
-        <ul>
-          <li data-i18n="sheet.credits.boundaries"></li>
-          <li data-i18n="sheet.credits.terrain"></li>
-          <li data-i18n="sheet.credits.code"></li>
-          <li data-i18n="sheet.credits.font"></li>
-        </ul>
       </div>
     </section>
 

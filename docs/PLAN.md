@@ -563,6 +563,22 @@ docs/DEPLOY.md).
   `public/share/og-{en,hi}.jpg` from the app in poster mode (`?poster=1`) with
   Playwright, a tool rather than a dependency. Site URL for the tags: `SITE_URL` env
   or darshan.alokm.com.
+- 2026-09-20, third feedback round. The sheet body now ends at the bottom of the
+  screen at every snap and scrolls whenever the sheet is open (it scrolled only at
+  full, and the half sheet clipped its content); an open sheet also counts as camera
+  padding, so the map stays framed above it. The about text, the how-to hints and the
+  credits sit behind a small info button in the sheet head; a draft card turns that
+  button terracotta with "Draft, not yet reviewed" as its tooltip and leads the about
+  text with the note, instead of a line in every card. Two small corner buttons above
+  the sheet: a compass whose needle turns with the map and resets the view (`home` in
+  the store: item, state view, selection and `?cam=` cleared, the country framed again
+  from the default angles), and a play button that tours every place on show
+  (`src/engine/tour.js`: nearest-neighbour path from the north, a card and a flight per
+  stop with a gentle sway of the yaw, a dwell scaled by the text length, pause and
+  resume, any gesture, tap or card change hands control back, the home view at the
+  end; inside a state view it tours that state's places). Verified headless; note that
+  headless Chromium idles requestAnimationFrame unless something draws, so flights
+  are checked with frames forced (mouse moves) or by their end state.
 
 ### What exists
 
@@ -628,7 +644,8 @@ docs/DEPLOY.md).
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
    and band edges in `src/engine/shaders/terrain.frag.glsl`.
 2. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
-   the drafts default off in `src/main.js`), lazy hi-res state packages (needs open
+   the drafts default off in `src/main.js`; the tour then visits reviewed places only),
+   lazy hi-res state packages (needs open
    question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
    the state view, the poster image (needs open question 6), context-loss test on iOS,
    layer state in the URL, a card carousel for point layers, WebGL sprites for markers

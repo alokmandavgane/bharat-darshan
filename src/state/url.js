@@ -45,8 +45,10 @@ export function syncUrl(store) {
   const slugOf = (id) => (id ? store.get('regions')?.byId?.[id]?.slug : null);
   const idOf = (slug) => (slug ? store.get('regions')?.units?.find((u) => u.slug === slug)?.id ?? null : null);
   let camTouched = false;
+  let userFlight = false;       // a flight the visitor asked for (double tap) counts as moving the camera
   let camTimer = 0;
   let applying = false;         // while applying a popstate, do not write back
+  let pendingBack = null;       // 'restore' | 'clear': what the popstate of our own history.back() should do
   const draftsFromUrl = readUrl().drafts;   // only echo ?drafts=1 when the visitor asked for it
 
   const current = () => {
@@ -63,7 +65,7 @@ export function syncUrl(store) {
   };
 
   const write = (push = false) => {
-    if (applying) return;
+    if (applying || pendingBack) return;
     const url = current();
     if (url === location.pathname + location.search) return;
     if (push) history.pushState({ bdLevel: true }, '', url);
@@ -76,25 +78,39 @@ export function syncUrl(store) {
   store.subscribe('level', (lv, prev, meta) => {
     if (meta.source === 'popstate' || meta.source === 'init') return;
     if (lv?.name === 'state' && prev?.name !== 'state') write(true);
-    else if (lv?.name !== 'state' && history.state?.bdLevel) { applying = true; history.back(); applying = false; }
-    else write();
+    else if (lv?.name !== 'state' && history.state?.bdLevel) {
+      // Leaving the state view is a Back: the entry before it holds the selection, unless
+      // the compass (home) is clearing everything.
+      pendingBack = meta.source === 'home' ? 'clear' : 'restore';
+      history.back();
+    } else write();
   });
+  store.subscribe('flyTo', (req) => { userFlight = !!req; });
   store.subscribe('camera', (_, __, meta) => {
     if (meta.source === 'gesture' || meta.source === 'url') camTouched = true;
-    if (meta.source === 'tween' && store.get('flyTo')) camTouched = true;
+    if (meta.source === 'tween' && userFlight) camTouched = true;
     if (!camTouched) return;
     clearTimeout(camTimer);
     camTimer = setTimeout(() => write(), 300);
   });
+  store.subscribe('home', () => {
+    camTouched = false;
+    userFlight = false;
+    clearTimeout(camTimer);
+    write();
+  });
 
   window.addEventListener('popstate', () => {
     const u = readUrl();
+    const clear = pendingBack === 'clear';
+    pendingBack = null;
     applying = true;
     if (u.lang) store.set('lang', u.lang);
     const viewId = idOf(u.view);
     store.set('level', viewId ? { name: 'state', id: viewId } : { name: 'country', id: null }, { source: 'popstate' });
-    store.set('selection', viewId || idOf(u.state));
+    store.set('selection', clear ? null : viewId || idOf(u.state));
     applying = false;
+    write();
   });
   write();
 }

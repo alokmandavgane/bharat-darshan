@@ -109,6 +109,20 @@ export function createPoints(container, { text, onSelect }) {
     return placed;
   }
 
+  /** Everything on show at a level (the tour's stops), before the zoom thinning. */
+  function list({ active, drafts, level }) {
+    const out = [];
+    for (const [id, { items }] of layers) {
+      if (!active.has(id)) continue;
+      for (const { item } of items) {
+        if (!drafts && item.status !== 'reviewed') continue;
+        if (level.name === 'state' && item.region !== level.id) continue;
+        out.push({ layer: id, item });
+      }
+    }
+    return out;
+  }
+
   function find(layerId, itemId) {
     return layers.get(layerId)?.items.find((x) => x.item.id === itemId)?.item || null;
   }
@@ -117,5 +131,5 @@ export function createPoints(container, { text, onSelect }) {
     return layers.get(layerId)?.layer.categories || [];
   }
 
-  return { setLayer, remove, update, find, categories, get loaded() { return [...layers.keys()]; } };
+  return { setLayer, remove, update, list, find, categories, get loaded() { return [...layers.keys()]; } };
 }
