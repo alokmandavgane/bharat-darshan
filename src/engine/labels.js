@@ -38,12 +38,13 @@ export function createLabels(container, text) {
     it.lang = lang;
   }
 
-  /** Reposition every label for the frame just drawn. */
-  function update({ project, level, viewport, camera, regions, selection, hover, lang }) {
+  /** Reposition every label for the frame just drawn; `avoid` holds rects already taken (markers). */
+  function update({ project, level, viewport, camera, regions, selection, hover, lang, avoid = [] }) {
     if (!container || !items.length || !regions) return;
     const hideAll = level.name !== 'country';
     const kmPerPx = camera.zoom / viewport.h;
-    const placed = [];
+    const placed = [...avoid];
+    let shown = 0;
     for (const it of items) {
       const u = it.unit;
       if (hideAll) { it.el.hidden = true; continue; }
@@ -57,12 +58,13 @@ export function createLabels(container, text) {
       const onScreen = cx > -it.w && cx < viewport.w + it.w && cy > -it.h && cy < viewport.h + it.h;
       const rect = [cx - it.w / 2 - MARGIN, cy - it.h / 2 - MARGIN, cx + it.w / 2 + MARGIN, cy + it.h / 2 + MARGIN];
       const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
-      const show = onScreen && (wanted || fits) && (clear || wanted) && placed.length < MAX_LABELS;
+      const show = onScreen && (wanted || fits) && (clear || wanted) && shown < MAX_LABELS;
       it.el.hidden = !show;
       if (!show) continue;
       it.el.style.transform = `translate(${Math.round(cx)}px, ${Math.round(cy)}px) translate(-50%, -50%)`;
       it.el.classList.toggle('label-active', wanted);
       placed.push(rect);
+      shown++;
     }
   }
 

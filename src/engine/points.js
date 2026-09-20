@@ -52,10 +52,10 @@ export function createPoints(container, { text, onSelect }) {
     layers.delete(id);
   }
 
-  /** Reposition markers for the frame just drawn. */
+  /** Reposition markers for the frame just drawn; returns the screen rects they occupy. */
   function update({ project, level, viewport, camera, active, selected, lang, drafts }) {
-    if (!container) return;
     const placed = [];
+    if (!container) return placed;
     const maxPriority = camera.zoom > 7500 ? 1 : camera.zoom > 3800 ? 2 : 3;
     for (const [id, { layer, items }] of layers) {
       const on = active.has(id);
@@ -71,7 +71,8 @@ export function createPoints(container, { text, onSelect }) {
         const onScreen = cx > -MARKER_W && cx < viewport.w + MARKER_W && cy > -MARKER_H && cy < viewport.h + MARKER_H;
         const rect = [cx - MARKER_W / 2 - GAP, cy - MARKER_H - GAP, cx + MARKER_W / 2 + GAP, cy + GAP];
         const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
-        if (!onScreen || (!clear && !isSel)) { el.hidden = true; continue; }
+        // the most famous places always show, even overlapping a little; the rest keep clear
+        if (!onScreen || (!clear && !isSel && item.priority > 1)) { el.hidden = true; continue; }
         el.hidden = false;
         el.style.transform = `translate(${Math.round(cx)}px, ${Math.round(cy)}px)`;
         el.classList.toggle('marker-active', !!isSel);
@@ -80,6 +81,7 @@ export function createPoints(container, { text, onSelect }) {
         placed.push(rect);
       }
     }
+    return placed;
   }
 
   function find(layerId, itemId) {
