@@ -58,7 +58,9 @@ def write(path, array, dtype, predictor='plane', **meta):
     body = _predict(a, predictor).astype('<' + a.dtype.str[1:]).tobytes()
     raw = MAGIC + len(hj).to_bytes(4, 'little') + hj + body
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with gzip.open(path, 'wb', compresslevel=9) as f:
+    # mtime=0 and no filename: identical input gives identical bytes, so re-running the
+    # pipeline never dirties git for nothing.
+    with open(path, 'wb') as fh, gzip.GzipFile(filename='', mode='wb', fileobj=fh, compresslevel=9, mtime=0) as f:
         f.write(raw)
     return os.path.getsize(path)
 

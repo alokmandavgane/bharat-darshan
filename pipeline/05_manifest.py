@@ -10,7 +10,6 @@ import hashlib
 import json
 import os
 import sys
-import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.lib import grid  # noqa: E402
@@ -47,7 +46,6 @@ def main():
         states = json.load(f)
     manifest = {
         'version': 1,
-        'generated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
         'grid': grid.describe(),
         'tiers': {h: tiers[h] for h in sorted(tiers, key=int)},
         'regions': {'states': 'regions/states.json', 'count': len(states['units'])},

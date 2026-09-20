@@ -126,3 +126,24 @@ def pole_of_inaccessibility(mask):
         last = nxt
     ys, xs = np.nonzero(last)
     return int(ys.mean()) + y0, int(xs.mean()) + x0
+
+
+def convex_hull(points):
+    """Andrew's monotone chain on an (n, 2) array; returns the hull counter-clockwise (y down: visually clockwise)."""
+    pts = np.unique(np.asarray(points, dtype=np.float64), axis=0)
+    if len(pts) < 3:
+        return pts
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+    lower = []
+    for p in pts:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
+            lower.pop()
+        lower.append(p)
+    upper = []
+    for p in pts[::-1]:
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
+            upper.pop()
+        upper.append(p)
+    return np.array(lower[:-1] + upper[:-1])

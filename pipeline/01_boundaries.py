@@ -115,6 +115,18 @@ def build_tier(height, features, soi_rings, units_by_id):
     return width, height, km_per_px, ids.astype(np.uint8), mask
 
 
+def country_hull(ids, width, height):
+    """Convex hull of India (all labelled pixels) in scene km, for tight camera fits."""
+    _, external = raster.edges(ids)
+    rows, cols = np.nonzero(external & (ids != 0))
+    # pixel corners, so the hull encloses whole pixels
+    pts = np.concatenate([np.column_stack([cols + dx, rows + dy]) for dx in (0, 1) for dy in (0, 1)])
+    hull = raster.convex_hull(pts)
+    sx = -grid.WIDTH_KM / 2 + hull[:, 0] * grid.WIDTH_KM / width
+    sz = -grid.HEIGHT_KM / 2 + hull[:, 1] * grid.HEIGHT_KM / height
+    return [[round(float(x), 1), round(float(z), 1)] for x, z in zip(sx, sz)]
+
+
 def unit_stats(ids, km_per_px, width, height):
     stats = {}
     for uid in np.unique(ids):
@@ -189,6 +201,7 @@ def main():
         files[str(height)] = {'ids': os.path.relpath(p1, args.out),
                               'width': width, 'height': height, 'km_per_px': round(km_per_px, 4)}
         stats = unit_stats(ids, km_per_px, width, height)   # the last (finest) tier wins
+        hull = country_hull(ids, width, height)
         preview(ids, os.path.join(ROOT, 'pipeline', 'tmp', f'preview-states-{height}.png'))
 
     out_units = []
@@ -196,9 +209,12 @@ def main():
         entry = {k: u[k] for k in ('id', 'slug', 'iso', 'type', 'name')}
         entry.update(stats[u['id']])
         out_units.append(entry)
+    bbox = [min(u['bbox'][0] for u in out_units), min(u['bbox'][1] for u in out_units),
+            max(u['bbox'][2] for u in out_units), max(u['bbox'][3] for u in out_units)]
     meta = {
         'grid': grid.describe(),
         'tiers': files,
+        'country': {'bbox': bbox, 'hull': hull},
         'attribution': 'State boundaries and India outline: DataMeet India community maps (CC BY 4.0), '
                        'Census of India / Survey of India lineage.',
         'units': out_units,
