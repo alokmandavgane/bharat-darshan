@@ -1,0 +1,22 @@
+{
+  "name": "bharat-darshan",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Interactive isometric 3D map of India: geography and culture layers, English + Hindi.",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "data": "python3 pipeline/build.py"
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
