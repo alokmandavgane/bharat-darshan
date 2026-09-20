@@ -39,11 +39,31 @@
   "states": "regions/states.json",
   "count": 36
  },
+ "layers": [
+  {
+   "id": "places",
+   "type": "points",
+   "title": {
+    "en": "Places",
+    "hi": "स्थान"
+   },
+   "icon": "pin",
+   "group": "culture",
+   "default_on": true,
+   "count": 48,
+   "reviewed": 0,
+   "path": "layers/places.json"
+  }
+ ],
  "attribution": [
   "State boundaries and India outline: DataMeet India community maps (CC BY 4.0), Census of India / Survey of India lineage.",
   "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
  ],
  "files": {
+  "layers/places.json": {
+   "size": 43694,
+   "sha256": "ae3824609303"
+  },
   "regions/states-borders-1024.bin.gz": {
    "size": 95664,
    "sha256": "72901810ebf7"
@@ -61,8 +81,156 @@
    "sha256": "422b4530c4ae"
   },
   "regions/states.json": {
-   "size": 13052,
-   "sha256": "75e5c1a8fd77"
+   "size": 53002,
+   "sha256": "2a663548ed1b"
+  },
+  "regions/outlines/andaman-and-nicobar-islands.json": {
+   "size": 5286,
+   "sha256": "5a60fd5fd03e"
+  },
+  "regions/outlines/andhra-pradesh.json": {
+   "size": 7978,
+   "sha256": "765234beae93"
+  },
+  "regions/outlines/arunachal-pradesh.json": {
+   "size": 4640,
+   "sha256": "bd97b66450bb"
+  },
+  "regions/outlines/assam.json": {
+   "size": 4372,
+   "sha256": "cc0c180ae669"
+  },
+  "regions/outlines/bihar.json": {
+   "size": 4564,
+   "sha256": "a846571738f6"
+  },
+  "regions/outlines/chandigarh.json": {
+   "size": 171,
+   "sha256": "6dd6ac218e57"
+  },
+  "regions/outlines/chhattisgarh.json": {
+   "size": 5312,
+   "sha256": "f43ce7ddc38d"
+  },
+  "regions/outlines/dadra-and-nagar-haveli-and-daman-and-diu.json": {
+   "size": 685,
+   "sha256": "b852233f3a01"
+  },
+  "regions/outlines/delhi.json": {
+   "size": 518,
+   "sha256": "fd4714d2a7ef"
+  },
+  "regions/outlines/goa.json": {
+   "size": 623,
+   "sha256": "4c43ce49c468"
+  },
+  "regions/outlines/gujarat.json": {
+   "size": 7762,
+   "sha256": "4401ed363bb9"
+  },
+  "regions/outlines/haryana.json": {
+   "size": 4281,
+   "sha256": "ec4aecbf666f"
+  },
+  "regions/outlines/himachal-pradesh.json": {
+   "size": 3370,
+   "sha256": "99c06bedd6f3"
+  },
+  "regions/outlines/india.json": {
+   "size": 41218,
+   "sha256": "54f5e113a24c"
+  },
+  "regions/outlines/jammu-and-kashmir.json": {
+   "size": 2976,
+   "sha256": "753501db0411"
+  },
+  "regions/outlines/jharkhand.json": {
+   "size": 4431,
+   "sha256": "3fa3f94b9ff1"
+  },
+  "regions/outlines/karnataka.json": {
+   "size": 8036,
+   "sha256": "527bf33d0cb5"
+  },
+  "regions/outlines/kerala.json": {
+   "size": 3016,
+   "sha256": "2aa1671b8efd"
+  },
+  "regions/outlines/ladakh.json": {
+   "size": 6108,
+   "sha256": "6b0cec7f0995"
+  },
+  "regions/outlines/lakshadweep.json": {
+   "size": 1413,
+   "sha256": "680f748b06e7"
+  },
+  "regions/outlines/madhya-pradesh.json": {
+   "size": 11687,
+   "sha256": "161169b5f418"
+  },
+  "regions/outlines/maharashtra.json": {
+   "size": 8301,
+   "sha256": "9d11d18456fd"
+  },
+  "regions/outlines/manipur.json": {
+   "size": 1356,
+   "sha256": "9dbdebf04799"
+  },
+  "regions/outlines/meghalaya.json": {
+   "size": 1814,
+   "sha256": "dd3ea59528fe"
+  },
+  "regions/outlines/mizoram.json": {
+   "size": 1337,
+   "sha256": "5391ebb556b4"
+  },
+  "regions/outlines/nagaland.json": {
+   "size": 1641,
+   "sha256": "aca74eec1229"
+  },
+  "regions/outlines/odisha.json": {
+   "size": 5065,
+   "sha256": "7cf9a939d92f"
+  },
+  "regions/outlines/puducherry.json": {
+   "size": 1034,
+   "sha256": "9e9f4394a30c"
+  },
+  "regions/outlines/punjab.json": {
+   "size": 3328,
+   "sha256": "c7d1dea23fe8"
+  },
+  "regions/outlines/rajasthan.json": {
+   "size": 9186,
+   "sha256": "1dd84874a4c7"
+  },
+  "regions/outlines/sikkim.json": {
+   "size": 836,
+   "sha256": "0e914bd41d39"
+  },
+  "regions/outlines/tamil-nadu.json": {
+   "size": 5759,
+   "sha256": "12a5594cdc9c"
+  },
+  "regions/outlines/telangana.json": {
+   "size": 4139,
+   "sha256": "f45cb924b5a7"
+  },
+  "regions/outlines/tripura.json": {
+   "size": 1094,
+   "sha256": "c0f2f499ed88"
+  },
+  "regions/outlines/uttar-pradesh.json": {
+   "size": 9472,
+   "sha256": "3cc93da7b2f2"
+  },
+  "regions/outlines/uttarakhand.json": {
+   "size": 2909,
+   "sha256": "7c2b41d2838f"
+  },
+  "regions/outlines/west-bengal.json": {
+   "size": 6582,
+   "sha256": "6e9b478c0907"
   },
   "terrain/heights-1024.bin.gz": {
    "size": 891884,

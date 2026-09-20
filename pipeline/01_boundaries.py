@@ -14,7 +14,13 @@ Never replace these with default Natural Earth / OSM outlines (PLAN.md D6).
 
 Outputs, per tier H (public/data/regions/), all on the project grid (pipeline/lib/grid.py):
   states-ids-{H}.bin.gz   uint8 state id per pixel, 0 = outside India (sample NEAREST)
-  states.json             id -> slug, ISO 3166-2, type, names, bbox + anchor in scene km, area
+  states.json             id -> slug, ISO 3166-2, type, names, validated facts (only shown when
+                          reviewed), bbox + anchor in scene km, and area_km2 counted from raster
+                          pixels (within a few percent; it ranks units for touch hit-testing and is
+                          not a fact to display)
+  outlines/<slug>.json    simplified outline loops of each unit in scene km, traced from the
+                          finest ID raster (walls of the lifted state block, tight camera fits);
+                          outlines/india.json is the whole country
 The border distance fields are made in step 2, which knows where the coast is.
 A colour preview goes to pipeline/tmp/preview-states-{H}.png for eyeballing.
 """
@@ -28,7 +34,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from pipeline.lib import fetch, grid, lcc, pack, raster, shapefile  # noqa: E402
+from pipeline.lib import contour, fetch, grid, lcc, pack, raster, shapefile  # noqa: E402
 
 ROOT = fetch.ROOT
 RAW = os.path.join(fetch.RAW, 'boundaries')
@@ -43,7 +49,44 @@ INPUTS = {
 
 def load_units():
     with open(os.path.join(ROOT, 'content', 'states', 'states.json'), encoding='utf-8') as f:
-        return json.load(f)['units']
+        units = json.load(f)['units']
+    problems = []
+    for u in units:
+        problems += validate_facts(u)
+    if problems:
+        sys.exit('content/states/states.json:\n  ' + '\n  '.join(problems))
+    return units
+
+
+BLURB_MAX = 240
+
+
+def validate_facts(u):
+    """The content rules from PLAN.md section 5, applied to a unit's facts. Returns problems."""
+    f = u.get('facts')
+    tag = u['slug']
+    if not f:
+        return [f'{tag}: no facts']
+    p = []
+    if f.get('status') not in ('draft', 'reviewed'):
+        p.append(f'{tag}: status must be draft or reviewed')
+    for field in ('capital', 'blurb'):
+        v = f.get(field) or {}
+        for lang in ('en', 'hi'):
+            if not v.get(lang):
+                p.append(f'{tag}: {field}.{lang} missing')
+    for lang in ('en', 'hi'):
+        if len((f.get('blurb') or {}).get(lang, '')) > BLURB_MAX:
+            p.append(f'{tag}: blurb.{lang} longer than {BLURB_MAX} characters')
+    if not f.get('languages') or any(not (l.get('en') and l.get('hi')) for l in f['languages']):
+        p.append(f'{tag}: languages need en and hi for every entry')
+    for field in ('area_km2', 'population_2011'):
+        v = f.get(field)
+        if v is not None and (not isinstance(v, int) or v <= 0):
+            p.append(f'{tag}: {field} must be a positive integer or null')
+    if not f.get('sources') or any(not str(s).startswith('http') for s in f['sources']):
+        p.append(f'{tag}: sources must list at least one URL')
+    return p
 
 
 def geojson_rings(path):
@@ -127,6 +170,22 @@ def country_hull(ids, width, height):
     return [[round(float(x), 1), round(float(z), 1)] for x, z in zip(sx, sz)]
 
 
+def write_outlines(ids, width, height, units_by_id, out_dir):
+    """Trace every unit (and the whole country) from the ID raster into simplified loops in scene km."""
+    os.makedirs(out_dir, exist_ok=True)
+    sx = grid.WIDTH_KM / width
+    sz = grid.HEIGHT_KM / height
+    total = 0
+    jobs = [(u['slug'], u['id'], ids == u['id']) for u in units_by_id.values()] + [('india', 0, ids > 0)]
+    for slug, uid, mask in jobs:
+        loops = contour.trace(mask, tol=1.0, min_area=2.0)
+        out = [[[round(-grid.WIDTH_KM / 2 + x * sx, 1), round(-grid.HEIGHT_KM / 2 + y * sz, 1)] for x, y in loop.tolist()] for loop in loops]
+        total += sum(len(l) for l in out)
+        with open(os.path.join(out_dir, f'{slug}.json'), 'w', encoding='utf-8') as f:
+            json.dump({'id': uid, 'slug': slug, 'km_per_px': round(sz, 4), 'loops': out}, f, separators=(',', ':'))
+    print(f'  wrote {len(jobs)} outlines ({total} points) to {os.path.relpath(out_dir, ROOT)}/')
+
+
 def unit_stats(ids, km_per_px, width, height):
     stats = {}
     for uid in np.unique(ids):
@@ -202,11 +261,13 @@ def main():
                               'width': width, 'height': height, 'km_per_px': round(km_per_px, 4)}
         stats = unit_stats(ids, km_per_px, width, height)   # the last (finest) tier wins
         hull = country_hull(ids, width, height)
+        finest = (ids, width, height)
         preview(ids, os.path.join(ROOT, 'pipeline', 'tmp', f'preview-states-{height}.png'))
 
+    write_outlines(finest[0], finest[1], finest[2], units_by_id, os.path.join(out_dir, 'outlines'))
     out_units = []
     for u in units:
-        entry = {k: u[k] for k in ('id', 'slug', 'iso', 'type', 'name')}
+        entry = {k: u[k] for k in ('id', 'slug', 'iso', 'type', 'name', 'facts')}
         entry.update(stats[u['id']])
         out_units.append(entry)
     bbox = [min(u['bbox'][0] for u in out_units), min(u['bbox'][1] for u in out_units),

@@ -11,6 +11,12 @@
 const DEG = Math.PI / 180;
 
 export const LIMITS = { zoom: [180, 9500], yaw: [-40, 40], pitch: [25, 89] };
+export const ZOOM_MIN = { country: 180, state: 30 };
+
+/** The state view allows a much closer look than the country view. */
+export function setZoomFloor(km) {
+  LIMITS.zoom[0] = km;
+}
 
 export function clampCamera(cam) {
   return {
@@ -95,7 +101,7 @@ export function orbitAbout(cam, yaw, pitch, sxPx, syPx, viewport) {
  * @param {{w:number,h:number}} viewport
  * @param {{top:number,right:number,bottom:number,left:number}} pad in pixels
  */
-export function fitBounds(cam, box, viewport, pad) {
+export function fitBounds(cam, box, viewport, pad, opts = {}) {
   const { right, up, forward } = basis(cam.yaw, cam.pitch);
   const ymax = box.ymax ?? 0;
   const pts = box.points || [[box.x0, box.z0], [box.x0, box.z1], [box.x1, box.z0], [box.x1, box.z1]];
@@ -108,7 +114,7 @@ export function fitBounds(cam, box, viewport, pad) {
   const availW = Math.max(40, viewport.w - pad.left - pad.right);
   const availH = Math.max(40, viewport.h - pad.top - pad.bottom);
   const k = Math.max((sx1 - sx0) / availW, (sy1 - sy0) / availH);
-  const zoom = clamp(k * viewport.h, LIMITS.zoom[0], LIMITS.zoom[1]);
+  const zoom = clamp(Math.max(k * viewport.h, opts.minZoom || 0), LIMITS.zoom[0], LIMITS.zoom[1]);
   const kk = zoom / viewport.h;
   // Screen-km coordinates the target must have so the box centre sits at the padded centre.
   const a = (sx0 + sx1) / 2 - ((pad.left - pad.right) / 2) * kk;

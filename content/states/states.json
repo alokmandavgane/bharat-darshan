@@ -1,41 +1,1408 @@
 {
-  "_about": "The 28 states and 8 union territories. `id` is the value stored in the state ID raster (0 = outside India) and must never be renumbered. `source_name` joins to ST_NM in the DataMeet states shapefile. Names: en/hi are required for every unit; `native` is the name in the unit's own official script only where that differs from both. Hindi spellings follow common Government of India usage and are pending review (D10). ISO codes are the current ISO 3166-2:IN set (2023 update: CG, OD, TS, UK).",
-  "units": [
-    { "id": 1,  "slug": "andaman-and-nicobar-islands", "iso": "IN-AN", "type": "ut",    "source_name": "Andaman & Nicobar",  "name": { "en": "Andaman and Nicobar Islands", "hi": "अंडमान और निकोबार द्वीप समूह" } },
-    { "id": 2,  "slug": "andhra-pradesh",              "iso": "IN-AP", "type": "state", "source_name": "Andhra Pradesh",     "name": { "en": "Andhra Pradesh", "hi": "आंध्र प्रदेश", "native": "ఆంధ్ర ప్రదేశ్" } },
-    { "id": 3,  "slug": "arunachal-pradesh",           "iso": "IN-AR", "type": "state", "source_name": "Arunachal Pradesh",  "name": { "en": "Arunachal Pradesh", "hi": "अरुणाचल प्रदेश" } },
-    { "id": 4,  "slug": "assam",                       "iso": "IN-AS", "type": "state", "source_name": "Assam",              "name": { "en": "Assam", "hi": "असम", "native": "অসম" } },
-    { "id": 5,  "slug": "bihar",                       "iso": "IN-BR", "type": "state", "source_name": "Bihar",              "name": { "en": "Bihar", "hi": "बिहार" } },
-    { "id": 6,  "slug": "chandigarh",                  "iso": "IN-CH", "type": "ut",    "source_name": "Chandigarh",         "name": { "en": "Chandigarh", "hi": "चंडीगढ़" } },
-    { "id": 7,  "slug": "chhattisgarh",                "iso": "IN-CG", "type": "state", "source_name": "Chhattisgarh",       "name": { "en": "Chhattisgarh", "hi": "छत्तीसगढ़" } },
-    { "id": 8,  "slug": "dadra-and-nagar-haveli-and-daman-and-diu", "iso": "IN-DH", "type": "ut", "source_name": "Dadra and Nagar Haveli and Daman and Diu", "name": { "en": "Dadra and Nagar Haveli and Daman and Diu", "hi": "दादरा और नगर हवेली और दमन और दीव" } },
-    { "id": 9,  "slug": "delhi",                       "iso": "IN-DL", "type": "ut",    "source_name": "Delhi",              "name": { "en": "Delhi", "hi": "दिल्ली" } },
-    { "id": 10, "slug": "goa",                         "iso": "IN-GA", "type": "state", "source_name": "Goa",                "name": { "en": "Goa", "hi": "गोवा", "native": "गोंय" } },
-    { "id": 11, "slug": "gujarat",                     "iso": "IN-GJ", "type": "state", "source_name": "Gujarat",            "name": { "en": "Gujarat", "hi": "गुजरात", "native": "ગુજરાત" } },
-    { "id": 12, "slug": "haryana",                     "iso": "IN-HR", "type": "state", "source_name": "Haryana",            "name": { "en": "Haryana", "hi": "हरियाणा" } },
-    { "id": 13, "slug": "himachal-pradesh",            "iso": "IN-HP", "type": "state", "source_name": "Himachal Pradesh",   "name": { "en": "Himachal Pradesh", "hi": "हिमाचल प्रदेश" } },
-    { "id": 14, "slug": "jammu-and-kashmir",           "iso": "IN-JK", "type": "ut",    "source_name": "Jammu & Kashmir",    "name": { "en": "Jammu and Kashmir", "hi": "जम्मू और कश्मीर" } },
-    { "id": 15, "slug": "jharkhand",                   "iso": "IN-JH", "type": "state", "source_name": "Jharkhand",          "name": { "en": "Jharkhand", "hi": "झारखंड" } },
-    { "id": 16, "slug": "karnataka",                   "iso": "IN-KA", "type": "state", "source_name": "Karnataka",          "name": { "en": "Karnataka", "hi": "कर्नाटक", "native": "ಕರ್ನಾಟಕ" } },
-    { "id": 17, "slug": "kerala",                      "iso": "IN-KL", "type": "state", "source_name": "Kerala",             "name": { "en": "Kerala", "hi": "केरल", "native": "കേരളം" } },
-    { "id": 18, "slug": "ladakh",                      "iso": "IN-LA", "type": "ut",    "source_name": "Ladakh",             "name": { "en": "Ladakh", "hi": "लद्दाख", "native": "ལ་དྭགས་" } },
-    { "id": 19, "slug": "lakshadweep",                 "iso": "IN-LD", "type": "ut",    "source_name": "Lakshadweep",        "name": { "en": "Lakshadweep", "hi": "लक्षद्वीप", "native": "ലക്ഷദ്വീപ്" } },
-    { "id": 20, "slug": "madhya-pradesh",              "iso": "IN-MP", "type": "state", "source_name": "Madhya Pradesh",     "name": { "en": "Madhya Pradesh", "hi": "मध्य प्रदेश" } },
-    { "id": 21, "slug": "maharashtra",                 "iso": "IN-MH", "type": "state", "source_name": "Maharashtra",        "name": { "en": "Maharashtra", "hi": "महाराष्ट्र" } },
-    { "id": 22, "slug": "manipur",                     "iso": "IN-MN", "type": "state", "source_name": "Manipur",            "name": { "en": "Manipur", "hi": "मणिपुर", "native": "ꯃꯅꯤꯄꯨꯔ" } },
-    { "id": 23, "slug": "meghalaya",                   "iso": "IN-ML", "type": "state", "source_name": "Meghalaya",          "name": { "en": "Meghalaya", "hi": "मेघालय" } },
-    { "id": 24, "slug": "mizoram",                     "iso": "IN-MZ", "type": "state", "source_name": "Mizoram",            "name": { "en": "Mizoram", "hi": "मिज़ोरम" } },
-    { "id": 25, "slug": "nagaland",                    "iso": "IN-NL", "type": "state", "source_name": "Nagaland",           "name": { "en": "Nagaland", "hi": "नागालैंड" } },
-    { "id": 26, "slug": "odisha",                      "iso": "IN-OD", "type": "state", "source_name": "Odisha",             "name": { "en": "Odisha", "hi": "ओडिशा", "native": "ଓଡ଼ିଶା" } },
-    { "id": 27, "slug": "puducherry",                  "iso": "IN-PY", "type": "ut",    "source_name": "Puducherry",         "name": { "en": "Puducherry", "hi": "पुडुचेरी", "native": "புதுச்சேரி" } },
-    { "id": 28, "slug": "punjab",                      "iso": "IN-PB", "type": "state", "source_name": "Punjab",             "name": { "en": "Punjab", "hi": "पंजाब", "native": "ਪੰਜਾਬ" } },
-    { "id": 29, "slug": "rajasthan",                   "iso": "IN-RJ", "type": "state", "source_name": "Rajasthan",          "name": { "en": "Rajasthan", "hi": "राजस्थान" } },
-    { "id": 30, "slug": "sikkim",                      "iso": "IN-SK", "type": "state", "source_name": "Sikkim",             "name": { "en": "Sikkim", "hi": "सिक्किम" } },
-    { "id": 31, "slug": "tamil-nadu",                  "iso": "IN-TN", "type": "state", "source_name": "Tamil Nadu",         "name": { "en": "Tamil Nadu", "hi": "तमिलनाडु", "native": "தமிழ்நாடு" } },
-    { "id": 32, "slug": "telangana",                   "iso": "IN-TS", "type": "state", "source_name": "Telangana",          "name": { "en": "Telangana", "hi": "तेलंगाना", "native": "తెలంగాణ" } },
-    { "id": 33, "slug": "tripura",                     "iso": "IN-TR", "type": "state", "source_name": "Tripura",            "name": { "en": "Tripura", "hi": "त्रिपुरा", "native": "ত্রিপুরা" } },
-    { "id": 34, "slug": "uttar-pradesh",               "iso": "IN-UP", "type": "state", "source_name": "Uttar Pradesh",      "name": { "en": "Uttar Pradesh", "hi": "उत्तर प्रदेश" } },
-    { "id": 35, "slug": "uttarakhand",                 "iso": "IN-UK", "type": "state", "source_name": "Uttarakhand",        "name": { "en": "Uttarakhand", "hi": "उत्तराखंड" } },
-    { "id": 36, "slug": "west-bengal",                 "iso": "IN-WB", "type": "state", "source_name": "West Bengal",        "name": { "en": "West Bengal", "hi": "पश्चिम बंगाल", "native": "পশ্চিমবঙ্গ" } }
-  ]
+ "_about": "The 28 states and 8 union territories. `id` is the value stored in the state ID raster (0 = outside India) and must never be renumbered. `source_name` joins to ST_NM in the DataMeet states shapefile. Names: en/hi are required for every unit; `native` is the name in the unit's own official script only where that differs from both. `facts` are AI-drafted from the listed sources (Wikipedia and Census 2011 tables) and carry `status: draft` until a person has checked them and set `reviewed`; only reviewed facts ship, a dev build or ?drafts=1 shows drafts. Numbers: area_km2 in whole km² (null where figures are contested, see review_notes), population_2011 from Census 2011. Hindi spellings follow common Government of India usage and are pending review (D10). ISO codes are the current ISO 3166-2:IN set (2023 update: CG, OD, TS, UK).",
+ "units": [
+  {
+   "id": 1,
+   "slug": "andaman-and-nicobar-islands",
+   "iso": "IN-AN",
+   "type": "ut",
+   "source_name": "Andaman & Nicobar",
+   "name": {
+    "en": "Andaman and Nicobar Islands",
+    "hi": "अंडमान और निकोबार द्वीप समूह"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Sri Vijaya Puram (Port Blair)",
+     "hi": "श्री विजय पुरम (पोर्ट ब्लेयर)"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 8249,
+    "population_2011": 380581,
+    "blurb": {
+     "en": "An archipelago of over 500 islands in the Bay of Bengal, of which about three dozen are inhabited; India's southernmost point, Indira Point, lies on Great Nicobar.",
+     "hi": "बंगाल की खाड़ी में 500 से अधिक द्वीपों का समूह, जिनमें से लगभग तीन दर्जन बसे हुए हैं; भारत का सबसे दक्षिणी बिंदु, इंदिरा पॉइंट, ग्रेट निकोबार पर है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Andaman_and_Nicobar_Islands",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Port Blair was renamed Sri Vijaya Puram in September 2024; confirm preferred display."
+   }
+  },
+  {
+   "id": 2,
+   "slug": "andhra-pradesh",
+   "iso": "IN-AP",
+   "type": "state",
+   "source_name": "Andhra Pradesh",
+   "name": {
+    "en": "Andhra Pradesh",
+    "hi": "आंध्र प्रदेश",
+    "native": "ఆంధ్ర ప్రదేశ్"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Amaravati",
+     "hi": "अमरावती"
+    },
+    "languages": [
+     {
+      "en": "Telugu",
+      "hi": "तेलुगु"
+     }
+    ],
+    "area_km2": 162975,
+    "population_2011": 49577103,
+    "blurb": {
+     "en": "A long Bay of Bengal coastline, the Krishna and Godavari deltas and the Eastern Ghats; Amaravati on the Krishna is the capital and Visakhapatnam the largest city.",
+     "hi": "बंगाल की खाड़ी का लंबा तट, कृष्णा और गोदावरी के डेल्टा और पूर्वी घाट; कृष्णा तट पर अमरावती राजधानी है और विशाखापत्तनम सबसे बड़ा शहर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Andhra_Pradesh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "2011 population for the post-2014 territory (after the seven Khammam mandals moved); 49,386,799 is also cited."
+   }
+  },
+  {
+   "id": 3,
+   "slug": "arunachal-pradesh",
+   "iso": "IN-AR",
+   "type": "state",
+   "source_name": "Arunachal Pradesh",
+   "name": {
+    "en": "Arunachal Pradesh",
+    "hi": "अरुणाचल प्रदेश"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Itanagar",
+     "hi": "ईटानगर"
+    },
+    "languages": [
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 83743,
+    "population_2011": 1383727,
+    "blurb": {
+     "en": "India's north-eastern frontier in the Eastern Himalaya, from the Brahmaputra plains to snow peaks; home to some 26 major tribes and the first place in India to see the sunrise.",
+     "hi": "पूर्वी हिमालय में भारत का उत्तर-पूर्वी सीमांत, ब्रह्मपुत्र के मैदानों से बर्फीली चोटियों तक; लगभग 26 प्रमुख जनजातियों का घर और भारत में सूर्योदय देखने वाला पहला स्थान।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Arunachal_Pradesh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "slug": "assam",
+   "iso": "IN-AS",
+   "type": "state",
+   "source_name": "Assam",
+   "name": {
+    "en": "Assam",
+    "hi": "असम",
+    "native": "অসম"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Dispur",
+     "hi": "दिसपुर"
+    },
+    "languages": [
+     {
+      "en": "Assamese",
+      "hi": "असमिया"
+     }
+    ],
+    "area_km2": 78438,
+    "population_2011": 31205576,
+    "blurb": {
+     "en": "The Brahmaputra valley, tea gardens and Kaziranga's one-horned rhinos; the gateway to India's north-east, with Dispur, part of Guwahati, as capital.",
+     "hi": "ब्रह्मपुत्र घाटी, चाय बागान और काज़ीरंगा के एक सींग वाले गैंडे; भारत के उत्तर-पूर्व का प्रवेशद्वार, जिसकी राजधानी गुवाहाटी का हिस्सा दिसपुर है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Assam",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Bodo and Bengali have official status in parts of the state."
+   }
+  },
+  {
+   "id": 5,
+   "slug": "bihar",
+   "iso": "IN-BR",
+   "type": "state",
+   "source_name": "Bihar",
+   "name": {
+    "en": "Bihar",
+    "hi": "बिहार"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Patna",
+     "hi": "पटना"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     }
+    ],
+    "area_km2": 94163,
+    "population_2011": 104099452,
+    "blurb": {
+     "en": "The Gangetic plain south of Nepal, with Patna, ancient Pataliputra, on the river; Bodh Gaya and Nalanda mark its place in Buddhist and scholarly history.",
+     "hi": "नेपाल के दक्षिण में गंगा का मैदान; नदी तट पर पटना, प्राचीन पाटलिपुत्र; बोधगया और नालंदा इसके बौद्ध और विद्या के इतिहास के प्रतीक हैं।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Bihar",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "slug": "chandigarh",
+   "iso": "IN-CH",
+   "type": "ut",
+   "source_name": "Chandigarh",
+   "name": {
+    "en": "Chandigarh",
+    "hi": "चंडीगढ़"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Chandigarh",
+     "hi": "चंडीगढ़"
+    },
+    "languages": [
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 114,
+    "population_2011": 1055450,
+    "blurb": {
+     "en": "A planned city designed by Le Corbusier in the 1950s, serving as the capital of both Punjab and Haryana while being a union territory in its own right.",
+     "hi": "1950 के दशक में ल कॉर्बूज़िए द्वारा डिज़ाइन किया गया नियोजित शहर, जो स्वयं केंद्र शासित प्रदेश होते हुए पंजाब और हरियाणा दोनों की राजधानी है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Chandigarh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "slug": "chhattisgarh",
+   "iso": "IN-CG",
+   "type": "state",
+   "source_name": "Chhattisgarh",
+   "name": {
+    "en": "Chhattisgarh",
+    "hi": "छत्तीसगढ़"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Raipur",
+     "hi": "रायपुर"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Chhattisgarhi",
+      "hi": "छत्तीसगढ़ी"
+     }
+    ],
+    "area_km2": 135192,
+    "population_2011": 25545198,
+    "blurb": {
+     "en": "Forested plateau country in central India, carved out of Madhya Pradesh in 2000; rich in coal and iron ore, with the Mahanadi rising in its hills.",
+     "hi": "मध्य भारत का वनाच्छादित पठारी प्रदेश, जो 2000 में मध्य प्रदेश से अलग बना; कोयले और लौह अयस्क से समृद्ध, और महानदी इसकी पहाड़ियों से निकलती है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Chhattisgarh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "slug": "dadra-and-nagar-haveli-and-daman-and-diu",
+   "iso": "IN-DH",
+   "type": "ut",
+   "source_name": "Dadra and Nagar Haveli and Daman and Diu",
+   "name": {
+    "en": "Dadra and Nagar Haveli and Daman and Diu",
+    "hi": "दादरा और नगर हवेली और दमन और दीव"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Daman",
+     "hi": "दमन"
+    },
+    "languages": [
+     {
+      "en": "Gujarati",
+      "hi": "गुजराती"
+     },
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 603,
+    "population_2011": 586956,
+    "blurb": {
+     "en": "Three former Portuguese enclaves on and near Gujarat's coast, merged into one union territory in 2020; Daman is the capital and Diu an island town with a 16th-century fort.",
+     "hi": "गुजरात के तट पर और उसके पास तीन पूर्व पुर्तगाली क्षेत्र, जिन्हें 2020 में एक केंद्र शासित प्रदेश में मिलाया गया; दमन राजधानी है और दीव 16वीं सदी के किले वाला द्वीप नगर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli_and_Daman_and_Diu",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Population is the sum of the two 2011 union territories."
+   }
+  },
+  {
+   "id": 9,
+   "slug": "delhi",
+   "iso": "IN-DL",
+   "type": "ut",
+   "source_name": "Delhi",
+   "name": {
+    "en": "Delhi",
+    "hi": "दिल्ली"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "New Delhi",
+     "hi": "नई दिल्ली"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     },
+     {
+      "en": "Punjabi",
+      "hi": "पंजाबी"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     }
+    ],
+    "area_km2": 1483,
+    "population_2011": 16787941,
+    "blurb": {
+     "en": "The National Capital Territory on the Yamuna, seat of the Union government; layers of cities from the Sultanate and Mughal eras to Lutyens' New Delhi.",
+     "hi": "यमुना तट पर राष्ट्रीय राजधानी क्षेत्र, केंद्र सरकार का केंद्र; सल्तनत और मुग़ल काल से लेकर लुटियंस की नई दिल्ली तक शहरों की परतें।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Delhi",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "slug": "goa",
+   "iso": "IN-GA",
+   "type": "state",
+   "source_name": "Goa",
+   "name": {
+    "en": "Goa",
+    "hi": "गोवा",
+    "native": "गोंय"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Panaji",
+     "hi": "पणजी"
+    },
+    "languages": [
+     {
+      "en": "Konkani",
+      "hi": "कोंकणी"
+     }
+    ],
+    "area_km2": 3702,
+    "population_2011": 1458545,
+    "blurb": {
+     "en": "India's smallest state by area, on the Konkan coast; Portuguese rule until 1961 left churches, cuisine and architecture, and its beaches draw visitors year-round.",
+     "hi": "क्षेत्रफल में भारत का सबसे छोटा राज्य, कोंकण तट पर; 1961 तक पुर्तगाली शासन ने गिरजाघर, व्यंजन और वास्तुकला छोड़ी, और इसके समुद्र तट सालभर पर्यटकों को खींचते हैं।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Goa",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Marathi may also be used for official purposes."
+   }
+  },
+  {
+   "id": 11,
+   "slug": "gujarat",
+   "iso": "IN-GJ",
+   "type": "state",
+   "source_name": "Gujarat",
+   "name": {
+    "en": "Gujarat",
+    "hi": "गुजरात",
+    "native": "ગુજરાત"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Gandhinagar",
+     "hi": "गांधीनगर"
+    },
+    "languages": [
+     {
+      "en": "Gujarati",
+      "hi": "गुजराती"
+     }
+    ],
+    "area_km2": 196024,
+    "population_2011": 60439692,
+    "blurb": {
+     "en": "India's longest coastline, the Rann of Kutch salt flats, Gir's Asiatic lions and the Sabarmati; Gandhinagar is the capital and Ahmedabad the largest city.",
+     "hi": "भारत की सबसे लंबी तटरेखा, कच्छ के रण के नमक के मैदान, गिर के एशियाई शेर और साबरमती; गांधीनगर राजधानी है और अहमदाबाद सबसे बड़ा शहर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Gujarat",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Area is also cited as 196,244 km²."
+   }
+  },
+  {
+   "id": 12,
+   "slug": "haryana",
+   "iso": "IN-HR",
+   "type": "state",
+   "source_name": "Haryana",
+   "name": {
+    "en": "Haryana",
+    "hi": "हरियाणा"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Chandigarh",
+     "hi": "चंडीगढ़"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Punjabi",
+      "hi": "पंजाबी"
+     }
+    ],
+    "area_km2": 44212,
+    "population_2011": 25351462,
+    "blurb": {
+     "en": "Wrapped around Delhi on three sides, on the plains between the Yamuna and the Ghaggar; Kurukshetra of the Mahabharata and the Gurugram business hub lie here.",
+     "hi": "यमुना और घग्गर के बीच के मैदानों में, तीन ओर से दिल्ली को घेरे हुए; महाभारत का कुरुक्षेत्र और गुरुग्राम का व्यापार केंद्र यहीं हैं।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Haryana",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "slug": "himachal-pradesh",
+   "iso": "IN-HP",
+   "type": "state",
+   "source_name": "Himachal Pradesh",
+   "name": {
+    "en": "Himachal Pradesh",
+    "hi": "हिमाचल प्रदेश"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Shimla",
+     "hi": "शिमला"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Sanskrit",
+      "hi": "संस्कृत"
+     }
+    ],
+    "area_km2": 55673,
+    "population_2011": 6864602,
+    "blurb": {
+     "en": "Western Himalayan hill state from the Shivaliks to Lahaul and Spiti; apple orchards, the Kullu and Kangra valleys, and Shimla, the old summer capital of British India.",
+     "hi": "शिवालिक से लाहौल-स्पीति तक फैला पश्चिमी हिमालयी पहाड़ी राज्य; सेब के बाग़, कुल्लू और कांगड़ा घाटियाँ, और ब्रिटिश भारत की पुरानी ग्रीष्मकालीन राजधानी शिमला।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Himachal_Pradesh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Dharamshala is the winter capital."
+   }
+  },
+  {
+   "id": 14,
+   "slug": "jammu-and-kashmir",
+   "iso": "IN-JK",
+   "type": "ut",
+   "source_name": "Jammu & Kashmir",
+   "name": {
+    "en": "Jammu and Kashmir",
+    "hi": "जम्मू और कश्मीर"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Srinagar (summer), Jammu (winter)",
+     "hi": "श्रीनगर (ग्रीष्म), जम्मू (शीत)"
+    },
+    "languages": [
+     {
+      "en": "Kashmiri",
+      "hi": "कश्मीरी"
+     },
+     {
+      "en": "Dogri",
+      "hi": "डोगरी"
+     },
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": null,
+    "population_2011": 12267013,
+    "blurb": {
+     "en": "The Kashmir valley with Srinagar and Dal Lake, the Jammu plains and hills, and the Pir Panjal between them; a union territory since 2019, with Srinagar and Jammu as summer and winter capitals.",
+     "hi": "श्रीनगर और डल झील वाली कश्मीर घाटी, जम्मू के मैदान और पहाड़ियाँ, और बीच में पीर पंजाल; 2019 से केंद्र शासित प्रदेश, जिसकी ग्रीष्म और शीतकालीन राजधानियाँ श्रीनगर और जम्मू हैं।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Jammu_and_Kashmir_(union_territory)",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Area left empty: published figures differ on whether the parts of the former state under Pakistani and Chinese control are counted; use the official Survey of India figure. Population is the 2011 state figure less the Leh and Kargil districts."
+   }
+  },
+  {
+   "id": 15,
+   "slug": "jharkhand",
+   "iso": "IN-JH",
+   "type": "state",
+   "source_name": "Jharkhand",
+   "name": {
+    "en": "Jharkhand",
+    "hi": "झारखंड"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Ranchi",
+     "hi": "राँची"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     }
+    ],
+    "area_km2": 79716,
+    "population_2011": 32988134,
+    "blurb": {
+     "en": "The Chota Nagpur plateau, separated from Bihar in 2000; forests and waterfalls, a large Adivasi population, and much of India's coal and mineral wealth.",
+     "hi": "छोटा नागपुर का पठार, जो 2000 में बिहार से अलग हुआ; वन और जलप्रपात, बड़ी आदिवासी आबादी, और भारत के कोयले तथा खनिज संपदा का बड़ा हिस्सा।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Jharkhand",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Urdu, Bengali, Santali and several other languages have second official status."
+   }
+  },
+  {
+   "id": 16,
+   "slug": "karnataka",
+   "iso": "IN-KA",
+   "type": "state",
+   "source_name": "Karnataka",
+   "name": {
+    "en": "Karnataka",
+    "hi": "कर्नाटक",
+    "native": "ಕರ್ನಾಟಕ"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Bengaluru",
+     "hi": "बेंगलुरु"
+    },
+    "languages": [
+     {
+      "en": "Kannada",
+      "hi": "कन्नड़"
+     }
+    ],
+    "area_km2": 191791,
+    "population_2011": 61095297,
+    "blurb": {
+     "en": "From the Western Ghats and the Arabian Sea coast to the Deccan plateau; Bengaluru's technology industry, Mysuru's palaces and the ruins of Hampi.",
+     "hi": "पश्चिमी घाट और अरब सागर तट से दक्कन के पठार तक; बेंगलुरु का तकनीकी उद्योग, मैसूरु के महल और हम्पी के खंडहर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Karnataka",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "slug": "kerala",
+   "iso": "IN-KL",
+   "type": "state",
+   "source_name": "Kerala",
+   "name": {
+    "en": "Kerala",
+    "hi": "केरल",
+    "native": "കേരളം"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Thiruvananthapuram",
+     "hi": "तिरुवनंतपुरम"
+    },
+    "languages": [
+     {
+      "en": "Malayalam",
+      "hi": "मलयालम"
+     }
+    ],
+    "area_km2": 38863,
+    "population_2011": 33406061,
+    "blurb": {
+     "en": "A narrow strip between the Western Ghats and the Arabian Sea; backwaters, monsoon forests and spice gardens, and India's highest literacy rate.",
+     "hi": "पश्चिमी घाट और अरब सागर के बीच की संकरी पट्टी; बैकवॉटर, मानसूनी वन और मसालों के बाग़, और भारत की सबसे ऊँची साक्षरता दर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Kerala",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "slug": "ladakh",
+   "iso": "IN-LA",
+   "type": "ut",
+   "source_name": "Ladakh",
+   "name": {
+    "en": "Ladakh",
+    "hi": "लद्दाख",
+    "native": "ལ་དྭགས་"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Leh",
+     "hi": "लेह"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     },
+     {
+      "en": "Bhoti",
+      "hi": "भोटी"
+     },
+     {
+      "en": "Purgi",
+      "hi": "पुर्गी"
+     }
+    ],
+    "area_km2": null,
+    "population_2011": 274289,
+    "blurb": {
+     "en": "High, cold desert between the Karakoram and the Himalaya on the upper Indus; Buddhist monasteries, Pangong and Tso Moriri lakes, and some of the highest motorable passes on Earth.",
+     "hi": "काराकोरम और हिमालय के बीच ऊपरी सिंधु पर ऊँचा, ठंडा रेगिस्तान; बौद्ध मठ, पैंगोंग और त्सो मोरीरी झीलें, और दुनिया के सबसे ऊँचे मोटर-योग्य दर्रों में से कुछ।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Ladakh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Area left empty for the same reason as Jammu and Kashmir. Kargil is the second seat of administration. Population is Leh plus Kargil districts, 2011."
+   }
+  },
+  {
+   "id": 19,
+   "slug": "lakshadweep",
+   "iso": "IN-LD",
+   "type": "ut",
+   "source_name": "Lakshadweep",
+   "name": {
+    "en": "Lakshadweep",
+    "hi": "लक्षद्वीप",
+    "native": "ലക്ഷദ്വീപ്"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Kavaratti",
+     "hi": "कवरत्ती"
+    },
+    "languages": [
+     {
+      "en": "Malayalam",
+      "hi": "मलयालम"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 32,
+    "population_2011": 64473,
+    "blurb": {
+     "en": "India's smallest union territory: 36 coral islands and atolls in the Arabian Sea, ten of them inhabited, with lagoons and reefs; Kavaratti is the capital.",
+     "hi": "भारत का सबसे छोटा केंद्र शासित प्रदेश: अरब सागर में 36 प्रवाल द्वीप और एटॉल, जिनमें दस बसे हुए हैं, लैगून और चट्टानों के साथ; कवरत्ती राजधानी है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Lakshadweep",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "slug": "madhya-pradesh",
+   "iso": "IN-MP",
+   "type": "state",
+   "source_name": "Madhya Pradesh",
+   "name": {
+    "en": "Madhya Pradesh",
+    "hi": "मध्य प्रदेश"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Bhopal",
+     "hi": "भोपाल"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     }
+    ],
+    "area_km2": 308252,
+    "population_2011": 72626809,
+    "blurb": {
+     "en": "The 'heart of India' on the Vindhya and Satpura ranges, source of the Narmada; Khajuraho's temples, Sanchi's stupa and the tiger reserves of Kanha and Bandhavgarh.",
+     "hi": "विंध्य और सतपुड़ा पर्वतमालाओं पर 'भारत का हृदय', नर्मदा का उद्गम; खजुराहो के मंदिर, साँची का स्तूप और कान्हा तथा बांधवगढ़ के बाघ अभयारण्य।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Madhya_Pradesh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "slug": "maharashtra",
+   "iso": "IN-MH",
+   "type": "state",
+   "source_name": "Maharashtra",
+   "name": {
+    "en": "Maharashtra",
+    "hi": "महाराष्ट्र"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Mumbai",
+     "hi": "मुंबई"
+    },
+    "languages": [
+     {
+      "en": "Marathi",
+      "hi": "मराठी"
+     }
+    ],
+    "area_km2": 307713,
+    "population_2011": 112374333,
+    "blurb": {
+     "en": "India's second most populous state, from the Konkan coast over the Western Ghats to the Deccan; Mumbai is its capital and the country's financial centre.",
+     "hi": "जनसंख्या में भारत का दूसरा सबसे बड़ा राज्य, कोंकण तट से पश्चिमी घाट के पार दक्कन तक; मुंबई इसकी राजधानी और देश का वित्तीय केंद्र है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Maharashtra",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "slug": "manipur",
+   "iso": "IN-MN",
+   "type": "state",
+   "source_name": "Manipur",
+   "name": {
+    "en": "Manipur",
+    "hi": "मणिपुर",
+    "native": "ꯃꯅꯤꯄꯨꯔ"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Imphal",
+     "hi": "इंफाल"
+    },
+    "languages": [
+     {
+      "en": "Manipuri (Meitei)",
+      "hi": "मणिपुरी (मैतेई)"
+     }
+    ],
+    "area_km2": 22327,
+    "population_2011": 2855794,
+    "blurb": {
+     "en": "A ring of hills around the Imphal valley and Loktak, the north-east's largest freshwater lake; birthplace of modern polo and home of the Manipuri classical dance.",
+     "hi": "इंफाल घाटी और उत्तर-पूर्व की सबसे बड़ी मीठे पानी की झील लोकतक के चारों ओर पहाड़ियों का घेरा; आधुनिक पोलो का जन्मस्थान और मणिपुरी शास्त्रीय नृत्य का घर।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Manipur",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "2011 population is also published as 2,570,390 excluding three sub-divisions of Senapati district."
+   }
+  },
+  {
+   "id": 23,
+   "slug": "meghalaya",
+   "iso": "IN-ML",
+   "type": "state",
+   "source_name": "Meghalaya",
+   "name": {
+    "en": "Meghalaya",
+    "hi": "मेघालय"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Shillong",
+     "hi": "शिलांग"
+    },
+    "languages": [
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     },
+     {
+      "en": "Khasi",
+      "hi": "खासी"
+     },
+     {
+      "en": "Garo",
+      "hi": "गारो"
+     }
+    ],
+    "area_km2": 22429,
+    "population_2011": 2966889,
+    "blurb": {
+     "en": "The 'abode of clouds' on the plateau south of the Brahmaputra; Cherrapunji and Mawsynram are among the wettest places on Earth, and living root bridges span its streams.",
+     "hi": "ब्रह्मपुत्र के दक्षिण के पठार पर 'बादलों का घर'; चेरापूँजी और मॉसिनराम पृथ्वी के सबसे नम स्थानों में हैं, और जीवित जड़ों के पुल इसकी धाराओं को पार करते हैं।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Meghalaya",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "slug": "mizoram",
+   "iso": "IN-MZ",
+   "type": "state",
+   "source_name": "Mizoram",
+   "name": {
+    "en": "Mizoram",
+    "hi": "मिज़ोरम"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Aizawl",
+     "hi": "आइज़ोल"
+    },
+    "languages": [
+     {
+      "en": "Mizo",
+      "hi": "मिज़ो"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 21081,
+    "population_2011": 1097206,
+    "blurb": {
+     "en": "Steep, forested ridges running north to south on the Myanmar border; a largely Mizo-speaking state with one of India's highest literacy rates.",
+     "hi": "म्यांमार की सीमा पर उत्तर से दक्षिण फैली खड़ी, वनाच्छादित पर्वत श्रेणियाँ; मुख्यतः मिज़ो भाषी राज्य, भारत की सर्वोच्च साक्षरता दरों में से एक।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Mizoram",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "slug": "nagaland",
+   "iso": "IN-NL",
+   "type": "state",
+   "source_name": "Nagaland",
+   "name": {
+    "en": "Nagaland",
+    "hi": "नागालैंड"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Kohima",
+     "hi": "कोहिमा"
+    },
+    "languages": [
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 16579,
+    "population_2011": 1978502,
+    "blurb": {
+     "en": "Hill state on the Myanmar border, home to the Naga peoples and their December Hornbill Festival; Kohima was the site of a decisive battle in 1944.",
+     "hi": "म्यांमार की सीमा पर पहाड़ी राज्य, नागा समुदायों और उनके दिसंबर के हॉर्नबिल उत्सव का घर; कोहिमा 1944 की निर्णायक लड़ाई का स्थल था।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Nagaland",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "slug": "odisha",
+   "iso": "IN-OD",
+   "type": "state",
+   "source_name": "Odisha",
+   "name": {
+    "en": "Odisha",
+    "hi": "ओडिशा",
+    "native": "ଓଡ଼ିଶା"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Bhubaneswar",
+     "hi": "भुवनेश्वर"
+    },
+    "languages": [
+     {
+      "en": "Odia",
+      "hi": "ओड़िया"
+     }
+    ],
+    "area_km2": 155707,
+    "population_2011": 41974218,
+    "blurb": {
+     "en": "The Mahanadi delta and the Bay of Bengal coast, with Puri's Jagannath temple, the Sun Temple at Konark and Chilika, Asia's largest brackish lagoon.",
+     "hi": "महानदी का डेल्टा और बंगाल की खाड़ी का तट; पुरी का जगन्नाथ मंदिर, कोणार्क का सूर्य मंदिर और एशिया का सबसे बड़ा खारे पानी का लैगून चिल्का।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Odisha",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "slug": "puducherry",
+   "iso": "IN-PY",
+   "type": "ut",
+   "source_name": "Puducherry",
+   "name": {
+    "en": "Puducherry",
+    "hi": "पुडुचेरी",
+    "native": "புதுச்சேரி"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Puducherry",
+     "hi": "पुडुचेरी"
+    },
+    "languages": [
+     {
+      "en": "Tamil",
+      "hi": "तमिल"
+     },
+     {
+      "en": "Malayalam",
+      "hi": "मलयालम"
+     },
+     {
+      "en": "Telugu",
+      "hi": "तेलुगु"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     },
+     {
+      "en": "French",
+      "hi": "फ़्रांसीसी"
+     }
+    ],
+    "area_km2": 490,
+    "population_2011": 1247953,
+    "blurb": {
+     "en": "Four former French enclaves: Puducherry and Karaikal on the Tamil coast, Mahé in Kerala and Yanam in Andhra Pradesh; the old town keeps its French grid and villas.",
+     "hi": "चार पूर्व फ़्रांसीसी क्षेत्र: तमिल तट पर पुडुचेरी और कराईकल, केरल में माहे और आंध्र प्रदेश में यानम; पुराना शहर अपनी फ़्रांसीसी सड़क-योजना और हवेलियाँ सँजोए है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Puducherry_(union_territory)",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Malayalam and Telugu are official in Mahé and Yanam respectively."
+   }
+  },
+  {
+   "id": 28,
+   "slug": "punjab",
+   "iso": "IN-PB",
+   "type": "state",
+   "source_name": "Punjab",
+   "name": {
+    "en": "Punjab",
+    "hi": "पंजाब",
+    "native": "ਪੰਜਾਬ"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Chandigarh",
+     "hi": "चंडीगढ़"
+    },
+    "languages": [
+     {
+      "en": "Punjabi",
+      "hi": "पंजाबी"
+     }
+    ],
+    "area_km2": 50362,
+    "population_2011": 27743338,
+    "blurb": {
+     "en": "The land of five rivers on the Pakistan border and India's bread basket; Amritsar's Golden Temple is the holiest shrine of Sikhism.",
+     "hi": "पाकिस्तान की सीमा पर पाँच नदियों की भूमि और भारत का अन्न भंडार; अमृतसर का स्वर्ण मंदिर सिख धर्म का सबसे पवित्र स्थल है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Punjab,_India",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "slug": "rajasthan",
+   "iso": "IN-RJ",
+   "type": "state",
+   "source_name": "Rajasthan",
+   "name": {
+    "en": "Rajasthan",
+    "hi": "राजस्थान"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Jaipur",
+     "hi": "जयपुर"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     }
+    ],
+    "area_km2": 342239,
+    "population_2011": 68548437,
+    "blurb": {
+     "en": "India's largest state: the Thar desert, the Aravalli range and the forts and palaces of Jaipur, Jodhpur, Udaipur and Jaisalmer.",
+     "hi": "भारत का सबसे बड़ा राज्य: थार मरुस्थल, अरावली पर्वतमाला और जयपुर, जोधपुर, उदयपुर तथा जैसलमेर के किले और महल।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Rajasthan",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "slug": "sikkim",
+   "iso": "IN-SK",
+   "type": "state",
+   "source_name": "Sikkim",
+   "name": {
+    "en": "Sikkim",
+    "hi": "सिक्किम"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Gangtok",
+     "hi": "गंगटोक"
+    },
+    "languages": [
+     {
+      "en": "Nepali",
+      "hi": "नेपाली"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     },
+     {
+      "en": "Bhutia",
+      "hi": "भूटिया"
+     },
+     {
+      "en": "Lepcha",
+      "hi": "लेप्चा"
+     }
+    ],
+    "area_km2": 7096,
+    "population_2011": 610577,
+    "blurb": {
+     "en": "A small Himalayan state between Nepal and Bhutan, below Kangchenjunga, the world's third-highest peak; a kingdom until it joined India in 1975.",
+     "hi": "नेपाल और भूटान के बीच छोटा हिमालयी राज्य, दुनिया की तीसरी सबसे ऊँची चोटी कंचनजंगा के नीचे; 1975 में भारत में शामिल होने तक एक राजतंत्र।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Sikkim",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Limbu and others also have official status under the 1977 Act."
+   }
+  },
+  {
+   "id": 31,
+   "slug": "tamil-nadu",
+   "iso": "IN-TN",
+   "type": "state",
+   "source_name": "Tamil Nadu",
+   "name": {
+    "en": "Tamil Nadu",
+    "hi": "तमिलनाडु",
+    "native": "தமிழ்நாடு"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Chennai",
+     "hi": "चेन्नई"
+    },
+    "languages": [
+     {
+      "en": "Tamil",
+      "hi": "तमिल"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 130060,
+    "population_2011": 72147030,
+    "blurb": {
+     "en": "The southern tip of the peninsula, from the Nilgiris to Kanyakumari; Dravidian temple towns such as Madurai and Thanjavur, and Chennai on the Coromandel coast.",
+     "hi": "प्रायद्वीप का दक्षिणी सिरा, नीलगिरि से कन्याकुमारी तक; मदुरै और तंजावुर जैसे द्रविड़ मंदिर नगर, और कोरोमंडल तट पर चेन्नई।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Tamil_Nadu",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "slug": "telangana",
+   "iso": "IN-TS",
+   "type": "state",
+   "source_name": "Telangana",
+   "name": {
+    "en": "Telangana",
+    "hi": "तेलंगाना",
+    "native": "తెలంగాణ"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Hyderabad",
+     "hi": "हैदराबाद"
+    },
+    "languages": [
+     {
+      "en": "Telugu",
+      "hi": "तेलुगु"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     }
+    ],
+    "area_km2": 112077,
+    "population_2011": 35003674,
+    "blurb": {
+     "en": "The Deccan plateau between the Godavari and the Krishna, carved out of Andhra Pradesh in 2014; Hyderabad, its capital, blends Nizam-era heritage with a technology industry.",
+     "hi": "गोदावरी और कृष्णा के बीच दक्कन का पठार, जो 2014 में आंध्र प्रदेश से अलग बना; इसकी राजधानी हैदराबाद निज़ाम काल की विरासत और तकनीकी उद्योग को जोड़ती है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Telangana",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "2011 population for the post-2014 territory; 35,193,978 is also cited."
+   }
+  },
+  {
+   "id": 33,
+   "slug": "tripura",
+   "iso": "IN-TR",
+   "type": "state",
+   "source_name": "Tripura",
+   "name": {
+    "en": "Tripura",
+    "hi": "त्रिपुरा",
+    "native": "ত্রিপুরা"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Agartala",
+     "hi": "अगरतला"
+    },
+    "languages": [
+     {
+      "en": "Bengali",
+      "hi": "बांग्ला"
+     },
+     {
+      "en": "Kokborok",
+      "hi": "कोकबोरोक"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 10486,
+    "population_2011": 3673917,
+    "blurb": {
+     "en": "A small hill state almost surrounded by Bangladesh; Agartala's Ujjayanta Palace, the lake palace of Neermahal and the rock carvings of Unakoti.",
+     "hi": "बांग्लादेश से लगभग घिरा छोटा पहाड़ी राज्य; अगरतला का उज्जयंत महल, नीरमहल का झील-महल और उनाकोटि की शैल मूर्तियाँ।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Tripura",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "slug": "uttar-pradesh",
+   "iso": "IN-UP",
+   "type": "state",
+   "source_name": "Uttar Pradesh",
+   "name": {
+    "en": "Uttar Pradesh",
+    "hi": "उत्तर प्रदेश"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Lucknow",
+     "hi": "लखनऊ"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Urdu",
+      "hi": "उर्दू"
+     }
+    ],
+    "area_km2": 240928,
+    "population_2011": 199812341,
+    "blurb": {
+     "en": "India's most populous state, on the Ganga and Yamuna plains; Varanasi, Ayodhya, Prayagraj and Mathura, and the Taj Mahal at Agra.",
+     "hi": "गंगा और यमुना के मैदानों पर भारत का सबसे अधिक जनसंख्या वाला राज्य; वाराणसी, अयोध्या, प्रयागराज और मथुरा, और आगरा का ताजमहल।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Uttar_Pradesh",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "slug": "uttarakhand",
+   "iso": "IN-UK",
+   "type": "state",
+   "source_name": "Uttarakhand",
+   "name": {
+    "en": "Uttarakhand",
+    "hi": "उत्तराखंड"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Dehradun (winter), Gairsain (summer)",
+     "hi": "देहरादून (शीत), गैरसैंण (ग्रीष्म)"
+    },
+    "languages": [
+     {
+      "en": "Hindi",
+      "hi": "हिन्दी"
+     },
+     {
+      "en": "Sanskrit",
+      "hi": "संस्कृत"
+     }
+    ],
+    "area_km2": 53483,
+    "population_2011": 10086292,
+    "blurb": {
+     "en": "The Garhwal and Kumaon Himalaya, source of the Ganga and Yamuna; the Char Dham shrines, Nanda Devi and the Valley of Flowers, and Jim Corbett National Park.",
+     "hi": "गढ़वाल और कुमाऊँ हिमालय, गंगा और यमुना का उद्गम; चार धाम, नंदा देवी और फूलों की घाटी, और जिम कॉर्बेट राष्ट्रीय उद्यान।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Uttarakhand",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "slug": "west-bengal",
+   "iso": "IN-WB",
+   "type": "state",
+   "source_name": "West Bengal",
+   "name": {
+    "en": "West Bengal",
+    "hi": "पश्चिम बंगाल",
+    "native": "পশ্চিমবঙ্গ"
+   },
+   "facts": {
+    "status": "draft",
+    "capital": {
+     "en": "Kolkata",
+     "hi": "कोलकाता"
+    },
+    "languages": [
+     {
+      "en": "Bengali",
+      "hi": "बांग्ला"
+     },
+     {
+      "en": "Nepali",
+      "hi": "नेपाली"
+     },
+     {
+      "en": "English",
+      "hi": "अंग्रेज़ी"
+     }
+    ],
+    "area_km2": 88752,
+    "population_2011": 91276115,
+    "blurb": {
+     "en": "From the Darjeeling hills to the Sundarbans mangrove delta on the Bay of Bengal; Kolkata, the former capital of British India, is its cultural and commercial heart.",
+     "hi": "दार्जिलिंग की पहाड़ियों से बंगाल की खाड़ी पर सुंदरबन के मैंग्रोव डेल्टा तक; ब्रिटिश भारत की पूर्व राजधानी कोलकाता इसका सांस्कृतिक और व्यावसायिक हृदय है।"
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/West_Bengal",
+     "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "review_notes": "Nepali is official in the Darjeeling hills; several other languages have additional official status."
+   }
+  }
+ ]
 }

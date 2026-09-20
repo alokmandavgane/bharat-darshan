@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STEPS = ['01_boundaries.py', '02_dem.py', '05_manifest.py']
+STEPS = ['01_boundaries.py', '02_dem.py', '04_layers.py', '05_manifest.py']
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     for step in STEPS:
         print(f'== {step}')
         args = [sys.executable, os.path.join(HERE, step)]
-        if step != '05_manifest.py':
+        if step in ('01_boundaries.py', '02_dem.py'):
             args += extra
         subprocess.run(args, check=True)
 

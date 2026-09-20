@@ -44,11 +44,22 @@ def main():
                 tiers.setdefault(h, {})[key] = rel
     with open(os.path.join(out, 'regions', 'states.json'), encoding='utf-8') as f:
         states = json.load(f)
+    layers = []
+    layers_dir = os.path.join(out, 'layers')
+    if os.path.isdir(layers_dir):
+        for n in sorted(os.listdir(layers_dir)):
+            if not n.endswith('.json'):
+                continue
+            with open(os.path.join(layers_dir, n), encoding='utf-8') as f:
+                L = json.load(f)
+            layers.append({k: L[k] for k in ('id', 'type', 'title', 'icon', 'group', 'default_on', 'count', 'reviewed') if k in L}
+                          | {'path': f'layers/{n}'})
     manifest = {
         'version': 1,
         'grid': grid.describe(),
         'tiers': {h: tiers[h] for h in sorted(tiers, key=int)},
         'regions': {'states': 'regions/states.json', 'count': len(states['units'])},
+        'layers': layers,
         'attribution': [
             states.get('attribution', ''),
             'Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; '

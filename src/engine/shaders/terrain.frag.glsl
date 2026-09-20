@@ -15,6 +15,9 @@ uniform float uHRef;
 uniform float uKmPerPx;        // world size of one screen pixel (orthographic)
 uniform float uSelected;       // state id or -1
 uniform float uHover;          // state id or -1
+uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
+uniform float uHole;           // state id drawn as a flat dark socket, or -1
+uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -53,7 +56,9 @@ void main() {
   float land = smoothstep(-20.0, -5.0, h);          // ocean texels are <= -25 m by construction
   vec2 shade = texture(uShade, vUv).rg;
   float id = floor(texture(uIds, vUv).r * 255.0 + 0.5);
+  if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
   float india = step(0.5, id);
+  float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
   vec3 n = terrainNormal(vUv);
@@ -90,14 +95,39 @@ void main() {
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
-  // --- selection and hover tint
-  float sel = step(0.5, india) * (1.0 - step(0.5, abs(id - uSelected)));
-  float hov = step(0.5, india) * (1.0 - step(0.5, abs(id - uHover)));
-  col = mix(col, vec3(1.0, 0.62, 0.17), 0.30 * sel + 0.14 * hov * (1.0 - sel));
+  // --- selection: a warm lift of the fill and a firm outline where it meets its
+  // neighbours (one-texel look-around in the ID raster); hover is a whisper of the same
+  float sel = india * (1.0 - step(0.5, abs(id - uSelected)));
+  float hov = india * (1.0 - step(0.5, abs(id - uHover))) * (1.0 - sel);
+  if (uSelected >= 0.0) {
+    float n0 = floor(textureOffset(uIds, vUv, ivec2( 1, 0)).r * 255.0 + 0.5);
+    float n1 = floor(textureOffset(uIds, vUv, ivec2(-1, 0)).r * 255.0 + 0.5);
+    float n2 = floor(textureOffset(uIds, vUv, ivec2( 0, 1)).r * 255.0 + 0.5);
+    float n3 = floor(textureOffset(uIds, vUv, ivec2( 0,-1)).r * 255.0 + 0.5);
+    float anySel = max(max(1.0 - step(0.5, abs(n0 - uSelected)), 1.0 - step(0.5, abs(n1 - uSelected))),
+                       max(1.0 - step(0.5, abs(n2 - uSelected)), 1.0 - step(0.5, abs(n3 - uSelected))));
+    float anyOther = max(max(step(0.5, abs(n0 - uSelected)), step(0.5, abs(n1 - uSelected))),
+                         max(step(0.5, abs(n2 - uSelected)), step(0.5, abs(n3 - uSelected))));
+    float onEdge = max(sel * anyOther, (1.0 - sel) * anySel);
+    float dEdge = min(dInt, dExt);
+    float outline = (1.0 - smoothstep(1.1 * uKmPerPx - aa, 1.1 * uKmPerPx + aa, dEdge)) * onEdge;
+    col = mix(col, col * vec3(1.16, 1.07, 0.84) + vec3(0.05, 0.025, 0.0), sel);
+    col = mix(col, vec3(0.32, 0.12, 0.04), outline * 0.9);
+  }
+  col = mix(col, col * 1.07 + 0.015, hov);
+
+  // --- state view: the rest of the country steps back, the socket is flat and dark
+  float lumd = dot(col, vec3(0.3, 0.59, 0.11));
+  col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - hole));
+  col = mix(col, uTable * 0.5, hole);
 
   // --- paper grain in world space
   float g = texture(uGrain, vPos.xz * 0.022).r;
-  col *= 0.94 + 0.12 * g;
+  col *= 0.94 + 0.12 * g * (1.0 - hole);
 
-  outColor = linearToOutputTexel(vec4(col, 1.0));
+  // dissolve into the page (premultiplied alpha) instead of ending at a rim
+  float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
+  float fade = smoothstep(0.0, 420.0, edge);
+  vec4 o = linearToOutputTexel(vec4(col, 1.0));
+  outColor = vec4(o.rgb * fade, fade);
 }

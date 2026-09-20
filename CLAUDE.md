@@ -54,4 +54,6 @@ the next session on any machine can pick up.
 Checking a change: `npm run build`, then load the preview in a browser. In the web
 sandbox there is no display, but Playwright's Chromium renders WebGL2 through
 SwiftShader (`--use-angle=swiftshader --enable-unsafe-swiftshader`), which catches
-shader errors and layout mistakes; `pipeline/tmp/preview-*.png` shows the rasters.
+shader errors and layout mistakes; use `?quality=low` there, SwiftShader cannot keep
+up with the desktop tier. `pipeline/tmp/preview-*.png` shows the rasters. `window.bd`
+exposes the store and engine for checks from the console or a script.
