@@ -3,7 +3,7 @@
 // ride the terrain (and the lifted block) through the same projection as the labels.
 // The engine knows this type, never a layer's id. Instanced WebGL sprites can replace
 // the DOM later without touching the data.
-const TOKEN = { 1: 34, 2: 28, 3: 26 };   // token diameter by priority, px
+const TOKEN = { 1: 32, 2: 27, 3: 24 };   // token diameter by priority, px
 const GAP = 2;
 const NAME_ZOOM = 1800;                  // below this view height, the most famous places show their names
 
@@ -78,7 +78,7 @@ export function createPoints(container, { text, onSelect }) {
   function update({ project, level, viewport, camera, active, selected, lang, drafts }) {
     const placed = [];
     if (!container) return placed;
-    const maxPriority = camera.zoom > 7500 ? 1 : camera.zoom > 3800 ? 2 : 3;
+    const maxPriority = camera.zoom > 6000 ? 1 : camera.zoom > 3200 ? 2 : 3;
     for (const [id, { layer, items }] of layers) {
       const on = active.has(id);
       for (const { item, el, name } of items) {

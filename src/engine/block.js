@@ -9,6 +9,55 @@ import wallVert from './shaders/wall.vert.glsl?raw';
 
 export const WALL_COLOUR = '#e7ddc9';
 const BLOCK_SEGMENTS = 192;
+export const COUNTRY_WALL_KM = 22;
+
+/** Wall geometry along outline loops ([x, z] in scene km): a quad per segment, top flag in y. */
+export function wallGeometry(loops) {
+  const segs = loops.reduce((n, l) => n + l.length, 0);
+  const pos = new Float32Array(segs * 4 * 3);
+  const side = new Float32Array(segs * 4 * 2);
+  const index = new Uint32Array(segs * 6);
+  let v = 0, q = 0;
+  for (const loop of loops) {
+    for (let i = 0; i < loop.length; i++) {
+      const [ax, az] = loop[i], [bx, bz] = loop[(i + 1) % loop.length];
+      const dx = bx - ax, dz = bz - az, len = Math.hypot(dx, dz) || 1;
+      const nx = dz / len, nz = -dx / len;                 // outward, loops run clockwise on screen
+      const base = v;
+      for (const [x, z, t] of [[ax, az, 1], [ax, az, 0], [bx, bz, 1], [bx, bz, 0]]) {
+        pos[v * 3] = x; pos[v * 3 + 1] = t; pos[v * 3 + 2] = z;
+        side[v * 2] = nx; side[v * 2 + 1] = nz;
+        v++;
+      }
+      index[q++] = base; index[q++] = base + 1; index[q++] = base + 2;
+      index[q++] = base + 2; index[q++] = base + 1; index[q++] = base + 3;
+    }
+  }
+  const g = new BufferGeometry();
+  g.setAttribute('position', new BufferAttribute(pos, 3));
+  g.setAttribute('side', new BufferAttribute(side, 2));
+  g.setIndex(new BufferAttribute(index, 1));
+  return g;
+}
+
+/** A wall material sharing the terrain's height texture and vertical curve. */
+export function wallMaterial(terrainUniforms, depthKm, liftUniform) {
+  return new ShaderMaterial({
+    glslVersion: GLSL3, vertexShader: wallVert, fragmentShader: wallFrag, side: DoubleSide,
+    uniforms: {
+      uHeight: terrainUniforms.uHeight, uSizeKm: terrainUniforms.uSizeKm, uExag: terrainUniforms.uExag,
+      uGamma: terrainUniforms.uGamma, uHRef: terrainUniforms.uHRef, uLift: liftUniform || { value: 0 },
+      uDepth: { value: depthKm }, uWall: { value: new Color(WALL_COLOUR) },
+    },
+  });
+}
+
+/** The whole country's sides: walls along the traced outline of India, standing on the page. */
+export function createCountryWalls(loops, terrainUniforms) {
+  const mesh = new Mesh(wallGeometry(loops), wallMaterial(terrainUniforms, COUNTRY_WALL_KM));
+  mesh.frustumCulled = false;
+  return mesh;
+}
 
 /** Lift and slab thickness in km for a unit, from its size. */
 export function blockDimensions(unit) {
@@ -43,47 +92,16 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
   const top = new Mesh(geometry, material);
   top.frustumCulled = false;
 
-  const wallMaterial = new ShaderMaterial({
-    glslVersion: GLSL3, vertexShader: wallVert, fragmentShader: wallFrag, side: DoubleSide,
-    uniforms: {
-      uHeight: material.uniforms.uHeight, uSizeKm: material.uniforms.uSizeKm, uExag: material.uniforms.uExag,
-      uGamma: material.uniforms.uGamma, uHRef: material.uniforms.uHRef, uLift: material.uniforms.uLift,
-      uDepth: { value: blockDimensions(unit).depth }, uWall: { value: new Color(WALL_COLOUR) },
-    },
-  });
+  const wallMat = wallMaterial(material.uniforms, blockDimensions(unit).depth, material.uniforms.uLift);
   const group = new Group();
   group.add(top);
   let wall = null;
 
   /** Build the walls once the outline (loops of [x, z] in scene km) has arrived. */
   function setOutline(loops) {
-    const segs = loops.reduce((n, l) => n + l.length, 0);
-    const pos = new Float32Array(segs * 4 * 3);
-    const side = new Float32Array(segs * 4 * 2);
-    const index = new Uint32Array(segs * 6);
-    let v = 0, q = 0;
-    for (const loop of loops) {
-      for (let i = 0; i < loop.length; i++) {
-        const [ax, az] = loop[i], [bx, bz] = loop[(i + 1) % loop.length];
-        const dx = bx - ax, dz = bz - az, len = Math.hypot(dx, dz) || 1;
-        const nx = dz / len, nz = -dx / len;                 // outward, loops run clockwise on screen
-        const base = v;
-        for (const [x, z, t] of [[ax, az, 1], [ax, az, 0], [bx, bz, 1], [bx, bz, 0]]) {
-          pos[v * 3] = x; pos[v * 3 + 1] = t; pos[v * 3 + 2] = z;
-          side[v * 2] = nx; side[v * 2 + 1] = nz;
-          v++;
-        }
-        index[q++] = base; index[q++] = base + 1; index[q++] = base + 2;
-        index[q++] = base + 2; index[q++] = base + 1; index[q++] = base + 3;
-      }
-    }
-    const g = new BufferGeometry();
-    g.setAttribute('position', new BufferAttribute(pos, 3));
-    g.setAttribute('side', new BufferAttribute(side, 2));
-    g.setIndex(new BufferAttribute(index, 1));
     wall?.geometry.dispose();
     if (wall) group.remove(wall);
-    wall = new Mesh(g, wallMaterial);
+    wall = new Mesh(wallGeometry(loops), wallMat);
     wall.frustumCulled = false;
     group.add(wall);
   }
@@ -95,7 +113,7 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
     dispose() {
       geometry.dispose();
       wall?.geometry.dispose();
-      wallMaterial.dispose();
+      wallMat.dispose();
       material.dispose();
     },
   };

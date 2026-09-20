@@ -18,6 +18,7 @@ uniform float uHover;          // state id or -1
 uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
 uniform float uHole;           // state id drawn as a flat dark socket, or -1
 uniform float uDim;            // 0..1: quieten every other state (state view)
+uniform float uOnlyIndia;      // 1: draw India alone as a cut-out on the page, no sea or neighbours
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -57,6 +58,7 @@ void main() {
   vec2 shade = texture(uShade, vUv).rg;
   float id = floor(texture(uIds, vUv).r * 255.0 + 0.5);
   if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
+  if (uOnlyIndia > 0.5 && id < 0.5) discard;
   float india = step(0.5, id);
   float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
@@ -128,6 +130,7 @@ void main() {
   // dissolve into the page (premultiplied alpha) instead of ending at a rim
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
   float fade = smoothstep(0.0, 420.0, edge);
+  if (uOnlyIndia > 0.5) fade *= land;                     // a soft coastline on the cut-out
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   outColor = vec4(o.rgb * fade, fade);
 }

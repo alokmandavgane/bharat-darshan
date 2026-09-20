@@ -11,6 +11,8 @@ import { createShell } from './ui/shell.js';
 
 const url = readUrl();
 const lang = url.lang || detectLanguage();
+const poster = new URLSearchParams(location.search).get('poster') === '1';   // share-image render, see tools/share-image.mjs
+if (poster) document.body.dataset.poster = '1';
 
 const store = createStore({
   lang,
@@ -30,6 +32,7 @@ const store = createStore({
   layers: null,          // { active: [...] } once the manifest says which layers exist
   catalog: [],
   level: { name: 'country', id: null },
+  surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to
   // `url.drafts || import.meta.env.DEV` once the owner has reviewed them.
@@ -44,6 +47,7 @@ syncUrl(store);
 
 createShell(document, store);
 createSheet(/** @type {HTMLElement} */ (document.querySelector('.sheet')), store);
+if (poster) store.set('padding', { top: 40, right: 40, bottom: 40, left: 560 }, { source: 'poster' });
 
 const canvas = /** @type {HTMLCanvasElement} */ (document.querySelector('canvas.map'));
 const supported = !!document.createElement('canvas').getContext('webgl2') && typeof DecompressionStream === 'function';
