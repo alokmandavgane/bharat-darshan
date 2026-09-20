@@ -21,15 +21,18 @@ export const PALETTE = {
   tops: [80, 250, 600, 1200, 2500, 5400, 9000],
 };
 
-/** A (cols x rows)-quad grid with only a uv attribute; positions come from the heightmap. */
-export function gridGeometry(cols, rows) {
+/**
+ * A (cols x rows)-quad grid with only a uv attribute; positions come from the heightmap.
+ * `rect` = [u0, v0, u1, v1] covers part of the texture (the lifted block); default all of it.
+ */
+export function gridGeometry(cols, rows, rect = [0, 0, 1, 1]) {
   const nx = cols + 1, nz = rows + 1;
   const uv = new Float32Array(nx * nz * 2);
   for (let j = 0; j < nz; j++) {
     for (let i = 0; i < nx; i++) {
       const k = (j * nx + i) * 2;
-      uv[k] = i / cols;
-      uv[k + 1] = j / rows;
+      uv[k] = rect[0] + (i / cols) * (rect[2] - rect[0]);
+      uv[k + 1] = rect[1] + (j / rows) * (rect[3] - rect[1]);
     }
   }
   const index = new Uint32Array(cols * rows * 6);
@@ -70,6 +73,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uKmPerPx: { value: 4 },
     uSelected: { value: -1 },
     uHover: { value: -1 },
+    uRegion: { value: -1 },
+    uHole: { value: -1 },
+    uDim: { value: 0 },
+    uLift: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
@@ -78,6 +85,24 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   const material = new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms, side: DoubleSide,
   });
+
+  /**
+   * A second material with the same shaders and textures but its own scalar uniforms,
+   * for the lifted block. Textures are shared by reference, never re-uploaded.
+   */
+  function siblingMaterial() {
+    const u = {};
+    for (const [k, { value }] of Object.entries(uniforms)) {
+      u[k] = { value: value && typeof value === 'object' && !value.isTexture && typeof value.clone === 'function' ? value.clone()
+        : value instanceof Float32Array ? Float32Array.from(value)
+        : Array.isArray(value) ? value.map((c) => c.clone()) : value };
+    }
+    const m = new ShaderMaterial({ glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms: u, side: DoubleSide });
+    siblings.add(m);
+    const dispose = m.dispose.bind(m);
+    m.dispose = () => { siblings.delete(m); dispose(); };
+    return m;
+  }
   const mesh = new Mesh(geometry, material);
   mesh.frustumCulled = false;
 
@@ -94,6 +119,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   group.add(board, mesh);
 
   let textures = [];
+  const siblings = new Set();
   /** Swap in another tier's rasters (e.g. 2048 after the 1024 first view). */
   function setTier(data) {
     const next = {
@@ -102,16 +128,21 @@ export function createTerrain({ tierData, grid, sizeKm }) {
       uIds: byteTexture(data.ids, { nearest: true }),
       uBorders: byteTexture(data.borders),
     };
-    for (const [k, tex] of Object.entries(next)) uniforms[k].value = tex;
-    uniforms.uHeightTexel.value.set(1 / data.heights.width, 1 / data.heights.height);
-    uniforms.uBorderRangeKm.value = data.borders.header.range_px * data.borders.header.km_per_px;
+    const old = new Set(textures);
+    const apply = (u) => {
+      for (const [k, tex] of Object.entries(next)) if (!u[k].value || old.has(u[k].value)) u[k].value = tex;
+      u.uHeightTexel.value.set(1 / data.heights.width, 1 / data.heights.height);
+      u.uBorderRangeKm.value = data.borders.header.range_px * data.borders.header.km_per_px;
+    };
+    apply(uniforms);
+    siblings.forEach((m) => apply(m.uniforms));
     textures.forEach((t) => t.dispose());
     textures = Object.values(next);
   }
   setTier(tierData);
 
   return {
-    mesh: group, material, uniforms, setTier, grid: { cols, rows: grid },
+    mesh: group, material, uniforms, setTier, siblingMaterial, grid: { cols, rows: grid },
     dispose() {
       textures.forEach((t) => t.dispose());
       uniforms.uGrain.value.dispose();

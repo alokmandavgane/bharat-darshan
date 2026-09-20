@@ -15,6 +15,9 @@ uniform float uHRef;
 uniform float uKmPerPx;        // world size of one screen pixel (orthographic)
 uniform float uSelected;       // state id or -1
 uniform float uHover;          // state id or -1
+uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
+uniform float uHole;           // state id drawn as a flat dark socket, or -1
+uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -53,7 +56,9 @@ void main() {
   float land = smoothstep(-20.0, -5.0, h);          // ocean texels are <= -25 m by construction
   vec2 shade = texture(uShade, vUv).rg;
   float id = floor(texture(uIds, vUv).r * 255.0 + 0.5);
+  if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
   float india = step(0.5, id);
+  float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
   vec3 n = terrainNormal(vUv);
@@ -111,9 +116,14 @@ void main() {
   }
   col = mix(col, col * 1.07 + 0.015, hov);
 
+  // --- state view: the rest of the country steps back, the socket is flat and dark
+  float lumd = dot(col, vec3(0.3, 0.59, 0.11));
+  col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - hole));
+  col = mix(col, uTable * 0.5, hole);
+
   // --- paper grain in world space
   float g = texture(uGrain, vPos.xz * 0.022).r;
-  col *= 0.94 + 0.12 * g;
+  col *= 0.94 + 0.12 * g * (1.0 - hole);
 
   outColor = linearToOutputTexel(vec4(col, 1.0));
 }

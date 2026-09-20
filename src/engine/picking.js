@@ -66,19 +66,21 @@ export function createHeightfield(tier, sizeKm, mesh) {
  * Where does the ray through a screen point (px from the viewport centre, y up) hit
  * the terrain? Marches down the ray from above the highest peak, then bisects.
  * @param {(hM: number) => number} liftKm  the vertical curve currently rendered
+ * @param {{ id: number, km: number } | null} [raised]  a state drawn as a block lifted by km
  * @returns {{ x: number, y: number, z: number, id: number }}
  */
-export function pickTerrain(cam, viewport, sx, sy, field, liftKm) {
+export function pickTerrain(cam, viewport, sx, sy, field, liftKm, raised = null) {
   const { toCam } = basis(cam.yaw, cam.pitch);
   const [gx, gz] = groundPoint(cam, sx, sy, viewport);
   const sinP = Math.max(toCam[1], 1e-3);
   const cosP = Math.max(Math.hypot(toCam[0], toCam[2]), 1e-3);
-  const top = liftKm(field.maxM) + 1;
+  const top = liftKm(field.maxM) + 1 + (raised ? raised.km : 0);
   const sMax = top / sinP;
   // half a texel sideways, or 2 km vertically, whichever is the smaller step
   const ds = Math.max(0.05, Math.min((0.5 * field.texelKm) / cosP, 2 / sinP));
   const at = (s) => [gx + toCam[0] * s, toCam[1] * s, gz + toCam[2] * s];
-  const below = (p) => p[1] <= liftKm(field.heightM(p[0], p[2]));
+  const surface = (x, z) => liftKm(field.heightM(x, z)) + (raised && field.idAt(x, z) === raised.id ? raised.km : 0);
+  const below = (p) => p[1] <= surface(p[0], p[2]);
   let sAbove = sMax;
   for (let s = sMax - ds; s >= 0; s -= ds) {
     if (below(at(s))) {
@@ -96,8 +98,9 @@ export function pickTerrain(cam, viewport, sx, sy, field, liftKm) {
 }
 
 /** Screen position (px from the viewport centre, y up) of a ground location, on top of the terrain. */
-export function projectGround(cam, viewport, x, z, field, liftKm) {
-  return projectPoint(cam, [x, liftKm(field.heightM(x, z)), z], viewport);
+export function projectGround(cam, viewport, x, z, field, liftKm, raised = null) {
+  const y = liftKm(field.heightM(x, z)) + (raised && field.idAt(x, z) === raised.id ? raised.km : 0);
+  return projectPoint(cam, [x, y, z], viewport);
 }
 
 /** Units below this size are hard to hit on a phone and win ties within the bias radius. */
