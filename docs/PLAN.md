@@ -530,6 +530,23 @@ docs/DEPLOY.md).
   `?quality=low|medium|high` forces a tier, for device testing. Verified headless:
   click on plains and hills, hover + tooltip, touch bias (Goa from a tap 19 px away),
   Escape, URL restore.
+- 2026-09-20, fourth session: the rest of Phase 1's core, built for a demo. The state
+  view: Explore lifts the state out as a block (a dense sub-grid drawn with the terrain
+  material restricted to that region, walls from the traced outline, paler clay), the
+  base flattens and darkens the socket and quietens the rest, relief eases to 60%,
+  the camera flies in, the zoom floor drops to 30 km, and picking and labels follow
+  the raised block. `/en/state/kerala` is the URL (pushState, Back leaves it), `?cam=`
+  keeps the camera once moved. HTML labels for states (biggest first, no overlaps,
+  hidden in the state view). A searchable list of all 36 units in the sheet, so every
+  unit is reachable without hitting it; picking one focuses the camera with country
+  context. Fact cards from `content/states/states.json` (capital, official languages,
+  area, 2011 population, blurb, sources), drafted and validated, shown while drafts
+  are on. The first content layer as data: `content/layers/places/` (layer.json +
+  items.json) built by `04_layers.py` into `public/data/layers/places.json` with
+  anchors checked against the ID raster; the engine's `points` type renders any such
+  layer as sticker markers that ride the terrain and the lifted block, thinned by
+  priority with zoom, with a card and a fly-to on tap. Drafts are shown by default
+  until the first review (`src/main.js`, one line to flip).
 
 ### What exists
 
@@ -594,9 +611,10 @@ docs/DEPLOY.md).
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
    and band edges in `src/engine/shaders/terrain.frag.glsl`.
-2. Phase 1, remaining: state fact cards (structured, sourced facts in both languages:
-   capital, languages, districts, area from an official table), the fly-in state
-   view with lazy packages and the lifted block, camera and layers in the URL, HTML
-   labels, poster image, context-loss test on iOS, list and search so every unit is
-   reachable without hitting it.
+2. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
+   the drafts default off in `src/main.js`), lazy hi-res state packages (needs open
+   question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
+   the state view, the poster image (needs open question 6), context-loss test on iOS,
+   layer state in the URL, a card carousel for point layers, WebGL sprites for markers
+   if the DOM ones ever get slow (they are fine at 50).
 3. Settle open questions 5-7.

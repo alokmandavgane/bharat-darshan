@@ -47,6 +47,7 @@ export function syncUrl(store) {
   let camTouched = false;
   let camTimer = 0;
   let applying = false;         // while applying a popstate, do not write back
+  const draftsFromUrl = readUrl().drafts;   // only echo ?drafts=1 when the visitor asked for it
 
   const current = () => {
     const level = store.get('level');
@@ -57,7 +58,7 @@ export function syncUrl(store) {
       state: slugOf(store.get('selection')),
       relief: relief.on ? relief.amount : 0,
       cam: camTouched ? store.get('camera') : null,
-      drafts: !!store.get('drafts') && !import.meta.env.DEV,
+      drafts: draftsFromUrl && !!store.get('drafts'),
     });
   };
 
