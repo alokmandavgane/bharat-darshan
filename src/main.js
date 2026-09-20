@@ -7,6 +7,7 @@ import { detectLanguage, pick, setLanguage } from './i18n/index.js';
 import { createStore } from './state/store.js';
 import { DEFAULT_RELIEF, readUrl, syncUrl } from './state/url.js';
 import { attachGestures } from './ui/gestures.js';
+import { watchActivity } from './ui/activity.js';
 import { createSheet } from './ui/sheet.js';
 import { createShell } from './ui/shell.js';
 
@@ -35,6 +36,8 @@ const store = createStore({
   level: { name: 'country', id: null },
   home: null,            // { t }: a request to clear everything and frame the country again
   tour: { playing: false, index: -1, total: 0 },
+  activity: 0,           // performance.now() of the last touch, click, wheel or key anywhere
+  poster,                // the share-image render: no idle sway
   surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to
@@ -50,6 +53,7 @@ syncUrl(store);
 
 createShell(document, store);
 createSheet(/** @type {HTMLElement} */ (document.querySelector('.sheet')), store);
+watchActivity(document, store);
 if (poster) store.set('padding', { top: 40, right: 40, bottom: 40, left: 560 }, { source: 'poster' });
 
 const canvas = /** @type {HTMLCanvasElement} */ (document.querySelector('canvas.map'));
