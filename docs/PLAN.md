@@ -491,6 +491,16 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
    Delhi. Fine for a project; check domain availability and search competition before
    launch.
 
+5. `layer.yaml` needs a YAML parser and Python's standard library has none (it does
+   have `tomllib` since 3.11). Add PyYAML as the pipeline's one extra dependency, or
+   specify layers as `layer.toml` / `layer.json`? Needed before Phase 2.
+6. Screenshot checks: add Playwright as a devDependency for the CI budgets and
+   shader-regression screenshots, or keep it out of `package.json` and install it in
+   CI only? (The web sandbox has it globally; the check script lived there.)
+7. Portrait phones show India width-limited (about 7 km/px), with paper above and
+   below the model. Accept, or nudge the default yaw / pitch / padding, or move the
+   relief slider into the sheet to give the map more height?
+
 Resolved on 2026-09-20: stylised look (D8); no React, minimal dependencies (D7);
 English + Hindi at launch (D9); AI-drafted, human-reviewed content (D10); layers must
 be addable as data, with GI products as the test case (D5).
@@ -498,6 +508,71 @@ be addable as data, with GI products as the test case (D5).
 ## 12. Status
 
 - 2026-09-20: plan written; owner's decisions folded in (D7-D10, layer folders).
-  No code yet.
-- Next: Phase 0. Needs npm (three, vite), numpy, and two data downloads: terrain
-  tiles at zoom 7 and an official-boundary states file.
+- 2026-09-20, second session: Phase 0 spike built end to end (pipeline, engine, shell;
+  details below). Budgets met: the first view is 1.15 MB of data plus 142 KB gzipped
+  JS (three.js 130 KB, app 12 KB). Still open from Phase 0: the real-device check
+  (>= 30 fps on the reference phone) and the owner's verdict on the look. Both need a
+  phone and eyes; nothing in the sandbox can stand in for them.
+
+### What exists
+
+- `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
+  grid (`lib/grid.py`: 3341 x 3507 km, 1 unit = 1 km, rows north to south), a small
+  shapefile reader, a gzip raster container (`lib/pack.py`), `01_boundaries.py`,
+  `02_dem.py`, `05_manifest.py` and `build.py`. `npm run data` rebuilds everything in
+  about 40 s and is reproducible byte for byte; raw downloads are cached in
+  `pipeline/raw/`, previews land in `pipeline/tmp/`.
+- `public/data/`: committed outputs for two tiers, 960x1024 (first view, 1.15 MB) and
+  1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`.
+- `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
+  names (Hindi spellings pending review), native-script names where they differ.
+- `src/engine/`: pack decoder, textures, camera maths, tweens, quality tiers, the
+  terrain shaders and the engine facade. `src/state/`: store and URL. `src/i18n/`:
+  `en.json`, `hi.json`, `t()`. `src/ui/`: gestures, bottom sheet, shell, CSS.
+- Verified headless (Chromium + SwiftShader through Playwright): no shader errors,
+  phone and desktop layouts in both languages, sheet snaps, relief toggle animation,
+  drag / wheel / orbit gestures, the 2048 tier swapping in. Screenshots and the
+  script are not committed (open question 6).
+
+### Decisions made while building
+
+- Boundaries: DataMeet `States/Admin2.shp` (CC BY 4.0) already carries the 36 current
+  units with the official external boundary (all of J&K and Ladakh, Arunachal);
+  `Country/india-soi.geojson` is the authoritative mask: gaps inside it are filled
+  from the nearest state, state pixels more than about one pixel beyond it (tidal
+  flats in Kutch, Khambhat, the Sundarbans) are dropped. Natural Earth was not needed.
+- Tiers are rectangular and named by height (960x1024, 1920x2048): the grid is taller
+  than wide, and square textures wasted a fifth of every byte.
+- Heights: int16 metres, exact on land. Ocean quantised to 25 m and forced to <= -25 m,
+  so the shader reads land as "filtered height > -12.5 m": a smooth coastline with no
+  mask channel, and half the bytes the noisy sea floor cost. AO and coastal shadow
+  are baked at half resolution (AO reads fine upsampled; full resolution cost 4x).
+  Border distance fields are made in the DEM step because the coast must be excluded.
+- The 1024 tier always loads first (first-view budget); medium and high quality tiers
+  swap the 2048 tier in afterwards. No 4096 tier yet (zoom-8 tiles are cached).
+- Heightmap texture is R16F: exact to 2048 m, within 4 m at 8 km. Region IDs are R8
+  NEAREST, so highlight fills will be texel-stepped at country zoom; the border lines
+  come from the distance fields and stay smooth at any zoom.
+- Vertical curve `y_km = exag * (h / 8000)^0.65 * 8`; default exaggeration 12, which
+  is also what the baked AO assumes.
+- Camera fit uses India's convex hull (computed from the ID raster) rather than its
+  bounding box, so the turned view is tight. Padding comes from the header, the
+  controls and the sheet peek, or from the side panel on wide pointer screens.
+- `/en` and `/hi` shells are emitted at build time by a small Vite plugin; the seed
+  of the per-route share-preview plugin.
+- Quality tier from `deviceMemory`, cores and pointer type; the startup benchmark can
+  come later.
+- The grid rectangle is a visible board with a 50 km slab under it, crisp-edged, sides
+  shaded by the same north-west light. A soft fade looked like a blurred picture.
+
+### Next
+
+1. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
+   listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
+   `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
+   and band edges in `src/engine/shaders/terrain.frag.glsl`.
+2. Phase 1: state picking (pointer ray against the CPU heightfield, then the ID
+   raster), tap / hover highlight (the shader already takes `uSelected` and
+   `uHover`), peek cards from `states.json`, camera and layers in the URL, poster
+   image, context-loss test on iOS, state fact cards in both languages.
+3. Settle open questions 5-7.
