@@ -111,7 +111,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   setTier(tierData);
 
   return {
-    mesh: group, material, uniforms, setTier,
+    mesh: group, material, uniforms, setTier, grid: { cols, rows: grid },
     dispose() {
       textures.forEach((t) => t.dispose());
       uniforms.uGrain.value.dispose();

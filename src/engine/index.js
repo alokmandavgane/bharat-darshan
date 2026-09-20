@@ -4,8 +4,9 @@
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { basis, fitBounds } from './camera-math.js';
 import { loadManifest, loadStates, loadTier, unionBbox } from './data.js';
+import { biasedPick, createHeightfield, pickTerrain, projectGround } from './picking.js';
 import { pickQuality } from './quality.js';
-import { createTerrain, PALETTE } from './terrain.js';
+import { createTerrain, CURVE, PALETTE } from './terrain.js';
 import { tween } from './tween.js';
 
 const CAMERA_DISTANCE = 7000;   // km; anywhere outside the model works for an orthographic camera
@@ -26,6 +27,8 @@ export function createEngine({ canvas, store }) {
   camera.up.set(0, 1, 0);
 
   let terrain = null;
+  let field = null;            // CPU heightfield + ids of the tier on screen, for picking
+  let sizeKm = null;
   let viewport = { w: 1, h: 1 };
   let needsRender = false;
   let cancelFly = null;
@@ -111,6 +114,43 @@ export function createEngine({ canvas, store }) {
   store.subscribe('selection', (id) => { if (terrain) { terrain.uniforms.uSelected.value = id ?? -1; invalidate(); } });
   store.subscribe('hover', (id) => { if (terrain) { terrain.uniforms.uHover.value = id ?? -1; invalidate(); } });
 
+  // --- picking: taps become selections, pointer moves become hovers
+  const liftKm = (hM) => (hM <= 0 ? 0 : terrain.uniforms.uExag.value * Math.pow(hM / CURVE.hRef, CURVE.gamma) * CURVE.hRef * 0.001);
+
+  /** Terrain hit under a screen point (px from the viewport centre, y up), or null before load. */
+  function pick(sx, sy) {
+    if (!field) return null;
+    return pickTerrain(store.get('camera'), viewport, sx, sy, field, liftKm);
+  }
+
+  /** Screen position (px from the viewport centre, y up) of a ground point [x, z] on the terrain. */
+  function project(point) {
+    if (!field) return null;
+    return projectGround(store.get('camera'), viewport, point[0], point[1], field, liftKm);
+  }
+
+  function areaOf(id) {
+    const u = store.get('regions')?.byId?.[id];
+    return u ? u.area_km2 : Infinity;
+  }
+
+  store.subscribe('tap', (tap) => {
+    if (!tap || !field) return;
+    const idAt = (sx, sy) => pick(sx, sy).id;
+    const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : idAt(tap.x, tap.y);
+    store.set('selection', id || null);
+  });
+
+  let hoverRaf = 0;
+  store.subscribe('pointer', (ptr) => {
+    if (hoverRaf) return;
+    hoverRaf = requestAnimationFrame(() => {
+      hoverRaf = 0;
+      const p = store.get('pointer');
+      store.set('hover', p && field ? pick(p.x, p.y).id || null : null);
+    });
+  });
+
   canvas.addEventListener('webglcontextlost', (e) => { e.preventDefault(); store.set('status', 'context-lost'); });
   canvas.addEventListener('webglcontextrestored', () => { store.set('status', 'ready'); invalidate(); });
 
@@ -118,11 +158,12 @@ export function createEngine({ canvas, store }) {
   async function start() {
     const manifest = await loadManifest();
     const states = await loadStates(manifest);
-    store.set('regions', { units: states.units, bbox: unionBbox(states.units), hull: states.country?.hull, grid: manifest.grid });
+    const byId = Object.fromEntries(states.units.map((u) => [u.id, u]));
+    store.set('regions', { units: states.units, byId, bbox: unionBbox(states.units), hull: states.country?.hull, grid: manifest.grid });
     const first = await loadTier(manifest, FIRST_TIER);
-    terrain = createTerrain({
-      tierData: first, grid: quality.grid, sizeKm: { w: manifest.grid.width_km, h: manifest.grid.height_km },
-    });
+    sizeKm = { w: manifest.grid.width_km, h: manifest.grid.height_km };
+    terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
+    field = createHeightfield(first, sizeKm, terrain.grid);
     scene.add(terrain.mesh);
     applyRelief(store.get('relief'), false);
     fit(false);
@@ -130,14 +171,14 @@ export function createEngine({ canvas, store }) {
     store.set('status', 'ready');
     if (quality.heightTier !== FIRST_TIER && manifest.tiers[quality.heightTier]) {
       loadTier(manifest, quality.heightTier)
-        .then((t) => { terrain.setTier(t); invalidate(); })
+        .then((t) => { terrain.setTier(t); field = createHeightfield(t, sizeKm, terrain.grid); invalidate(); })
         .catch((err) => console.warn('finer tier skipped:', err));
     }
     return { manifest, quality };
   }
 
   return {
-    start, invalidate, flyTo, fit, quality,
+    start, invalidate, flyTo, fit, pick, project, quality,
     get viewport() { return viewport; },
     dispose() { terrain?.dispose(); renderer.dispose(); },
   };

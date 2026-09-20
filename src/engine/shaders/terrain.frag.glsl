@@ -90,10 +90,26 @@ void main() {
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
-  // --- selection and hover tint
-  float sel = step(0.5, india) * (1.0 - step(0.5, abs(id - uSelected)));
-  float hov = step(0.5, india) * (1.0 - step(0.5, abs(id - uHover)));
-  col = mix(col, vec3(1.0, 0.62, 0.17), 0.30 * sel + 0.14 * hov * (1.0 - sel));
+  // --- selection: a warm lift of the fill and a firm outline where it meets its
+  // neighbours (one-texel look-around in the ID raster); hover is a whisper of the same
+  float sel = india * (1.0 - step(0.5, abs(id - uSelected)));
+  float hov = india * (1.0 - step(0.5, abs(id - uHover))) * (1.0 - sel);
+  if (uSelected >= 0.0) {
+    float n0 = floor(textureOffset(uIds, vUv, ivec2( 1, 0)).r * 255.0 + 0.5);
+    float n1 = floor(textureOffset(uIds, vUv, ivec2(-1, 0)).r * 255.0 + 0.5);
+    float n2 = floor(textureOffset(uIds, vUv, ivec2( 0, 1)).r * 255.0 + 0.5);
+    float n3 = floor(textureOffset(uIds, vUv, ivec2( 0,-1)).r * 255.0 + 0.5);
+    float anySel = max(max(1.0 - step(0.5, abs(n0 - uSelected)), 1.0 - step(0.5, abs(n1 - uSelected))),
+                       max(1.0 - step(0.5, abs(n2 - uSelected)), 1.0 - step(0.5, abs(n3 - uSelected))));
+    float anyOther = max(max(step(0.5, abs(n0 - uSelected)), step(0.5, abs(n1 - uSelected))),
+                         max(step(0.5, abs(n2 - uSelected)), step(0.5, abs(n3 - uSelected))));
+    float onEdge = max(sel * anyOther, (1.0 - sel) * anySel);
+    float dEdge = min(dInt, dExt);
+    float outline = (1.0 - smoothstep(1.1 * uKmPerPx - aa, 1.1 * uKmPerPx + aa, dEdge)) * onEdge;
+    col = mix(col, col * vec3(1.16, 1.07, 0.84) + vec3(0.05, 0.025, 0.0), sel);
+    col = mix(col, vec3(0.32, 0.12, 0.04), outline * 0.9);
+  }
+  col = mix(col, col * 1.07 + 0.015, hov);
 
   // --- paper grain in world space
   float g = texture(uGrain, vPos.xz * 0.022).r;

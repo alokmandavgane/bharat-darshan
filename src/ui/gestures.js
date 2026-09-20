@@ -10,11 +10,13 @@ const TAP_MS = 350;
 const DOUBLE_MS = 300;
 
 /**
+ * Taps land in the store as `tap` { x, y, type } and pointer moves (fine pointers, no
+ * button held) as `pointer` { x, y, type }; the engine turns them into `selection` and
+ * `hover`. Coordinates are px from the canvas centre, y up, like the camera maths.
  * @param {HTMLCanvasElement} canvas
  * @param {ReturnType<import('../state/store.js').createStore>} store
- * @param {{ onTap?: (x: number, y: number) => void }} [handlers]
  */
-export function attachGestures(canvas, store, handlers = {}) {
+export function attachGestures(canvas, store) {
   /** @type {Map<number, {x:number,y:number,sx:number,sy:number,t:number,type:string,button:number}>} */
   const pointers = new Map();
   let lastTap = 0;
@@ -95,13 +97,23 @@ export function attachGestures(canvas, store, handlers = {}) {
         store.set('flyTo', { camera: zoomAbout(cam(), 0.5, rec.x, rec.y, viewport()), ms: 500, id: now });
       } else {
         lastTap = now;
-        handlers.onTap?.(rec.x, rec.y);
+        store.set('tap', { x: rec.x, y: rec.y, type: rec.type, t: now });
       }
     }
   }
 
   function resetOrigins() {
     for (const r of pointers.values()) { r.sx = r.x; r.sy = r.y; r.t = performance.now(); }
+  }
+
+  function onHover(e) {
+    if (e.pointerType === 'touch' || pointers.size) return;
+    const p = local(e);
+    store.set('pointer', { x: p.x, y: p.y, type: e.pointerType });
+  }
+
+  function onLeave() {
+    store.set('pointer', null);
   }
 
   function onWheel(e) {
@@ -115,6 +127,8 @@ export function attachGestures(canvas, store, handlers = {}) {
 
   canvas.addEventListener('pointerdown', onDown);
   canvas.addEventListener('pointermove', onMove);
+  canvas.addEventListener('pointermove', onHover);
+  canvas.addEventListener('pointerleave', onLeave);
   canvas.addEventListener('pointerup', onUp);
   canvas.addEventListener('pointercancel', onUp);
   canvas.addEventListener('wheel', onWheel, { passive: false });
@@ -126,6 +140,8 @@ export function attachGestures(canvas, store, handlers = {}) {
   return () => {
     canvas.removeEventListener('pointerdown', onDown);
     canvas.removeEventListener('pointermove', onMove);
+    canvas.removeEventListener('pointermove', onHover);
+    canvas.removeEventListener('pointerleave', onLeave);
     canvas.removeEventListener('pointerup', onUp);
     canvas.removeEventListener('pointercancel', onUp);
     canvas.removeEventListener('wheel', onWheel);
