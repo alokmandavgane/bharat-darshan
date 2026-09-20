@@ -485,7 +485,7 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
 
 1. Where do built data assets live once they outgrow git: object storage with a fetch
    script, or Git LFS?
-2. Hosting: Cloudflare Pages (recommended) or Firebase Hosting?
+2. Hosting: resolved on 2026-09-20, Cloudflare Pages; see [docs/DEPLOY.md](DEPLOY.md).
 3. One display webfont for headings (Latin + Devanagari), or system fonts only?
 4. Name: "Bharat Darshan" also names IRCTC's tourist-train scheme and a park in
    Delhi. Fine for a project; check domain availability and search competition before
@@ -503,7 +503,8 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
 
 Resolved on 2026-09-20: stylised look (D8); no React, minimal dependencies (D7);
 English + Hindi at launch (D9); AI-drafted, human-reviewed content (D10); layers must
-be addable as data, with GI products as the test case (D5).
+be addable as data, with GI products as the test case (D5); hosting on Cloudflare Pages (question 2,
+docs/DEPLOY.md).
 
 ## 12. Status
 
@@ -513,6 +514,9 @@ be addable as data, with GI products as the test case (D5).
   JS (three.js 130 KB, app 12 KB). Still open from Phase 0: the real-device check
   (>= 30 fps on the reference phone) and the owner's verdict on the look. Both need a
   phone and eyes; nothing in the sandbox can stand in for them.
+- 2026-09-20: hosting decided: Cloudflare Pages at darshan.alokm.com. Project
+  settings, caching headers, limits and the setup steps are in
+  [docs/DEPLOY.md](DEPLOY.md). This closes open question 2.
 
 ### What exists
 
