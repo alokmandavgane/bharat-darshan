@@ -39,11 +39,31 @@
   "states": "regions/states.json",
   "count": 36
  },
+ "layers": [
+  {
+   "id": "places",
+   "type": "points",
+   "title": {
+    "en": "Places",
+    "hi": "स्थान"
+   },
+   "icon": "pin",
+   "group": "culture",
+   "default_on": true,
+   "count": 48,
+   "reviewed": 0,
+   "path": "layers/places.json"
+  }
+ ],
  "attribution": [
   "State boundaries and India outline: DataMeet India community maps (CC BY 4.0), Census of India / Survey of India lineage.",
   "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
  ],
  "files": {
+  "layers/places.json": {
+   "size": 43573,
+   "sha256": "e68dae2e03b4"
+  },
   "regions/states-borders-1024.bin.gz": {
    "size": 95664,
    "sha256": "72901810ebf7"
