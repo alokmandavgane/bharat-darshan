@@ -22,6 +22,9 @@ void main() {
     float id = floor(texture(uIds, uv).r * 255.0 + 0.5);
     if (abs(id - uHole) < 0.5) y = 0.0;
   }
+  // the model settles into the paper towards the edge of the data, no hard rim
+  float edge = min(min(uv.x, 1.0 - uv.x) * uSizeKm.x, min(uv.y, 1.0 - uv.y) * uSizeKm.y);
+  y *= smoothstep(0.0, 260.0, edge);
   vec3 p = vec3((uv.x - 0.5) * uSizeKm.x, y + uLift, (uv.y - 0.5) * uSizeKm.y);
   vUv = uv;
   vPos = p;

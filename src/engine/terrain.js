@@ -2,8 +2,7 @@
 // The terrain: one grid mesh displaced by the heightmap in the vertex shader, shaded by
 // the clay / paper fragment shader. Layer-agnostic: it knows textures, not layers.
 import {
-  BoxGeometry, BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Group, Mesh, MeshBasicMaterial,
-  ShaderMaterial, Sphere, Vector2, Vector3,
+  BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Sphere, Vector2, Vector3,
 } from 'three';
 import frag from './shaders/terrain.frag.glsl?raw';
 import vert from './shaders/terrain.vert.glsl?raw';
@@ -14,9 +13,8 @@ export const CURVE = { gamma: 0.65, hRef: 8000 };
 
 /** Warm, desaturated clay palette (sRGB hex; three.js converts to linear for the shader). */
 export const PALETTE = {
-  table: '#efe9dc',
+  table: '#efe6d6',
   ocean: '#bccbd0',
-  board: { lit: '#e4dccb', shade: '#cdc4b1' },
   bands: ['#a6b98a', '#bec394', '#d1c08f', '#caa77e', '#ad8f76', '#a59b93', '#efece7'],
   tops: [80, 250, 600, 1200, 2500, 5400, 9000],
 };
@@ -106,18 +104,6 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   const mesh = new Mesh(geometry, material);
   mesh.frustumCulled = false;
 
-  // The board: a slab whose sides show below the model's edge. Faces in the order
-  // three.js builds a box: +x east, -x west, +y top, -y bottom, +z south, -z north.
-  // The light comes from the north-west, so the south and east sides sit in shade.
-  const BOARD_KM = 50;
-  const lit = new MeshBasicMaterial({ color: PALETTE.board.lit });
-  const shade = new MeshBasicMaterial({ color: PALETTE.board.shade });
-  const board = new Mesh(new BoxGeometry(sizeKm.w, BOARD_KM, sizeKm.h), [shade, lit, lit, lit, shade, lit]);
-  board.position.y = -BOARD_KM / 2 - 0.5;
-  board.frustumCulled = false;
-  const group = new Group();
-  group.add(board, mesh);
-
   let textures = [];
   const siblings = new Set();
   /** Swap in another tier's rasters (e.g. 2048 after the 1024 first view). */
@@ -142,15 +128,12 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   setTier(tierData);
 
   return {
-    mesh: group, material, uniforms, setTier, siblingMaterial, grid: { cols, rows: grid },
+    mesh, material, uniforms, setTier, siblingMaterial, grid: { cols, rows: grid },
     dispose() {
       textures.forEach((t) => t.dispose());
       uniforms.uGrain.value.dispose();
       geometry.dispose();
       material.dispose();
-      board.geometry.dispose();
-      lit.dispose();
-      shade.dispose();
     },
   };
 }

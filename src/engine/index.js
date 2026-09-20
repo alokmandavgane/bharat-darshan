@@ -10,7 +10,7 @@ import { loadPack } from './pack.js';
 import { biasedPick, createHeightfield, pickTerrain, projectGround } from './picking.js';
 import { createPoints } from './points.js';
 import { pickQuality } from './quality.js';
-import { createTerrain, CURVE, PALETTE } from './terrain.js';
+import { createTerrain, CURVE } from './terrain.js';
 import { byteTexture } from './textures.js';
 import { easeOutCubic, tween } from './tween.js';
 
@@ -27,10 +27,10 @@ const FOCUS_MIN_ZOOM = 1200;    // km of view height: a "focus" from the list ke
 export function createEngine({ canvas, store, labelContainer, markerContainer, labelText }) {
   const quality = pickQuality();
   const renderer = new WebGLRenderer({
-    canvas, antialias: true, alpha: false, stencil: false, powerPreference: 'high-performance',
+    canvas, antialias: true, alpha: true, premultipliedAlpha: true, stencil: false, powerPreference: 'high-performance',
   });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, quality.dprCap));
-  renderer.setClearColor(new Color(PALETTE.table), 1);
+  renderer.setClearColor(0x000000, 0);   // the page's paper shows through where the model fades out
   const scene = new Scene();
   const camera = new OrthographicCamera(-1, 1, 1, -1, 200, 16000);
   camera.up.set(0, 1, 0);
@@ -70,10 +70,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!terrain) return;
     applyCamera();
     renderer.render(scene, camera);
-    labels.update({ project, level, viewport, camera: store.get('camera'), regions: store.get('regions'),
-      selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang') });
-    points.update({ project, level, viewport, camera: store.get('camera'), active: new Set(store.get('layers')?.active || []),
+    // markers first (they are interactive), then labels keep clear of them
+    const taken = points.update({ project, level, viewport, camera: store.get('camera'), active: new Set(store.get('layers')?.active || []),
       selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts') });
+    labels.update({ project, level, viewport, camera: store.get('camera'), regions: store.get('regions'),
+      selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken });
   }
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on

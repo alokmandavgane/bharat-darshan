@@ -125,5 +125,9 @@ void main() {
   float g = texture(uGrain, vPos.xz * 0.022).r;
   col *= 0.94 + 0.12 * g * (1.0 - hole);
 
-  outColor = linearToOutputTexel(vec4(col, 1.0));
+  // dissolve into the page (premultiplied alpha) instead of ending at a rim
+  float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
+  float fade = smoothstep(0.0, 420.0, edge);
+  vec4 o = linearToOutputTexel(vec4(col, 1.0));
+  outColor = vec4(o.rgb * fade, fade);
 }
