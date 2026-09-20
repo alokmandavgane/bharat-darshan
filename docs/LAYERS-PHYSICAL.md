@@ -6,6 +6,11 @@ there: EPSG:7755 everywhere, layers are data under `content/layers/<id>/`, the e
 knows layer types and never layer ids, every item carries `sources` and a `status`,
 and every user-facing string exists in English and Hindi.
 
+Layer definitions here are written as `layer.json`, matching what the places layer
+actually ships and keeping the pipeline free of a YAML parser. That takes PLAN.md
+open question 5 as answered the way the code already answered it; CLAUDE.md and
+parts of PLAN.md still say `layer.yaml` and want a sweep.
+
 The layer inventory is a proposal, with sizes, sources and the engine work each
 layer implies, so the cost of each one is visible before any of it is built. The
 five questions that proposal raised are settled in section 9, which records the
@@ -67,21 +72,28 @@ taught, so it is the layer that makes every other one legible. It is also the on
 layer here with no authoritative open vector, so it is derived and then corrected
 rather than drawn freehand. See decision 3.
 
-```yaml
-# content/layers/physical-divisions/layer.yaml
-id: physical-divisions
-type: areas
-group: relief
-title: { en: Physical divisions, hi: भौतिक विभाग }
-icon: layers
-raster: { id: divisions, size: 2048 }   # 8-bit id map, one resolution, decision 2
-palette: categorical
-fill: { opacity: 0.55, edge: feather }  # gradational limits get soft edges
-label: { centroid: true, size: lg }
-tooltip: "{name}"
-card: [name, area_km2, states, blurb, sources]
-country_view: always
-attribution: Drawn for this project; see each item's sources.
+```json
+// content/layers/physical-divisions/layer.json
+{
+  "id": "physical-divisions",
+  "type": "areas",
+  "group": "relief",
+  "title": { "en": "Physical divisions", "hi": "भौतिक विभाग" },
+  "icon": "layers",
+  "country_view": "always",
+  "raster": { "id": "divisions", "size": 2048 },
+  "fill": { "opacity": 0.55, "edge": "feather" },
+  "label": { "centroid": true, "size": "lg" },
+  "categories": [
+    { "id": "mountain", "title": { "en": "Mountains", "hi": "पर्वत" }, "color": "#6d6f86" },
+    { "id": "plain",    "title": { "en": "Plains",    "hi": "मैदान" }, "color": "#8a9a5b" },
+    { "id": "plateau",  "title": { "en": "Plateau",   "hi": "पठार" }, "color": "#a86f2f" },
+    { "id": "coast",    "title": { "en": "Coastal",   "hi": "तटीय" }, "color": "#3f8f9e" },
+    { "id": "desert",   "title": { "en": "Desert",    "hi": "मरुस्थल" }, "color": "#d0a84c" },
+    { "id": "island",   "title": { "en": "Islands",   "hi": "द्वीप" }, "color": "#4e8a7a" }
+  ],
+  "attribution": "Derived and corrected for this project; see each item's sources."
+}
 ```
 
 ### ranges
@@ -91,14 +103,16 @@ layer draws no line at all: each range is a polyline along its ridge that exists
 only to carry a label. Himalaya, Karakoram, Zanskar, Pir Panjal, Aravalli, Vindhya,
 Satpura, Western Ghats, Eastern Ghats, Nilgiris, Purvanchal, Shillong Plateau.
 
-```yaml
-id: ranges
-type: lines
-group: relief
-title: { en: Mountain ranges, hi: पर्वत श्रेणियाँ }
-style: { render: none }      # spine geometry, label only
-label: { along: true, size: lg, letter_spacing: 0.14 }
-card: [name, length_km, highest_peak, states, blurb, sources]
+```json
+{
+  "id": "ranges",
+  "type": "lines",
+  "group": "relief",
+  "title": { "en": "Mountain ranges", "hi": "पर्वत श्रेणियाँ" },
+  "icon": "mountain",
+  "style": { "render": "none" },
+  "label": { "along": true, "size": "lg", "letter_spacing": 0.14 }
+}
 ```
 
 ### peaks
@@ -110,23 +124,26 @@ Guru Shikhar in the peninsula; Kangto in the east; Dhupgarh on the Satpura.
 
 The "highest in your state" hook is worth building the layer for on its own.
 
-```yaml
-id: peaks
-type: points
-group: relief
-title: { en: Peaks, hi: चोटियाँ }
-icon: peak
-categories:
-  - { id: eight-thousander, title: { en: Above 8000 m, hi: 8000 मीटर से ऊपर } }
-  - { id: state-highest,    title: { en: Highest in state, hi: राज्य का उच्चतम बिंदु } }
-  - { id: notable,          title: { en: Notable, hi: उल्लेखनीय } }
-fields:
-  elevation_m: { type: int }
-  range:       { type: ref, layer: ranges }
-pin: { to: terrain, leader: true }   # see section 5
-tooltip: "{name} · {elevation_m} m"
-card: [name, elevation_m, range, states, blurb, sources]
-country_view: aggregate
+```json
+{
+  "id": "peaks",
+  "type": "points",
+  "group": "relief",
+  "title": { "en": "Peaks", "hi": "चोटियाँ" },
+  "icon": "mountain",
+  "country_view": "markers",
+  "categories": [
+    { "id": "eight-thousander", "title": { "en": "Above 8000 m", "hi": "8000 मीटर से ऊपर" }, "icon": "mountain", "color": "#6d6f86" },
+    { "id": "state-highest", "title": { "en": "Highest in state", "hi": "राज्य का उच्चतम बिंदु" }, "icon": "mountain", "color": "#b4552e" },
+    { "id": "notable", "title": { "en": "Notable", "hi": "उल्लेखनीय" }, "icon": "mountain", "color": "#a86f2f" }
+  ],
+  "fields": {
+    "elevation_m": { "type": "int" },
+    "range": { "type": "ref", "layer": "ranges" }
+  },
+  "pin": { "leader": true },
+  "tooltip": "{name} · {elevation_m} m"
+}
 ```
 
 ### rivers and basins
@@ -140,20 +157,23 @@ Ganga basin shaded across a quarter of the country is a fact people remember.
 Confluences worth naming as points: Devprayag, Prayagraj, and the Brahmaputra
 meeting the Ganga in the delta.
 
-```yaml
-id: rivers
-type: lines
-group: water
-title: { en: Rivers, hi: नदियाँ }
-style:
-  colour: water
-  width_by: { field: order, stops: [[5, 1.0], [7, 2.2], [9, 4.0]] }
-  flow: { enabled: true, speed_by: order }
-levels: { country: "order >= 6", state: "order >= 4" }
-label: { along: true, size: sm }
-tooltip: "{name}"
-card: [name, length_km, basin, rises_in, drains_into, blurb, sources]
-attribution: HydroRIVERS (WWF and McGill University); names from OpenStreetMap
+```json
+{
+  "id": "rivers",
+  "type": "lines",
+  "group": "water",
+  "title": { "en": "Rivers", "hi": "नदियाँ" },
+  "icon": "wave",
+  "style": {
+    "color": "water",
+    "width_by": { "field": "order", "stops": [[5, 1.0], [7, 2.2], [9, 4.0]] },
+    "flow": { "enabled": true, "speed_by": "order" }
+  },
+  "levels": { "country": "order >= 6", "state": "order >= 4" },
+  "label": { "along": true, "size": "sm" },
+  "tooltip": "{name}",
+  "attribution": "HydroRIVERS (WWF and McGill University); names from OpenStreetMap"
+}
 ```
 
 ### passes
@@ -182,30 +202,43 @@ the Gangotri and Siachen systems.
 
 ## 5. New engine work
 
-Four pieces, in the order they block things.
+Phase 1 already landed more of this than the first draft of this note assumed.
+What follows separates what exists from what does not, against `src/engine` on
+main.
 
-**The `areas` layer type.** Choropleth as specified binds values to the existing
-state and district id rasters. Physical divisions and basins are neither: they are
+**Already there.**
+
+- *Collision-avoided labels.* `src/engine/labels.js` projects labels after every
+  render, places the biggest first, drops the ones that do not fit, and takes an
+  `avoid` list so markers and labels do not collide. Point labelling for these
+  layers is a matter of feeding it, not building it.
+- *Markers that ride the terrain.* `src/engine/points.js` already projects markers
+  onto the terrain and the lifted block. Peaks and passes inherit that for free, so
+  the pinning worry in the first draft is mostly resolved.
+- *Priority thinning and fly-to.* The places layer already thins by priority with
+  zoom and flies the camera on tap, which is the behaviour peaks and passes want.
+
+**Still to build**, in the order it blocks things.
+
+**The `areas` layer type.** Choropleth as specified binds values to the
+administrative id rasters. Physical divisions and basins are neither: they are
 categorical named regions with their own geometry, their own id raster, cards and
-selection. Two options. Either generalise choropleth with an optional
-`region_source` so a layer can ship its own raster, or add `areas` as a third region
-type. Decision 1 takes `areas`, because the items want the base item schema and
-choropleth's palette and legend model is built for continuous values. Decisions 2
-covers what it ships and how its edges are drawn.
+selection. Decision 1 takes `areas` as a third region type rather than overloading
+choropleth. This is the one piece nothing else can proceed without.
 
-**A label engine.** This is the largest piece and the one most likely to be
-underestimated. Ranges and rivers need text placed along a projected polyline,
-oriented to the curve, thinned under collision, and laid out again when the camera
-moves. Point labels need the same collision pass. Without it the map is a tangle at
-any zoom where more than a handful of features are visible.
+**Labels along a spine.** This is the real gap, and the largest remaining piece.
+`labels.js` places a label at a point. Ranges and rivers need text laid along a
+projected polyline, oriented to the curve, broken or dropped where the curve leaves
+the viewport, and re-laid out on every camera change. It shares the collision pass
+that already exists but not the placement logic.
 
-**Terrain pinning for points.** A marker's height has to be sampled from the
-displaced surface and run through the same exaggeration curve as the mesh, or every
-peak and pass will drift when the relief slider moves. Peaks additionally need a
-leader line, because of the resolution problem below.
+**A legend.** Nothing in `src/` draws one today. The banded clay palette is
+decorative until a viewer can read it, and every categorical layer here needs one.
+This is UI work and stays on the UI side of the split.
 
-**A legend.** The banded clay palette is decorative until a viewer can read it, and
-every categorical layer here needs one too.
+**Leader lines for peaks.** Small, but it is what makes the elevation trap below
+survivable: the marker sits on the rendered surface, and the leader shows the true
+summit standing above it.
 
 ### The peak elevation trap
 
@@ -225,6 +258,10 @@ and will change between quality tiers. Two consequences, both mandatory:
   field, which is sourced and reviewed. It is never read from the heightmap.
 - The marker is pinned to the rendered surface and drawn with a leader line, so it
   reads as "this peak is here" rather than appearing to float or sink.
+
+The same reasoning already appears in the plan's note that picking samples the mesh
+rather than the raster, for the same underlying reason: at phone resolutions the two
+disagree.
 
 ## 6. Data sources
 
@@ -283,9 +320,9 @@ that has three consequences that are easy to miss.
   glaciers, passes and river reaches there are included on the same footing as
   everywhere else. K2, Saltoro Kangri and the Siachen glacier are the notable
   entries.
-- **Share images inherit this.** The Open Graph card and the QR assets under
-  `public/share/` already render the silhouette from our own region raster. Any new
-  share image does the same, never from a mapping library default.
+- **Share images inherit this.** The Open Graph images are rendered from the app
+  itself in poster mode, so they carry our outline by construction. Any future
+  share asset does the same, never a mapping library default.
 
 Keep a neutral tone in blurbs for features in disputed areas, as section 5 requires
 for contested topics generally.
