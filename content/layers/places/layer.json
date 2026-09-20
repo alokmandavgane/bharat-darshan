@@ -1,0 +1,19 @@
+{
+  "id": "places",
+  "type": "points",
+  "group": "culture",
+  "title": { "en": "Places", "hi": "स्थान" },
+  "icon": "pin",
+  "default_on": true,
+  "country_view": "markers",
+  "categories": [
+    { "id": "heritage",   "title": { "en": "Heritage",   "hi": "विरासत" },   "icon": "🏛️" },
+    { "id": "nature",     "title": { "en": "Nature",     "hi": "प्रकृति" },  "icon": "🏞️" },
+    { "id": "beach",      "title": { "en": "Beaches",    "hi": "समुद्र तट" }, "icon": "🏖️" },
+    { "id": "hill",       "title": { "en": "Hills",      "hi": "पहाड़" },    "icon": "⛰️" },
+    { "id": "wildlife",   "title": { "en": "Wildlife",   "hi": "वन्यजीव" },  "icon": "🐯" },
+    { "id": "pilgrimage", "title": { "en": "Pilgrimage", "hi": "तीर्थ" },    "icon": "🛕" },
+    { "id": "city",       "title": { "en": "Cities",     "hi": "शहर" },      "icon": "🏙️" }
+  ],
+  "attribution": "Curated places; descriptions drafted from UNESCO World Heritage and Wikipedia pages, pending review."
+}
