@@ -14,7 +14,7 @@
   "sheet.subtitle": "{states} states · {uts} union territories",
   "sheet.about.heading": "About this map",
   "sheet.about.body": "A hand-made model of India: terrain from open elevation data, official state boundaries, in English and Hindi. Drag to pan, pinch to zoom, twist to turn, drag with two fingers to tilt.",
-  "sheet.next": "Coming next: tap a state to explore it, rivers, roads, railways, languages, places, food and festivals.",
+  "sheet.next": "Tap a state to select it. Coming next: rivers, roads, railways, languages, places, food and festivals.",
   "sheet.credits.heading": "Data and credits",
   "sheet.credits.boundaries": "State boundaries and the outline of India: DataMeet community maps (CC BY 4.0), from Census of India and Survey of India sources.",
   "sheet.credits.terrain": "Elevation: AWS Terrain Tiles (Mapzen Terrarium), built from SRTM, GMTED2010, ETOPO1 and other open datasets.",
@@ -24,5 +24,8 @@
   "status.error": "The map could not be loaded.",
   "status.retry": "Try again",
   "fallback.webgl": "This browser cannot show the 3D map (WebGL2 is needed). India has 28 states and 8 union territories; a text version of the content is on its way.",
-  "map.aria": "Interactive 3D map of India"
+  "map.aria": "Interactive 3D map of India",
+  "sheet.close": "Clear selection",
+  "unit.state": "State",
+  "unit.ut": "Union territory"
 }

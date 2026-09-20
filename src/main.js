@@ -22,6 +22,8 @@ const store = createStore({
   sheet: { snap: 'peek', peek: 0 },
   selection: null,
   hover: null,
+  tap: null,
+  pointer: null,
   flyTo: null,
   regions: null,
   status: 'loading',
@@ -42,7 +44,17 @@ if (!supported) {
   store.set('status', 'fallback');
 } else {
   const engine = createEngine({ canvas, store });
-  attachGestures(canvas, store, { onTap: () => {} });
+  attachGestures(canvas, store);
+  if (url.state) {
+    // Restore ?state=<slug> once the units are known.
+    const unsub = store.subscribe('regions', (r) => {
+      if (!r) return;
+      const u = r.units.find((x) => x.slug === url.state);
+      if (u) store.set('selection', u.id);
+      unsub();
+    });
+  }
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') store.set('selection', null); });
   engine.start().catch((err) => {
     console.error(err);
     store.set('status', 'error');

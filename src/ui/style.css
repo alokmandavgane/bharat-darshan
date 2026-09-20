@@ -53,6 +53,23 @@ canvas.map {
   cursor: grab;
 }
 canvas.map:active { cursor: grabbing; }
+canvas.map[data-hover="1"] { cursor: pointer; }
+
+/* --- hover tooltip (fine pointers only) --- */
+.tooltip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 14px));
+  background: var(--card);
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
 
 .hidden, [hidden] { display: none !important; }
 
@@ -190,15 +207,31 @@ body[data-sheet="half"] .controls, body[data-sheet="full"] .controls { opacity: 
   background: rgba(43, 39, 35, 0.25);
 }
 .sheet-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 2px 20px 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 2px 16px 12px 20px;
   cursor: pointer;
 }
-.sheet-title { font-size: 1.35rem; font-weight: 700; margin: 0; }
+.sheet-titles { min-width: 0; }
+.sheet-title { font-size: 1.35rem; font-weight: 700; margin: 0; overflow-wrap: anywhere; }
+.sheet-alt { color: var(--muted); margin: 0; font-size: 0.9rem; }
 .sheet-subtitle { color: var(--muted); margin: 0; font-size: 0.95rem; text-align: right; }
+.sheet-close {
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(43, 39, 35, 0.08);
+  color: var(--ink);
+  cursor: pointer;
+}
+.sheet-close:hover { background: rgba(43, 39, 35, 0.14); }
+.sheet-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet-body {
   flex: 1;
   overflow: hidden;

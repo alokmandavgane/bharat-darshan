@@ -33,8 +33,12 @@
     <section class="sheet" data-snap="peek" aria-label="Details">
       <div class="sheet-grip" role="button" tabindex="0" data-i18n-aria-label="sheet.grip"></div>
       <div class="sheet-head">
-        <h1 class="sheet-title" data-i18n="sheet.title">India</h1>
+        <div class="sheet-titles">
+          <h1 class="sheet-title" aria-live="polite">India</h1>
+          <p class="sheet-alt" hidden></p>
+        </div>
         <p class="sheet-subtitle"></p>
+        <button class="sheet-close" type="button" hidden data-i18n-aria-label="sheet.close">×</button>
       </div>
       <div class="sheet-body">
         <h2 data-i18n="sheet.about.heading">About this map</h2>
@@ -48,6 +52,8 @@
         </ul>
       </div>
     </section>
+
+    <div class="tooltip" role="tooltip" hidden></div>
 
     <div class="status" role="status">
       <span class="status-text" data-i18n="status.loading">Loading the map…</span>

@@ -84,6 +84,7 @@ export function createSheet(el, store) {
     else if (e.key === 'ArrowDown' || e.key === 'Escape') setSnap(SNAPS[Math.max(0, i - 1)]);
   });
   window.addEventListener('resize', () => setSnap(snap, false));
+  new ResizeObserver(() => setSnap(snap, false)).observe(head);
 
   // First layout after fonts settle so the peek height is measured right.
   setSnap(snap, false);
