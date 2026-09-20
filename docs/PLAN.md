@@ -579,6 +579,18 @@ docs/DEPLOY.md).
   end; inside a state view it tours that state's places). Verified headless; note that
   headless Chromium idles requestAnimationFrame unless something draws, so flights
   are checked with frames forced (mouse moves) or by their end state.
+- 2026-09-20, fourth round. The places layer grows from 48 to 139 items, Madhya
+  Pradesh first (29 places, Sanchi at priority 1), then forts, temples, hill stations,
+  reserves, lakes and falls across the rest of the country; all drafts with sources,
+  anchors validated against the ID raster (Amarkantak's nudged 5 km, noted on the
+  item; Chitrakoot claims both states). And the map moves on its own: `src/engine/idle.js`
+  sways the camera gently about the screen centre (yaw ±7°, a 2.5° dip, a 28 s cycle,
+  30 fps cap) four seconds after the last interaction, and only while the country
+  view is at rest (no selection, item, tour, flight or poster render). Any pointer,
+  wheel, key or touch anywhere (`src/ui/activity.js` reports it as `activity`), any
+  other camera write, tap or hover stops it at once; reduced motion disables it.
+  With the denser layer, priority-3 places now appear one zoom step later (below
+  2,400 km of view height) so the whole-country view keeps its state labels.
 
 ### What exists
 

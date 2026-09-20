@@ -1182,5 +1182,2205 @@
   "sources": [
    "https://en.wikipedia.org/wiki/Kavaratti"
   ]
+ },
+ {
+  "id": "sanchi",
+  "status": "draft",
+  "name": {
+   "en": "Sanchi Stupa",
+   "hi": "साँची स्तूप"
+  },
+  "anchor": {
+   "lat": 23.4794,
+   "lon": 77.7398
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 1,
+  "blurb": {
+   "en": "Buddhist stupas, monasteries and pillars on a hill above the Betwa plain, begun by Ashoka in the 3rd century BCE; the Great Stupa's carved gateways date from the 1st century BCE. UNESCO site since 1989.",
+   "hi": "बेतवा के मैदान के ऊपर एक पहाड़ी पर बौद्ध स्तूप, विहार और स्तंभ, तीसरी सदी ईसा पूर्व में अशोक द्वारा आरंभ; महान स्तूप के नक़्क़ाशीदार तोरण पहली सदी ईसा पूर्व के हैं। 1989 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/524",
+   "https://en.wikipedia.org/wiki/Sanchi"
+  ]
+ },
+ {
+  "id": "bhimbetka",
+  "status": "draft",
+  "name": {
+   "en": "Bhimbetka Rock Shelters",
+   "hi": "भीमबेटका शैलाश्रय"
+  },
+  "anchor": {
+   "lat": 22.9384,
+   "lon": 77.6127
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Some 750 rock shelters in the Vindhyan sandstone south of Bhopal, with paintings from the Mesolithic to the historical period; among the earliest traces of human life in India. UNESCO site since 2003.",
+   "hi": "भोपाल के दक्षिण विंध्य के बलुआ पत्थर में लगभग 750 शैलाश्रय, जिनमें मध्यपाषाण काल से ऐतिहासिक काल तक के चित्र हैं; भारत में मानव जीवन के सबसे पुराने निशानों में। 2003 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/925",
+   "https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters"
+  ]
+ },
+ {
+  "id": "kanha",
+  "status": "draft",
+  "name": {
+   "en": "Kanha National Park",
+   "hi": "कान्हा राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 22.3345,
+   "lon": 80.6115
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 2,
+  "blurb": {
+   "en": "Sal forest and meadows in the Maikal hills, a tiger reserve since 1973 and the home of the hard-ground barasingha, saved here from near extinction; said to have inspired Kipling's Jungle Book.",
+   "hi": "मैकल पहाड़ियों में साल के जंगल और घास के मैदान, 1973 से बाघ अभयारण्य और बारहसिंगा का घर, जिसे यहीं विलुप्ति से बचाया गया; कहा जाता है कि इसने किपलिंग की जंगल बुक को प्रेरित किया।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kanha_Tiger_Reserve"
+  ]
+ },
+ {
+  "id": "bandhavgarh",
+  "status": "draft",
+  "name": {
+   "en": "Bandhavgarh National Park",
+   "hi": "बांधवगढ़ राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 23.7169,
+   "lon": 81.0286
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 2,
+  "blurb": {
+   "en": "Tiger reserve in the Vindhyan hills of Umaria district, known for one of the highest densities of tigers in India, with an ancient hill fort and rock-cut caves inside the park.",
+   "hi": "उमरिया ज़िले की विंध्य पहाड़ियों में बाघ अभयारण्य, भारत में बाघों के सबसे अधिक घनत्व वाले क्षेत्रों में से एक; उद्यान के भीतर एक प्राचीन पहाड़ी क़िला और शैल-गुफाएँ भी हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bandhavgarh_National_Park"
+  ]
+ },
+ {
+  "id": "pench",
+  "status": "draft",
+  "name": {
+   "en": "Pench Tiger Reserve",
+   "hi": "पेंच बाघ अभयारण्य"
+  },
+  "anchor": {
+   "lat": 21.78,
+   "lon": 79.3
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Teak forest along the Pench river on the Satpura foothills, shared between Madhya Pradesh and Maharashtra; the setting of Kipling's Mowgli stories, with tigers, leopards and wild dogs.",
+   "hi": "सतपुड़ा की तलहटी में पेंच नदी के किनारे सागौन का जंगल, मध्य प्रदेश और महाराष्ट्र में फैला; किपलिंग की मोगली कहानियों की पृष्ठभूमि, जहाँ बाघ, तेंदुए और जंगली कुत्ते मिलते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pench_Tiger_Reserve"
+  ]
+ },
+ {
+  "id": "panna",
+  "status": "draft",
+  "name": {
+   "en": "Panna National Park",
+   "hi": "पन्ना राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 24.69,
+   "lon": 79.97
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Tiger reserve on the Ken river near Khajuraho, where tigers were reintroduced from 2009 after the local population was lost; gorges, waterfalls and gharial along the river.",
+   "hi": "खजुराहो के पास केन नदी पर बाघ अभयारण्य, जहाँ स्थानीय आबादी समाप्त हो जाने के बाद 2009 से बाघ फिर बसाए गए; नदी किनारे घाटियाँ, झरने और घड़ियाल।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Panna_National_Park"
+  ]
+ },
+ {
+  "id": "pachmarhi",
+  "status": "draft",
+  "name": {
+   "en": "Pachmarhi",
+   "hi": "पचमढ़ी"
+  },
+  "anchor": {
+   "lat": 22.4675,
+   "lon": 78.4344
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "hill",
+  "priority": 2,
+  "blurb": {
+   "en": "Madhya Pradesh's only hill station, a plateau at about 1,070 m in the Satpura range with waterfalls, cave shrines and the Dhupgarh peak, the highest point of the range.",
+   "hi": "मध्य प्रदेश का एकमात्र पर्वतीय स्थल, सतपुड़ा श्रेणी में लगभग 1,070 मीटर ऊँचा पठार, झरनों, गुफा-मंदिरों और श्रेणी के सर्वोच्च शिखर धूपगढ़ के साथ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pachmarhi"
+  ]
+ },
+ {
+  "id": "satpura-national-park",
+  "status": "draft",
+  "name": {
+   "en": "Satpura National Park",
+   "hi": "सतपुड़ा राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 22.53,
+   "lon": 78.1
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Rugged hill forest on the Denwa river and the Tawa reservoir, entered by boat at Madhai; known for walking and canoe safaris, sloth bears, leopards and giant squirrels.",
+   "hi": "देनवा नदी और तवा जलाशय पर ऊबड़-खाबड़ पहाड़ी जंगल, मढ़ई से नाव द्वारा प्रवेश; पैदल और कैनो सफ़ारी, भालू, तेंदुए और विशाल गिलहरियों के लिए जाना जाता है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Satpura_National_Park"
+  ]
+ },
+ {
+  "id": "orchha",
+  "status": "draft",
+  "name": {
+   "en": "Orchha",
+   "hi": "ओरछा"
+  },
+  "anchor": {
+   "lat": 25.3519,
+   "lon": 78.6412
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Capital of the Bundela Rajputs from the 16th century, on the Betwa: the Raja Mahal and Jahangir Mahal within the fort, the Chaturbhuj and Ram Raja temples and riverside cenotaphs.",
+   "hi": "16वीं सदी से बुंदेला राजपूतों की राजधानी, बेतवा के किनारे: क़िले में राजा महल और जहाँगीर महल, चतुर्भुज और राम राजा मंदिर तथा नदी किनारे छतरियाँ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Orchha"
+  ]
+ },
+ {
+  "id": "mandu",
+  "status": "draft",
+  "name": {
+   "en": "Mandu",
+   "hi": "माण्डू"
+  },
+  "anchor": {
+   "lat": 22.36,
+   "lon": 75.4
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Fortified hilltop city of the Malwa sultans on a Vindhyan spur: the Jahaz Mahal, Hindola Mahal, Hoshang Shah's marble tomb and Rani Roopmati's pavilion above the Narmada valley.",
+   "hi": "विंध्य की एक शाखा पर मालवा के सुल्तानों का क़िलेबंद पहाड़ी नगर: जहाज़ महल, हिंडोला महल, होशंग शाह का संगमरमर का मक़बरा और नर्मदा घाटी को निहारता रानी रूपमती का मंडप।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mandu,_Madhya_Pradesh"
+  ]
+ },
+ {
+  "id": "gwalior-fort",
+  "status": "draft",
+  "name": {
+   "en": "Gwalior Fort",
+   "hi": "ग्वालियर क़िला"
+  },
+  "anchor": {
+   "lat": 26.2303,
+   "lon": 78.1689
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Hill fort on a sandstone outcrop above Gwalior, held by Tomars, Mughals, Marathas and Scindias; the tiled Man Mandir palace, the Teli ka Mandir and rock-cut Jain colossi line its cliffs.",
+   "hi": "ग्वालियर के ऊपर बलुआ पत्थर की चट्टान पर पहाड़ी क़िला, जिस पर तोमर, मुग़ल, मराठा और सिंधिया शासक रहे; टाइलों वाला मान मंदिर, तेली का मंदिर और चट्टानों में उकेरी विशाल जैन प्रतिमाएँ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gwalior_Fort"
+  ]
+ },
+ {
+  "id": "mahakaleshwar-ujjain",
+  "status": "draft",
+  "name": {
+   "en": "Mahakaleshwar, Ujjain",
+   "hi": "महाकालेश्वर, उज्जैन"
+  },
+  "anchor": {
+   "lat": 23.1827,
+   "lon": 75.7682
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "One of the twelve Jyotirlingas, on the Shipra in the ancient city of Ujjain; known for its pre-dawn bhasma aarti, and one of the four Kumbh Mela sites (the Simhastha).",
+   "hi": "बारह ज्योतिर्लिंगों में से एक, प्राचीन नगर उज्जैन में शिप्रा के किनारे; भोर की भस्म आरती के लिए प्रसिद्ध और कुंभ मेले (सिंहस्थ) के चार स्थलों में से एक।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga"
+  ]
+ },
+ {
+  "id": "omkareshwar",
+  "status": "draft",
+  "name": {
+   "en": "Omkareshwar",
+   "hi": "ओंकारेश्वर"
+  },
+  "anchor": {
+   "lat": 22.2453,
+   "lon": 76.1511
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Jyotirlinga temple on Mandhata, an island in the Narmada shaped, it is said, like the sacred syllable Om; pilgrims walk the island's circuit between the two temple towns.",
+   "hi": "नर्मदा के बीच मांधाता द्वीप पर ज्योतिर्लिंग मंदिर, जिसका आकार, कहा जाता है, पवित्र अक्षर ॐ जैसा है; श्रद्धालु दोनों मंदिर-नगरों के बीच द्वीप की परिक्रमा करते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Omkareshwar_Temple"
+  ]
+ },
+ {
+  "id": "maheshwar",
+  "status": "draft",
+  "name": {
+   "en": "Maheshwar",
+   "hi": "महेश्वर"
+  },
+  "anchor": {
+   "lat": 22.1757,
+   "lon": 75.5853
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Temple town on the north bank of the Narmada, capital of Ahilyabai Holkar in the 18th century; her fort and ghats step down to the river, and the town's handloom Maheshwari saris are famous.",
+   "hi": "नर्मदा के उत्तरी तट पर मंदिर-नगर, 18वीं सदी में अहिल्याबाई होल्कर की राजधानी; उनका क़िला और घाट नदी तक उतरते हैं, और यहाँ की हथकरघा महेश्वरी साड़ियाँ प्रसिद्ध हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Maheshwar"
+  ]
+ },
+ {
+  "id": "bhedaghat",
+  "status": "draft",
+  "name": {
+   "en": "Bhedaghat Marble Rocks",
+   "hi": "भेड़ाघाट की संगमरमर चट्टानें"
+  },
+  "anchor": {
+   "lat": 23.128,
+   "lon": 79.8015
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "nature",
+  "priority": 2,
+  "blurb": {
+   "en": "Gorge near Jabalpur where the Narmada flows between white marble cliffs up to 30 m high, seen by boat and by moonlight; just upstream the river drops over the Dhuandhar falls.",
+   "hi": "जबलपुर के पास घाटी जहाँ नर्मदा 30 मीटर तक ऊँची सफ़ेद संगमरमर की चट्टानों के बीच बहती है, नाव से और चाँदनी में देखी जाती है; थोड़ा ऊपर नदी धुआँधार जलप्रपात से गिरती है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Marble_Rocks"
+  ]
+ },
+ {
+  "id": "amarkantak",
+  "status": "draft",
+  "name": {
+   "en": "Amarkantak",
+   "hi": "अमरकंटक"
+  },
+  "anchor": {
+   "lat": 22.7,
+   "lon": 81.7
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Pilgrim town on the Maikal plateau at about 1,050 m where the Narmada and the Son rise; temples around the Narmada Kund and the 11th-century Kalachuri shrines nearby.",
+   "hi": "मैकल पठार पर लगभग 1,050 मीटर ऊँचाई पर तीर्थ-नगर जहाँ नर्मदा और सोन का उद्गम है; नर्मदा कुंड के चारों ओर मंदिर और पास ही 11वीं सदी के कलचुरि मंदिर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Amarkantak"
+  ],
+  "note": "Anchor nudged about 5 km north-west of the town: the 1 km boundary raster puts the town square itself on the Chhattisgarh side of the state line."
+ },
+ {
+  "id": "chanderi",
+  "status": "draft",
+  "name": {
+   "en": "Chanderi",
+   "hi": "चंदेरी"
+  },
+  "anchor": {
+   "lat": 24.7195,
+   "lon": 78.1384
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Walled town between the Betwa and the Urvashi on the old Malwa to Bundelkhand route: a hill fort, the Koshak Mahal, Jain temples and a centuries-old tradition of hand-woven Chanderi saris.",
+   "hi": "बेतवा और उर्वशी के बीच, मालवा से बुंदेलखंड के पुराने मार्ग पर परकोटे वाला नगर: पहाड़ी क़िला, कोशक महल, जैन मंदिर और हाथ से बुनी चंदेरी साड़ियों की सदियों पुरानी परंपरा।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chanderi"
+  ]
+ },
+ {
+  "id": "bhojpur-temple",
+  "status": "draft",
+  "name": {
+   "en": "Bhojeshwar Temple, Bhojpur",
+   "hi": "भोजेश्वर मंदिर, भोजपुर"
+  },
+  "anchor": {
+   "lat": 23.1002,
+   "lon": 77.6397
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Unfinished 11th-century Shiva temple attributed to Raja Bhoj of Dhar, on the Betwa near Bhopal, with a linga about 2.3 m tall cut from one stone; the builders' ramp and plans survive on the rocks.",
+   "hi": "धार के राजा भोज से जुड़ा 11वीं सदी का अधूरा शिव मंदिर, भोपाल के पास बेतवा किनारे, एक ही पत्थर से गढ़ा लगभग 2.3 मीटर ऊँचा लिंग; निर्माण की ढलान और रेखाचित्र चट्टानों पर आज भी दिखते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bhojeshwar_Temple"
+  ]
+ },
+ {
+  "id": "udayagiri-caves",
+  "status": "draft",
+  "name": {
+   "en": "Udayagiri Caves",
+   "hi": "उदयगिरि गुफाएँ"
+  },
+  "anchor": {
+   "lat": 23.5354,
+   "lon": 77.7741
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Twenty rock-cut Hindu and Jain shrines of the Gupta period near Vidisha, dated by inscription to around 400 CE; the colossal Varaha relief lifting the earth goddess is the best known.",
+   "hi": "विदिशा के पास गुप्त काल की बीस शैलकृत हिंदू और जैन गुफाएँ, अभिलेख से लगभग 400 ईस्वी की; पृथ्वी देवी को उठाते विशाल वराह की मूर्ति सबसे प्रसिद्ध है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Udayagiri_Caves"
+  ]
+ },
+ {
+  "id": "bhopal",
+  "status": "draft",
+  "name": {
+   "en": "Bhopal",
+   "hi": "भोपाल"
+  },
+  "anchor": {
+   "lat": 23.2599,
+   "lon": 77.4126
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "city",
+  "priority": 2,
+  "blurb": {
+   "en": "Capital of Madhya Pradesh, built around the 11th-century Upper Lake; the Taj-ul-Masajid, one of India's largest mosques, the Bharat Bhavan arts centre and the state tribal museum.",
+   "hi": "मध्य प्रदेश की राजधानी, 11वीं सदी के बड़े तालाब के चारों ओर बसी; भारत की सबसे बड़ी मस्जिदों में से एक ताज-उल-मसाजिद, भारत भवन कला केंद्र और राज्य जनजातीय संग्रहालय।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bhopal"
+  ]
+ },
+ {
+  "id": "indore",
+  "status": "draft",
+  "name": {
+   "en": "Indore",
+   "hi": "इंदौर"
+  },
+  "anchor": {
+   "lat": 22.7177,
+   "lon": 75.8545
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "city",
+  "priority": 3,
+  "blurb": {
+   "en": "Largest city of Madhya Pradesh and the Holkars' former capital: the seven-storey Rajwada palace, Lal Bagh Palace, the Sarafa night food market, and repeated wins as India's cleanest city.",
+   "hi": "मध्य प्रदेश का सबसे बड़ा शहर और होल्करों की पूर्व राजधानी: सात मंज़िला राजवाड़ा, लाल बाग़ पैलेस, सराफ़ा का रात का खान-पान बाज़ार, और भारत के सबसे स्वच्छ शहर का बार-बार मिला ख़िताब।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Indore"
+  ]
+ },
+ {
+  "id": "asirgarh-fort",
+  "status": "draft",
+  "name": {
+   "en": "Asirgarh Fort",
+   "hi": "असीरगढ़ क़िला"
+  },
+  "anchor": {
+   "lat": 21.4693,
+   "lon": 76.2927
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Fort on a Satpura spur above the pass between the Narmada and Tapti valleys, called the key to the Deccan; taken by Akbar in 1601 after a long siege, later held by the Marathas and the British.",
+   "hi": "नर्मदा और ताप्ती घाटियों के बीच के दर्रे के ऊपर सतपुड़ा की शाखा पर क़िला, जिसे दक्कन की कुंजी कहा गया; लंबी घेराबंदी के बाद 1601 में अकबर ने जीता, बाद में मराठों और अंग्रेज़ों के अधीन।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Asirgarh_Fort"
+  ]
+ },
+ {
+  "id": "datia-palace",
+  "status": "draft",
+  "name": {
+   "en": "Datia Palace",
+   "hi": "दतिया महल"
+  },
+  "anchor": {
+   "lat": 25.6714,
+   "lon": 78.4612
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Seven-storey palace of Bir Singh Deo of Orchha, built around 1620 without wood or iron, symmetrical about a central tower; said never to have been lived in.",
+   "hi": "ओरछा के बीर सिंह देव का सात मंज़िला महल, लगभग 1620 में बिना लकड़ी या लोहे के बना, बीच की मीनार के चारों ओर सममित; कहा जाता है इसमें कभी कोई रहा नहीं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Datia_Palace"
+  ]
+ },
+ {
+  "id": "kuno",
+  "status": "draft",
+  "name": {
+   "en": "Kuno National Park",
+   "hi": "कूनो राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 25.65,
+   "lon": 77.25
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Dry forest and grassland on the Kuno river in Sheopur district, where cheetahs from Namibia and South Africa were released from 2022, seven decades after the species vanished from India.",
+   "hi": "श्योपुर ज़िले में कूनो नदी पर शुष्क जंगल और घास के मैदान, जहाँ 2022 से नामीबिया और दक्षिण अफ़्रीका के चीते छोड़े गए, भारत से इस प्रजाति के लुप्त होने के सात दशक बाद।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kuno_National_Park"
+  ]
+ },
+ {
+  "id": "bagh-caves",
+  "status": "draft",
+  "name": {
+   "en": "Bagh Caves",
+   "hi": "बाघ गुफाएँ"
+  },
+  "anchor": {
+   "lat": 22.3816,
+   "lon": 74.7947
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Nine rock-cut Buddhist monasteries of the 5th to 6th century on the Baghani river in Dhar district, once painted like Ajanta; the surviving murals are kept in a museum at the site.",
+   "hi": "धार ज़िले में बाघनी नदी पर 5वीं-6वीं सदी के नौ शैलकृत बौद्ध विहार, कभी अजंता की तरह चित्रित; बचे हुए भित्तिचित्र स्थल के संग्रहालय में रखे हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bagh_Caves"
+  ]
+ },
+ {
+  "id": "maihar",
+  "status": "draft",
+  "name": {
+   "en": "Sharda Devi Temple, Maihar",
+   "hi": "शारदा देवी मंदिर, मैहर"
+  },
+  "anchor": {
+   "lat": 24.2661,
+   "lon": 80.7577
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Shakti temple on the Trikuta hill above Maihar, reached by about a thousand steps or a ropeway; the town was the home of Ustad Allauddin Khan and the Maihar gharana of Hindustani music.",
+   "hi": "मैहर के ऊपर त्रिकूट पहाड़ी पर शक्ति मंदिर, लगभग एक हज़ार सीढ़ियों या रोपवे से पहुँच; यह नगर उस्ताद अलाउद्दीन ख़ाँ और हिंदुस्तानी संगीत के मैहर घराने का घर रहा।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Maihar"
+  ]
+ },
+ {
+  "id": "mitaoli",
+  "status": "draft",
+  "name": {
+   "en": "Chausath Yogini Temple, Mitaoli",
+   "hi": "चौसठ योगिनी मंदिर, मितावली"
+  },
+  "anchor": {
+   "lat": 26.4549,
+   "lon": 78.1994
+  },
+  "regions": [
+   "IN-MP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Circular 11th-century temple to the 64 yoginis on a hill in Morena district, open to the sky with 64 cells around a central shrine; often compared with Parliament House in Delhi.",
+   "hi": "मुरैना ज़िले में एक पहाड़ी पर 64 योगिनियों का 11वीं सदी का गोलाकार मंदिर, खुले आकाश के नीचे केंद्रीय मंदिर के चारों ओर 64 कक्ष; दिल्ली के संसद भवन से अक्सर तुलना की जाती है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chausath_Yogini_Temple,_Mitaoli"
+  ]
+ },
+ {
+  "id": "chitrakoot",
+  "status": "draft",
+  "name": {
+   "en": "Chitrakoot (Kamadgiri)",
+   "hi": "चित्रकूट (कामदगिरि)"
+  },
+  "anchor": {
+   "lat": 25.169,
+   "lon": 80.845
+  },
+  "regions": [
+   "IN-MP",
+   "IN-UP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Pilgrim town on the Mandakini astride the Madhya Pradesh and Uttar Pradesh border, where Rama, Sita and Lakshmana are said to have spent years of their exile; pilgrims circle the forested Kamadgiri hill.",
+   "hi": "मंदाकिनी किनारे मध्य प्रदेश और उत्तर प्रदेश की सीमा पर तीर्थ-नगर, जहाँ कहा जाता है कि राम, सीता और लक्ष्मण ने वनवास के वर्ष बिताए; श्रद्धालु वनाच्छादित कामदगिरि की परिक्रमा करते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chitrakoot"
+  ]
+ },
+ {
+  "id": "victoria-memorial",
+  "status": "draft",
+  "name": {
+   "en": "Victoria Memorial, Kolkata",
+   "hi": "विक्टोरिया मेमोरियल, कोलकाता"
+  },
+  "anchor": {
+   "lat": 22.5448,
+   "lon": 88.3426
+  },
+  "regions": [
+   "IN-WB"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "White marble memorial to Queen Victoria on the Maidan, built 1906 to 1921 in Indo-Saracenic style and now a museum of the colonial period; Kolkata's best-known landmark.",
+   "hi": "मैदान पर महारानी विक्टोरिया का सफ़ेद संगमरमर का स्मारक, 1906 से 1921 के बीच इंडो-सारासेनिक शैली में निर्मित और अब औपनिवेशिक काल का संग्रहालय; कोलकाता की सबसे प्रसिद्ध पहचान।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata"
+  ]
+ },
+ {
+  "id": "mehrangarh-fort",
+  "status": "draft",
+  "name": {
+   "en": "Mehrangarh Fort, Jodhpur",
+   "hi": "मेहरानगढ़ क़िला, जोधपुर"
+  },
+  "anchor": {
+   "lat": 26.2981,
+   "lon": 73.0189
+  },
+  "regions": [
+   "IN-RJ"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Fort of the Rathore rulers on a 120 m cliff above the blue houses of Jodhpur, begun by Rao Jodha in 1459; palaces, a museum and views across the edge of the Thar.",
+   "hi": "जोधपुर के नीले घरों के ऊपर 120 मीटर ऊँची चट्टान पर राठौड़ शासकों का क़िला, 1459 में राव जोधा द्वारा आरंभ; महल, संग्रहालय और थार के छोर तक के दृश्य।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mehrangarh"
+  ]
+ },
+ {
+  "id": "ranthambore",
+  "status": "draft",
+  "name": {
+   "en": "Ranthambore National Park",
+   "hi": "रणथंभौर राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 26.0173,
+   "lon": 76.5026
+  },
+  "regions": [
+   "IN-RJ"
+  ],
+  "category": "wildlife",
+  "priority": 2,
+  "blurb": {
+   "en": "Dry deciduous forest and lakes below a 10th-century hill fort, one of India's best-known tiger reserves, where tigers are often seen by day among the ruins.",
+   "hi": "10वीं सदी के पहाड़ी क़िले के नीचे शुष्क पर्णपाती जंगल और झीलें, भारत के सबसे प्रसिद्ध बाघ अभयारण्यों में से एक, जहाँ खंडहरों के बीच दिन में अक्सर बाघ दिखते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ranthambore_National_Park"
+  ]
+ },
+ {
+  "id": "gir",
+  "status": "draft",
+  "name": {
+   "en": "Gir National Park",
+   "hi": "गिर राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 21.1244,
+   "lon": 70.8242
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "wildlife",
+  "priority": 2,
+  "blurb": {
+   "en": "Dry teak forest in Saurashtra, the last home of the Asiatic lion, protected since the early 20th century; the population has grown from a few dozen to several hundred.",
+   "hi": "सौराष्ट्र में सागौन का शुष्क जंगल, एशियाई शेर का अंतिम प्राकृतिक आवास, 20वीं सदी के आरंभ से संरक्षित; इनकी संख्या कुछ दर्जन से बढ़कर कई सौ हो गई है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gir_National_Park"
+  ]
+ },
+ {
+  "id": "statue-of-unity",
+  "status": "draft",
+  "name": {
+   "en": "Statue of Unity",
+   "hi": "स्टैच्यू ऑफ़ यूनिटी"
+  },
+  "anchor": {
+   "lat": 21.838,
+   "lon": 73.7191
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "182 m statue of Sardar Vallabhbhai Patel facing the Sardar Sarovar dam on the Narmada, unveiled in 2018 as the world's tallest statue; a viewing gallery sits at chest height.",
+   "hi": "नर्मदा पर सरदार सरोवर बाँध के सामने सरदार वल्लभभाई पटेल की 182 मीटर ऊँची प्रतिमा, 2018 में दुनिया की सबसे ऊँची प्रतिमा के रूप में अनावृत; छाती की ऊँचाई पर दर्शक दीर्घा।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Statue_of_Unity"
+  ]
+ },
+ {
+  "id": "nalanda",
+  "status": "draft",
+  "name": {
+   "en": "Nalanda",
+   "hi": "नालंदा"
+  },
+  "anchor": {
+   "lat": 25.1358,
+   "lon": 85.4438
+  },
+  "regions": [
+   "IN-BR"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Ruins of a Buddhist monastic university that taught from the 5th to the 13th century, drawing scholars from across Asia; stupas, monasteries and shrines over 23 hectares. UNESCO site since 2016.",
+   "hi": "5वीं से 13वीं सदी तक चले बौद्ध महाविहार-विश्वविद्यालय के अवशेष, जहाँ पूरे एशिया से विद्वान आते थे; 23 हेक्टेयर में उत्खनित स्तूप, विहार और मंदिर। 2016 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/1502",
+   "https://en.wikipedia.org/wiki/Nalanda_mahavihara"
+  ]
+ },
+ {
+  "id": "golconda-fort",
+  "status": "draft",
+  "name": {
+   "en": "Golconda Fort",
+   "hi": "गोलकोंडा क़िला"
+  },
+  "anchor": {
+   "lat": 17.3833,
+   "lon": 78.4011
+  },
+  "regions": [
+   "IN-TS"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Citadel of the Qutb Shahi sultans on a granite hill west of Hyderabad, famed for its acoustics and for the diamond trade that passed through it, including the Koh-i-Noor.",
+   "hi": "हैदराबाद के पश्चिम में ग्रेनाइट की पहाड़ी पर क़ुतुब शाही सुल्तानों का गढ़, अपनी ध्वनि-व्यवस्था और यहाँ से गुज़रे हीरों के व्यापार के लिए प्रसिद्ध, जिनमें कोहिनूर भी शामिल था।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Golconda_Fort"
+  ]
+ },
+ {
+  "id": "ramappa-temple",
+  "status": "draft",
+  "name": {
+   "en": "Ramappa Temple",
+   "hi": "रामप्पा मंदिर"
+  },
+  "anchor": {
+   "lat": 18.2593,
+   "lon": 79.9427
+  },
+  "regions": [
+   "IN-TS"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Kakatiya temple of about 1213 at Palampet, named after its sculptor, with floating bricks in its tower and black basalt dancers on the brackets; UNESCO site since 2021.",
+   "hi": "पालमपेट में लगभग 1213 का काकतीय मंदिर, अपने शिल्पकार के नाम पर, शिखर में तैरने वाली ईंटें और ब्रैकेटों पर काले बेसाल्ट की नर्तकियाँ; 2021 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/1570",
+   "https://en.wikipedia.org/wiki/Ramappa_Temple"
+  ]
+ },
+ {
+  "id": "marina-beach",
+  "status": "draft",
+  "name": {
+   "en": "Marina Beach, Chennai",
+   "hi": "मरीना समुद्र तट, चेन्नई"
+  },
+  "anchor": {
+   "lat": 13.05,
+   "lon": 80.278
+  },
+  "regions": [
+   "IN-TN"
+  ],
+  "category": "beach",
+  "priority": 3,
+  "blurb": {
+   "en": "Thirteen kilometres of sand along the Bay of Bengal from Fort St George to Besant Nagar, one of the longest urban beaches in the world, busiest at dusk with food stalls and kite sellers.",
+   "hi": "फ़ोर्ट सेंट जॉर्ज से बेसेंट नगर तक बंगाल की खाड़ी के किनारे तेरह किलोमीटर की रेत, दुनिया के सबसे लंबे शहरी समुद्र तटों में से एक, शाम को खाने के ठेलों और पतंग वालों से गुलज़ार।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Marina_Beach"
+  ]
+ },
+ {
+  "id": "brihadisvara-thanjavur",
+  "status": "draft",
+  "name": {
+   "en": "Brihadisvara Temple, Thanjavur",
+   "hi": "बृहदीश्वर मंदिर, तंजावुर"
+  },
+  "anchor": {
+   "lat": 10.7828,
+   "lon": 79.1318
+  },
+  "regions": [
+   "IN-TN"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Granite temple completed by the Chola king Rajaraja I in 1010 CE, its tower rising about 66 m over the sanctum; one of the Great Living Chola Temples, a UNESCO site.",
+   "hi": "चोल राजा राजराज प्रथम द्वारा 1010 ईस्वी में पूर्ण ग्रेनाइट का मंदिर, जिसका विमान गर्भगृह के ऊपर लगभग 66 मीटर ऊँचा है; महान जीवंत चोल मंदिरों में से एक, यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/250",
+   "https://en.wikipedia.org/wiki/Brihadisvara_Temple,_Thanjavur"
+  ]
+ },
+ {
+  "id": "rameswaram",
+  "status": "draft",
+  "name": {
+   "en": "Rameswaram",
+   "hi": "रामेश्वरम"
+  },
+  "anchor": {
+   "lat": 9.2881,
+   "lon": 79.3174
+  },
+  "regions": [
+   "IN-TN"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Temple town on Pamban island, one of the twelve Jyotirlingas and a Char Dham site; the Ramanathaswamy temple's corridors, with over a thousand pillars, are the longest in India.",
+   "hi": "पंबन द्वीप पर मंदिर-नगर, बारह ज्योतिर्लिंगों और चार धामों में से एक; रामनाथस्वामी मंदिर के एक हज़ार से अधिक स्तंभों वाले गलियारे भारत में सबसे लंबे हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rameswaram"
+  ]
+ },
+ {
+  "id": "kanyakumari",
+  "status": "draft",
+  "name": {
+   "en": "Kanyakumari",
+   "hi": "कन्याकुमारी"
+  },
+  "anchor": {
+   "lat": 8.095,
+   "lon": 77.545
+  },
+  "regions": [
+   "IN-TN"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Southern tip of the mainland, where the Arabian Sea, the Bay of Bengal and the Indian Ocean meet; the Kumari Amman temple, the Vivekananda Rock Memorial and the 41 m Thiruvalluvar statue offshore.",
+   "hi": "मुख्य भूमि का दक्षिणी छोर, जहाँ अरब सागर, बंगाल की खाड़ी और हिंद महासागर मिलते हैं; कुमारी अम्मन मंदिर, विवेकानंद शिला स्मारक और समुद्र में 41 मीटर ऊँची तिरुवल्लुवर प्रतिमा।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kanyakumari"
+  ]
+ },
+ {
+  "id": "ooty",
+  "status": "draft",
+  "name": {
+   "en": "Ooty",
+   "hi": "ऊटी"
+  },
+  "anchor": {
+   "lat": 11.4102,
+   "lon": 76.695
+  },
+  "regions": [
+   "IN-TN"
+  ],
+  "category": "hill",
+  "priority": 2,
+  "blurb": {
+   "en": "Hill station at about 2,240 m in the Nilgiris, once the summer capital of the Madras Presidency; tea gardens, the botanical garden and the Nilgiri Mountain Railway, a UNESCO site.",
+   "hi": "नीलगिरि में लगभग 2,240 मीटर ऊँचाई पर पर्वतीय स्थल, कभी मद्रास प्रेसीडेंसी की ग्रीष्मकालीन राजधानी; चाय बाग़ान, वनस्पति उद्यान और यूनेस्को स्थल नीलगिरि पर्वतीय रेल।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ooty",
+   "https://whc.unesco.org/en/list/944"
+  ]
+ },
+ {
+  "id": "badami",
+  "status": "draft",
+  "name": {
+   "en": "Badami Cave Temples",
+   "hi": "बादामी गुफा मंदिर"
+  },
+  "anchor": {
+   "lat": 15.9186,
+   "lon": 75.6839
+  },
+  "regions": [
+   "IN-KA"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Four rock-cut temples of the 6th century in the red sandstone cliffs above the Agastya lake, capital of the early Chalukyas; Aihole and Pattadakal, a UNESCO site, lie nearby.",
+   "hi": "अगस्त्य झील के ऊपर लाल बलुआ पत्थर की चट्टानों में 6वीं सदी के चार शैलकृत मंदिर, आरंभिक चालुक्यों की राजधानी; पास ही ऐहोल और यूनेस्को स्थल पट्टदकल।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Badami_cave_temples"
+  ]
+ },
+ {
+  "id": "belur-halebidu",
+  "status": "draft",
+  "name": {
+   "en": "Belur and Halebidu",
+   "hi": "बेलूर और हलेबिडु"
+  },
+  "anchor": {
+   "lat": 13.165,
+   "lon": 75.86
+  },
+  "regions": [
+   "IN-KA"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Hoysala temples of the 12th century in soapstone, the Chennakeshava at Belur and the Hoysaleswara at Halebidu, covered in fine carving; UNESCO site since 2023.",
+   "hi": "12वीं सदी के होयसल मंदिर, साबुन-पत्थर में: बेलूर का चेन्नकेशव और हलेबिडु का होयसलेश्वर, बारीक नक़्क़ाशी से ढके; 2023 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/1670",
+   "https://en.wikipedia.org/wiki/Chennakeshava_Temple,_Belur"
+  ]
+ },
+ {
+  "id": "jog-falls",
+  "status": "draft",
+  "name": {
+   "en": "Jog Falls",
+   "hi": "जोग जलप्रपात"
+  },
+  "anchor": {
+   "lat": 14.2295,
+   "lon": 74.8125
+  },
+  "regions": [
+   "IN-KA"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "The Sharavathi river plunging 253 m in four streams over a cliff in the Western Ghats, among India's highest waterfalls, fullest in the monsoon.",
+   "hi": "पश्चिमी घाट में एक चट्टान से चार धाराओं में 253 मीटर गिरती शरावती नदी, भारत के सबसे ऊँचे जलप्रपातों में, मानसून में सबसे भरपूर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jog_Falls"
+  ]
+ },
+ {
+  "id": "coorg",
+  "status": "draft",
+  "name": {
+   "en": "Coorg (Kodagu)",
+   "hi": "कूर्ग (कोडगु)"
+  },
+  "anchor": {
+   "lat": 12.4244,
+   "lon": 75.7382
+  },
+  "regions": [
+   "IN-KA"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Hill district on the Western Ghats around Madikeri, with coffee and spice estates, the Abbey falls, the Talakaveri source of the Kaveri, and the Kodava people's distinct culture.",
+   "hi": "मडिकेरी के आसपास पश्चिमी घाट पर पहाड़ी ज़िला, कॉफ़ी और मसालों के बाग़ान, अब्बे जलप्रपात, कावेरी का उद्गम तलकावेरी और कोडवा लोगों की विशिष्ट संस्कृति।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kodagu_district"
+  ]
+ },
+ {
+  "id": "periyar",
+  "status": "draft",
+  "name": {
+   "en": "Periyar Tiger Reserve",
+   "hi": "पेरियार बाघ अभयारण्य"
+  },
+  "anchor": {
+   "lat": 9.6,
+   "lon": 77.165
+  },
+  "regions": [
+   "IN-KL"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Forest around the Periyar lake at Thekkady in the Cardamom Hills, known for elephants seen from boats on the lake, and one of India's oldest tiger reserves.",
+   "hi": "इलायची की पहाड़ियों में थेक्कडी की पेरियार झील के चारों ओर जंगल, झील में नाव से दिखते हाथियों के लिए प्रसिद्ध और भारत के सबसे पुराने बाघ अभयारण्यों में से एक।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Periyar_National_Park"
+  ]
+ },
+ {
+  "id": "fort-kochi",
+  "status": "draft",
+  "name": {
+   "en": "Fort Kochi",
+   "hi": "फ़ोर्ट कोच्चि"
+  },
+  "anchor": {
+   "lat": 9.965,
+   "lon": 76.248
+  },
+  "regions": [
+   "IN-KL"
+  ],
+  "category": "city",
+  "priority": 3,
+  "blurb": {
+   "en": "Old harbour quarter of Kochi with Chinese fishing nets, the 1503 St Francis church, Dutch and Portuguese houses and the Mattancherry palace and synagogue nearby.",
+   "hi": "कोच्चि का पुराना बंदरगाह मोहल्ला: चीनी मछली-जाल, 1503 का सेंट फ़्रांसिस गिरजाघर, डच और पुर्तगाली मकान, और पास ही मट्टनचेरी महल और यहूदी उपासनागृह।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fort_Kochi"
+  ]
+ },
+ {
+  "id": "wayanad",
+  "status": "draft",
+  "name": {
+   "en": "Wayanad",
+   "hi": "वायनाड"
+  },
+  "anchor": {
+   "lat": 11.6854,
+   "lon": 76.132
+  },
+  "regions": [
+   "IN-KL"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Plateau district in the Western Ghats with spice and coffee estates, the Edakkal caves with prehistoric carvings, the Chembra peak and elephants in the Wayanad sanctuary.",
+   "hi": "पश्चिमी घाट में पठारी ज़िला, मसालों और कॉफ़ी के बाग़ान, प्रागैतिहासिक उत्कीर्णनों वाली एडक्कल गुफाएँ, चेम्ब्रा शिखर और वायनाड अभयारण्य के हाथी।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Wayanad_district"
+  ]
+ },
+ {
+  "id": "shirdi",
+  "status": "draft",
+  "name": {
+   "en": "Shirdi",
+   "hi": "शिरडी"
+  },
+  "anchor": {
+   "lat": 19.766,
+   "lon": 74.477
+  },
+  "regions": [
+   "IN-MH"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Town in Ahmednagar district where Sai Baba lived until 1918; his samadhi temple draws tens of thousands of pilgrims a day from every faith.",
+   "hi": "अहमदनगर ज़िले का नगर जहाँ साईं बाबा 1918 तक रहे; उनका समाधि मंदिर हर धर्म के हज़ारों श्रद्धालुओं को प्रतिदिन खींचता है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shirdi"
+  ]
+ },
+ {
+  "id": "lonar-crater",
+  "status": "draft",
+  "name": {
+   "en": "Lonar Crater Lake",
+   "hi": "लोनार क्रेटर झील"
+  },
+  "anchor": {
+   "lat": 19.976,
+   "lon": 76.508
+  },
+  "regions": [
+   "IN-MH"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Saline lake about 1.8 km across in a crater blasted into the Deccan basalt by a meteorite some 50,000 years ago, ringed by forest and medieval temples.",
+   "hi": "दक्कन के बेसाल्ट में लगभग 50,000 वर्ष पहले उल्कापिंड से बने गड्ढे में क़रीब 1.8 किमी चौड़ी खारी झील, जंगल और मध्यकालीन मंदिरों से घिरी।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lonar_Lake"
+  ]
+ },
+ {
+  "id": "mahabaleshwar",
+  "status": "draft",
+  "name": {
+   "en": "Mahabaleshwar",
+   "hi": "महाबलेश्वर"
+  },
+  "anchor": {
+   "lat": 17.9237,
+   "lon": 73.6586
+  },
+  "regions": [
+   "IN-MH"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Hill station at about 1,350 m in the Sahyadris, the source of the Krishna river; viewpoints over the valleys, strawberry farms and the Pratapgad fort nearby.",
+   "hi": "सह्याद्रि में लगभग 1,350 मीटर ऊँचाई पर पर्वतीय स्थल, कृष्णा नदी का उद्गम; घाटियों के दृश्य-बिंदु, स्ट्रॉबेरी के खेत और पास ही प्रतापगढ़ क़िला।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mahabaleshwar"
+  ]
+ },
+ {
+  "id": "trimbakeshwar",
+  "status": "draft",
+  "name": {
+   "en": "Trimbakeshwar",
+   "hi": "त्र्यंबकेश्वर"
+  },
+  "anchor": {
+   "lat": 19.9322,
+   "lon": 73.53
+  },
+  "regions": [
+   "IN-MH"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Jyotirlinga temple near Nashik at the foot of Brahmagiri hill, where the Godavari rises; the 18th-century black stone temple was built by the Peshwa Balaji Baji Rao.",
+   "hi": "नासिक के पास ब्रह्मगिरि पहाड़ी की तलहटी में ज्योतिर्लिंग मंदिर, जहाँ गोदावरी का उद्गम है; काले पत्थर का 18वीं सदी का मंदिर पेशवा बालाजी बाजीराव ने बनवाया।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Trimbakeshwar_Shiva_Temple"
+  ]
+ },
+ {
+  "id": "red-fort",
+  "status": "draft",
+  "name": {
+   "en": "Red Fort",
+   "hi": "लाल क़िला"
+  },
+  "anchor": {
+   "lat": 28.6562,
+   "lon": 77.241
+  },
+  "regions": [
+   "IN-DL"
+  ],
+  "category": "heritage",
+  "priority": 2,
+  "blurb": {
+   "en": "Shah Jahan's red sandstone citadel of 1648 in Old Delhi, seat of the Mughals until 1857; the prime minister addresses the nation from its ramparts every Independence Day. UNESCO site since 2007.",
+   "hi": "पुरानी दिल्ली में शाहजहाँ का 1648 का लाल बलुआ पत्थर का गढ़, 1857 तक मुग़लों की राजगद्दी; हर स्वतंत्रता दिवस पर प्रधानमंत्री इसकी प्राचीर से देश को संबोधित करते हैं। 2007 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/231",
+   "https://en.wikipedia.org/wiki/Red_Fort"
+  ]
+ },
+ {
+  "id": "humayuns-tomb",
+  "status": "draft",
+  "name": {
+   "en": "Humayun's Tomb",
+   "hi": "हुमायूँ का मक़बरा"
+  },
+  "anchor": {
+   "lat": 28.5933,
+   "lon": 77.2507
+  },
+  "regions": [
+   "IN-DL"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Garden tomb of the second Mughal emperor, completed around 1570 by his widow; the first great charbagh mausoleum in India and a model for the Taj Mahal. UNESCO site since 1993.",
+   "hi": "दूसरे मुग़ल बादशाह का उद्यान-मक़बरा, लगभग 1570 में उनकी विधवा द्वारा पूर्ण; भारत का पहला भव्य चारबाग़ मक़बरा और ताजमहल का पूर्वरूप। 1993 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/232",
+   "https://en.wikipedia.org/wiki/Humayun%27s_Tomb"
+  ]
+ },
+ {
+  "id": "fatehpur-sikri",
+  "status": "draft",
+  "name": {
+   "en": "Fatehpur Sikri",
+   "hi": "फ़तेहपुर सीकरी"
+  },
+  "anchor": {
+   "lat": 27.0945,
+   "lon": 77.6679
+  },
+  "regions": [
+   "IN-UP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Akbar's red sandstone capital west of Agra, built from 1571 and abandoned within fifteen years; the Buland Darwaza, Jama Masjid, Panch Mahal and the tomb of Salim Chishti. UNESCO site since 1986.",
+   "hi": "आगरा के पश्चिम अकबर की लाल बलुआ पत्थर की राजधानी, 1571 से निर्मित और पंद्रह वर्षों में ही छोड़ दी गई; बुलंद दरवाज़ा, जामा मस्जिद, पंच महल और सलीम चिश्ती की दरगाह। 1986 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/255",
+   "https://en.wikipedia.org/wiki/Fatehpur_Sikri"
+  ]
+ },
+ {
+  "id": "sarnath",
+  "status": "draft",
+  "name": {
+   "en": "Sarnath",
+   "hi": "सारनाथ"
+  },
+  "anchor": {
+   "lat": 25.3811,
+   "lon": 83.0214
+  },
+  "regions": [
+   "IN-UP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Deer park near Varanasi where the Buddha gave his first sermon; the Dhamek stupa, monastery ruins and the Ashokan lion capital, now India's national emblem, in the site museum.",
+   "hi": "वाराणसी के पास मृगदाव जहाँ बुद्ध ने पहला उपदेश दिया; धमेक स्तूप, विहारों के अवशेष और स्थल संग्रहालय में अशोक का सिंह-शीर्ष, जो अब भारत का राष्ट्रीय प्रतीक है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sarnath"
+  ]
+ },
+ {
+  "id": "ayodhya",
+  "status": "draft",
+  "name": {
+   "en": "Ayodhya",
+   "hi": "अयोध्या"
+  },
+  "anchor": {
+   "lat": 26.7956,
+   "lon": 82.1943
+  },
+  "regions": [
+   "IN-UP"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Ancient city on the Sarayu revered as the birthplace of Rama; ghats, the Hanuman Garhi temple and the Ram temple consecrated in 2024 draw pilgrims through the year.",
+   "hi": "सरयू किनारे प्राचीन नगर, राम की जन्मभूमि के रूप में पूजित; घाट, हनुमानगढ़ी और 2024 में प्रतिष्ठित राम मंदिर वर्ष भर श्रद्धालुओं को खींचते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ayodhya"
+  ]
+ },
+ {
+  "id": "prayagraj-sangam",
+  "status": "draft",
+  "name": {
+   "en": "Prayagraj Sangam",
+   "hi": "प्रयागराज संगम"
+  },
+  "anchor": {
+   "lat": 25.43,
+   "lon": 81.878
+  },
+  "regions": [
+   "IN-UP"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Confluence of the Ganga, the Yamuna and the mythical Saraswati below Akbar's fort, the site of the Kumbh Mela, the world's largest gathering, held here every twelve years.",
+   "hi": "अकबर के क़िले के नीचे गंगा, यमुना और पौराणिक सरस्वती का संगम, कुंभ मेले का स्थल, दुनिया का सबसे बड़ा जमावड़ा, जो यहाँ हर बारह वर्ष में लगता है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Triveni_Sangam"
+  ]
+ },
+ {
+  "id": "vrindavan",
+  "status": "draft",
+  "name": {
+   "en": "Mathura and Vrindavan",
+   "hi": "मथुरा और वृंदावन"
+  },
+  "anchor": {
+   "lat": 27.58,
+   "lon": 77.7
+  },
+  "regions": [
+   "IN-UP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Twin towns on the Yamuna tied to the life of Krishna: Mathura, his birthplace, and Vrindavan with the Banke Bihari, Prem Mandir and ISKCON temples; Holi here lasts for days.",
+   "hi": "यमुना किनारे कृष्ण के जीवन से जुड़े जुड़वाँ नगर: उनकी जन्मभूमि मथुरा और बांके बिहारी, प्रेम मंदिर व इस्कॉन मंदिरों वाला वृंदावन; यहाँ की होली कई दिन चलती है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Vrindavan"
+  ]
+ },
+ {
+  "id": "vaishno-devi",
+  "status": "draft",
+  "name": {
+   "en": "Vaishno Devi",
+   "hi": "वैष्णो देवी"
+  },
+  "anchor": {
+   "lat": 33.0304,
+   "lon": 74.949
+  },
+  "regions": [
+   "IN-JK"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Cave shrine of the goddess in the Trikuta hills at about 1,580 m, reached by a 12 km climb from Katra; among the most visited pilgrimage sites in India.",
+   "hi": "त्रिकुटा पहाड़ियों में लगभग 1,580 मीटर ऊँचाई पर देवी का गुफा-मंदिर, कटरा से 12 किमी की चढ़ाई; भारत के सबसे अधिक दर्शनार्थियों वाले तीर्थों में।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Vaishno_Devi_Temple"
+  ]
+ },
+ {
+  "id": "gulmarg",
+  "status": "draft",
+  "name": {
+   "en": "Gulmarg",
+   "hi": "गुलमर्ग"
+  },
+  "anchor": {
+   "lat": 34.0484,
+   "lon": 74.3805
+  },
+  "regions": [
+   "IN-JK"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Meadow resort at about 2,650 m in the Pir Panjal, a ski destination in winter; the Gulmarg gondola climbs to nearly 4,000 m on Apharwat peak.",
+   "hi": "पीर पंजाल में लगभग 2,650 मीटर ऊँचाई पर घास के मैदानों वाला पर्यटन स्थल, सर्दियों में स्कीइंग का ठिकाना; गुलमर्ग गोंडोला अफरवात शिखर पर लगभग 4,000 मीटर तक चढ़ता है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gulmarg"
+  ]
+ },
+ {
+  "id": "manali",
+  "status": "draft",
+  "name": {
+   "en": "Manali",
+   "hi": "मनाली"
+  },
+  "anchor": {
+   "lat": 32.2396,
+   "lon": 77.1887
+  },
+  "regions": [
+   "IN-HP"
+  ],
+  "category": "hill",
+  "priority": 2,
+  "blurb": {
+   "en": "Resort town at about 2,050 m in the Kullu valley on the Beas, the gateway to Rohtang, Lahaul and Ladakh; the wooden Hadimba temple stands in a cedar grove.",
+   "hi": "ब्यास किनारे कुल्लू घाटी में लगभग 2,050 मीटर ऊँचाई पर पर्यटन नगर, रोहतांग, लाहौल और लद्दाख का प्रवेश द्वार; देवदार के वन में लकड़ी का हडिम्बा मंदिर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Manali,_Himachal_Pradesh"
+  ]
+ },
+ {
+  "id": "dharamshala",
+  "status": "draft",
+  "name": {
+   "en": "Dharamshala",
+   "hi": "धर्मशाला"
+  },
+  "anchor": {
+   "lat": 32.2426,
+   "lon": 76.3213
+  },
+  "regions": [
+   "IN-HP"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Town on the slopes of the Dhauladhar, whose upper quarter McLeod Ganj has been the home of the Dalai Lama and the Tibetan administration in exile since 1960.",
+   "hi": "धौलाधार की ढलानों पर बसा नगर, जिसका ऊपरी हिस्सा मैक्लोडगंज 1960 से दलाई लामा और निर्वासित तिब्बती प्रशासन का घर है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dharamshala"
+  ]
+ },
+ {
+  "id": "key-monastery",
+  "status": "draft",
+  "name": {
+   "en": "Key Monastery, Spiti",
+   "hi": "की मठ, स्पीति"
+  },
+  "anchor": {
+   "lat": 32.298,
+   "lon": 78.012
+  },
+  "regions": [
+   "IN-HP"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Tibetan Buddhist monastery of the Gelug order stacked on a hill at about 4,160 m above the Spiti river, the largest in the valley, founded some thousand years ago.",
+   "hi": "स्पीति नदी के ऊपर लगभग 4,160 मीटर ऊँची पहाड़ी पर सीढ़ीनुमा बसा गेलुग संप्रदाय का तिब्बती बौद्ध मठ, घाटी का सबसे बड़ा, क़रीब एक हज़ार वर्ष पहले स्थापित।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kye_Gompa"
+  ]
+ },
+ {
+  "id": "valley-of-flowers",
+  "status": "draft",
+  "name": {
+   "en": "Valley of Flowers",
+   "hi": "फूलों की घाटी"
+  },
+  "anchor": {
+   "lat": 30.728,
+   "lon": 79.605
+  },
+  "regions": [
+   "IN-UK"
+  ],
+  "category": "nature",
+  "priority": 2,
+  "blurb": {
+   "en": "High alpine valley in the Garhwal Himalaya carpeted with hundreds of flowering species in July and August; with Nanda Devi National Park a UNESCO site since 1988.",
+   "hi": "गढ़वाल हिमालय में ऊँची अल्पाइन घाटी, जुलाई-अगस्त में सैकड़ों प्रजातियों के फूलों से ढकी; नंदा देवी राष्ट्रीय उद्यान के साथ 1988 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/335",
+   "https://en.wikipedia.org/wiki/Valley_of_Flowers_National_Park"
+  ]
+ },
+ {
+  "id": "kedarnath",
+  "status": "draft",
+  "name": {
+   "en": "Kedarnath",
+   "hi": "केदारनाथ"
+  },
+  "anchor": {
+   "lat": 30.7346,
+   "lon": 79.0669
+  },
+  "regions": [
+   "IN-UK"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Stone temple to Shiva at about 3,580 m near the source of the Mandakini, one of the twelve Jyotirlingas and the Char Dham of Uttarakhand; open only from spring to autumn.",
+   "hi": "मंदाकिनी के उद्गम के पास लगभग 3,580 मीटर ऊँचाई पर शिव का पत्थर का मंदिर, बारह ज्योतिर्लिंगों और उत्तराखंड के चार धामों में से एक; केवल वसंत से शरद तक खुला।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kedarnath_Temple"
+  ]
+ },
+ {
+  "id": "pushkar",
+  "status": "draft",
+  "name": {
+   "en": "Pushkar",
+   "hi": "पुष्कर"
+  },
+  "anchor": {
+   "lat": 26.4897,
+   "lon": 74.5511
+  },
+  "regions": [
+   "IN-RJ"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Lake town at the edge of the Thar with one of the very few temples to Brahma, 52 bathing ghats, and a camel fair each November that fills the dunes.",
+   "hi": "थार के छोर पर झील-नगर, ब्रह्मा के गिने-चुने मंदिरों में से एक, 52 स्नान घाट, और हर नवंबर में टीलों को भर देने वाला ऊँट मेला।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pushkar"
+  ]
+ },
+ {
+  "id": "chittorgarh",
+  "status": "draft",
+  "name": {
+   "en": "Chittorgarh Fort",
+   "hi": "चित्तौड़गढ़ क़िला"
+  },
+  "anchor": {
+   "lat": 24.8879,
+   "lon": 74.645
+  },
+  "regions": [
+   "IN-RJ"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Largest fort in India, on a 180 m hill over 700 acres, capital of Mewar for eight centuries; towers of victory and fame, palaces and the memory of its sieges. A UNESCO Hill Fort of Rajasthan.",
+   "hi": "भारत का सबसे बड़ा क़िला, 180 मीटर ऊँची पहाड़ी पर 700 एकड़ में, आठ सदियों तक मेवाड़ की राजधानी; विजय और कीर्ति स्तंभ, महल और घेराबंदियों की स्मृति। यूनेस्को के राजस्थान के पहाड़ी क़िलों में।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/247",
+   "https://en.wikipedia.org/wiki/Chittorgarh_Fort"
+  ]
+ },
+ {
+  "id": "somnath",
+  "status": "draft",
+  "name": {
+   "en": "Somnath",
+   "hi": "सोमनाथ"
+  },
+  "anchor": {
+   "lat": 20.892,
+   "lon": 70.405
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Shiva temple on the Saurashtra shore, first of the twelve Jyotirlingas, rebuilt many times after raids from the 11th century on; the present temple was completed in 1951.",
+   "hi": "सौराष्ट्र तट पर शिव मंदिर, बारह ज्योतिर्लिंगों में प्रथम, 11वीं सदी से हुए आक्रमणों के बाद कई बार पुनर्निर्मित; वर्तमान मंदिर 1951 में पूर्ण हुआ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Somnath_temple"
+  ]
+ },
+ {
+  "id": "dwarka",
+  "status": "draft",
+  "name": {
+   "en": "Dwarka",
+   "hi": "द्वारका"
+  },
+  "anchor": {
+   "lat": 22.244,
+   "lon": 68.975
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "pilgrimage",
+  "priority": 2,
+  "blurb": {
+   "en": "Westernmost of the Char Dham on the Gulf of Kutch, the city of Krishna in tradition; the five-storey Dwarkadhish temple, and submerged ruins explored offshore.",
+   "hi": "कच्छ की खाड़ी पर चार धामों में सबसे पश्चिमी, परंपरा में कृष्ण की नगरी; पाँच मंज़िला द्वारकाधीश मंदिर और समुद्र में खोजे गए डूबे अवशेष।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dwarka"
+  ]
+ },
+ {
+  "id": "champaner",
+  "status": "draft",
+  "name": {
+   "en": "Champaner-Pavagadh",
+   "hi": "चंपानेर-पावागढ़"
+  },
+  "anchor": {
+   "lat": 22.486,
+   "lon": 73.535
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Ruined 16th-century capital of Gujarat's sultan Mahmud Begada at the foot of Pavagadh hill, with mosques blending Hindu and Islamic design; the Kalika Mata temple crowns the hill. UNESCO site since 2004.",
+   "hi": "पावागढ़ पहाड़ी की तलहटी में गुजरात के सुल्तान महमूद बेगड़ा की 16वीं सदी की उजड़ी राजधानी, हिंदू और इस्लामी शैली मिलाती मस्जिदें; पहाड़ी के शिखर पर कालिका माता मंदिर। 2004 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/1101",
+   "https://en.wikipedia.org/wiki/Champaner-Pavagadh_Archaeological_Park"
+  ]
+ },
+ {
+  "id": "sabarmati-ashram",
+  "status": "draft",
+  "name": {
+   "en": "Sabarmati Ashram",
+   "hi": "साबरमती आश्रम"
+  },
+  "anchor": {
+   "lat": 23.0606,
+   "lon": 72.5808
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Gandhi's home on the Sabarmati river in Ahmedabad from 1917 to 1930, from where he set out on the Salt March; his cottage Hriday Kunj and a museum of his life.",
+   "hi": "1917 से 1930 तक अहमदाबाद में साबरमती नदी किनारे गांधीजी का निवास, जहाँ से उन्होंने नमक यात्रा शुरू की; उनकी कुटिया हृदय कुंज और उनके जीवन का संग्रहालय।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sabarmati_Ashram"
+  ]
+ },
+ {
+  "id": "lothal",
+  "status": "draft",
+  "name": {
+   "en": "Lothal",
+   "hi": "लोथल"
+  },
+  "anchor": {
+   "lat": 22.5236,
+   "lon": 72.2494
+  },
+  "regions": [
+   "IN-GJ"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Harappan town of about 2400 BCE near the Gulf of Khambhat, with a large brick basin thought to be a dockyard, a bead workshop and a site museum.",
+   "hi": "खंभात की खाड़ी के पास लगभग 2400 ईसा पूर्व का हड़प्पाकालीन नगर, ईंटों का बड़ा जलाशय जिसे गोदी माना जाता है, मनका-कार्यशाला और स्थल संग्रहालय।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lothal"
+  ]
+ },
+ {
+  "id": "lingaraj-bhubaneswar",
+  "status": "draft",
+  "name": {
+   "en": "Lingaraj Temple, Bhubaneswar",
+   "hi": "लिंगराज मंदिर, भुवनेश्वर"
+  },
+  "anchor": {
+   "lat": 20.2383,
+   "lon": 85.8338
+  },
+  "regions": [
+   "IN-OD"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Eleventh-century Shiva temple with a 55 m tower, the largest of the old temples of Bhubaneswar, the city that once had a thousand shrines; the Bindu Sagar tank lies beside it.",
+   "hi": "55 मीटर ऊँचे शिखर वाला 11वीं सदी का शिव मंदिर, कभी हज़ार मंदिरों वाले शहर भुवनेश्वर के पुराने मंदिरों में सबसे बड़ा; इसके पास बिंदु सागर सरोवर है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lingaraja_Temple"
+  ]
+ },
+ {
+  "id": "chilika",
+  "status": "draft",
+  "name": {
+   "en": "Chilika Lake",
+   "hi": "चिल्का झील"
+  },
+  "anchor": {
+   "lat": 19.735,
+   "lon": 85.23
+  },
+  "regions": [
+   "IN-OD"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Brackish lagoon of over 1,000 km² on the Odisha coast, the largest in India, wintering ground for hundreds of thousands of migratory birds and home to Irrawaddy dolphins.",
+   "hi": "ओडिशा तट पर 1,000 वर्ग किमी से बड़ी खारी लैगून, भारत की सबसे बड़ी, लाखों प्रवासी पक्षियों का शीतकालीन ठिकाना और इरावदी डॉल्फ़िनों का घर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chilika_Lake"
+  ]
+ },
+ {
+  "id": "hundru-falls",
+  "status": "draft",
+  "name": {
+   "en": "Hundru Falls",
+   "hi": "हुंडरू जलप्रपात"
+  },
+  "anchor": {
+   "lat": 23.4503,
+   "lon": 85.6668
+  },
+  "regions": [
+   "IN-JH"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "The Subarnarekha river falling 98 m over the edge of the Ranchi plateau, the best known of the waterfalls around Ranchi, fullest after the monsoon.",
+   "hi": "राँची पठार के किनारे से 98 मीटर गिरती स्वर्णरेखा नदी, राँची के आसपास के जलप्रपातों में सबसे प्रसिद्ध, मानसून के बाद सबसे भरपूर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hundru_Falls"
+  ]
+ },
+ {
+  "id": "betla",
+  "status": "draft",
+  "name": {
+   "en": "Betla National Park",
+   "hi": "बेतला राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 23.887,
+   "lon": 84.19
+  },
+  "regions": [
+   "IN-JH"
+  ],
+  "category": "wildlife",
+  "priority": 3,
+  "blurb": {
+   "en": "Sal forest in the Palamu hills, among the first tiger reserves of 1973; elephants, bison and the 16th-century Palamu forts of the Chero kings inside the park.",
+   "hi": "पलामू की पहाड़ियों में साल का जंगल, 1973 के पहले बाघ अभयारण्यों में; हाथी, गौर और उद्यान के भीतर चेरो राजाओं के 16वीं सदी के पलामू क़िले।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Betla_National_Park"
+  ]
+ },
+ {
+  "id": "kanger-valley",
+  "status": "draft",
+  "name": {
+   "en": "Kanger Valley National Park",
+   "hi": "कांगेर घाटी राष्ट्रीय उद्यान"
+  },
+  "anchor": {
+   "lat": 18.81,
+   "lon": 81.93
+  },
+  "regions": [
+   "IN-CG"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Forested valley of the Kanger river in Bastar with limestone caves, Kutumsar and Kailash among them, the Tirathgarh falls and the state bird, the Bastar hill myna.",
+   "hi": "बस्तर में कांगेर नदी की वनाच्छादित घाटी, कुटुमसर और कैलाश जैसी चूना-पत्थर की गुफाएँ, तीरथगढ़ जलप्रपात और राज्य पक्षी बस्तर पहाड़ी मैना।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kanger_Ghati_National_Park"
+  ]
+ },
+ {
+  "id": "majuli",
+  "status": "draft",
+  "name": {
+   "en": "Majuli",
+   "hi": "माजुली"
+  },
+  "anchor": {
+   "lat": 26.95,
+   "lon": 94.17
+  },
+  "regions": [
+   "IN-AS"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Large river island in the Brahmaputra, shrinking with erosion, the centre of Assam's neo-Vaishnavite satras founded from the 15th century, with mask-making and dance traditions.",
+   "hi": "ब्रह्मपुत्र में बड़ा नदी-द्वीप, कटाव से सिकुड़ता हुआ, 15वीं सदी से स्थापित असम के नव-वैष्णव सत्रों का केंद्र, मुखौटा-निर्माण और नृत्य परंपराओं सहित।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Majuli"
+  ]
+ },
+ {
+  "id": "cherrapunji",
+  "status": "draft",
+  "name": {
+   "en": "Cherrapunji (Sohra)",
+   "hi": "चेरापूंजी (सोहरा)"
+  },
+  "anchor": {
+   "lat": 25.2841,
+   "lon": 91.7218
+  },
+  "regions": [
+   "IN-ML"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Town on the southern edge of the Khasi hills, among the wettest places on earth, above cliffs where the Nohkalikai falls drop 340 m towards the Bangladesh plain.",
+   "hi": "खासी पहाड़ियों के दक्षिणी किनारे पर नगर, धरती के सबसे अधिक वर्षा वाले स्थानों में, उन चट्टानों के ऊपर जहाँ से नोहकलिकाई जलप्रपात बांग्लादेश के मैदान की ओर 340 मीटर गिरता है।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cherrapunji"
+  ]
+ },
+ {
+  "id": "ziro",
+  "status": "draft",
+  "name": {
+   "en": "Ziro Valley",
+   "hi": "ज़ीरो घाटी"
+  },
+  "anchor": {
+   "lat": 27.545,
+   "lon": 93.83
+  },
+  "regions": [
+   "IN-AR"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Plateau valley at about 1,500 m, home of the Apatani people and their wet-rice and fish farming in terraced fields; pine hills and a September music festival.",
+   "hi": "लगभग 1,500 मीटर ऊँचाई पर पठारी घाटी, अपातानी लोगों और सीढ़ीदार खेतों में उनकी धान-मछली खेती का घर; चीड़ की पहाड़ियाँ और सितंबर का संगीत उत्सव।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ziro"
+  ]
+ },
+ {
+  "id": "neermahal",
+  "status": "draft",
+  "name": {
+   "en": "Neermahal",
+   "hi": "नीरमहल"
+  },
+  "anchor": {
+   "lat": 23.515,
+   "lon": 91.312
+  },
+  "regions": [
+   "IN-TR"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Water palace of the Tripura kings built in 1930 in the Rudrasagar lake, blending Hindu and Mughal styles; reached by boat from Melaghar.",
+   "hi": "रुद्रसागर झील में 1930 में बना त्रिपुरा के राजाओं का जल-महल, हिंदू और मुग़ल शैलियों का मेल; मेलाघर से नाव द्वारा पहुँच।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Neermahal"
+  ]
+ },
+ {
+  "id": "kangla-fort",
+  "status": "draft",
+  "name": {
+   "en": "Kangla Fort, Imphal",
+   "hi": "कांगला क़िला, इंफाल"
+  },
+  "anchor": {
+   "lat": 24.808,
+   "lon": 93.942
+  },
+  "regions": [
+   "IN-MN"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Ancient seat of the Meitei kings on the Imphal river, walled and moated, with the Kangla Sha dragon guardians; the centre of Manipur's history and ritual.",
+   "hi": "इंफाल नदी किनारे मैतेई राजाओं का प्राचीन राजस्थान, परकोटे और खाई से घिरा, कांगला शा नामक रक्षक ड्रैगनों सहित; मणिपुर के इतिहास और अनुष्ठान का केंद्र।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kangla_Fort"
+  ]
+ },
+ {
+  "id": "rumtek",
+  "status": "draft",
+  "name": {
+   "en": "Rumtek Monastery",
+   "hi": "रुमटेक मठ"
+  },
+  "anchor": {
+   "lat": 27.2886,
+   "lon": 88.5616
+  },
+  "regions": [
+   "IN-SK"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Seat of the Karma Kagyu lineage of Tibetan Buddhism outside Tibet, rebuilt in the 1960s on a hill facing Gangtok; the largest monastery in Sikkim.",
+   "hi": "तिब्बत के बाहर तिब्बती बौद्ध धर्म की कर्म काग्यू परंपरा का मुख्यालय, 1960 के दशक में गंगटोक के सामने की पहाड़ी पर पुनर्निर्मित; सिक्किम का सबसे बड़ा मठ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rumtek_Monastery"
+  ]
+ },
+ {
+  "id": "gurudongmar",
+  "status": "draft",
+  "name": {
+   "en": "Gurudongmar Lake",
+   "hi": "गुरुडोंगमार झील"
+  },
+  "anchor": {
+   "lat": 28.025,
+   "lon": 88.709
+  },
+  "regions": [
+   "IN-SK"
+  ],
+  "category": "nature",
+  "priority": 3,
+  "blurb": {
+   "en": "Glacial lake at about 5,180 m in North Sikkim, among the highest in the world, sacred to Buddhists and Sikhs; a part is said never to freeze.",
+   "hi": "उत्तरी सिक्किम में लगभग 5,180 मीटर ऊँचाई पर हिमनद झील, दुनिया की सबसे ऊँची झीलों में, बौद्धों और सिखों के लिए पवित्र; कहा जाता है इसका एक हिस्सा कभी नहीं जमता।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gurudongmar_Lake"
+  ]
+ },
+ {
+  "id": "cellular-jail",
+  "status": "draft",
+  "name": {
+   "en": "Cellular Jail, Port Blair",
+   "hi": "सेलुलर जेल, पोर्ट ब्लेयर"
+  },
+  "anchor": {
+   "lat": 11.6746,
+   "lon": 92.74
+  },
+  "regions": [
+   "IN-AN"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Colonial prison of 1906 with seven wings radiating from a central tower, where freedom fighters were held in solitary cells; now a national memorial with a sound and light show.",
+   "hi": "1906 की औपनिवेशिक जेल, केंद्रीय मीनार से निकलती सात शाखाएँ, जहाँ स्वतंत्रता सेनानी एकांत कोठरियों में रखे गए; अब ध्वनि-प्रकाश कार्यक्रम वाला राष्ट्रीय स्मारक।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cellular_Jail"
+  ]
+ },
+ {
+  "id": "diskit-monastery",
+  "status": "draft",
+  "name": {
+   "en": "Diskit Monastery, Nubra",
+   "hi": "डिस्कित मठ, नुब्रा"
+  },
+  "anchor": {
+   "lat": 34.548,
+   "lon": 77.57
+  },
+  "regions": [
+   "IN-LA"
+  ],
+  "category": "pilgrimage",
+  "priority": 3,
+  "blurb": {
+   "en": "Oldest and largest monastery of the Nubra valley, founded in the 14th century on a hill above the Shyok, with a 32 m seated Maitreya Buddha facing the river.",
+   "hi": "नुब्रा घाटी का सबसे पुराना और बड़ा मठ, 14वीं सदी में श्योक के ऊपर एक पहाड़ी पर स्थापित, नदी की ओर मुख किए 32 मीटर ऊँचे बैठे मैत्रेय बुद्ध सहित।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Diskit_Monastery"
+  ]
+ },
+ {
+  "id": "araku-valley",
+  "status": "draft",
+  "name": {
+   "en": "Araku Valley",
+   "hi": "अरकू घाटी"
+  },
+  "anchor": {
+   "lat": 18.3273,
+   "lon": 82.876
+  },
+  "regions": [
+   "IN-AP"
+  ],
+  "category": "hill",
+  "priority": 3,
+  "blurb": {
+   "en": "Hill valley in the Eastern Ghats north of Visakhapatnam, reached by a rail line through 58 tunnels; coffee grown by tribal cooperatives and the Borra limestone caves nearby.",
+   "hi": "विशाखापत्तनम के उत्तर पूर्वी घाट में पहाड़ी घाटी, 58 सुरंगों वाली रेल लाइन से पहुँच; आदिवासी सहकारी समितियों की कॉफ़ी और पास ही बोर्रा की चूना-पत्थर गुफाएँ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Araku_Valley"
+  ]
+ },
+ {
+  "id": "lepakshi",
+  "status": "draft",
+  "name": {
+   "en": "Lepakshi",
+   "hi": "लेपाक्षी"
+  },
+  "anchor": {
+   "lat": 13.8046,
+   "lon": 77.6091
+  },
+  "regions": [
+   "IN-AP"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Sixteenth-century Vijayanagara temple of Veerabhadra with painted ceilings, a pillar that barely touches the floor and a monolithic Nandi bull, among the largest in India.",
+   "hi": "16वीं सदी का विजयनगर काल का वीरभद्र मंदिर, चित्रित छतें, फ़र्श को मुश्किल से छूता एक स्तंभ और एक ही पत्थर का नंदी, भारत के सबसे बड़ों में से एक।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lepakshi"
+  ]
+ },
+ {
+  "id": "bom-jesus",
+  "status": "draft",
+  "name": {
+   "en": "Basilica of Bom Jesus, Old Goa",
+   "hi": "बॉम जीसस बेसिलिका, ओल्ड गोवा"
+  },
+  "anchor": {
+   "lat": 15.5009,
+   "lon": 73.9116
+  },
+  "regions": [
+   "IN-GA"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Baroque church completed in 1605 holding the relics of St Francis Xavier, at the heart of the churches and convents of Old Goa, a UNESCO site since 1986.",
+   "hi": "1605 में पूर्ण बरोक गिरजाघर जिसमें संत फ़्रांसिस ज़ेवियर के अवशेष रखे हैं, ओल्ड गोवा के गिरजाघरों और मठों के केंद्र में, 1986 से यूनेस्को स्थल।"
+  },
+  "sources": [
+   "https://whc.unesco.org/en/list/234",
+   "https://en.wikipedia.org/wiki/Basilica_of_Bom_Jesus"
+  ]
+ },
+ {
+  "id": "bishnupur",
+  "status": "draft",
+  "name": {
+   "en": "Bishnupur",
+   "hi": "बिष्णुपुर"
+  },
+  "anchor": {
+   "lat": 23.073,
+   "lon": 87.317
+  },
+  "regions": [
+   "IN-WB"
+  ],
+  "category": "heritage",
+  "priority": 3,
+  "blurb": {
+   "en": "Capital of the Malla kings, known for its 17th and 18th-century terracotta temples carved with scenes from the epics, the Baluchari sari and its own school of classical music.",
+   "hi": "मल्ल राजाओं की राजधानी, महाकाव्यों के दृश्यों से उकेरे 17वीं-18वीं सदी के टेराकोटा मंदिरों, बालूचरी साड़ी और शास्त्रीय संगीत के अपने घराने के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bishnupur,_Bankura"
+  ]
  }
 ]

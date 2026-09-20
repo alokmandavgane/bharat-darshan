@@ -5,6 +5,7 @@ import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { basis, DEFAULT_CAMERA, fitBounds, setZoomFloor, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStates, loadTier, unionBbox } from './data.js';
+import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
 import { biasedPick, createHeightfield, pickTerrain, projectGround } from './picking.js';
@@ -303,6 +304,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       return flyToItem(item, opts);
     },
     home: () => store.set('home', { t: performance.now() }),
+  });
+
+  // --- the idle sway (idle.js): the model turns gently while nobody is at the controls
+  createIdle(store, {
+    allowed: () => !!terrain && store.get('status') === 'ready' && !store.get('poster') && level.name === 'country'
+      && !store.get('selection') && !store.get('item') && !store.get('tour')?.playing && !cancelFly,
   });
 
   function areaOf(id) {
