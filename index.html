@@ -14,25 +14,41 @@
     <div class="markers"></div>
 
     <header class="topbar">
-      <div class="wordmark">
+      <div class="wordmark paper">
         <span class="title" data-i18n="app.title">Bharat Darshan</span>
         <span class="title-other" data-i18n="app.title.other">भारत दर्शन</span>
       </div>
-      <button class="lang-toggle" type="button" lang="hi" data-i18n="lang.switch" data-i18n-aria-label="lang.switch.aria">हिन्दी</button>
+      <button class="menu-button paper" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria-label="menu.open">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
     </header>
 
-    <div class="controls">
-      <div class="relief" hidden>
-        <label for="relief-slider" data-i18n="relief.label">Relief</label>
-        <input id="relief-slider" class="relief-slider" type="range" min="0" max="30" step="1" value="12" data-i18n-aria-label="relief.aria">
-        <span class="relief-value" aria-live="off">12×</span>
-      </div>
-      <div class="chips" role="group">
-        <button class="chip chip-relief" type="button" aria-pressed="true" data-i18n="chip.relief">Relief</button>
-      </div>
+    <div class="menu paper" id="menu" hidden>
+      <section class="menu-section">
+        <h3 data-i18n="menu.language">Language</h3>
+        <div class="segmented" role="group">
+          <button type="button" class="lang-option" data-lang="en" aria-pressed="true" lang="en">English</button>
+          <button type="button" class="lang-option" data-lang="hi" aria-pressed="false" lang="hi">हिन्दी</button>
+        </div>
+      </section>
+      <section class="menu-section">
+        <h3 data-i18n="menu.relief">Relief</h3>
+        <div class="chips">
+          <button class="chip chip-relief" type="button" aria-pressed="true" data-i18n="chip.relief">Relief</button>
+        </div>
+        <div class="relief" hidden>
+          <label for="relief-slider" data-i18n="relief.label">Relief</label>
+          <input id="relief-slider" class="relief-slider" type="range" min="0" max="30" step="1" value="12" data-i18n-aria-label="relief.aria">
+          <span class="relief-value" aria-live="off">12×</span>
+        </div>
+      </section>
+      <section class="menu-section">
+        <h3 data-i18n="menu.layers">Layers</h3>
+        <div class="chips layer-chips" role="group"></div>
+      </section>
     </div>
 
-    <section class="sheet" data-snap="peek" aria-label="Details">
+    <section class="sheet paper" data-snap="peek" aria-label="Details">
       <div class="sheet-grip" role="button" tabindex="0" data-i18n-aria-label="sheet.grip"></div>
       <div class="sheet-head">
         <div class="sheet-titles">
@@ -57,13 +73,14 @@
           <li data-i18n="sheet.credits.boundaries"></li>
           <li data-i18n="sheet.credits.terrain"></li>
           <li data-i18n="sheet.credits.code"></li>
+          <li data-i18n="sheet.credits.font"></li>
         </ul>
       </div>
     </section>
 
-    <div class="tooltip" role="tooltip" hidden></div>
+    <div class="tooltip paper" role="tooltip" hidden></div>
 
-    <div class="status" role="status">
+    <div class="status paper" role="status">
       <span class="status-text" data-i18n="status.loading">Loading the map…</span>
       <button class="status-retry" type="button" hidden data-i18n="status.retry">Try again</button>
     </div>

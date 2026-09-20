@@ -9,7 +9,9 @@ import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
  */
 export function createShell(root, store) {
   const $ = (sel) => /** @type {HTMLElement} */ (root.querySelector(sel));
-  const langBtn = $('.lang-toggle');
+  const menuBtn = $('.menu-button');
+  const menu = $('.menu');
+  const langOptions = [...root.querySelectorAll('.lang-option')];
   const reliefChip = $('.chip-relief');
   const reliefRow = $('.relief');
   const slider = /** @type {HTMLInputElement} */ ($('.relief-slider'));
@@ -26,14 +28,32 @@ export function createShell(root, store) {
   const listWrap = $('.unit-list-wrap');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
-  const chips = $('.chips');
+  const chips = $('.layer-chips');
   const tooltip = $('.tooltip');
   const canvas = $('canvas.map');
   const topbar = $('.topbar');
-  const controls = $('.controls');
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
 
-  langBtn.addEventListener('click', () => store.set('lang', store.get('lang') === 'en' ? 'hi' : 'en'));
+  // --- the menu: language, relief and layers live behind one button
+  function setMenu(open) {
+    menu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    root.body.dataset.menu = open ? 'open' : '';
+  }
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  root.addEventListener('pointerdown', (e) => {
+    if (menu.hidden) return;
+    const t = /** @type {Node} */ (e.target);
+    if (!menu.contains(t) && !menuBtn.contains(t)) setMenu(false);
+  });
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) { setMenu(false); e.stopImmediatePropagation(); }
+  }, true);
+  langOptions.forEach((b) => b.addEventListener('click', () => store.set('lang', b.dataset.lang)));
+  function renderLang() {
+    const lang = store.get('lang');
+    langOptions.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  }
   reliefChip.addEventListener('click', () => store.set('relief', { on: !store.get('relief').on }, { animate: true }));
   slider.addEventListener('input', () => store.set('relief', { amount: Number(slider.value), on: true }));
   retry.addEventListener('click', () => location.reload());
@@ -290,7 +310,9 @@ export function createShell(root, store) {
   store.subscribe('hover', renderHover);
   store.subscribe('pointer', renderHover);
   store.subscribe('status', renderStatus, { immediate: true });
+  renderLang();
   store.subscribe('lang', () => {
+    renderLang();
     renderRelief(store.get('relief'));
     renderChips();
     renderSelection();
@@ -298,20 +320,19 @@ export function createShell(root, store) {
     renderStatus(store.get('status'));
   });
 
-  // Camera padding: header on top; on phones the controls and the sheet peek at the
-  // bottom; on wide pointer screens the sheet is a side panel (see style.css).
+  // Camera padding: header on top; on phones the sheet peek at the bottom; on wide
+  // pointer screens the sheet is a side panel (see style.css).
   const sheet = $('.sheet');
   const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
   function updatePadding() {
     const peek = store.get('sheet')?.peek || 0;
     store.set('padding', wide.matches
-      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: controls.offsetHeight + 36, left: 24 }
-      : { top: topbar.offsetHeight + 8, right: 8, bottom: peek + controls.offsetHeight + 8, left: 8 });
+      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: 24 }
+      : { top: topbar.offsetHeight + 8, right: 8, bottom: peek + 12, left: 8 });
   }
   wide.addEventListener('change', updatePadding);
   const ro = new ResizeObserver(updatePadding);
   ro.observe(topbar);
-  ro.observe(controls);
   store.subscribe('sheet', updatePadding);
   store.subscribe('viewport', updatePadding);
   updatePadding();

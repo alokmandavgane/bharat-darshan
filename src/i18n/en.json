@@ -38,5 +38,10 @@
   "facts.population": "Population (2011 Census)",
   "facts.sources": "Sources",
   "facts.draft": "Draft, not yet reviewed",
-  "facts.pending": "Details will appear here once they have been reviewed."
+  "facts.pending": "Details will appear here once they have been reviewed.",
+  "menu.open": "Menu",
+  "menu.language": "Language",
+  "menu.relief": "Relief",
+  "menu.layers": "Layers",
+  "sheet.credits.font": "Title lettering: Yatra One by Catherine Leigh Schmidt (SIL Open Font License)."
 }
