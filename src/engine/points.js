@@ -78,7 +78,9 @@ export function createPoints(container, { text, onSelect }) {
   function update({ project, level, viewport, camera, active, selected, lang, drafts }) {
     const placed = [];
     if (!container) return placed;
-    const maxPriority = camera.zoom > 6000 ? 1 : camera.zoom > 3200 ? 2 : 3;
+    // the famous few at country zoom, the rest one step in; with 139 places, priority 3
+    // at the whole-country view crowded out the state labels
+    const maxPriority = camera.zoom > 6000 ? 1 : camera.zoom > 2400 ? 2 : 3;
     for (const [id, { layer, items }] of layers) {
       const on = active.has(id);
       for (const { item, el, name } of items) {
