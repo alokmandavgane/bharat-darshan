@@ -7,9 +7,8 @@ knows layer types and never layer ids, every item carries `sources` and a `statu
 and every user-facing string exists in English and Hindi.
 
 Layer definitions here are written as `layer.json`, matching what the places layer
-actually ships and keeping the pipeline free of a YAML parser. That takes PLAN.md
-open question 5 as answered the way the code already answered it; CLAUDE.md and
-parts of PLAN.md still say `layer.yaml` and want a sweep.
+ships and what `pipeline/04_layers.py` reads. That is PLAN.md open question 5,
+resolved the way the code already answered it.
 
 The layer inventory is a proposal, with sizes, sources and the engine work each
 layer implies, so the cost of each one is visible before any of it is built. The

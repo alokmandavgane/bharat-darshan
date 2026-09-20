@@ -31,7 +31,7 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 | D2 | Orthographic camera, north-up with a slight turn; not strict 45° isometric | Strict isometric (45° yaw, 35.26° elevation) turns India into a wide diamond: poor use of a portrait phone, and the silhouette stops being recognisable. About 15° of yaw with a 50-55° tilt keeps the familiar shape, suits portrait screens (India is about 3,200 km north-south by 2,900 km east-west), and keeps the Himalaya at the back where exaggerated relief never hides anything. Clamp yaw to roughly ±40°. |
 | D3 | Two semantic levels instead of continuous zoom | Country view, then state view. Tap a state: the camera flies in, the state lifts out as its own block, the rest dims, and a lazily loaded state package (higher-res terrain, denser networks, districts, more places) swaps in. Street-level detail is out of scope; this is a showcase, not navigation. |
 | D4 | Tap + bottom sheet is the core interaction; hover is a desktop enhancement | Phones have no hover. "Hover to learn" becomes: tap to select, peek card, "Explore" to go deeper, plus a swipeable card carousel that flies the camera to each item. Desktop adds real hover tooltips over the same data. |
-| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`), never individual layers. A layer is a folder: a `layer.yaml` plus data files. Adding "GI-tagged products" must not touch `src/`. See section 5. |
+| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5. |
 | D6 | Official boundaries from day one | Use Survey of India-compliant external boundaries (all of J&K and Ladakh including Aksai Chin; Arunachal Pradesh) and the current 28 states + 8 UTs. Default Natural Earth and OSM country outlines show de-facto lines, which is a legal problem for a map published in India. Review every rendered view, including share images. |
 | D7 | Minimal dependencies: vanilla JS, no framework | Owner preference, and the same conventions as the owner's `gol` project: plain JS ES modules, no TypeScript, no JSX, no UI framework. **three.js is the only runtime dependency; Vite is the only build tool.** Store, router, i18n, bottom sheet and gestures are small in-repo modules. Raw WebGL2 without three.js was considered: it would save about 150 KB, but costs plumbing time and gives up a library the owner already knows well. Revisit only if the JS budget is threatened. |
 | D8 | Stylised look: a hand-made clay / paper model, not realism | More distinctive, and cheaper: no imagery, low-frequency colour, tolerant of coarser meshes. Details in section 3. |
@@ -204,7 +204,7 @@ bharat-darshan/
   docs/              plan, decision notes, design notes
   pipeline/          offline data build; raw/ and cache/ are git-ignored
   content/
-    layers/<id>/     one folder per layer: layer.yaml + data (section 5)
+    layers/<id>/     one folder per layer: layer.json + items.json (section 5)
     states/          per-state facts and copy
   public/data/       generated, content-hashed assets + manifest.json
   src/
@@ -225,36 +225,56 @@ GI-tagged products layer:
 
 ```
 content/layers/gi-products/
-  layer.yaml
-  items.csv                     bulk rows from the GI registry
-  items/darjeeling-tea.yaml     optional richer override for one item
+  layer.json                    the layer itself: type, title, categories
+  items.json                    one entry per registered product
 ```
 
-```yaml
-# layer.yaml
-id: gi-products
-type: points
-group: produce
-title: { en: GI-tagged products, hi: जीआई टैग उत्पाद }
-icon: tag
-categories:
-  - { id: handicraft,   title: { en: Handicrafts,   hi: हस्तशिल्प } }
-  - { id: agricultural, title: { en: Agricultural,  hi: कृषि } }
-  - { id: foodstuff,    title: { en: Food,          hi: खाद्य पदार्थ } }
-  - { id: manufactured, title: { en: Manufactured,  hi: निर्मित वस्तुएँ } }
-  - { id: natural,      title: { en: Natural goods, hi: प्राकृतिक वस्तुएँ } }
-fields:                        # extra structured fields on top of the base item schema
-  gi_number:  { type: int }
-  registered: { type: year }
-tooltip: "{name} · {category}"
-card: [name, category, registered, blurb, media, sources]
-country_view: aggregate        # per-state count badges; markers appear in state view
-attribution: Geographical Indications Registry, Government of India
+Both are read with `json` from Python's standard library: no YAML parser, so no new
+dependency (D7). Turning a registry export into `items.json` is a one-off converter,
+not an input format the build supports.
+
+```json
+{
+  "id": "gi-products",
+  "type": "points",
+  "group": "produce",
+  "title": { "en": "GI-tagged products", "hi": "जीआई टैग उत्पाद" },
+  "icon": "tag",
+  "country_view": "aggregate",
+  "categories": [
+    { "id": "handicraft",   "title": { "en": "Handicrafts",   "hi": "हस्तशिल्प" } },
+    { "id": "agricultural", "title": { "en": "Agricultural",  "hi": "कृषि" } },
+    { "id": "foodstuff",    "title": { "en": "Food",          "hi": "खाद्य पदार्थ" } },
+    { "id": "manufactured", "title": { "en": "Manufactured",  "hi": "निर्मित वस्तुएँ" } },
+    { "id": "natural",      "title": { "en": "Natural goods", "hi": "प्राकृतिक वस्तुएँ" } }
+  ],
+  "fields": {
+    "gi_number": { "type": "int" },
+    "registered": { "type": "year" }
+  },
+  "tooltip": "{name} · {category}",
+  "card": ["name", "category", "registered", "blurb", "media", "sources"],
+  "attribution": "Geographical Indications Registry, Government of India"
+}
 ```
 
-```csv
-id,name_en,name_hi,category,lat,lon,regions,gi_number,registered,source,status
-darjeeling-tea,Darjeeling Tea,दार्जिलिंग चाय,agricultural,27.041,88.266,IN-WB,1,2004,<url>,draft
+`country_view: aggregate` gives per-state count badges, with markers in the state
+view. `fields` adds structured columns on top of the base item schema.
+
+```json
+[
+  {
+    "id": "darjeeling-tea",
+    "status": "draft",
+    "name": { "en": "Darjeeling Tea", "hi": "दार्जिलिंग चाय" },
+    "anchor": { "lat": 27.041, "lon": 88.266 },
+    "regions": ["IN-WB"],
+    "category": "agricultural",
+    "gi_number": 1,
+    "registered": 2004,
+    "sources": ["<url>"]
+  }
+]
 ```
 
 What every layer of a given type gets without writing code:
@@ -283,26 +303,38 @@ Rules that keep this honest:
 One schema for places, dishes, festivals, products and named physical features.
 Layers add structured `fields` on top.
 
-```yaml
-id: hampi
-status: draft                    # draft | reviewed; only reviewed items ship
-name: { en: Hampi, hi: हम्पी, native: ಹಂಪಿ }
-anchor: { lat: 15.335, lon: 76.462 }   # marker + camera target
-regions: [IN-KA]                 # ISO 3166-2:IN; districts by LGD code
-category: heritage
-months: []                       # 1-12, for festivals and seasonality
-blurb:
-  en: Ruined capital of the Vijayanagara empire, spread across a boulder landscape.
-  hi: विजयनगर साम्राज्य की राजधानी के खंडहर, जो विशाल चट्टानों के बीच फैले हैं।
-media:
-  - src: hampi-virupaksha.jpg
-    alt: { en: Virupaksha temple gopuram at Hampi, hi: हम्पी का विरूपाक्ष मंदिर }
-    credit: <author>             # credit, license and source are mandatory
-    license: <licence>
-    source: <url>
-sources: [https://whc.unesco.org/en/list/241]
-related: [badami, pattadakal]
+```json
+{
+  "id": "hampi",
+  "status": "draft",
+  "name": { "en": "Hampi", "hi": "हम्पी", "native": "ಹಂಪಿ" },
+  "anchor": { "lat": 15.335, "lon": 76.462 },
+  "regions": ["IN-KA"],
+  "category": "heritage",
+  "priority": 1,
+  "months": [],
+  "blurb": {
+    "en": "Ruined capital of the Vijayanagara empire, spread across a boulder landscape.",
+    "hi": "विजयनगर साम्राज्य की राजधानी के खंडहर, जो विशाल चट्टानों के बीच फैले हैं।"
+  },
+  "media": [
+    {
+      "src": "hampi-virupaksha.jpg",
+      "alt": { "en": "Virupaksha temple gopuram at Hampi", "hi": "हम्पी का विरूपाक्ष मंदिर" },
+      "credit": "<author>",
+      "license": "<licence>",
+      "source": "<url>"
+    }
+  ],
+  "sources": ["https://whc.unesco.org/en/list/241"],
+  "related": ["badami", "pattadakal"]
+}
 ```
+
+`status` is `draft` or `reviewed`; only reviewed items ship. `anchor` places the
+marker and the camera target. `regions` uses ISO 3166-2:IN, districts by LGD code.
+`priority` ranks items for the zoom thinning. `months` (1-12) drives festivals and
+seasonality. Media needs credit, licence and source on every entry.
 
 - Dishes, festivals and products are regional more than point-like: `anchor` places
   the marker, `regions` drives the highlight. Pan-India festivals get no single
@@ -493,9 +525,10 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
    Delhi. Fine for a project; check domain availability and search competition before
    launch.
 
-5. `layer.yaml` needs a YAML parser and Python's standard library has none (it does
-   have `tomllib` since 3.11). Add PyYAML as the pipeline's one extra dependency, or
-   specify layers as `layer.toml` / `layer.json`? Needed before Phase 2.
+5. **Resolved**, by what Phase 1 shipped: layers are `layer.json` + `items.json`,
+   read with `json` from the standard library. No YAML parser, so no new dependency
+   (D7). Converting a bulk export into `items.json` is a one-off script rather than
+   a second supported input format.
 6. Screenshot checks: add Playwright as a devDependency for the CI budgets and
    shader-regression screenshots, or keep it out of `package.json` and install it in
    CI only? (The web sandbox has it globally; the check script lived there.)
@@ -662,4 +695,4 @@ docs/DEPLOY.md).
    the state view, the poster image (needs open question 6), context-loss test on iOS,
    layer state in the URL, a card carousel for point layers, WebGL sprites for markers
    if the DOM ones ever get slow (they are fine at 50).
-3. Settle open questions 5-7.
+3. Settle open questions 6-7.

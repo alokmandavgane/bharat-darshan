@@ -13,8 +13,8 @@ current status.
 - Two semantic levels (country, state) with lazily loaded state packages. No
   street-level detail.
 - Tap + bottom sheet is the core interaction; hover is a desktop enhancement.
-- Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.yaml`
-  plus data files). The engine knows layer types (terrain, choropleth, lines,
+- Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.json`
+  plus `items.json`). The engine knows layer types (terrain, choropleth, lines,
   points), never layer ids. Adding a layer must not need changes under `src/`.
 - Stylised look: a hand-made clay / paper model. No imagery, no realism.
 - English + Hindi from the first screen. Every user-facing string and content field
