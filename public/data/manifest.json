@@ -1,6 +1,5 @@
 {
  "version": 1,
- "generated": "2026-09-20T07:32:47Z",
  "grid": {
   "crs": "EPSG:7755",
   "lonlat_bbox": [
@@ -46,40 +45,40 @@
  ],
  "files": {
   "regions/states-borders-1024.bin.gz": {
-   "size": 95688,
-   "sha256": "ee1bdb486a6c"
+   "size": 95664,
+   "sha256": "72901810ebf7"
   },
   "regions/states-borders-2048.bin.gz": {
-   "size": 235770,
-   "sha256": "abe3f7a050fd"
+   "size": 235746,
+   "sha256": "002578cd3902"
   },
   "regions/states-ids-1024.bin.gz": {
-   "size": 12845,
-   "sha256": "9e95f116e6e8"
+   "size": 12825,
+   "sha256": "7dc7b66c4986"
   },
   "regions/states-ids-2048.bin.gz": {
-   "size": 30939,
-   "sha256": "46968296f261"
+   "size": 30919,
+   "sha256": "422b4530c4ae"
   },
   "regions/states.json": {
-   "size": 12058,
-   "sha256": "9c0fa9a2cf9d"
+   "size": 13052,
+   "sha256": "75e5c1a8fd77"
   },
   "terrain/heights-1024.bin.gz": {
-   "size": 891901,
-   "sha256": "1c722cf26742"
+   "size": 891884,
+   "sha256": "f2cdf75d0b2c"
   },
   "terrain/heights-2048.bin.gz": {
-   "size": 3505839,
-   "sha256": "02e8efbe8f1e"
+   "size": 3505822,
+   "sha256": "7a94b93c55e1"
   },
   "terrain/shade-1024.bin.gz": {
-   "size": 160056,
-   "sha256": "ee97a389f2b9"
+   "size": 160041,
+   "sha256": "17e06999d4af"
   },
   "terrain/shade-2048.bin.gz": {
-   "size": 687161,
-   "sha256": "907db8bcea61"
+   "size": 687146,
+   "sha256": "43430e0c01fb"
   }
  }
 }
