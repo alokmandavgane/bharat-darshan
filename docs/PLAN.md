@@ -486,7 +486,9 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
 1. Where do built data assets live once they outgrow git: object storage with a fetch
    script, or Git LFS?
 2. Hosting: resolved on 2026-09-20, Cloudflare Pages; see [docs/DEPLOY.md](DEPLOY.md).
-3. One display webfont for headings (Latin + Devanagari), or system fonts only?
+3. Resolved on 2026-09-20: one display face, Yatra One (SIL OFL), self-hosted as an
+   82 KB Latin + Devanagari subset for the title and sheet headings; body text stays on
+   system fonts.
 4. Name: "Bharat Darshan" also names IRCTC's tourist-train scheme and a park in
    Delhi. Fine for a project; check domain availability and search competition before
    launch.
@@ -547,6 +549,20 @@ docs/DEPLOY.md).
   layer as sticker markers that ride the terrain and the lifted block, thinned by
   priority with zoom, with a card and a fly-to on tap. Drafts are shown by default
   until the first review (`src/main.js`, one line to flip).
+- 2026-09-20, after the first demo feedback: the model no longer ends at a rim; it
+  sinks and fades into the page over its last few hundred km, and by default only
+  India is drawn: a clay cut-out with walls along the coast and the international
+  boundary (from `regions/outlines/india.json`), on lit paper. A "Surroundings"
+  switch in the menu brings the sea and neighbours back. The chrome is one paper
+  material (gradient, grain, gold hairline), the controls (language, relief, layers)
+  sit behind one menu button, the title is set in Yatra One (SIL OFL, self-hosted
+  subset), and point markers are clay tokens tinted by category with a small built-in
+  glyph set the layer names (`icon`, `color` per category in layer.json). Share cards:
+  `index.html` carries Open Graph and Twitter tags; the Vite plugin localises them per
+  shell (`/en`, `/hi`, canonical + hreflang); `tools/share-image.mjs` renders
+  `public/share/og-{en,hi}.jpg` from the app in poster mode (`?poster=1`) with
+  Playwright, a tool rather than a dependency. Site URL for the tags: `SITE_URL` env
+  or darshan.alokm.com.
 
 ### What exists
 
