@@ -61,8 +61,8 @@
  ],
  "files": {
   "layers/places.json": {
-   "size": 43573,
-   "sha256": "e68dae2e03b4"
+   "size": 43694,
+   "sha256": "ae3824609303"
   },
   "regions/states-borders-1024.bin.gz": {
    "size": 95664,
