@@ -6,8 +6,10 @@ there: EPSG:7755 everywhere, layers are data under `content/layers/<id>/`, the e
 knows layer types and never layer ids, every item carries `sources` and a `status`,
 and every user-facing string exists in English and Hindi.
 
-Nothing here is decided. It is a proposal with sizes, sources and the engine work
-each layer implies, so the cost of each one is visible before any of it is built.
+The layer inventory is a proposal, with sizes, sources and the engine work each
+layer implies, so the cost of each one is visible before any of it is built. The
+five questions that proposal raised are settled in section 9, which records the
+reasoning rather than just the answer.
 
 ## 1. Why these, and in this order
 
@@ -62,8 +64,8 @@ anticipates. Nothing in Tier 1 or Tier 2 needs them.
 The Himalayan north, the Northern Plains, the Peninsular Plateau, the Coastal
 Plains, the Thar Desert and the Islands. This is how Indian physical geography is
 taught, so it is the layer that makes every other one legible. It is also the one
-layer here with no authoritative open vector: the polygons have to be drawn by hand
-against the relief and reviewed, which is content work, not pipeline work.
+layer here with no authoritative open vector, so it is derived and then corrected
+rather than drawn freehand. See decision 3.
 
 ```yaml
 # content/layers/physical-divisions/layer.yaml
@@ -72,9 +74,9 @@ type: areas
 group: relief
 title: { en: Physical divisions, hi: भौतिक विभाग }
 icon: layers
-raster: divisions            # pipeline rasterises items.geojson to an 8-bit id map
+raster: { id: divisions, size: 2048 }   # 8-bit id map, one resolution, decision 2
 palette: categorical
-opacity: 0.55                # the relief must stay readable underneath
+fill: { opacity: 0.55, edge: feather }  # gradational limits get soft edges
 label: { centroid: true, size: lg }
 tooltip: "{name}"
 card: [name, area_km2, states, blurb, sources]
@@ -187,8 +189,9 @@ state and district id rasters. Physical divisions and basins are neither: they a
 categorical named regions with their own geometry, their own id raster, cards and
 selection. Two options. Either generalise choropleth with an optional
 `region_source` so a layer can ship its own raster, or add `areas` as a third region
-type. The recommendation is `areas`, because the items want the base item schema and
-choropleth's palette and legend model is built for continuous values.
+type. Decision 1 takes `areas`, because the items want the base item schema and
+choropleth's palette and legend model is built for continuous values. Decisions 2
+covers what it ships and how its edges are drawn.
 
 **A label engine.** This is the largest piece and the one most likely to be
 underestimated. Ranges and rivers need text placed along a projected polyline,
@@ -250,15 +253,21 @@ first toggle, so none of this touches the first-view budget in PLAN.md section 8
 | Layer | Estimate |
 |-------|----------|
 | `rivers`, order >= 6 | 25 to 40 KB |
-| `basins` id raster, 1024 | 20 to 50 KB |
-| `physical-divisions` id raster, 1024 | 10 to 30 KB |
+| `basins` id raster, 2048 | 25 to 60 KB |
+| `physical-divisions` id raster, 2048 | 15 to 40 KB |
 | `peaks` | about 5 KB |
 | `passes` | about 3 KB |
 | `ranges` spines | about 2 KB |
 | `reference-lines` | under 1 KB |
 
-Tier 1 together is roughly 70 to 130 KB, which is comfortable. The expensive layers
-are all in Tier 3, where the raster types arrive.
+Tier 1 together is roughly 75 to 150 KB, which is comfortable. The shipped state id
+raster at 2048 is 31 KB for 36 regions, which is the anchor for those two estimates:
+divisions has a seventh as many regions and far shorter internal edges, basins about
+half as many. The expensive layers are all in Tier 3, where the raster types arrive.
+
+The number deliberately absent is a signed-distance edge texture. The equivalent for
+state borders costs 96 KB at 1024 and 236 KB at 2048, which would more than double
+this table. Decision 2 says why the areas layers do not need one.
 
 ## 8. Boundary compliance
 
@@ -281,16 +290,72 @@ that has three consequences that are easy to miss.
 Keep a neutral tone in blurbs for features in disputed areas, as section 5 requires
 for contested topics generally.
 
-## 9. Open questions
+## 9. Decisions
 
-1. `areas` as a new layer type, or choropleth generalised with `region_source`?
-2. Is a 1024 id raster enough for divisions and basins at country level, given that
-   both have long thin features along the coast and the Himalayan foot?
-3. Who draws the physical-division polygons, and against which published map, so
-   that each one can cite a source?
-4. Islands. Andaman and Nicobar sit about 1200 km off the mainland, so at country
-   framing they are specks. Do they get an inset, a camera preset, or both? Barren
-   Island, India's only active volcano, and Indira Point, its southernmost land, are
-   both strong content and both invisible at the default camera.
-5. Do lakes need real outlines at country level, or are anchors enough until state
-   view?
+Taken 2026-09-20. Each one is reversible; the reasoning is recorded so that
+reversing it is a decision too.
+
+**1. `areas` is a new layer type, not a generalised choropleth.** Choropleth binds
+values to the administrative id rasters and its palette and legend model is built
+for continuous data. Divisions, basins and landforms are categorical named regions
+that carry their own geometry, their own cards and their own selection, and their
+items want the base item schema. Forcing them through choropleth would mean an
+optional `region_source`, a second palette mode and a second legend mode inside a
+type that currently has one of each. A third region type is the smaller change.
+This makes `areas`, `raster` and `flows` the three new types the project expects,
+and the engine still knows no layer ids.
+
+**2. Area id rasters ship at 2048, in a single resolution, with feathered edges and
+no distance field.** Three parts, each with a reason.
+
+- *2048, up from 1024.* The thin features decide it. The coastal plain narrows to
+  roughly 20 to 50 km in places, which is six to fifteen pixels at the country
+  grid's 3.4 km, and the Himalayan foot is thinner still. At 1.7 km those features
+  survive simplification and hit-testing. The shipped state id raster at 2048 costs
+  31 KB for 36 regions, so the increase is tens of kilobytes, not hundreds.
+- *One resolution, not per-tier.* The quality tiers exist for mesh density and
+  displacement cost. A flat categorical lookup has neither. A 2048 single-channel
+  texture is 4 MB on the GPU against a budget of 150 MB, which the low tier can
+  afford, and one resolution halves the pipeline output and the manifest entries
+  for these layers. This deliberately differs from the state raster, which ships
+  per tier because it is sampled in the terrain shader alongside the heightmap.
+- *Feathered edges, no signed-distance texture.* State borders get a distance field
+  because an administrative border is an exact line. A physical division is not:
+  nobody can say which kilometre the plain becomes the plateau. So the edge is
+  softened in the shader from the id texture itself, which is cheaper, truer to the
+  clay and paper look, and honest about the data. It also saves the 96 KB at 1024
+  or 236 KB at 2048 that the state border field costs.
+
+**3. Division polygons are derived in the pipeline, then corrected by hand.**
+Freehand polygons cannot be re-run, cannot be reviewed against anything, and cannot
+cite a source. A first pass can be derived from data the project already has:
+elevation and slope separate the mountain divisions, the plains fall out of low
+elevation inside the Indus and Ganga basins, the plateau is the high ground south
+of them, and the coastal plains are a distance-from-coast band below a height
+threshold. The Thar needs an aridity mask or a hand edit, and the islands come
+straight from the boundary.
+
+That pass is a drafting aid, not the shipped layer. A human corrects it against a
+published physical map, each item cites which one, and only `status: reviewed`
+items ship, exactly as for every other content item. The thresholds live in the
+layer folder so the derivation re-runs and the hand corrections stay visible as
+diffs against it. Because the derivation reads the basins, `basins` is built before
+`physical-divisions`.
+
+**4. Islands get camera presets and a locator, not an inset.** An inset is a second
+viewport with its own camera, picking, labels and render pass, which is a large
+amount of engine work for two island groups and it fights the feeling of one object
+you hold and turn. The cheaper path already exists: the URL carries view state and
+regions already have anchors, so Andaman and Nicobar and Lakshadweep become two
+more places to fly to at no new cost. Discoverability is the real problem, so they
+get a labelled marker each at country view that flies the camera on tap. Revisit
+only if testing shows people still never find them. Barren Island and Indira Point
+are content items inside those views.
+
+**5. Lakes are anchors at country level and outlines in state packages.** At 3.4 km
+per pixel an outline is not informative for most of them. Vembanad is about 96 km
+long and around 3 km wide, so its shape collapses to a line, and Wular and Sambhar
+are smaller again. A marker states the position more clearly than a degenerate
+polygon does, and the largest water bodies already show up in the terrain shading
+where the elevation data captures them. Outlines arrive with the state packages,
+whose grids are fine enough to carry them.
