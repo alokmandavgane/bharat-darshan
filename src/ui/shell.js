@@ -13,6 +13,7 @@ export function createShell(root, store) {
   const menu = $('.menu');
   const langOptions = [...root.querySelectorAll('.lang-option')];
   const reliefChip = $('.chip-relief');
+  const surroundingsChip = $('.chip-surroundings');
   const reliefRow = $('.relief');
   const slider = /** @type {HTMLInputElement} */ ($('.relief-slider'));
   const sliderValue = $('.relief-value');
@@ -55,6 +56,8 @@ export function createShell(root, store) {
     langOptions.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
   }
   reliefChip.addEventListener('click', () => store.set('relief', { on: !store.get('relief').on }, { animate: true }));
+  surroundingsChip.addEventListener('click', () => store.set('surroundings', !store.get('surroundings')));
+  store.subscribe('surroundings', (on) => surroundingsChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
   slider.addEventListener('input', () => store.set('relief', { amount: Number(slider.value), on: true }));
   retry.addEventListener('click', () => location.reload());
   closeBtn.addEventListener('click', () => {
@@ -325,6 +328,7 @@ export function createShell(root, store) {
   const sheet = $('.sheet');
   const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
   function updatePadding() {
+    if (root.body.dataset.poster) return;          // the share-image render sets its own framing
     const peek = store.get('sheet')?.peek || 0;
     store.set('padding', wide.matches
       ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: 24 }

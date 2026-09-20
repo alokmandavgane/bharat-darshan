@@ -118,13 +118,13 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .wordmark {
   display: flex;
   flex-direction: column;
-  padding: 10px 18px 12px;
-  border-radius: 18px;
+  padding: 8px 16px 10px;
+  border-radius: 16px;
 }
 .wordmark .title {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   line-height: 1.15;
   letter-spacing: 0.01em;
   background: linear-gradient(90deg, var(--accent-deep) 0%, var(--accent) 55%, var(--gold) 100%);
@@ -135,16 +135,17 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .wordmark .title-other {
   font-family: var(--display);
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.4;
-  margin-top: 2px;
+  margin-top: 1px;
 }
+.wordmark .tagline, .wordmark .site { display: none; }
 .wordmark .title-other::after {
   content: "";
   display: block;
   height: 2px;
-  width: 64px;
-  margin-top: 8px;
+  width: 52px;
+  margin-top: 6px;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--gold), rgba(201, 154, 60, 0));
 }
@@ -263,16 +264,11 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   display: flex;
   flex-direction: column;
 }
-.sheet::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 3px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: linear-gradient(90deg, var(--accent-deep), var(--gold) 50%, var(--accent-deep));
-  z-index: 2;
+/* the terracotta-gold hairline is a background layer, so it follows the rounded corners */
+.sheet.paper {
+  background:
+    linear-gradient(90deg, var(--accent-deep), var(--gold) 50%, var(--accent-deep)) top / 100% 3px no-repeat,
+    linear-gradient(180deg, var(--card-top) 0%, var(--card-bottom) 100%);
 }
 .sheet-grip {
   height: 24px;
@@ -303,7 +299,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-title {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   line-height: 1.15;
   margin: 0;
   overflow-wrap: anywhere;
@@ -410,8 +406,9 @@ body[data-level="state"] .sheet-head { cursor: default; }
   pointer-events: auto;
   will-change: transform;
 }
-.marker-p1 { --size: 34px; }
-.marker-p3 { --size: 26px; }
+.marker-p1 { --size: 32px; }
+.marker-p2 { --size: 27px; }
+.marker-p3 { --size: 24px; }
 .marker::before {                              /* contact shadow on the ground */
   content: "";
   position: absolute;
@@ -531,7 +528,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
 
 /* --- wide screens: panels float in the dead space beside the country --- */
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {
-  .wordmark .title { font-size: 2rem; }
+  .wordmark .title { font-size: 1.5rem; }
   .sheet {
     left: auto;
     right: 20px;
@@ -550,3 +547,22 @@ body[data-level="state"] .sheet-head { cursor: default; }
 @media (prefers-reduced-motion: reduce) {
   .sheet { transition: none !important; }
 }
+
+/* --- poster mode: the share-image render (tools/share-image.mjs, ?poster=1) --- */
+body[data-poster="1"] .menu-button, body[data-poster="1"] .sheet, body[data-poster="1"] .status,
+body[data-poster="1"] .labels, body[data-poster="1"] .tooltip { display: none !important; }
+body[data-poster="1"] .topbar { top: 0; bottom: 0; padding: 0; align-items: center; }
+body[data-poster="1"] .wordmark {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 450px;
+  padding: 34px 36px 32px;
+  border-radius: 28px;
+}
+body[data-poster="1"] .wordmark .title { font-size: 3.4rem; line-height: 1.05; }
+body[data-poster="1"] .wordmark .title-other { font-size: 1.7rem; margin-top: 8px; }
+body[data-poster="1"] .wordmark .title-other::after { width: 96px; height: 3px; margin-top: 14px; }
+body[data-poster="1"] .wordmark .tagline { display: block; margin-top: 16px; font-size: 1.1rem; line-height: 1.45; color: var(--muted); }
+body[data-poster="1"] .wordmark .site { display: block; margin-top: 18px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-deep); }

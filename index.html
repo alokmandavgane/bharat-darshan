@@ -4,8 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#efe9dc">
-  <meta name="description" content="Bharat Darshan: an interactive 3D map of India's geography and culture, in English and Hindi. भारत दर्शन: भारत का इंटरैक्टिव त्रिआयामी मानचित्र।">
+  <meta name="description" content="An interactive 3D map of India's geography and culture, in English and Hindi.">
   <title>Bharat Darshan · भारत दर्शन</title>
+  <link rel="canonical" href="https://darshan.alokm.com/en">
+  <link rel="alternate" hreflang="en" href="https://darshan.alokm.com/en">
+  <link rel="alternate" hreflang="hi" href="https://darshan.alokm.com/hi">
+  <link rel="alternate" hreflang="x-default" href="https://darshan.alokm.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bharat Darshan">
+  <meta property="og:title" content="Bharat Darshan · भारत दर्शन">
+  <meta property="og:description" content="An interactive 3D map of India's geography and culture, in English and Hindi.">
+  <meta property="og:url" content="https://darshan.alokm.com/en">
+  <meta property="og:image" content="https://darshan.alokm.com/share/og-en.jpg">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="A clay model of India with its states, on paper, titled Bharat Darshan">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bharat Darshan · भारत दर्शन">
+  <meta name="twitter:description" content="An interactive 3D map of India's geography and culture, in English and Hindi.">
+  <meta name="twitter:image" content="https://darshan.alokm.com/share/og-en.jpg">
 </head>
 <body>
   <div id="app">
@@ -17,6 +36,8 @@
       <div class="wordmark paper">
         <span class="title" data-i18n="app.title">Bharat Darshan</span>
         <span class="title-other" data-i18n="app.title.other">भारत दर्शन</span>
+        <span class="tagline" data-i18n="app.tagline">A 3D map of India</span>
+        <span class="site">darshan.alokm.com</span>
       </div>
       <button class="menu-button paper" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria-label="menu.open">
         <span class="menu-icon" aria-hidden="true"></span>
@@ -35,6 +56,7 @@
         <h3 data-i18n="menu.relief">Relief</h3>
         <div class="chips">
           <button class="chip chip-relief" type="button" aria-pressed="true" data-i18n="chip.relief">Relief</button>
+          <button class="chip chip-surroundings" type="button" aria-pressed="false" data-i18n="chip.surroundings">Surroundings</button>
         </div>
         <div class="relief" hidden>
           <label for="relief-slider" data-i18n="relief.label">Relief</label>

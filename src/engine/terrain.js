@@ -75,6 +75,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uHole: { value: -1 },
     uDim: { value: 0 },
     uLift: { value: 0 },
+    uOnlyIndia: { value: 1 },
     uTable: { value: new Color(PALETTE.table) },
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },

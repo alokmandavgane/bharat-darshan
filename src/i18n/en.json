@@ -1,7 +1,7 @@
 {
   "app.title": "Bharat Darshan",
   "app.title.other": "भारत दर्शन",
-  "app.tagline": "A 3D map of India",
+  "app.tagline": "An interactive 3D map of India's geography and culture",
   "lang.switch": "हिन्दी",
   "lang.switch.aria": "Switch to Hindi",
   "chip.relief": "Relief",
@@ -43,5 +43,6 @@
   "menu.language": "Language",
   "menu.relief": "Relief",
   "menu.layers": "Layers",
-  "sheet.credits.font": "Title lettering: Yatra One by Catherine Leigh Schmidt (SIL Open Font License)."
+  "sheet.credits.font": "Title lettering: Yatra One by Catherine Leigh Schmidt (SIL Open Font License).",
+  "chip.surroundings": "Surroundings"
 }

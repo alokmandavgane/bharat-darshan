@@ -2,7 +2,7 @@
 // The engine: a three.js scene behind a small API. It touches nothing in the DOM but its
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
-import { blockDimensions, createBlock } from './block.js';
+import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { basis, fitBounds, setZoomFloor, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStates, loadTier, unionBbox } from './data.js';
 import { createLabels } from './labels.js';
@@ -49,6 +49,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
   let cancelLevel = null;
+  let countryWalls = null;     // the cut-out's sides when surroundings are hidden
   const labels = createLabels(labelContainer, labelText);
   const points = createPoints(markerContainer, {
     text: (field, lang) => field?.[lang] || field?.en || '',
@@ -315,6 +316,13 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
     field = createHeightfield(first, sizeKm, terrain.grid);
     scene.add(terrain.mesh);
+    applySurroundings(!!store.get('surroundings'));
+    loadJson('regions/outlines/india.json').then((o) => {
+      countryWalls = createCountryWalls(o.loops, terrain.uniforms);
+      countryWalls.visible = !store.get('surroundings');
+      scene.add(countryWalls);
+      invalidate();
+    }).catch((err) => console.warn('country outline skipped:', err));
     labels.setUnits(states.units);
     applyRelief(store.get('relief'), false);
     const lv = store.get('level');
@@ -335,6 +343,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   store.subscribe('lang', () => { labels.invalidateText(); invalidate(); });
+
+  /** Surroundings on: sea and neighbours as before. Off (default): India alone as a cut-out with walls. */
+  function applySurroundings(on) {
+    if (!terrain) return;
+    terrain.uniforms.uOnlyIndia.value = on ? 0 : 1;
+    if (countryWalls) countryWalls.visible = !on;
+    invalidate();
+  }
+  store.subscribe('surroundings', applySurroundings);
 
   return {
     start, invalidate, flyTo, fit, pick, project, quality,
