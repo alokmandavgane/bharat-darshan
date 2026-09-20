@@ -50,7 +50,7 @@
    "icon": "pin",
    "group": "culture",
    "default_on": true,
-   "count": 48,
+   "count": 139,
    "reviewed": 0,
    "path": "layers/places.json"
   }
@@ -61,8 +61,8 @@
  ],
  "files": {
   "layers/places.json": {
-   "size": 43694,
-   "sha256": "ae3824609303"
+   "size": 122864,
+   "sha256": "422f9dd6ce43"
   },
   "regions/states-borders-1024.bin.gz": {
    "size": 95664,
