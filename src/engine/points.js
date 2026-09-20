@@ -32,10 +32,13 @@ export function createPoints(container, { text, onSelect }) {
       el.dataset.layer = layer.id;
       el.dataset.item = item.id;
       el.hidden = true;
+      const body = document.createElement('span');
+      body.className = 'marker-body';
       const icon = document.createElement('span');
       icon.className = 'marker-icon';
       icon.textContent = cats[item.category]?.icon || '📍';
-      el.appendChild(icon);
+      body.appendChild(icon);
+      el.appendChild(body);
       container.appendChild(el);
       return { item, el };
     });
@@ -53,7 +56,7 @@ export function createPoints(container, { text, onSelect }) {
   function update({ project, level, viewport, camera, active, selected, lang, drafts }) {
     if (!container) return;
     const placed = [];
-    const maxPriority = camera.zoom > 5200 ? 1 : camera.zoom > 2600 ? 2 : 3;
+    const maxPriority = camera.zoom > 7500 ? 1 : camera.zoom > 3800 ? 2 : 3;
     for (const [id, { layer, items }] of layers) {
       const on = active.has(id);
       for (const { item, el } of items) {

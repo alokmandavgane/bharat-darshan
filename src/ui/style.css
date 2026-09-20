@@ -297,46 +297,52 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .unit-list-name { font-weight: 600; }
 .unit-list-alt { color: var(--muted); font-size: 0.85rem; }
 
-/* --- markers of point layers: paper stickers with a contact shadow --- */
+/* --- markers of point layers: paper stickers with a contact shadow ---
+   The button is a zero-size anchor moved with transform: translate(); the pin shape is a
+   child, so its own rotation and scale never touch the anchor's position. */
 .markers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .marker {
   position: absolute;
   left: 0;
   top: 0;
-  width: 32px;
-  height: 32px;
-  margin: -34px 0 0 -16px;      /* the anchor sits under the bottom tip */
+  width: 0;
+  height: 0;
   padding: 0;
   border: 0;
-  border-radius: 50% 50% 50% 0;
-  background: var(--card);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 3px 8px rgba(60, 45, 30, 0.35);
-  display: grid;
-  place-items: center;
-  font-size: 17px;
-  line-height: 1;
+  background: none;
   cursor: pointer;
   pointer-events: auto;
-  rotate: -45deg;
-  transition: scale 120ms;
   will-change: transform;
 }
-.marker .marker-icon { rotate: 45deg; }
-.marker::after {
+.marker::before {                 /* contact shadow on the ground */
   content: "";
   position: absolute;
-  left: -2px;
-  bottom: -2px;
-  width: 10px;
-  height: 10px;
+  left: -6px;
+  top: -3px;
+  width: 12px;
+  height: 6px;
   border-radius: 50%;
-  background: rgba(60, 45, 30, 0.25);
-  filter: blur(2px);
-  z-index: -1;
+  background: rgba(60, 45, 30, 0.3);
+  filter: blur(1.5px);
 }
-.marker:hover, .marker:focus-visible { scale: 1.15; outline: none; }
-.marker-active { background: var(--accent); scale: 1.2; }
-.marker-active .marker-icon { filter: drop-shadow(0 0 1px rgba(0,0,0,0.4)); }
+.marker-body {
+  position: absolute;
+  left: -16px;
+  top: -39px;                     /* centre 23 px above the tip, which is the anchor */
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--card);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 3px 8px rgba(60, 45, 30, 0.35);
+  display: grid;
+  place-items: center;
+  transform: rotate(-45deg);
+  transition: transform 120ms, background 120ms;
+}
+.marker-icon { font-size: 17px; line-height: 1; transform: rotate(45deg); }
+.marker:hover .marker-body, .marker:focus-visible .marker-body { transform: rotate(-45deg) scale(1.15); }
+.marker:focus-visible { outline: none; }
+.marker-active .marker-body { background: var(--accent); transform: rotate(-45deg) scale(1.2); }
 
 /* --- HTML labels over the map --- */
 .labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
