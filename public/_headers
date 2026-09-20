@@ -1,27 +1,37 @@
-# Cloudflare Pages headers. Copied verbatim into dist/ by Vite (public/ is static).
-# Reference: https://developers.cloudflare.com/pages/configuration/headers/
+# Cloudflare Pages headers. Vite copies public/ into dist/ unchanged, so this file
+# lands at the site root. Reference:
+# https://developers.cloudflare.com/pages/configuration/headers/
+#
+# Notes that match the app code:
+# - src/engine/pack.js gunzips *.bin.gz itself with DecompressionStream, so the
+#   files are served as opaque bytes with no Content-Encoding header.
+# - src/engine/data.js appends ?v=<sha256> from manifest.json to every pack URL, so
+#   packs can be cached forever. manifest.json and states.json are fetched by plain
+#   name and must revalidate.
+# - SPA routing needs no rule: Pages serves index.html for unknown paths when the
+#   build has no 404.html, and vite.config.js also emits /en/ and /hi/ shells.
 
-# Content-hashed build output and data packages: cache forever.
+# Vite's content-hashed bundles.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Pipeline output, versioned by query string.
 /data/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Pre-gzipped binaries (heightmaps, ID textures). Files are stored as *.bin.gz and
-# fetched under that name; the browser decompresses transparently. Pages never
-# double-compresses a response that already carries Content-Encoding.
-/data/*.bin.gz
-  Content-Type: application/octet-stream
-  Content-Encoding: gzip
-  Cache-Control: public, max-age=31536000, immutable
-
-# The manifest is the only un-hashed data file: revalidate every time.
-/data/manifest.json
+# Un-hashed data files: revalidate every time.
+/data/*.json
+  ! Cache-Control
   Cache-Control: no-cache
 
 # App shell: always revalidate so a deploy shows up immediately.
 /index.html
+  Cache-Control: no-cache
+
+/en/index.html
+  Cache-Control: no-cache
+
+/hi/index.html
   Cache-Control: no-cache
 
 /sw.js
@@ -33,4 +43,3 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Cross-Origin-Opener-Policy: same-origin

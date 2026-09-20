@@ -1,3 +1,0 @@
-# Cloudflare Pages redirects. Single-page app: every path that is not a real file
-# serves index.html and the in-repo router reads the URL (/hi/state/kerala, ...).
-/* /index.html 200

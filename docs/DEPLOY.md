@@ -9,15 +9,18 @@ Decision context: PLAN.md section 6 (hosting) and open question 2.
 |---------|-------|
 | Project name | `bharat-darshan` (preview URLs: `<branch>.bharat-darshan.pages.dev`) |
 | Production branch | `main` |
-| Framework preset | Vite |
+| Framework preset | Vite (not React: the app is plain JS ES modules, see CLAUDE.md) |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | `/` |
-| Env var `NODE_VERSION` | current LTS, e.g. `22` |
+| Env var `NODE_VERSION` | `22` (package.json requires >= 22.12; Vite 8 needs it) |
 
-`public/_headers` and `public/_redirects` are copied into `dist/` by Vite and
-configure caching, pre-gzipped binaries and SPA routing. Keep them in sync with the
-data pipeline's output names (`*.bin.gz` under `public/data/`).
+`public/_headers` is copied into `dist/` by Vite and sets caching. It relies on two
+facts about the code: packs are fetched with `?v=<sha256>` from `manifest.json` (so
+`/data/*` is immutable) and the app gunzips `*.bin.gz` itself (so no
+`Content-Encoding` is set). There is no `_redirects` file: Pages serves `index.html`
+for unknown paths on its own when the build has no `404.html`, which is the SPA
+behaviour the router needs. Do not add a `404.html` without adding a rewrite rule.
 
 ## Limits to keep in mind
 
@@ -31,6 +34,9 @@ data pipeline's output names (`*.bin.gz` under `public/data/`).
 1. Cloudflare dashboard > Workers & Pages > Create > Pages > Connect to Git.
 2. Authorise the Cloudflare Pages GitHub app for `alokmandavgane/bharat-darshan` only.
 3. Enter the settings from the table above and save. The first build runs immediately.
+   The production branch must contain `package.json` and `vite.config.js`; until the
+   build branch is merged into `main`, the production build fails and only branch
+   previews work.
 4. Custom domains > Set up a custom domain > `darshan.alokm.com`.
    - If `alokm.com` is on Cloudflare DNS, the CNAME and certificate are created
      automatically.
