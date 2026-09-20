@@ -11,6 +11,7 @@
 const DEG = Math.PI / 180;
 
 export const LIMITS = { zoom: [180, 9500], yaw: [-40, 40], pitch: [25, 89] };
+export const DEFAULT_CAMERA = { x: 0, z: 0, zoom: 4200, yaw: -12, pitch: 56 };   // the home view's angles
 export const ZOOM_MIN = { country: 180, state: 30 };
 
 /** The state view allows a much closer look than the country view. */

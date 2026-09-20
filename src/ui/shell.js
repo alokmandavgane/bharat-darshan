@@ -35,6 +35,8 @@ export function createShell(root, store) {
   const infoBtn = $('.sheet-info');
   const about = $('.about');
   const aboutDraft = $('.about-draft');
+  const tourBtn = $('.tour-button');
+  const resetBtn = $('.reset-button');
   const tooltip = $('.tooltip');
   const canvas = $('canvas.map');
   const topbar = $('.topbar');
@@ -118,6 +120,33 @@ export function createShell(root, store) {
     infoBtn.title = label;
   }
 
+  // --- corner controls: the tour and the compass (home)
+  resetBtn.addEventListener('click', () => store.set('home', { t: performance.now() }));
+  store.subscribe('home', (req) => {
+    if (!req) return;
+    if (store.get('item')) store.set('item', null);
+    if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'home' });
+    if (store.get('selection')) store.set('selection', null);
+    setAbout(false);
+    store.set('sheetSnap', { name: 'peek', t: performance.now() });
+  });
+  store.subscribe('camera', (c) => resetBtn.style.setProperty('--yaw', `${c.yaw.toFixed(1)}deg`), { immediate: true });
+  tourBtn.addEventListener('click', () => store.set('tour', { playing: !store.get('tour')?.playing }));
+  function renderTour() {
+    const tr = store.get('tour') || {};
+    const playing = !!tr.playing;
+    tourBtn.hidden = !playing && !tr.total;
+    tourBtn.setAttribute('aria-pressed', String(playing));
+    const label = t(playing ? 'tour.pause' : 'tour.play');
+    tourBtn.setAttribute('aria-label', label);
+    tourBtn.title = label;
+    root.body.dataset.tour = playing ? 'playing' : '';
+  }
+  store.subscribe('tour', (tr, prev) => {
+    renderTour();
+    // the cards read best with the sheet half open; the map is framed above it
+    if (tr?.playing && !prev?.playing) { setAbout(false); store.set('sheetSnap', { name: 'half', t: performance.now() }); }
+  }, { immediate: true });
   search.addEventListener('input', () => renderList());
   list.addEventListener('click', (e) => {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id]');
@@ -339,6 +368,7 @@ export function createShell(root, store) {
     renderSelection();
     renderHover();
     renderStatus(store.get('status'));
+    renderTour();
   });
 
   // Camera padding: header on top; on phones the sheet peek at the bottom; on wide

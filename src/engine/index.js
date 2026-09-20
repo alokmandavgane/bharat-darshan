@@ -3,7 +3,7 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
-import { basis, fitBounds, setZoomFloor, ZOOM_MIN } from './camera-math.js';
+import { basis, DEFAULT_CAMERA, fitBounds, setZoomFloor, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStates, loadTier, unionBbox } from './data.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
@@ -12,12 +12,14 @@ import { createPoints } from './points.js';
 import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
 import { byteTexture } from './textures.js';
+import { createTour } from './tour.js';
 import { easeOutCubic, tween } from './tween.js';
 
 const CAMERA_DISTANCE = 7000;   // km; anywhere outside the model works for an orthographic camera
 const FIRST_TIER = '1024';      // always first: it is the first-view budget (PLAN.md section 8)
 const STATE_EXAG = 0.6;         // relief eases down when a state is lifted out (PLAN.md section 6)
 const FOCUS_MIN_ZOOM = 1200;    // km of view height: a "focus" from the list keeps country context
+const ITEM_ZOOM = 700;          // km of view height when flying to a place at country level
 
 /**
  * @param {{ canvas: HTMLCanvasElement, store: ReturnType<import('../state/store.js').createStore>,
@@ -86,26 +88,32 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       const entry = manifest?.layers?.find((l) => l.id === id);
       if (!entry || entry.type !== 'points') continue;
       loading.add(id);
-      loadJson(entry.path).then((data) => { points.setLayer(data); invalidate(); })
+      loadJson(entry.path).then((data) => { points.setLayer(data); invalidate(); tour.refresh(); })
         .catch((err) => console.warn(`layer ${id} skipped:`, err)).finally(() => loading.delete(id));
     }
     invalidate();
   });
 
-  /** A selected item: fly to it (closer at country level, a pan inside a state). */
-  store.subscribe('item', (sel) => {
-    invalidate();
-    if (!sel) return;
-    const item = points.find(sel.layer, sel.id);
-    if (!item) return;
-    const cam = store.get('camera');
+  /** Fly to a place: closer at country level, a pan inside a state; returns the flight time. */
+  function flyToItem(item, { ms = 800, yaw = undefined } = {}) {
+    const cam = { ...store.get('camera') };
+    if (yaw !== undefined) cam.yaw = yaw;
     cameraTouched = true;
-    const zoom = level.name === 'state' ? cam.zoom : Math.min(cam.zoom, 700);
+    const zoom = level.name === 'state' ? cam.zoom : Math.min(cam.zoom, ITEM_ZOOM);
     const { forward } = basis(cam.yaw, cam.pitch);
     // keep the marker a little above the padded centre so its card does not cover it
     const pad = store.get('padding');
     const shift = ((pad.bottom - pad.top) / 2) * (zoom / viewport.h) / Math.sin((cam.pitch * Math.PI) / 180);
-    flyTo({ ...cam, zoom, x: item.x - forward[0] * shift, z: item.z - forward[2] * shift }, 800);
+    flyTo({ ...cam, zoom, x: item.x - forward[0] * shift, z: item.z - forward[2] * shift }, ms);
+    return ms;
+  }
+
+  /** A selected item flies into view; the tour does its own flying. */
+  store.subscribe('item', (sel, _, meta) => {
+    invalidate();
+    if (!sel || meta.source === 'tour') return;
+    const item = points.find(sel.layer, sel.id);
+    if (item) flyToItem(item);
   });
 
   function applyCamera() {
@@ -146,6 +154,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const regions = store.get('regions');
     if (!regions) return;
     const pad = store.get('padding');
+    // home: the default angles too, not just the framing
+    const cam = opts.home ? { ...store.get('camera'), yaw: DEFAULT_CAMERA.yaw, pitch: DEFAULT_CAMERA.pitch } : store.get('camera');
     let box;
     if (level.name === 'state' && regions.byId[level.id]) {
       const u = regions.byId[level.id];
@@ -154,10 +164,17 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       const [x0, z0, x1, z1] = regions.bbox;
       box = { x0, z0, x1, z1, points: regions.hull, ymax: 40 };
     }
-    const target = fitBounds(store.get('camera'), box, viewport, pad);
+    const target = fitBounds(cam, box, viewport, pad);
     if (animate) flyTo(target, opts.ms);
     else store.set('camera', target, { source: 'fit' });
   }
+
+  /** The compass: everything cleared by the UI, the country framed again from the default angles. */
+  store.subscribe('home', (req) => {
+    if (!req || !terrain) return;
+    cameraTouched = false;
+    fit(true, { home: true });
+  });
 
   /** A gentle move to a unit picked from the list: fit it, but keep country context. */
   store.subscribe('focus', (req) => {
@@ -276,6 +293,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     } else {
       exitState(!immediate);
     }
+  });
+
+  // --- the tour (tour.js): every place on show, with its card, one flight after another
+  const tour = createTour(store, {
+    stops: () => points.list({ active: new Set(store.get('layers')?.active || []), drafts: !!store.get('drafts'), level }),
+    visit: ({ layer, item }, opts) => {
+      store.set('item', { layer, id: item.id, data: item, categories: points.categories(layer) }, { source: 'tour' });
+      return flyToItem(item, opts);
+    },
+    home: () => store.set('home', { t: performance.now() }),
   });
 
   function areaOf(id) {

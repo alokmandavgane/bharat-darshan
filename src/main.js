@@ -1,6 +1,7 @@
 // @ts-check
 // Bootstrap: language, store, URL, shell, engine. Everything meets in the store.
 import './ui/style.css';
+import { DEFAULT_CAMERA } from './engine/camera-math.js';
 import { createEngine } from './engine/index.js';
 import { detectLanguage, pick, setLanguage } from './i18n/index.js';
 import { createStore } from './state/store.js';
@@ -16,7 +17,7 @@ if (poster) document.body.dataset.poster = '1';
 
 const store = createStore({
   lang,
-  camera: { x: 0, z: 0, zoom: 4200, yaw: -12, pitch: 56 },
+  camera: { ...DEFAULT_CAMERA },
   relief: { on: url.relief !== 0, amount: url.relief && url.relief > 0 ? url.relief : DEFAULT_RELIEF },
   layers: ['relief'],
   padding: { top: 0, right: 0, bottom: 0, left: 0 },
@@ -32,6 +33,8 @@ const store = createStore({
   layers: null,          // { active: [...] } once the manifest says which layers exist
   catalog: [],
   level: { name: 'country', id: null },
+  home: null,            // { t }: a request to clear everything and frame the country again
+  tour: { playing: false, index: -1, total: 0 },
   surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to
@@ -76,7 +79,8 @@ if (!supported) {
   }
   window.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    if (store.get('item')) store.set('item', null);
+    if (store.get('tour')?.playing) store.set('tour', { playing: false });
+    else if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     else store.set('selection', null);
   });
