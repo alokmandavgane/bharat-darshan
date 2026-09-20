@@ -1,0 +1,926 @@
+{
+ "grid": {
+  "crs": "EPSG:7755",
+  "lonlat_bbox": [
+   68.0,
+   6.5,
+   97.5,
+   37.5
+  ],
+  "projected_bbox_m": [
+   2640000.0,
+   2072000.0,
+   5981000.0,
+   5579000.0
+  ],
+  "width_km": 3341.0,
+  "height_km": 3507.0,
+  "origin_m": [
+   4310500.0,
+   3825500.0
+  ]
+ },
+ "tiers": {
+  "1024": {
+   "ids": "regions/states-ids-1024.bin.gz",
+   "width": 960,
+   "height": 1024,
+   "km_per_px": 3.4248
+  },
+  "2048": {
+   "ids": "regions/states-ids-2048.bin.gz",
+   "width": 1920,
+   "height": 2048,
+   "km_per_px": 1.7124
+  }
+ },
+ "country": {
+  "bbox": [
+   -1493.9,
+   -1619.1,
+   1368.6,
+   1646.5
+  ],
+  "hull": [
+   [
+    -1494.7,
+    -188.4
+   ],
+   [
+    -1493.0,
+    -196.9
+   ],
+   [
+    -1489.5,
+    -212.3
+   ],
+   [
+    -984.9,
+    -1529.2
+   ],
+   [
+    -981.4,
+    -1536.0
+   ],
+   [
+    -934.4,
+    -1584.0
+   ],
+   [
+    -878.8,
+    -1604.5
+   ],
+   [
+    -788.3,
+    -1619.9
+   ],
+   [
+    -784.8,
+    -1619.9
+   ],
+   [
+    -727.4,
+    -1614.8
+   ],
+   [
+    -309.7,
+    -1472.7
+   ],
+   [
+    1225.0,
+    -857.9
+   ],
+   [
+    1252.9,
+    -842.5
+   ],
+   [
+    1362.5,
+    -738.0
+   ],
+   [
+    1366.0,
+    -734.6
+   ],
+   [
+    1369.5,
+    -715.8
+   ],
+   [
+    1369.5,
+    -714.1
+   ],
+   [
+    1263.3,
+    1625.1
+   ],
+   [
+    1261.6,
+    1640.5
+   ],
+   [
+    1254.6,
+    1647.3
+   ],
+   [
+    1247.7,
+    1647.3
+   ],
+   [
+    -588.2,
+    1573.7
+   ],
+   [
+    -1092.8,
+    1536.0
+   ],
+   [
+    -1094.5,
+    1534.3
+   ],
+   [
+    -1171.1,
+    1335.7
+   ],
+   [
+    -1494.7,
+    -179.8
+   ]
+  ]
+ },
+ "attribution": "State boundaries and India outline: DataMeet India community maps (CC BY 4.0), Census of India / Survey of India lineage.",
+ "units": [
+  {
+   "id": 1,
+   "slug": "andaman-and-nicobar-islands",
+   "iso": "IN-AN",
+   "type": "ut",
+   "name": {
+    "en": "Andaman and Nicobar Islands",
+    "hi": "अंडमान और निकोबार द्वीप समूह"
+   },
+   "bbox": [
+    1022.3,
+    886.2,
+    1262.4,
+    1646.5
+   ],
+   "anchor": [
+    1133.7,
+    1211.5
+   ],
+   "area_km2": 10498
+  },
+  {
+   "id": 2,
+   "slug": "andhra-pradesh",
+   "iso": "IN-AP",
+   "type": "state",
+   "name": {
+    "en": "Andhra Pradesh",
+    "hi": "आंध्र प्रदेश",
+    "native": "ఆంధ్ర ప్రదేశ్"
+   },
+   "bbox": [
+    -656.9,
+    345.0,
+    181.8,
+    1064.3
+   ],
+   "anchor": [
+    -446.3,
+    846.8
+   ],
+   "area_km2": 157806
+  },
+  {
+   "id": 3,
+   "slug": "arunachal-pradesh",
+   "iso": "IN-AR",
+   "type": "state",
+   "name": {
+    "en": "Arunachal Pradesh",
+    "hi": "अरुणाचल प्रदेश"
+   },
+   "bbox": [
+    804.8,
+    -857.1,
+    1368.6,
+    -540.3
+   ],
+   "anchor": [
+    1097.1,
+    -730.3
+   ],
+   "area_km2": 79008
+  },
+  {
+   "id": 4,
+   "slug": "assam",
+   "iso": "IN-AS",
+   "type": "state",
+   "name": {
+    "en": "Assam",
+    "hi": "असम",
+    "native": "অসম"
+   },
+   "bbox": [
+    639.5,
+    -694.4,
+    1241.6,
+    -247.4
+   ],
+   "anchor": [
+    964.9,
+    -470.1
+   ],
+   "area_km2": 74194
+  },
+  {
+   "id": 5,
+   "slug": "bihar",
+   "iso": "IN-BR",
+   "type": "state",
+   "name": {
+    "en": "Bihar",
+    "hi": "बिहार"
+   },
+   "bbox": [
+    16.5,
+    -564.2,
+    498.5,
+    -218.3
+   ],
+   "anchor": [
+    326.3,
+    -355.3
+   ],
+   "area_km2": 89571
+  },
+  {
+   "id": 6,
+   "slug": "chandigarh",
+   "iso": "IN-CH",
+   "type": "ut",
+   "name": {
+    "en": "Chandigarh",
+    "hi": "चंडीगढ़"
+   },
+   "bbox": [
+    -622.1,
+    -918.7,
+    -609.9,
+    -905.0
+   ],
+   "anchor": [
+    -615.1,
+    -911.9
+   ],
+   "area_km2": 161
+  },
+  {
+   "id": 7,
+   "slug": "chhattisgarh",
+   "iso": "IN-CG",
+   "type": "state",
+   "name": {
+    "en": "Chhattisgarh",
+    "hi": "छत्तीसगढ़"
+   },
+   "bbox": [
+    -286.2,
+    -189.2,
+    129.6,
+    499.2
+   ],
+   "anchor": [
+    -89.6,
+    50.5
+   ],
+   "area_km2": 130260
+  },
+  {
+   "id": 8,
+   "slug": "dadra-and-nagar-haveli-and-daman-and-diu",
+   "iso": "IN-DH",
+   "type": "ut",
+   "name": {
+    "en": "Dadra and Nagar Haveli and Daman and Diu",
+    "hi": "दादरा और नगर हवेली और दमन और दीव"
+   },
+   "bbox": [
+    -1245.0,
+    148.1,
+    -1008.4,
+    237.2
+   ],
+   "anchor": [
+    -1027.5,
+    218.3
+   ],
+   "area_km2": 853
+  },
+  {
+   "id": 9,
+   "slug": "delhi",
+   "iso": "IN-DL",
+   "type": "ut",
+   "name": {
+    "en": "Delhi",
+    "hi": "दिल्ली"
+   },
+   "bbox": [
+    -615.1,
+    -709.8,
+    -566.4,
+    -656.7
+   ],
+   "anchor": [
+    -587.3,
+    -684.1
+   ],
+   "area_km2": 1633
+  },
+  {
+   "id": 10,
+   "slug": "goa",
+   "iso": "IN-GA",
+   "type": "state",
+   "name": {
+    "en": "Goa",
+    "hi": "गोवा",
+    "native": "गोंय"
+   },
+   "bbox": [
+    -982.3,
+    702.9,
+    -914.4,
+    804.0
+   ],
+   "anchor": [
+    -940.5,
+    752.6
+   ],
+   "area_km2": 3918
+  },
+  {
+   "id": 11,
+   "slug": "gujarat",
+   "iso": "IN-GJ",
+   "type": "state",
+   "name": {
+    "en": "Gujarat",
+    "hi": "गुजरात",
+    "native": "ગુજરાત"
+   },
+   "bbox": [
+    -1493.9,
+    -278.3,
+    -867.4,
+    228.6
+   ],
+   "anchor": [
+    -1126.7,
+    -115.6
+   ],
+   "area_km2": 181264
+  },
+  {
+   "id": 12,
+   "slug": "haryana",
+   "iso": "IN-HR",
+   "type": "state",
+   "name": {
+    "en": "Haryana",
+    "hi": "हरियाणा"
+   },
+   "bbox": [
+    -837.9,
+    -934.1,
+    -538.6,
+    -576.2
+   ],
+   "anchor": [
+    -669.1,
+    -737.2
+   ],
+   "area_km2": 44164
+  },
+  {
+   "id": 13,
+   "slug": "himachal-pradesh",
+   "iso": "IN-HP",
+   "type": "state",
+   "name": {
+    "en": "Himachal Pradesh",
+    "hi": "हिमाचल प्रदेश"
+   },
+   "bbox": [
+    -719.5,
+    -1189.3,
+    -408.1,
+    -875.9
+   ],
+   "anchor": [
+    -564.7,
+    -1026.6
+   ],
+   "area_km2": 53286
+  },
+  {
+   "id": 14,
+   "slug": "jammu-and-kashmir",
+   "iso": "IN-JK",
+   "type": "ut",
+   "name": {
+    "en": "Jammu and Kashmir",
+    "hi": "जम्मू और कश्मीर"
+   },
+   "bbox": [
+    -917.9,
+    -1401.6,
+    -609.9,
+    -1089.9
+   ],
+   "anchor": [
+    -782.2,
+    -1238.9
+   ],
+   "area_km2": 54535
+  },
+  {
+   "id": 15,
+   "slug": "jharkhand",
+   "iso": "IN-JH",
+   "type": "state",
+   "name": {
+    "en": "Jharkhand",
+    "hi": "झारखंड"
+   },
+   "bbox": [
+    20.0,
+    -341.6,
+    477.7,
+    33.4
+   ],
+   "anchor": [
+    181.8,
+    -122.4
+   ],
+   "area_km2": 78369
+  },
+  {
+   "id": 16,
+   "slug": "karnataka",
+   "iso": "IN-KA",
+   "type": "state",
+   "name": {
+    "en": "Karnataka",
+    "hi": "कर्नाटक",
+    "native": "ಕರ್ನಾಟಕ"
+   },
+   "bbox": [
+    -947.5,
+    423.8,
+    -467.2,
+    1173.9
+   ],
+   "anchor": [
+    -738.7,
+    917.0
+   ],
+   "area_km2": 184959
+  },
+  {
+   "id": 17,
+   "slug": "kerala",
+   "iso": "IN-KL",
+   "type": "state",
+   "name": {
+    "en": "Kerala",
+    "hi": "केरल",
+    "native": "കേരളം"
+   },
+   "bbox": [
+    -867.4,
+    1038.6,
+    -599.5,
+    1547.2
+   ],
+   "anchor": [
+    -663.8,
+    1417.0
+   ],
+   "area_km2": 40575
+  },
+  {
+   "id": 18,
+   "slug": "ladakh",
+   "iso": "IN-LA",
+   "type": "ut",
+   "name": {
+    "en": "Ladakh",
+    "hi": "लद्दाख",
+    "native": "ལ་དྭགས་"
+   },
+   "bbox": [
+    -987.5,
+    -1619.1,
+    -281.0,
+    -1084.8
+   ],
+   "anchor": [
+    -566.4,
+    -1307.4
+   ],
+   "area_km2": 166008
+  },
+  {
+   "id": 19,
+   "slug": "lakshadweep",
+   "iso": "IN-LD",
+   "type": "ut",
+   "name": {
+    "en": "Lakshadweep",
+    "hi": "लक्षद्वीप",
+    "native": "ലക്ഷദ്വീപ്"
+   },
+   "bbox": [
+    -1213.7,
+    1066.0,
+    -956.2,
+    1535.2
+   ],
+   "anchor": [
+    -963.1,
+    1203.0
+   ],
+   "area_km2": 1144
+  },
+  {
+   "id": 20,
+   "slug": "madhya-pradesh",
+   "iso": "IN-MP",
+   "type": "state",
+   "name": {
+    "en": "Madhya Pradesh",
+    "hi": "मध्य प्रदेश"
+   },
+   "bbox": [
+    -910.9,
+    -485.5,
+    -33.9,
+    137.8
+   ],
+   "anchor": [
+    -324.5,
+    -100.2
+   ],
+   "area_km2": 291297
+  },
+  {
+   "id": 21,
+   "slug": "maharashtra",
+   "iso": "IN-MH",
+   "type": "state",
+   "name": {
+    "en": "Maharashtra",
+    "hi": "महाराष्ट्र"
+   },
+   "bbox": [
+    -1069.3,
+    30.0,
+    -220.1,
+    723.5
+   ],
+   "anchor": [
+    -815.2,
+    329.6
+   ],
+   "area_km2": 289505
+  },
+  {
+   "id": 22,
+   "slug": "manipur",
+   "iso": "IN-MN",
+   "type": "state",
+   "name": {
+    "en": "Manipur",
+    "hi": "मणिपुर",
+    "native": "ꯃꯅꯤꯄꯨꯔ"
+   },
+   "bbox": [
+    982.3,
+    -427.2,
+    1145.9,
+    -228.6
+   ],
+   "anchor": [
+    1057.1,
+    -317.7
+   ],
+   "area_km2": 21324
+  },
+  {
+   "id": 23,
+   "slug": "meghalaya",
+   "iso": "IN-ML",
+   "type": "state",
+   "name": {
+    "en": "Meghalaya",
+    "hi": "मेघालय"
+   },
+   "bbox": [
+    656.9,
+    -454.6,
+    952.7,
+    -338.2
+   ],
+   "anchor": [
+    848.3,
+    -398.1
+   ],
+   "area_km2": 22338
+  },
+  {
+   "id": 24,
+   "slug": "mizoram",
+   "iso": "IN-MZ",
+   "type": "state",
+   "name": {
+    "en": "Mizoram",
+    "hi": "मिज़ोरम"
+   },
+   "bbox": [
+    912.7,
+    -288.5,
+    1031.0,
+    -11.1
+   ],
+   "anchor": [
+    973.6,
+    -192.6
+   ],
+   "area_km2": 20913
+  },
+  {
+   "id": 25,
+   "slug": "nagaland",
+   "iso": "IN-NL",
+   "type": "state",
+   "name": {
+    "en": "Nagaland",
+    "hi": "नागालैंड"
+   },
+   "bbox": [
+    999.7,
+    -584.8,
+    1177.2,
+    -370.7
+   ],
+   "anchor": [
+    1116.3,
+    -482.0
+   ],
+   "area_km2": 16714
+  },
+  {
+   "id": 26,
+   "slug": "odisha",
+   "iso": "IN-OD",
+   "type": "state",
+   "name": {
+    "en": "Odisha",
+    "hi": "ओडिशा",
+    "native": "ଓଡ଼ିଶା"
+   },
+   "bbox": [
+    -164.4,
+    -30.0,
+    448.1,
+    497.5
+   ],
+   "anchor": [
+    143.6,
+    187.5
+   ],
+   "area_km2": 147584
+  },
+  {
+   "id": 27,
+   "slug": "puducherry",
+   "iso": "IN-PY",
+   "type": "ut",
+   "name": {
+    "en": "Puducherry",
+    "hi": "पुडुचेरी",
+    "native": "புதுச்சேரி"
+   },
+   "bbox": [
+    -799.6,
+    610.5,
+    -63.5,
+    1266.3
+   ],
+   "anchor": [
+    -338.5,
+    1148.2
+   ],
+   "area_km2": 941
+  },
+  {
+   "id": 28,
+   "slug": "punjab",
+   "iso": "IN-PB",
+   "type": "state",
+   "name": {
+    "en": "Punjab",
+    "hi": "पंजाब",
+    "native": "ਪੰਜਾਬ"
+   },
+   "bbox": [
+    -893.5,
+    -1108.8,
+    -604.7,
+    -788.6
+   ],
+   "anchor": [
+    -731.7,
+    -923.8
+   ],
+   "area_km2": 48677
+  },
+  {
+   "id": 29,
+   "slug": "rajasthan",
+   "iso": "IN-RJ",
+   "type": "state",
+   "name": {
+    "en": "Rajasthan",
+    "hi": "राजस्थान"
+   },
+   "bbox": [
+    -1337.3,
+    -862.2,
+    -482.9,
+    -88.2
+   ],
+   "anchor": [
+    -923.1,
+    -495.7
+   ],
+   "area_km2": 321538
+  },
+  {
+   "id": 30,
+   "slug": "sikkim",
+   "iso": "IN-SK",
+   "type": "state",
+   "name": {
+    "en": "Sikkim",
+    "hi": "सिक्किम"
+   },
+   "bbox": [
+    467.2,
+    -649.9,
+    556.0,
+    -535.1
+   ],
+   "anchor": [
+    505.5,
+    -574.5
+   ],
+   "area_km2": 7243
+  },
+  {
+   "id": 31,
+   "slug": "tamil-nadu",
+   "iso": "IN-TN",
+   "type": "state",
+   "name": {
+    "en": "Tamil Nadu",
+    "hi": "तमिलनाडु",
+    "native": "தமிழ்நாடு"
+   },
+   "bbox": [
+    -721.3,
+    963.2,
+    -274.1,
+    1572.8
+   ],
+   "anchor": [
+    -495.1,
+    1233.8
+   ],
+   "area_km2": 130714
+  },
+  {
+   "id": 32,
+   "slug": "telangana",
+   "iso": "IN-TS",
+   "type": "state",
+   "name": {
+    "en": "Telangana",
+    "hi": "तेलंगाना",
+    "native": "తెలంగాణ"
+   },
+   "bbox": [
+    -602.9,
+    268.0,
+    -173.1,
+    713.2
+   ],
+   "anchor": [
+    -395.9,
+    478.6
+   ],
+   "area_km2": 109695
+  },
+  {
+   "id": 33,
+   "slug": "tripura",
+   "iso": "IN-TR",
+   "type": "state",
+   "name": {
+    "en": "Tripura",
+    "hi": "त्रिपुरा",
+    "native": "ত্রিপুরা"
+   },
+   "bbox": [
+    803.1,
+    -285.1,
+    917.9,
+    -108.7
+   ],
+   "anchor": [
+    844.8,
+    -178.9
+   ],
+   "area_km2": 10741
+  },
+  {
+   "id": 34,
+   "slug": "uttar-pradesh",
+   "iso": "IN-UP",
+   "type": "state",
+   "name": {
+    "en": "Uttar Pradesh",
+    "hi": "उत्तर प्रदेश"
+   },
+   "bbox": [
+    -585.5,
+    -872.5,
+    140.1,
+    -167.0
+   ],
+   "anchor": [
+    -239.3,
+    -485.5
+   ],
+   "area_km2": 230337
+  },
+  {
+   "id": 35,
+   "slug": "uttarakhand",
+   "iso": "IN-UK",
+   "type": "state",
+   "name": {
+    "en": "Uttarakhand",
+    "hi": "उत्तराखंड"
+   },
+   "bbox": [
+    -542.0,
+    -988.9,
+    -211.4,
+    -689.2
+   ],
+   "anchor": [
+    -376.7,
+    -841.6
+   ],
+   "area_km2": 52799
+  },
+  {
+   "id": 36,
+   "slug": "west-bengal",
+   "iso": "IN-WB",
+   "type": "state",
+   "name": {
+    "en": "West Bengal",
+    "hi": "पश्चिम बंगाल",
+    "native": "পশ্চিমবঙ্গ"
+   },
+   "bbox": [
+    275.8,
+    -545.4,
+    651.7,
+    67.6
+   ],
+   "anchor": [
+    458.5,
+    -93.3
+   ],
+   "area_km2": 83988
+  }
+ ]
+}

@@ -40,6 +40,9 @@ current status.
   pipeline caches stay out of git.
 - **Content:** every media item needs credit, licence and source. Cite sources for
   facts; keep a neutral tone on contested topics.
+- **Generated data:** `public/data/` is committed and rebuilt with `npm run data`
+  (reproducible byte for byte; commit data changes separately from code). State
+  raster ids come from `content/states/states.json` and are never renumbered.
 - **Commits:** one feature or concern per commit.
 
 ## Workflow
@@ -47,3 +50,8 @@ current status.
 The owner works on this from several machines. At the end of a working session,
 update the Status section of docs/PLAN.md (and this file if a decision changed), so
 the next session on any machine can pick up.
+
+Checking a change: `npm run build`, then load the preview in a browser. In the web
+sandbox there is no display, but Playwright's Chromium renders WebGL2 through
+SwiftShader (`--use-angle=swiftshader --enable-unsafe-swiftshader`), which catches
+shader errors and layout mistakes; `pipeline/tmp/preview-*.png` shows the rasters.
