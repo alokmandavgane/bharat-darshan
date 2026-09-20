@@ -305,8 +305,27 @@ body[data-level="state"] .sheet-head { cursor: default; }
   overflow-wrap: anywhere;
   color: var(--accent-deep);
 }
-.sheet-alt { color: var(--muted); margin: 0; font-size: 0.9rem; }
-.sheet-subtitle { color: var(--muted); margin: 0; font-size: 0.95rem; text-align: right; }
+.sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
+.sheet-alt:not([hidden]) + .sheet-subtitle:not(:empty)::before { content: "· "; }
+/* the info button: about the map, and the review status of a card (drafts turn it terracotta) */
+.sheet-info {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-soft);
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.sheet-info::before { content: ""; position: absolute; inset: -8px; }   /* a 44 px touch target */
+.sheet-info svg { width: 16px; height: 16px; }
+.sheet-info:hover, .sheet-info[aria-expanded="true"] { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
+.sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
 .sheet-explore {
   font: inherit;
   font-weight: 700;
@@ -347,6 +366,19 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-body ul { margin: 0; padding-left: 18px; }
 .sheet-body li { margin-bottom: 6px; color: var(--muted); font-size: 0.95rem; }
 .sheet-body a { color: var(--accent); }
+.about {
+  margin: 12px 0 4px;
+  padding: 12px 14px 10px;
+  border-radius: 14px;
+  background: rgba(120, 80, 40, 0.06);
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.about p { margin: 0 0 8px; }
+.about h2 { margin: 12px 0 6px; }
+.about ul { padding-left: 16px; }
+.about li { font-size: 0.85rem; margin-bottom: 4px; }
+.about-draft { color: var(--accent); font-weight: 600; }
 
 /* --- fact card --- */
 .facts dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; }
@@ -355,7 +387,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .facts dd { margin: 0; }
 .facts-blurb { margin-top: 14px; }
 .facts-sources, .facts-pending { color: var(--muted); font-size: 0.85rem; }
-.facts-draft { color: var(--accent); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
 
 /* --- list of every unit --- */
 .search {

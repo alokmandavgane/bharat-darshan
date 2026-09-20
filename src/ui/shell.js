@@ -30,6 +30,11 @@ export function createShell(root, store) {
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
   const chips = $('.layer-chips');
+  const sheet = $('.sheet');
+  const sheetBody = $('.sheet-body');
+  const infoBtn = $('.sheet-info');
+  const about = $('.about');
+  const aboutDraft = $('.about-draft');
   const tooltip = $('.tooltip');
   const canvas = $('canvas.map');
   const topbar = $('.topbar');
@@ -94,6 +99,25 @@ export function createShell(root, store) {
     const id = store.get('selection');
     if (id) store.set('level', { name: 'state', id }, { source: 'ui' });
   });
+
+  // --- the info button: about the map, how to use it, credits; and a card's review status
+  function setAbout(open) {
+    about.hidden = !open;
+    infoBtn.setAttribute('aria-expanded', String(open));
+    if (!open) return;
+    sheetBody.scrollTop = 0;
+    if (store.get('sheet')?.snap === 'peek') store.set('sheetSnap', { name: 'half', t: performance.now() });
+  }
+  infoBtn.addEventListener('click', () => setAbout(about.hidden));
+  /** Drafts turn the info button terracotta; its tooltip says so, and the about text leads with it. */
+  function setDraft(isDraft) {
+    sheet.dataset.draft = isDraft ? '1' : '';
+    aboutDraft.hidden = !isDraft;
+    const label = isDraft ? t('facts.draft') : t('sheet.about.heading');
+    infoBtn.setAttribute('aria-label', label);
+    infoBtn.title = label;
+  }
+
   search.addEventListener('input', () => renderList());
   list.addEventListener('click', (e) => {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id]');
@@ -157,8 +181,10 @@ export function createShell(root, store) {
       p.className = 'facts-pending';
       p.textContent = t('facts.pending');
       facts.appendChild(p);
+      setDraft(false);
       return;
     }
+    setDraft(f.status !== 'reviewed');
     const dl = document.createElement('dl');
     const row = (label, value) => {
       if (!value) return;
@@ -194,12 +220,6 @@ export function createShell(root, store) {
         if (i) p.append(', ');
         p.appendChild(a);
       });
-      facts.appendChild(p);
-    }
-    if (f.status !== 'reviewed') {
-      const p = document.createElement('p');
-      p.className = 'facts-draft';
-      p.textContent = t('facts.draft');
       facts.appendChild(p);
     }
   }
@@ -242,12 +262,7 @@ export function createShell(root, store) {
         });
         facts.appendChild(ps);
       }
-      if (it.status !== 'reviewed') {
-        const pd = document.createElement('p');
-        pd.className = 'facts-draft';
-        pd.textContent = t('facts.draft');
-        facts.appendChild(pd);
-      }
+      setDraft(it.status !== 'reviewed');
       return;
     }
     const id = store.get('selection');
@@ -263,6 +278,7 @@ export function createShell(root, store) {
     listWrap.hidden = !!u;
     if (!u) {
       renderList();
+      setDraft(false);
       title.textContent = t('sheet.title');
       alt.hidden = true;
       if (r) {
@@ -276,6 +292,7 @@ export function createShell(root, store) {
     alt.textContent = others;
     alt.hidden = !others;
     subtitle.textContent = t(u.type === 'ut' ? 'unit.ut' : 'unit.state');
+    if (!u.facts) setDraft(false);
     renderFacts(u);
   }
 
@@ -308,6 +325,7 @@ export function createShell(root, store) {
   store.subscribe('level', renderSelection);
   store.subscribe('drafts', renderSelection);
   store.subscribe('item', renderSelection);
+  for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
   store.subscribe('catalog', renderChips, { immediate: true });
   store.subscribe('layers', renderChips);
   store.subscribe('hover', renderHover);
@@ -325,7 +343,6 @@ export function createShell(root, store) {
 
   // Camera padding: header on top; on phones the sheet peek at the bottom; on wide
   // pointer screens the sheet is a side panel (see style.css).
-  const sheet = $('.sheet');
   const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
   function updatePadding(animate = false) {
     if (root.body.dataset.poster) return;          // the share-image render sets its own framing
