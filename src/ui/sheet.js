@@ -1,6 +1,6 @@
 // @ts-check
 // The bottom sheet: three snap points (peek, half, full), dragged by its grip, animated
-// with a CSS transition. It reports its peek height as camera padding so the map keeps
+// with a CSS transition. It reports its heights as camera padding so the map keeps
 // the selection centred above it (PLAN.md section 3).
 import { reducedMotion } from '../engine/tween.js';
 
@@ -36,9 +36,15 @@ export function createSheet(el, store) {
     snap = name;
     el.dataset.snap = name;
     document.body.dataset.sheet = name;
-    body.style.overflowY = name === 'full' ? 'auto' : 'hidden';
-    place(visibleFor(name), animate);
-    store.set('sheet', { snap: name, peek: visibleFor('peek') });
+    const h = heights();
+    // The body ends exactly at the bottom of the screen, so it scrolls to its last line
+    // whenever the sheet is open; at peek only the head shows and nothing scrolls.
+    body.style.height = `${Math.max(0, h[name] - h.peek)}px`;
+    body.style.overflowY = name === 'peek' ? 'hidden' : 'auto';
+    if (name === 'peek') body.scrollTop = 0;
+    document.body.style.setProperty('--sheet-peek', `${h.peek}px`);
+    place(h[name], animate);
+    store.set('sheet', { snap: name, peek: h.peek, half: h.half, visible: h[name] });
   }
 
   function onDown(e) {
@@ -77,7 +83,11 @@ export function createSheet(el, store) {
   grip.addEventListener('pointermove', onMove);
   grip.addEventListener('pointerup', onUp);
   grip.addEventListener('pointercancel', onUp);
-  head.addEventListener('click', () => setSnap(snap === 'peek' ? 'half' : 'peek'));
+  // A tap on the head opens or closes the sheet; its buttons keep their own meaning.
+  head.addEventListener('click', (e) => {
+    if (/** @type {HTMLElement} */ (e.target).closest('button, a')) return;
+    setSnap(snap === 'peek' ? 'half' : 'peek');
+  });
   grip.addEventListener('keydown', (e) => {
     const i = SNAPS.indexOf(snap);
     if (e.key === 'ArrowUp') setSnap(SNAPS[Math.min(2, i + 1)]);

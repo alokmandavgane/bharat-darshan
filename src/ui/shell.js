@@ -327,17 +327,19 @@ export function createShell(root, store) {
   // pointer screens the sheet is a side panel (see style.css).
   const sheet = $('.sheet');
   const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
-  function updatePadding() {
+  function updatePadding(animate = false) {
     if (root.body.dataset.poster) return;          // the share-image render sets its own framing
-    const peek = store.get('sheet')?.peek || 0;
+    const s = store.get('sheet') || {};
+    // The sheet's visible height, up to half: an open sheet keeps the map framed above it.
+    const covered = Math.min(s.visible || s.peek || 0, s.half || Infinity);
     store.set('padding', wide.matches
       ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: 24 }
-      : { top: topbar.offsetHeight + 8, right: 8, bottom: peek + 12, left: 8 });
+      : { top: topbar.offsetHeight + 8, right: 8, bottom: covered + 12, left: 8 }, { animate });
   }
-  wide.addEventListener('change', updatePadding);
-  const ro = new ResizeObserver(updatePadding);
+  wide.addEventListener('change', () => updatePadding());
+  const ro = new ResizeObserver(() => updatePadding());
   ro.observe(topbar);
-  store.subscribe('sheet', updatePadding);
-  store.subscribe('viewport', updatePadding);
+  store.subscribe('sheet', () => updatePadding(true));
+  store.subscribe('viewport', () => updatePadding());
   updatePadding();
 }

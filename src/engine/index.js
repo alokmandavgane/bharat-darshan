@@ -142,7 +142,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   /** Frame the whole country, or the lifted state, above the sheet and beside the panels. */
-  function fit(animate = true) {
+  function fit(animate = true, opts = {}) {
     const regions = store.get('regions');
     if (!regions) return;
     const pad = store.get('padding');
@@ -155,7 +155,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       box = { x0, z0, x1, z1, points: regions.hull, ymax: 40 };
     }
     const target = fitBounds(store.get('camera'), box, viewport, pad);
-    if (animate) flyTo(target);
+    if (animate) flyTo(target, opts.ms);
     else store.set('camera', target, { source: 'fit' });
   }
 
@@ -174,7 +174,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     invalidate();
   });
   store.subscribe('flyTo', (req) => { if (req) { cameraTouched = true; flyTo(req.camera, req.ms); } });
-  store.subscribe('padding', () => { if (!cameraTouched) fit(false); });
+  store.subscribe('padding', (_, __, meta) => { if (!cameraTouched) fit(!!meta.animate, { ms: 450 }); });
 
   // --- relief
   function applyRelief(r, animate) {
