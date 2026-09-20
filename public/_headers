@@ -1,0 +1,45 @@
+# Cloudflare Pages headers. Vite copies public/ into dist/ unchanged, so this file
+# lands at the site root. Reference:
+# https://developers.cloudflare.com/pages/configuration/headers/
+#
+# Notes that match the app code:
+# - src/engine/pack.js gunzips *.bin.gz itself with DecompressionStream, so the
+#   files are served as opaque bytes with no Content-Encoding header.
+# - src/engine/data.js appends ?v=<sha256> from manifest.json to every pack URL, so
+#   packs can be cached forever. manifest.json and states.json are fetched by plain
+#   name and must revalidate.
+# - SPA routing needs no rule: Pages serves index.html for unknown paths when the
+#   build has no 404.html, and vite.config.js also emits /en/ and /hi/ shells.
+
+# Vite's content-hashed bundles.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Pipeline output, versioned by query string.
+/data/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Un-hashed data files: revalidate every time.
+/data/*.json
+  ! Cache-Control
+  Cache-Control: no-cache
+
+# App shell: always revalidate so a deploy shows up immediately.
+/index.html
+  Cache-Control: no-cache
+
+/en/index.html
+  Cache-Control: no-cache
+
+/hi/index.html
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache
+
+# Security and privacy defaults for the whole site.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
