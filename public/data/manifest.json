@@ -1,0 +1,85 @@
+{
+ "version": 1,
+ "generated": "2026-09-20T07:32:47Z",
+ "grid": {
+  "crs": "EPSG:7755",
+  "lonlat_bbox": [
+   68.0,
+   6.5,
+   97.5,
+   37.5
+  ],
+  "projected_bbox_m": [
+   2640000.0,
+   2072000.0,
+   5981000.0,
+   5579000.0
+  ],
+  "width_km": 3341.0,
+  "height_km": 3507.0,
+  "origin_m": [
+   4310500.0,
+   3825500.0
+  ]
+ },
+ "tiers": {
+  "1024": {
+   "borders": "regions/states-borders-1024.bin.gz",
+   "ids": "regions/states-ids-1024.bin.gz",
+   "heights": "terrain/heights-1024.bin.gz",
+   "shade": "terrain/shade-1024.bin.gz"
+  },
+  "2048": {
+   "borders": "regions/states-borders-2048.bin.gz",
+   "ids": "regions/states-ids-2048.bin.gz",
+   "heights": "terrain/heights-2048.bin.gz",
+   "shade": "terrain/shade-2048.bin.gz"
+  }
+ },
+ "regions": {
+  "states": "regions/states.json",
+  "count": 36
+ },
+ "attribution": [
+  "State boundaries and India outline: DataMeet India community maps (CC BY 4.0), Census of India / Survey of India lineage.",
+  "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+ ],
+ "files": {
+  "regions/states-borders-1024.bin.gz": {
+   "size": 95688,
+   "sha256": "ee1bdb486a6c"
+  },
+  "regions/states-borders-2048.bin.gz": {
+   "size": 235770,
+   "sha256": "abe3f7a050fd"
+  },
+  "regions/states-ids-1024.bin.gz": {
+   "size": 12845,
+   "sha256": "9e95f116e6e8"
+  },
+  "regions/states-ids-2048.bin.gz": {
+   "size": 30939,
+   "sha256": "46968296f261"
+  },
+  "regions/states.json": {
+   "size": 12058,
+   "sha256": "9c0fa9a2cf9d"
+  },
+  "terrain/heights-1024.bin.gz": {
+   "size": 891901,
+   "sha256": "1c722cf26742"
+  },
+  "terrain/heights-2048.bin.gz": {
+   "size": 3505839,
+   "sha256": "02e8efbe8f1e"
+  },
+  "terrain/shade-1024.bin.gz": {
+   "size": 160056,
+   "sha256": "ee97a389f2b9"
+  },
+  "terrain/shade-2048.bin.gz": {
+   "size": 687161,
+   "sha256": "907db8bcea61"
+  }
+ }
+}
