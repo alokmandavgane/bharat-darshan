@@ -9,7 +9,7 @@ Decision context: PLAN.md section 6 (hosting) and open question 2.
 |---------|-------|
 | Project name | `bharat-darshan` (preview URLs: `<branch>.bharat-darshan.pages.dev`) |
 | Production branch | `main` |
-| Framework preset | Vite (not React: the app is plain JS ES modules, see CLAUDE.md) |
+| Framework preset | None (type the command and output directory below by hand; not VitePress, not React) |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | `/` |
