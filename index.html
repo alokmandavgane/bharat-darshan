@@ -10,6 +10,8 @@
 <body>
   <div id="app">
     <canvas class="map" aria-hidden="true"></canvas>
+    <div class="labels" aria-hidden="true"></div>
+    <div class="markers"></div>
 
     <header class="topbar">
       <div class="wordmark">
@@ -38,9 +40,15 @@
           <p class="sheet-alt" hidden></p>
         </div>
         <p class="sheet-subtitle"></p>
+        <button class="sheet-explore" type="button" hidden data-i18n="sheet.explore">Explore</button>
         <button class="sheet-close" type="button" hidden data-i18n-aria-label="sheet.close">×</button>
       </div>
       <div class="sheet-body">
+        <div class="facts" hidden></div>
+        <div class="unit-list-wrap">
+          <input class="search" type="search" autocomplete="off" data-i18n-placeholder="list.search" data-i18n-aria-label="list.search">
+          <ul class="unit-list"></ul>
+        </div>
         <h2 data-i18n="sheet.about.heading">About this map</h2>
         <p data-i18n="sheet.about.body"></p>
         <p data-i18n="sheet.next"></p>

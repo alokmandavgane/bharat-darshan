@@ -2,7 +2,7 @@
 // Bootstrap: language, store, URL, shell, engine. Everything meets in the store.
 import './ui/style.css';
 import { createEngine } from './engine/index.js';
-import { detectLanguage, setLanguage } from './i18n/index.js';
+import { detectLanguage, pick, setLanguage } from './i18n/index.js';
 import { createStore } from './state/store.js';
 import { DEFAULT_RELIEF, readUrl, syncUrl } from './state/url.js';
 import { attachGestures } from './ui/gestures.js';
@@ -25,6 +25,15 @@ const store = createStore({
   tap: null,
   pointer: null,
   flyTo: null,
+  focus: null,
+  item: null,
+  layers: null,          // { active: [...] } once the manifest says which layers exist
+  catalog: [],
+  level: { name: 'country', id: null },
+  // Content ships reviewed-only (D10). Drafts are on by default while the first
+  // batch is being reviewed, so the demo shows the cards; flip to
+  // `url.drafts || import.meta.env.DEV` once the owner has reviewed them.
+  drafts: true,
   regions: null,
   status: 'loading',
 });
@@ -43,19 +52,33 @@ if (!supported) {
   /** @type {HTMLElement} */ (document.querySelector('.fallback')).hidden = false;
   store.set('status', 'fallback');
 } else {
-  const engine = createEngine({ canvas, store });
+  const engine = createEngine({
+    canvas, store,
+    labelContainer: /** @type {HTMLElement} */ (document.querySelector('.labels')),
+    markerContainer: /** @type {HTMLElement} */ (document.querySelector('.markers')),
+    labelText: (unit, lang) => unit.name[lang] || unit.name.en,
+  });
   attachGestures(canvas, store);
-  if (url.state) {
-    // Restore ?state=<slug> once the units are known.
+  if (url.view || url.state) {
+    // Restore /state/<slug> or ?state=<slug> once the units are known, before the first frame.
     const unsub = store.subscribe('regions', (r) => {
       if (!r) return;
-      const u = r.units.find((x) => x.slug === url.state);
-      if (u) store.set('selection', u.id);
+      const view = r.units.find((x) => x.slug === url.view);
+      const sel = view || r.units.find((x) => x.slug === url.state);
+      if (sel) store.set('selection', sel.id);
+      if (view) store.set('level', { name: 'state', id: view.id }, { source: 'init' });
       unsub();
     });
   }
-  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') store.set('selection', null); });
-  engine.start().catch((err) => {
+  window.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (store.get('item')) store.set('item', null);
+    else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
+    else store.set('selection', null);
+  });
+  engine.start().then(() => {
+    if (url.cam) store.set('camera', url.cam, { source: 'url' });
+  }).catch((err) => {
     console.error(err);
     store.set('status', 'error');
   });

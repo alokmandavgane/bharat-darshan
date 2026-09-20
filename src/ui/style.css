@@ -208,12 +208,25 @@ body[data-sheet="half"] .controls, body[data-sheet="full"] .controls { opacity: 
 }
 .sheet-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
   align-items: center;
-  gap: 4px 12px;
+  gap: 4px 10px;
   padding: 2px 16px 12px 20px;
   cursor: pointer;
 }
+.sheet-explore {
+  font: inherit;
+  font-weight: 600;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  min-height: 36px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+.sheet-explore:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-titles { min-width: 0; }
 .sheet-title { font-size: 1.35rem; font-weight: 700; margin: 0; overflow-wrap: anywhere; }
 .sheet-alt { color: var(--muted); margin: 0; font-size: 0.9rem; }
@@ -243,6 +256,107 @@ body[data-sheet="half"] .controls, body[data-sheet="full"] .controls { opacity: 
 .sheet-body ul { margin: 0; padding-left: 18px; }
 .sheet-body li { margin-bottom: 6px; color: var(--muted); font-size: 0.95rem; }
 .sheet-body a { color: var(--accent); }
+
+/* --- fact card --- */
+.facts dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; }
+.facts dl div { display: contents; }
+.facts dt { color: var(--muted); font-size: 0.9rem; }
+.facts dd { margin: 0; }
+.facts-blurb { margin-top: 14px; }
+.facts-sources, .facts-pending { color: var(--muted); font-size: 0.85rem; }
+.facts-draft { color: var(--accent); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
+
+/* --- list of every unit --- */
+.search {
+  font: inherit;
+  width: 100%;
+  margin: 12px 0 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+}
+.search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+.unit-list { list-style: none; margin: 0 0 8px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px; }
+.unit-list button {
+  font: inherit;
+  text-align: left;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.unit-list button:hover { background: rgba(43, 39, 35, 0.06); }
+.unit-list button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.unit-list-name { font-weight: 600; }
+.unit-list-alt { color: var(--muted); font-size: 0.85rem; }
+
+/* --- markers of point layers: paper stickers with a contact shadow --- */
+.markers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  margin: -34px 0 0 -16px;      /* the anchor sits under the bottom tip */
+  padding: 0;
+  border: 0;
+  border-radius: 50% 50% 50% 0;
+  background: var(--card);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 3px 8px rgba(60, 45, 30, 0.35);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  rotate: -45deg;
+  transition: scale 120ms;
+  will-change: transform;
+}
+.marker .marker-icon { rotate: 45deg; }
+.marker::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(60, 45, 30, 0.25);
+  filter: blur(2px);
+  z-index: -1;
+}
+.marker:hover, .marker:focus-visible { scale: 1.15; outline: none; }
+.marker-active { background: var(--accent); scale: 1.2; }
+.marker-active .marker-icon { filter: drop-shadow(0 0 1px rgba(0,0,0,0.4)); }
+
+/* --- HTML labels over the map --- */
+.labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  color: rgba(43, 39, 35, 0.85);
+  text-shadow: 0 0 3px var(--paper), 0 0 6px var(--paper), 0 1px 0 var(--paper);
+  will-change: transform;
+}
+.label:lang(en) { letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
+.label-l:lang(en) { font-size: 13px; }
+.label-s:lang(en) { font-size: 10px; letter-spacing: 0.04em; }
+.label:lang(hi) { font-size: 13px; }
+.label-l:lang(hi) { font-size: 15px; }
+.label-s:lang(hi) { font-size: 12px; }
+.label-active { color: var(--accent); }
 
 /* --- status and fallbacks --- */
 .status {
