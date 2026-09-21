@@ -61,7 +61,8 @@ export function createLabels(container, text) {
       const show = onScreen && (wanted || fits) && (clear || wanted) && shown < MAX_LABELS;
       it.el.hidden = !show;
       if (!show) continue;
-      it.el.style.transform = `translate(${Math.round(cx)}px, ${Math.round(cy)}px) translate(-50%, -50%)`;
+      // Sub-pixel, so a label does not jitter against the canvas during a flight.
+      it.el.style.transform = `translate(${cx.toFixed(2)}px, ${cy.toFixed(2)}px) translate(-50%, -50%)`;
       it.el.classList.toggle('label-active', wanted);
       placed.push(rect);
       shown++;
