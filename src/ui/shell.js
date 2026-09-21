@@ -496,13 +496,17 @@ export function createShell(root, store) {
     const h = document.createElement('h2');
     h.className = 'facts-heading';
     h.textContent = t('sheet.month.heading', { month: name });
-    const rows = (store.get('regional') || []).flatMap((layer) => {
-      // Items with a month of their own, and those with none: Eid can fall in any month,
-      // so leaving it out of every month's list would be the wrong kind of tidy.
-      const keep = (layer.items || []).filter((i) => (i.month === month || !i.month)
-        && (store.get('drafts') || i.status === 'reviewed'));
-      return keep.map((i) => ({ layer, item: i }));
-    });
+    const rows = (store.get('regional') || [])
+      // Only layers that are about time at all. A language is not in any month, and
+      // listing every one of them under April is not what the year asked.
+      .filter((layer) => Object.values(layer.fields || {}).some((f) => f.type === 'month'))
+      .flatMap((layer) => {
+        // Within those, items with a month of their own and those with none: Eid can
+        // fall in any month, so leaving it out of every list would be the wrong tidy.
+        const keep = (layer.items || []).filter((i) => (i.month === month || !i.month)
+          && (store.get('drafts') || i.status === 'reviewed'));
+        return keep.map((i) => ({ layer, item: i }));
+      });
     if (!rows.length) {
       const p = document.createElement('p');
       p.className = 'legend-note';
@@ -565,6 +569,8 @@ export function createShell(root, store) {
   function renderSelection() {
     const r = store.get('regions');
     const sel = store.get('item');
+    // The month panel answers for the whole country; a card of its own is on top of it.
+    monthPanel.hidden = true;
     if (sel?.data && r) {
       const it = sel.data;
       const layer = (store.get('catalog') || []).find((l) => l.id === sel.layer);
