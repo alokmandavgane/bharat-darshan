@@ -54,6 +54,9 @@ const store = createStore({
   tour: { playing: false, index: -1, total: 0 },
   activity: 0,           // performance.now() of the last touch, click, wheel or key anywhere
   poster,                // the share-image render: no idle sway
+  // The URL asked for somewhere in particular -- a state, an item or a camera. Such a
+  // visitor is arriving, not being introduced, so the engine skips the entrance.
+  linked: !!(url.cam || url.view || url.state || url.item),
   surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to

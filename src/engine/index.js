@@ -23,6 +23,8 @@ const CAMERA_DISTANCE = 7000;   // km; anywhere outside the model works for an o
 const FIRST_TIER = '1024';      // always first: it is the first-view budget (PLAN.md section 8)
 const STATE_EXAG = 0.6;         // relief eases down when a state is lifted out (PLAN.md section 6)
 const ITEM_ZOOM = 700;          // km of view height when flying to a place at country level
+// The entrance: how far overhead the model starts, and how long it takes to rise.
+const RISE = { fromPitch: 84, ms: 1400 };
 
 /**
  * @param {{ canvas: HTMLCanvasElement, store: ReturnType<import('../state/store.js').createStore>,
@@ -700,6 +702,44 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   canvas.addEventListener('webglcontextlost', (e) => { e.preventDefault(); store.set('status', 'context-lost'); });
   canvas.addEventListener('webglcontextrestored', () => { store.set('status', 'ready'); invalidate(); });
 
+  /**
+   * The entrance (PLAN.md section 3, "The missing wow" 2). On a cold load of the home
+   * view the model rises out of the page: the relief grows from flat while the camera
+   * tips down from almost overhead to the home angle. It says in one and a half seconds
+   * what the home view cannot say on its own -- that this is a thing with a shape, not a
+   * picture of a country -- and it is the first frame anyone sees.
+   *
+   * Once, and only for a visitor who asked for nothing in particular (`linked` in the
+   * store): a link to a state, a place or a camera is a request to arrive somewhere, and
+   * making it wait through a flourish first would be rude. Reduced motion skips it, and
+   * so does the poster render.
+   */
+  function rise() {
+    if (reducedMotion() || store.get('poster')) return;
+    const target = { ...store.get('camera') };
+    const relief = store.get('relief');
+    // Start overhead and flat. The fit was computed for the home angle, so the opening
+    // frame is framed a little loosely; it is moving by the time anyone reads it.
+    store.set('camera', { ...target, pitch: RISE.fromPitch }, { source: 'fit' });
+    terrain.uniforms.uExag.value = 0;
+    world?.setCurve({ exag: 0, gamma: terrain.uniforms.uGamma.value, hRef: terrain.uniforms.uHRef.value });
+    flyTo(target, RISE.ms);
+    // The rise counts as the camera being busy. It is not, in the sense cameraTouched
+    // usually means -- nobody has moved it -- but leaving that false lets the shell's
+    // first padding write refit mid-flight, and a fit keeps the angles it finds, so the
+    // rise's own target was being replaced by one framed at 84 degrees and the model
+    // never tipped down at all. It goes back to false when the rise is over, so a resize
+    // still refits after that.
+    cameraTouched = true;
+    cancelRelief?.();
+    const to = relief.on ? relief.amount : 0;
+    cancelRelief = tween({ v: 0 }, { v: to }, RISE.ms, ({ v }) => {
+      terrain.uniforms.uExag.value = v;
+      world?.setCurve({ exag: v, gamma: terrain.uniforms.uGamma.value, hRef: terrain.uniforms.uHRef.value });
+      invalidate();
+    }, { easing: easeOutCubic, onDone: () => { cancelRelief = null; cameraTouched = false; } });
+  }
+
   // --- loading: first-view tier first, finer tier in the background for capable devices
   async function start() {
     manifest = await loadManifest();
@@ -729,6 +769,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     labels.setUnits(states.units);
     applyRelief(store.get('relief'), false);
     const lv = store.get('level');
+    let entrance = false;
     if (lv?.name === 'state' && byId[lv.id]) {
       level = lv;
       enterState(byId[lv.id], true);
@@ -738,7 +779,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       // often already framed by the time this runs and framing the country again would
       // throw the visitor back out to it.
       fit(false);
+      entrance = !store.get('linked');
     }
+    if (entrance) rise();
     invalidate();
     store.set('status', 'ready');
     if (quality.heightTier !== FIRST_TIER && manifest.tiers[quality.heightTier]) {

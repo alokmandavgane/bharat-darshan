@@ -196,9 +196,14 @@ a picture laid on a page. In rough order of effect per hour:
    about 5 px at the home view and reads as an outline round the coast rather than as a
    thing standing on a table. Knobs in `SHADOW` in `src/engine/terrain.js`. Still to do:
    the same for a lifted block on the plate.
-2. **An entrance.** On a cold load of the home view the model rises out of the page:
-   relief 0 -> 12 while the camera tips from near top-down to the home angle, ~1.4 s,
-   once, skipped for deep links and reduced motion. The relief tween already exists.
+2. **An entrance.** *Done 2026-09-21.* On a cold load of the home view the model rises
+   out of the page: relief 0 -> 12 while the camera tips from 84 degrees to the home
+   angle, 1.4 s, once, skipped for reduced motion, for the poster, and for any link that
+   asked for somewhere in particular (`linked` in the store). The catch, which cost a
+   round of measuring: the rise has to count as the camera being busy, because the
+   shell's first padding write refits when it is not, and a fit keeps the angles it
+   finds -- so the rise's own target was being replaced by one framed at 84 degrees and
+   the model never tipped down at all.
 3. **Handling is the look.** F1, F5 and F6 above. An object that turns about your finger
    and coasts to a stop is most of what "tactile" means on a screen.
 4. **Let the relief show.** At country zoom the default places layer puts ~40 large
