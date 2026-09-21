@@ -206,10 +206,16 @@ a picture laid on a page. In rough order of effect per hour:
    the model never tipped down at all.
 3. **Handling is the look.** F1, F5 and F6 above. An object that turns about your finger
    and coasts to a stop is most of what "tactile" means on a screen.
-4. **Let the relief show.** At country zoom the default places layer puts ~40 large
-   tokens over the model and the markers are what you see. Smaller tokens that grow with
-   zoom, harder thinning at the home view, a staggered spring as they appear, and a
-   contact shadow so they stand on the clay instead of lying on the glass.
+4. **Let the relief show.** *Done 2026-09-21.* The home view was a priority-2 view, which
+   put about forty full-size tokens over a country 3,000 km across: the markers were what
+   you saw and the model was what they were on. Now 17 at the home view (priority 1
+   only, the rest arriving as the camera comes in), scaled to 0.75 and growing to full
+   size by 1,200 km of view height, and springing up one after another as they arrive.
+   The contact shadow was already there. The scale is one custom property on the
+   container, not one per marker: fifty style writes a frame would be fifty
+   invalidations. And the stagger restarts the animation by unhiding a `display: none`
+   element rather than by reading `offsetWidth`, which during a zoom-in would be one
+   forced layout per token arriving.
 5. **Bolder form at distance.** At 4 km per pixel the per-texel normal is fine grain;
    the big forms (the Ghats' scarp, the Deccan's tilt, the Gangetic trough) want a
    second, broader normal blended in as the view pulls back, so the country reads as

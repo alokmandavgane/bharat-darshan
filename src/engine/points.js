@@ -7,9 +7,16 @@
 // the DOM later without touching the data.
 import { glyphSvg } from '../glyphs.js';
 
-const TOKEN = { 1: 32, 2: 27, 3: 24 };   // token diameter by priority, px
+const TOKEN = { 1: 32, 2: 27, 3: 24 };   // token diameter by priority, px, close up
 const GAP = 2;
 const NAME_ZOOM = 1800;                  // below this view height, the most famous places show their names
+// Tokens shrink as the camera pulls back (PLAN.md "The missing wow" 4). A marker is a
+// sticker on the model, and a sticker does not stay the same size on screen while the
+// thing it is stuck to gets smaller: at the home view full-size tokens are most of what
+// anyone sees, and the relief they are standing on is not.
+const SIZE_ZOOM = [1200, 4600];          // view height over which they shrink
+const SIZE_SCALE = [1, 0.7];             // ...from this to this
+const POP_STAGGER_MS = 26;               // between one token appearing and the next
 
 
 /**
@@ -19,6 +26,7 @@ const NAME_ZOOM = 1800;                  // below this view height, the most fam
 export function createPoints(container, { text, onSelect }) {
   /** @type {Map<string, { layer: any, items: { item: any, el: HTMLButtonElement }[] }>} */
   const layers = new Map();
+  let lastScale = 0;       // the token scale the container carries, so it is written once a change
 
   if (container) {
     container.addEventListener('click', (e) => {
@@ -57,8 +65,6 @@ export function createPoints(container, { text, onSelect }) {
       // the per-frame loop would force a layout on every marker, every frame.
       return { item, el, name, asLabel, w: Math.round((item.name?.en || '').length * 8.2) + 10, h: 16 };
     });
-    // the pop-in plays once, when a token first appears
-    setTimeout(() => items.forEach(({ el }) => el.classList.remove('marker-new')), 1500);
     layers.set(layer.id, { layer, items });
   }
 
@@ -73,9 +79,21 @@ export function createPoints(container, { text, onSelect }) {
   function update({ project, level, viewport, camera, active, selected, lang, drafts }) {
     const placed = [];
     if (!container) return placed;
-    // the famous few at country zoom, the rest one step in; with 139 places, priority 3
-    // at the whole-country view crowded out the state labels
-    const maxPriority = camera.zoom > 6000 ? 1 : camera.zoom > 2400 ? 2 : 3;
+    // The famous few at country zoom, the rest as the camera comes in. The home view is
+    // 4,200 km of view height and used to be a priority-2 view, which put about forty
+    // tokens over a country 3,000 km across: the markers were what you saw and the model
+    // was what they were on. Sixteen leaves the relief to be looked at, and the rest
+    // arrive as soon as anyone goes in for them.
+    const maxPriority = camera.zoom > 3200 ? 1 : camera.zoom > 1800 ? 2 : 3;
+    // One custom property on the container rather than one per marker: fifty style
+    // writes a frame would be fifty invalidations, and this is read in the per-frame loop.
+    const t = Math.min(1, Math.max(0, (camera.zoom - SIZE_ZOOM[0]) / (SIZE_ZOOM[1] - SIZE_ZOOM[0])));
+    const mscale = SIZE_SCALE[0] + (SIZE_SCALE[1] - SIZE_SCALE[0]) * t;
+    if (mscale !== lastScale) {
+      container.style.setProperty('--mscale', mscale.toFixed(3));
+      lastScale = mscale;
+    }
+    let popped = 0;
     // Tokens claim their space first whatever order the layers arrived in, so a range
     // label yields to a place rather than being drawn under one.
     const order = [...layers].sort((a, b) => (a[1].layer.marker === 'label' ? 1 : 0) - (b[1].layer.marker === 'label' ? 1 : 0));
@@ -84,7 +102,7 @@ export function createPoints(container, { text, onSelect }) {
       for (const rec of items) {
         const { item, el, name, asLabel } = rec;
         const isSel = selected && selected.layer === id && selected.id === item.id;
-        const size = TOKEN[item.priority] || TOKEN[3];
+        const size = (TOKEN[item.priority] || TOKEN[3]) * mscale;
         let show = on && (drafts || item.status === 'reviewed');
         // A range crosses states, so a state view keeps showing the ones around it.
         if (show && level.name === 'state' && !asLabel) show = item.region === level.id;
@@ -100,7 +118,18 @@ export function createPoints(container, { text, onSelect }) {
           : [cx - half, cy - size * 0.85 - GAP, cx + half, cy + GAP];
         const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
         // the most famous places always show, even overlapping a little; the rest keep clear
-        if (!onScreen || (!clear && !isSel && item.priority > 1)) { el.hidden = true; continue; }
+        if (!onScreen || (!clear && !isSel && item.priority > 1)) { el.hidden = true; rec.up = false; continue; }
+        // Coming into view: the tokens spring up one after another rather than all at
+        // once, which reads as a handful of pieces being set down on the model. The
+        // delay is set while the element is still hidden, and a hidden marker is
+        // display: none, so unhiding it starts the animation afresh on its own -- no
+        // class juggling and, more to the point, no offsetWidth read to force a reflow,
+        // which during a zoom-in would be one layout per token arriving.
+        if (!rec.up) {
+          rec.up = true;
+          el.style.setProperty('--pop-delay', `${popped * POP_STAGGER_MS}ms`);
+          popped += 1;
+        }
         el.hidden = false;
         // Sub-pixel: rounding to whole pixels makes markers jitter against a canvas
         // that moves smoothly under them during a flight.

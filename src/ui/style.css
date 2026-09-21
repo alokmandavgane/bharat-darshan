@@ -572,7 +572,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .markers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .marker {
   --c: #b4552e;
-  --size: 28px;
   position: absolute;
   left: 0;
   top: 0;
@@ -585,9 +584,13 @@ body[data-level="state"] .sheet-head { cursor: default; }
   pointer-events: auto;
   will-change: transform;
 }
-.marker-p1 { --size: 32px; }
-.marker-p2 { --size: 27px; }
-.marker-p3 { --size: 24px; }
+/* The token's size is its own by priority, scaled by how far the camera has pulled
+   back (--mscale, set once a frame on the container by points.js). A sticker on a model
+   does not keep its screen size while the model shrinks. */
+.marker-p1 { --base: 32px; }
+.marker-p2 { --base: 27px; }
+.marker-p3 { --base: 24px; }
+.marker { --size: calc(var(--base, 28px) * var(--mscale, 1)); }
 .marker::before {                              /* contact shadow on the ground */
   content: "";
   position: absolute;
@@ -614,10 +617,19 @@ body[data-level="state"] .sheet-head { cursor: default; }
   transition: transform 140ms cubic-bezier(.2,.8,.2,1), box-shadow 140ms;
 }
 .marker-token svg { width: calc(var(--size) * 0.56); height: calc(var(--size) * 0.56); filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.18)); }
-.marker-new .marker-token { animation: token-pop 520ms cubic-bezier(.2,.9,.3,1.3) both; }
+/* Tokens spring up as they come into view, one after another rather than all at once.
+   A hidden marker is display: none, so unhiding it starts this afresh; the stagger is
+   --pop-delay, set per token while it is still hidden. */
+.marker-new .marker-token {
+  animation: token-pop 460ms cubic-bezier(.2,.9,.3,1.35) both;
+  animation-delay: var(--pop-delay, 0ms);
+}
 @keyframes token-pop {
   from { transform: translateY(-14px) scale(0.4); opacity: 0; }
   to { transform: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marker-new .marker-token { animation: none; }
 }
 .marker-name {
   position: absolute;
