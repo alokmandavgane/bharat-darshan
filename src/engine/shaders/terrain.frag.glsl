@@ -3,6 +3,7 @@
 // coastal shadow, lighter desaturated neighbours, scored borders from distance fields.
 uniform sampler2D uHeight;     // R16F metres, LINEAR
 uniform vec2 uHeightTexel;     // 1 / heightmap size
+uniform vec4 uLocalRect;       // country-uv rect the bound rasters cover; (0,0,1,1) is the country tier
 uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half res, LINEAR)
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
 uniform sampler2D uBorders;    // r: internal, g: external border field, 255 on the line
@@ -28,6 +29,9 @@ in vec2 vUv;
 in vec3 vPos;
 out vec4 outColor;
 
+// Country uv -> uv inside whatever rasters are bound. Identity unless a state package is.
+vec2 luv(vec2 v) { return (v - uLocalRect.xy) / uLocalRect.zw; }
+
 float lift(float h) {
   return h <= 0.0 ? 0.0 : uExag * pow(h / uHRef, uGamma) * uHRef * 0.001;
 }
@@ -38,7 +42,7 @@ vec3 terrainNormal(vec2 uv) {
   float hr = lift(texture(uHeight, uv + vec2(t.x, 0.0)).r);
   float hu = lift(texture(uHeight, uv - vec2(0.0, t.y)).r);   // north
   float hd = lift(texture(uHeight, uv + vec2(0.0, t.y)).r);   // south
-  vec2 texelKm = t * uSizeKm;
+  vec2 texelKm = t * uSizeKm * uLocalRect.zw;
   return normalize(vec3((hl - hr) / (2.0 * texelKm.x), 1.0, (hu - hd) / (2.0 * texelKm.y)));
 }
 
@@ -53,17 +57,17 @@ vec3 bandColour(float h) {
 }
 
 void main() {
-  float h = texture(uHeight, vUv).r;
+  float h = texture(uHeight, luv(vUv)).r;
   float land = smoothstep(-20.0, -5.0, h);          // ocean texels are <= -25 m by construction
-  vec2 shade = texture(uShade, vUv).rg;
-  float id = floor(texture(uIds, vUv).r * 255.0 + 0.5);
+  vec2 shade = texture(uShade, luv(vUv)).rg;
+  float id = floor(texture(uIds, luv(vUv)).r * 255.0 + 0.5);
   if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
   if (uOnlyIndia > 0.5 && id < 0.5) discard;
   float india = step(0.5, id);
   float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
-  vec3 n = terrainNormal(vUv);
+  vec3 n = terrainNormal(luv(vUv));
   vec3 L = normalize(vec3(-1.0, 1.35, -1.0));         // from the north-west, high
   float wrap = 0.6;
   float diff = clamp((dot(n, L) + wrap) / (1.0 + wrap), 0.0, 1.0);
@@ -88,7 +92,7 @@ void main() {
   col = mix(ocean, col, land);
 
   // --- borders: distance fields give constant screen-width lines at any zoom
-  vec2 b = texture(uBorders, vUv).rg;
+  vec2 b = texture(uBorders, luv(vUv)).rg;
   float dInt = (1.0 - b.r) * uBorderRangeKm;
   float dExt = (1.0 - b.g) * uBorderRangeKm;
   float aa = 0.75 * uKmPerPx;

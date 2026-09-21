@@ -35,6 +35,25 @@ export async function loadStates(manifest) {
   return loadJson(manifest.regions.states);
 }
 
+/** The state-package index, or null when the build did not make any. */
+export async function loadStateIndex(manifest) {
+  return manifest.states ? loadJson(manifest.states.replace(DATA_BASE, '')) : null;
+}
+
+/**
+ * One unit's hi-res rasters (PLAN.md D3). Four packs covering the unit's padded bbox
+ * at about 0.35 km per pixel, against roughly 1.7 km for the country tier.
+ * @param {any} manifest
+ * @param {any} entry  the unit's row from the state index
+ * @param {AbortSignal} [signal]
+ */
+export async function loadStatePackage(manifest, entry, signal) {
+  const [heights, shade, ids, borders] = await Promise.all(
+    [entry.heights, entry.shade, entry.ids, entry.borders]
+      .map((rel) => loadPack(versioned(manifest, rel), signal)));
+  return { heights, shade, ids, borders, rect: entry.rect };
+}
+
 /** Bounding box of every unit together, in scene km: [x0, z0, x1, z1]. */
 export function unionBbox(units) {
   const b = [Infinity, Infinity, -Infinity, -Infinity];

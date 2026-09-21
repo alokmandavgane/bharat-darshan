@@ -101,19 +101,36 @@ def main():
         h_m = np.where(inside, h_m, SENTINEL_M)
 
         ids = np.where(inside, u['id'], 0).astype(np.uint8)
-        shade = dem.ambient_occlusion(np.where(inside, h_m, 0.0), args.km_per_px)
+        h16 = np.clip(np.round(h_m), -32768, 32767).astype(np.int16)
+
+        # Shade mirrors 02_dem.py exactly: half resolution, two channels, ambient
+        # occlusion and coastal shadow. The shader reads .rg, so a single channel here
+        # leaves the coast term at zero and the whole block renders black.
+        hh = dem.box_down(h16.astype(np.float32), 2)
+        land2 = dem.box_down(inside.astype(np.float32), 2) >= 0.5
+        ao = dem.ambient_occlusion(hh, args.km_per_px * 2)
+        r = int(np.ceil(dem.COAST_RANGE_KM / (args.km_per_px * 2)))
+        d = dem.bounded_distance(land2, r)
+        coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
+        shade = np.dstack([np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
+                           np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
         borders = dem.border_fields(ids, inside)
 
         files, size = {}, 0
         for name, arr, dtype, pred in (
-            ('heights', np.round(h_m).astype(np.int16), 'int16', 'plane'),
+            ('heights', h16, 'int16', 'plane'),
             ('shade', shade, 'uint8', 'plane'),
             ('ids', ids, 'uint8', 'left'),
             ('borders', borders, 'uint8', 'plane'),
         ):
             rel = f'states/{u["slug"]}-{name}.bin.gz'
+            meta = {'km_per_px': args.km_per_px * (2 if name == 'shade' else 1), 'unit': u['id']}
+            if name == 'shade':
+                meta |= {'channels_meaning': ['ao', 'coast'], 'coast_range_km': dem.COAST_RANGE_KM}
+            if name == 'borders':
+                meta |= {'range_px': dem.BORDER_RANGE_PX}
             size += pack.write(os.path.join(out_root, rel), arr, dtype, predictor=pred,
-                               kind=f'state-{name}', km_per_px=args.km_per_px, unit=u['id'])
+                               kind=f'state-{name}', **meta)
             files[name] = rel
         total += size
         index[u['slug']] = {
