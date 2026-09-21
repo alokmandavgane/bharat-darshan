@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-21. Status and next steps are at the bottom of this file;
+Last updated: 2026-09-21 (nineteenth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -1426,6 +1426,26 @@ docs/DEPLOY.md).
   environment reports `document.hidden` and fires no animation frame, so anything on
   requestAnimationFrame -- the glide, the flow, the idle sway -- cannot be exercised
   there at all. Pure functions and end states can; motion needs a phone.
+- 2026-09-21, nineteenth round: the look, items 1, 2 and 4 of "The missing wow", and the
+  residual F2 left behind in the eighteenth.
+  The model casts a shadow on the paper now, and stands on the page instead of being
+  printed on it. It rises out of the page on a cold load, relief growing while the camera
+  tips down from 84 degrees over a second and a half, once, and not at all for a link
+  that asked for somewhere in particular. And the markers stopped being the thing you
+  see: 17 tokens at the home view instead of about 40, scaled to three quarters and
+  growing to full size as the camera comes in, springing up one after another.
+  Three lessons, each of which cost a measurement:
+  `uIndiaEdge` answers one question only, and close to the line. It is signed distance
+  in a band 6.8 km wide, so both the shadow (85 km out) and the camera clamp (180 km
+  out) got a saturated constant back from it, which looks like a bug in the caller. The
+  shadow reads the ID raster instead; the clamp reads a coarse land mask built from it.
+  Anything that animates the camera over the first second of a session has to hold
+  `cameraTouched`, or the layout settling underneath it takes the flight over. The
+  entrance looked like an animation that simply was not running; it was the shell's first
+  padding write refitting mid-flight, and a fit keeps whatever angles it finds.
+  And the fourth shape for "where the model is" was the first that is actually it. A box,
+  a convex hull and the 36 units' boxes each park the view on open water, each for its own
+  reason. The mask costs 4.7 KB and has none of those problems.
 
 ### What exists
 
@@ -1486,14 +1506,14 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. **Phase 4.** The handling half is done: F0-F8 all shipped on 2026-09-21, one commit
-   each. What is left of Phase 4 is the look -- "The missing wow" items 1-4: the shadow
-   that puts the model on the table, the entrance, the handling's own feel on a real
-   phone, and the marker pass that stops 40 tokens covering the relief. Then the owner's
-   verdict, which is the Phase 0 exit criterion that was never signed off.
-   Two things to pick up while in there: F2's residual (clamp against the coast, using
-   the `uIndiaEdge` field the pipeline already bakes) and a look at the momentum on a
-   phone, which is the one thing the tests and the headless pane cannot judge.
+0. **Phase 4 is done bar the owner's eyes.** F0-F8 and "The missing wow" items 1, 2 and
+   4 all shipped on 2026-09-21, one commit each; item 3 was the handling itself. What
+   remains needs a phone and a person: judge the momentum, the entrance and the new
+   marker density on the reference device, and give the verdict that is the Phase 0 exit
+   criterion and has never been signed off. Items 5-8 of that list wait behind that
+   verdict on purpose -- they are there to be picked from once 1-4 have been looked at,
+   not done blind. The one loose end in the code is the lifted block, which still has no
+   shadow of its own on the plate.
 1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts still need a district boundary source that
