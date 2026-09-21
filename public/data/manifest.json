@@ -385,6 +385,47 @@
    "path": "layers/ranges.json"
   },
   {
+   "id": "reference-lines",
+   "type": "lines",
+   "title": {
+    "en": "Reference lines",
+    "hi": "संदर्भ रेखाएँ"
+   },
+   "icon": "pin",
+   "group": "physical",
+   "default_on": false,
+   "count": 2,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "parallel",
+     "color": "#a85f45",
+     "title": {
+      "en": "Parallel",
+      "hi": "अक्षांश रेखा"
+     }
+    },
+    {
+     "id": "meridian",
+     "color": "#4a6e8c",
+     "title": {
+      "en": "Meridian",
+      "hi": "देशांतर रेखा"
+     }
+    }
+   ],
+   "fields": {
+    "degrees": {
+     "type": "text",
+     "label": {
+      "en": "Position",
+      "hi": "स्थिति"
+     }
+    }
+   },
+   "path": "layers/reference-lines.json"
+  },
+  {
    "id": "rivers",
    "type": "lines",
    "title": {
@@ -778,6 +819,10 @@
   "layers/ranges.json": {
    "size": 13538,
    "sha256": "51c5a8103a23"
+  },
+  "layers/reference-lines.json": {
+   "size": 3323,
+   "sha256": "e6f9b1c8b72e"
   },
   "layers/rivers.json": {
    "size": 52777,

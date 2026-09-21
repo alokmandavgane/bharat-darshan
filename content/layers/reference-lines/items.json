@@ -1,0 +1,46 @@
+[
+  {
+    "id": "tropic-of-cancer",
+    "status": "draft",
+    "name": {
+      "en": "Tropic of Cancer",
+      "hi": "कर्क रेखा"
+    },
+    "category": "parallel",
+    "rank": 1,
+    "geometry": {
+      "parallel": 23.43928
+    },
+    "degrees": "23°26′ N",
+    "blurb": {
+      "en": "The northern limit of the overhead sun, reached at the June solstice. It crosses eight states, cutting India into a tropical south and a subtropical north, and it drifts a little further south each year as the Earth's tilt slowly eases.",
+      "hi": "सूर्य के सिर के ऊपर आने की उत्तरी सीमा, जो जून संक्रांति पर बनती है। यह आठ राज्यों से होकर गुजरती है और भारत को उष्णकटिबंधीय दक्षिण तथा उपोष्ण उत्तर में बाँटती है; पृथ्वी के झुकाव के धीरे-धीरे घटने से यह हर वर्ष कुछ दक्षिण खिसकती है।"
+    },
+    "sources": [
+      "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+      "https://www.iers.org/IERS/EN/Publications/TechnicalNotes/tn36.html"
+    ]
+  },
+  {
+    "id": "standard-meridian",
+    "status": "draft",
+    "name": {
+      "en": "Indian Standard Meridian",
+      "hi": "भारतीय मानक याम्योत्तर"
+    },
+    "category": "meridian",
+    "rank": 1,
+    "geometry": {
+      "meridian": 82.5
+    },
+    "degrees": "82°30′ E",
+    "blurb": {
+      "en": "The meridian Indian Standard Time is kept by, five and a half hours ahead of UTC. It runs near the middle of the country, close to Mirzapur in Uttar Pradesh: one clock for a country wide enough for two hours of real sun time.",
+      "hi": "वह याम्योत्तर जिससे भारतीय मानक समय तय होता है, यूटीसी से साढ़े पाँच घंटे आगे। यह देश के लगभग बीच से, उत्तर प्रदेश में मिर्ज़ापुर के पास से गुजरती है: एक ही घड़ी उस देश के लिए, जो दो घंटे के सौर समय जितना चौड़ा है।"
+    },
+    "sources": [
+      "https://www.nplindia.org/index.php/indian-standard-time/",
+      "https://egazette.gov.in/"
+    ]
+  }
+]

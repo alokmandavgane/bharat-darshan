@@ -1,0 +1,35 @@
+{
+  "id": "reference-lines",
+  "type": "lines",
+  "group": "physical",
+  "title": {
+    "en": "Reference lines",
+    "hi": "संदर्भ रेखाएँ"
+  },
+  "icon": "pin",
+  "default_on": false,
+  "source": {
+    "join": "generated",
+    "simplify_km": 0.4
+  },
+  "categories": [
+    {
+      "id": "parallel",
+      "color": "#a85f45",
+      "title": { "en": "Parallel", "hi": "अक्षांश रेखा" }
+    },
+    {
+      "id": "meridian",
+      "color": "#4a6e8c",
+      "title": { "en": "Meridian", "hi": "देशांतर रेखा" }
+    }
+  ],
+  "fields": {
+    "degrees": {
+      "type": "text",
+      "label": { "en": "Position", "hi": "स्थिति" }
+    }
+  },
+  "attribution": "Reference lines are defined, not surveyed: the build walks each one across the projection and clips it to the country, so what is drawn is the projection's own curve.",
+  "_source": "\"join\": \"generated\" means no file is fetched: each item describes its own line, and the engine reads the layer type, never this layer's name."
+}
