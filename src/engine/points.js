@@ -20,6 +20,27 @@ const POP_STAGGER_MS = 26;               // between one token appearing and the 
 
 
 /**
+ * A `symbols` layer's diameter for one item (PLAN.md section 5). The eye reads a circle
+ * by its area, so the radius goes as the square root of the value: a plant twice the
+ * size of another is twice the ink, not four times it. Everything is declared --
+ * `{ field, domain: [lo, hi], range: [smallest, largest] }` -- so the engine knows the
+ * layer's shape and never its subject.
+ * @param {{ field: string, domain: number[], range: number[] } | undefined} spec
+ */
+export function symbolSizer(spec) {
+  if (!spec?.field) return () => 0;
+  const [lo, hi] = spec.domain || [0, 1];
+  const [small, large] = spec.range || [10, 40];
+  const span = Math.sqrt(Math.max(hi, lo + 1e-9)) - Math.sqrt(Math.max(lo, 0));
+  return (item) => {
+    const v = Number(item?.[spec.field]);
+    if (!Number.isFinite(v)) return small;
+    const t = (Math.sqrt(Math.min(Math.max(v, lo), hi)) - Math.sqrt(Math.max(lo, 0))) / span;
+    return small + (large - small) * t;
+  };
+}
+
+/**
  * @param {HTMLElement | undefined} container
  * @param {{ text: (field: any, lang: string) => string, onSelect: (layerId: string, itemId: string) => void }} opts
  */
@@ -41,15 +62,22 @@ export function createPoints(container, { text, onSelect }) {
     remove(layer.id);
     const cats = Object.fromEntries((layer.categories || []).map((c) => [c.id, c]));
     const asLabel = layer.marker === 'label';
+    const asSymbol = layer.marker === 'symbol';
+    const sizeOf = symbolSizer(layer.size);
     const items = layer.items.map((item) => {
       const cat = cats[item.category] || {};
       const el = document.createElement('button');
       el.type = 'button';
-      el.className = `marker marker-p${item.priority} marker-new${asLabel ? ' marker-as-label' : ''}`;
+      el.className = `marker marker-p${item.priority} marker-new`
+        + (asLabel ? ' marker-as-label' : '') + (asSymbol ? ' marker-as-symbol' : '');
       el.dataset.layer = layer.id;
       el.dataset.item = item.id;
       el.hidden = true;
       el.style.setProperty('--c', cat.color || '#b4552e');
+      // A symbol's size is its value, so it is written once here rather than per frame;
+      // what changes per frame is the container's --mscale, which multiplies it.
+      const base = asSymbol ? sizeOf(item) : 0;
+      if (asSymbol) el.style.setProperty('--base', `${base.toFixed(1)}px`);
       const name = document.createElement('span');
       name.className = 'marker-name';
       if (asLabel) {
@@ -57,13 +85,15 @@ export function createPoints(container, { text, onSelect }) {
       } else {
         const token = document.createElement('span');
         token.className = 'marker-token';
-        token.innerHTML = glyphSvg(cat.icon);        // static markup from the glyph set only
+        // A proportional circle is read by its area; a glyph inside one that may be ten
+        // pixels across is not read at all, so a symbol is the disc alone.
+        if (!asSymbol) token.innerHTML = glyphSvg(cat.icon);   // static markup from the glyph set only
         el.append(token, name);
       }
       container.appendChild(el);
       // Label width is estimated from the text, never measured: reading offsetWidth in
       // the per-frame loop would force a layout on every marker, every frame.
-      return { item, el, name, asLabel, w: Math.round((item.name?.en || '').length * 8.2) + 10, h: 16 };
+      return { item, el, name, asLabel, base, w: Math.round((item.name?.en || '').length * 8.2) + 10, h: 16 };
     });
     layers.set(layer.id, { layer, items });
   }
@@ -102,20 +132,28 @@ export function createPoints(container, { text, onSelect }) {
       for (const rec of items) {
         const { item, el, name, asLabel } = rec;
         const isSel = selected && selected.layer === id && selected.id === item.id;
-        const size = (TOKEN[item.priority] || TOKEN[3]) * mscale;
+        const size = (rec.base || TOKEN[item.priority] || TOKEN[3]) * mscale;
         let show = on && (drafts || item.status === 'reviewed');
         // A range crosses states, so a state view keeps showing the ones around it.
         if (show && level.name === 'state' && !asLabel) show = item.region === level.id;
-        else if (show) show = item.priority <= maxPriority || isSel;
+        // A symbol's whole point is the comparison between its value and the next one's,
+        // so a symbols layer is not thinned by zoom the way place tokens are: the reader
+        // switched it on to see the set. Collision still thins it, biggest first, which
+        // is the order the build writes them in.
+        else if (show && !rec.base) show = item.priority <= maxPriority || isSel;
         if (!show) { el.hidden = true; continue; }
         const p = project([item.x, item.z]);
         if (!p) { el.hidden = true; continue; }
         const cx = viewport.w / 2 + p[0], cy = viewport.h / 2 - p[1];
         const onScreen = cx > -size && cx < viewport.w + size && cy > -size && cy < viewport.h + size;
         const half = (asLabel ? rec.w : size) / 2 + GAP;
+        // A token is a pin: it stands above the point it marks. A symbol is a
+        // proportional circle and sits centred on it, so it claims a different rectangle.
         const rect = asLabel
           ? [cx - half, cy - rec.h / 2 - GAP, cx + half, cy + rec.h / 2 + GAP]
-          : [cx - half, cy - size * 0.85 - GAP, cx + half, cy + GAP];
+          : rec.base
+            ? [cx - half, cy - half, cx + half, cy + half]
+            : [cx - half, cy - size * 0.85 - GAP, cx + half, cy + GAP];
         const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
         // the most famous places always show, even overlapping a little; the rest keep clear
         if (!onScreen || (!clear && !isSel && item.priority > 1)) { el.hidden = true; rec.up = false; continue; }

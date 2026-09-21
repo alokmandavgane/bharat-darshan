@@ -3,6 +3,7 @@
 // bound to the store; every string comes from i18n.
 import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
 import { CATEGORICAL } from '../engine/choropleth.js';
+import { symbolSizer } from '../engine/points.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { glyphSvg } from '../glyphs.js';
 
@@ -249,13 +250,40 @@ export function createShell(root, store) {
       li.append(sw, document.createTextNode(pick(c.title)));
       ul.appendChild(li);
     }
-    if (!layer.note) return ul;
+    const size = sizeLegend(layer);
+    if (!layer.note && !size) return ul;
     const out = document.createDocumentFragment();
-    const p = document.createElement('p');
-    p.className = 'legend-note';
-    p.textContent = pick(layer.note);
-    out.append(ul, p);
+    out.append(ul);
+    if (size) out.append(size);
+    if (layer.note) {
+      const p = document.createElement('p');
+      p.className = 'legend-note';
+      p.textContent = pick(layer.note);
+      out.append(p);
+    }
     return out;
+  }
+
+  /**
+   * A `symbols` layer's other key: what the circles' sizes mean. The values it shows are
+   * the layer's own (`size.legend`), and the circle beside each is drawn at exactly the
+   * diameter the map would draw it at, by the same sizer the engine uses.
+   */
+  function sizeLegend(layer) {
+    if (layer.marker !== 'symbol' || !layer.size?.legend?.length) return null;
+    const sizer = symbolSizer(layer.size);
+    const ul = document.createElement('ul');
+    ul.className = 'legend legend-sizes';
+    for (const v of layer.size.legend) {
+      const li = document.createElement('li');
+      const sw = document.createElement('span');
+      sw.className = 'legend-size';
+      sw.style.setProperty('--d', `${sizer({ [layer.size.field]: v }).toFixed(1)}px`);
+      const unit = pick((layer.fields || {})[layer.size.field]?.unit || {});
+      li.append(sw, document.createTextNode(unit ? unit.replace('{n}', formatNumber(v)) : formatNumber(v)));
+      ul.appendChild(li);
+    }
+    return ul;
   }
 
 

@@ -244,6 +244,17 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .legend-swatch { background: var(--c); flex: none; }
 .legend[data-kind="points"] .legend-swatch { width: 10px; height: 10px; border-radius: 50%; }
 .legend[data-kind="lines"] .legend-swatch { width: 16px; height: 3px; border-radius: 2px; }
+/* A symbols layer's size key: each circle at the diameter the map would draw it at. */
+.legend-sizes { align-items: flex-end; gap: 6px 14px; }
+.legend-sizes li { align-items: center; }
+.legend-size {
+  width: var(--d);
+  height: var(--d);
+  flex: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ink) 26%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 32%, transparent);
+}
 .chip {
   font: inherit;
   font-weight: 600;
@@ -651,6 +662,21 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .marker-name:lang(hi) { font-size: 13px; }
 /* A `marker: label` layer: the name alone, set quietly into the relief, no token and no
    card-like plate. A range is a stretch of country, so it reads as part of the map. */
+/* A `symbols` layer: a proportional circle centred on the point it marks, rather than a
+   pin standing above it. Its diameter is the value (--base, written once per item by
+   points.js), so it carries no glyph -- a disc that may be ten pixels across is read by
+   its area and nothing else -- and no contact shadow, having nothing to stand on. */
+.marker-as-symbol .marker-token {
+  top: calc(var(--size) / -2);
+  background: radial-gradient(circle at 36% 30%, color-mix(in srgb, var(--c) 42%, white) 0%, var(--c) 64%, color-mix(in srgb, var(--c) 78%, black) 100%);
+  box-shadow: 0 1px 4px rgba(60, 45, 30, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  opacity: 0.92;
+}
+.marker-as-symbol::before { display: none; }
+.marker-as-symbol .marker-name { top: -0.7em; }
+.marker-as-symbol:hover .marker-token, .marker-as-symbol:focus-visible .marker-token,
+.marker-as-symbol.marker-active .marker-token { transform: none; opacity: 1; }
+
 .marker-as-label { --size: 0px; }
 .marker-as-label::before { display: none; }
 .marker-as-label .marker-name {

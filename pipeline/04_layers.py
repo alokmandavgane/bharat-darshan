@@ -118,7 +118,37 @@ def validate_layer(layer, folder):
             p.append(f'field {name}: type must be one of {FIELD_TYPES}')
         if not bilingual(spec.get('label')):
             p.append(f'field {name}: label needs en and hi')
+    p += validate_size(layer)
     return p
+
+
+def validate_size(layer):
+    """A `symbols` layer draws a circle whose area is a value: marker and size go together."""
+    size = layer.get('size')
+    if layer.get('marker') == 'symbol':
+        if layer.get('type') != 'points':
+            return ['only a points layer can draw symbols']
+        if not isinstance(size, dict):
+            return ['a symbol layer needs a size: { field, domain, range, legend }']
+        p = []
+        field = size.get('field')
+        if field not in (layer.get('fields') or {}):
+            p.append(f'size.field {field!r} must be one of the layer\'s own declared fields')
+        elif (layer['fields'][field] or {}).get('type') not in ('int', 'number'):
+            p.append(f'size.field {field!r} must be a number, so a circle can be sized by it')
+        for key in ('domain', 'range'):
+            v = size.get(key)
+            if not (isinstance(v, list) and len(v) == 2 and all(isinstance(n, (int, float)) for n in v)):
+                p.append(f'size.{key} must be two numbers')
+            elif v[0] >= v[1]:
+                p.append(f'size.{key} must ascend')
+        legend = size.get('legend')
+        if not (isinstance(legend, list) and legend and all(isinstance(n, (int, float)) for n in legend)):
+            p.append('size.legend must list the values the key shows a circle for')
+        return p
+    if size:
+        return ['only a symbol layer has a size']
+    return []
 
 
 def validate_scale(scale):
@@ -411,7 +441,15 @@ def build_layer(folder, states, ids, heights, out):
             if it.get(name) is not None:
                 entry[name] = it[name]
         out_items.append(entry)
-    return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
+    # Tokens are written most important first, so the thinning keeps those. A symbol's
+    # importance is its value, and the biggest circle should claim its space before the
+    # circle it would otherwise hide behind.
+    if layer.get('marker') == 'symbol':
+        field = (layer.get('size') or {}).get('field')
+        order = lambda i: (-(i.get(field) or 0), i['id'])    # noqa: E731
+    else:
+        order = lambda i: (i['priority'], i['id'])           # noqa: E731
+    return finish(layer, out_items, out, problems, order=order)
 
 
 def finish(layer, out_items, out, problems, order, extra=None):
@@ -419,7 +457,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
     if problems:
         return layer, None, problems
     out_items.sort(key=order)
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'title', 'icon', 'group', 'categories',
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'size', 'title', 'icon', 'group', 'categories',
                                   'fields', 'scale', 'unit', 'note', 'sources', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)

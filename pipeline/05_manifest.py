@@ -55,7 +55,7 @@ def main():
                 L = json.load(f)
             # categories and marker ride along so the menu can draw a legend before the
             # layer itself is fetched; the item bodies stay in the layer file.
-            layers.append({k: L[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group',
+            layers.append({k: L[k] for k in ('id', 'type', 'marker', 'size', 'title', 'icon', 'group',
                                              'default_on', 'count', 'reviewed', 'categories',
                                              'fields', 'scale', 'unit', 'note') if k in L}
                           | {'path': f'layers/{n}'})
