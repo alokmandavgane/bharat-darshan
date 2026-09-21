@@ -1,0 +1,46 @@
+{
+  "id": "summits",
+  "type": "points",
+  "group": "physical",
+  "title": {
+    "en": "Peaks and passes",
+    "hi": "शिखर और दर्रे"
+  },
+  "icon": "mountain",
+  "default_on": false,
+  "fields": {
+    "elevation_m": {
+      "type": "int",
+      "required": true,
+      "label": {
+        "en": "Elevation",
+        "hi": "ऊँचाई"
+      },
+      "unit": {
+        "en": "{n} m",
+        "hi": "{n} मी"
+      }
+    }
+  },
+  "categories": [
+    {
+      "id": "peak",
+      "title": {
+        "en": "Peaks",
+        "hi": "शिखर"
+      },
+      "icon": "mountain",
+      "color": "#6d6f86"
+    },
+    {
+      "id": "pass",
+      "title": {
+        "en": "Passes",
+        "hi": "दर्रे"
+      },
+      "icon": "mountain",
+      "color": "#8a7550"
+    }
+  ],
+  "attribution": "Elevations and locations from Wikipedia and Survey of India topographic sheets; peaks outside Indian-administered territory are left out."
+}

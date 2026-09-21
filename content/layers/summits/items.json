@@ -1,0 +1,706 @@
+[
+  {
+    "id": "kangchenjunga",
+    "status": "draft",
+    "name": {
+      "en": "Kangchenjunga",
+      "hi": "कंचनजंघा"
+    },
+    "anchor": {
+      "lat": 27.7025,
+      "lon": 88.1475
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "category": "peak",
+    "priority": 1,
+    "elevation_m": 8586,
+    "blurb": {
+      "en": "The third highest mountain on earth, on the Sikkim-Nepal border. Climbers stop short of the true summit by custom, leaving the top to the deity the mountain is held to be.",
+      "hi": "पृथ्वी का तीसरा सर्वोच्च पर्वत, सिक्किम-नेपाल सीमा पर। परंपरा के नाते पर्वतारोही असली शिखर से कुछ नीचे रुक जाते हैं और चोटी उस देवता के लिए छोड़ देते हैं जिसे यह पर्वत माना जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kangchenjunga"
+    ]
+  },
+  {
+    "id": "nanda-devi",
+    "status": "draft",
+    "name": {
+      "en": "Nanda Devi",
+      "hi": "नंदा देवी"
+    },
+    "anchor": {
+      "lat": 30.3767,
+      "lon": 79.9708
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "peak",
+    "priority": 1,
+    "elevation_m": 7816,
+    "blurb": {
+      "en": "The highest mountain lying entirely within India, ringed by a wall of peaks that kept its inner sanctuary unentered until 1934. The basin has been closed to visitors since 1983.",
+      "hi": "पूरी तरह भारत के भीतर स्थित सर्वोच्च पर्वत, चोटियों की दीवार से घिरा, जिसका भीतरी आँगन 1934 तक अछूता रहा। 1983 से यह क्षेत्र आगंतुकों के लिए बंद है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nanda_Devi"
+    ]
+  },
+  {
+    "id": "kamet",
+    "status": "draft",
+    "name": {
+      "en": "Kamet",
+      "hi": "कामेत"
+    },
+    "anchor": {
+      "lat": 30.92,
+      "lon": 79.595
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "peak",
+    "priority": 2,
+    "elevation_m": 7756,
+    "blurb": {
+      "en": "The second highest in Uttarakhand, close to the Tibet border; in 1931 it became the highest summit climbed anywhere up to that date.",
+      "hi": "उत्तराखंड की दूसरी सबसे ऊँची चोटी, तिब्बत सीमा के पास; 1931 में यह उस समय तक चढ़ी गई सबसे ऊँची चोटी बनी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kamet"
+    ]
+  },
+  {
+    "id": "saltoro-kangri",
+    "status": "draft",
+    "name": {
+      "en": "Saltoro Kangri",
+      "hi": "सालटोरो कांगड़ी"
+    },
+    "anchor": {
+      "lat": 35.3994,
+      "lon": 76.8508
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 7742,
+    "blurb": {
+      "en": "The high point of the Saltoro range on the western edge of the Siachen glacier, in the Karakoram.",
+      "hi": "काराकोरम में सियाचिन हिमनद के पश्चिमी छोर पर सालटोरो श्रेणी का सर्वोच्च शिखर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Saltoro_Kangri"
+    ]
+  },
+  {
+    "id": "saser-kangri",
+    "status": "draft",
+    "name": {
+      "en": "Saser Kangri",
+      "hi": "सासेर कांगड़ी"
+    },
+    "anchor": {
+      "lat": 34.8667,
+      "lon": 77.7522
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 7672,
+    "blurb": {
+      "en": "The highest of the Saser Muztagh, above the old Nubra caravan route to Central Asia.",
+      "hi": "सासेर मुज़ताग़ की सबसे ऊँची चोटी, मध्य एशिया जाने वाले पुराने नुब्रा कारवाँ मार्ग के ऊपर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Saser_Kangri"
+    ]
+  },
+  {
+    "id": "nun",
+    "status": "draft",
+    "name": {
+      "en": "Nun",
+      "hi": "नुन"
+    },
+    "anchor": {
+      "lat": 33.9833,
+      "lon": 76.0167
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 7135,
+    "blurb": {
+      "en": "The higher of the Nun Kun pair in the Zanskar range, the tallest in the Kashmir division.",
+      "hi": "ज़ांस्कर श्रेणी में नुन कुन जोड़ी की ऊँची चोटी, कश्मीर संभाग का सर्वोच्च शिखर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nun_Kun"
+    ]
+  },
+  {
+    "id": "trisul",
+    "status": "draft",
+    "name": {
+      "en": "Trisul",
+      "hi": "त्रिशूल"
+    },
+    "anchor": {
+      "lat": 30.3072,
+      "lon": 79.775
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 7120,
+    "blurb": {
+      "en": "Three peaks named for Shiva's trident; the westernmost was the first summit over 7,000 m ever climbed, in 1907.",
+      "hi": "शिव के त्रिशूल के नाम पर तीन चोटियाँ; सबसे पश्चिमी चोटी 1907 में चढ़ी गई और 7,000 मीटर से ऊँची पहली चोटी बनी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Trisul"
+    ]
+  },
+  {
+    "id": "kangto",
+    "status": "draft",
+    "name": {
+      "en": "Kangto",
+      "hi": "कांगटो"
+    },
+    "anchor": {
+      "lat": 27.83,
+      "lon": 92.505
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 7060,
+    "blurb": {
+      "en": "The highest point of Arunachal Pradesh, on the ridge the eastern Himalaya turns along.",
+      "hi": "अरुणाचल प्रदेश का सर्वोच्च बिंदु, उस कटक पर जहाँ पूर्वी हिमालय मुड़ता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kangto"
+    ],
+    "note": "Anchor nudged about 3 km south of the summit: it sits on the international boundary, and the 1.7 km ID raster puts the true point outside India."
+  },
+  {
+    "id": "leo-pargil",
+    "status": "draft",
+    "name": {
+      "en": "Leo Pargil",
+      "hi": "लेओ परगिल"
+    },
+    "anchor": {
+      "lat": 31.855,
+      "lon": 78.74
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 6791,
+    "blurb": {
+      "en": "A massif on the Himachal-Tibet border above the Sutlej gorge at Shipki La.",
+      "hi": "शिपकी ला पर सतलुज घाटी के ऊपर हिमाचल-तिब्बत सीमा पर स्थित पर्वतपुंज।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Leo_Pargil"
+    ],
+    "note": "Anchor nudged about 4 km south-west of the summit: it sits on the Tibet border, outside the ID raster."
+  },
+  {
+    "id": "stok-kangri",
+    "status": "draft",
+    "name": {
+      "en": "Stok Kangri",
+      "hi": "स्टोक कांगड़ी"
+    },
+    "anchor": {
+      "lat": 34.0,
+      "lon": 77.4667
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 6153,
+    "blurb": {
+      "en": "The peak above Leh in the Stok range, long the most-climbed trekking summit in Ladakh; it has been closed to climbers since 2020 to let it recover.",
+      "hi": "लेह के ऊपर स्टोक श्रेणी की चोटी, लंबे समय तक लद्दाख की सबसे अधिक चढ़ी जाने वाली ट्रेकिंग चोटी; 2020 से इसे विश्राम देने हेतु आरोहण के लिए बंद रखा गया है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Stok_Kangri"
+    ]
+  },
+  {
+    "id": "sandakphu",
+    "status": "draft",
+    "name": {
+      "en": "Sandakphu",
+      "hi": "संदकफू"
+    },
+    "anchor": {
+      "lat": 27.1017,
+      "lon": 88.0031
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 3636,
+    "blurb": {
+      "en": "The highest point in West Bengal, on the Singalila ridge, and the one place where Everest, Lhotse, Makalu and Kangchenjunga stand in a single view.",
+      "hi": "पश्चिम बंगाल का सर्वोच्च बिंदु, सिंगालीला कटक पर, और वह एक जगह जहाँ से एवरेस्ट, ल्होत्से, मकालू और कंचनजंघा एक साथ दिखते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sandakphu"
+    ]
+  },
+  {
+    "id": "shillong-peak",
+    "status": "draft",
+    "name": {
+      "en": "Shillong Peak",
+      "hi": "शिलांग पीक"
+    },
+    "anchor": {
+      "lat": 25.5444,
+      "lon": 91.8722
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 1965,
+    "blurb": {
+      "en": "The high point of the Khasi hills, looking over Shillong and named for the deity U Shulong.",
+      "hi": "खासी पहाड़ियों का सर्वोच्च बिंदु, शिलांग के ऊपर, जिसका नाम देवता उ श्युलोंग से पड़ा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shillong_Peak"
+    ]
+  },
+  {
+    "id": "anamudi",
+    "status": "draft",
+    "name": {
+      "en": "Anamudi",
+      "hi": "अनामुडी"
+    },
+    "anchor": {
+      "lat": 10.1667,
+      "lon": 77.0667
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "peak",
+    "priority": 2,
+    "elevation_m": 2695,
+    "blurb": {
+      "en": "The highest point in India south of the Himalaya, in the Anaimalai hills above Munnar; its slopes hold the largest surviving population of Nilgiri tahr.",
+      "hi": "हिमालय के दक्षिण में भारत का सर्वोच्च बिंदु, मुन्नार के ऊपर अन्नामलाई पहाड़ियों में; इसकी ढलानों पर नीलगिरि तहर की सबसे बड़ी बची आबादी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anamudi"
+    ]
+  },
+  {
+    "id": "doddabetta",
+    "status": "draft",
+    "name": {
+      "en": "Doddabetta",
+      "hi": "डोड्डाबेट्टा"
+    },
+    "anchor": {
+      "lat": 11.4,
+      "lon": 76.7358
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 2637,
+    "blurb": {
+      "en": "The highest point of the Nilgiris, above Ooty, where the Western and Eastern Ghats meet.",
+      "hi": "नीलगिरि का सर्वोच्च बिंदु, ऊटी के ऊपर, जहाँ पश्चिमी और पूर्वी घाट मिलते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Doddabetta"
+    ]
+  },
+  {
+    "id": "mullayanagiri",
+    "status": "draft",
+    "name": {
+      "en": "Mullayanagiri",
+      "hi": "मुल्लयानगिरि"
+    },
+    "anchor": {
+      "lat": 13.3919,
+      "lon": 75.7211
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 1930,
+    "blurb": {
+      "en": "The highest peak in Karnataka, on the Chandra Drona ridge above the Chikkamagaluru coffee country.",
+      "hi": "कर्नाटक की सबसे ऊँची चोटी, चिक्कमगलूरु के कॉफ़ी क्षेत्र के ऊपर चंद्र द्रोण कटक पर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mullayanagiri"
+    ]
+  },
+  {
+    "id": "guru-shikhar",
+    "status": "draft",
+    "name": {
+      "en": "Guru Shikhar",
+      "hi": "गुरु शिखर"
+    },
+    "anchor": {
+      "lat": 24.6556,
+      "lon": 72.7789
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 1722,
+    "blurb": {
+      "en": "The highest point of the Aravalli, above Mount Abu, named for a cave shrine to Dattatreya near the summit.",
+      "hi": "अरावली का सर्वोच्च बिंदु, माउंट आबू के ऊपर, जिसका नाम शिखर के पास दत्तात्रेय की गुफा-मंदिर से पड़ा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Guru_Shikhar"
+    ]
+  },
+  {
+    "id": "kalsubai",
+    "status": "draft",
+    "name": {
+      "en": "Kalsubai",
+      "hi": "कळसूबाई"
+    },
+    "anchor": {
+      "lat": 19.6,
+      "lon": 73.7
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 1646,
+    "blurb": {
+      "en": "The highest point in Maharashtra, in the Sahyadri north of Bhandardara, with a small shrine at the top.",
+      "hi": "महाराष्ट्र का सर्वोच्च बिंदु, भंडारदरा के उत्तर में सह्याद्री में, शिखर पर एक छोटा मंदिर है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kalsubai"
+    ]
+  },
+  {
+    "id": "dhupgarh",
+    "status": "draft",
+    "name": {
+      "en": "Dhupgarh",
+      "hi": "धूपगढ़"
+    },
+    "anchor": {
+      "lat": 22.45,
+      "lon": 78.3667
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "peak",
+    "priority": 3,
+    "elevation_m": 1350,
+    "blurb": {
+      "en": "The highest point of the Satpura, above Pachmarhi, known for its view of the sun going down over the range.",
+      "hi": "सतपुड़ा का सर्वोच्च बिंदु, पचमढ़ी के ऊपर, श्रेणी पर डूबते सूरज के दृश्य के लिए जाना जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dhupgarh"
+    ]
+  },
+  {
+    "id": "khardung-la",
+    "status": "draft",
+    "name": {
+      "en": "Khardung La",
+      "hi": "खारदुंग ला"
+    },
+    "anchor": {
+      "lat": 34.2789,
+      "lon": 77.6044
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "pass",
+    "priority": 2,
+    "elevation_m": 5359,
+    "blurb": {
+      "en": "The pass out of Leh into the Nubra valley, and the road to the Siachen region; long advertised as the world's highest motorable pass, which surveys do not bear out.",
+      "hi": "लेह से नुब्रा घाटी में जाने वाला दर्रा और सियाचिन क्षेत्र का मार्ग; लंबे समय तक विश्व का सर्वोच्च मोटर-योग्य दर्रा बताया गया, जिसकी पुष्टि सर्वेक्षण नहीं करते।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Khardung_La"
+    ]
+  },
+  {
+    "id": "chang-la",
+    "status": "draft",
+    "name": {
+      "en": "Chang La",
+      "hi": "चांग ला"
+    },
+    "anchor": {
+      "lat": 33.9833,
+      "lon": 77.9333
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "pass",
+    "priority": 3,
+    "elevation_m": 5360,
+    "blurb": {
+      "en": "The pass on the road from Leh to Pangong lake, held open through most of the year.",
+      "hi": "लेह से पैंगोंग झील के मार्ग पर पड़ने वाला दर्रा, वर्ष के अधिकांश समय खुला रहता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chang_La"
+    ]
+  },
+  {
+    "id": "rohtang",
+    "status": "draft",
+    "name": {
+      "en": "Rohtang Pass",
+      "hi": "रोहतांग दर्रा"
+    },
+    "anchor": {
+      "lat": 32.3667,
+      "lon": 77.2467
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "pass",
+    "priority": 2,
+    "elevation_m": 3978,
+    "blurb": {
+      "en": "The gate between the Kullu valley and Lahaul, closed by snow for much of the year until the Atal tunnel opened beneath it in 2020.",
+      "hi": "कुल्लू घाटी और लाहौल के बीच का द्वार, वर्ष के अधिकांश समय बर्फ़ से बंद, जब तक 2020 में इसके नीचे अटल सुरंग नहीं खुली।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rohtang_Pass"
+    ]
+  },
+  {
+    "id": "baralacha",
+    "status": "draft",
+    "name": {
+      "en": "Bara-lacha La",
+      "hi": "बारालाचा ला"
+    },
+    "anchor": {
+      "lat": 32.7594,
+      "lon": 77.4139
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "pass",
+    "priority": 3,
+    "elevation_m": 4890,
+    "blurb": {
+      "en": "A pass on the Manali-Leh road where the Chandra, Bhaga and Yunam valleys meet.",
+      "hi": "मनाली-लेह मार्ग का दर्रा, जहाँ चंद्रा, भागा और युनम घाटियाँ मिलती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bara-lacha_La"
+    ]
+  },
+  {
+    "id": "zoji-la",
+    "status": "draft",
+    "name": {
+      "en": "Zoji La",
+      "hi": "ज़ोजी ला"
+    },
+    "anchor": {
+      "lat": 34.2761,
+      "lon": 75.4694
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "pass",
+    "priority": 2,
+    "elevation_m": 3528,
+    "blurb": {
+      "en": "The pass between Kashmir and Ladakh, the lifeline to Kargil and Leh and the first to shut when the snow comes.",
+      "hi": "कश्मीर और लद्दाख के बीच का दर्रा, करगिल और लेह की जीवनरेखा, और बर्फ़ पड़ते ही सबसे पहले बंद होने वाला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Zoji_La"
+    ]
+  },
+  {
+    "id": "nathu-la",
+    "status": "draft",
+    "name": {
+      "en": "Nathu La",
+      "hi": "नाथू ला"
+    },
+    "anchor": {
+      "lat": 27.3869,
+      "lon": 88.8306
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "category": "pass",
+    "priority": 2,
+    "elevation_m": 4310,
+    "blurb": {
+      "en": "A pass on the old Sikkim-Tibet trade route, closed after 1962 and reopened for border trade in 2006.",
+      "hi": "सिक्किम-तिब्बत के पुराने व्यापार मार्ग का दर्रा, 1962 के बाद बंद और 2006 में सीमा-व्यापार के लिए पुनः खुला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nathu_La"
+    ]
+  },
+  {
+    "id": "sela",
+    "status": "draft",
+    "name": {
+      "en": "Sela Pass",
+      "hi": "सेला दर्रा"
+    },
+    "anchor": {
+      "lat": 27.5044,
+      "lon": 92.105
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "pass",
+    "priority": 3,
+    "elevation_m": 4170,
+    "blurb": {
+      "en": "The high pass on the road to Tawang, kept open nearly all year, with a lake just below the top.",
+      "hi": "तवांग के मार्ग का ऊँचा दर्रा, लगभग पूरे वर्ष खुला रहता है, शिखर के ठीक नीचे एक झील है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sela_Pass"
+    ]
+  },
+  {
+    "id": "shipki-la",
+    "status": "draft",
+    "name": {
+      "en": "Shipki La",
+      "hi": "शिपकी ला"
+    },
+    "anchor": {
+      "lat": 31.805,
+      "lon": 78.705
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "pass",
+    "priority": 3,
+    "elevation_m": 3930,
+    "blurb": {
+      "en": "The pass where the Sutlej enters India from Tibet, and a designated border trade point.",
+      "hi": "वह दर्रा जहाँ सतलुज तिब्बत से भारत में प्रवेश करती है, और एक अधिसूचित सीमा-व्यापार बिंदु।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shipki_La"
+    ],
+    "note": "Anchor nudged about 4 km south-west of the pass itself, which straddles the border."
+  },
+  {
+    "id": "mana-pass",
+    "status": "draft",
+    "name": {
+      "en": "Mana Pass",
+      "hi": "माणा दर्रा"
+    },
+    "anchor": {
+      "lat": 31.04,
+      "lon": 79.43
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "pass",
+    "priority": 3,
+    "elevation_m": 5632,
+    "blurb": {
+      "en": "Above Badrinath on the Tibet border, carrying one of the highest motorable roads anywhere.",
+      "hi": "बद्रीनाथ के ऊपर तिब्बत सीमा पर, जहाँ से विश्व के सबसे ऊँचे मोटर-योग्य मार्गों में से एक गुज़रता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mana_Pass"
+    ],
+    "note": "Anchor nudged about 4 km south of the pass, which straddles the border."
+  },
+  {
+    "id": "palakkad-gap",
+    "status": "draft",
+    "name": {
+      "en": "Palakkad Gap",
+      "hi": "पालक्काड़ दर्रा"
+    },
+    "anchor": {
+      "lat": 10.78,
+      "lon": 76.65
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "pass",
+    "priority": 2,
+    "elevation_m": 140,
+    "blurb": {
+      "en": "A 30 km break in the Western Ghats, the main road and rail link between Kerala and Tamil Nadu, and the reason the country east of it is so much drier.",
+      "hi": "पश्चिमी घाट में 30 किमी चौड़ा अवकाश, केरल और तमिलनाडु के बीच मुख्य सड़क व रेल संपर्क, और इसके पूर्व का क्षेत्र इतना शुष्क होने का कारण।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Palakkad_Gap"
+    ]
+  }
+]
