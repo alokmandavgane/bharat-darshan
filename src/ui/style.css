@@ -343,7 +343,9 @@ body[data-level="state"] .sheet-head { cursor: default; }
   color: var(--accent-deep);
 }
 .sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
-.sheet-alt:not([hidden]) + .sheet-subtitle:not(:empty)::before { content: "· "; }
+/* The separator belongs to the name before it, not the line after it: hung on the
+   subtitle it wrapped to the start of the next line whenever the names were long. */
+.sheet-alt:not([hidden]):has(+ .sheet-subtitle:not(:empty))::after { content: " ·"; }
 /* the info button: about the map, and the review status of a card (drafts turn it terracotta) */
 .sheet-info {
   width: 28px;

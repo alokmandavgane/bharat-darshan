@@ -469,10 +469,12 @@ export function createShell(root, store) {
         b.dataset.item = it.id;
         const name = document.createElement('span');
         name.textContent = pick(it.name);
-        const when = document.createElement('span');
-        when.className = 'facts-list-when';
-        when.textContent = it.month ? t(`month.${it.month}`) : '';
-        b.append(name, when);
+        // Whatever tells this item apart at a glance: when it falls, or what it calls
+        // itself. A festival has a month; a language has its own script.
+        const aside = document.createElement('span');
+        aside.className = 'facts-list-when';
+        aside.textContent = it.month ? t(`month.${it.month}`) : (it.name?.native || '');
+        b.append(name, aside);
         li.appendChild(b);
         ul.appendChild(li);
       }
