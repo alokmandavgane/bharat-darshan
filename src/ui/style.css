@@ -511,6 +511,29 @@ body[data-level="state"] .sheet-head { cursor: default; }
   white-space: nowrap;
 }
 .marker-name:lang(hi) { font-size: 13px; }
+/* A `marker: label` layer: the name alone, set quietly into the relief, no token and no
+   card-like plate. A range is a stretch of country, so it reads as part of the map. */
+.marker-as-label { --size: 0px; }
+.marker-as-label::before { display: none; }
+.marker-as-label .marker-name {
+  display: block;
+  position: static;
+  transform: none;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+  text-shadow: 0 1px 0 rgba(255, 253, 247, 0.65), 0 0 6px rgba(255, 253, 247, 0.5);
+}
+.marker-as-label .marker-name:lang(hi) { font-size: 12px; letter-spacing: 0.06em; text-transform: none; }
+.marker-as-label:hover .marker-name, .marker-as-label:focus-visible .marker-name,
+.marker-as-label.marker-active .marker-name { color: var(--accent-deep); }
 .marker:hover .marker-name, .marker:focus-visible .marker-name, .marker-active .marker-name, .marker-named .marker-name { display: block; }
 .marker:hover .marker-token, .marker:focus-visible .marker-token { transform: translateY(-3px) scale(1.08); }
 .marker:focus-visible { outline: none; }
