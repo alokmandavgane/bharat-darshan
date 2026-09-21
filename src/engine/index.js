@@ -139,6 +139,13 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
    * show has it, which is ordinary while one is still being fetched.
    */
   function fillItem(sel, source) {
+    const region = regionalFiles.get(sel.layer);
+    const held = region?.items?.find((i) => i.id === sel.id);
+    if (held) {
+      store.set('item', { layer: sel.layer, id: sel.id, data: held, categories: region.categories, fields: region.fields },
+                { source });
+      return true;
+    }
     const line = lines?.find(sel.layer, sel.id);
     if (line) {
       store.set('item', { layer: sel.layer, id: sel.id, data: line.item, categories: line.categories, fields: line.fields },
@@ -150,6 +157,29 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('item', { layer: sel.layer, id: sel.id, data, categories: points.categories(sel.layer), fields: points.fields(sel.layer) },
               { source });
     return true;
+  }
+
+  // --- regional layers: items that belong to states rather than to a point on the map,
+  // so nothing is drawn for them and the engine only hands them to the sheet.
+  const regionalFiles = new Map();
+
+  function publishRegional() {
+    const active = store.get('layers')?.active || [];
+    store.set('regional', active.filter((id) => regionalFiles.has(id)).map((id) => regionalFiles.get(id)));
+  }
+
+  /** The regional items on show, narrowed to the lifted state when there is one. */
+  function regionalRows(active, drafts, lv) {
+    const out = [];
+    for (const [id, data] of regionalFiles) {
+      if (!active.has(id)) continue;
+      for (const item of data.items || []) {
+        if (!drafts && item.status !== 'reviewed') continue;
+        if (lv?.name === 'state' && !(item.regions || []).includes(lv.id)) continue;
+        out.push({ layer: id, item });
+      }
+    }
+    return out;
   }
 
   /**
@@ -167,6 +197,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const rows = [
       ...points.list({ active, drafts, level: lv }),
       ...(lines?.list(active, inState) || []),
+      ...regionalRows(active, drafts, lv),
     ].map(({ layer, item }) => ({ layer, id: item.id, name: item.name }));
     store.set('index', rows);
   }
@@ -241,9 +272,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
         done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); publishIndex(); });
       } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
         done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
+      } else if (entry.type === 'regional' && !regionalFiles.has(id)) {
+        done((data) => { regionalFiles.set(id, data); publishRegional(); publishIndex(); });
       }
     }
     showChoropleth(activeChoro());
+    publishRegional();
     publishIndex();
     invalidate();
   }

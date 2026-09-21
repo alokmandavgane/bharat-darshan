@@ -251,6 +251,11 @@ export function createShell(root, store) {
     if (tr?.playing && !prev?.playing) { setAbout(false); store.set('sheetSnap', { name: 'half', t: performance.now() }); }
   }, { immediate: true });
   search.addEventListener('input', () => renderList());
+  facts.addEventListener('click', (e) => {
+    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
+    if (!btn) return;
+    store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
+  });
   list.addEventListener('click', (e) => {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id], button[data-layer]');
     if (!btn) return;
@@ -391,6 +396,41 @@ export function createShell(root, store) {
       });
       facts.appendChild(p);
     }
+    regionalSections(u.id);
+  }
+
+  /**
+   * What a `regional` layer has for this state: items that belong to the states that
+   * keep them rather than to a point on the map, so they are read here instead of drawn.
+   * Sorted the way the build sorted them, priority first.
+   */
+  function regionalSections(unitId) {
+    for (const layer of store.get('regional') || []) {
+      const mine = (layer.items || []).filter((i) => (i.regions || []).includes(unitId)
+        && (store.get('drafts') || i.status === 'reviewed'));
+      if (!mine.length) continue;
+      const h = document.createElement('h2');
+      h.className = 'facts-heading';
+      h.textContent = pick(layer.title);
+      const ul = document.createElement('ul');
+      ul.className = 'facts-list';
+      for (const it of mine) {
+        const li = document.createElement('li');
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.dataset.layer = layer.id;
+        b.dataset.item = it.id;
+        const name = document.createElement('span');
+        name.textContent = pick(it.name);
+        const when = document.createElement('span');
+        when.className = 'facts-list-when';
+        when.textContent = it.month ? t(`month.${it.month}`) : '';
+        b.append(name, when);
+        li.appendChild(b);
+        ul.appendChild(li);
+      }
+      facts.append(h, ul);
+    }
   }
 
   /** Where the open card sits in the tour's route, or -1 when it is not one of its stops. */
@@ -437,8 +477,14 @@ export function createShell(root, store) {
       const others = otherNames({ name: it.name });
       alt.textContent = others;
       alt.hidden = !others;
-      const region = r.byId[it.region];
-      subtitle.textContent = [cat ? pick(cat.title) : pick(layer?.title), region ? pick(region.name) : ''].filter(Boolean).join(' · ');
+      // A point belongs to one region; a regional item to the several that keep it.
+      const where = it.regions
+        ? it.regions.map((x) => r.byId[x]).filter(Boolean)
+        : [r.byId[it.region]].filter(Boolean);
+      const places = where.length > 3
+        ? t('facts.regions', { n: formatNumber(where.length) })
+        : where.map((x) => pick(x.name)).join(', ');
+      subtitle.textContent = [cat ? pick(cat.title) : pick(layer?.title), places].filter(Boolean).join(' · ');
       facts.hidden = false;
       facts.replaceChildren();
       // A line item knows how far it runs inside India; a point has no such number.
@@ -449,8 +495,9 @@ export function createShell(root, store) {
       for (const [name, spec] of Object.entries(sel.fields || {})) {
         const v = it[name];
         if (v === undefined || v === null) continue;
-        // A year is a number but not a quantity: 1866, not 1,866.
-        const shown = typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
+        // A year is a number but not a quantity: 1866, not 1,866. A month names itself.
+        const shown = spec.type === 'month' ? t(`month.${v}`)
+          : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
         facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
       }
       const p = document.createElement('p');
@@ -533,6 +580,7 @@ export function createShell(root, store) {
   store.subscribe('drafts', renderSelection);
   store.subscribe('item', () => { renderSelection(); renderSteps(); });
   store.subscribe('index', renderList);
+  store.subscribe('regional', renderSelection);
   store.subscribe('tour', renderSteps);
   for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
   store.subscribe('catalog', renderChips, { immediate: true });

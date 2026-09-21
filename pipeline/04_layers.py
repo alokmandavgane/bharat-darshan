@@ -16,6 +16,8 @@ Layer types known today:
            also pointed downstream, against the heightmap
   choropleth  a values.csv of region,value beside layer.json; the build turns the ISO
            codes into raster ids and the runtime makes the id-to-colour lookup
+  regional a list per region: items belong to the states that keep them and carry no
+           anchor, so they are read in the state view rather than drawn on the map
 The engine knows types, never layer ids.
 """
 import argparse
@@ -28,12 +30,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TYPES = ('points', 'lines', 'choropleth')
+TYPES = ('points', 'lines', 'choropleth', 'regional')
 JOINS = ('name', 'route')   # how a lines item finds its geometry: by the source's names, or through waypoints
 STATUSES = ('draft', 'reviewed')
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
-FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int}
+FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int}
 BLURB_MAX = 240
+EVERYWHERE = '*'     # a regional item kept across the whole country
 
 
 def bilingual(v):
@@ -140,6 +143,64 @@ def build_choropleth(layer, folder, by_iso, by_id):
     if missing:
         print(f"    no value for {len(missing)}: {', '.join(missing)}")
     return values, problems
+
+
+def validate_regional_item(it, cats, by_iso, fields):
+    """A regional item has no anchor: it belongs to the regions that keep it."""
+    tag = it.get('id', '?')
+    p = []
+    if it.get('status') not in STATUSES:
+        p.append(f'{tag}: status must be draft or reviewed')
+    if not bilingual(it.get('name')):
+        p.append(f'{tag}: name needs en and hi')
+    if not bilingual(it.get('blurb')):
+        p.append(f'{tag}: blurb needs en and hi')
+    for lang in ('en', 'hi'):
+        if len((it.get('blurb') or {}).get(lang, '')) > BLURB_MAX:
+            p.append(f'{tag}: blurb.{lang} longer than {BLURB_MAX} characters')
+    if it.get('category') not in cats:
+        p.append(f"{tag}: unknown category {it.get('category')!r}")
+    if it.get('priority') not in (1, 2, 3):
+        p.append(f'{tag}: priority must be 1, 2 or 3')
+    regions = it.get('regions') or []
+    unknown = [r for r in regions if r != EVERYWHERE and r not in by_iso]
+    if not regions or unknown:
+        p.append(f'{tag}: regions must be ISO 3166-2:IN codes or {EVERYWHERE!r}, unknown: {unknown}')
+    if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
+        p.append(f'{tag}: sources must list at least one URL')
+    for name, spec in (fields or {}).items():
+        v = it.get(name)
+        if v is None:
+            if spec.get('required'):
+                p.append(f'{tag}: {name} is required by the layer')
+        elif not isinstance(v, FIELD_TYPES[spec['type']]) or isinstance(v, bool):
+            p.append(f"{tag}: {name} must be {spec['type']}")
+        elif spec['type'] == 'month' and not 1 <= v <= 12:
+            p.append(f'{tag}: {name} must be a month, 1 to 12')
+    return p
+
+
+def build_regional(items, cats, by_iso, by_id, fields):
+    """Items that belong to regions rather than to a point on the map."""
+    out, problems = [], []
+    for it in items:
+        p = validate_regional_item(it, cats, by_iso, fields)
+        problems += p
+        if p:
+            continue
+        # A festival kept the country over says so once rather than listing 36 codes.
+        ids = (sorted(by_id) if EVERYWHERE in it['regions']
+               else [by_iso[r]['id'] for r in it['regions']])
+        entry = {
+            'id': it['id'], 'name': it['name'], 'category': it['category'], 'priority': it['priority'],
+            'regions': ids, 'regionSlugs': [by_id[i]['slug'] for i in ids],
+            'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
+        }
+        for name in fields:
+            if it.get(name) is not None:
+                entry[name] = it[name]
+        out.append(entry)
+    return out, problems
 
 
 def validate_line_item(it, cats, join, fields=()):
@@ -273,6 +334,10 @@ def build_layer(folder, states, ids, heights, out):
     height, width = ids.shape
     seen = set()
     out_items = []
+    if layer.get('type') == 'regional' and not problems:
+        out_items, region_problems = build_regional(items, cats, by_iso, by_id, fields)
+        problems += region_problems
+        return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
     if layer.get('type') == 'choropleth' and not problems:
         values, choro_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += choro_problems
