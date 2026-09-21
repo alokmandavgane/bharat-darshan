@@ -35,7 +35,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, quality.dprCap));
   renderer.setClearColor(0x000000, 0);   // the page's paper shows through where the model fades out
+  renderer.autoClear = false;            // render() clears once, then draws the backdrop and the model
   const scene = new Scene();
+  const backdrop = new Scene();          // the wide sheet behind the model, on its own depth buffer
   const camera = new OrthographicCamera(-1, 1, 1, -1, 200, 16000);
   camera.up.set(0, 1, 0);
 
@@ -82,6 +84,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     needsRender = false;
     if (!terrain) return;
     applyCamera();
+    // The backdrop is scenery behind the model, not part of it. Drawing it first and
+    // clearing the depth buffer after it means the plate covers it wherever the plate is
+    // opaque, however far a coarse hill pokes above the fine one under it, and it shows
+    // only through the rim the plate fades out over.
+    renderer.clear();
+    if (world?.mesh.visible) {
+      renderer.render(backdrop, camera);
+      renderer.clearDepth();
+    }
     renderer.render(scene, camera);
     // markers first (they are interactive), then labels keep clear of them
     const taken = points.update({ project, level, viewport, camera: store.get('camera'), active: new Set(store.get('layers')?.active || []),
@@ -559,11 +570,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (worldLoad || store.get('saveData')) return;
     worldLoad = loadWorld(manifest).then((data) => {
       if (!data || !terrain || world) return;
-      world = createWorld({ data, terrain, innerKm: sizeKm, grid: Math.round(quality.grid / 2) });
+      world = createWorld({ data, terrain, grid: Math.round(quality.grid / 2) });
       world.mesh.visible = !!store.get('surroundings');
       world.setCurve({ exag: terrain.uniforms.uExag.value, gamma: terrain.uniforms.uGamma.value,
                        hRef: terrain.uniforms.uHRef.value });
-      scene.add(world.mesh);
+      backdrop.add(world.mesh);
       invalidate();
     }).catch((err) => console.warn('backdrop skipped:', err));
   }

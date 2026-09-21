@@ -3,16 +3,19 @@
 // that switching Surroundings on puts the model in a landscape instead of ending it a
 // few hundred km out. It is the terrain's own material and shaders with its own rasters
 // bound, so the clay look cannot drift between the two; what it has that the plate does
-// not is uInnerKm, which fades it in exactly where the plate fades out.
+// not is uPool, which rounds it off far out instead of ending it at its rect.
+//
+// It is a sheet behind the model, not part of it: the engine draws it into its own scene
+// and clears the depth buffer afterwards, so the plate covers it wherever the plate is
+// opaque and it shows only through the rim the plate fades out over.
 import { Mesh, Vector2, Vector4 } from 'three';
 import { gridGeometry } from './terrain.js';
 import { byteTexture, heightTexture, zeroTexture } from './textures.js';
 
 /**
- * @param {{ data: any, terrain: any, innerKm: { w: number, h: number }, grid: number }} opts
- *   data: the world pack pair; innerKm: the plate's size, the rect this hands over to
+ * @param {{ data: any, terrain: any, grid: number }} opts  data: the world pack pair
  */
-export function createWorld({ data, terrain, innerKm, grid }) {
+export function createWorld({ data, terrain, grid }) {
   const sizeKm = {
     w: data.heights.header.width_km,
     h: data.heights.header.height_km,
@@ -41,16 +44,16 @@ export function createWorld({ data, terrain, innerKm, grid }) {
   u.uHover = { value: -1 };
   u.uRegion = { value: -1 };
   u.uDim = { value: 0 };
-  // A few km under the plate's own sheet. Both are flat at sea level over the ocean, and
-  // without this they fight for the depth buffer and the water comes out in stripes.
-  u.uLift = { value: -4 };
-  u.uInnerKm = { value: new Vector2(innerKm.w / 2, innerKm.h / 2) };
+  // Level with the plate, not sunk under it: the depth clear between the two passes is
+  // what keeps them from fighting over the flat ocean, so the sheets can meet at the same
+  // sea level instead of stepping down by a few km where they hand over.
+  u.uLift = { value: 0 };
+  u.uPool = { value: 1 };
 
   const cols = Math.max(16, Math.round((grid * sizeKm.w) / sizeKm.h));
   const geometry = gridGeometry(cols, grid);
   const mesh = new Mesh(geometry, material);
   mesh.frustumCulled = false;
-  mesh.renderOrder = -1;                 // under the plate, which is drawn over its middle
 
   return {
     mesh,

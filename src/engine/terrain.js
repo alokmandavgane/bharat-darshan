@@ -90,20 +90,22 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uDim: { value: 0 },
     uLift: { value: 0 },
     uOnlyIndia: { value: 1 },
-    // Non-zero only on the backdrop: the half-extents of the plate it hands over to.
-    uInnerKm: { value: new Vector2(0, 0) },
+    // 1 only on the backdrop, which ends as a round pool instead of at its rect.
+    uPool: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
     uBandTops: { value: Float32Array.from(PALETTE.tops) },
   };
-  // Premultiplied and blended, so the plate composites over whatever is behind it rather
+  // Premultiplied and blended, so a sheet composites over whatever is behind it rather
   // than overwriting it. On its own that changes nothing -- the canvas is premultiplied
   // over a transparent clear -- but it is what lets the backdrop show through the rim the
-  // plate fades out over, instead of the page showing through both.
+  // plate fades out over, instead of the page showing through both. Every sibling gets it
+  // too: an opaque block would punch its own soft rim, alpha and all, through the plate
+  // underneath it.
+  const BLEND = { transparent: true, premultipliedAlpha: true, depthWrite: true };
   const material = new ShaderMaterial({
-    glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms, side: DoubleSide,
-    transparent: true, premultipliedAlpha: true, depthWrite: true,
+    glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms, side: DoubleSide, ...BLEND,
   });
 
   /**
@@ -118,7 +120,9 @@ export function createTerrain({ tierData, grid, sizeKm }) {
         : value instanceof Float32Array ? Float32Array.from(value)
         : Array.isArray(value) ? value.map((c) => c.clone()) : value };
     }
-    const m = new ShaderMaterial({ glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms: u, side: DoubleSide });
+    const m = new ShaderMaterial({
+      glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms: u, side: DoubleSide, ...BLEND,
+    });
     if (independent) return m;        // the backdrop binds its own rasters; a tier swap must not reach it
     siblings.add(m);
     const dispose = m.dispose.bind(m);

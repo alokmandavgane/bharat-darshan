@@ -27,7 +27,7 @@ uniform float uRegion;         // draw only this state id (the lifted block), or
 uniform float uHole;           // state id drawn as a flat dark socket, or -1
 uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform float uOnlyIndia;      // 1: draw India alone as a cut-out on the page, no sea or neighbours
-uniform vec2 uInnerKm;         // backdrop only: half-extents of the plate it hands over to
+uniform float uPool;           // 1 on the backdrop: end as a round pool, not at the rect
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -198,17 +198,18 @@ void main() {
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
   float fade = smoothstep(0.0, 420.0, edge);
   if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
-  // The backdrop comes in exactly as the plate sinks into the page: the plate's rim fade
-  // runs over its last 420 km, the outer quarter of its half-extent, so the two alphas
-  // are complements of one smoothstep and never leave the page showing between them.
-  // Going out it is a round pool, not a rectangle. The projection is the plate's, which
-  // is what lets the two meet at all, and a cone stretches badly five thousand km from
-  // its parallels -- so the corners, where it is worst, are dissolved before they show.
-  if (uInnerKm.x > 0.0) {
-    vec2 q = abs(vPos.xz) / uInnerKm;
-    fade = smoothstep(0.75, 1.0, max(q.x, q.y));
-    fade *= 1.0 - smoothstep(0.52, 0.86, length(vPos.xz / (uSizeKm * 0.5)));
-  }
+  // The backdrop is solid the whole way in under the plate, and the engine clears the
+  // depth buffer between the two, so the plate covers it wherever the plate is opaque.
+  // Fading it in under the plate's own fade looks like the same thing and is not: one
+  // sheet composited over another comes to a + b(1 - a), which for b = 1 - a dips to
+  // three quarters in the middle of the band -- a quarter of the page showing, in a ring
+  // all the way round. Only a solid sheet behind a fading one adds up to an opaque
+  // picture.
+  //
+  // Going out it ends as a round pool rather than at a rectangle. The projection is the
+  // plate's, which is what lets the two meet at all, and a cone stretches badly five
+  // thousand km from its parallels, so the corners dissolve before they can show.
+  if (uPool > 0.5) fade = 1.0 - smoothstep(0.52, 0.86, length(vPos.xz / (uSizeKm * 0.5)));
   fade *= mine;                                           // the block's rim, softened
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   outColor = vec4(o.rgb * fade, fade);
