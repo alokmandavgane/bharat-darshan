@@ -76,6 +76,10 @@ void main() {
   float inIndia = smoothstep(-aaKm, aaKm, edgeKm);
   if (uOnlyIndia > 0.5 && plate > 0.5 && edgeKm < -2.0 * aaKm) discard;
   float india = mix(step(0.5, id), inIndia, plate);
+  // Inside the cut-out everything is the model, whatever the heightmap says the sea does.
+  // Without this the silhouette is clean but frays just inside itself, where coastal
+  // texels read below sea level and were painted as ocean at full opacity.
+  if (uOnlyIndia > 0.5 && plate > 0.5) land = max(land, inIndia);
   float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
