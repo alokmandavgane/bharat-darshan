@@ -874,10 +874,11 @@ passes; on the reference phone a pinch never tilts and a tilt never pans; and th
 says wow -- the Phase 0 exit criterion that was never signed off.
 
 **Phase 5: primitives (3-4 weeks).** Section 5's catalogue, smallest first, one per
-round, each with its proving dataset and the full contract: categorical choropleth (the
-political map) -> generated lines (graticule, Tropic of Cancer) -> `symbols` (power
-plants) -> `areas` (physiographic divisions, coalfields) -> `raster` (rainfall) ->
-`flows` (monsoon onset) -> `prisms` (state population). Base styles and the year
+round, each with its proving dataset and the full contract: categorical choropleth
+(*done 2026-09-21, proven by the zonal councils*) -> generated lines (graticule, Tropic
+of Cancer) -> `symbols` (power plants) -> `areas` (physiographic divisions, coalfields)
+-> `raster` (rainfall) -> `flows` (monsoon onset) -> `prisms` (state population).
+Base styles and the year
 scrubber land with the first primitive that needs them. District choropleths join when
 open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
 exist, and `src/` names none of them.
