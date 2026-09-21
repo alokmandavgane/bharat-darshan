@@ -54,6 +54,34 @@
    "count": 139,
    "reviewed": 0,
    "path": "layers/places.json"
+  },
+  {
+   "id": "ranges",
+   "type": "points",
+   "title": {
+    "en": "Mountain ranges",
+    "hi": "पर्वत श्रेणियाँ"
+   },
+   "icon": "mountain",
+   "group": "physical",
+   "default_on": true,
+   "count": 18,
+   "reviewed": 0,
+   "path": "layers/ranges.json"
+  },
+  {
+   "id": "rivers",
+   "type": "lines",
+   "title": {
+    "en": "Rivers",
+    "hi": "नदियाँ"
+   },
+   "icon": "wave",
+   "group": "physical",
+   "default_on": true,
+   "count": 28,
+   "reviewed": 0,
+   "path": "layers/rivers.json"
   }
  ],
  "attribution": [
@@ -232,6 +260,14 @@
   "layers/places.json": {
    "size": 122864,
    "sha256": "422f9dd6ce43"
+  },
+  "layers/ranges.json": {
+   "size": 13538,
+   "sha256": "51c5a8103a23"
+  },
+  "layers/rivers.json": {
+   "size": 52765,
+   "sha256": "4b1f96c8bee9"
   },
   "states/andaman-and-nicobar-islands-borders.bin.gz": {
    "size": 3249,
