@@ -17,9 +17,11 @@ in vec2 dir;                 // tangent of the run at this vertex, in the ground
 in float side;               // -1 or 1: which edge of the ribbon
 in float rank;               // 1, 2 or 3
 in float itemIdx;            // which item of the layer this vertex belongs to
+in float dist;               // km from the start of the run, which is its upstream end
 in vec3 colour;
 
 out vec3 vColour;
+out float vDist;
 out float vFade;
 out float vSel;
 out vec2 vUv;
@@ -51,6 +53,7 @@ void main() {
   clip.xy += n * side * halfPx / uResolution * 2.0 * clip.w;
 
   vColour = colour;
+  vDist = dist;
   vEdge = side;
   // A tributary is noise on the whole country and detail once the camera is in close.
   float z = byRank(uRankZoom);

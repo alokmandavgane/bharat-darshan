@@ -16,7 +16,7 @@ import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
 import { byteTexture } from './textures.js';
 import { createTour } from './tour.js';
-import { easeOutCubic, tween } from './tween.js';
+import { easeOutCubic, reducedMotion, tween } from './tween.js';
 
 const CAMERA_DISTANCE = 7000;   // km; anywhere outside the model works for an orthographic camera
 const FIRST_TIER = '1024';      // always first: it is the first-view budget (PLAN.md section 8)
@@ -75,13 +75,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   // --- render on demand: nothing draws unless something changed
   function invalidate() {
+    flowCheck();
     if (needsRender) return;
     needsRender = true;
     requestAnimationFrame(render);
   }
 
-  function render() {
-    needsRender = false;
+  /** The GPU part of a frame, on its own because the flow needs it and nothing else. */
+  function draw() {
     if (!terrain) return;
     applyCamera();
     // The backdrop is scenery behind the model, not part of it. Drawing it first and
@@ -94,12 +95,42 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       renderer.clearDepth();
     }
     renderer.render(scene, camera);
+  }
+
+  function render() {
+    needsRender = false;
+    if (!terrain) return;
+    draw();
     // markers first (they are interactive), then labels keep clear of them
     const taken = points.update({ project, level, viewport, camera: store.get('camera'), active: new Set(store.get('layers')?.active || []),
       selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts') });
     labels.update({ project, level, viewport, camera: store.get('camera'), regions: store.get('regions'),
       selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken });
   }
+
+  // --- the flow (PLAN.md section 8): the one thing here that draws while nothing has
+  // changed, so it is kept on a short leash. Medium tier and up, capped well under the
+  // display, stopped the moment the tab is hidden, the visitor asks for less motion or
+  // the last layer whose runs move goes off. Only the GPU part of the frame runs: the
+  // camera has not moved, so no marker or label has anywhere to go.
+  const FLOW_FPS = 30;
+  let flowRaf = 0;
+  let flowLast = 0;
+  function flowAllowed() {
+    return quality.name !== 'low' && !document.hidden && !reducedMotion() && !!lines?.flowing;
+  }
+  function flowTick(now) {
+    if (!flowAllowed()) { flowRaf = 0; return; }
+    flowRaf = requestAnimationFrame(flowTick);
+    if (now - flowLast < 1000 / FLOW_FPS) return;
+    flowLast = now;
+    lines.setTime(now / 1000);
+    draw();
+  }
+  function flowCheck() {
+    if (!flowRaf && flowAllowed()) flowRaf = requestAnimationFrame(flowTick);
+  }
+  document.addEventListener('visibilitychange', flowCheck);
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
   const loading = new Set();

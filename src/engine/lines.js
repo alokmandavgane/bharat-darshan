@@ -39,6 +39,7 @@ export function linesGeometry(data) {
   const pos = new Float32Array(points * 2 * 3);
   const dir = new Float32Array(points * 2 * 2);
   const side = new Float32Array(points * 2);
+  const dist = new Float32Array(points * 2);        // km from the run's start, for the flow
   const rank = new Float32Array(points * 2);
   const colour = new Float32Array(points * 2 * 3);
   const itemIdx = new Float32Array(points * 2);
@@ -47,8 +48,10 @@ export function linesGeometry(data) {
   for (const run of runs) {
     const n = run.flat.length / 2;
     const first = v;
+    let along = 0;
     for (let i = 0; i < n; i++) {
       const x = run.flat[i * 2], z = run.flat[i * 2 + 1];
+      if (i > 0) along += Math.hypot(x - run.flat[(i - 1) * 2], z - run.flat[(i - 1) * 2 + 1]);
       // tangent: forward at the start, backward at the end, the mean of the two between
       const px = i > 0 ? run.flat[(i - 1) * 2] : x, pz = i > 0 ? run.flat[(i - 1) * 2 + 1] : z;
       const nx = i < n - 1 ? run.flat[(i + 1) * 2] : x, nz = i < n - 1 ? run.flat[(i + 1) * 2 + 1] : z;
@@ -59,6 +62,7 @@ export function linesGeometry(data) {
         pos[v * 3] = x; pos[v * 3 + 1] = 0; pos[v * 3 + 2] = z;
         dir[v * 2] = tx; dir[v * 2 + 1] = tz;
         side[v] = s;
+        dist[v] = along;
         rank[v] = run.rank;
         itemIdx[v] = run.idx;
         colour[v * 3] = run.colour.r; colour[v * 3 + 1] = run.colour.g; colour[v * 3 + 2] = run.colour.b;
@@ -75,6 +79,7 @@ export function linesGeometry(data) {
   g.setAttribute('position', new BufferAttribute(pos, 3));
   g.setAttribute('dir', new BufferAttribute(dir, 2));
   g.setAttribute('side', new BufferAttribute(side, 1));
+  g.setAttribute('dist', new BufferAttribute(dist, 1));
   g.setAttribute('rank', new BufferAttribute(rank, 1));
   g.setAttribute('colour', new BufferAttribute(colour, 3));
   g.setAttribute('itemIdx', new BufferAttribute(itemIdx, 1));
@@ -96,7 +101,7 @@ function segDist2(x, z, ax, az, bx, bz) {
  * @param {any} surface uniforms of the terrain or of a lifted block
  * @param {boolean} onBlock true for the copy drawn on the lifted block
  */
-function lineMaterial(surface, onBlock) {
+function lineMaterial(surface, onBlock, flow) {
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
     transparent: true, depthWrite: false, side: DoubleSide, premultipliedAlpha: true,
@@ -112,6 +117,8 @@ function lineMaterial(surface, onBlock) {
       uSelectedIdx: { value: -1 },
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
+      uFlow: { value: flow ? 1 : 0 },
+      uTime: { value: 0 },
     },
   });
 }
@@ -150,7 +157,7 @@ export function createLines(scene, terrainUniforms) {
   function setBlockMesh(entry) {
     if (entry.block) { scene.remove(entry.block); entry.block.material.dispose(); entry.block = null; }
     if (!blockUniforms) return;
-    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true));
+    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -163,11 +170,12 @@ export function createLines(scene, terrainUniforms) {
     setLayer(data) {
       this.remove(data.id);
       const { geometry, records } = linesGeometry(data);
-      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false));
+      const flow = !!data.flow;
+      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, records, categories: data.categories || [], plate, block: null };
+      const entry = { geometry, records, categories: data.categories || [], flow, plate, block: null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
@@ -221,6 +229,15 @@ export function createLines(scene, terrainUniforms) {
     setSelected(sel) {
       selected = sel;
       applyView();
+    },
+    /** True while a layer whose runs move is on screen: the engine's cue to keep drawing. */
+    get flowing() {
+      for (const l of layers.values()) if (l.flow && l.plate.visible) return true;
+      return false;
+    },
+    /** Advance the flow. Seconds; the engine only calls this while it means to animate. */
+    setTime(t) {
+      eachMaterial((m) => { m.uniforms.uTime.value = t; });
     },
     setView(w, h, zoom) {
       view.w = w; view.h = h; view.zoom = zoom;
