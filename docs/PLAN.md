@@ -31,7 +31,7 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 | D2 | Orthographic camera, north-up with a slight turn; not strict 45° isometric | Strict isometric (45° yaw, 35.26° elevation) turns India into a wide diamond: poor use of a portrait phone, and the silhouette stops being recognisable. About 15° of yaw with a 50-55° tilt keeps the familiar shape, suits portrait screens (India is about 3,200 km north-south by 2,900 km east-west), and keeps the Himalaya at the back where exaggerated relief never hides anything. Clamp yaw to roughly ±40°. |
 | D3 | Two semantic levels instead of continuous zoom | Country view, then state view. Tap a state: the camera flies in, the state lifts out as its own block, the rest dims, and a lazily loaded state package (higher-res terrain, denser networks, districts, more places) swaps in. Street-level detail is out of scope; this is a showcase, not navigation. |
 | D4 | Tap + bottom sheet is the core interaction; hover is a desktop enhancement | Phones have no hover. "Hover to learn" becomes: tap a state and it lifts out, with its card in the sheet, plus a swipeable card carousel that flies the camera to each item. There is no second step to press: a tap is the way in, and Back is the way out. Desktop adds real hover tooltips over the same data. |
-| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5. |
+| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`, `regional`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5. |
 | D6 | Official boundaries from day one | Use Survey of India-compliant external boundaries (all of J&K and Ladakh including Aksai Chin; Arunachal Pradesh) and the current 28 states + 8 UTs. Default Natural Earth and OSM country outlines show de-facto lines, which is a legal problem for a map published in India. Review every rendered view, including share images. |
 | D7 | Minimal dependencies: vanilla JS, no framework | Owner preference, and the same conventions as the owner's `gol` project: plain JS ES modules, no TypeScript, no JSX, no UI framework. **three.js is the only runtime dependency; Vite is the only build tool.** Store, router, i18n, bottom sheet and gestures are small in-repo modules. Raw WebGL2 without three.js was considered: it would save about 150 KB, but costs plumbing time and gives up a library the owner already knows well. Revisit only if the JS budget is threatened. |
 | D8 | Stylised look: a hand-made clay / paper model, not realism | More distinctive, and cheaper: no imagery, low-frequency colour, tolerant of coarser meshes. Details in section 3. |
@@ -294,6 +294,11 @@ What every layer of a given type gets without writing code:
   reads under the colour. A region with no value keeps its own clay. Only one choropleth
   is drawn at a time, so switching one on switches the others off and changing between
   them fades out through the clay and back.
+- **`regional`**: items that belong to the regions that keep them rather than to a point
+  on the map, so they carry `regions` and no anchor and nothing is drawn for them. A
+  lifted state's card lists what it keeps; tapping one opens the ordinary item card, and
+  they are in the search index, narrowed to that state like everything else. An item kept
+  everywhere says `"regions": ["*"]` rather than listing every code.
 - **`lines`**: geometry fetched from the source named in `layer.json` and joined to the
   curated items either by the source's own names (`join: "name"`, which is how rivers
   work) or by routing through the places an item lists (`join: "route"`, for a source
@@ -511,11 +516,11 @@ the source cannot supply are noted in the status log below.*
 District-level languages with script samples and greeting audio; places, food and
 festivals with card-carousel sync; a month scrubber ("India through the year");
 search; first ~150 reviewed items. Exit: GI products added with data files only.
-*Part done (2026-09-21): both layer types exist, the card carousel works, search
-finds everything on show, and the first choropleth (population density) went in as
-data alone. Left: districts, which need a boundary source; languages, food and
-festivals; the month scrubber, which wants that content before it has anything to
-scrub; and the reviewed items, which are the owner's.*
+*Part done (2026-09-21): both layer types exist plus a third, `regional`; the card
+carousel works; search finds everything on show; and population density and 30
+festivals went in as data alone. Left: districts, which need a boundary source;
+languages and food; the month scrubber, which now has months to scrub; and the
+reviewed items, which are the owner's.*
 
 **Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
 monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
@@ -935,6 +940,22 @@ docs/DEPLOY.md).
   Gandak, the Ghaghara, the Son, NH 19, NH 27 and the Howrah-Delhi main line.
   Both languages come free, the index carrying the whole name object: "गंगा" finds the
   Ganga and the Wainganga.
+- 2026-09-21, fourteenth round: a fourth layer type, for things that are not points.
+  Festivals were the case that made it. Onam is Kerala's, Durga Puja is kept across six
+  states and Diwali the country over; not one of them is a marker anywhere in particular,
+  and anchoring them somewhere would have been a quiet assertion that they belong there.
+  So `regional`: items carrying `regions` and no anchor, drawn nowhere, read in the
+  lifted state's card with the month each usually falls in. Tapping one opens the
+  ordinary item card, and they are in the search index like everything else. An item kept
+  everywhere says `"regions": ["*"]` rather than listing thirty-six codes.
+  With it, a `month` field type: an int the card renders as a month name, so the number
+  stays in the data and the name comes from the interface in whichever language is on.
+  The scrubber will want the same number.
+  Thirty festivals went in on top of it, needing no engine change -- `grep -r festivals
+  src/` is empty. Dates move from year to year, so the month is the one each usually
+  falls in and the attribution says so; Eid al-Fitr carries no month at all, because it
+  moves about eleven days earlier each year through every season, and naming one would be
+  wrong rather than approximate.
 
 ### What exists
 
@@ -995,12 +1016,10 @@ docs/DEPLOY.md).
 
 ### Next
 
-1. Phase 3 next. The engine side is done: both layer types, the carousel, search. What
-   is left needs a decision first. Festivals, food and languages are content, drafted
-   the way the places were and needing the same review; the month scrubber wants the
-   festival content before it has anything to scrub; districts need a district boundary
-   source that meets the boundary rule in CLAUDE.md. A festivals layer needs no engine
-   change at all -- points with a declared month field -- so it is the one to start.
+1. Phase 3 next: the month scrubber, which now has thirty festivals with months to
+   scrub, and after it languages and food as content. Districts still need a district
+   boundary source that meets the boundary rule in CLAUDE.md, which is a sourcing
+   decision before it is code.
 2. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
