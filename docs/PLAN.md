@@ -815,6 +815,25 @@ docs/DEPLOY.md).
   from its parallels, so the corners are dissolved before they are close enough to read
   as a shape. What is left across the band is a change of resolution, 3.4 km against
   8.2, which is inherent to two sheets at different pitch.
+- 2026-09-21, ninth round: the page showing through the backdrop, properly this time.
+  Blending the plate was necessary and not sufficient. Complementary alphas are the
+  wrong arithmetic: one sheet over another comes to `a + b(1 - a)`, and for `b = 1 - a`
+  that is `a + (1 - a)^2`, which dips to three quarters in the middle of the band. A
+  quarter of the page, in a ring all the way round the plate. Measured on the scanline
+  through the middle of the frame, the alpha fell to 194 and 165 of 255 either side.
+  Two holes on top of it: `siblingMaterial` had never been given the blending the base
+  material got in the eighth round, so the backdrop -- and the lifted block, whose rim
+  is soft -- still overwrote alpha rather than compositing; and a solid backdrop under
+  a coarser DEM can poke through the plate, a 500 m difference at 5000 m being 4 km of
+  lift at this exaggeration, far more than the 4 km it had been sunk by.
+  The fix is a depth clear. The backdrop is its own scene, drawn first, and the depth
+  buffer is cleared after it, so the plate covers it wherever the plate is opaque
+  however far a coarse hill rises, and it can be solid the whole way in -- alpha 1
+  behind a fading 1, which is 1. It no longer needs the 4 km drop either, so both
+  sheets meet at the same sea level. `uInnerKm` is gone; `uPool` is what marks the
+  backdrop now, and all it does is round it off far out. Measured after: no interior
+  pixel below 246 of 255 in the default view, none at all below 255 in a low one, and
+  the only partial alpha left is the outer pool dissolving into the page.
 
 ### What exists
 
