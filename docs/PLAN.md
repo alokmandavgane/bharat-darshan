@@ -839,6 +839,38 @@ docs/DEPLOY.md).
   backdrop now, and all it does is round it off far out. Measured after: no interior
   pixel below 246 of 255 in the default view, none at all below 255 in a low one, and
   the only partial alpha left is the outer pool dissolving into the page.
+- 2026-09-21, tenth round: phase 2 closed -- flow, then roads and rail.
+  Flow first. Every vertex carries how far along its run it lies, measured from the
+  upstream end, and the shader runs soft crests down that distance; a cubed sine gives
+  long quiet stretches with a crest between them rather than marching ants, and the mean
+  of the cube is subtracted so a river keeps the weight it has at rest. Peak to trough is
+  about 18 levels of 255. Knowing which way a river runs is the build's job: Natural
+  Earth's centrelines are not digitised downstream, so each run is fitted against the
+  heightmap and turned round when it climbs. 20 of the rivers' 74 runs turned. It is the
+  one thing here that draws while nothing has changed, so it is on a short leash --
+  medium tier and up, 30 fps, stopped when the tab is hidden or less motion is asked for.
+  23 fps with the rivers on and a still camera, 0 with them off.
+  Then roads and rail, which needed a second way to join. Natural Earth carries no names
+  at all over India: every one of its 1,601 road records in the India box has an empty
+  name, label and route number, and the railway file has no name field to begin with. So
+  an item can name the places its route is known by and the build walks the source's own
+  parts between them. Three things make that honest rather than merely plausible: parts
+  are cut at the border rather than dropped for crossing it, cut again at the vertex
+  nearest each waypoint (a road passes through a city whose nearest part endpoint is
+  ninety km away, which put six of eight highways out of reach), and a stretch far longer
+  than the flight between its two places is treated as a gap in the source and left out
+  -- asked for the west coast highway across a gap, a shortest path returned 687 km of
+  inland road for an 81 km hop.
+  Eight highways and five railways came out of it, most within a few per cent of their
+  published lengths, the two Ladakh roads 25 to 30% short because a 10m dataset has no
+  room for hairpins. Three railways cannot come from this source at all: its railways
+  predate the Konkan Railway, which opened in 1998 and whose coast is 42 to 98 km from
+  the nearest line in the data, and it has neither the Kalka-Shimla nor the Nilgiri
+  Mountain Railway. The guards caught all three rather than drawing something else in
+  their place. They are worth having when there is a source with names in it.
+  Two gaps in the `lines` type turned up on the way and are fixed: a layer's declared
+  columns never reached a line's card (dropped by the build, unvalidated, and missing
+  from the selection a tap sets), and PLAN's own `year` field type did not exist.
 
 ### What exists
 
