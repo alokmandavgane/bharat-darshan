@@ -8,6 +8,7 @@ uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half 
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
 uniform sampler2D uBorders;    // r: internal, g: external border field, 255 on the line
 uniform float uBorderRangeKm;  // distance at which the border field reaches 0
+uniform float uBorderTexelKm;  // world size of one border-field texel
 uniform sampler2D uGrain;      // tiling noise
 uniform vec2 uSizeKm;
 uniform float uExag;
@@ -91,13 +92,18 @@ void main() {
   ocean *= 1.0 - 0.32 * coast;
   col = mix(ocean, col, land);
 
-  // --- borders: distance fields give constant screen-width lines at any zoom
+  // --- borders: distance fields give constant screen-width lines at any zoom, but only
+  // while the line is wider than a texel. Past that the level set is the border texel
+  // itself and the line becomes a blocky ribbon, which is what the surrounding country
+  // showed once a state package pulled the zoom floor five times closer. The zoom floor
+  // holds the bound raster at MAX_MAGNIFY, so this only ever fades a coarser one.
   vec2 b = texture(uBorders, luv(vUv)).rg;
   float dInt = (1.0 - b.r) * uBorderRangeKm;
   float dExt = (1.0 - b.g) * uBorderRangeKm;
   float aa = 0.75 * uKmPerPx;
-  float lineInt = 1.0 - smoothstep(0.55 * uKmPerPx - aa, 0.55 * uKmPerPx + aa, dInt);
-  float lineExt = 1.0 - smoothstep(0.85 * uKmPerPx - aa, 0.85 * uKmPerPx + aa, dExt);
+  float crisp = 1.0 - smoothstep(3.0, 9.0, uBorderTexelKm / max(uKmPerPx, 1e-6));
+  float lineInt = crisp * (1.0 - smoothstep(0.55 * uKmPerPx - aa, 0.55 * uKmPerPx + aa, dInt));
+  float lineExt = crisp * (1.0 - smoothstep(0.85 * uKmPerPx - aa, 0.85 * uKmPerPx + aa, dExt));
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
@@ -116,7 +122,7 @@ void main() {
                          max(step(0.5, abs(n2 - uSelected)), step(0.5, abs(n3 - uSelected))));
     float onEdge = max(sel * anyOther, (1.0 - sel) * anySel);
     float dEdge = min(dInt, dExt);
-    float outline = (1.0 - smoothstep(1.1 * uKmPerPx - aa, 1.1 * uKmPerPx + aa, dEdge)) * onEdge;
+    float outline = crisp * (1.0 - smoothstep(1.1 * uKmPerPx - aa, 1.1 * uKmPerPx + aa, dEdge)) * onEdge;
     col = mix(col, col * vec3(1.16, 1.07, 0.84) + vec3(0.05, 0.025, 0.0), sel);
     col = mix(col, vec3(0.32, 0.12, 0.04), outline * 0.9);
   }
