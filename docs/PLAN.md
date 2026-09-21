@@ -517,10 +517,9 @@ District-level languages with script samples and greeting audio; places, food an
 festivals with card-carousel sync; a month scrubber ("India through the year");
 search; first ~150 reviewed items. Exit: GI products added with data files only.
 *Part done (2026-09-21): both layer types exist plus a third, `regional`; the card
-carousel works; search finds everything on show; and population density and 30
+carousel, search and the month scrubber all work; and population density and 30
 festivals went in as data alone. Left: districts, which need a boundary source;
-languages and food; the month scrubber, which now has months to scrub; and the
-reviewed items, which are the owner's.*
+languages and food; and the reviewed items, which are the owner's.*
 
 **Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
 monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
@@ -956,6 +955,22 @@ docs/DEPLOY.md).
   falls in and the attribution says so; Eid al-Fitr carries no month at all, because it
   moves about eleven days earlier each year through every season, and naming one would be
   wrong rather than approximate.
+- 2026-09-21, fifteenth round: the month scrubber.
+  Thirteen switches under the layer menu, the whole year and each month, and everything
+  with a month of its own narrows to it: the state card's list, the country sheet and
+  what search can find. It shows itself only when something on show has months to scrub,
+  which the layer's own declared fields say, so the shell still names no layer. The month
+  rides in the URL with the rest of the view state.
+  With no state lifted the sheet answers for the country -- "In October" lists Durga
+  Puja, Navratri and Bathukamma with the states that keep each -- and with one lifted it
+  is that state's own list. An item with no month is never scrubbed away and appears in
+  every month's list rather than none: Eid moves about eleven days earlier each year
+  through every season, so hiding it eleven months in twelve would be the wrong kind of
+  tidy.
+  The bug worth remembering: the scrubber cleared the month whenever nothing on show had
+  months, which at startup -- before the catalogue has landed -- threw away a month the
+  URL had asked for. Anything that clears state on a "nothing here" test has to know the
+  difference between nothing and not yet.
 
 ### What exists
 
@@ -1016,10 +1031,11 @@ docs/DEPLOY.md).
 
 ### Next
 
-1. Phase 3 next: the month scrubber, which now has thirty festivals with months to
-   scrub, and after it languages and food as content. Districts still need a district
-   boundary source that meets the boundary rule in CLAUDE.md, which is a sourcing
-   decision before it is code.
+1. Phase 3 next: languages and food as content, drafted the way the festivals were.
+   Districts still need a district boundary source that meets the boundary rule in
+   CLAUDE.md, which is a sourcing decision before it is code. The scrubber has no map
+   expression yet -- it changes what the sheet says, not what the model shows -- which
+   is worth a look once there is more dated content than festivals.
 2. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
