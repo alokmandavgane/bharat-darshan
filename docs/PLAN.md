@@ -290,11 +290,15 @@ What every layer of a given type gets without writing code:
   The id-to-colour lookup texture is generated at runtime; crossfades between
   choropleths are free.
 - **`lines`**: geometry fetched from the source named in `layer.json` and joined to the
-  curated items by name, so the names and facts stay in the folder and the courses come
-  from a published dataset; styling by attribute (rank sets the width, category the
-  colour), LOD by level, and a run drawn on whichever surface it belongs to -- the
-  country plate or the lifted block -- so it is cut at a state boundary rather than
-  climbing the block's wall. Still to come: flow animation, picking, tooltips.
+  curated items either by the source's own names (`join: "name"`, which is how rivers
+  work) or by routing through the places an item lists (`join: "route"`, for a source
+  that carries geometry but no names, which is every road and railway over India). Either
+  way the names and facts stay in the folder and the courses come from a published
+  dataset. Styling by attribute (rank sets the width, category the colour), LOD by level,
+  picking with tooltips and cards, declared `fields` on the card, and a run drawn on
+  whichever surface it belongs to -- the country plate or the lifted block -- so it is cut
+  at a state boundary rather than climbing the block's wall. With `"flow": true` the build
+  points every run downstream and the shader runs crests along it.
 
 A `points` layer can set `marker: "label"` to be drawn as its name alone, with no token,
 for things that are a stretch of country rather than a spot on it (mountain ranges,
@@ -493,9 +497,10 @@ both languages.
 **Phase 2: physical layers (~2 weeks).** The `lines` layer type and the layer-folder
 build. Rivers with flow, roads, rail; named ranges, peaks and passes as hoverable
 relief features; layer panel with groups, legends, line picking, LOD by level.
-*Part done (2026-09-21): the `lines` type with picking, tooltips and cards; 28 rivers,
-18 named ranges and 28 peaks and passes; declared `fields`; the layer panel grouped
-with legends. Left: flow animation, roads and rail.*
+*Done (2026-09-21): the `lines` type with picking, tooltips, cards and declared
+`fields`; 28 rivers with flow, 18 named ranges, 28 peaks and passes, 8 national
+highways and 5 railway lines; the layer panel grouped with legends. Three railways
+the source cannot supply are noted in the status log below.*
 
 **Phase 3: culture layers (3-4 weeks).** The `points` and `choropleth` layer types.
 District-level languages with script samples and greeting audio; places, food and
@@ -894,6 +899,11 @@ docs/DEPLOY.md).
 
 ### Next
 
+0. Roads and rail ship as drafts: read the eight highway and five railway cards and
+   flip their `status` when they are right. The courses are the source's, so check the
+   two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
+   a gap. Konkan, Kalka-Shimla and the Nilgiri Mountain Railway wait for a source with
+   names in it.
 1. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
