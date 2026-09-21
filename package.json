@@ -8,6 +8,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
+    "test": "node --test \"test/**/*.test.js\"",
     "data": "python3 pipeline/build.py"
   },
   "dependencies": {
