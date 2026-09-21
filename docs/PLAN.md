@@ -286,8 +286,16 @@ What every layer of a given type gets without writing code:
 - **`choropleth`**: a `values.csv` of `region,value` plus a palette and legend spec.
   The id-to-colour lookup texture is generated at runtime; crossfades between
   choropleths are free.
-- **`lines`**: styling by attribute (width, colour, dash), optional flow animation,
-  LOD split by level, tooltips from a template.
+- **`lines`**: geometry fetched from the source named in `layer.json` and joined to the
+  curated items by name, so the names and facts stay in the folder and the courses come
+  from a published dataset; styling by attribute (rank sets the width, category the
+  colour), LOD by level, and a run drawn on whichever surface it belongs to -- the
+  country plate or the lifted block -- so it is cut at a state boundary rather than
+  climbing the block's wall. Still to come: flow animation, picking, tooltips.
+
+A `points` layer can set `marker: "label"` to be drawn as its name alone, with no token,
+for things that are a stretch of country rather than a spot on it (mountain ranges,
+plateaus, deserts). Tokens claim their screen space first, so a label yields to a place.
 
 Rules that keep this honest:
 
@@ -482,6 +490,8 @@ both languages.
 **Phase 2: physical layers (~2 weeks).** The `lines` layer type and the layer-folder
 build. Rivers with flow, roads, rail; named ranges, peaks and passes as hoverable
 relief features; layer panel with groups, legends, line picking, LOD by level.
+*Part done (2026-09-21): the `lines` type, 28 rivers and 18 named ranges. Left: flow
+animation, line picking and tooltips, roads and rail, peaks and passes, legends.*
 
 **Phase 3: culture layers (3-4 weeks).** The `points` and `choropleth` layer types.
 District-level languages with script samples and greeting audio; places, food and
@@ -686,6 +696,32 @@ docs/DEPLOY.md).
   camera the visitor has not touched. And the URL rewrote itself to the `?state=` peek
   form, because `selection` is restored before `level` and the URL writer ignored a
   level whose source was `init`; it now writes that one back.
+- 2026-09-21, fourth round: rivers and mountain ranges, which the map had never had --
+  `places` was the only layer, and the `lines` type was written up in section 5 but
+  never built, so the engine silently skipped anything that was not `points`.
+  `lines` now exists. A layer names its geometry source in `layer.json` and its features
+  in `items.json`, and step 4 joins the two by name, which is the only field a published
+  dataset and a content folder reliably share; folding accents off both sides is what
+  makes "Godävari" meet "Godavari". Geometry is projected to the grid, clipped to the ID
+  raster (the map draws India alone, so a river carrying on into Tibet would trail off
+  over blank paper) and simplified. In the engine a run becomes a ribbon widened in
+  screen space, laid on the terrain through the same height texture and vertical curve,
+  and drawn twice: once on the country plate and once on the lifted block, each
+  discarding the ids that are not its own, so a river is cut at a state boundary instead
+  of climbing the block's wall. 28 rivers from Natural Earth 10m (public domain),
+  52 KB. Rank sets the width and a tributary fades in below 2,400 km of view height.
+  Mountain ranges needed no new type: a `points` layer can now set `marker: "label"` and
+  be drawn as its name alone, quiet letterspaced caps set into the relief. 18 ranges,
+  13 KB, and they stay on screen in a state view because a range crosses states.
+  Both layers went in as data: `src/` gained the `lines` type and the label marker, and
+  knows neither layer's id. Both are `default_on`, which section 8 did not plan for --
+  it says every layer loads on first toggle, and `places` has quietly broken that since
+  it shipped. The honest first-view figure is 1.25 MB over the wire (the tier's 1.23 MB,
+  already gzipped, plus 54 KB of gzipped layer JSON), 1.38 MB on disk. Inside the 1.5 MB
+  budget either way, but the margin is now thin enough that the next default-on layer
+  needs a decision rather than a default.
+  One bug fixed on the way: `read_dbf` stripped spaces but not the NUL padding Natural
+  Earth writes, so every name came back with trailing NULs and nothing matched.
 
 ### What exists
 

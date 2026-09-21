@@ -18,6 +18,7 @@ are git-ignored. The generated files are committed while they are only a few MB
 |------|-------|--------|
 | `01_boundaries.py` | `regions/states-ids-{H}.bin.gz`, `regions/states.json` | DataMeet community maps: `States/Admin2.shp` (36 units, official boundary) and `Country/india-soi.geojson` (Survey of India outline), CC BY 4.0 |
 | `02_dem.py` | `terrain/heights-{H}.bin.gz`, `terrain/shade-{H}.bin.gz`, `regions/states-borders-{H}.bin.gz` | AWS Terrain Tiles (Terrarium), zoom 7 by default |
+| `04_layers.py` | `layers/<id>.json` | `content/layers/<id>/`; a `lines` layer also fetches the source named in its `layer.json` (rivers: Natural Earth 10m physical vectors, public domain) |
 | `05_manifest.py` | `manifest.json` | hashes of the above |
 
 Names, ISO codes and the raster id of every state live in `content/states/states.json`;
