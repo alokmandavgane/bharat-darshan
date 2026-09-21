@@ -259,7 +259,9 @@ not an input format the build supports.
 ```
 
 `country_view: aggregate` gives per-state count badges, with markers in the state
-view. `fields` adds structured columns on top of the base item schema.
+view. `fields` adds structured columns on top of the base item schema: each one names
+its type, whether it is required, a bilingual label and an optional bilingual unit
+template, and the card renders them without knowing what they are.
 
 ```json
 [
@@ -490,8 +492,9 @@ both languages.
 **Phase 2: physical layers (~2 weeks).** The `lines` layer type and the layer-folder
 build. Rivers with flow, roads, rail; named ranges, peaks and passes as hoverable
 relief features; layer panel with groups, legends, line picking, LOD by level.
-*Part done (2026-09-21): the `lines` type, 28 rivers and 18 named ranges. Left: flow
-animation, line picking and tooltips, roads and rail, peaks and passes, legends.*
+*Part done (2026-09-21): the `lines` type with picking, tooltips and cards; 28 rivers,
+18 named ranges and 28 peaks and passes; declared `fields`; the layer panel grouped
+with legends. Left: flow animation, roads and rail.*
 
 **Phase 3: culture layers (3-4 weeks).** The `points` and `choropleth` layer types.
 District-level languages with script samples and greeting audio; places, food and
@@ -722,6 +725,30 @@ docs/DEPLOY.md).
   needs a decision rather than a default.
   One bug fixed on the way: `read_dbf` stripped spaces but not the NUL padding Natural
   Earth writes, so every name came back with trailing NULs and nothing matched.
+- 2026-09-21, fifth round: the rest of Phase 2 bar flow animation and the road and rail
+  layers.
+  Lines can be picked. Twenty-eight rivers had a blurb and sources apiece that nothing
+  could reach; a tap now finds the nearest run within a few pixels and opens its card,
+  and a hover names it. The search is in scene km rather than screen space -- the
+  terrain pick already returns the ground point under the cursor, and a bounding box per
+  item keeps it to a few hundred segment tests -- and rank breaks ties, so a great river
+  wins over the tributary beside it. A picked line thickens rather than changing colour:
+  it is still the same river. Because a line lies on top of the state it crosses, it
+  takes the tap first and the state view is not entered.
+  `fields` in layer.json now works, the way section 5 described it: a layer declares its
+  own structured columns with a bilingual label and unit, step 4 validates and carries
+  them, and the card renders them without knowing what they are. The first user is an
+  elevation.
+  A `summits` layer, 28 peaks and passes, off by default. Peaks outside Indian-
+  administered territory are left out rather than claimed; four anchors sitting on the
+  international boundary are nudged a few km inside and say so on the item, as
+  Amarkantak already did.
+  The layer panel is grouped by the `group` field each layer already carried, with a
+  legend of the layer's own categories under each one that is on -- a dot for points, a
+  stroke for lines, nothing for a label layer where the colours do not show. Group
+  headings are strings keyed by the group id, so `t` grew a fallback for keys built from
+  data. The catalogue in manifest.json carries `categories` and `marker` now, about
+  1.5 KB, so a legend can be drawn before its layer is fetched.
 
 ### What exists
 
