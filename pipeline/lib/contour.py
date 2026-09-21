@@ -105,6 +105,11 @@ def _dp(points, tol):
     return points[keep]
 
 
+def simplify_line(points, tol):
+    """Simplify an open polyline (a river, a road), keeping its two ends."""
+    return _dp(np.asarray(points, float), tol) if len(points) > 2 else np.asarray(points, float)
+
+
 def simplify(loop, tol):
     """Simplify a closed loop; the split point is the farthest from the first point."""
     loop = _collapse(loop)

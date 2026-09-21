@@ -9,6 +9,7 @@ import struct
 import numpy as np
 
 POLYGON_TYPES = (5, 15, 25)
+POLYLINE_TYPES = (3, 13, 23)
 
 
 def read_dbf(path, encoding='latin-1'):
@@ -29,7 +30,8 @@ def read_dbf(path, encoding='latin-1'):
         q = 1  # deletion flag
         row = {}
         for name, typ, flen in fields:
-            raw = rec[q:q + flen].decode(encoding, 'replace').strip()
+            # Some writers pad char fields with NULs rather than spaces (Natural Earth does).
+            raw = rec[q:q + flen].decode(encoding, 'replace').replace('\x00', '').strip()
             q += flen
             if typ in ('N', 'F') and raw:
                 try:
@@ -65,6 +67,42 @@ def read_polygons(shp_path):
                     rings.append(np.array(ring))
         yield num, rings
         pos = end
+
+
+def read_polylines(shp_path):
+    """Yield (record_number, [part arrays]) for every polyline record; null shapes give [].
+
+    Same record layout as a polygon: the parts are open lines rather than closed rings,
+    so two points are enough to keep.
+    """
+    b = open(shp_path, 'rb').read()
+    shape_type, = struct.unpack('<i', b[32:36])
+    if shape_type not in POLYLINE_TYPES:
+        raise ValueError(f'{shp_path}: shape type {shape_type} is not a polyline type')
+    pos = 100
+    while pos < len(b):
+        num, content_len = struct.unpack('>ii', b[pos:pos + 8])
+        pos += 8
+        end = pos + content_len * 2
+        st, = struct.unpack('<i', b[pos:pos + 4])
+        parts = []
+        if st in POLYLINE_TYPES:
+            nparts, npts = struct.unpack('<ii', b[pos + 36:pos + 44])
+            starts = np.frombuffer(b, dtype='<i4', count=nparts, offset=pos + 44)
+            pts = np.frombuffer(b, dtype='<f8', count=npts * 2, offset=pos + 44 + nparts * 4).reshape(npts, 2)
+            bounds = list(starts) + [npts]
+            for i in range(nparts):
+                part = pts[bounds[i]:bounds[i + 1]]
+                if len(part) >= 2:
+                    parts.append(np.array(part))
+        yield num, parts
+        pos = end
+
+
+def read_lines(shp_path, dbf_path):
+    """List of (attributes, [part arrays]) for a polyline shapefile."""
+    _, rows = read_dbf(dbf_path)
+    return [(row, parts) for (num, parts), row in zip(read_polylines(shp_path), rows)]
 
 
 def signed_area(ring):

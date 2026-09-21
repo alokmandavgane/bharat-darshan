@@ -8,7 +8,11 @@ which catches geocoding slips), projects anchors to scene km, and writes
 public/data/layers/<id>.json. Items keep their review status; the runtime decides what
 to show (only reviewed items, unless drafts are switched on).
 
-Layer types known today: points. The engine knows types, never layer ids.
+Layer types known today:
+  points   an anchor per item, validated against the ID raster
+  lines    geometry fetched from the source named in layer.json and joined to the curated
+           items by name, then projected, clipped to India and simplified
+The engine knows types, never layer ids.
 """
 import argparse
 import json
@@ -16,10 +20,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from pipeline.lib import grid, pack  # noqa: E402
+from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TYPES = ('points',)
+TYPES = ('points', 'lines')
 STATUSES = ('draft', 'reviewed')
 BLURB_MAX = 240
 
@@ -47,7 +51,59 @@ def validate_layer(layer, folder):
     cats = layer.get('categories') or []
     if not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
+    if layer.get('type') == 'lines':
+        src = layer.get('source') or {}
+        if not src.get('files') or not src.get('format'):
+            p.append('a lines layer needs source.format and source.files')
     return p
+
+
+def validate_line_item(it, cats):
+    """A line item carries no anchor: its geometry comes from the source, by name."""
+    tag = it.get('id', '?')
+    p = []
+    if it.get('status') not in STATUSES:
+        p.append(f'{tag}: status must be draft or reviewed')
+    if not bilingual(it.get('name')):
+        p.append(f'{tag}: name needs en and hi')
+    if not bilingual(it.get('blurb')):
+        p.append(f'{tag}: blurb needs en and hi')
+    for lang in ('en', 'hi'):
+        if len((it.get('blurb') or {}).get(lang, '')) > BLURB_MAX:
+            p.append(f'{tag}: blurb.{lang} longer than {BLURB_MAX} characters')
+    if it.get('category') not in cats:
+        p.append(f"{tag}: unknown category {it.get('category')!r}")
+    if it.get('rank') not in (1, 2, 3):
+        p.append(f'{tag}: rank must be 1, 2 or 3')
+    if not it.get('source_names'):
+        p.append(f'{tag}: source_names must name at least one feature in the source')
+    if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
+        p.append(f'{tag}: sources must list at least one URL')
+    return p
+
+
+def build_lines(layer, folder, items, cats, ids):
+    """Join each curated item to its geometry. Returns (out_items, problems)."""
+    src = layer['source']
+    raw = os.path.join(fetch.RAW, 'layers', layer['id'])
+    by_name = lines.load_source(src, raw)
+    out, problems = [], []
+    for it in items:
+        problems += validate_line_item(it, cats)
+        if problems and problems[-1].startswith(str(it.get('id'))):
+            continue
+        runs, km = lines.build(it, by_name, ids, float(src.get('simplify_km', 1.0)))
+        if not runs:
+            problems.append(f"{it['id']}: no geometry matched {it['source_names']}")
+            continue
+        out.append({
+            'id': it['id'], 'name': it['name'], 'category': it['category'], 'rank': it['rank'],
+            'km': round(km, 1),
+            'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
+            'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
+        })
+        print(f"    {it['id']:14} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km")
+    return out, problems
 
 
 def validate_item(it, cats, by_iso, ids, width, height):
@@ -98,6 +154,10 @@ def build_layer(folder, states, ids, out):
     height, width = ids.shape
     seen = set()
     out_items = []
+    if layer.get('type') == 'lines' and not problems:
+        out_items, line_problems = build_lines(layer, folder, items, cats, ids)
+        problems += line_problems
+        return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
     for it in items:
         if it.get('id') in seen:
             problems.append(f"{it.get('id')}: duplicate id")
@@ -112,10 +172,15 @@ def build_layer(folder, states, ids, out):
             'x': round(float(x), 1), 'z': round(float(z), 1), 'region': region, 'regionSlug': by_id[region]['slug'],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
         })
+    return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
+
+
+def finish(layer, out_items, out, problems, order):
+    """Write public/data/layers/<id>.json, whatever the type put in out_items."""
     if problems:
         return layer, None, problems
-    out_items.sort(key=lambda i: (i['priority'], i['id']))
-    data = {k: layer[k] for k in ('id', 'type', 'title', 'icon', 'group', 'categories', 'attribution') if k in layer}
+    out_items.sort(key=order)
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group', 'categories', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')
