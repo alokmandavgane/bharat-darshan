@@ -42,6 +42,10 @@
   "count": 36
  },
  "states": "states/index.json",
+ "world": {
+  "heights": "terrain/world-heights.bin.gz",
+  "shade": "terrain/world-shade.bin.gz"
+ },
  "layers": [
   {
    "id": "places",
@@ -1016,6 +1020,14 @@
   "terrain/shade-2048.bin.gz": {
    "size": 687146,
    "sha256": "43430e0c01fb"
+  },
+  "terrain/world-heights.bin.gz": {
+   "size": 1332026,
+   "sha256": "12aa03a74d02"
+  },
+  "terrain/world-shade.bin.gz": {
+   "size": 223359,
+   "sha256": "44db42b49c26"
   }
  }
 }
