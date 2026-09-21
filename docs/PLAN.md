@@ -521,6 +521,15 @@ What every layer of a given type gets without writing code:
   why the two are one channel and only one fill shows at a time. Picking is the terrain's
   rather than a marker's, and an area answers before a state does.
 
+- **`prisms`**: `values.csv` of `region,value` exactly as a choropleth's, plus a
+  `height: { domain, km, legend }`. The terrain's vertex shader already reads the ID
+  raster, so a prism is one more lookup there -- a 256-texel table of per-region heights
+  -- and the ground steps up a region at a time. Linear, not square-rooted as a symbol's
+  radius is: a circle is read by its area and a column by its height. Height is its own
+  channel, so unlike two fills a prisms layer and a fill compose into a two-variable map.
+  The lift happens on the GPU, so the CPU heightfield the picker marches against has to
+  be told the same thing or every tap on a raised region lands on the ground beneath it.
+
 A `points` layer can set `marker: "label"` to be drawn as its name alone, with no token,
 for things that are a stretch of country rather than a spot on it (mountain ranges,
 plateaus, deserts). Tokens claim their screen space first, so a label yields to a place.
@@ -554,7 +563,7 @@ map is a folder and a source, whatever it shows.
 | `areas` | named polygons that are not regions, filled and draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
 | `flows` | curved arrows between places, width by volume, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | new; the ribbon shader plus an arc and an arrowhead | monsoon onset |
-| `prisms` | a region or a spot extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state; rainfall columns at stations | new; the block extruder already exists | state population |
+| `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
 | `regional` | nothing on the map; listed on a state's card | festivals, languages, food | built | done |
 
 Two things cut across all of them rather than being primitives:
@@ -909,8 +918,8 @@ round, each with its proving dataset and the full contract: categorical chorople
 (*done 2026-09-21, proven by the zonal councils*) -> generated lines (*done 2026-09-21,
 proven by the Tropic of Cancer and the Standard Meridian*) -> `symbols` (*done
 2026-09-21, proven by 24 power stations*) -> `areas` (*done 2026-09-21, proven by 16
-physical divisions*) -> `raster` (rainfall) -> `flows`
-(monsoon onset) -> `prisms` (state population). Base styles and the year
+physical divisions*) -> `prisms` (*done 2026-09-21, proven by the 2011 population*) ->
+`raster` (rainfall, **blocked**: see open question 13) -> `flows` (monsoon onset). Base styles and the year
 scrubber land with the first primitive that needs them. District choropleths join when
 open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
 exist, and `src/` names none of them.
@@ -994,6 +1003,26 @@ workflow, more UI languages, the history section.
     Until then the fallback is geoBoundaries ADM2 (ODbL, 2021, no codes).
 11. **Resolved on 2026-09-21** with question 4: "Bharat Darshan" stays, with "an atlas of
     India" as the line under it. Revisit before launch, not before.
+13. **Climate data, and the `raster` primitive it is meant to prove.** Blocked on
+    licensing, not on code. Checked on 2026-09-21:
+    - **WorldClim 2.1** (the obvious choice, 10 arc-minute annual precipitation, a 2 MB
+      zip that downloads cleanly) says on its own about page: *"The data are freely
+      available for academic use and other non-commercial use. Redistribution or
+      commercial use is not allowed without prior permission."* This project publishes
+      derived rasters in `public/data/` on a public site, which is redistribution. Out,
+      unless permission is asked for and given.
+    - **CHIRPS** (UCSB Climate Hazards Center, long-term annual means as GeoTIFF, the
+      right shape for this) states **no licence at all** in its README -- only a citation.
+      It is widely described as public domain, being a USGS Data Series product, but
+      "widely described as" is exactly what open question 10 got caught by.
+    So: ask WorldClim for permission, find the primary statement that puts CHIRPS in the
+    public domain, or use an IMD product and deal with its registration. Until one of
+    those, `raster` has the engine work but no dataset it may ship, and D12 says a
+    primitive is not built until one real dataset proves it. `prisms` was built first for
+    this reason -- its data was already in the repository.
+    There is a second, smaller question behind it: nothing in the pipeline reads GeoTIFF,
+    and doing it with pillow alone wants checking before a dataset is chosen on the
+    assumption that it can be read.
 12. Pipeline reproducibility: `pipeline/requirements.txt` asks for `numpy>=1.26`, and
     "reproducible byte for byte" does not survive that range. On 2026-09-21, on a fresh
     machine with numpy 2.5.3 and no pipeline change at all, `shade-2048.bin.gz` came back
@@ -1572,6 +1601,24 @@ docs/DEPLOY.md).
   plateau fades into a plain over tens of kilometres, textbooks draw the line
   differently, and these are generalised outlines. Filling them edge to edge without
   saying so would claim a precision that does not exist, so the layer's note says it.
+- 2026-09-21, twenty-fourth round: `prisms`, out of order, because `raster` is blocked on
+  licensing rather than on code. WorldClim forbids redistribution in as many words and
+  CHIRPS states no licence at all; both are written up as open question 13, and neither
+  may ship on an assumption -- which is the lesson open question 10 already paid for.
+  `prisms` needed no download: the 2011 populations were already in
+  `content/states/states.json`, and values.csv is generated from them so the columns and
+  the state cards cannot read different censuses.
+  Cheaper than expected. PLAN assumed the block extruder would do the work; the terrain's
+  *vertex* shader already reads the ID raster, so a prism is one more lookup there and 36
+  extruded meshes were never needed. The mesh ramps across a boundary rather than
+  cliffing, one cell wide, which is under a pixel at the home view.
+  The part that needed care was picking, and it is a general lesson: anything that moves
+  geometry in a shader has to be told to the CPU heightfield as well, or every tap lands
+  on the surface as it was before. pickTerrain and projectGround take the lift now, and
+  the ray starts above the tallest column rather than inside it.
+  And two population maps now exist that look alike and say different things -- density
+  colours a state by how crowded it is, prisms raise it by how many people live there,
+  and Delhi is the extreme of one and invisible in the other. Both notes say which.
 
 ### What exists
 
