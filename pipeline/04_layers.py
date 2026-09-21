@@ -10,9 +10,10 @@ to show (only reviewed items, unless drafts are switched on).
 
 Layer types known today:
   points   an anchor per item, validated against the ID raster
-  lines    geometry fetched from the source named in layer.json and joined to the curated
-           items by name, then projected, clipped to India and simplified. With
-           "flow": true every run is also pointed downstream, against the heightmap
+  lines    geometry fetched from the source named in layer.json and joined to the
+           curated items either by name or by routing through waypoints, then
+           projected, clipped to India and simplified. With "flow": true every run is
+           also pointed downstream, against the heightmap
 The engine knows types, never layer ids.
 """
 import argparse
@@ -25,6 +26,7 @@ from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines')
+JOINS = ('name', 'route')   # how a lines item finds its geometry: by the source's names, or through waypoints
 STATUSES = ('draft', 'reviewed')
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
 FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str}
@@ -71,6 +73,8 @@ def validate_layer(layer, folder):
         src = layer.get('source') or {}
         if not src.get('files') or not src.get('format'):
             p.append('a lines layer needs source.format and source.files')
+        if src.get('join', 'name') not in JOINS:
+            p.append(f"source.join must be one of {JOINS}")
     elif layer.get('flow'):
         p.append('only a lines layer can set flow')
     for name, spec in (layer.get('fields') or {}).items():
@@ -81,8 +85,8 @@ def validate_layer(layer, folder):
     return p
 
 
-def validate_line_item(it, cats):
-    """A line item carries no anchor: its geometry comes from the source, by name."""
+def validate_line_item(it, cats, join):
+    """A line item carries no anchor: its geometry comes from the source."""
     tag = it.get('id', '?')
     p = []
     if it.get('status') not in STATUSES:
@@ -98,7 +102,13 @@ def validate_line_item(it, cats):
         p.append(f"{tag}: unknown category {it.get('category')!r}")
     if it.get('rank') not in (1, 2, 3):
         p.append(f'{tag}: rank must be 1, 2 or 3')
-    if not it.get('source_names'):
+    if join == 'route':
+        w = it.get('waypoints') or []
+        if len(w) < 2:
+            p.append(f'{tag}: waypoints must list at least two places for a routed layer')
+        elif any(not (isinstance(q.get('lat'), (int, float)) and isinstance(q.get('lon'), (int, float))) for q in w):
+            p.append(f'{tag}: every waypoint needs numeric lat and lon')
+    elif not it.get('source_names'):
         p.append(f'{tag}: source_names must name at least one feature in the source')
     if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
         p.append(f'{tag}: sources must list at least one URL')
@@ -108,18 +118,25 @@ def validate_line_item(it, cats):
 def build_lines(layer, folder, items, cats, ids, heights):
     """Join each curated item to its geometry. Returns (out_items, problems)."""
     src = layer['source']
+    join = src.get('join', 'name')
     raw = os.path.join(fetch.RAW, 'layers', layer['id'])
-    by_name = lines.load_source(src, raw)
+    # A named source is indexed by name; a nameless one becomes a graph to walk.
+    index = (lines.network(lines.load_parts(src, raw), ids,
+                           [w for it in items for w in (it.get('waypoints') or [])])
+             if join == 'route' else lines.load_source(src, raw))
+    if join == 'route':
+        print(f"    network: {len(index['parts'])} parts, {len(index['nodes'])} junctions inside India")
     # A layer that animates its flow needs its runs pointed downstream; nothing else does.
     relief = heights() if layer.get('flow') else None
     out, problems = [], []
     for it in items:
-        problems += validate_line_item(it, cats)
+        problems += validate_line_item(it, cats, join)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
-        runs, km = lines.build(it, by_name, ids, float(src.get('simplify_km', 1.0)), relief)
+        runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief)
         if not runs:
-            problems.append(f"{it['id']}: no geometry matched {it['source_names']}")
+            why = (note or {}).get('why') or (f"names {it['source_names']}" if join == 'name' else 'nothing came back')
+            problems.append(f"{it['id']}: no geometry: {why}")
             continue
         out.append({
             'id': it['id'], 'name': it['name'], 'category': it['category'], 'rank': it['rank'],
@@ -127,7 +144,8 @@ def build_lines(layer, folder, items, cats, ids, heights):
             'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
         })
-        print(f"    {it['id']:14} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km")
+        tail = f"  waypoints {max(note['snap']):.0f} km off at worst" if note else ''
+        print(f"    {it['id']:20} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km{tail}")
     return out, problems
 
 

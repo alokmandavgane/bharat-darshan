@@ -5,6 +5,11 @@ A `lines` layer names its geometry source in `layer.json` and its features in
 by name, because that is the only field a source and a content folder reliably share,
 and folding accents off both sides is what makes "Godävari" meet "Godavari".
 
+An item joins its geometry one of two ways. `source_names` matches the source's own
+names, which is how rivers work. `waypoints` names the places a route is known by and
+the build walks the source's parts between them, for a source that carries geometry
+but no names -- which is every road and railway over India in Natural Earth.
+
 Everything leaves here in scene km on the project grid, clipped to the ID raster: the
 map draws India alone by default, so a river that carried on into Tibet would trail
 off over blank paper.
@@ -23,8 +28,8 @@ def fold(name):
     return ''.join(c for c in s if not unicodedata.combining(c)).strip().lower()
 
 
-def load_source(source, raw_dir):
-    """Download a layer's geometry files and index their parts by folded name."""
+def _files(source, raw_dir):
+    """Download a layer's geometry files. Returns the .shp and .dbf paths."""
     if source.get('format') != 'shapefile-polyline':
         raise ValueError(f"unknown lines source format {source.get('format')!r}")
     paths = {}
@@ -32,8 +37,22 @@ def load_source(source, raw_dir):
         dest = os.path.join(raw_dir, name)
         fetch.download(url, dest)
         paths[name] = dest
-    shp = next(p for n, p in paths.items() if n.endswith('.shp'))
-    dbf = next(p for n, p in paths.items() if n.endswith('.dbf'))
+    return (next(p for n, p in paths.items() if n.endswith('.shp')),
+            next((p for n, p in paths.items() if n.endswith('.dbf')), None))
+
+
+def load_parts(source, raw_dir):
+    """Every part of a polyline source, for a layer whose items are routed, not named."""
+    shp, _ = _files(source, raw_dir)
+    out = []
+    for _, parts in shapefile.read_polylines(shp):
+        out.extend(parts)
+    return out
+
+
+def load_source(source, raw_dir):
+    """Download a layer's geometry files and index their parts by folded name."""
+    shp, dbf = _files(source, raw_dir)
     _, rows = shapefile.read_dbf(dbf, encoding=source.get('encoding', 'latin-1'))
     key = source.get('match', 'name')
     by_name = {}
@@ -102,14 +121,229 @@ def _length(run):
     return float(np.hypot(*np.diff(run, axis=0).T).sum())
 
 
-def build(item, by_name, ids, simplify_km, heights=None):
-    """Geometry for one curated item: its source names joined, projected and clipped.
+def build(item, index, ids, simplify_km, heights=None):
+    """Geometry for one curated item, projected and clipped.
 
+    `index` is whatever the layer's source gave: a name index for an item that lists
+    source_names, a network for one that lists the waypoints its route runs through.
     With `heights`, every run is pointed downstream, for a layer that animates its flow.
+    Returns (runs, km, note); the note says how the routing went, or nothing for a name join.
     """
-    parts = []
-    for name in item.get('source_names') or []:
-        parts.extend(by_name.get(fold(name), []))
+    note = None
+    if item.get('waypoints'):
+        joined, note = route(item['waypoints'], index)
+        parts = joined or []
+    else:
+        parts = []
+        for name in item.get('source_names') or []:
+            parts.extend(index.get(fold(name), []))
     runs = project(parts, ids, simplify_km, heights)
     runs.sort(key=lambda r: -_length(r))
-    return runs, sum(_length(r) for r in runs)
+    return runs, sum(_length(r) for r in runs), note
+
+
+# --- routing: a curated item names places, the source supplies the course between them
+#
+# Natural Earth's roads and railways carry no names at all over India: every road record
+# there has an empty name, and the railway file has no name field. So a road cannot be
+# joined to a curated item the way a river is. What it does have is good geometry, split
+# at junctions, which is a graph. An item lists the places its route is known by and the
+# build walks the source's own parts between them, shortest first. The names and the facts
+# stay in the folder; the course is still the published dataset's, never drawn by hand.
+
+SNAP_DEG = 0.002       # endpoints this close, about 200 m, are the same junction
+SLACK_PX = 3           # how far outside the ID raster a part may stray and still count
+
+
+def _inside_mask(ids, slack=SLACK_PX):
+    """India, widened by a few pixels, so a coastal road is not cut by a coarse raster."""
+    m = ids > 0
+    for _ in range(slack):
+        m[1:, :] |= m[:-1, :]
+        m[:-1, :] |= m[1:, :]
+        m[:, 1:] |= m[:, :-1]
+        m[:, :-1] |= m[:, 1:]
+    return m
+
+
+def _split_inside(part, mask):
+    """The stretches of a part that lie inside the widened mask.
+
+    Splitting rather than dropping: the source's parts are long, hundreds of km of them,
+    and a corridor that leaves the country for one bend would take the whole road with it.
+    Cut at the border, the network keeps everything of it that is here and simply ends
+    where the country does.
+    """
+    height, width = mask.shape
+    col, row = grid.lonlat_to_pixel(part[:, 0], part[:, 1], width, height)
+    c = np.clip(col.astype(int), 0, width - 1)
+    r = np.clip(row.astype(int), 0, height - 1)
+    out, cur = [], []
+    for point, good in zip(part, mask[r, c]):
+        if good:
+            cur.append(point)
+        elif cur:
+            out.append(np.array(cur))
+            cur = []
+    if cur:
+        out.append(np.array(cur))
+    return out
+
+
+def network(parts, ids, waypoints=()):
+    """The source inside India as a graph: nodes are shared endpoints, edges are parts.
+
+    Every part is cut twice. First at the border, so a route can never leave the country
+    and come back. Then at the vertex nearest each of the layer's waypoints, because the
+    source's parts run for hundreds of km: a road passes straight through a city whose
+    nearest part *endpoint* is ninety km away, and without this cut the city has nowhere
+    on the network to stand.
+    """
+    mask = _inside_mask(ids)
+    pieces = []
+    for whole in parts:
+        pieces.extend(p for p in _split_inside(whole, mask) if len(p) >= 2)
+
+    # Every vertex of every piece at once, so the nearest one to a place is a single scan.
+    owner = np.concatenate([np.full(len(p), i) for i, p in enumerate(pieces)]) if pieces else np.zeros(0, int)
+    at = np.concatenate([np.arange(len(p)) for p in pieces]) if pieces else np.zeros(0, int)
+    vx, vz = grid.lonlat_to_scene(np.concatenate([p[:, 0] for p in pieces]),
+                                  np.concatenate([p[:, 1] for p in pieces]))
+    cuts = [set() for _ in pieces]
+    for w in waypoints:
+        px, pz = grid.lonlat_to_scene(w['lon'], w['lat'])
+        i = int(np.argmin(np.hypot(vx - px, vz - pz)))
+        cuts[owner[i]].add(int(at[i]))
+
+    cells, nodes, edges, adj = {}, [], [], []
+
+    def node(lon, lat):
+        cx, cy = int(lon / SNAP_DEG), int(lat / SNAP_DEG)
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                for i in cells.get((cx + dx, cy + dy), ()):
+                    if abs(nodes[i][0] - lon) <= SNAP_DEG and abs(nodes[i][1] - lat) <= SNAP_DEG:
+                        return i
+        nodes.append((lon, lat))
+        adj.append([])
+        cells.setdefault((cx, cy), []).append(len(nodes) - 1)
+        return len(nodes) - 1
+
+    kept = []
+    for piece, marks in zip(pieces, cuts):
+        bounds = sorted({0, len(piece) - 1} | {m for m in marks if 0 < m < len(piece) - 1})
+        for lo, hi in zip(bounds, bounds[1:]):
+            part = piece[lo:hi + 1]
+            if len(part) < 2:
+                continue
+            a = node(float(part[0, 0]), float(part[0, 1]))
+            b = node(float(part[-1, 0]), float(part[-1, 1]))
+            if a == b:
+                continue
+            x, z = grid.lonlat_to_scene(part[:, 0], part[:, 1])
+            km = float(np.hypot(*np.diff(np.column_stack([x, z]), axis=0).T).sum())
+            adj[a].append(len(edges))
+            adj[b].append(len(edges))
+            edges.append((a, b, len(kept), km))
+            kept.append(part)
+    return {'nodes': np.array(nodes), 'edges': edges, 'adj': adj, 'parts': kept}
+
+
+def _nearest_node(net, lon, lat):
+    """The node closest to a place, and how far away it is in km."""
+    x, z = grid.lonlat_to_scene(net['nodes'][:, 0], net['nodes'][:, 1])
+    px, pz = grid.lonlat_to_scene(lon, lat)
+    d = np.hypot(x - px, z - pz)
+    i = int(np.argmin(d))
+    return i, float(d[i])
+
+
+def _shortest(net, start, goal):
+    """Dijkstra over the edges. Returns the edge indices of the path, or None."""
+    import heapq
+    best = {start: 0.0}
+    came = {}
+    queue = [(0.0, start)]
+    while queue:
+        cost, here = heapq.heappop(queue)
+        if here == goal:
+            path = []
+            while here != start:
+                e, here = came[here]
+                path.append(e)
+            return path[::-1]
+        if cost > best.get(here, float('inf')):
+            continue
+        for e in net['adj'][here]:
+            a, b, _, km = net['edges'][e]
+            there = b if a == here else a
+            step = cost + km
+            if step < best.get(there, float('inf')):
+                best[there] = step
+                came[there] = (e, here)
+                heapq.heappush(queue, (step, there))
+    return None
+
+
+MAX_SNAP_KM = 25.0     # a place further than this from the network: the route is not in the source
+MAX_LEG_DETOUR = 2.0   # ... and a stretch this much longer than the flight is a detour, not the road
+MIN_COVERED = 0.6      # a route the source only has scraps of is not that route
+
+
+def _flight_km(a, b):
+    x, z = grid.lonlat_to_scene([a['lon'], b['lon']], [a['lat'], b['lat']])
+    return float(np.hypot(x[1] - x[0], z[1] - z[0]))
+
+
+def route(waypoints, net, max_snap_km=MAX_SNAP_KM, max_detour=MAX_LEG_DETOUR, min_covered=MIN_COVERED):
+    """Walk the source's own parts through the places a route is known by.
+
+    A stretch the source does not hold is left out rather than gone round: asked for the
+    coastal highway across a gap in its data, a shortest path will happily return six
+    hundred km of inland road, which is not that highway. A stretch that comes back far
+    longer than the flight between its two places is taken as such a gap, the run is
+    ended there and the next one begins after it -- the route is drawn in the pieces the
+    source has of it. An item that ends up with only scraps is refused outright.
+
+    Returns (list of lon/lat arrays, note) or (None, note) with a reason in note['why'].
+    """
+    hops = [_nearest_node(net, w['lon'], w['lat']) for w in waypoints]
+    note = {'snap': [round(d, 1) for _, d in hops]}
+    far = max(range(len(hops)), key=lambda i: hops[i][1])
+    if hops[far][1] > max_snap_km:
+        note['why'] = f'waypoint {far + 1} is {hops[far][1]:.0f} km from the nearest line in the source'
+        return None, note
+
+    runs, cur, gaps = [], [], []
+    km = covered = total = 0.0
+    for leg, ((a, _), (b, _)) in enumerate(zip(hops, hops[1:])):
+        flight = _flight_km(waypoints[leg], waypoints[leg + 1])
+        total += flight
+        path = None if a == b else _shortest(net, a, b)
+        leg_km = sum(net['edges'][e][3] for e in path) if path else 0.0
+        if a == b:
+            continue
+        if path is None or (flight > 0 and leg_km > max_detour * flight):
+            gaps.append(leg + 1)
+            if cur:
+                runs.append(np.vstack(cur))
+                cur = []
+            continue
+        here = a
+        for e in path:
+            u, v, part, _ = net['edges'][e]
+            piece = net['parts'][part]
+            cur.append(piece if u == here else piece[::-1])
+            here = v if u == here else u
+        covered += flight
+        km += leg_km
+    if cur:
+        runs.append(np.vstack(cur))
+    note.update(km=round(km, 1), flight_km=round(total, 1), gaps=gaps)
+    if not runs:
+        note['why'] = 'the source holds none of the stretches between these places'
+        return None, note
+    if total > 0 and covered < min_covered * total:
+        note['why'] = f'the source holds only {covered / total * 100:.0f}% of the way between these places'
+        return None, note
+    return runs, note
