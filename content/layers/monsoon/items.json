@@ -1,0 +1,176 @@
+[
+  {
+    "id": "kerala-onset",
+    "status": "draft",
+    "name": {
+      "en": "Onset over Kerala",
+      "hi": "केरल पर आगमन"
+    },
+    "category": "arabian",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 4.5,
+        "lon": 72.0
+      },
+      "to": {
+        "lat": 8.6,
+        "lon": 76.9
+      },
+      "bow": 0.16
+    },
+    "normal_date": "1 June",
+    "blurb": {
+      "en": "The date the south-west monsoon is taken to have arrived in India, declared by the IMD when rain, wind and cloud all meet its test at a set of stations across Kerala and Lakshadweep.",
+      "hi": "वह तिथि जब दक्षिण-पश्चिम मानसून का भारत आगमन माना जाता है; आईएमडी इसे तब घोषित करता है जब केरल और लक्षद्वीप के कई केंद्रों पर वर्षा, हवा और बादल तीनों उसकी कसौटी पर खरे उतरें।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  },
+  {
+    "id": "konkan-advance",
+    "status": "draft",
+    "name": {
+      "en": "Up the Konkan coast",
+      "hi": "कोंकण तट के साथ"
+    },
+    "category": "arabian",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 9.5,
+        "lon": 75.4
+      },
+      "to": {
+        "lat": 19.1,
+        "lon": 72.9
+      },
+      "bow": 0.18
+    },
+    "normal_date": "10 June",
+    "blurb": {
+      "en": "The Arabian Sea branch runs north along the coast, held against the Western Ghats, which take the rain out of it and leave the Deccan behind them dry.",
+      "hi": "अरब सागर शाखा तट के साथ उत्तर बढ़ती है, पश्चिमी घाट से टकराकर; घाट उसकी वर्षा सोख लेते हैं और पीछे का दक्कन सूखा रह जाता है।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  },
+  {
+    "id": "gujarat-advance",
+    "status": "draft",
+    "name": {
+      "en": "Into Gujarat and Rajasthan",
+      "hi": "गुजरात और राजस्थान तक"
+    },
+    "category": "arabian",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 19.0,
+        "lon": 72.5
+      },
+      "to": {
+        "lat": 26.9,
+        "lon": 72.0
+      },
+      "bow": 0.2
+    },
+    "normal_date": "1 July",
+    "blurb": {
+      "en": "The branch weakens as it goes north-west over drier land, and its far edge is roughly where the Thar begins: the desert is there because the monsoon runs out, not because the rain is blocked.",
+      "hi": "उत्तर-पश्चिम की सूखी भूमि पर शाखा कमज़ोर पड़ती जाती है, और उसका अंतिम छोर लगभग वहीं है जहाँ थार शुरू होता है: मरुस्थल इसलिए है कि मानसून चुक जाता है, इसलिए नहीं कि वर्षा रुकती है।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  },
+  {
+    "id": "bengal-onset",
+    "status": "draft",
+    "name": {
+      "en": "Into the north-east",
+      "hi": "पूर्वोत्तर में प्रवेश"
+    },
+    "category": "bengal",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.0,
+        "lon": 89.0
+      },
+      "to": {
+        "lat": 25.6,
+        "lon": 91.9
+      },
+      "bow": 0.14
+    },
+    "normal_date": "5 June",
+    "blurb": {
+      "en": "The Bay of Bengal branch reaches the north-east first, where the Khasi hills turn it upward and wring it out: Mawsynram and Cherrapunji record some of the heaviest rainfall on Earth.",
+      "hi": "बंगाल की खाड़ी शाखा पहले पूर्वोत्तर पहुँचती है, जहाँ खासी पहाड़ियाँ उसे ऊपर मोड़कर निचोड़ देती हैं: मॉसिनराम और चेरापूंजी पृथ्वी की सबसे अधिक वर्षा दर्ज करते हैं।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  },
+  {
+    "id": "gangetic-advance",
+    "status": "draft",
+    "name": {
+      "en": "West along the plain",
+      "hi": "मैदान के साथ पश्चिम"
+    },
+    "category": "bengal",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.3,
+        "lon": 90.5
+      },
+      "to": {
+        "lat": 28.6,
+        "lon": 77.2
+      },
+      "bow": 0.14
+    },
+    "normal_date": "27 June",
+    "blurb": {
+      "en": "Turned west by the Himalaya, the branch travels up the Gangetic plain against the direction the rivers run, reaching Delhi about four weeks after Kerala.",
+      "hi": "हिमालय से पश्चिम की ओर मुड़कर शाखा गंगा के मैदान पर नदियों की विपरीत दिशा में बढ़ती है और केरल के लगभग चार सप्ताह बाद दिल्ली पहुँचती है।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  },
+  {
+    "id": "withdrawal",
+    "status": "draft",
+    "name": {
+      "en": "Withdrawal from the north-west",
+      "hi": "उत्तर-पश्चिम से वापसी"
+    },
+    "category": "retreat",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.5,
+        "lon": 73.5
+      },
+      "to": {
+        "lat": 11.0,
+        "lon": 80.5
+      },
+      "bow": -0.2
+    },
+    "normal_date": "17 September",
+    "blurb": {
+      "en": "The monsoon retreats in the order it came, from the north-west first. As it crosses the Bay it picks up moisture again and gives the Coromandel coast its own rains in October and November.",
+      "hi": "मानसून जिस क्रम में आया था उसी क्रम में लौटता है, पहले उत्तर-पश्चिम से। खाड़ी पार करते हुए वह फिर नमी लेता है और अक्टूबर-नवंबर में कोरोमंडल तट को उसकी अपनी वर्षा देता है।"
+    },
+    "sources": [
+      "https://mausam.imd.gov.in/"
+    ]
+  }
+]

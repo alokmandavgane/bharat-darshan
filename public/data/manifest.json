@@ -174,6 +174,59 @@
    "path": "layers/languages.json"
   },
   {
+   "id": "monsoon",
+   "type": "lines",
+   "title": {
+    "en": "The monsoon's advance",
+    "hi": "मानसून की प्रगति"
+   },
+   "icon": "wave",
+   "group": "physical",
+   "default_on": false,
+   "count": 6,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "arabian",
+     "color": "#3f7f9c",
+     "title": {
+      "en": "Arabian Sea branch",
+      "hi": "अरब सागर शाखा"
+     }
+    },
+    {
+     "id": "bengal",
+     "color": "#5f8f6a",
+     "title": {
+      "en": "Bay of Bengal branch",
+      "hi": "बंगाल की खाड़ी शाखा"
+     }
+    },
+    {
+     "id": "retreat",
+     "color": "#b07a4a",
+     "title": {
+      "en": "Withdrawal",
+      "hi": "वापसी"
+     }
+    }
+   ],
+   "fields": {
+    "normal_date": {
+     "type": "text",
+     "label": {
+      "en": "Normal arrival",
+      "hi": "सामान्य आगमन"
+     }
+    }
+   },
+   "note": {
+    "en": "Normal dates, not a forecast: the south-west monsoon reaches Kerala around 1 June and covers the country by early July, but any given year runs days or weeks either side. The arrows show where the rain comes from and the order it arrives in, which is the part that hardly varies.",
+    "hi": "सामान्य तिथियाँ, पूर्वानुमान नहीं: दक्षिण-पश्चिम मानसून लगभग 1 जून को केरल पहुँचता है और जुलाई के आरंभ तक पूरे देश में फैल जाता है, पर किसी भी वर्ष में यह कुछ दिन या सप्ताह आगे-पीछे हो सकता है। तीर बताते हैं कि वर्षा कहाँ से आती है और किस क्रम में, जो लगभग नहीं बदलता।"
+   },
+   "path": "layers/monsoon.json"
+  },
+  {
    "id": "physiography",
    "type": "areas",
    "title": {
@@ -1016,6 +1069,10 @@
   "layers/languages.json": {
    "size": 22214,
    "sha256": "3b8eb63899a2"
+  },
+  "layers/monsoon.json": {
+   "size": 8627,
+   "sha256": "7d4e007273a9"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
