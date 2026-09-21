@@ -25,9 +25,16 @@ Outputs, per tier H:
                                      to the international land boundary (coast excluded),
                                      255 on the line falling to 0 at range_px pixels; sampled
                                      LINEAR in the shader for crisp lines at any zoom.
-Needs step 1 (the state ID raster marks India as land). Previews in pipeline/tmp/.
+                                     Measured to the smoothed outlines of step 1, not to the
+                                     ID raster's pixel edges: a distance field can only draw
+                                     the curve it was measured from, and the pixel edges are
+                                     a 1.7 km staircase.
+Needs step 1 (the state ID raster marks India as land, and its outlines are the lines
+scored here). Previews in pipeline/tmp/.
 """
 import argparse
+import glob
+import json
 import os
 import sys
 import time
@@ -132,12 +139,64 @@ def bounded_distance(mask, radius):
     return raster.bounded_distance(mask, radius)
 
 
-def border_fields(ids, land):
+def _sample(a, pts, width, height):
+    """Nearest value of a raster at continuous pixel coordinates."""
+    c = np.clip(pts[:, 0].astype(np.int64), 0, width - 1)
+    r = np.clip(pts[:, 1].astype(np.int64), 0, height - 1)
+    return a[r, c]
+
+
+PROBE_PX = 2.0     # how far outside a segment to look for what is on the other side
+
+
+def border_segments(out_dir, ids, land, width, height):
+    """The two lines the shader scores, as segments in pixel coordinates.
+
+    The outlines from step 1 are the project's one boundary -- the block's walls stand
+    on them and its mask is filled from them -- so the scored lines are measured from
+    them too. Each segment is named by what lies on its outward side: another state
+    makes it a state border, open land outside India the international boundary. The
+    coast is not scored; the ocean has its own baked shadow.
+
+    A shared border is traced by both of its states. The two curves are the same
+    smoothing of the same pixel edges, so taking both costs a little work and no
+    accuracy, and it cannot leave a gap the way picking one of them could.
+    """
+    sx, sz = width / grid.WIDTH_KM, height / grid.HEIGHT_KM
+    internal, external = [], []
+    for path in sorted(glob.glob(os.path.join(out_dir, '*.json'))):
+        with open(path, encoding='utf-8') as f:
+            o = json.load(f)
+        for loop in o['loops']:
+            p = np.asarray(loop, dtype=np.float64)
+            if len(p) < 2:
+                continue
+            p = np.column_stack([(p[:, 0] + grid.WIDTH_KM / 2) * sx, (p[:, 1] + grid.HEIGHT_KM / 2) * sz])
+            q = np.roll(p, -1, axis=0)
+            d = q - p
+            length = np.hypot(d[:, 0], d[:, 1])
+            ok = length > 1e-9
+            p, q, d, length = p[ok], q[ok], d[ok], length[ok]
+            if not len(p):
+                continue
+            outward = np.column_stack([d[:, 1], -d[:, 0]]) / length[:, None]   # loops run clockwise
+            probe = 0.5 * (p + q) + outward * PROBE_PX
+            other = _sample(ids, probe, width, height)
+            seg = np.column_stack([p, q])
+            if o['id'] == 0:                                   # india.json: the country outline
+                external.append(seg[(other == 0) & _sample(land, probe, width, height)])
+            else:
+                internal.append(seg[(other != 0) & (other != o['id'])])
+    empty = np.zeros((0, 4))
+    return (np.concatenate(internal) if internal else empty,
+            np.concatenate(external) if external else empty)
+
+
+def border_fields(internal, external, width, height):
     """(h, w, 2) uint8: encoded distance to internal and to external land borders."""
-    internal, external = raster.edges(ids, land)
     out = []
-    for e in (internal, external):
-        d = raster.bounded_distance(e, BORDER_RANGE_PX)
+    for seg in (internal, external):
+        d = raster.distance_to_segments(seg, width, height, BORDER_RANGE_PX)
         out.append(np.clip(np.round(255.0 * (1.0 - d / BORDER_RANGE_PX)), 0, 255).astype(np.uint8))
     return np.dstack(out)
 
@@ -201,7 +260,10 @@ def main():
             np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
             np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
 
-        borders = border_fields(ids, land)
+        seg_int, seg_ext = border_segments(os.path.join(args.out, 'regions', 'outlines'),
+                                           ids, land, width, height)
+        borders = border_fields(seg_int, seg_ext, width, height)
+        print(f'  border lines: {len(seg_int)} state segments, {len(seg_ext)} international')
 
         p1 = os.path.join(out_dir, f'heights-{height}.bin.gz')
         p2 = os.path.join(out_dir, f'shade-{height}.bin.gz')

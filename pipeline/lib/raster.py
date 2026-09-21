@@ -101,6 +101,38 @@ def bounded_distance(mask, radius):
     return dist
 
 
+def distance_to_segments(segments, width, height, radius):
+    """Euclidean distance in pixels to the nearest segment, capped at `radius`.
+
+    segments: (n, 4) of (x0, y0, x1, y1) in continuous pixel coordinates, where pixel
+    (col, row) covers [col, col+1) x [row, row+1) and so has its centre at +0.5.
+
+    `bounded_distance` measures to a set of pixels, which is all a raster can offer and
+    which makes any line traced from one a staircase. This measures to the line itself,
+    so the level set the shader draws is the curve, not the pixels under it. Only the
+    window within `radius` of each segment is touched: the cost follows the length of
+    the lines, not the area of the raster.
+    """
+    out = np.full((height, width), float(radius), np.float32)
+    r = float(radius)
+    for x0, y0, x1, y1 in np.asarray(segments, dtype=np.float64):
+        c0 = max(0, int(np.floor(min(x0, x1) - r - 0.5)))
+        c1 = min(width - 1, int(np.ceil(max(x0, x1) + r - 0.5)))
+        r0 = max(0, int(np.floor(min(y0, y1) - r - 0.5)))
+        r1 = min(height - 1, int(np.ceil(max(y0, y1) + r - 0.5)))
+        if c1 < c0 or r1 < r0:
+            continue
+        wx = np.arange(c0, c1 + 1, dtype=np.float64)[None, :] + 0.5 - x0
+        wy = np.arange(r0, r1 + 1, dtype=np.float64)[:, None] + 0.5 - y0
+        vx, vy = x1 - x0, y1 - y0
+        L2 = vx * vx + vy * vy
+        t = np.clip((wx * vx + wy * vy) / L2, 0.0, 1.0) if L2 > 0.0 else 0.0
+        d = np.hypot(wx - t * vx, wy - t * vy)
+        win = out[r0:r1 + 1, c0:c1 + 1]
+        np.minimum(win, d, out=win)
+    return out
+
+
 def erode(mask):
     """4-connected erosion of a boolean mask."""
     out = mask.copy()
