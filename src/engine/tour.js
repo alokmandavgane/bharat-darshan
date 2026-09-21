@@ -21,6 +21,7 @@ const SWAY_DEG = 6;                // the view turns gently from side to side be
  */
 export function createTour(store, { stops, visit, home }) {
   let route = [];
+  let stopIds = [];                // the same route as plain { layer, id }, for the card's steps
   let at = -1;                     // index of the stop on show, -1 before the first
   let timer = 0;
   let playing = false;
@@ -42,13 +43,16 @@ export function createTour(store, { stops, visit, home }) {
   }
 
   function publish() {
-    store.set('tour', { playing, index: at, total: route.length });
+    // The route is published as well as counted: the card's prev and next step through
+    // the same stops the tour would visit, so by hand and on play follow one path.
+    store.set('tour', { playing, index: at, total: route.length, stops: stopIds });
   }
 
   /** Recount what is on show (layers, drafts or the level changed); a tour under way keeps its route. */
   function refresh() {
     if (playing) return;
     route = order(stops());
+    stopIds = route.map((s) => ({ layer: s.layer, id: s.item.id }));
     at = -1;
     publish();
   }

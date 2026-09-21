@@ -363,6 +363,37 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-info:hover, .sheet-info[aria-expanded="true"] { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
 .sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
+/* The card's own steps: walk the places on show without closing the card. */
+.card-steps {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 10px;
+}
+.card-steps button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-soft);
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.card-steps button::before { content: ""; position: absolute; inset: -7px; }   /* a 44 px touch target */
+.card-steps button svg { width: 16px; height: 16px; }
+.card-steps button:hover { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
+.card-steps button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.card-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 5.5em;
+  text-align: center;
+}
 .sheet-close {
   font: inherit;
   font-size: 1.3rem;

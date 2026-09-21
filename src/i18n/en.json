@@ -53,5 +53,9 @@
   "tour.pause": "Pause the tour",
   "layer.group.physical": "Land and water",
   "layer.group.culture": "People and places",
-  "layer.group.network": "Roads and rail"
+  "layer.group.network": "Roads and rail",
+  "card.steps": "Step through the places on show",
+  "card.prev": "Previous place",
+  "card.next": "Next place",
+  "card.count": "{n} of {total}"
 }

@@ -133,23 +133,22 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   document.addEventListener('visibilitychange', flowCheck);
 
   /**
-   * A link can name an item before its layer has been fetched, so the store carries the
-   * stub { layer, id } and this fills in the rest as soon as that layer lands. An id the
-   * layer turns out not to have is cleared rather than left as an empty card.
+   * Fill in a { layer, id } stub. A link and the card's own steps both open a card by
+   * name alone and whichever layer holds it supplies the rest. False means no layer on
+   * show has it, which is ordinary while one is still being fetched.
    */
-  function resolveItem(layerId) {
-    const sel = store.get('item');
-    if (!sel || sel.data || sel.layer !== layerId) return;
-    const line = lines?.find(layerId, sel.id);
+  function fillItem(sel, source) {
+    const line = lines?.find(sel.layer, sel.id);
     if (line) {
-      store.set('item', { layer: layerId, id: sel.id, data: line.item, categories: line.categories, fields: line.fields },
-                { source: 'init' });
-      return;
+      store.set('item', { layer: sel.layer, id: sel.id, data: line.item, categories: line.categories, fields: line.fields },
+                { source });
+      return true;
     }
-    const data = points.find(layerId, sel.id);
-    store.set('item', data
-      ? { layer: layerId, id: sel.id, data, categories: points.categories(layerId), fields: points.fields(layerId) }
-      : null, { source: 'init' });
+    const data = points.find(sel.layer, sel.id);
+    if (!data) return false;
+    store.set('item', { layer: sel.layer, id: sel.id, data, categories: points.categories(sel.layer), fields: points.fields(sel.layer) },
+              { source });
+    return true;
   }
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
@@ -170,7 +169,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       if (!entry) continue;
       const done = (fn) => {
         loading.add(id);
-        loadJson(entry.path).then((data) => { fn(data); resolveItem(id); invalidate(); })
+        loadJson(entry.path).then((data) => {
+          fn(data);
+          // A link can name an item before its layer has arrived. Fill it in now, and
+          // give up on an id this layer turns out not to have.
+          const sel = store.get('item');
+          if (sel && !sel.data && sel.layer === id && !fillItem(sel, 'init')) store.set('item', null);
+          invalidate();
+        })
           .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
           .finally(() => loading.delete(id));
       };
@@ -200,6 +206,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   /** A selected item flies into view; the tour does its own flying. */
   store.subscribe('item', (sel, _, meta) => {
+    // Opened by name alone: fill it in and let the set that does it carry on from here.
+    if (sel && !sel.data) { fillItem(sel, meta.source); return; }
     lines?.setSelected(sel ? { layer: sel.layer, id: sel.id } : null);
     invalidate();
     if (!sel || meta.source === 'tour') return;

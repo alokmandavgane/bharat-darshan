@@ -29,9 +29,9 @@ const store = createStore({
   pointer: null,
   flyTo: null,
   focus: null,
-  // A deep link to an item is a stub, { layer, id }: the engine fills in the data once
-  // that layer has arrived (see resolveItem).
-  item: url.item ? { layer: url.item.layer, id: url.item.id } : null,
+  // A deep link to an item opens it by name alone; the engine fills in the data once that
+  // layer has arrived (see fillItem). The explicit nulls matter: the store shallow-merges.
+  item: url.item ? { layer: url.item.layer, id: url.item.id, data: null, categories: null, fields: null } : null,
   // { active: [...] } once the manifest says which layers exist, or straight from the URL.
   // An item's own layer is switched on whatever else the link asked for: a card with
   // nothing drawn under it is not what the link meant.

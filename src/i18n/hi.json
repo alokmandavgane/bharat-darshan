@@ -53,5 +53,9 @@
   "tour.pause": "भ्रमण रोकें",
   "layer.group.physical": "भूमि और जल",
   "layer.group.culture": "लोग और स्थान",
-  "layer.group.network": "सड़क और रेल"
+  "layer.group.network": "सड़क और रेल",
+  "card.steps": "दिखाए गए स्थानों में आगे-पीछे जाएँ",
+  "card.prev": "पिछला स्थान",
+  "card.next": "अगला स्थान",
+  "card.count": "{total} में से {n}"
 }

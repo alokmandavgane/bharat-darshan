@@ -26,6 +26,10 @@ export function createShell(root, store) {
   const alt = $('.sheet-alt');
   const closeBtn = $('.sheet-close');
   const facts = $('.facts');
+  const steps = $('.card-steps');
+  const stepPrev = $('.card-prev');
+  const stepNext = $('.card-next');
+  const stepCount = $('.card-count');
   const listWrap = $('.unit-list-wrap');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
@@ -67,6 +71,10 @@ export function createShell(root, store) {
   store.subscribe('surroundings', (on) => surroundingsChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
   slider.addEventListener('input', () => store.set('relief', { amount: Number(slider.value), on: true }));
   retry.addEventListener('click', () => location.reload());
+  // The card's own steps walk the tour's route by hand: a card is opened by name alone
+  // and the engine fills in the rest, the same way a link does.
+  stepPrev.addEventListener('click', () => step(-1));
+  stepNext.addEventListener('click', () => step(1));
   closeBtn.addEventListener('click', () => {
     if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
@@ -314,6 +322,33 @@ export function createShell(root, store) {
     }
   }
 
+  /** Where the open card sits in the tour's route, or -1 when it is not one of its stops. */
+  function stepIndex() {
+    const sel = store.get('item');
+    const stops = store.get('tour')?.stops || [];
+    if (!sel) return -1;
+    return stops.findIndex((s) => s.layer === sel.layer && s.id === sel.id);
+  }
+
+  function step(by) {
+    const stops = store.get('tour')?.stops || [];
+    const at = stepIndex();
+    if (at < 0 || stops.length < 2) return;
+    const next = (at + by + stops.length) % stops.length;      // the route is a loop
+    // data: null on purpose. The store shallow-merges, so a bare { layer, id } would keep
+    // the card that is open and show it under the new name until the engine caught up.
+    store.set('item', { layer: stops[next].layer, id: stops[next].id, data: null, categories: null, fields: null });
+  }
+
+  /** The prev / next row, shown only while the open card is one of several stops. */
+  function renderSteps() {
+    const stops = store.get('tour')?.stops || [];
+    const at = stepIndex();
+    steps.hidden = at < 0 || stops.length < 2 || !!store.get('tour')?.playing;
+    if (steps.hidden) return;
+    stepCount.textContent = t('card.count', { n: formatNumber(at + 1), total: formatNumber(stops.length) });
+  }
+
   /** The sheet head and body: an item, the selected unit (peek card or state view), or the country with its list. */
   function renderSelection() {
     const r = store.get('regions');
@@ -425,7 +460,8 @@ export function createShell(root, store) {
   store.subscribe('selection', renderSelection);
   store.subscribe('level', renderSelection);
   store.subscribe('drafts', renderSelection);
-  store.subscribe('item', renderSelection);
+  store.subscribe('item', () => { renderSelection(); renderSteps(); });
+  store.subscribe('tour', renderSteps);
   for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
   store.subscribe('catalog', renderChips, { immediate: true });
   store.subscribe('layers', renderChips);
