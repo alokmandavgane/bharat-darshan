@@ -7,9 +7,10 @@
 // finger pans, two rotate and pinch, because a phone has no second button and panning
 // is what a finger on a map is for.
 import {
-  clamp, clampCamera, clampTarget, groundAnchor, groundShift, holdAnchor, LIMITS,
-  orbitAbout, paddedCentre, zoomAbout,
+  clamp, clampCamera, clampTarget, FLING, flingFrom, groundAnchor, groundShift,
+  holdAnchor, LIMITS, orbitAbout, paddedCentre, zoomAbout,
 } from '../engine/camera-math.js';
+import { reducedMotion } from '../engine/tween.js';
 
 const TAP_SLOP = 8;         // px of travel that still counts as a tap
 const TAP_MS = 350;
@@ -23,6 +24,8 @@ const TILT_SPREAD_PX = 24;
 const TILT_TWIST_DEG = 7;
 const TWIST_LATCH_DEG = 8;  // how far the fingers must turn before a twist becomes a turn
 const TILT_PER_PX = 0.2;    // degrees of pitch per pixel the midpoint travels
+const TURN_PER_PX = 0.25;   // degrees of yaw per pixel a turning drag travels
+const VEL_SMOOTH = 0.72;    // how much of the previous velocity a sample keeps (F6)
 
 /**
  * Taps land in the store as `tap` { x, y, type } and pointer moves (fine pointers, no
@@ -89,6 +92,57 @@ export function attachGestures(canvas, store) {
 
   /** The anchor the gesture in progress is holding, made when it began. */
   let held = null;
+  /** A smoothed screen velocity, px per ms, so a release can carry on (F6). */
+  let vel = null;      // { kind: 'pan' | 'turn', x, y, t }
+  let glideRaf = 0;
+
+  /** Note how fast the hand is moving, for the glide after it lets go. */
+  function track(kind, dx, dy) {
+    const now = performance.now();
+    const dt = clamp(now - (vel?.t ?? now - 16), 1, 64);
+    const keep = vel?.kind === kind ? VEL_SMOOTH : 0;
+    vel = { kind, t: now, x: vel ? vel.x * keep + (dx / dt) * (1 - keep) : dx / dt,
+            y: vel ? vel.y * keep + (dy / dt) * (1 - keep) : dy / dt };
+  }
+
+  function stopGlide() {
+    if (glideRaf) cancelAnimationFrame(glideRaf);
+    glideRaf = 0;
+  }
+
+  /**
+   * Carry the release on and let it die away (PLAN.md F6). A drag that stops dead the
+   * instant the finger lifts is a picture being repositioned; one that coasts is an
+   * object that was pushed. It only runs while something moves, so render-on-demand
+   * still holds, and `write` clamps it with no give, so it comes to rest at the edge of
+   * the bounds instead of sailing past them.
+   */
+  function glide(anchor) {
+    stopGlide();
+    const start = reducedMotion() ? null : flingFrom(vel);
+    if (!start) { settle(); return; }
+    const { kind } = start;
+    let vx = start.x, vy = start.y;
+    let last = performance.now();
+    let spent = 0;
+    const step = (now) => {
+      const dt = clamp(now - last, 1, 48);
+      last = now;
+      spent += dt;
+      const dx = vx * dt, dy = vy * dt;
+      const decay = Math.exp(-dt / FLING.tau);
+      vx *= decay; vy *= decay;
+      const c = cam();
+      if (kind === 'turn' && anchor) write(orbitAbout(c, c.yaw + dx * TURN_PER_PX, c.pitch - dy * TURN_PER_PX, anchor, viewport()));
+      else {
+        const [gx, gz] = groundShift(c, -dx, -dy, viewport());
+        write({ ...c, x: c.x + gx, z: c.z + gz });
+      }
+      if (spent > FLING.maxMs || Math.hypot(vx, vy) < FLING.minSpeed) { glideRaf = 0; settle(); return; }
+      glideRaf = requestAnimationFrame(step);
+    };
+    glideRaf = requestAnimationFrame(step);
+  }
 
   // Screen coordinates relative to the canvas centre, y up.
   function local(e) {
@@ -98,6 +152,8 @@ export function attachGestures(canvas, store) {
 
   function onDown(e) {
     if (e.pointerType === 'mouse' && e.button !== 0 && e.button !== 2) return;
+    stopGlide();                       // a hand on the model stops it dead
+    vel = null;
     canvas.setPointerCapture(e.pointerId);
     const p = local(e);
     pointers.set(e.pointerId, { x: p.x, y: p.y, sx: p.x, sy: p.y, t: performance.now(), type: e.pointerType, button: e.button });
@@ -140,9 +196,11 @@ export function attachGestures(canvas, store) {
         // tips its far side towards you, as if a finger were on the table itself. It
         // turns about the point the button came down on, which stays under the cursor.
         const c = cam();
-        write(orbitAbout(c, c.yaw + dx * 0.25, c.pitch - dy * 0.25, held, vp));
+        track('turn', dx, dy);
+        write(orbitAbout(c, c.yaw + dx * TURN_PER_PX, c.pitch - dy * TURN_PER_PX, held, vp));
       } else {
         const c = cam();
+        track('pan', dx, dy);
         const [gx, gz] = groundShift(c, -dx, -dy, vp);
         write({ ...c, x: c.x + gx, z: c.z + gz });
       }
@@ -163,6 +221,7 @@ export function attachGestures(canvas, store) {
         // And the gesture keeps the point it took hold of between the fingers, wherever
         // the fingers have carried it. That is the pan, and there is no separate one:
         // holding the anchor to the new midpoint is exactly what a pan means.
+        track('pan', now.midX - pinch.midX, now.midY - pinch.midY);
         write(holdAnchor(c, { ...held, sx: now.midX, sy: now.midY }, vp));
       }
       pinch = now;
@@ -210,8 +269,8 @@ export function attachGestures(canvas, store) {
     pointers.delete(e.pointerId);
     // A finger lifting ends the two-finger gesture and whatever it had decided to be;
     // if two are still down, what is left is a new one, undecided again.
-    if (pointers.size === 0) { held = null; two = null; settle(); }
-    else if (pointers.size === 1) { pinch = null; two = null; held = null; resetOrigins(); }
+    if (pointers.size === 0) { const a = held; held = null; two = null; glide(a); }
+    else if (pointers.size === 1) { pinch = null; two = null; held = null; vel = null; resetOrigins(); }
     else if (pointers.size === 2) {
       pinch = pinchState();
       two = { mode: 'undecided', twist: false, start: { ...pinch } };
@@ -247,6 +306,7 @@ export function attachGestures(canvas, store) {
 
   function onWheel(e) {
     e.preventDefault();
+    stopGlide();
     const p = local(e);
     // Trackpad pinch arrives as ctrl+wheel with small deltas; mouse wheels jump.
     const step = e.deltaMode === 1 ? e.deltaY * 20 : e.deltaY;
@@ -264,6 +324,7 @@ export function attachGestures(canvas, store) {
     if (k !== 'q' && k !== 'e') return;
     const el = /** @type {HTMLElement} */ (e.target);
     if (el?.closest('input, textarea, [contenteditable]')) return;   // someone is searching
+    stopGlide();
     const c = cam();
     const [cx, cy] = paddedCentre(viewport(), store.get('padding'));
     write(orbitAbout(c, c.yaw + (k === 'q' ? -15 : 15), c.pitch, turnAnchor(cx, cy), viewport()));
@@ -291,5 +352,6 @@ export function attachGestures(canvas, store) {
     canvas.removeEventListener('pointercancel', onUp);
     canvas.removeEventListener('wheel', onWheel);
     window.removeEventListener('keydown', onKey);
+    stopGlide();
   };
 }

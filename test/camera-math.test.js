@@ -9,7 +9,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, groundAnchor,
+  basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, FLING, flingFrom, groundAnchor,
   groundPoint, groundShift, holdAnchor, kmPerPixel, lightDirection, LIMITS, orbitAbout, paddedCentre,
   project, TARGET_MARGIN, TARGET_MARGIN_VIEW, unwrapYaw, wrapYaw, zoomAbout,
 } from '../src/engine/camera-math.js';
@@ -273,6 +273,36 @@ test('the maths holds all the way round, not just in the old +-40 window', () =>
     const [qx, qy] = project(turned, held.point, vp);
     close(Math.hypot(qx - sx, qy - sy), 0, 1e-6, `anchor held at yaw ${yaw}`);
   }
+});
+
+// --- momentum (PLAN.md F6)
+
+test('a slow release is a stop, a fast one is a fling', () => {
+  assert.equal(flingFrom(null), null, 'nothing to go on');
+  assert.equal(flingFrom({ kind: 'pan', x: 0, y: 0 }), null, 'a hand at rest');
+  assert.equal(flingFrom({ kind: 'pan', x: 0.05, y: 0.05 }), null, 'a careful placement, not a throw');
+  assert.ok(flingFrom({ kind: 'pan', x: 1.5, y: 0 }), 'a flick');
+  // right at the threshold, which is where an off-by-one would hide
+  assert.equal(flingFrom({ kind: 'pan', x: FLING.minSpeed - 1e-9, y: 0 }), null, 'just under');
+  assert.ok(flingFrom({ kind: 'pan', x: FLING.minSpeed, y: 0 }), 'just over');
+  assert.equal(flingFrom({ kind: 'pan', x: NaN, y: 0 }), null, 'a velocity that is not a number');
+});
+
+test('a fling travels speed x tau, capped, and turning is damped harder', () => {
+  const travel = (v) => Math.hypot(v.x, v.y) * FLING.tau;
+  // a 240 px drag thrown at 3.3 px/ms: the glide adds about half as far again
+  const pan = flingFrom({ kind: 'pan', x: -3.3, y: 0 });
+  const added = travel(pan);
+  assert.ok(added > 240 * 1.2 && added < 240 * 2.2, `${added.toFixed(0)} px after a 240 px drag`);
+  // the same throw, turning: much less
+  const turn = flingFrom({ kind: 'turn', x: 3.3, y: 0 });
+  close(travel(turn) / added, FLING.turnScale, 1e-9, 'a turn is damped by turnScale');
+  // and an absurd velocity is capped rather than launching the model
+  const wild = flingFrom({ kind: 'pan', x: 400, y: 0 });
+  close(Math.hypot(wild.x, wild.y), FLING.maxSpeed, 1e-9, 'capped');
+  // the direction is kept whatever the scaling
+  const d = flingFrom({ kind: 'pan', x: 3, y: -4 });
+  close(Math.atan2(d.y, d.x), Math.atan2(-4, 3), 1e-12, 'direction kept');
 });
 
 // --- the light stays with the viewer (PLAN.md F4)

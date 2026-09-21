@@ -229,6 +229,29 @@ export function clampTarget(cam, bounds, viewport, pad, give = 0) {
   return { ...cam, x: cam.x + (tx - gx), z: cam.z + (tz - gz) };
 }
 
+// --- momentum (PLAN.md F6): a release carries on and dies away
+//
+// The glide is `v * exp(-t / tau)`, so its whole travel is `|v| * tau` pixels: tau is
+// the one number that says how far a flick carries. At 130 ms a hard flick adds about
+// half as far again as the drag that threw it, which reads as weight rather than as the
+// model getting away. Turning is damped harder than sliding -- a spin that keeps going
+// is disorienting in a way that a slide is not -- and a very fast release is capped, so
+// a jumpy event stream cannot launch the model.
+export const FLING = { tau: 130, maxMs: 700, minSpeed: 0.12, maxSpeed: 4, turnScale: 0.35 };
+
+/**
+ * The velocity a glide should start from, or null when the hand was not moving fast
+ * enough at release for this to be a fling rather than a stop.
+ * @param {{ kind: string, x: number, y: number } | null} vel  screen px per ms
+ */
+export function flingFrom(vel) {
+  if (!vel) return null;
+  const speed = Math.hypot(vel.x, vel.y);
+  if (!(speed >= FLING.minSpeed)) return null;
+  const scale = (vel.kind === 'turn' ? FLING.turnScale : 1) * Math.min(1, FLING.maxSpeed / speed);
+  return { kind: vel.kind, x: vel.x * scale, y: vel.y * scale };
+}
+
 /**
  * The one framing primitive: the camera (same yaw/pitch) that shows a scene box
  * inside the viewport minus padding, centred in the remaining area.
