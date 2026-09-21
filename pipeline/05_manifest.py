@@ -58,12 +58,15 @@ def main():
             layers.append({k: L[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group',
                                              'default_on', 'count', 'reviewed', 'categories') if k in L}
                           | {'path': f'layers/{n}'})
+    world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')
+             if os.path.exists(os.path.join(out, 'terrain', f'world-{k}.bin.gz'))}
     manifest = {
         'version': 1,
         'grid': grid.describe(),
         'tiers': {h: tiers[h] for h in sorted(tiers, key=int)},
         'regions': {'states': 'regions/states.json', 'count': len(states['units'])},
         'states': 'states/index.json' if os.path.exists(os.path.join(out, 'states', 'index.json')) else None,
+        'world': world or None,
         'layers': layers,
         'attribution': [
             states.get('attribution', ''),
