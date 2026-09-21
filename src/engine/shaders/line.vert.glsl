@@ -11,14 +11,17 @@ uniform vec2 uResolution;    // drawing buffer size in pixels
 uniform vec3 uRankPx;        // half-width in pixels for rank 1, 2, 3
 uniform vec3 uRankZoom;      // view height (km) below which each rank appears
 uniform float uZoom;
+uniform float uSelectedIdx;  // index of the highlighted item, or -1
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
 in float rank;               // 1, 2 or 3
+in float itemIdx;            // which item of the layer this vertex belongs to
 in vec3 colour;
 
 out vec3 vColour;
 out float vFade;
+out float vSel;
 out vec2 vUv;
 out float vEdge;
 
@@ -42,7 +45,9 @@ void main() {
   vec2 t = ahead.xy / ahead.w - clip.xy / clip.w;
   t = length(t) > 0.0 ? normalize(t * uResolution) : vec2(1.0, 0.0);
   vec2 n = vec2(-t.y, t.x);
-  float halfPx = byRank(uRankPx);
+  // A picked line thickens rather than changing colour: it is still the same river.
+  vSel = uSelectedIdx >= 0.0 && abs(itemIdx - uSelectedIdx) < 0.5 ? 1.0 : 0.0;
+  float halfPx = byRank(uRankPx) * (1.0 + 0.9 * vSel);
   clip.xy += n * side * halfPx / uResolution * 2.0 * clip.w;
 
   vColour = colour;
@@ -50,5 +55,6 @@ void main() {
   // A tributary is noise on the whole country and detail once the camera is in close.
   float z = byRank(uRankZoom);
   vFade = z <= 0.0 ? 1.0 : 1.0 - smoothstep(z * 0.8, z * 1.25, uZoom);
+  vFade = max(vFade, vSel);
   gl_Position = clip;
 }

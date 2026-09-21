@@ -11,24 +11,37 @@ const RANK_PX = [1.5, 1.1, 0.8];         // half-width in CSS pixels, widest riv
 const RANK_ZOOM = [0, 0, 2400];          // view height (km) below which a rank appears; 0 = always
 
 /**
- * One ribbon geometry for a whole layer.
+ * One ribbon geometry for a whole layer, and the records picking needs: every item with
+ * its runs, its bounding box in scene km, and the index the shader highlights it by.
  * @param {{ items: any[], categories?: any[] }} data
  */
 export function linesGeometry(data) {
   const colours = new Map((data.categories || []).map((c) => [c.id, new Color(c.color || '#5a7f97')]));
   const runs = [];
-  for (const item of data.items || []) {
+  const records = (data.items || []).map((item, idx) => {
     const colour = colours.get(item.category) || new Color('#5a7f97');
+    const mine = [];
+    let x0 = Infinity, z0 = Infinity, x1 = -Infinity, z1 = -Infinity;
     for (const flat of item.lines || []) {
-      if (flat.length >= 4) runs.push({ flat, colour, rank: item.rank || 3 });
+      if (flat.length < 4) continue;
+      for (let i = 0; i < flat.length; i += 2) {
+        if (flat[i] < x0) x0 = flat[i];
+        if (flat[i] > x1) x1 = flat[i];
+        if (flat[i + 1] < z0) z0 = flat[i + 1];
+        if (flat[i + 1] > z1) z1 = flat[i + 1];
+      }
+      mine.push(flat);
+      runs.push({ flat, colour, rank: item.rank || 3, idx });
     }
-  }
+    return { item, idx, runs: mine, bbox: [x0, z0, x1, z1] };
+  }).filter((r) => r.runs.length);
   const points = runs.reduce((n, r) => n + r.flat.length / 2, 0);
   const pos = new Float32Array(points * 2 * 3);
   const dir = new Float32Array(points * 2 * 2);
   const side = new Float32Array(points * 2);
   const rank = new Float32Array(points * 2);
   const colour = new Float32Array(points * 2 * 3);
+  const itemIdx = new Float32Array(points * 2);
   const index = new Uint32Array(Math.max(0, (points - runs.length) * 6));
   let v = 0, q = 0;
   for (const run of runs) {
@@ -47,6 +60,7 @@ export function linesGeometry(data) {
         dir[v * 2] = tx; dir[v * 2 + 1] = tz;
         side[v] = s;
         rank[v] = run.rank;
+        itemIdx[v] = run.idx;
         colour[v * 3] = run.colour.r; colour[v * 3 + 1] = run.colour.g; colour[v * 3 + 2] = run.colour.b;
         v++;
       }
@@ -63,8 +77,18 @@ export function linesGeometry(data) {
   g.setAttribute('side', new BufferAttribute(side, 1));
   g.setAttribute('rank', new BufferAttribute(rank, 1));
   g.setAttribute('colour', new BufferAttribute(colour, 3));
+  g.setAttribute('itemIdx', new BufferAttribute(itemIdx, 1));
   g.setIndex(new BufferAttribute(index, 1));
-  return g;
+  return { geometry: g, records };
+}
+
+/** Square of the distance from (x, z) to the segment a-b, in scene km. */
+function segDist2(x, z, ax, az, bx, bz) {
+  const vx = bx - ax, vz = bz - az;
+  const L2 = vx * vx + vz * vz;
+  const t = L2 > 0 ? Math.max(0, Math.min(1, ((x - ax) * vx + (z - az) * vz) / L2)) : 0;
+  const dx = x - (ax + t * vx), dz = z - (az + t * vz);
+  return dx * dx + dz * dz;
 }
 
 /**
@@ -85,6 +109,7 @@ function lineMaterial(surface, onBlock) {
       uRankPx: { value: new Vector3(...RANK_PX) },
       uRankZoom: { value: new Vector3(...RANK_ZOOM) },
       uZoom: { value: 3000 },
+      uSelectedIdx: { value: -1 },
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
     },
@@ -97,11 +122,12 @@ function lineMaterial(surface, onBlock) {
  * a run that belongs to it.
  */
 export function createLines(scene, terrainUniforms) {
-  /** @type {Map<string, { geometry: any, plate: any, block: any }>} */
+  /** @type {Map<string, { geometry: any, records: any[], plate: any, block: any }>} */
   const layers = new Map();
   let active = new Set();
   let blockUniforms = null;
   let liftedId = -1;
+  let selected = null;
   const view = { w: 1, h: 1, zoom: 3000 };
 
   function eachMaterial(fn) {
@@ -114,6 +140,11 @@ export function createLines(scene, terrainUniforms) {
       m.uniforms.uZoom.value = view.zoom;
       m.uniforms.uLiftedId.value = liftedId;
     });
+    for (const [id, l] of layers) {
+      const idx = selected && selected.layer === id ? l.records.find((r) => r.item.id === selected.id)?.idx ?? -1 : -1;
+      l.plate.material.uniforms.uSelectedIdx.value = idx;
+      if (l.block) l.block.material.uniforms.uSelectedIdx.value = idx;
+    }
   }
 
   function setBlockMesh(entry) {
@@ -131,12 +162,12 @@ export function createLines(scene, terrainUniforms) {
     /** Add (or replace) a layer's geometry. `data` is public/data/layers/<id>.json. */
     setLayer(data) {
       this.remove(data.id);
-      const geometry = linesGeometry(data);
+      const { geometry, records } = linesGeometry(data);
       const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, plate, block: null };
+      const entry = { geometry, records, categories: data.categories || [], plate, block: null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
@@ -156,6 +187,39 @@ export function createLines(scene, terrainUniforms) {
       blockUniforms = uniforms;
       liftedId = uniforms ? id : -1;
       for (const entry of layers.values()) setBlockMesh(entry);
+      applyView();
+    },
+    /**
+     * The item nearest a point on the ground, within `maxKm`, across the layers on show.
+     * Ranks break ties, so a great river wins over the tributary beside it.
+     */
+    nearest(x, z, maxKm) {
+      let best = null;
+      const max2 = maxKm * maxKm;
+      for (const [id, l] of layers) {
+        if (!active.has(id)) continue;
+        for (const rec of l.records) {
+          const [x0, z0, x1, z1] = rec.bbox;
+          if (x < x0 - maxKm || x > x1 + maxKm || z < z0 - maxKm || z > z1 + maxKm) continue;
+          for (const flat of rec.runs) {
+            for (let i = 0; i + 3 < flat.length; i += 2) {
+              const d2 = segDist2(x, z, flat[i], flat[i + 1], flat[i + 2], flat[i + 3]);
+              if (d2 > max2) continue;
+              const score = d2 + (rec.item.rank || 3) * 0.02 * max2;
+              if (!best || score < best.score) best = { layer: id, item: rec.item, categories: l.categories, score };
+            }
+          }
+        }
+      }
+      return best;
+    },
+    /** A line item by id, for the card and the camera. */
+    find(layerId, itemId) {
+      return layers.get(layerId)?.records.find((r) => r.item.id === itemId) || null;
+    },
+    /** Highlight one item, or nothing. */
+    setSelected(sel) {
+      selected = sel;
       applyView();
     },
     setView(w, h, zoom) {

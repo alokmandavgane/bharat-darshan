@@ -10,6 +10,7 @@ uniform float uDim;            // 0..1: the surface this copy is drawn on has st
 
 in vec3 vColour;
 in float vFade;
+in float vSel;
 in vec2 vUv;
 in float vEdge;
 out vec4 outColor;
@@ -23,8 +24,10 @@ void main() {
   } else if (uLiftedId >= 0.0 && abs(id - uLiftedId) < 0.5) {
     discard;
   }
-  float a = vFade * (1.0 - smoothstep(0.45, 1.0, abs(vEdge))) * (1.0 - 0.6 * uDim);
+  float a = vFade * (1.0 - smoothstep(0.45, 1.0, abs(vEdge))) * (1.0 - 0.6 * uDim * (1.0 - vSel));
+  a *= 1.0 + 0.35 * vSel;
   if (a <= 0.002) discard;
-  vec4 o = linearToOutputTexel(vec4(vColour, 1.0));
+  vec3 c = mix(vColour, vColour * 0.72 + vec3(0.04, 0.02, 0.0), vSel);
+  vec4 o = linearToOutputTexel(vec4(c, 1.0));
   outColor = vec4(o.rgb * a, a);
 }

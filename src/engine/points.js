@@ -149,9 +149,14 @@ export function createPoints(container, { text, onSelect }) {
     return layers.get(layerId)?.items.find((x) => x.item.id === itemId)?.item || null;
   }
 
+  /** The structured columns a layer declares on top of the base item schema. */
+  function fields(layerId) {
+    return layers.get(layerId)?.layer.fields || null;
+  }
+
   function categories(layerId) {
     return layers.get(layerId)?.layer.categories || [];
   }
 
-  return { setLayer, remove, update, list, find, categories, get loaded() { return [...layers.keys()]; } };
+  return { setLayer, remove, update, list, find, categories, fields, get loaded() { return [...layers.keys()]; } };
 }

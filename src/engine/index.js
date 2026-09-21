@@ -63,7 +63,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     text: (field, lang) => field?.[lang] || field?.en || '',
     onSelect: (layer, id) => {
       const data = points.find(layer, id);
-      store.set('item', data ? { layer, id, data, categories: points.categories(layer) } : null);
+      store.set('item', data ? { layer, id, data, categories: points.categories(layer), fields: points.fields(layer) } : null);
     },
   });
 
@@ -134,11 +134,21 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   /** A selected item flies into view; the tour does its own flying. */
   store.subscribe('item', (sel, _, meta) => {
+    lines?.setSelected(sel ? { layer: sel.layer, id: sel.id } : null);
     invalidate();
     if (!sel || meta.source === 'tour') return;
     const item = points.find(sel.layer, sel.id);
-    if (item) flyToItem(item);
+    if (item) return flyToItem(item);
+    const line = lines?.find(sel.layer, sel.id);
+    if (line) fitBox(line.bbox);
   });
+
+  /** Frame a scene-km box, the way entering a state frames its unit. */
+  function fitBox([x0, z0, x1, z1]) {
+    cameraTouched = true;
+    const lift = raised ? raised.km : 0;
+    flyTo(fitBounds(store.get('camera'), { x0, z0, x1, z1, ymax: lift + 40 }, viewport, store.get('padding')), 800);
+  }
 
   function applyCamera() {
     const c = store.get('camera');
@@ -388,8 +398,22 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     return u ? u.area_km2 : Infinity;
   }
 
+  /** A `lines` item under a screen point, within a few pixels of it. */
+  function lineAt(sx, sy, px = 9) {
+    if (!lines || !field) return null;
+    const p = pick(sx, sy);
+    return p ? lines.nearest(p.x, p.z, px * (store.get('camera').zoom / viewport.h)) : null;
+  }
+
   store.subscribe('tap', (tap) => {
     if (!tap || !field) return;
+    // A line sits on top of the state it crosses, so it gets the tap first.
+    const hit = lineAt(tap.x, tap.y, tap.type === 'touch' || tap.type === 'pen' ? 14 : 9);
+    if (hit) {
+      store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories });
+      return;
+    }
+    store.set('item', null);
     const idAt = (sx, sy) => pick(sx, sy).id;
     const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : idAt(tap.x, tap.y);
     store.set('selection', id || null);
@@ -406,7 +430,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     hoverRaf = requestAnimationFrame(() => {
       hoverRaf = 0;
       const p = store.get('pointer');
-      store.set('hover', p && field ? pick(p.x, p.y).id || null : null);
+      const hit = p ? lineAt(p.x, p.y) : null;
+      const was = store.get('hoverLine');
+      if (hit?.item.id !== was?.id || hit?.layer !== was?.layer) {
+        store.set('hoverLine', hit ? { layer: hit.layer, id: hit.item.id, name: hit.item.name } : null);
+      }
+      store.set('hover', p && field && !hit ? pick(p.x, p.y).id || null : null);
     });
   });
 
