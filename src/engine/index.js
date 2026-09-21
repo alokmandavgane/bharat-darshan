@@ -3,6 +3,7 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
+import { createLines } from './lines.js';
 import { basis, DEFAULT_CAMERA, fitBounds, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
@@ -48,6 +49,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let cameraTouched = false;   // once the user moves the camera, layout changes stop refitting
   let level = { name: 'country' };
   let block = null;            // the lifted state block while in the state view
+  let lines = null;            // every `lines` layer on screen, once loaded
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
   let stateIndex = null;       // the state-package index, once fetched
@@ -86,17 +88,35 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
   const loading = new Set();
-  store.subscribe('layers', (ls) => {
-    for (const id of ls?.active || []) {
-      if (points.loaded.includes(id) || loading.has(id)) continue;
+  const failed = new Set();
+
+  /**
+   * Fetch whatever the active layers still need. Called when the switches change and
+   * again once the engine has started, because a layer's home -- `lines` needs the
+   * terrain's uniforms -- does not exist until then.
+   */
+  function loadActiveLayers() {
+    const active = store.get('layers')?.active || [];
+    lines?.setActive(active);
+    for (const id of active) {
+      if (loading.has(id) || failed.has(id)) continue;
       const entry = manifest?.layers?.find((l) => l.id === id);
-      if (!entry || entry.type !== 'points') continue;
-      loading.add(id);
-      loadJson(entry.path).then((data) => { points.setLayer(data); invalidate(); tour.refresh(); })
-        .catch((err) => console.warn(`layer ${id} skipped:`, err)).finally(() => loading.delete(id));
+      if (!entry) continue;
+      const done = (fn) => {
+        loading.add(id);
+        loadJson(entry.path).then((data) => { fn(data); invalidate(); })
+          .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
+          .finally(() => loading.delete(id));
+      };
+      if (entry.type === 'points' && !points.loaded.includes(id)) {
+        done((data) => { points.setLayer(data); tour.refresh(); });
+      } else if (entry.type === 'lines' && lines && !lines.has(id)) {
+        done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); });
+      }
     }
     invalidate();
-  });
+  }
+  store.subscribe('layers', loadActiveLayers);
 
   /** Fly to a place: closer at country level, a pan inside a state; returns the flight time. */
   function flyToItem(item, { ms = 800, yaw = undefined } = {}) {
@@ -134,6 +154,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const kmPerPx = c.zoom / viewport.h;
     terrain.uniforms.uKmPerPx.value = kmPerPx;
     if (block) block.material.uniforms.uKmPerPx.value = kmPerPx;
+    lines?.setView(viewport.w, viewport.h, c.zoom);
   }
 
   /**
@@ -264,6 +285,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const idsH = fine ? fine.height : terrain.uniforms.uIds.value.image.height;
     block = createBlock({ unit, material: terrain.siblingMaterial(), sizeKm, idsTexture: fine?.texture, idsTexel: [1 / idsW, 1 / idsH] });
     scene.add(block.group);
+    lines?.setBlock(block.material.uniforms, unit.id);
     raised = { id: unit.id, km: 0 };
     terrain.uniforms.uHole.value = unit.id;
     localKmPerPx = 0;
@@ -316,6 +338,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     pkgLoad = null;
     localKmPerPx = 0;
     cancelLevel?.();
+    lines?.setBlock(null, -1);
     if (b) {
       const done = () => { scene.remove(b.group); b.dispose(); terrain.uniforms.uHole.value = -1; invalidate(); };
       cancelLevel = tween({ lift: b.material.uniforms.uLift.value, dim: terrain.uniforms.uDim.value }, { lift: 0, dim: 0 },
@@ -405,6 +428,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
     field = createHeightfield(first, sizeKm, terrain.grid);
     scene.add(terrain.mesh);
+    lines = createLines(scene, terrain.uniforms);
+    lines.setView(viewport.w, viewport.h, store.get('camera').zoom);
+    loadActiveLayers();
     applySurroundings(!!store.get('surroundings'));
     loadJson('regions/outlines/india.json').then((o) => {
       countryWalls = createCountryWalls(o.loops, terrain.uniforms);
@@ -452,6 +478,6 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     start, invalidate, flyTo, fit, pick, project, quality,
     get viewport() { return viewport; },
     get level() { return level; },
-    dispose() { terrain?.dispose(); block?.dispose(); renderer.dispose(); },
+    dispose() { lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }
