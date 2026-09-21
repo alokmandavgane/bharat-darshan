@@ -5,6 +5,7 @@ import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
 import { CATEGORICAL, FILL_TYPES } from '../engine/choropleth.js';
 import { symbolSizer } from '../engine/points.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
+import { DEFAULT_RELIEF } from '../state/url.js';
 import { glyphSvg } from '../glyphs.js';
 
 /**
@@ -34,6 +35,7 @@ export function createShell(root, store) {
   const stepNext = $('.card-next');
   const stepCount = $('.card-count');
   const listWrap = $('.unit-list-wrap');
+  const contents = $('.contents');
   const monthPanel = $('.month-panel');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
@@ -454,6 +456,110 @@ export function createShell(root, store) {
     list.replaceChildren(...rows);
   }
 
+  // --- the atlas: plates are pages, and the contents page is how you turn to one
+  //
+  // A plate is a preset of view state and nothing more (PLAN.md D11): opening one writes
+  // the same store keys a URL does, so the engine never learns the word "plate" and
+  // adding a page needs no code. The contents is ordinary DOM, which is also what makes
+  // it the screen-reader and no-WebGL view of the atlas.
+
+  /** Turn to a page: its layers, its relief, and the country framed again. */
+  function openPlate(id) {
+    const plate = (store.get('plates')?.plates || []).find((p) => p.id === id);
+    if (!plate) return;
+    store.set('plate', id);
+    store.set('item', null);
+    store.set('layers', { active: [...plate.layers] });
+    if (plate.relief !== undefined) store.set('relief', { on: plate.relief > 0, amount: plate.relief || DEFAULT_RELIEF }, { animate: true });
+    if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
+    store.set('selection', null);
+    store.set('home', { t: performance.now() });
+  }
+
+  /** Back to the contents, and the map back to what it shows when no page is open. */
+  function closePlate() {
+    store.set('plate', null);
+    store.set('item', null);
+    store.set('layers', { active: (store.get('catalog') || []).filter((l) => l.default_on).map((l) => l.id) });
+    store.set('relief', { on: true, amount: DEFAULT_RELIEF }, { animate: true });
+    renderContents();
+  }
+
+  /**
+   * The contents when no page is open, and the open page's own words when one is. The
+   * unit list stands down while the contents is up: they are two answers to the same
+   * question and the sheet should only ever ask it once.
+   */
+  function renderContents() {
+    const data = store.get('plates');
+    const open = store.get('plate');
+    const inState = store.get('level')?.name === 'state';
+    contents.replaceChildren();
+    // Inside a state, the sheet belongs to the state: its card and its own lists.
+    if (!data || inState) {
+      contents.hidden = true;
+      listWrap.hidden = false;
+      return;
+    }
+    contents.hidden = false;
+    if (open) {
+      const plate = data.plates.find((p) => p.id === open);
+      listWrap.hidden = false;
+      if (!plate) { contents.hidden = true; return; }
+      const back = document.createElement('button');
+      back.type = 'button';
+      back.className = 'contents-back';
+      back.textContent = t('atlas.back');
+      back.addEventListener('click', closePlate);
+      const h = document.createElement('h3');
+      h.className = 'contents-title';
+      h.textContent = pick(plate.title);
+      const p = document.createElement('p');
+      p.className = 'contents-blurb';
+      p.textContent = pick(plate.blurb);
+      contents.append(back, h, p);
+      return;
+    }
+    listWrap.hidden = true;
+    const bySection = new Map();
+    for (const plate of data.plates) {
+      if (!store.get('drafts') && plate.status !== 'reviewed') continue;
+      if (!bySection.has(plate.section)) bySection.set(plate.section, []);
+      bySection.get(plate.section).push(plate);
+    }
+    for (const section of data.sections) {
+      const list = bySection.get(section);
+      if (!list) continue;
+      const h = document.createElement('h4');
+      h.className = 'contents-section';
+      h.textContent = t(`atlas.section.${section}`);
+      const ul = document.createElement('ul');
+      ul.className = 'contents-list';
+      for (const plate of list) {
+        const li = document.createElement('li');
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'contents-item';
+        b.dataset.plate = plate.id;
+        const name = document.createElement('span');
+        name.className = 'contents-item-name';
+        name.textContent = pick(plate.title);
+        const blurb = document.createElement('span');
+        blurb.className = 'contents-item-blurb';
+        blurb.textContent = pick(plate.blurb);
+        b.append(name, blurb);
+        li.appendChild(b);
+        ul.appendChild(li);
+      }
+      contents.append(h, ul);
+    }
+  }
+
+  contents.addEventListener('click', (e) => {
+    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-plate]');
+    if (btn) openPlate(btn.dataset.plate || '');
+  });
+
   function hostOf(url) {
     try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return url; }
   }
@@ -771,6 +877,18 @@ export function createShell(root, store) {
   store.subscribe('drafts', renderSelection);
   store.subscribe('item', () => { renderSelection(); renderSteps(); });
   store.subscribe('index', renderList);
+  store.subscribe('plates', renderContents);
+  store.subscribe('plate', renderContents);
+  store.subscribe('level', renderContents);
+  store.subscribe('lang', renderContents);
+  // The atlas's own pages, fetched once. They are small and they are the way in.
+  fetch('/data/plates.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
+    if (!d) return;
+    store.set('plates', d);
+    const wanted = store.get('plate');
+    if (wanted && d.plates.some((p) => p.id === wanted)) openPlate(wanted);
+    else if (wanted) store.set('plate', null);
+  }).catch(() => {});
   store.subscribe('regional', () => { renderSelection(); renderScrubber(); });
   store.subscribe('month', () => { renderScrubber(); renderSelection(); });
   store.subscribe('tour', renderSteps);

@@ -587,6 +587,54 @@ body[data-level="state"] .sheet-head { cursor: default; }
 }
 .reset-button[data-turned="yes"] .needle-s { fill-opacity: 0.6; }
 
+/* --- the contents: the atlas's own pages, and the open page's words --- */
+.contents { padding: 2px 0 8px; }
+.contents-section {
+  margin: 14px 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.contents-section:lang(hi) { letter-spacing: 0.03em; text-transform: none; font-size: 12px; }
+.contents-list { list-style: none; margin: 0; padding: 0; }
+.contents-item {
+  width: 100%;
+  display: block;
+  text-align: start;
+  font: inherit;
+  border: 0;
+  border-radius: 12px;
+  padding: 9px 10px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.contents-item:hover, .contents-item:focus-visible { background: rgba(120, 80, 40, 0.09); }
+.contents-item:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+.contents-item-name { display: block; font-weight: 600; }
+.contents-item-blurb {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.contents-back {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 0;
+  background: transparent;
+  color: var(--accent-deep);
+  padding: 2px 0 6px;
+  cursor: pointer;
+}
+.contents-back::before { content: "\2190\00a0"; }
+.contents-title { margin: 0 0 4px; font-family: var(--display); font-weight: 400; font-size: 1.05rem; color: var(--accent-deep); }
+.contents-blurb { margin: 0 0 6px; font-size: 0.92rem; line-height: 1.5; color: var(--muted); }
+
 /* --- markers of point layers: clay tokens standing on the terrain ---
    The button is a zero-size anchor moved with transform: translate(); the token is a
    child, tinted by its category (--c), with a line-art glyph and a paper name tag. */

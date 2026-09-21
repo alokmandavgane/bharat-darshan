@@ -87,5 +87,17 @@
   "month.short.11": "नव",
   "month.short.12": "दिस",
   "scrubber.none": "{month} में दिखाए गए में कुछ नहीं पड़ता।",
-  "sheet.month.heading": "{month} में"
+  "sheet.month.heading": "{month} में",
+  "atlas.contents": "अनुक्रम",
+  "atlas.back": "सभी पृष्ठ",
+  "atlas.section.political": "राजनीतिक",
+  "atlas.section.physical": "भौतिक",
+  "atlas.section.climate": "जलवायु",
+  "atlas.section.resources": "संसाधन",
+  "atlas.section.agriculture": "कृषि",
+  "atlas.section.industry": "उद्योग और ऊर्जा",
+  "atlas.section.transport": "परिवहन",
+  "atlas.section.people": "जनसंख्या",
+  "atlas.section.culture": "संस्कृति",
+  "atlas.section.history": "इतिहास"
 }

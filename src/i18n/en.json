@@ -87,5 +87,17 @@
   "month.short.11": "Nov",
   "month.short.12": "Dec",
   "scrubber.none": "Nothing on show falls in {month}.",
-  "sheet.month.heading": "In {month}"
+  "sheet.month.heading": "In {month}",
+  "atlas.contents": "Contents",
+  "atlas.back": "All pages",
+  "atlas.section.political": "Political",
+  "atlas.section.physical": "Physical",
+  "atlas.section.climate": "Climate",
+  "atlas.section.resources": "Resources",
+  "atlas.section.agriculture": "Agriculture",
+  "atlas.section.industry": "Industry and energy",
+  "atlas.section.transport": "Transport",
+  "atlas.section.people": "People",
+  "atlas.section.culture": "Culture",
+  "atlas.section.history": "History"
 }

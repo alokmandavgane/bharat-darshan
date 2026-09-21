@@ -1,6 +1,7 @@
 // @ts-check
 // The URL is the source of truth for view state (PLAN.md section 4):
 //   /hi                         country view in Hindi
+//   /en/atlas/monsoon           a plate: a page of the atlas, pushState
 //   /en?state=goa               Goa selected (peek), replaceState: a tap is not a page
 //   /en/state/kerala            the state view, pushState: Back leaves it
 //   ...?layers=rivers,roads     the layers on show, when they are not the defaults
@@ -30,7 +31,13 @@ export function readUrl(loc = location) {
   const item = (q.get('item') || '').split(':');
   return {
     lang, rest,
-    view: rest[0] === 'state' && rest[1] ? rest[1] : null,
+    // A state view can sit inside a plate: /en/atlas/rivers/state/kerala. The plate comes
+    // first because it is the page and the state is a place on it.
+    plate: rest[0] === 'atlas' && rest[1] ? rest[1] : null,
+    view: (() => {
+      const at = rest[0] === 'atlas' ? 2 : 0;
+      return rest[at] === 'state' && rest[at + 1] ? rest[at + 1] : null;
+    })(),
     state: q.get('state') || null,
     layers,
     item: item.length === 2 && item[0] && item[1] ? { layer: item[0], id: item[1] } : null,
@@ -41,9 +48,12 @@ export function readUrl(loc = location) {
   };
 }
 
-export function buildUrl({ lang, view = null, state = null, layers = null, item = null,
+export function buildUrl({ lang, view = null, plate = null, state = null, layers = null, item = null,
                            month = null, relief, cam = null, drafts = false }) {
-  const path = '/' + [lang, ...(view ? ['state', view] : [])].filter(Boolean).join('/');
+  // A state view is a page inside a plate, so a link can carry both: /en/atlas/rivers
+  // becomes /en/atlas/rivers/state/kerala rather than losing the page it was opened from.
+  const path = '/' + [lang, ...(plate ? ['atlas', plate] : []), ...(view ? ['state', view] : [])]
+    .filter(Boolean).join('/');
   const q = new URLSearchParams();
   if (!view && state) q.set('state', state);
   if (layers) q.set('layers', layers.length ? layers.join(',') : 'none');
@@ -69,28 +79,62 @@ export function syncUrl(store) {
   let pendingBack = null;       // 'restore' | 'clear': what the popstate of our own history.back() should do
   const draftsFromUrl = readUrl().drafts;   // only echo ?drafts=1 when the visitor asked for it
 
-  /** The layers on show, or null while they are still the catalogue's own defaults. */
+  /** What a page asks to be on: the plate's layers, or the catalogue's own defaults. */
+  const baselineLayers = (plateId) => {
+    const plate = plateId ? (store.get('plates')?.plates || []).find((p) => p.id === plateId) : null;
+    if (plate) return [...plate.layers];
+    return (store.get('catalog') || []).filter((l) => l.default_on).map((l) => l.id);
+  };
+
+  /** ...and the relief it asks for. */
+  const baselineRelief = (plateId) => {
+    const plate = plateId ? (store.get('plates')?.plates || []).find((p) => p.id === plateId) : null;
+    return plate && plate.relief !== undefined ? plate.relief : DEFAULT_RELIEF;
+  };
+
+  /** The plate on show, as the file describes it, or null. */
+  const openPlate = () => {
+    const id = store.get('plate');
+    return id ? (store.get('plates')?.plates || []).find((p) => p.id === id) || null : null;
+  };
+
+  /**
+   * The layers on show, or null while they are still what the page asked for. A plate is
+   * a preset, so `/en/atlas/people` already says which layers are on: spelling them out
+   * again would make every link to a page twice as long and no more exact. Off a plate
+   * the baseline is the catalogue's own defaults, as before.
+   */
   const layersParam = () => {
     const active = store.get('layers')?.active;
     const catalog = store.get('catalog') || [];
     if (!active || !catalog.length) return null;
-    const byDefault = catalog.filter((l) => l.default_on).map((l) => l.id);
-    const same = active.length === byDefault.length && byDefault.every((id) => active.includes(id));
+    const plate = openPlate();
+    const baseline = plate ? plate.layers : catalog.filter((l) => l.default_on).map((l) => l.id);
+    const same = active.length === baseline.length && baseline.every((id) => active.includes(id));
     return same ? null : active;
+  };
+
+  /** The relief, unless it is what the page asked for (or the default, off a page). */
+  const reliefParam = () => {
+    const relief = store.get('relief');
+    const now = relief.on ? relief.amount : 0;
+    const plate = openPlate();
+    const baseline = plate && plate.relief !== undefined ? plate.relief : DEFAULT_RELIEF;
+    return now === baseline ? undefined : now;
   };
 
   const current = () => {
     const level = store.get('level');
-    const relief = store.get('relief');
     const item = store.get('item');
     return buildUrl({
       lang: store.get('lang'),
+      plate: store.get('plate') || null,
       view: level?.name === 'state' ? slugOf(level.id) : null,
       state: slugOf(store.get('selection')),
       layers: layersParam(),
       item: item?.layer && item?.id ? { layer: item.layer, id: item.id } : null,
       month: store.get('month') || null,
-      relief: relief.on ? relief.amount : 0,
+      relief: reliefParam(),
       cam: camTouched ? store.get('camera') : null,
       drafts: draftsFromUrl && !!store.get('drafts'),
     });
@@ -111,8 +155,11 @@ export function syncUrl(store) {
   // so they replace the entry rather than pushing one: Back still leaves the state view.
   store.subscribe('layers', () => write());
   store.subscribe('catalog', () => write());
+  store.subscribe('plates', () => write());
   store.subscribe('item', () => write());
   store.subscribe('month', () => write());
+  // Opening a plate is turning a page: it pushes, so Back goes to the one before.
+  store.subscribe('plate', (_, __, meta) => { if (meta.source !== 'popstate') write(true); });
   store.subscribe('level', (lv, prev, meta) => {
     if (meta.source === 'popstate') return;
     // A level restored from the URL must still be written back: `selection` is set first
@@ -148,7 +195,15 @@ export function syncUrl(store) {
     pendingBack = null;
     applying = true;
     if (u.lang) store.set('lang', u.lang);
-    if (u.layers) store.set('layers', { active: u.layers });
+    store.set('plate', u.plate, { source: 'popstate' });
+    // A URL with no ?layers is not "leave them as they are": it is "whatever this page
+    // asks for", which is the plate's set on a plate and the catalogue's defaults off
+    // one. Without this, going back out of a page left the page's layers drawn on the
+    // contents and the tidy /en link came back as /en?layers=...
+    store.set('layers', { active: u.layers || baselineLayers(u.plate) });
+    // ...and the same for relief, which a page also sets.
+    const relief = u.relief !== null ? u.relief : baselineRelief(u.plate);
+    store.set('relief', { on: relief > 0, amount: relief > 0 ? relief : DEFAULT_RELIEF }, { animate: true });
     store.set('month', u.month);
     store.set('item', u.item);
     const viewId = idOf(u.view);
