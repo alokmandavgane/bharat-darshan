@@ -56,8 +56,9 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 |--------|---------------|------------------------|
 | Inspect | Hover is the only inspect-without-entering; on touch a tap goes in | Hover: highlight + tooltip |
 | Go deeper | Tap the state, or pick it from the list | Click |
+| Put it down | Tap the state already lifted | Click it |
 | Browse | Swipe the card carousel; camera follows | Same list in the side panel; arrow keys |
-| Move | Drag pan, pinch zoom, twist rotate, two-finger drag tilt | Drag, wheel, right-drag rotate |
+| Move | Drag pan, pinch zoom, twist rotate, two-finger drag tilt | Left-drag turns, right-drag slides, wheel zooms |
 | Back | Back gesture / sheet header (URL-driven) | Esc / breadcrumb |
 
 - Branch on capability (`@media (hover: hover) and (pointer: fine)`, `pointerType`),
@@ -749,6 +750,29 @@ docs/DEPLOY.md).
   headings are strings keyed by the group id, so `t` grew a fallback for keys built from
   data. The catalogue in manifest.json carries `categories` and `marker` now, about
   1.5 KB, so a legend can be drawn before its layer is fetched.
+- 2026-09-21, sixth round, from a look at the map at close range:
+  India's own silhouette was the last edge still cut from the ID raster. Its coast and
+  its international boundary were a test against a 1.71 km raster while the walls
+  standing on that silhouette followed the smoothed outline, which is the same fault
+  the lifted block had before its mask was filled from its loops, and it is why the
+  coast looked sawn. Step 2 bakes a signed field for India's outline -- distance
+  measured to the loops, sign from filling them, 128 on the line -- and the plate draws
+  its cut-out from that. 44 KB at the first-view tier, the field being two constants
+  either side of a narrow band; first view 1.26 -> 1.30 MB. Only the plate reads it: a
+  lifted block has its own mask, and a coastal one would have had its edge eaten.
+  The socket is the one edge still cut from the raster, a state at a time being more
+  than a single field can hold; it is feathered over a texel, which turns its staircase
+  into the shadow a cut in clay would cast.
+  Four things about handling, all from the same look:
+  the markers and labels were snapped to whole pixels, so every overlay stepped against
+  a canvas that moves smoothly, worst exactly while the camera eases; they are sub-pixel
+  now. Left-drag turns the model and right-drag slides it, the other way round from
+  before, because the button you reach for first should turn the thing on the table;
+  touch is untouched. Going from one state to another hands over -- the outgoing block
+  sinks on its own tween while the incoming one rises -- instead of dropping instantly.
+  And a tap on the state already lifted puts it back down, clearing the selection.
+  The layer switches are small and carry their layer's glyph; the glyph set moved to
+  src/glyphs.js, shared by the markers that draw tokens and the menu that draws chips.
 
 ### What exists
 
