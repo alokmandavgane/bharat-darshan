@@ -497,6 +497,16 @@ What every layer of a given type gets without writing code:
   at a state boundary rather than climbing the block's wall. With `"flow": true` the build
   points every run downstream and the shader runs crests along it.
 
+- **`symbols`**: a `points` layer that sets `marker: "symbol"` and declares
+  `size: { field, domain, range, legend }`. Each item is a circle whose *area* is the
+  value -- radius as the square root, so twice the value is twice the ink -- centred on
+  the point rather than standing above it as a token does, carrying no glyph (a disc
+  eleven pixels across is read by its area and nothing else), and not thinned by zoom:
+  the comparison between one circle and the next is the reason the layer is on, so the
+  reader gets the set and only collision thins it, biggest first. The menu draws two
+  keys, the categories' colours and the sizes, the second using the engine's own sizer so
+  each circle is exactly the diameter the map would draw.
+
 A `points` layer can set `marker: "label"` to be drawn as its name alone, with no token,
 for things that are a stretch of country rather than a spot on it (mountain ranges,
 plateaus, deserts). Tokens claim their screen space first, so a label yields to a place.
@@ -526,7 +536,7 @@ map is a folder and a source, whatever it shows.
 | `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
 | `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
-| `symbols` | a circle (or glyph) **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | new; shares the points path, adds a size scale and a size legend | power plants by capacity and fuel |
+| `symbols` | a circle **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions: fill, hatch or outline, draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | new; rasterised by the build to an id raster + edge field, so it reuses the choropleth lookup and the border shader | physiographic divisions, then coalfields |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
 | `flows` | curved arrows between places, width by volume, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | new; the ribbon shader plus an arc and an arrowhead | monsoon onset |
@@ -883,8 +893,8 @@ says wow -- the Phase 0 exit criterion that was never signed off.
 **Phase 5: primitives (3-4 weeks).** Section 5's catalogue, smallest first, one per
 round, each with its proving dataset and the full contract: categorical choropleth
 (*done 2026-09-21, proven by the zonal councils*) -> generated lines (*done 2026-09-21,
-proven by the Tropic of Cancer and the Standard Meridian*) -> `symbols` (power plants)
--> `areas` (physiographic divisions, coalfields) -> `raster` (rainfall) -> `flows`
+proven by the Tropic of Cancer and the Standard Meridian*) -> `symbols` (*done
+2026-09-21, proven by 24 power stations*) -> `areas` (physiographic divisions, coalfields) -> `raster` (rainfall) -> `flows`
 (monsoon onset) -> `prisms` (state population). Base styles and the year
 scrubber land with the first primitive that needs them. District choropleths join when
 open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
@@ -1510,6 +1520,25 @@ docs/DEPLOY.md).
   problems reported are about anchors and priorities that a line has never had. It is
   pre-existing and only shows up while a layer file is being written, but it sends you
   looking in the wrong place.
+- 2026-09-21, twenty-second round: the third primitive, `symbols`, proven by 24 of
+  India's largest power stations. A circle whose area is a value, which is the drawing an
+  atlas uses for anything that has a quantity as well as a place.
+  Three assumptions the pin-shaped token had quietly made, each of which had to be undone
+  for a symbol: it stands *above* its point rather than on it, so the collision rectangle
+  was wrong; it carries a glyph, which at eleven pixels is unreadable; and it is thinned
+  by zoom, which for a symbols layer throws away the comparison the layer exists to make.
+  The last one also needed the build to write a symbols layer biggest first, so that the
+  collision pass keeps the circles that matter.
+  The dataset is curated rather than fetched, against what this plan said. A points layer
+  supplies its own anchors, its own names in two languages and its own blurbs, and the
+  WRI database named in section 7 has none of those in a usable form; what it would have
+  saved is capacities, which are a column. Each item's `regions` was resolved from its
+  own anchor against the ID raster rather than typed, because Bhakra and Srisailam both
+  sit on a border and I would have got one of them wrong.
+  The note on that layer is the kind an atlas has to carry: installed capacity is what a
+  station *could* produce, not what it does, and the ratio differs by fuel -- about a
+  fifth for solar against two thirds for coal -- so the biggest circle is not the most
+  electricity. Sizing circles by capacity without saying that would be quietly wrong.
 
 ### What exists
 
