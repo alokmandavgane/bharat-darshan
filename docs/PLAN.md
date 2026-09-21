@@ -871,6 +871,26 @@ docs/DEPLOY.md).
   Two gaps in the `lines` type turned up on the way and are fixed: a layer's declared
   columns never reached a line's card (dropped by the build, unvalidated, and missing
   from the selection a tap sets), and PLAN's own `year` field type did not exist.
+- 2026-09-21, eleventh round: the last two things a link could not carry, and the card
+  carousel. `?layers=rivers,roads` names what is on show and only appears when it is not
+  the catalogue's own defaults, so an ordinary link stays `/en`; `?layers=none` is the
+  difference between everything off and not asked. `?item=roads:nh-44` carries whatever
+  card is open, switching that layer on whatever else the link says, because a card with
+  nothing drawn under it is not what the link meant. A link arrives at its item rather
+  than flying to it, as `/state/<slug>` already does.
+  The card grew a prev / next row that walks the stops the tour would visit, in the same
+  order, so playing and stepping follow one path. It narrows with everything else, 157
+  stops at country level against 6 inside Kerala, and hides itself while the tour runs.
+  Three bugs came out of this, all of them quiet ones:
+  `start` framed the country unconditionally at the end, and the layer files are fetched
+  the moment the catalogue lands, which is before the first tier is awaited -- so an item
+  named in the URL was reliably framed and then thrown away a moment later. `lines.find`
+  did not return the categories a card needs. And the store shallow-merges objects, so
+  opening a card by name alone over an open one kept the old card's `data`: the engine
+  saw data already there and left it, and the card showed the old place under the new
+  name while the map flew to the right one. Opening by name says `data: null` and means
+  it. That merge is worth remembering before adding another slice that is sometimes a
+  stub.
 
 ### What exists
 
@@ -945,6 +965,6 @@ docs/DEPLOY.md).
    lazy hi-res state packages (needs open
    question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
    the state view, the poster image (needs open question 6), context-loss test on iOS,
-   layer state in the URL, a card carousel for point layers, WebGL sprites for markers
-   if the DOM ones ever get slow (they are fine at 50).
+   WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
+   Done on 2026-09-21: layer state in the URL, and the card carousel.
 3. Settle open questions 6-7.
