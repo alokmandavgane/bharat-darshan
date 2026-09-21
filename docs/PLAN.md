@@ -653,6 +653,25 @@ docs/DEPLOY.md).
   asks for land on both sides of an edge and a package has only one labelled id, so a
   lifted block draws neither a scored edge nor a selection outline, and each package
   carries about 5 KB of zeros.
+- 2026-09-21, same day: the scored border lines on the country surface, which were the
+  last thing still following the ID raster. `border_fields` measured distance with
+  `bounded_distance` to the pixels `raster.edges` marks either side of a boundary, and a
+  distance field can only draw the curve it was measured from, so the lines were 1.71 km
+  right angles as soon as the camera was close enough to see them. They are measured to
+  the smoothed outlines now (`raster.distance_to_segments`, which measures to the line
+  and only touches the window within range of it, so a tier still rebuilds in seconds).
+  Each segment is named by what lies outward of it, a different state or land outside
+  India, which reproduces the old internal/external split to within a percent of its
+  length. The fields grow, a smooth field having more to say than a terraced one: the
+  first view goes 1.19 -> 1.23 MB, inside the 1.5 MB budget.
+  Two consequences in the shader. Measuring to the curve took half a texel of unearned
+  weight off every line, so the screen-pixel half-widths went 0.55/0.85 -> 1.1/1.6 to
+  keep the look. And an unsigned field cannot hold a line thinner than its own texel:
+  bilinear interpolation across a cell never dips below the smallest of its four
+  corners, so a thinner level set dashes (5% of the cells on the line at 0.4 texels,
+  none by 0.75). The width is floored there and the line fades out past the floor,
+  which also replaces the blockiness fade added earlier in the day -- that guessed at a
+  threshold for a problem this removed.
 
 ### What exists
 
