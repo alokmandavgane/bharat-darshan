@@ -8,6 +8,10 @@ uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half 
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
 uniform sampler2D uIndiaEdge;  // signed distance to India's outline: 0.5 on it, up inside
 uniform float uEdgeRangeKm;    // distance the field reaches, each way
+uniform sampler2D uStateEdge;  // the same, for the unit lifted out of the plate
+uniform vec4 uStateRect;       // country-uv rect that field covers
+uniform float uStateEdgeRangeKm;
+uniform float uHasStateEdge;   // 0 until the unit's package has arrived
 uniform sampler2D uBorders;    // r: internal, g: external border field, 255 on the line
 uniform float uBorderRangeKm;  // distance at which the border field reaches 0
 uniform float uBorderTexelKm;  // world size of one border-field texel
@@ -64,7 +68,15 @@ void main() {
   float land = smoothstep(-20.0, -5.0, h);          // ocean texels are <= -25 m by construction
   vec2 shade = texture(uShade, luv(vUv)).rg;
   float id = floor(texture(uIds, luv(vUv)).r * 255.0 + 0.5);
-  if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
+
+  // The lifted unit's own signed edge, once its package is here. It is what the block
+  // trims its rim with and what the plate cuts its socket from, so both end on the curve
+  // the walls stand on rather than on the step the ID raster takes.
+  vec2 sUv = (vUv - uStateRect.xy) / uStateRect.zw;
+  float inRect = step(0.0, sUv.x) * step(sUv.x, 1.0) * step(0.0, sUv.y) * step(sUv.y, 1.0);
+  float stateEdgeKm = uHasStateEdge * inRect > 0.5
+    ? (texture(uStateEdge, sUv).r * 2.0 - 1.0) * uStateEdgeRangeKm
+    : -uStateEdgeRangeKm;
 
   // The country's own silhouette comes from the signed field, not from the ID raster:
   // the walls standing on it follow the smoothed outline, and a staircase underneath a
@@ -72,6 +84,15 @@ void main() {
   // is read in country uv and only by the plate -- a lifted block has its own mask.
   float aaKm = 0.75 * uKmPerPx;
   float plate = step(uRegion, -0.5);
+  float mine = 1.0;
+  if (uRegion >= 0.0) {
+    if (uHasStateEdge > 0.5) {
+      if (stateEdgeKm < -2.0 * aaKm) discard;
+      mine = smoothstep(-aaKm, aaKm, stateEdgeKm);
+    } else if (abs(id - uRegion) >= 0.5) {
+      discard;
+    }
+  }
   float edgeKm = (texture(uIndiaEdge, vUv).r * 2.0 - 1.0) * uEdgeRangeKm;
   float inIndia = smoothstep(-aaKm, aaKm, edgeKm);
   if (uOnlyIndia > 0.5 && plate > 0.5 && edgeKm < -2.0 * aaKm) discard;
@@ -126,8 +147,10 @@ void main() {
   float askInt = 1.1 * uKmPerPx, askExt = 1.6 * uKmPerPx;
   float held = 1.0 - smoothstep(2.0, 6.0, grain / max(askInt, 1e-6));
   float wInt = max(askInt, grain), wExt = max(askExt, grain);
-  float lineInt = held * (1.0 - smoothstep(wInt - aa, wInt + aa, dInt));
-  float lineExt = held * (1.0 - smoothstep(wExt - aa, wExt + aa, dExt));
+  // Only the plate scores borders: a block has one state in it, and its rasters are
+  // its own, so the country field would be read through the wrong rect.
+  float lineInt = plate * held * (1.0 - smoothstep(wInt - aa, wInt + aa, dInt));
+  float lineExt = plate * held * (1.0 - smoothstep(wExt - aa, wExt + aa, dExt));
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
@@ -157,7 +180,11 @@ void main() {
   // The socket is the one edge still cut from the ID raster, a state at a time being
   // more than one field can hold; feathering it over a texel turns its staircase into
   // a shadow, which is what a cut in clay looks like anyway.
-  float socket = hole * smoothstep(0.0, 1.2 * uBorderTexelKm, min(dInt, dExt));
+  // The socket: the state field when the package is here, else the old raster test
+  // feathered over a texel, which is the best a 1.7 km mask can do.
+  float socket = uHasStateEdge > 0.5
+    ? smoothstep(-aaKm, aaKm, stateEdgeKm) * step(0.0, uHole)
+    : hole * smoothstep(0.0, 1.2 * uBorderTexelKm, min(dInt, dExt));
   float lumd = dot(col, vec3(0.3, 0.59, 0.11));
   col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - socket));
   col = mix(col, uTable * 0.5, socket);
@@ -170,6 +197,7 @@ void main() {
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
   float fade = smoothstep(0.0, 420.0, edge);
   if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
+  fade *= mine;                                           // the block's rim, softened
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   outColor = vec4(o.rgb * fade, fade);
 }

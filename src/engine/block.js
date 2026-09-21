@@ -112,25 +112,28 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
   /**
    * Swap in the unit's own hi-res rasters (PLAN.md D3). The mesh keeps its country-space
    * uv, so the geometry and the camera are untouched; only the sampling moves, through
-   * uLocalRect. The walls share these uniforms and follow automatically.
+   * uLocalRect. The walls share these uniforms and follow automatically. Returns what
+   * the country plate needs to cut its socket on the same curve.
    */
   function setPackage(pkg, sizeKm) {
     const next = {
       uHeight: heightTexture(pkg.heights),
       uShade: byteTexture(pkg.shade),
       uIds: byteTexture(pkg.ids, { nearest: true }),
-      uBorders: byteTexture(pkg.borders),
+      uStateEdge: byteTexture(pkg.edge),
     };
     const u = material.uniforms;
     for (const [k, tex] of Object.entries(next)) u[k].value = tex;
     u.uHeightTexel.value.set(1 / pkg.heights.width, 1 / pkg.heights.height);
-    u.uBorderRangeKm.value = pkg.borders.header.range_px * pkg.borders.header.km_per_px;
-    u.uBorderTexelKm.value = pkg.borders.header.km_per_px;
     const [x0, z0, x1, z1] = pkg.rect;
-    u.uLocalRect.value.set(x0 / sizeKm.w + 0.5, z0 / sizeKm.h + 0.5,
-                           (x1 - x0) / sizeKm.w, (z1 - z0) / sizeKm.h);
+    const rect = [x0 / sizeKm.w + 0.5, z0 / sizeKm.h + 0.5, (x1 - x0) / sizeKm.w, (z1 - z0) / sizeKm.h];
+    u.uLocalRect.value.set(...rect);
+    u.uStateRect.value.set(...rect);
+    u.uStateEdgeRangeKm.value = pkg.edge.header.range_px * pkg.edge.header.km_per_px;
+    u.uHasStateEdge.value = 1;
     local.forEach((t) => t.dispose());
     local = Object.values(next);
+    return { texture: next.uStateEdge, rect, rangeKm: u.uStateEdgeRangeKm.value };
   }
 
   return {

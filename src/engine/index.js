@@ -332,7 +332,13 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       if (!entry) return;
       const pkg = await loadStatePackage(manifest, entry, signal);
       if (signal.aborted || !block || block.unit.id !== unit.id) return;
-      block.setPackage(pkg, sizeKm);
+      // The plate cuts its socket from the same field the block trims its rim with.
+      const edge = block.setPackage(pkg, sizeKm);
+      const tu = terrain.uniforms;
+      tu.uStateEdge.value = edge.texture;
+      tu.uStateRect.value.set(...edge.rect);
+      tu.uStateEdgeRangeKm.value = edge.rangeKm;
+      tu.uHasStateEdge.value = 1;
       localKmPerPx = entry.km_per_px;
       refreshZoomFloor();
       invalidate();
@@ -363,6 +369,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     pkgLoad = null;
     localKmPerPx = 0;
     lines?.setBlock(null, -1);
+    terrain.uniforms.uStateEdge.value = null;
+    terrain.uniforms.uHasStateEdge.value = 0;
     if (b) {
       finishDrop();
       const done = () => { scene.remove(b.group); b.dispose(); if (!handover) terrain.uniforms.uHole.value = -1; invalidate(); };

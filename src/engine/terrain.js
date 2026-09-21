@@ -69,6 +69,12 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     // not from the ID raster, so it matches the walls standing on it.
     uIndiaEdge: { value: null },
     uEdgeRangeKm: { value: 1 },
+    // The lifted unit's own signed edge, from its package: the block antialiases its rim
+    // with it and the plate cuts the socket with it, so both land on the walls' curve.
+    uStateEdge: { value: null },
+    uStateRect: { value: new Vector4(0, 0, 1, 1) },
+    uStateEdgeRangeKm: { value: 1 },
+    uHasStateEdge: { value: 0 },
     uBorderRangeKm: { value: 1 },
     uBorderTexelKm: { value: 1 },
     uGrain: { value: grainTexture() },

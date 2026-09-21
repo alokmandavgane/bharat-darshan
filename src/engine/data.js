@@ -48,10 +48,10 @@ export async function loadStateIndex(manifest) {
  * @param {AbortSignal} [signal]
  */
 export async function loadStatePackage(manifest, entry, signal) {
-  const [heights, shade, ids, borders] = await Promise.all(
-    [entry.heights, entry.shade, entry.ids, entry.borders]
+  const [heights, shade, ids, edge] = await Promise.all(
+    [entry.heights, entry.shade, entry.ids, entry.edge]
       .map((rel) => loadPack(versioned(manifest, rel), signal)));
-  return { heights, shade, ids, borders, rect: entry.rect };
+  return { heights, shade, ids, edge, rect: entry.rect };
 }
 
 /** Bounding box of every unit together, in scene km: [x0, z0, x1, z1]. */
