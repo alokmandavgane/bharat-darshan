@@ -1,10 +1,11 @@
 // @ts-check
 // Pointer gestures on the map canvas -> camera changes in the store. One finger drags
 // the ground; two fingers pinch (zoom about the midpoint), twist (yaw) and drag
-// vertically together (tilt). Mouse: drag pans, wheel zooms about the cursor,
-// left-drag orbits, right-drag (or shift-drag) pans. Double tap / click zooms in about
-// the point. Touch is unchanged: one finger pans, two rotate and pinch, because a phone
-// has no second button and panning is what a finger on a map is for.
+// vertically together (tilt). Mouse: left-drag slides the map, right-drag (or
+// Ctrl/Alt-drag, which trackpads can manage) turns and tilts it, wheel zooms about the
+// cursor, Q and E turn it. Double tap / click zooms in about the point. Touch: one
+// finger pans, two rotate and pinch, because a phone has no second button and panning
+// is what a finger on a map is for.
 import { clampCamera, groundShift, orbitAbout, zoomAbout } from '../engine/camera-math.js';
 
 const TAP_SLOP = 8;         // px of travel that still counts as a tap
@@ -56,8 +57,10 @@ export function attachGestures(canvas, store) {
     rec.x = p.x; rec.y = p.y;
     const vp = viewport();
     if (pointers.size === 1) {
-      // Mouse: the left button turns the model, the right one slides it. A finger pans.
-      const orbit = rec.type === 'mouse' && rec.button === 0 && !e.shiftKey;
+      // Mouse: the left button slides the map, which is what an atlas is read with, and
+      // the right button (or Ctrl/Alt, for trackpads with no right-drag worth the name)
+      // turns it. A finger pans, the same model as the left button.
+      const orbit = rec.type === 'mouse' && (rec.button === 2 || e.ctrlKey || e.altKey);
       if (orbit) {
         // The model follows the hand: drag right and it turns right, drag down and it
         // tips its far side towards you, as if a finger were on the table itself.
@@ -130,6 +133,18 @@ export function attachGestures(canvas, store) {
     write(zoomAbout(cam(), factor, p.x, p.y, viewport()));
   }
 
+  // Q and E turn the model, for anyone who never finds the right button. They are the
+  // only way to turn it from a keyboard, so they are on the window rather than the
+  // canvas, which never has focus.
+  function onKey(e) {
+    const k = e.key.toLowerCase();
+    if (k !== 'q' && k !== 'e') return;
+    const el = /** @type {HTMLElement} */ (e.target);
+    if (el?.closest('input, textarea, [contenteditable]')) return;   // someone is searching
+    const c = cam();
+    write(orbitAbout(c, c.yaw + (k === 'q' ? -15 : 15), c.pitch, 0, 0, viewport()));
+  }
+
   canvas.addEventListener('pointerdown', onDown);
   canvas.addEventListener('pointermove', onMove);
   canvas.addEventListener('pointermove', onHover);
@@ -138,6 +153,7 @@ export function attachGestures(canvas, store) {
   canvas.addEventListener('pointercancel', onUp);
   canvas.addEventListener('wheel', onWheel, { passive: false });
   canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+  window.addEventListener('keydown', onKey);
   // Old iOS fires its own pinch gesture events even with touch-action: none.
   for (const ev of ['gesturestart', 'gesturechange', 'gestureend']) {
     canvas.addEventListener(ev, (e) => e.preventDefault(), { passive: false });
@@ -150,5 +166,6 @@ export function attachGestures(canvas, store) {
     canvas.removeEventListener('pointerup', onUp);
     canvas.removeEventListener('pointercancel', onUp);
     canvas.removeEventListener('wheel', onWheel);
+    window.removeEventListener('keydown', onKey);
   };
 }
