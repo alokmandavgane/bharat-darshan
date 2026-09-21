@@ -479,6 +479,13 @@ What every layer of a given type gets without writing code:
   lifted state's card lists what it keeps; tapping one opens the ordinary item card, and
   they are in the search index, narrowed to that state like everything else. An item kept
   everywhere says `"regions": ["*"]` rather than listing every code.
+- **`lines`**, **generated**: `"join": "generated"` and the layer fetches nothing; each
+  item describes a line that is defined rather than surveyed -- `{"parallel": 23.43928}`
+  or `{"meridian": 82.5}` -- and the build walks it across the grid's geographic box,
+  then clips, simplifies and cards it exactly as a river. Walked, not drawn between its
+  ends: a meridian is straight in a conic projection and comes out as two points, a
+  parallel is not, so it is sampled every 0.05 degrees and the curve that survives is the
+  projection's. A line that misses the box generates nothing and the build says so.
 - **`lines`**: geometry fetched from the source named in `layer.json` and joined to the
   curated items either by the source's own names (`join: "name"`, which is how rivers
   work) or by routing through the places an item lists (`join: "route"`, for a source
@@ -517,7 +524,7 @@ map is a folder and a source, whatever it shows.
 | `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | built (`"scale": "categorical"`) | zonal councils (done) |
 | `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | blocked on a boundary source (open question 10) | Census 2011 literacy |
 | `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
-| `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | small: a `source.kind` | reference lines |
+| `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
 | `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
 | `symbols` | a circle (or glyph) **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | new; shares the points path, adds a size scale and a size legend | power plants by capacity and fuel |
 | `areas` | named polygons that are not regions: fill, hatch or outline, draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | new; rasterised by the build to an id raster + edge field, so it reuses the choropleth lookup and the border shader | physiographic divisions, then coalfields |
@@ -875,10 +882,10 @@ says wow -- the Phase 0 exit criterion that was never signed off.
 
 **Phase 5: primitives (3-4 weeks).** Section 5's catalogue, smallest first, one per
 round, each with its proving dataset and the full contract: categorical choropleth
-(*done 2026-09-21, proven by the zonal councils*) -> generated lines (graticule, Tropic
-of Cancer) -> `symbols` (power plants) -> `areas` (physiographic divisions, coalfields)
--> `raster` (rainfall) -> `flows` (monsoon onset) -> `prisms` (state population).
-Base styles and the year
+(*done 2026-09-21, proven by the zonal councils*) -> generated lines (*done 2026-09-21,
+proven by the Tropic of Cancer and the Standard Meridian*) -> `symbols` (power plants)
+-> `areas` (physiographic divisions, coalfields) -> `raster` (rainfall) -> `flows`
+(monsoon onset) -> `prisms` (state population). Base styles and the year
 scrubber land with the first primitive that needs them. District choropleths join when
 open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
 exist, and `src/` names none of them.
@@ -1487,6 +1494,22 @@ docs/DEPLOY.md).
   And with numpy 2.5.3 and no pipeline change, `shade-2048.bin.gz` rebuilt 9 bytes
   different from the committed one -- see open question 12. Steps 4 and 5 were run alone
   and the terrain restored, so this round's data commit is the new layer and nothing else.
+- 2026-09-21, twenty-first round: the second primitive, generated lines, proven by the
+  Tropic of Cancer and the Indian Standard Meridian. A layer writes `"join": "generated"`
+  and fetches nothing -- the first layer in the project with nothing in `pipeline/raw/` --
+  and each item describes its own line. Everything after that is the path the rivers
+  already take.
+  Two things the doing taught. A generated line has to be *walked* rather than drawn
+  between its two ends: a meridian is straight in a conic projection and comes out as two
+  points, but a parallel is not except at the standard parallels, so the arc has to be
+  sampled finely enough that what survives the simplify is the projection's curve and not
+  the sampling's. And a reference line has to be read against the ground it crosses: the
+  first pair of colours were a warm grey that vanished into the clay at every zoom.
+  One thing left alone, and worth knowing before it bites again: a `lines` layer whose
+  `layer.json` fails validation falls through to the per-item *points* validation, so the
+  problems reported are about anchors and priorities that a line has never had. It is
+  pre-existing and only shows up while a layer file is being written, but it sends you
+  looking in the wrong place.
 
 ### What exists
 
