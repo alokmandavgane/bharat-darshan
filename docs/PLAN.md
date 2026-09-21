@@ -939,6 +939,10 @@ exist, and `src/` names none of them.
 with share images, the source registry and generated credits, the cartouche, scale bar
 and legend as atlas furniture. Exit: a plate added with a JSON file only, and the first
 ten plates -- one or two per section -- reading as an atlas rather than a demo.
+*Begun 2026-09-21: plates, the contents page and `/atlas/<id>` are in, with nine pages
+across seven sections; `grep -r plate src/engine/` is empty and a page is a JSON file.
+Left: per-plate share images and Open Graph shells, the source registry and generated
+credits, and the atlas furniture -- cartouche, scale bar, compass rose, graticule.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1646,6 +1650,20 @@ docs/DEPLOY.md).
   story they are for.
   Worth remembering as a shape of bug: each of those was a default that had been correct
   every previous time it ran.
+- 2026-09-21, twenty-sixth round: Phase 6 begun. The layers became pages: nine plates
+  across seven sections, a contents page in the sheet, and `/en/atlas/<id>` with a state
+  view nesting inside it. A plate is a preset and nothing more, so opening one writes the
+  store keys a URL already writes; `grep -r plate src/engine/` is empty.
+  The interesting part was the query string. A page says which layers it wants, so the
+  baseline for `?layers` and `?relief` is the open plate's rather than the catalogue's
+  defaults, and `/en/atlas/rivers` stays that short. The same idea bit twice going the
+  other way: a URL with no `?layers` means "whatever this page asks for", not "leave them
+  as they are", and until popstate was told so, backing out of a page left its layers
+  drawn over the contents and turned `/en` into `/en?layers=monsoon,physiography`. Relief
+  had the identical fault one field over.
+  Two of the pages exist only because the primitives compose: population as height with
+  density as colour, and the monsoon's arrows over the physical divisions. Neither needed
+  any new drawing, which is what D12 was for.
 
 ### What exists
 
@@ -1706,6 +1724,14 @@ docs/DEPLOY.md).
 
 ### Next
 
+0. **Phase 6, continued.** Plates and the contents page are in. What is left of that
+   phase, roughly in order: the source registry (`content/sources.json`) and credits
+   generated from it, which is the thing that stops attribution sprawling as the plates
+   multiply; per-plate share images and Open Graph shells, so a page pasted into WhatsApp
+   shows that page; and the atlas furniture -- a cartouche for the open plate, a scale
+   bar, a compass rose, a graticule scored into the table. Base styles (section 5) would
+   also help the thematic pages: several of them would read better over a quieter base
+   than the full hypsometric one.
 0. **Phase 5 is done bar one primitive.** Six of the seven are built, each proven on a
    real dataset with the full contract, and `src/` names none of the layers. Only
    `raster` is left and it is blocked on licensing, not on code: open question 13 sets
