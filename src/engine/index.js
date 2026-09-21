@@ -129,7 +129,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const hh = c.zoom / 2, hw = (hh * viewport.w) / viewport.h;
     camera.left = -hw; camera.right = hw; camera.top = hh; camera.bottom = -hh;
     camera.updateProjectionMatrix();
-    terrain.uniforms.uKmPerPx.value = c.zoom / viewport.h;
+    // The border fields are distance fields: the shader needs the current pixel scale to
+    // keep their lines one screen pixel wide. The block's material is a sibling with its
+    // own scalars, so it has to be told too, or it draws them at the scale it was born at.
+    const kmPerPx = c.zoom / viewport.h;
+    terrain.uniforms.uKmPerPx.value = kmPerPx;
+    if (block) block.material.uniforms.uKmPerPx.value = kmPerPx;
   }
 
   /**

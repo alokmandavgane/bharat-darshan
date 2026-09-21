@@ -125,6 +125,7 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
     for (const [k, tex] of Object.entries(next)) u[k].value = tex;
     u.uHeightTexel.value.set(1 / pkg.heights.width, 1 / pkg.heights.height);
     u.uBorderRangeKm.value = pkg.borders.header.range_px * pkg.borders.header.km_per_px;
+    u.uBorderTexelKm.value = pkg.borders.header.km_per_px;
     const [x0, z0, x1, z1] = pkg.rect;
     u.uLocalRect.value.set(x0 / sizeKm.w + 0.5, z0 / sizeKm.h + 0.5,
                            (x1 - x0) / sizeKm.w, (z1 - z0) / sizeKm.h);

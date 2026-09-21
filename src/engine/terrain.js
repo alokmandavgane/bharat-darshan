@@ -66,6 +66,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uIds: { value: null },
     uBorders: { value: null },
     uBorderRangeKm: { value: 1 },
+    uBorderTexelKm: { value: 1 },
     uGrain: { value: grainTexture() },
     uSizeKm: { value: new Vector2(sizeKm.w, sizeKm.h) },
     uExag: { value: 12 },
@@ -123,6 +124,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
       for (const [k, tex] of Object.entries(next)) if (!u[k].value || old.has(u[k].value)) u[k].value = tex;
       u.uHeightTexel.value.set(1 / data.heights.width, 1 / data.heights.height);
       u.uBorderRangeKm.value = data.borders.header.range_px * data.borders.header.km_per_px;
+      u.uBorderTexelKm.value = data.borders.header.km_per_px;
     };
     apply(uniforms);
     siblings.forEach((m) => apply(m.uniforms));

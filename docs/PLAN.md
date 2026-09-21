@@ -624,6 +624,54 @@ docs/DEPLOY.md).
   other camera write, tap or hover stops it at once; reduced motion disables it.
   With the denser layer, priority-3 places now appear one zoom step later (below
   2,400 km of view height) so the whole-country view keeps its state labels.
+- 2026-09-21: the lifted block's edge, which read as sawn rather than moulded. Three
+  faults, one cause: `06_states.py` built each package's mask by nearest-sampling the
+  1.71 km country ID raster at 0.35 km, so the block's top stepped in 3.3 km risers;
+  the walls followed a different curve, because `contour.trace` rounded the staircase
+  with Chaikin and then let a one-pixel Douglas-Peucker tolerance flatten it back into
+  8 km chords; and where the wall strayed outside the mask it sampled the -500 m
+  sentinel fill, so its top collapsed to the lift plane in spikes. Now there is one
+  boundary: `contour.trace` low-pass filters the traced loop along its arc length
+  (Gaussian, sigma 1.2 px, mean turn 13.2 degrees -> 6.6) and simplifies at 0.2 px, and
+  step 6 fills those same loops for the mask. The west edge of Chhattisgarh steps in
+  0.70 km rather than 3.27. Heights are now kept for 10 km outside the unit instead of
+  being flattened at its edge: the walls need real ground under the outline they stand
+  on, and the ambient occlusion along the rim was being cast by a pit that is not there
+  (up to 200 levels of 255 out, 31 at p95). That costs 11% on the packages, 27.2 -> 31.8
+  MB; the largest is Maharashtra at 2.6 MB, so section 8's "<= ~1 MB per state package"
+  has been wrong since the packages were built and needs a decision, not just an edit.
+  Two engine fixes alongside: the block's material is a sibling with its own scalars and
+  nobody was updating its `uKmPerPx`, so it drew border lines at the scale it was born
+  at; and the border fields are only as sharp as the raster they were baked from, so
+  past MAX_MAGNIFY the line is the border texel itself -- a blocky ribbon across the
+  surrounding country once a package pulls the zoom floor five times closer. They now
+  fade out instead.
+  Two pre-existing faults found while checking this, both left alone:
+  `/en/state/goa` (and other small units) lands on `?state=goa` with the country-wide
+  camera instead of entering the state view, while Kerala and Chhattisgarh are fine;
+  and every state package's border field is entirely zero, because `border_fields`
+  asks for land on both sides of an edge and a package has only one labelled id, so a
+  lifted block draws neither a scored edge nor a selection outline, and each package
+  carries about 5 KB of zeros.
+- 2026-09-21, same day: the scored border lines on the country surface, which were the
+  last thing still following the ID raster. `border_fields` measured distance with
+  `bounded_distance` to the pixels `raster.edges` marks either side of a boundary, and a
+  distance field can only draw the curve it was measured from, so the lines were 1.71 km
+  right angles as soon as the camera was close enough to see them. They are measured to
+  the smoothed outlines now (`raster.distance_to_segments`, which measures to the line
+  and only touches the window within range of it, so a tier still rebuilds in seconds).
+  Each segment is named by what lies outward of it, a different state or land outside
+  India, which reproduces the old internal/external split to within a percent of its
+  length. The fields grow, a smooth field having more to say than a terraced one: the
+  first view goes 1.19 -> 1.23 MB, inside the 1.5 MB budget.
+  Two consequences in the shader. Measuring to the curve took half a texel of unearned
+  weight off every line, so the screen-pixel half-widths went 0.55/0.85 -> 1.1/1.6 to
+  keep the look. And an unsigned field cannot hold a line thinner than its own texel:
+  bilinear interpolation across a cell never dips below the smallest of its four
+  corners, so a thinner level set dashes (5% of the cells on the line at 0.4 texels,
+  none by 0.75). The width is floored there and the line fades out past the floor,
+  which also replaces the blockiness fade added earlier in the day -- that guessed at a
+  threshold for a problem this removed.
 
 ### What exists
 

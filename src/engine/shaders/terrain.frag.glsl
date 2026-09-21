@@ -8,6 +8,7 @@ uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half 
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
 uniform sampler2D uBorders;    // r: internal, g: external border field, 255 on the line
 uniform float uBorderRangeKm;  // distance at which the border field reaches 0
+uniform float uBorderTexelKm;  // world size of one border-field texel
 uniform sampler2D uGrain;      // tiling noise
 uniform vec2 uSizeKm;
 uniform float uExag;
@@ -91,13 +92,27 @@ void main() {
   ocean *= 1.0 - 0.32 * coast;
   col = mix(ocean, col, land);
 
-  // --- borders: distance fields give constant screen-width lines at any zoom
+  // --- borders: the fields measure to the smoothed outlines of step 1, so a level set of
+  // one is that curve rather than the pixels under it, and the line is drawn at a width
+  // asked for in screen pixels. The old 0.55 and 0.85 were against a field that measured
+  // to the border *pixels*, which lent every line half a texel of unearned weight that
+  // grew with the zoom, so the numbers here are larger for the same look.
+  //
+  // What an unsigned field cannot do is hold a line thinner than its own texel: bilinear
+  // interpolation across a cell never dips below the smallest of its four corners, so a
+  // thinner level set breaks into dashes (5% of the cells on the line at 0.4 texels, none
+  // by 0.75). Hold the width at that floor and let the line fade out instead of fattening
+  // once the camera has outrun what the field can say.
   vec2 b = texture(uBorders, luv(vUv)).rg;
   float dInt = (1.0 - b.r) * uBorderRangeKm;
   float dExt = (1.0 - b.g) * uBorderRangeKm;
   float aa = 0.75 * uKmPerPx;
-  float lineInt = 1.0 - smoothstep(0.55 * uKmPerPx - aa, 0.55 * uKmPerPx + aa, dInt);
-  float lineExt = 1.0 - smoothstep(0.85 * uKmPerPx - aa, 0.85 * uKmPerPx + aa, dExt);
+  float grain = 0.75 * uBorderTexelKm;
+  float askInt = 1.1 * uKmPerPx, askExt = 1.6 * uKmPerPx;
+  float held = 1.0 - smoothstep(2.0, 6.0, grain / max(askInt, 1e-6));
+  float wInt = max(askInt, grain), wExt = max(askExt, grain);
+  float lineInt = held * (1.0 - smoothstep(wInt - aa, wInt + aa, dInt));
+  float lineExt = held * (1.0 - smoothstep(wExt - aa, wExt + aa, dExt));
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
@@ -116,7 +131,8 @@ void main() {
                          max(step(0.5, abs(n2 - uSelected)), step(0.5, abs(n3 - uSelected))));
     float onEdge = max(sel * anyOther, (1.0 - sel) * anySel);
     float dEdge = min(dInt, dExt);
-    float outline = (1.0 - smoothstep(1.1 * uKmPerPx - aa, 1.1 * uKmPerPx + aa, dEdge)) * onEdge;
+    float wSel = max(2.0 * uKmPerPx, grain);
+    float outline = held * (1.0 - smoothstep(wSel - aa, wSel + aa, dEdge)) * onEdge;
     col = mix(col, col * vec3(1.16, 1.07, 0.84) + vec3(0.05, 0.025, 0.0), sel);
     col = mix(col, vec3(0.32, 0.12, 0.04), outline * 0.9);
   }
