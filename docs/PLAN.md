@@ -458,6 +458,14 @@ What every layer of a given type gets without writing code:
   priority thinning so phones never show hundreds of markers, region highlight on
   selection, card carousel with camera sync, search indexing, deep links, both
   languages.
+- **`choropleth`**, **categorical**: `"scale": "categorical"` instead of a list of bands, and
+  then the layer declares `categories` exactly as a `points` or `lines` layer does -- an id,
+  a bilingual title and a colour each -- and `values.csv` holds a category id per region
+  instead of a number. One file format and one lookup serve both kinds: what reaches the
+  shader is an index into the same eight colours either way, so the terrain reads one texel
+  and cannot tell them apart. It is for what a region *is* rather than how much of
+  something it has, so it has no unit, and the build says so if one is declared. The legend
+  is the categories', not a set of ranges.
 - **`choropleth`**: a `values.csv` of `region,value` beside `layer.json`, which carries
   the `scale` (a lower bound and a colour per band), a bilingual `unit` template and an
   optional `note` for a caveat the legend should show. The build turns the ISO codes into
@@ -506,7 +514,7 @@ map is a folder and a source, whatever it shows.
 |-----------|-------|-----------------------|--------|---------------------------|
 | `terrain` | the clay relief | physical | built | -- |
 | `choropleth`, banded | a number per region, in bands | density, literacy, sex ratio, rainfall by state, crop output | built (states) | population density (done) |
-| `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | small: a `scale.type` | states in pastel fills, no two neighbours alike |
+| `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | built (`"scale": "categorical"`) | zonal councils (done) |
 | `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | blocked on a boundary source (open question 10) | Census 2011 literacy |
 | `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | small: a `source.kind` | reference lines |

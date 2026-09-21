@@ -37,6 +37,8 @@ STATUSES = ('draft', 'reviewed')
 FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int}
 BLURB_MAX = 240
 EVERYWHERE = '*'     # a regional item kept across the whole country
+CATEGORICAL = 'categorical'   # a choropleth's scale, when regions carry a category and not a number
+MAX_BANDS = 8        # the terrain shader declares this many colours; keep in step with choropleth.js
 
 
 def bilingual(v):
@@ -73,13 +75,27 @@ def validate_layer(layer, folder):
     if not bilingual(layer.get('title')):
         p.append('layer.title needs en and hi')
     cats = layer.get('categories') or []
-    # A choropleth is coloured by a scale, not sorted into categories.
+    # A choropleth is coloured either by a numeric scale or by named categories.
     if layer.get('type') == 'choropleth':
-        if cats:
-            p.append('a choropleth has a scale, not categories')
-        p += validate_scale(layer.get('scale'))
-        if not bilingual(layer.get('unit')):
-            p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
+        if layer.get('scale') == CATEGORICAL:
+            # The categorical kind: a category per region and a colour each, for what a
+            # region *is* rather than how much of something it has -- the political map,
+            # language families, climate zones. Its categories are declared exactly as
+            # any other layer's, so the legend and the manifest already carry them.
+            if not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
+                p.append('a categorical choropleth needs categories with id and a bilingual title')
+            if any(not isinstance(c.get('color'), str) or not c['color'].startswith('#') for c in cats):
+                p.append('a categorical choropleth needs a hex color on every category')
+            if len(cats) > MAX_BANDS:
+                p.append(f'a choropleth can colour at most {MAX_BANDS} categories, got {len(cats)}')
+            if layer.get('unit'):
+                p.append('a categorical choropleth has no unit: its categories are not quantities')
+        else:
+            if cats:
+                p.append('a choropleth has a scale, not categories')
+            p += validate_scale(layer.get('scale'))
+            if not bilingual(layer.get('unit')):
+                p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
     elif not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
     if layer.get('type') == 'lines':
@@ -117,11 +133,18 @@ def validate_scale(scale):
 
 
 def build_choropleth(layer, folder, by_iso, by_id):
-    """values.csv of region,value -> { raster id: value }. Returns (out, problems)."""
+    """
+    values.csv of region,value -> { raster id: value }. Returns (out, problems).
+
+    One file format for both kinds of choropleth: the value is a number for a scale and
+    a category id for a categorical one, which is what "value" means for that layer.
+    """
     path = os.path.join(folder, 'values.csv')
     if not os.path.exists(path):
         return {}, ['a choropleth needs values.csv beside layer.json']
     values, problems = {}, []
+    categorical = layer.get('scale') == CATEGORICAL
+    cats = {c['id'] for c in layer.get('categories', [])} if categorical else set()
     with open(path, encoding='utf-8') as f:
         rows = list(csv.reader(f))
     head = [c.strip().lower() for c in rows[0]] if rows else []
@@ -133,6 +156,13 @@ def build_choropleth(layer, folder, by_iso, by_id):
         code = row[0].strip()
         if code not in by_iso:
             problems.append(f'values.csv line {n}: {code} is not an ISO 3166-2:IN code')
+            continue
+        if categorical:
+            value = (row[1].strip() if len(row) > 1 else '')
+            if value not in cats:
+                problems.append(f"values.csv line {n}: {value!r} is not one of this layer's categories")
+                continue
+            values[by_iso[code]['id']] = value
             continue
         try:
             values[by_iso[code]['id']] = float(row[1])

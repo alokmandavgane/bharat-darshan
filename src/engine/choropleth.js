@@ -9,6 +9,7 @@
 import { Color, DataTexture, NearestFilter, RGFormat, UnsignedByteType } from 'three';
 
 export const MAX_BANDS = 8;          // the shader declares this many; the scale may use fewer
+export const CATEGORICAL = 'categorical';
 
 /** The band a value falls in: the last one whose `from` it has reached. */
 export function bandOf(scale, value) {
@@ -19,18 +20,34 @@ export function bandOf(scale, value) {
 
 /**
  * A layer file -> what the terrain needs to colour by it.
- * @param {{ scale: any[], values: Record<string, number> }} layer
+ *
+ * Two kinds, one mechanism. A numeric scale sorts a value into the band it falls in; a
+ * categorical one ("scale": "categorical") takes the region's category and looks up
+ * which colour that is. Either way what reaches the shader is an index into the same
+ * eight colours, so the terrain reads one texel and knows neither kind apart.
+ *
+ * @param {{ scale: any, categories?: any[], values: Record<string, number | string> }} layer
  * @returns {{ texture: any, colors: Color[], count: number, dispose: () => void }}
  */
 export function choroplethLookup(layer) {
-  const scale = (layer.scale || []).slice(0, MAX_BANDS);
+  const categorical = layer.scale === CATEGORICAL;
+  const bands = (categorical ? layer.categories || [] : layer.scale || []).slice(0, MAX_BANDS);
+  const index = categorical ? new Map(bands.map((c, i) => [c.id, i])) : null;
   // r: band index, g: 255 when this region has a value at all. Region 0 is "not a state",
   // so it stays 0 and the sea, the neighbours and the backdrop are left alone.
   const data = new Uint8Array(256 * 2);
   for (const [id, value] of Object.entries(layer.values || {})) {
     const i = Number(id);
-    if (!Number.isInteger(i) || i < 1 || i > 255 || !Number.isFinite(value)) continue;
-    data[i * 2] = bandOf(scale, value);
+    if (!Number.isInteger(i) || i < 1 || i > 255) continue;
+    let band;
+    if (categorical) {
+      band = index.get(value);
+      if (band === undefined) continue;          // a category the layer no longer declares
+    } else {
+      if (!Number.isFinite(value)) continue;
+      band = bandOf(bands, value);
+    }
+    data[i * 2] = band;
     data[i * 2 + 1] = 255;
   }
   const texture = new DataTexture(data, 256, 1, RGFormat, UnsignedByteType);
@@ -40,7 +57,7 @@ export function choroplethLookup(layer) {
   texture.flipY = false;
   texture.unpackAlignment = 1;
   texture.needsUpdate = true;
-  const colors = scale.map((b) => new Color(b.color));
+  const colors = bands.map((b) => new Color(b.color));
   while (colors.length < MAX_BANDS) colors.push(new Color('#000000'));
-  return { texture, colors, count: scale.length, dispose: () => texture.dispose() };
+  return { texture, colors, count: bands.length, dispose: () => texture.dispose() };
 }

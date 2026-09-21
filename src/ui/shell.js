@@ -2,6 +2,7 @@
 // Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
 import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
+import { CATEGORICAL } from '../engine/choropleth.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { glyphSvg } from '../glyphs.js';
 
@@ -231,12 +232,15 @@ export function createShell(root, store) {
   }
 
   function layerLegend(layer) {
-    if (layer.type === 'choropleth') return scaleLegend(layer);
+    // A choropleth coloured by a numeric scale reads as ranges of a unit; one coloured by
+    // category reads as its categories, like any other layer, and only the caveat differs.
+    const categorical = layer.scale === CATEGORICAL;
+    if (layer.type === 'choropleth' && !categorical) return scaleLegend(layer);
     const cats = layer.categories || [];
     if (cats.length < 2) return null;
     const ul = document.createElement('ul');
     ul.className = 'legend';
-    ul.dataset.kind = layer.type;
+    ul.dataset.kind = categorical ? 'choropleth' : layer.type;
     for (const c of cats) {
       const li = document.createElement('li');
       const sw = document.createElement('span');
@@ -245,7 +249,13 @@ export function createShell(root, store) {
       li.append(sw, document.createTextNode(pick(c.title)));
       ul.appendChild(li);
     }
-    return ul;
+    if (!layer.note) return ul;
+    const out = document.createDocumentFragment();
+    const p = document.createElement('p');
+    p.className = 'legend-note';
+    p.textContent = pick(layer.note);
+    out.append(ul, p);
+    return out;
   }
 
 
