@@ -123,7 +123,7 @@ What is wrong:
 The fixes, in the order to build them (each its own commit). F8's tests come first, so
 every fix after them is checked against something:
 
-- **F1. Grab-point pivot.** On pointer-down (mouse) or second-finger-down (touch) the UI
+- **F1. Grab-point pivot.** *Done.* On pointer-down (mouse) or second-finger-down (touch) the UI
   sets `grab { x, y }` in the store; the engine answers synchronously with
   `pivot { x, y, z }`, the surface point its picker already finds (heightfield, lifted
   block included) -- the same handshake as `tap` -> `selection`, so the UI still never
@@ -144,34 +144,34 @@ every fix after them is checked against something:
   exactly that: `uIndiaEdge`, the signed distance field the plate cuts its silhouette
   from. Sampling it needs a second `grab`-style handshake, since only the engine holds
   the texture.*
-- **F3. Free yaw.** Drop `LIMITS.yaw`; normalise to (-180°, 180°]; `flyTo` unwraps the
+- **F3. Free yaw.** *Done.* Drop `LIMITS.yaw`; normalise to (-180°, 180°]; `flyTo` unwraps the
   target yaw to the nearest turn before tweening, so `tween.js` stays ignorant of angles.
   `?cam=` already carries yaw. The compass needle already turns with the map and already
   resets; give it a visible "not north" state, since it is now the only way home from
   upside-down. Pitch keeps its 25-89° range.
-- **F4. The light stays with the viewer.** One `uLightAzimuth` uniform, home azimuth plus
+- **F4. The light stays with the viewer.** *Done.* One `uLightAzimuth` uniform, home azimuth plus
   camera yaw, read by the terrain, block, backdrop and wall shaders in place of the
   constant. Turning a model under a lamp is what this looks like in a room, and it is also
   the cartographic rule: light from the bottom of the screen inverts relief to the eye,
   valleys reading as ridges, worst near top-down. Baked AO and the coastal shadow are
   direction-free, so nothing in the pipeline changes.
-- **F5. One gesture, one meaning on touch.** Two fingers start undecided. Both moving the
+- **F5. One gesture, one meaning on touch.** *Done.* Two fingers start undecided. Both moving the
   same way, mostly vertical, with the spread and the angle between them barely changing
   -> *tilt*, and only tilt. Anything else -> *pinch/pan*, with twist joining only once
   the angle has moved ~8°, then latched. The mode holds until a finger lifts. This is
   what Google Maps and Mapbox do and what thumbs already expect.
-- **F6. Momentum.** Release velocity carries pan and turn on with an exponential decay
+- **F6. Momentum.** *Done, except a look on a real phone: the pane here never fires a frame.* Release velocity carries pan and turn on with an exponential decay
   (~300 ms), killed by the next touch, off under reduced motion. It only runs while
   something moves, so render-on-demand stands.
-- **F7. Everything else pivots properly too.** Idle sway, tour sway and keyboard turning
+- **F7. Everything else pivots properly too.** *Done.* Idle sway, tour sway and keyboard turning
   go through `orbitAbout` about the padded centre instead of writing yaw.
-- **F8. Pin it down.** `camera-math.js` is pure, so it gets tests with `node --test`
+- **F8. Pin it down.** *Done: 24 cases, `npm test`.* `camera-math.js` is pure, so it gets tests with `node --test`
   (standard library, no dependency): the pivot's projection is unchanged by `orbitAbout`
   for random yaw, pitch and height; yaw unwrapping takes the short way; `clampTarget`
   holds. And one headless check: grab a point, turn through 360°, the point under the
   cursor has moved less than a pixel.
 
-**F0. Desktop buttons go back** (open question 8, resolved 2026-09-21). The sixth round
+**F0. Desktop buttons go back** (open question 8, resolved 2026-09-21). *Done.* The sixth round
 made left-drag turn the model and right-drag slide it. With a pivot that is wherever the
 canvas centre happened to be, that put the least predictable motion on the most used
 button. F1 cures the unpredictability whichever button it is on, but left-drag slides
@@ -677,6 +677,8 @@ seasonality. Media needs credit, licence and source on every entry.
 | Layer | Source | Notes |
 |-------|--------|-------|
 | Boundaries | Survey of India; DataMeet community maps; Natural Earth India point-of-view files | Validate 36 units, ISO 3166-2:IN and LGD codes. Keep 2011 district shapes for census joins. Check the outline against the SoI political map before trusting any source. |
+| Districts, current | `LGD_Districts` (785 districts, 36 units, LGD 2024) via india-geodata / bharatlas | See "District boundaries" below. |
+| Districts, 2011 | DataMeet `Districts/Census_2011/2011_Dist.shp` (641 features, CC BY 4.0) | `censuscode` 1-640 is the PC11 key every census table joins on. |
 | Elevation, country | AWS Terrain Tiles (Terrarium PNG), zoom 7-8 | About 150-200 tiles, 15-25 MB at zoom 7, roughly 1.1 km per pixel, includes bathymetry. Open data with attribution. Ideal for Phase 0. |
 | Elevation, states | Copernicus DEM GLO-30 | Free with attribution; fewer Himalayan voids than SRTM. Only needed once state packages are built. |
 | Rivers | HydroRIVERS (stream order, discharge); names from OSM / Natural Earth | |
@@ -702,6 +704,53 @@ values only, never its shapes (D6).
 | People | Density; literacy; sex ratio; urbanisation; decadal growth; religions; languages | choropleth, time, regional | Census of India 2011 and earlier; NFHS for anything newer |
 | Culture | Places; festivals; food; GI products; crafts; classical arts | points, regional | built; GI Registry; UNESCO; Wikidata |
 | History | Later, and carefully: extents of empires are contested and need sources per boundary | areas + time | -- |
+
+### District boundaries (open question 10, surveyed 2026-09-21)
+
+Every candidate was downloaded and tested: point-in-polygon on eight disputed-territory
+probes, and 1,500 random vertices against the project's own `india-soi.geojson` mask.
+
+| Source | Units / vintage | Licence | External boundary | Codes |
+|--------|-----------------|---------|-------------------|-------|
+| **`LGD_Districts`** (india-geodata / bharatlas) | **785 districts, 36 units, LGD 2024** -- Telangana 33, Ladakh 2, current throughout | "CC0 / CC BY 4.0", *asserted by the aggregator* | **Compliant.** Aksai Chin, Shaksgam and Gilgit inside `Leh Ladakh`; PoK as two named blobs; full Arunachal | **Both** LGD (`dist_lgd`) and PC11 (`dtcode11`), plus `year_stat` per polygon |
+| **DataMeet `Districts/Census_2011`** | 641 features = 640 PC11 districts + one for PoK; 2011, so no Telangana, no Ladakh | CC BY 4.0, the same repo the state file already comes from | Compliant | `censuscode` 1-640, the PC11 key |
+| geoBoundaries gbOpen ADM2 | 736, 2021 | ODbL 1.0 (the layer's own, not the project-wide CC BY) | Compliant | **None usable**: a name string, no state, no codes |
+| SHRUG / Development Data Lab | PC11 districts | CC BY-**NC**-SA: non-commercial | -- | `pc11_d_id` |
+| GADM 4.1 | ADM2 | **redistribution prohibited** | splits J&K into pseudo-units | -- |
+| Natural Earth | **no ADM2 for India at all** (Admin 2 is US counties) | CC0 | -- | -- |
+
+Against the project's own SoI mask, sampling 1,500 vertices: `LGD_Districts` has 3.6%
+outside it, DataMeet's 2011 districts 23.1%, and the state file the pipeline already
+trusts 12.7%. The recommended district file nests inside the mask *better* than the
+state file does.
+
+**Use both**: `LGD_Districts` for what the map draws, DataMeet 2011 for census joins.
+They join on the PC11 code, many-to-one from current districts to 2011 parents. Do not
+try to rebuild 2011 shapes by dissolving the 785: a split district's surviving row is
+the post-split remnant, not the 2011 polygon.
+
+Before any of it ships:
+
+- **Provenance, the one real risk.** LGD publishes codes, not geometry; the dbf schema
+  says an ArcGIS-simplified layer of census / Survey of India lineage with LGD codes
+  attached, and the licence label is the aggregator's assertion. D6 says chase that to a
+  primary statement first. A Survey of India product (`OVSF/1M/7`, free, admin boundaries
+  to district level), data.gov.in's district-boundary resource and Esri's Living Atlas of
+  India would each settle it; all three need a browser and an account, so they are the
+  owner's to check. Until then, geoBoundaries is the fallback that is already clear.
+- The district ID raster must be **uint16**: 785 will not fit the state raster's uint8,
+  which doubles that texture. Keep districts out of the first view (section 8's budget)
+  and ship them in the state packages.
+- `year_stat` is 622 polygons dated 2011 and 163 dated 2012-2023, so it is a
+  current-district file, not a single-epoch one. Carry that field so a district card can
+  say when its shape was drawn.
+- Aksai Chin, Shaksgam and Gilgit-Baltistan have no real internal district lines: they
+  sit inside `Leh Ladakh`, and PoK is two polygons with `dist_lgd = 0`. Every
+  district-level choropleth needs an explicit "no data" treatment there, and the count
+  shown to a visitor should say 785 *polygons*, not 785 administered districts.
+- `read_dbf` defaults to latin-1 and the file's `.cpg` says UTF-8. It happens not to
+  matter for `LGD_Districts`, whose names are ASCII, and it does for the SoI-lineage
+  sibling file, whose names carry diacritics.
 
 Pipeline steps (numbered scripts in `pipeline/`, re-runnable end to end):
 
@@ -874,9 +923,13 @@ workflow, more UI languages, the history section.
 9. **Resolved on 2026-09-21**: the key light stays with the viewer, upper-left of the
    screen, as the model turns (F4). Turning a model under a lamp is what this looks like
    in a room, and light from the bottom of the screen inverts relief to the eye.
-10. District boundaries: a source that carries the current districts *and* sits inside the
-    Survey of India outline. It gates every district-level plate, which is most of the
-    census. Being researched on 2026-09-21; the answer lands in section 7 when it does.
+10. District boundaries: **answered on 2026-09-21, pending one check.** Two files, for
+    two jobs -- `LGD_Districts` (785 current districts) for the map and DataMeet's
+    `Districts/Census_2011` (640) for census joins. Both are in section 7 with their
+    licences and their treatment of J&K. The open part is provenance: the current-district
+    file comes from an aggregator whose licence label is its own assertion rather than a
+    government grant, and D6 says chase that to a primary statement before a byte ships.
+    Until then the fallback is geoBoundaries ADM2 (ODbL, 2021, no codes).
 11. **Resolved on 2026-09-21** with question 4: "Bharat Darshan" stays, with "an atlas of
     India" as the line under it. Revisit before launch, not before.
 
@@ -1316,6 +1369,44 @@ docs/DEPLOY.md).
   The owner answered four open questions on reading this: left-drag slides the map again
   and turning moves to the right button (8); the light stays with the viewer (9); the
   name stays (4 and 11); and the district boundary source is mine to find (10).
+- 2026-09-21, eighteenth round: the camera fixes, F0 to F8, one commit each.
+  `camera-math.js` was pure and nothing checked it, so the tests came first and every
+  fix after them was written against something: 24 cases now, `npm test`, on node:test
+  and node:assert, which are standard library and so add no dependency.
+  The pivot is the fix the others hang off. A gesture now makes an *anchor* when it
+  begins -- a scene point and the screen position it must keep -- and holds it until it
+  ends, so whatever the hand has hold of does not move under it. `holdAnchor` is exact
+  in one step rather than iterated, the camera being orthographic and the target only
+  sliding in the ground plane. The point is a full 3D one, which matters more than it
+  sounds: the surface is up to 96 km above sea level at the default exaggeration, and a
+  pivot on the plane slides high ground across the screen as the view tilts. The engine
+  supplies the point through a `grab` -> `pivot` handshake, the same shape as
+  `tap` -> `selection`, so the UI still never calls the engine. Measured: turning and
+  tilting about grabs at 0.8 and 5.3 km of lift, and ten wheel steps on a point 68 km
+  up, all hold their point to 0.000 px.
+  Two-finger touch got shorter as well as better: scale and angles, then one
+  `holdAnchor` to the current midpoint, and the pan falls out of that. With a
+  classifier in front of it -- undecided for twelve pixels, then tilt or map, latched
+  until a finger lifts -- a sloppy pinch that used to wobble both yaw and pitch now only
+  zooms.
+  Yaw lost its clamp, which is what the owner asked for. Three consequences: flights
+  unwrap to the short way round, the stored angle wraps into one turn, and the compass
+  became load-bearing, so it brightens and says "Turn back to north" once the view is
+  turned. Eight right-drags take the yaw right round and back to where it started.
+  The key light was a constant in two shaders, the model's north-west, which was right
+  while yaw was clamped and wrong the moment it was not: at south-up the relief was lit
+  from below and read inverted. It is one uniform now, turned with the camera, and the
+  home view is unchanged to the pixel.
+  Two things added on the way that PLAN had not asked for. The camera target was never
+  bounded at all -- twenty hard drags carried the view 12,227 km off the model -- and it
+  now stops at about 1,300 km, against the units' own boxes. One box around India, and
+  India's convex hull, were both tried first and both park the view on open water; the
+  residual is written up against F2. And a release now glides, tau 130 ms, damped harder
+  for turning than for sliding.
+  One thing worth remembering for the next round of checks: the browser pane in this
+  environment reports `document.hidden` and fires no animation frame, so anything on
+  requestAnimationFrame -- the glide, the flow, the idle sway -- cannot be exercised
+  there at all. Pure functions and end states can; motion needs a phone.
 
 ### What exists
 
@@ -1376,13 +1467,14 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. **Phase 4, handling and look, before anything else** (section 9). F8's tests for
-   `camera-math.js` first, then F0 (left-drag slides again), F1 (grab-point pivot via a
-   `grab` -> `pivot` handshake in the store), F2 (`clampTarget`), F3 (free yaw,
-   short-way flights), F4 (light follows yaw), F5 (touch classification), F6
-   (momentum), F7 (idle, tour and keys through `orbitAbout`). Then the table shadow,
-   the entrance, and the marker pass. Items 1-4 below wait behind this and fold into
-   Phases 5-7.
+0. **Phase 4.** The handling half is done: F0-F8 all shipped on 2026-09-21, one commit
+   each. What is left of Phase 4 is the look -- "The missing wow" items 1-4: the shadow
+   that puts the model on the table, the entrance, the handling's own feel on a real
+   phone, and the marker pass that stops 40 tokens covering the relief. Then the owner's
+   verdict, which is the Phase 0 exit criterion that was never signed off.
+   Two things to pick up while in there: F2's residual (clamp against the coast, using
+   the `uIndiaEdge` field the pipeline already bakes) and a look at the momentum on a
+   phone, which is the one thing the tests and the headless pane cannot judge.
 1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts still need a district boundary source that
