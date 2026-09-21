@@ -127,6 +127,46 @@
    "path": "layers/places.json"
   },
   {
+   "id": "rail",
+   "type": "lines",
+   "title": {
+    "en": "Railways",
+    "hi": "रेलमार्ग"
+   },
+   "icon": "rail",
+   "group": "network",
+   "default_on": false,
+   "count": 5,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "trunk",
+     "title": {
+      "en": "Trunk line",
+      "hi": "प्रमुख लाइन"
+     },
+     "color": "#5b6f86"
+    },
+    {
+     "id": "coastal",
+     "title": {
+      "en": "Coastal line",
+      "hi": "तटीय लाइन"
+     },
+     "color": "#4f7f84"
+    },
+    {
+     "id": "mountain",
+     "title": {
+      "en": "Mountain line",
+      "hi": "पर्वतीय लाइन"
+     },
+     "color": "#6b6480"
+    }
+   ],
+   "path": "layers/rail.json"
+  },
+  {
    "id": "ranges",
    "type": "points",
    "marker": "label",
@@ -192,6 +232,46 @@
     }
    ],
    "path": "layers/rivers.json"
+  },
+  {
+   "id": "roads",
+   "type": "lines",
+   "title": {
+    "en": "Highways",
+    "hi": "राजमार्ग"
+   },
+   "icon": "road",
+   "group": "network",
+   "default_on": false,
+   "count": 8,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "trunk",
+     "title": {
+      "en": "Trunk route",
+      "hi": "प्रमुख मार्ग"
+     },
+     "color": "#b06a43"
+    },
+    {
+     "id": "coastal",
+     "title": {
+      "en": "Coastal route",
+      "hi": "तटीय मार्ग"
+     },
+     "color": "#a8804a"
+    },
+    {
+     "id": "mountain",
+     "title": {
+      "en": "Mountain route",
+      "hi": "पर्वतीय मार्ग"
+     },
+     "color": "#8c6a5a"
+    }
+   ],
+   "path": "layers/roads.json"
   },
   {
    "id": "summits",
@@ -413,6 +493,10 @@
    "size": 122864,
    "sha256": "422f9dd6ce43"
   },
+  "layers/rail.json": {
+   "size": 8840,
+   "sha256": "13c7eaa3229b"
+  },
   "layers/ranges.json": {
    "size": 13538,
    "sha256": "51c5a8103a23"
@@ -420,6 +504,10 @@
   "layers/rivers.json": {
    "size": 52777,
    "sha256": "f874d2745a27"
+  },
+  "layers/roads.json": {
+   "size": 18770,
+   "sha256": "347f18c1c7b7"
   },
   "layers/summits.json": {
    "size": 19426,
