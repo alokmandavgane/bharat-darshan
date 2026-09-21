@@ -286,9 +286,14 @@ What every layer of a given type gets without writing code:
   priority thinning so phones never show hundreds of markers, region highlight on
   selection, card carousel with camera sync, search indexing, deep links, both
   languages.
-- **`choropleth`**: a `values.csv` of `region,value` plus a palette and legend spec.
-  The id-to-colour lookup texture is generated at runtime; crossfades between
-  choropleths are free.
+- **`choropleth`**: a `values.csv` of `region,value` beside `layer.json`, which carries
+  the `scale` (a lower bound and a colour per band), a bilingual `unit` template and an
+  optional `note` for a caveat the legend should show. The build turns the ISO codes into
+  raster ids; the runtime makes a 256-texel lookup indexed by id and the terrain tints its
+  albedo by it, so light, ambient occlusion and grain still go over the top and the relief
+  reads under the colour. A region with no value keeps its own clay. Only one choropleth
+  is drawn at a time, so switching one on switches the others off and changing between
+  them fades out through the clay and back.
 - **`lines`**: geometry fetched from the source named in `layer.json` and joined to the
   curated items either by the source's own names (`join: "name"`, which is how rivers
   work) or by routing through the places an item lists (`join: "route"`, for a source
@@ -506,6 +511,10 @@ the source cannot supply are noted in the status log below.*
 District-level languages with script samples and greeting audio; places, food and
 festivals with card-carousel sync; a month scrubber ("India through the year");
 search; first ~150 reviewed items. Exit: GI products added with data files only.
+*Part done (2026-09-21): both layer types exist, the card carousel works, and the
+first choropleth (population density) went in as data alone. Left: districts, which
+need a boundary source; languages, food and festivals; the month scrubber; search;
+and the reviewed items, which are the owner's.*
 
 **Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
 monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
@@ -891,6 +900,27 @@ docs/DEPLOY.md).
   name while the map flew to the right one. Opening by name says `data: null` and means
   it. That merge is worth remembering before adding another slice that is sometimes a
   stub.
+- 2026-09-21, twelfth round: the `choropleth` type, and the first one.
+  A folder brings a values.csv of region,value beside its layer.json and the whole layer
+  reaches the shader as one 256-texel lookup indexed by raster id. It tints the clay
+  rather than covering it: the value replaces the hypsometric colour and the same light,
+  ambient occlusion and grain go over the top, so the relief still reads under it. A
+  region with no value keeps its own colour, and so do the sea, the neighbours and the
+  backdrop, whose id is 0.
+  The lookup stores a band index rather than a colour. The band colours go as ordinary
+  Color uniforms, which three.js converts from sRGB to linear; an 8-bit texture of linear
+  colour would have thrown the darks away.
+  Population density is the first one, as data alone -- `grep -r population-density src/`
+  is empty. It is the 2011 census population over the published area of each state, the
+  same two figures the state cards carry, so the map and the cards cannot drift. 17 per
+  km² in Arunachal Pradesh against 11,320 in Delhi, which is why the bands are 0, 50,
+  150, 300, 500 and 1,000 rather than even steps. Jammu and Kashmir and Ladakh are left
+  uncoloured and the legend says why: the census predates their 2019 reorganisation, and
+  published areas for them differ by which territory is counted, so any single number
+  would be taking a side in a boundary question.
+  Only one choropleth is drawn at a time -- two would fight over the same clay -- so
+  switching one on switches the others off, and changing between them fades out through
+  the clay and back. The type decides that, never a layer's name.
 
 ### What exists
 
@@ -951,20 +981,24 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. Roads and rail ship as drafts: read the eight highway and five railway cards and
+0. Phase 3 next, in the order they unblock each other: search across layer items (the
+   list box already searches states), then the month scrubber, then districts, which
+   need a district boundary source that meets the boundary rule in CLAUDE.md. Languages,
+   food and festivals are content, drafted the same way the places were.
+1. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
    a gap. Konkan, Kalka-Shimla and the Nilgiri Mountain Railway wait for a source with
    names in it.
-1. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
+2. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
    and band edges in `src/engine/shaders/terrain.frag.glsl`.
-2. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
+3. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
    question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
    the state view, the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
-3. Settle open questions 6-7.
+4. Settle open questions 6-7.
