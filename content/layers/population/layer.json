@@ -1,0 +1,29 @@
+{
+  "id": "population",
+  "type": "prisms",
+  "group": "culture",
+  "title": {
+    "en": "Population",
+    "hi": "जनसंख्या"
+  },
+  "icon": "city",
+  "default_on": false,
+  "unit": {
+    "en": "{n} people",
+    "hi": "{n} लोग"
+  },
+  "height": {
+    "domain": [0, 200000000],
+    "km": 320,
+    "legend": [25000000, 100000000, 200000000]
+  },
+  "note": {
+    "en": "The 2011 census, the latest held; the count due in 2021 was postponed. Each state's ground is raised in proportion to its people, so the column is the population and not the crowding: Uttar Pradesh stands highest with 199.8 million, Lakshadweep lowest with 64,473.",
+    "hi": "2011 की जनगणना, जो अब तक की अंतिम है; 2021 की गणना स्थगित हो गई। हर राज्य की भूमि उसकी जनसंख्या के अनुपात में उठती है, इसलिए स्तंभ जनसंख्या दिखाता है, घनत्व नहीं: उत्तर प्रदेश 19.98 करोड़ के साथ सबसे ऊँचा, लक्षद्वीप 64,473 के साथ सबसे नीचा।"
+  },
+  "sources": [
+    "https://censusindia.gov.in/census.website/data/census-tables"
+  ],
+  "attribution": "2011 census population, the same figures the state cards carry: values.csv is generated from content/states/states.json so the map and the cards cannot drift.",
+  "_height": "domain is the value range, km how far the top of it stands up, legend the values the key shows a column for. The engine reads the type, never this layer's name."
+}

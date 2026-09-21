@@ -374,6 +374,40 @@
    "path": "layers/population-density.json"
   },
   {
+   "id": "population",
+   "type": "prisms",
+   "title": {
+    "en": "Population",
+    "hi": "जनसंख्या"
+   },
+   "icon": "city",
+   "group": "culture",
+   "default_on": false,
+   "count": 36,
+   "reviewed": 0,
+   "height": {
+    "domain": [
+     0,
+     200000000
+    ],
+    "km": 320,
+    "legend": [
+     25000000,
+     100000000,
+     200000000
+    ]
+   },
+   "unit": {
+    "en": "{n} people",
+    "hi": "{n} लोग"
+   },
+   "note": {
+    "en": "The 2011 census, the latest held; the count due in 2021 was postponed. Each state's ground is raised in proportion to its people, so the column is the population and not the crowding: Uttar Pradesh stands highest with 199.8 million, Lakshadweep lowest with 64,473.",
+    "hi": "2011 की जनगणना, जो अब तक की अंतिम है; 2021 की गणना स्थगित हो गई। हर राज्य की भूमि उसकी जनसंख्या के अनुपात में उठती है, इसलिए स्तंभ जनसंख्या दिखाता है, घनत्व नहीं: उत्तर प्रदेश 19.98 करोड़ के साथ सबसे ऊँचा, लक्षद्वीप 64,473 के साथ सबसे नीचा।"
+   },
+   "path": "layers/population.json"
+  },
+  {
    "id": "power",
    "type": "points",
    "marker": "symbol",
@@ -998,6 +1032,10 @@
   "layers/population-density.json": {
    "size": 1730,
    "sha256": "9499b2abb944"
+  },
+  "layers/population.json": {
+   "size": 1989,
+   "sha256": "7ef0fbcd41a4"
   },
   "layers/power.json": {
    "size": 20899,
