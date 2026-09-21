@@ -1,0 +1,24 @@
+{
+  "id": "languages",
+  "type": "regional",
+  "group": "culture",
+  "title": { "en": "Languages", "hi": "भाषाएँ" },
+  "icon": "temple",
+  "default_on": false,
+  "categories": [
+    { "id": "indo-aryan", "title": { "en": "Indo-Aryan", "hi": "भारोपीय-आर्य" }, "color": "#b4552e" },
+    { "id": "dravidian", "title": { "en": "Dravidian", "hi": "द्रविड़" }, "color": "#4d7f97" },
+    { "id": "tibeto-burman", "title": { "en": "Tibeto-Burman", "hi": "तिब्बती-बर्मी" }, "color": "#5f8a5a" },
+    { "id": "austroasiatic", "title": { "en": "Austroasiatic", "hi": "आस्ट्रो-एशियाई" }, "color": "#8a6f3f" },
+    { "id": "other", "title": { "en": "Other", "hi": "अन्य" }, "color": "#7a6a85" }
+  ],
+  "fields": {
+    "speakers": {
+      "type": "int",
+      "label": { "en": "First-language speakers", "hi": "मातृभाषी" },
+      "unit": { "en": "{n} (2011 census)", "hi": "{n} (2011 जनगणना)" }
+    }
+  },
+  "attribution": "The twenty-two languages of the Eighth Schedule to the Constitution, and English. A language is listed against the states and union territories where it is an official or additional official language, except where a note says otherwise. Speaker counts are first-language speakers from the 2011 census.",
+  "_regions": "Where it is official, not where it is spoken: the two are not the same and the blurb says so where they differ."
+}
