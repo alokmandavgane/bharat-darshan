@@ -27,6 +27,11 @@ const store = createStore({
   hover: null,
   tap: null,
   pointer: null,
+  // A gesture beginning asks `grab` { x, y } what it has hold of; the engine answers in
+  // `pivot` { point, sx, sy } before the set returns, and the gesture turns the model
+  // about that (PLAN.md D13). The UI still never calls the engine.
+  grab: null,
+  pivot: null,
   flyTo: null,
   focus: null,
   // A deep link to an item opens it by name alone; the engine fills in the data once that

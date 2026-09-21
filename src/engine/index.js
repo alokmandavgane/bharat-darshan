@@ -6,7 +6,7 @@ import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { choroplethLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createWorld } from './world.js';
-import { basis, DEFAULT_CAMERA, fitBounds, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
+import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
@@ -622,6 +622,20 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const p = pick(sx, sy);
     return p ? lines.nearest(p.x, p.z, px * (store.get('camera').zoom / viewport.h)) : null;
   }
+
+  // A gesture is starting: answer with the surface point it has hold of, so it can turn
+  // the model about that rather than about the middle of the canvas (PLAN.md D13, F1).
+  // The store calls subscribers synchronously, so `pivot` is filled in by the time the
+  // gesture's own `store.set('grab', ...)` returns. `onModel` is false where the hand
+  // landed on the sea or on the paper beside the model, and the gesture decides what
+  // that is worth: a zoom is happy to pull towards open water, a turn is not.
+  store.subscribe('grab', (g) => {
+    if (!g) return;
+    const cam = store.get('camera');
+    if (!field) { store.set('pivot', { ...groundAnchor(cam, g.x, g.y, viewport), onModel: false }); return; }
+    const hit = pickTerrain(cam, viewport, g.x, g.y, field, liftKm, raised);
+    store.set('pivot', { point: [hit.x, hit.y, hit.z], sx: g.x, sy: g.y, onModel: !!hit.id });
+  });
 
   store.subscribe('tap', (tap) => {
     if (!tap || !field) return;

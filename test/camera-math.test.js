@@ -9,8 +9,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  basis, clamp, clampCamera, DEFAULT_CAMERA, fitBounds, groundPoint, groundShift,
-  kmPerPixel, LIMITS, project,
+  basis, clamp, clampCamera, DEFAULT_CAMERA, fitBounds, groundAnchor, groundPoint,
+  groundShift, holdAnchor, kmPerPixel, LIMITS, orbitAbout, paddedCentre, project,
+  zoomAbout,
 } from '../src/engine/camera-math.js';
 
 /** A deterministic generator, so a failure is always the same failure. */
@@ -152,6 +153,88 @@ test('fitBounds puts the whole box inside the padded viewport, and fills one axi
       if (fitted.zoom > LIMITS.zoom[0] + 1) close(tight, 1, 1e-3, 'one axis is filled');
     }
   }
+});
+
+// --- anchors (PLAN.md D13, F1): the point you grab is the point that stays
+
+test('holdAnchor puts its point back where it was asked for, at any height', () => {
+  const r = rng(6);
+  for (const vp of VIEWPORTS) {
+    for (const cam of cameras(r, 12)) {
+      for (let i = 0; i < 6; i++) {
+        const a = { point: [(r() - 0.5) * 3000, r() * 120, (r() - 0.5) * 3000], sx: (r() - 0.5) * vp.w, sy: (r() - 0.5) * vp.h };
+        const [px, py] = project(holdAnchor(cam, a, vp), a.point, vp);
+        close(px, a.sx, 1e-6, 'anchor x');
+        close(py, a.sy, 1e-6, 'anchor y');
+      }
+    }
+  }
+});
+
+test('a turn keeps the grabbed point under the hand, whatever its height', () => {
+  const r = rng(7);
+  for (const vp of VIEWPORTS) {
+    for (const cam of cameras(r, 10)) {
+      // grab a point on the terrain, not on the sea-level plane
+      const sx = (r() - 0.5) * vp.w, sy = (r() - 0.5) * vp.h;
+      const [gx, gz] = groundPoint(cam, sx, sy, vp);
+      const held = { point: [gx, r() * 120, gz], sx, sy };
+      let c = cam;
+      for (let step = 0; step < 24; step++) {                 // a drag, one move at a time
+        c = orbitAbout(c, c.yaw + 15, c.pitch + (r() - 0.5) * 6, held, vp);
+        const [px, py] = project(c, held.point, vp);
+        close(px, sx, 1e-6, `x after ${step + 1} moves`);
+        close(py, sy, 1e-6, `y after ${step + 1} moves`);
+      }
+    }
+  }
+});
+
+test('a zoom keeps the grabbed point under the hand', () => {
+  const r = rng(8);
+  const vp = { w: 1400, h: 900 };
+  for (const cam of cameras(r, 10)) {
+    const sx = (r() - 0.5) * vp.w, sy = (r() - 0.5) * vp.h;
+    const [gx, gz] = groundPoint(cam, sx, sy, vp);
+    const held = { point: [gx, 90, gz], sx, sy };             // a summit, not the sea
+    let c = cam;
+    for (let step = 0; step < 20; step++) {
+      c = zoomAbout(c, 0.85, held, vp);
+      const [px, py] = project(c, held.point, vp);
+      close(px, sx, 1e-6, 'x while zooming in');
+      close(py, sy, 1e-6, 'y while zooming in');
+    }
+  }
+});
+
+test('a sea-level pivot drifts high ground when the view tilts; a 3D one does not', () => {
+  // Why the pivot has to carry a height. Turning about the vertical axis through a point
+  // is unaffected by how high that point is, so yaw alone never showed this; tilting is
+  // where it bites, because the screen offset of a height is y * cos(pitch) / kmPerPx.
+  // At the default exaggeration the Himalaya sit ~96 km above the plane.
+  const vp = { w: 1400, h: 900 };
+  const cam = { ...DEFAULT_CAMERA, zoom: 1200 };
+  const flat = groundAnchor(cam, 200, 100, vp);
+  close(flat.point[1], 0, 0, 'a ground anchor is on the plane');
+  const summit = [flat.point[0], 90, flat.point[2]];
+  const was = project(cam, summit, vp);
+
+  const old = orbitAbout(cam, cam.yaw, cam.pitch + 20, flat, vp);
+  const [px, py] = project(old, summit, vp);
+  const drift = Math.hypot(px - was[0], py - was[1]);
+  assert.ok(drift > 15, `a sea-level pivot should visibly drift a summit, got ${drift} px`);
+
+  const now = orbitAbout(cam, cam.yaw, cam.pitch + 20, { point: summit, sx: was[0], sy: was[1] }, vp);
+  const [qx, qy] = project(now, summit, vp);
+  close(Math.hypot(qx - was[0], qy - was[1]), 0, 1e-6, 'the summit stays put');
+});
+
+test('paddedCentre is the middle of what the panels leave visible', () => {
+  const vp = { w: 1400, h: 900 };
+  assert.deepEqual(paddedCentre(vp, { top: 0, right: 0, bottom: 0, left: 0 }), [0, 0]);
+  // a side panel on the right pushes the visible middle left; a sheet at the bottom, up
+  assert.deepEqual(paddedCentre(vp, { top: 104, right: 420, bottom: 36, left: 24 }), [-198, -34]);
+  assert.deepEqual(paddedCentre(vp, { top: 60, right: 8, bottom: 300, left: 8 }), [0, 120]);
 });
 
 test('fitBounds fits a hull more tightly than the box around it', () => {

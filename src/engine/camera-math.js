@@ -66,6 +66,11 @@ export function groundPoint(cam, sxPx, syPx, viewport) {
   return [cam.x + dx, cam.z + dz];
 }
 
+/** The middle of the area the header, panels and sheet leave visible. */
+export function paddedCentre(viewport, pad) {
+  return [(pad.left - pad.right) / 2, (pad.bottom - pad.top) / 2];
+}
+
 /** Screen position (px from the viewport centre, y up) of a scene point. */
 export function project(cam, point, viewport) {
   const k = kmPerPixel(cam, viewport);
@@ -74,28 +79,51 @@ export function project(cam, point, viewport) {
   return [(px * right[0] + pz * right[2]) / k, (px * up[0] + py * up[1] + pz * up[2]) / k];
 }
 
-/**
- * Zoom about a screen point so the ground under it stays put.
- * @param {number} factor  new zoom = old zoom * factor (factor < 1 zooms in)
- */
-export function zoomAbout(cam, factor, sxPx, syPx, viewport) {
-  const newZoom = clamp(cam.zoom * factor, LIMITS.zoom[0], LIMITS.zoom[1]);
-  const f = newZoom / cam.zoom;
-  const [gx, gz] = groundPoint(cam, sxPx, syPx, viewport);
-  return { ...cam, zoom: newZoom, x: gx + (cam.x - gx) * f, z: gz + (cam.z - gz) * f };
+// --- anchors: the one rule the handling rests on (PLAN.md D13)
+//
+// An anchor is a scene point and the screen position it must keep: the point the hand
+// grabbed, where it was grabbed. Every turn, tilt and zoom is "change the angles or the
+// scale, then put the anchor back", so whatever you have hold of does not move under
+// your finger. The point is a full 3D one, because the surface is up to ~90 km above
+// sea level at the default exaggeration and a pivot on the sea-level plane slides up
+// and down the screen as the view tilts.
+
+/** @typedef {{ point: number[], sx: number, sy: number }} Anchor */
+
+/** An anchor on the sea-level plane: for a caller with no terrain to ask. */
+export function groundAnchor(cam, sxPx, syPx, viewport) {
+  const [x, z] = groundPoint(cam, sxPx, syPx, viewport);
+  return { point: [x, 0, z], sx: sxPx, sy: syPx };
 }
 
 /**
- * Rotate the view about the ground point under a screen position (pivot), so that
- * point stays where it is on screen. `yaw`/`pitch` are the new absolute values.
+ * Slide the target so the anchor's point projects to its screen position again.
+ * Exact in one step: the camera is orthographic and the target only moves in the ground
+ * plane, so shifting it moves everything on screen equally whatever its height.
+ * @param {Anchor} anchor
  */
-export function orbitAbout(cam, yaw, pitch, sxPx, syPx, viewport) {
-  const [gx, gz] = groundPoint(cam, sxPx, syPx, viewport);
-  const next = clampCamera({ ...cam, yaw, pitch });
-  // Where would the pivot land with the new orientation if the target stayed? Shift back.
-  const [px, py] = project(next, [gx, 0, gz], viewport);
-  const [dx, dz] = groundShift(next, px - sxPx, py - syPx, viewport);
-  return { ...next, x: next.x + dx, z: next.z + dz };
+export function holdAnchor(cam, anchor, viewport) {
+  const [px, py] = project(cam, anchor.point, viewport);
+  const [dx, dz] = groundShift(cam, px - anchor.sx, py - anchor.sy, viewport);
+  return { ...cam, x: cam.x + dx, z: cam.z + dz };
+}
+
+/**
+ * Zoom, keeping the anchor where it is on screen.
+ * @param {number} factor  new zoom = old zoom * factor (factor < 1 zooms in)
+ * @param {Anchor} anchor
+ */
+export function zoomAbout(cam, factor, anchor, viewport) {
+  const zoom = clamp(cam.zoom * factor, LIMITS.zoom[0], LIMITS.zoom[1]);
+  return holdAnchor({ ...cam, zoom }, anchor, viewport);
+}
+
+/**
+ * Turn and tilt to new absolute angles, keeping the anchor where it is on screen.
+ * @param {Anchor} anchor
+ */
+export function orbitAbout(cam, yaw, pitch, anchor, viewport) {
+  return holdAnchor(clampCamera({ ...cam, yaw, pitch }), anchor, viewport);
 }
 
 /**

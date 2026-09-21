@@ -6,7 +6,10 @@
 // cursor, Q and E turn it. Double tap / click zooms in about the point. Touch: one
 // finger pans, two rotate and pinch, because a phone has no second button and panning
 // is what a finger on a map is for.
-import { clampCamera, groundShift, orbitAbout, zoomAbout } from '../engine/camera-math.js';
+import {
+  clamp, clampCamera, groundAnchor, groundShift, holdAnchor, LIMITS, orbitAbout,
+  paddedCentre, zoomAbout,
+} from '../engine/camera-math.js';
 
 const TAP_SLOP = 8;         // px of travel that still counts as a tap
 const TAP_MS = 350;
@@ -29,6 +32,35 @@ export function attachGestures(canvas, store) {
   const cam = () => store.get('camera');
   const write = (next) => store.set('camera', clampCamera(next), { source: 'gesture' });
 
+  /**
+   * What the hand has hold of (PLAN.md D13): ask the engine for the surface point under
+   * a screen position and get back an anchor to hold there for the rest of the gesture.
+   * The engine answers synchronously; before it is loaded, and if nothing is listening,
+   * the sea-level plane stands in. The old pivot is cleared first so a silent engine
+   * cannot hand this gesture the last one's.
+   * @returns {{ point: number[], sx: number, sy: number, onModel?: boolean }}
+   */
+  function grabAt(sx, sy) {
+    store.set('pivot', null);
+    store.set('grab', { x: sx, y: sy, t: performance.now() });
+    return store.get('pivot') || groundAnchor(cam(), sx, sy, viewport());
+  }
+
+  /**
+   * The same, for a turn. Turning about the sea or about the paper beside the model is
+   * turning about nothing, so a grab that misses falls back to the middle of what can
+   * be seen -- the padded middle, not the canvas's, with a sheet or a panel open.
+   */
+  function turnAnchor(sx, sy) {
+    const p = grabAt(sx, sy);
+    if (p.onModel !== false) return p;
+    const [cx, cy] = paddedCentre(viewport(), store.get('padding'));
+    return grabAt(cx, cy);
+  }
+
+  /** The anchor the gesture in progress is holding, made when it began. */
+  let held = null;
+
   // Screen coordinates relative to the canvas centre, y up.
   function local(e) {
     const r = canvas.getBoundingClientRect();
@@ -40,9 +72,22 @@ export function attachGestures(canvas, store) {
     canvas.setPointerCapture(e.pointerId);
     const p = local(e);
     pointers.set(e.pointerId, { x: p.x, y: p.y, sx: p.x, sy: p.y, t: performance.now(), type: e.pointerType, button: e.button });
-    if (pointers.size === 2) pinch = pinchState();
+    if (pointers.size === 1) {
+      // Which it is, is decided here and not revisited: letting go of Ctrl halfway
+      // through a turn should not silently make it a pan. A mouse on the turn button
+      // takes hold of what is under it; one finger only pans, which needs no anchor.
+      const rec = pointers.get(e.pointerId);
+      rec.turn = e.pointerType === 'mouse' && turning(e, e.button);
+      held = rec.turn ? turnAnchor(p.x, p.y) : null;
+    } else if (pointers.size === 2) {
+      pinch = pinchState();
+      held = turnAnchor(pinch.midX, pinch.midY);   // two fingers hold the point between them
+    }
     e.preventDefault();
   }
+
+  /** Mouse: the right button turns, and so does Ctrl or Alt for trackpads without one. */
+  const turning = (e, button) => button === 2 || e.ctrlKey || e.altKey;
 
   function pinchState() {
     const [a, b] = [...pointers.values()];
@@ -60,32 +105,31 @@ export function attachGestures(canvas, store) {
       // Mouse: the left button slides the map, which is what an atlas is read with, and
       // the right button (or Ctrl/Alt, for trackpads with no right-drag worth the name)
       // turns it. A finger pans, the same model as the left button.
-      const orbit = rec.type === 'mouse' && (rec.button === 2 || e.ctrlKey || e.altKey);
-      if (orbit) {
+      if (rec.turn && held) {
         // The model follows the hand: drag right and it turns right, drag down and it
-        // tips its far side towards you, as if a finger were on the table itself.
+        // tips its far side towards you, as if a finger were on the table itself. It
+        // turns about the point the button came down on, which stays under the cursor.
         const c = cam();
-        write(orbitAbout(c, c.yaw + dx * 0.25, c.pitch - dy * 0.25, 0, 0, vp));
+        write(orbitAbout(c, c.yaw + dx * 0.25, c.pitch - dy * 0.25, held, vp));
       } else {
         const c = cam();
         const [gx, gz] = groundShift(c, -dx, -dy, vp);
         write({ ...c, x: c.x + gx, z: c.z + gz });
       }
-    } else if (pointers.size === 2 && pinch) {
+    } else if (pointers.size === 2 && pinch && held) {
       const now = pinchState();
       let c = cam();
-      // pan by the midpoint's movement
-      const [gx, gz] = groundShift(c, -(now.midX - pinch.midX), -(now.midY - pinch.midY), vp);
-      c = { ...c, x: c.x + gx, z: c.z + gz };
-      // zoom about the midpoint
-      if (pinch.dist > 20 && now.dist > 20) c = zoomAbout(c, pinch.dist / now.dist, now.midX, now.midY, vp);
-      // twist -> yaw, vertical two-finger drag -> pitch
+      // Pinch to zoom, twist to turn, both fingers down the screen to tilt...
+      if (pinch.dist > 20 && now.dist > 20) {
+        c = { ...c, zoom: clamp(c.zoom * (pinch.dist / now.dist), LIMITS.zoom[0], LIMITS.zoom[1]) };
+      }
       let dAng = now.angle - pinch.angle;
       if (dAng > Math.PI) dAng -= 2 * Math.PI; else if (dAng < -Math.PI) dAng += 2 * Math.PI;
-      const yaw = c.yaw - (dAng * 180) / Math.PI;
-      const pitch = c.pitch + (now.midY - pinch.midY) * 0.2;
-      c = orbitAbout(c, yaw, pitch, now.midX, now.midY, vp);
-      write(c);
+      c = clampCamera({ ...c, yaw: c.yaw - (dAng * 180) / Math.PI, pitch: c.pitch + (now.midY - pinch.midY) * 0.2 });
+      // ...and the whole gesture keeps the point it took hold of between the fingers,
+      // wherever the fingers have carried it. That is the pan, and there is no separate
+      // one: holding the anchor to the new midpoint is exactly what a pan means.
+      write(holdAnchor(c, { ...held, sx: now.midX, sy: now.midY }, vp));
       pinch = now;
     }
   }
@@ -94,15 +138,16 @@ export function attachGestures(canvas, store) {
     const rec = pointers.get(e.pointerId);
     if (!rec) return;
     pointers.delete(e.pointerId);
-    if (pointers.size === 1) pinch = null, resetOrigins();
-    else if (pointers.size === 2) pinch = pinchState();
+    if (pointers.size === 0) held = null;
+    else if (pointers.size === 1) { pinch = null; held = null; resetOrigins(); }
+    else if (pointers.size === 2) { pinch = pinchState(); held = turnAnchor(pinch.midX, pinch.midY); }
     const moved = Math.hypot(rec.x - rec.sx, rec.y - rec.sy);
     const dt = performance.now() - rec.t;
     if (pointers.size === 0 && moved < TAP_SLOP && dt < TAP_MS && rec.button === 0) {
       const now = performance.now();
       if (now - lastTap < DOUBLE_MS) {
         lastTap = 0;
-        store.set('flyTo', { camera: zoomAbout(cam(), 0.5, rec.x, rec.y, viewport()), ms: 500, id: now });
+        store.set('flyTo', { camera: zoomAbout(cam(), 0.5, grabAt(rec.x, rec.y), viewport()), ms: 500, id: now });
       } else {
         lastTap = now;
         store.set('tap', { x: rec.x, y: rec.y, type: rec.type, t: now });
@@ -130,7 +175,9 @@ export function attachGestures(canvas, store) {
     // Trackpad pinch arrives as ctrl+wheel with small deltas; mouse wheels jump.
     const step = e.deltaMode === 1 ? e.deltaY * 20 : e.deltaY;
     const factor = Math.exp((e.ctrlKey ? 0.01 : 0.0018) * step);
-    write(zoomAbout(cam(), factor, p.x, p.y, viewport()));
+    // The surface under the cursor, not the sea-level plane under it: zooming in on a
+    // Himalayan peak used to creep away by the height of the peak.
+    write(zoomAbout(cam(), factor, grabAt(p.x, p.y), viewport()));
   }
 
   // Q and E turn the model, for anyone who never finds the right button. They are the
@@ -142,7 +189,8 @@ export function attachGestures(canvas, store) {
     const el = /** @type {HTMLElement} */ (e.target);
     if (el?.closest('input, textarea, [contenteditable]')) return;   // someone is searching
     const c = cam();
-    write(orbitAbout(c, c.yaw + (k === 'q' ? -15 : 15), c.pitch, 0, 0, viewport()));
+    const [cx, cy] = paddedCentre(viewport(), store.get('padding'));
+    write(orbitAbout(c, c.yaw + (k === 'q' ? -15 : 15), c.pitch, turnAnchor(cx, cy), viewport()));
   }
 
   canvas.addEventListener('pointerdown', onDown);
