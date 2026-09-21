@@ -49,6 +49,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let cameraTouched = false;   // once the user moves the camera, layout changes stop refitting
   let level = { name: 'country' };
   let block = null;            // the lifted state block while in the state view
+  let dropping = null;         // the outgoing block mid-sink, so a handover cancels nothing
   let lines = null;            // every `lines` layer on screen, once loaded
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
@@ -340,23 +341,45 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     }
   }
 
-  function exitState(animate) {
+  /** A block still sinking when another must go: end it now rather than leave it hanging. */
+  function finishDrop() {
+    if (!dropping) return;
+    const d = dropping;
+    dropping = null;
+    d.cancel();
+    d.done();
+  }
+
+  /**
+   * Put the block back. `handover` is the switch from one state straight to another: the
+   * outgoing block sinks on its own tween so the incoming one can cancel nothing of it,
+   * the country stays dim, and the camera is left to the state being entered.
+   */
+  function exitState(animate, { handover = false } = {}) {
     const b = block;
     block = null;
     raised = null;
     pkgLoad?.abort();
     pkgLoad = null;
     localKmPerPx = 0;
-    cancelLevel?.();
     lines?.setBlock(null, -1);
     if (b) {
-      const done = () => { scene.remove(b.group); b.dispose(); terrain.uniforms.uHole.value = -1; invalidate(); };
-      cancelLevel = tween({ lift: b.material.uniforms.uLift.value, dim: terrain.uniforms.uDim.value }, { lift: 0, dim: 0 },
-        animate ? 350 : 0, ({ lift, dim }) => { b.setLift(lift); terrain.uniforms.uDim.value = dim; invalidate(); }, { onDone: done });
-    } else {
+      finishDrop();
+      const done = () => { scene.remove(b.group); b.dispose(); if (!handover) terrain.uniforms.uHole.value = -1; invalidate(); };
+      const from = { lift: b.material.uniforms.uLift.value, dim: terrain.uniforms.uDim.value };
+      const to = handover ? { lift: 0, dim: from.dim } : { lift: 0, dim: 0 };
+      const cancel = tween(from, to, animate ? 350 : 0, ({ lift, dim }) => {
+        b.setLift(lift);
+        terrain.uniforms.uDim.value = dim;
+        invalidate();
+      }, { onDone: () => { dropping = null; done(); } });
+      if (dropping === null) dropping = { block: b, cancel, done };
+    } else if (!handover) {
       terrain.uniforms.uDim.value = 0;
       terrain.uniforms.uHole.value = -1;
     }
+    if (handover) return;
+    cancelLevel?.();
     refreshZoomFloor();
     applyRelief(store.get('relief'), animate);
     cameraTouched = false;
@@ -370,7 +393,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (level.name === 'state') {
       const u = store.get('regions')?.byId?.[level.id];
       if (!u) { store.set('level', { name: 'country', id: null }); return; }
-      if (block) { exitState(false); }
+      // Switching states is a handover: the old block sinks while the new one rises.
+      if (block) exitState(!immediate, { handover: true });
       enterState(u, immediate);
     } else {
       exitState(!immediate);
@@ -416,12 +440,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('item', null);
     const idAt = (sx, sy) => pick(sx, sy).id;
     const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : idAt(tap.x, tap.y);
-    store.set('selection', id || null);
-    // A tap on a state is the way in: there is no second step to press (PLAN.md D4).
-    // Tapping the one already lifted must not drop and raise it again.
-    if (id && !(level.name === 'state' && level.id === id)) {
-      store.set('level', { name: 'state', id }, { source: 'ui' });
+    // A tap on a state is the way in, and a tap on the one already lifted is the way
+    // back out (PLAN.md D4). Leaving is a Back, so the URL restores the selection.
+    if (id && level.name === 'state' && level.id === id) {
+      store.set('level', { name: 'country', id: null }, { source: 'deselect' });
+      return;
     }
+    store.set('selection', id || null);
+    if (id) store.set('level', { name: 'state', id }, { source: 'ui' });
   });
 
   let hoverRaf = 0;

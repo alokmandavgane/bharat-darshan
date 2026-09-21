@@ -83,8 +83,9 @@ export function syncUrl(store) {
     if (lv?.name === 'state' && prev?.name !== 'state') write(true);
     else if (lv?.name !== 'state' && history.state?.bdLevel) {
       // Leaving the state view is a Back: the entry before it holds the selection, unless
-      // the compass (home) is clearing everything.
-      pendingBack = meta.source === 'home' ? 'clear' : 'restore';
+      // the compass (home) is clearing everything, or the visitor tapped the lifted state
+      // to put it down, which is a deselection and should leave nothing chosen.
+      pendingBack = meta.source === 'home' || meta.source === 'deselect' ? 'clear' : 'restore';
       history.back();
     } else write();
   });
