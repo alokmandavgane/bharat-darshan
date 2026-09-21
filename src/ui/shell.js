@@ -2,7 +2,7 @@
 // Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
 import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
-import { CATEGORICAL } from '../engine/choropleth.js';
+import { CATEGORICAL, FILL_TYPES } from '../engine/choropleth.js';
 import { symbolSizer } from '../engine/points.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { glyphSvg } from '../glyphs.js';
@@ -99,10 +99,12 @@ export function createShell(root, store) {
     const active = new Set(store.get('layers')?.active || []);
     if (active.has(id)) active.delete(id);
     else {
-      // Two choropleths at once would fight over the same clay, so switching one on
-      // switches the others off. The type says so, never a layer's name.
-      if (catalog.find((l) => l.id === id)?.type === 'choropleth') {
-        for (const l of catalog) if (l.type === 'choropleth' && l.id !== id) active.delete(l.id);
+      // Two fills at once would fight over the same clay, so switching one on switches
+      // the others off. A choropleth and an `areas` layer are both fills -- one tints by
+      // the state under a pixel, the other by its own raster -- and either way it is the
+      // type that says so, never a layer's name.
+      if (FILL_TYPES.includes(catalog.find((l) => l.id === id)?.type)) {
+        for (const l of catalog) if (FILL_TYPES.includes(l.type) && l.id !== id) active.delete(l.id);
       }
       active.add(id);
     }

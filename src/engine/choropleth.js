@@ -10,6 +10,27 @@ import { Color, DataTexture, NearestFilter, RGFormat, UnsignedByteType } from 't
 
 export const MAX_BANDS = 8;          // the shader declares this many; the scale may use fewer
 export const CATEGORICAL = 'categorical';
+// The layer types that tint the clay. They are one channel -- see asChoropleth -- so only
+// one of them is ever on, and both the shell's switches and the engine go by this list.
+export const FILL_TYPES = ['choropleth', 'areas'];
+
+/**
+ * An `areas` layer read as a choropleth (PLAN.md section 5). The two are the same
+ * drawing -- a fill chosen per pixel by an id -- and differ only in where the id comes
+ * from: a choropleth's is the state under the pixel, an area layer's is its own raster,
+ * where an id is a coalfield or a plateau rather than a state. So an area layer is
+ * handed to `choroplethLookup` as a categorical choropleth whose regions happen to be
+ * its own areas, and the terrain is told to read ids from the layer's raster instead.
+ *
+ * That is also why only one of them shows at a time: they are one channel.
+ */
+export function asChoropleth(file) {
+  return {
+    ...file,
+    scale: CATEGORICAL,
+    values: Object.fromEntries((file.items || []).map((i) => [i.area_id, i.category])),
+  };
+}
 
 /** The band a value falls in: the last one whose `from` it has reached. */
 export function bandOf(scale, value) {

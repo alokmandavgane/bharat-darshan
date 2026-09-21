@@ -30,10 +30,13 @@ def fold(name):
     return ''.join(c for c in s if not unicodedata.combining(c)).strip().lower()
 
 
+FORMATS = ('shapefile-polyline', 'shapefile-polygon')
+
+
 def _files(source, raw_dir):
     """Download a layer's geometry files. Returns the .shp and .dbf paths."""
-    if source.get('format') != 'shapefile-polyline':
-        raise ValueError(f"unknown lines source format {source.get('format')!r}")
+    if source.get('format') not in FORMATS:
+        raise ValueError(f"unknown geometry source format {source.get('format')!r}")
     paths = {}
     for name, url in source['files'].items():
         dest = os.path.join(raw_dir, name)
@@ -61,6 +64,28 @@ def load_source(source, raw_dir):
     for row, (_, parts) in zip(rows, shapefile.read_polylines(shp)):
         if parts:
             by_name.setdefault(fold(row.get(key)), []).extend(parts)
+    return by_name
+
+
+def load_polygon_source(source, raw_dir):
+    """
+    The same name index as load_source, for polygons: folded name -> [(ring, is_hole)].
+
+    An `areas` layer joins the way rivers do, because a published polygon set and a
+    content folder share a name and nothing else. A feature's rings arrive together, so
+    a region in two pieces -- the Western Ghats broken by the Palghat gap -- stays one
+    area with one card.
+    """
+    shp, dbf = _files(source, raw_dir)
+    _, rows = shapefile.read_dbf(dbf, encoding=source.get('encoding', 'latin-1'))
+    key = source.get('match', 'name')
+    by_name = {}
+    for row, (_, rings) in zip(rows, shapefile.read_polygons(shp)):
+        # A shapefile marks a hole by winding it the other way: outer rings run clockwise
+        # in lon/lat, which is a negative signed area, and holes run counter-clockwise.
+        tagged = [(r, shapefile.signed_area(r) > 0) for r in rings]
+        if tagged:
+            by_name.setdefault(fold(row.get(key)), []).extend(tagged)
     return by_name
 
 

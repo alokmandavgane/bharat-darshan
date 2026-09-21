@@ -16,6 +16,9 @@ Layer types known today:
            also pointed downstream, against the heightmap
   choropleth  a values.csv of region,value beside layer.json; the build turns the ISO
            codes into raster ids and the runtime makes the id-to-colour lookup
+  areas    named polygons that are not regions -- coalfields, physiographic divisions --
+           joined to the source by name like a river, then rasterised into one uint8 id
+           raster for the layer and clipped to India
   regional a list per region: items belong to the states that keep them and carry no
            anchor, so they are read in the state view rather than drawn on the map
 The engine knows types, never layer ids.
@@ -27,10 +30,13 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
+import numpy as np  # noqa: E402
+from PIL import Image  # noqa: E402
+
+from pipeline.lib import fetch, grid, lines, pack, raster, shapefile  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TYPES = ('points', 'lines', 'choropleth', 'regional')
+TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
@@ -99,6 +105,10 @@ def validate_layer(layer, folder):
                 p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
     elif not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
+    if layer.get('type') == 'areas':
+        src = layer.get('source') or {}
+        if src.get('format') != 'shapefile-polygon' or not src.get('files'):
+            p.append('an areas layer needs source.format "shapefile-polygon" and source.files')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
         if src.get('join') == GENERATED:
@@ -120,6 +130,68 @@ def validate_layer(layer, folder):
             p.append(f'field {name}: label needs en and hi')
     p += validate_size(layer)
     return p
+
+
+AREA_RASTER_HEIGHT = 1024     # areas are broad shapes; the first-view tier's pitch is plenty
+MAX_AREAS = 255               # a uint8 raster, with 0 for "no area here"
+
+
+def build_areas(layer, folder, items, cats, fields, ids, out):
+    """
+    Named polygons that are not administrative regions: coalfields, physiographic
+    divisions, tiger reserves. Returns (out_items, problems).
+
+    They are rasterised rather than kept as outlines, which is what makes them cheap:
+    one uint8 raster of area ids for the whole layer, and the terrain then tints itself
+    by exactly the lookup a choropleth already uses. A polygon kept as an outline would
+    have to be clipped to India's coast as a polygon, which is a far harder thing than
+    clipping a line, and then triangulated to be filled at all.
+    """
+    src = layer['source']
+    raw = os.path.join(fetch.RAW, 'layers', layer['id'])
+    index = lines.load_polygon_source(src, raw)
+    height = AREA_RASTER_HEIGHT
+    width = int(round(height * grid.WIDTH_KM / grid.HEIGHT_KM))
+    out_items, problems, shapes = [], [], []
+    if len(items) > MAX_AREAS:
+        return [], [f'an areas layer can hold at most {MAX_AREAS} areas, got {len(items)}']
+    for n, it in enumerate(items, start=1):
+        problems += validate_line_item(it, cats, 'name', fields)
+        if problems and problems[-1].startswith(str(it.get('id'))):
+            continue
+        rings = []
+        for name in it.get('source_names') or []:
+            rings.extend(index.get(lines.fold(name), []))
+        if not rings:
+            problems.append(f"{it['id']}: no polygon in the source is named {it['source_names']}")
+            continue
+        shapes.append((n, [(np.column_stack(grid.lonlat_to_pixel(r[:, 0], r[:, 1], width, height)), hole)
+                           for r, hole in rings]))
+        out_items.append({
+            'id': it['id'], 'area_id': n, 'name': it['name'], 'category': it['category'],
+            'rank': it['rank'], 'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
+        } | {k: it[k] for k in fields if it.get(k) is not None})
+    if problems:
+        return out_items, problems
+    # Biggest first, so a small area drawn later sits on top of the one that contains it.
+    shapes.sort(key=lambda s: -sum(abs(shapefile.signed_area(r)) for r, hole in s[1] if not hole))
+    grid_ids = raster.rasterise(shapes, width, height)
+    # India only: the model draws nothing else, and Natural Earth's regions run well past
+    # the border -- the Ganges Plain into Bangladesh, the Thar into Pakistan.
+    inside = np.array(Image.fromarray(ids.astype(np.uint8)).resize((width, height), Image.NEAREST)) > 0
+    grid_ids = np.where(inside, grid_ids, 0).astype(np.uint8)
+    rel = f'layers/{layer["id"]}-areas.bin.gz'
+    size = pack.write(os.path.join(out, rel), grid_ids, 'uint8', predictor='none')
+    covered = {int(v) for v in np.unique(grid_ids) if v}
+    for it in out_items:
+        px = int((grid_ids == it['area_id']).sum())
+        it['km2'] = round(px * (grid.WIDTH_KM / width) * (grid.HEIGHT_KM / height))
+        print(f"    {it['id']:24} {it['km2']:>9,} km² in India")
+    missing = [it['id'] for it in out_items if it['area_id'] not in covered]
+    if missing:
+        problems.append(f"nothing of these falls inside India: {', '.join(missing)}")
+    print(f'    raster {width}x{height} -> {rel} ({size // 1024} KB)')
+    return out_items, problems
 
 
 def validate_size(layer):
@@ -419,6 +491,11 @@ def build_layer(folder, states, ids, heights, out):
         values, choro_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += choro_problems
         return finish(layer, [], out, problems, order=lambda i: i['id'], extra={'values': values})
+    if layer.get('type') == 'areas' and not problems:
+        out_items, area_problems = build_areas(layer, folder, items, cats, fields, ids, out)
+        problems += area_problems
+        return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']),
+                      extra={'raster': f'layers/{layer["id"]}-areas.bin.gz'})
     if layer.get('type') == 'lines' and not problems:
         out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems

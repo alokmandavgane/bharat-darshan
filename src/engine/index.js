@@ -3,11 +3,11 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
-import { choroplethLookup } from './choropleth.js';
+import { asChoropleth, choroplethLookup, FILL_TYPES } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createWorld } from './world.js';
 import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
-import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
+import { DATA_BASE, loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
@@ -216,6 +216,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   const choroFiles = new Map();      // layer id -> its file, once fetched
   let choroId = null;                // the one on show
   let choroLook = null;
+  let areaFill = null;        // the `areas` layer on show, for picking an area by its raster
   let cancelChoro = null;
 
   function fadeChoro(to, ms, onDone) {
@@ -225,10 +226,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       { onDone: () => { cancelChoro = null; onDone?.(); } });
   }
 
-  /** Which choropleth the visitor has switched on, or null. */
+  /**
+   * Which fill the visitor has switched on, or null. A choropleth and an `areas` layer
+   * are the same drawing -- clay tinted per pixel by an id -- so they are one channel
+   * and only one of them shows at a time.
+   */
   function activeChoro() {
     const active = store.get('layers')?.active || [];
-    return active.find((id) => manifest?.layers?.find((l) => l.id === id)?.type === 'choropleth') || null;
+    return active.find((id) => FILL_TYPES.includes(manifest?.layers?.find((l) => l.id === id)?.type)) || null;
   }
 
   function showChoropleth(id) {
@@ -236,8 +241,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (id && !choroFiles.has(id)) return;        // still being fetched; the load calls back
     const put = () => {
       choroLook?.dispose();
-      choroLook = id ? choroplethLookup(choroFiles.get(id)) : null;
+      const file = id ? choroFiles.get(id) : null;
+      const area = file?.type === 'areas' ? file : null;
+      choroLook = file ? choroplethLookup(area ? asChoropleth(file) : file) : null;
       terrain.setChoropleth(choroLook);
+      terrain.setChoroIds(area?.texture || null);
+      areaFill = area;
       choroId = id;
       fadeChoro(id ? 1 : 0, 350);
     };
@@ -280,6 +289,18 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
         done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); publishIndex(); });
       } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
         done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
+      } else if (entry.type === 'areas' && !choroFiles.has(id)) {
+        // Two fetches: the items, and the id raster they are drawn from.
+        loading.add(id);
+        loadJson(entry.path)
+          .then(async (data) => {
+            const raster = await loadPack(DATA_BASE + data.raster);
+            choroFiles.set(id, { ...data, raster, texture: byteTexture(raster, { nearest: true }) });
+            showChoropleth(activeChoro());
+            invalidate();
+          })
+          .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
+          .finally(() => loading.delete(id));
       } else if (entry.type === 'regional' && !regionalFiles.has(id)) {
         done((data) => { regionalFiles.set(id, data); publishRegional(); publishIndex(); });
       }
@@ -486,6 +507,23 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     return pickTerrain(store.get('camera'), viewport, sx, sy, field, liftKm, raised);
   }
 
+  /**
+   * Which area of the fill layer lies under a screen point, or null. The raster is a
+   * country one at its own pitch, so the scene point is turned into its pixel rather
+   * than the heightfield's.
+   */
+  function pickArea(sx, sy) {
+    if (!areaFill?.raster || !field) return null;
+    const p = pick(sx, sy);
+    if (!p) return null;
+    const { width, height, data } = areaFill.raster;
+    const col = Math.floor((p.x / sizeKm.w + 0.5) * width);
+    const row = Math.floor((p.z / sizeKm.h + 0.5) * height);
+    if (col < 0 || row < 0 || col >= width || row >= height) return null;
+    const id = data[row * width + col];
+    return id ? (areaFill.items || []).find((it) => it.area_id === id) || null : null;
+  }
+
   /** Screen position (px from the viewport centre, y up) of a ground point [x, z] on the terrain. */
   function project(point) {
     if (!field) return null;
@@ -681,6 +719,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const hit = lineAt(tap.x, tap.y, tap.type === 'touch' || tap.type === 'pen' ? 14 : 9);
     if (hit) {
       store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories, fields: hit.fields });
+      return;
+    }
+    // An `areas` layer is a fill, so it is picked like the terrain rather than like a
+    // marker: the tap already knows the ground point, and the layer's own raster says
+    // which area is under it. It answers before a state does -- the visitor switched a
+    // layer on to read it, and entering a state would hide what they tapped.
+    const area = areaFill && pickArea(tap.x, tap.y);
+    if (area) {
+      store.set('item', { layer: areaFill.id, id: area.id, data: area, categories: areaFill.categories, fields: areaFill.fields });
       return;
     }
     store.set('item', null);

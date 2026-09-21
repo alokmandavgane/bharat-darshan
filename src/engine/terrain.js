@@ -116,6 +116,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uPool: { value: 0 },
     // The choropleth layer on show, if any: a lookup by region id and its band colours.
     uChoroLut: { value: zeroTexture() },
+    // An `areas` layer's own id raster, when one is the fill on show; otherwise the
+    // fill is indexed by the state ids the terrain already has.
+    uChoroIds: { value: zeroTexture() },
+    uChoroOwnIds: { value: 0 },
     uChoroColors: { value: Array.from({ length: 8 }, () => new Color('#000000')) },
     uChoroMix: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
@@ -209,6 +213,17 @@ export function createTerrain({ tierData, grid, sizeKm }) {
       broadcast((u) => {
         u.uChoroLut.value = look ? look.texture : blank;
         if (look) look.colors.forEach((c, i) => u.uChoroColors.value[i].copy(c));
+      });
+    },
+    /**
+     * Where the fill's ids come from: an `areas` layer's own raster, or null for the
+     * state ids the terrain already has bound. A country raster either way, so the
+     * shader reads it in country uv and a lifted block reads the same one.
+     */
+    setChoroIds(texture) {
+      broadcast((u) => {
+        u.uChoroIds.value = texture || blank;
+        u.uChoroOwnIds.value = texture ? 1 : 0;
       });
     },
     /** How far it has faded in, 0..1. */
