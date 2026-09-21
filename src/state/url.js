@@ -76,7 +76,10 @@ export function syncUrl(store) {
   store.subscribe('relief', () => write());
   store.subscribe('selection', () => write());
   store.subscribe('level', (lv, prev, meta) => {
-    if (meta.source === 'popstate' || meta.source === 'init') return;
+    if (meta.source === 'popstate') return;
+    // A level restored from the URL must still be written back: `selection` is set first
+    // and would otherwise leave a /state/<slug> link rewritten as its ?state= peek form.
+    if (meta.source === 'init') return write();
     if (lv?.name === 'state' && prev?.name !== 'state') write(true);
     else if (lv?.name !== 'state' && history.state?.bdLevel) {
       // Leaving the state view is a Back: the entry before it holds the selection, unless

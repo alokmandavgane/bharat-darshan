@@ -24,7 +24,6 @@ export function createShell(root, store) {
   const title = $('.sheet-title');
   const alt = $('.sheet-alt');
   const closeBtn = $('.sheet-close');
-  const exploreBtn = $('.sheet-explore');
   const facts = $('.facts');
   const listWrap = $('.unit-list-wrap');
   const list = $('.unit-list');
@@ -97,11 +96,6 @@ export function createShell(root, store) {
   }
 
 
-  exploreBtn.addEventListener('click', () => {
-    const id = store.get('selection');
-    if (id) store.set('level', { name: 'state', id }, { source: 'ui' });
-  });
-
   // --- the info button: about the map, how to use it, credits; and a card's review status
   function setAbout(open) {
     about.hidden = !open;
@@ -153,7 +147,8 @@ export function createShell(root, store) {
     if (!btn) return;
     const id = Number(btn.dataset.id);
     store.set('selection', id);
-    store.set('focus', { id, t: performance.now() });
+    // Picking from the list goes as deep as tapping the map does.
+    if (store.get('level')?.id !== id) store.set('level', { name: 'state', id }, { source: 'ui' });
     store.set('sheetSnap', { name: 'peek', t: performance.now() });
   });
 
@@ -265,7 +260,6 @@ export function createShell(root, store) {
       closeBtn.hidden = false;
       closeBtn.setAttribute('aria-label', t('sheet.close'));
       closeBtn.textContent = '×';
-      exploreBtn.hidden = true;
       listWrap.hidden = true;
       title.textContent = pick(it.name);
       const others = otherNames({ name: it.name });
@@ -302,7 +296,6 @@ export function createShell(root, store) {
     closeBtn.hidden = !u && !inState;
     closeBtn.setAttribute('aria-label', t(inState ? 'sheet.back' : 'sheet.close'));
     closeBtn.textContent = inState ? '←' : '×';
-    exploreBtn.hidden = !u || inState;
     facts.hidden = !u;
     listWrap.hidden = !!u;
     if (!u) {

@@ -19,7 +19,6 @@ import { easeOutCubic, tween } from './tween.js';
 const CAMERA_DISTANCE = 7000;   // km; anywhere outside the model works for an orthographic camera
 const FIRST_TIER = '1024';      // always first: it is the first-view budget (PLAN.md section 8)
 const STATE_EXAG = 0.6;         // relief eases down when a state is lifted out (PLAN.md section 6)
-const FOCUS_MIN_ZOOM = 1200;    // km of view height: a "focus" from the list keeps country context
 const ITEM_ZOOM = 700;          // km of view height when flying to a place at country level
 
 /**
@@ -143,11 +142,20 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
    * times; the state view's 30 km floor magnified it fifty. A package is five times
    * finer, and this floor moves with it instead of staying a constant.
    */
+  let zoomFloor = 0;
+
   function refreshZoomFloor() {
     const kmPerPx = block && localKmPerPx ? localKmPerPx : countryKmPerPx;
     const hard = block ? ZOOM_MIN.state : ZOOM_MIN.country;
-    if (!kmPerPx) return setZoomFloor(hard);
-    setZoomFloor(Math.max(hard, kmPerPx * viewport.h / MAX_MAGNIFY));
+    const km = kmPerPx ? Math.max(hard, kmPerPx * viewport.h / MAX_MAGNIFY) : hard;
+    const dropped = zoomFloor && km < zoomFloor;
+    zoomFloor = km;
+    setZoomFloor(km);
+    // The floor clamps the framing a view asks for, and it only moves down as finer data
+    // arrives. A state opened from a link is fitted against the first tier's floor, five
+    // times too far out, and used to stay there; re-fit when the floor drops under a
+    // camera the visitor has not touched.
+    if (dropped && !cameraTouched && store.get('regions')) fit(true, { ms: 450 });
   }
 
   function resize() {
@@ -198,15 +206,6 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!req || !terrain) return;
     cameraTouched = false;
     fit(true, { home: true });
-  });
-
-  /** A gentle move to a unit picked from the list: fit it, but keep country context. */
-  store.subscribe('focus', (req) => {
-    const u = req && store.get('regions')?.byId?.[req.id];
-    if (!u || level.name !== 'country') return;
-    cameraTouched = true;
-    const [x0, z0, x1, z1] = u.bbox;
-    flyTo(fitBounds(store.get('camera'), { x0, z0, x1, z1, ymax: 40 }, viewport, store.get('padding'), { minZoom: FOCUS_MIN_ZOOM }), 700);
   });
 
   store.subscribe('camera', (_, __, meta) => {
@@ -371,6 +370,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const idAt = (sx, sy) => pick(sx, sy).id;
     const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : idAt(tap.x, tap.y);
     store.set('selection', id || null);
+    // A tap on a state is the way in: there is no second step to press (PLAN.md D4).
+    // Tapping the one already lifted must not drop and raise it again.
+    if (id && !(level.name === 'state' && level.id === id)) {
+      store.set('level', { name: 'state', id }, { source: 'ui' });
+    }
   });
 
   let hoverRaf = 0;

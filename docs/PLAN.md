@@ -30,7 +30,7 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 | D1 | Custom three.js scene, not MapLibre / deck.gl | Map libraries give tiles, labels and picking for free, but bring a perspective camera, Web Mercator and a "map app" look. As far as I know MapLibre has no true orthographic camera, and its WebGL text has historically been weak at shaping Indic scripts (re-check before relying on this). Limiting scope to two levels (country, state) keeps the custom cost manageable. The data pipeline is identical either way, so MapLibre + PMTiles remains the fallback if the Phase 0 spike disappoints. |
 | D2 | Orthographic camera, north-up with a slight turn; not strict 45° isometric | Strict isometric (45° yaw, 35.26° elevation) turns India into a wide diamond: poor use of a portrait phone, and the silhouette stops being recognisable. About 15° of yaw with a 50-55° tilt keeps the familiar shape, suits portrait screens (India is about 3,200 km north-south by 2,900 km east-west), and keeps the Himalaya at the back where exaggerated relief never hides anything. Clamp yaw to roughly ±40°. |
 | D3 | Two semantic levels instead of continuous zoom | Country view, then state view. Tap a state: the camera flies in, the state lifts out as its own block, the rest dims, and a lazily loaded state package (higher-res terrain, denser networks, districts, more places) swaps in. Street-level detail is out of scope; this is a showcase, not navigation. |
-| D4 | Tap + bottom sheet is the core interaction; hover is a desktop enhancement | Phones have no hover. "Hover to learn" becomes: tap to select, peek card, "Explore" to go deeper, plus a swipeable card carousel that flies the camera to each item. Desktop adds real hover tooltips over the same data. |
+| D4 | Tap + bottom sheet is the core interaction; hover is a desktop enhancement | Phones have no hover. "Hover to learn" becomes: tap a state and it lifts out, with its card in the sheet, plus a swipeable card carousel that flies the camera to each item. There is no second step to press: a tap is the way in, and Back is the way out. Desktop adds real hover tooltips over the same data. |
 | D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5. |
 | D6 | Official boundaries from day one | Use Survey of India-compliant external boundaries (all of J&K and Ladakh including Aksai Chin; Arunachal Pradesh) and the current 28 states + 8 UTs. Default Natural Earth and OSM country outlines show de-facto lines, which is a legal problem for a map published in India. Review every rendered view, including share images. |
 | D7 | Minimal dependencies: vanilla JS, no framework | Owner preference, and the same conventions as the owner's `gol` project: plain JS ES modules, no TypeScript, no JSX, no UI framework. **three.js is the only runtime dependency; Vite is the only build tool.** Store, router, i18n, bottom sheet and gestures are small in-repo modules. Raw WebGL2 without three.js was considered: it would save about 150 KB, but costs plumbing time and gives up a library the owner already knows well. Revisit only if the JS budget is threatened. |
@@ -54,8 +54,8 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 
 | Intent | Phone / touch | Desktop / fine pointer |
 |--------|---------------|------------------------|
-| Inspect | Tap: highlight + peek card in sheet | Hover: highlight + tooltip |
-| Go deeper | "Explore" on the card, or double-tap | Click |
+| Inspect | Hover is the only inspect-without-entering; on touch a tap goes in | Hover: highlight + tooltip |
+| Go deeper | Tap the state, or pick it from the list | Click |
 | Browse | Swipe the card carousel; camera follows | Same list in the side panel; arrow keys |
 | Move | Drag pan, pinch zoom, twist rotate, two-finger drag tilt | Drag, wheel, right-drag rotate |
 | Back | Back gesture / sheet header (URL-driven) | Esc / breadcrumb |
@@ -85,7 +85,7 @@ Phone, portrait:
 | [Relief][Rivers][Rail]>|  layer chips in the thumb zone, scroll sideways
 +------------------------+
 |          ----          |  bottom sheet: peek / half / full
-| Kerala        Explore >|
+| Kerala               ←|
 | Malayalam, 14 districts|
 | [card ] [card ] [car   |  carousel <-> camera sync
 +------------------------+
@@ -672,6 +672,20 @@ docs/DEPLOY.md).
   none by 0.75). The width is floored there and the line fades out past the floor,
   which also replaces the blockiness fade added earlier in the day -- that guessed at a
   threshold for a problem this removed.
+- 2026-09-21, third round: the Explore button is gone. Tapping a state lifted it only
+  after a peek card and a second press, which was a step too many for the one thing the
+  map is for; a tap now enters the state view directly, and so does picking a unit from
+  the sheet's list. Tapping the state already lifted is a no-op rather than a drop and
+  re-raise, and tapping a neighbour hops straight to it, which turns out to be a good way
+  to browse. Back still leaves. The `focus` store key and its country-context fit went
+  with the button: nothing set them any more.
+  Two bugs that only mattered once a tap was the way in, both on `/en/state/<slug>`
+  opened cold. The camera was fitted against the first tier's zoom floor -- 1052 km,
+  five times too far out -- and nothing re-fitted when the finer tier and the state
+  package dropped the floor; `refreshZoomFloor` now re-fits when the floor drops under a
+  camera the visitor has not touched. And the URL rewrote itself to the `?state=` peek
+  form, because `selection` is restored before `level` and the URL writer ignored a
+  level whose source was `init`; it now writes that one back.
 
 ### What exists
 
