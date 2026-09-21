@@ -796,9 +796,25 @@ docs/DEPLOY.md).
   level over the ocean and without the gap the water came out in depth-fighting
   stripes, and it fades in as the complement of the plate's own rim fade. 1.5 MB,
   fetched on the first toggle, skipped under saveData.
-  Left: a faint seam still shows where the two sheets hand over, the plate's quiet
-  neighbours being a different resolution and a different ambient occlusion from the
-  backdrop's. Worth another look before Phase 4.
+- 2026-09-21, eighth round: the seam and the corners.
+  The seam was not a tone difference at all. The two alphas were exact complements and
+  the page still showed between them, because the terrain material was opaque: the plate
+  did not blend over the backdrop, it overwrote it, alpha and all, so where the plate had
+  faded to a tenth the framebuffer was a tenth opaque and nine tenths paper whatever was
+  drawn behind. Premultiplied and blended it composites properly; on its own that changes
+  nothing, the canvas being premultiplied over a transparent clear already. Measured
+  afterwards, the two sheets' ocean tint agrees to 0.003 across 325,000 pixels.
+  Two things had also made the backdrop read as a different material. Its ambient
+  occlusion searched thirteen cells out, as the plate's does, but its cells are five
+  times wider -- hills shading each other across 200 km instead of 45 -- so
+  `ambient_occlusion` takes its step list now and the backdrop asks for as many as fit
+  the plate's reach in km. And its coastal shadow had been widened threefold along with
+  everything else; it is the same 30 km the plate bakes.
+  The corners are gone: the backdrop goes out as a round pool. Its projection has to be
+  the plate's or the two could never meet, and a cone stretches badly five thousand km
+  from its parallels, so the corners are dissolved before they are close enough to read
+  as a shape. What is left across the band is a change of resolution, 3.4 km against
+  8.2, which is inherent to two sheets at different pitch.
 
 ### What exists
 
