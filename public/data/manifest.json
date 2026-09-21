@@ -301,6 +301,112 @@
    "path": "layers/population-density.json"
   },
   {
+   "id": "power",
+   "type": "points",
+   "marker": "symbol",
+   "size": {
+    "field": "capacity_mw",
+    "domain": [
+     500,
+     5000
+    ],
+    "range": [
+     11,
+     40
+    ],
+    "legend": [
+     1000,
+     2500,
+     4500
+    ]
+   },
+   "title": {
+    "en": "Power stations",
+    "hi": "विद्युत संयंत्र"
+   },
+   "icon": "city",
+   "group": "network",
+   "default_on": false,
+   "count": 24,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "coal",
+     "color": "#4a4440",
+     "title": {
+      "en": "Coal",
+      "hi": "कोयला"
+     }
+    },
+    {
+     "id": "hydro",
+     "color": "#3f7f9c",
+     "title": {
+      "en": "Hydro",
+      "hi": "जल"
+     }
+    },
+    {
+     "id": "nuclear",
+     "color": "#9a5aa0",
+     "title": {
+      "en": "Nuclear",
+      "hi": "परमाणु"
+     }
+    },
+    {
+     "id": "gas",
+     "color": "#c98a3c",
+     "title": {
+      "en": "Gas",
+      "hi": "गैस"
+     }
+    },
+    {
+     "id": "solar",
+     "color": "#d8b23c",
+     "title": {
+      "en": "Solar",
+      "hi": "सौर"
+     }
+    },
+    {
+     "id": "wind",
+     "color": "#6f9c7a",
+     "title": {
+      "en": "Wind",
+      "hi": "पवन"
+     }
+    }
+   ],
+   "fields": {
+    "capacity_mw": {
+     "type": "int",
+     "required": true,
+     "label": {
+      "en": "Capacity",
+      "hi": "क्षमता"
+     },
+     "unit": {
+      "en": "{n} MW",
+      "hi": "{n} मेगावाट"
+     }
+    },
+    "commissioned": {
+     "type": "year",
+     "label": {
+      "en": "First unit",
+      "hi": "पहली इकाई"
+     }
+    }
+   },
+   "note": {
+    "en": "Installed capacity, which is what a station could produce at full output, not what it does produce: a solar park runs at roughly a fifth of its rating over a year and a coal station at around two thirds. Capacities change as units are added and retired.",
+    "hi": "स्थापित क्षमता, यानी पूरी क्षमता पर संयंत्र कितना बना सकता है, न कि वह कितना बनाता है: एक सौर पार्क वर्ष भर में लगभग पाँचवें हिस्से पर और कोयला संयंत्र लगभग दो-तिहाई पर चलता है। इकाइयाँ जुड़ने और हटने से क्षमताएँ बदलती रहती हैं।"
+   },
+   "path": "layers/power.json"
+  },
+  {
    "id": "rail",
    "type": "lines",
    "title": {
@@ -811,6 +917,10 @@
   "layers/population-density.json": {
    "size": 1730,
    "sha256": "9499b2abb944"
+  },
+  "layers/power.json": {
+   "size": 20899,
+   "sha256": "22b0852081e1"
   },
   "layers/rail.json": {
    "size": 8840,

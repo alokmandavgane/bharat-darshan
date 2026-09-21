@@ -1,0 +1,626 @@
+[
+  {
+    "id": "vindhyachal",
+    "status": "draft",
+    "name": {
+      "en": "Vindhyachal",
+      "hi": "विंध्याचल"
+    },
+    "anchor": {
+      "lat": 24.1,
+      "lon": 82.6667
+    },
+    "category": "coal",
+    "priority": 1,
+    "capacity_mw": 4760,
+    "commissioned": 1987,
+    "blurb": {
+      "en": "India's largest power station, on the Singrauli coalfield in Madhya Pradesh. Its thirteen units burn coal mined a few kilometres away and feed the northern grid.",
+      "hi": "भारत का सबसे बड़ा विद्युत संयंत्र, मध्य प्रदेश में सिंगरौली कोयला क्षेत्र पर। इसकी तेरह इकाइयाँ कुछ ही किलोमीटर दूर से निकाला कोयला जलाती हैं और उत्तरी ग्रिड को बिजली देती हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-MP"
+    ]
+  },
+  {
+    "id": "mundra-adani",
+    "status": "draft",
+    "name": {
+      "en": "Mundra",
+      "hi": "मुंद्रा"
+    },
+    "anchor": {
+      "lat": 22.8237,
+      "lon": 69.5458
+    },
+    "category": "coal",
+    "priority": 1,
+    "capacity_mw": 4620,
+    "commissioned": 2009,
+    "blurb": {
+      "en": "A coal station on the Kutch coast, built beside its own port so it can burn imported coal without moving it far inland.",
+      "hi": "कच्छ के तट पर कोयला संयंत्र, अपने ही बंदरगाह के पास बना, ताकि आयातित कोयला भीतर तक ढोए बिना जलाया जा सके।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-GJ"
+    ]
+  },
+  {
+    "id": "mundra-tata",
+    "status": "draft",
+    "name": {
+      "en": "Mundra Ultra Mega",
+      "hi": "मुंद्रा अल्ट्रा मेगा"
+    },
+    "anchor": {
+      "lat": 22.82,
+      "lon": 69.56
+    },
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 4150,
+    "commissioned": 2012,
+    "blurb": {
+      "en": "One of the first ultra mega power projects, using supercritical boilers that run hotter than older plants and so burn less coal for the same electricity.",
+      "hi": "पहली अल्ट्रा मेगा परियोजनाओं में से एक, जिसमें सुपरक्रिटिकल बॉयलर पुराने संयंत्रों से अधिक तापमान पर चलते हैं और उतनी ही बिजली के लिए कम कोयला जलाते हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-GJ"
+    ]
+  },
+  {
+    "id": "talcher",
+    "status": "draft",
+    "name": {
+      "en": "Talcher Super Thermal",
+      "hi": "तालचेर सुपर थर्मल"
+    },
+    "anchor": {
+      "lat": 20.9333,
+      "lon": 85.1833
+    },
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 3000,
+    "commissioned": 1995,
+    "blurb": {
+      "en": "Odisha's largest station, on the Talcher coalfield. Much of its output is carried west and south rather than used in the state.",
+      "hi": "ओडिशा का सबसे बड़ा संयंत्र, तालचेर कोयला क्षेत्र पर। इसका बहुत-सा उत्पादन राज्य में खपने के बजाय पश्चिम और दक्षिण भेजा जाता है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-OD"
+    ]
+  },
+  {
+    "id": "sipat",
+    "status": "draft",
+    "name": {
+      "en": "Sipat",
+      "hi": "सीपत"
+    },
+    "anchor": {
+      "lat": 22.0833,
+      "lon": 82.2667
+    },
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 2980,
+    "commissioned": 2008,
+    "blurb": {
+      "en": "A supercritical coal station in Chhattisgarh, in the belt of power plants that grew up around the state's own coalfields.",
+      "hi": "छत्तीसगढ़ में सुपरक्रिटिकल कोयला संयंत्र, उस पट्टी में जो राज्य के अपने कोयला क्षेत्रों के आसपास बनी।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-CG"
+    ]
+  },
+  {
+    "id": "rihand",
+    "status": "draft",
+    "name": {
+      "en": "Rihand",
+      "hi": "रिहंद"
+    },
+    "anchor": {
+      "lat": 24.03,
+      "lon": 82.79
+    },
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 3000,
+    "commissioned": 1988,
+    "blurb": {
+      "en": "A Singrauli-belt station whose power goes almost entirely to the northern grid over some of India's first high-voltage direct-current lines.",
+      "hi": "सिंगरौली पट्टी का संयंत्र, जिसकी बिजली लगभग पूरी तरह भारत की कुछ पहली उच्च-वोल्टेज डीसी लाइनों से उत्तरी ग्रिड को जाती है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-UP"
+    ]
+  },
+  {
+    "id": "korba",
+    "status": "draft",
+    "name": {
+      "en": "Korba Super Thermal",
+      "hi": "कोरबा सुपर थर्मल"
+    },
+    "anchor": {
+      "lat": 22.3667,
+      "lon": 82.6833
+    },
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 2600,
+    "commissioned": 1983,
+    "blurb": {
+      "en": "One of the older super thermal stations, in the Korba coalfield of Chhattisgarh, where mine and boiler sit almost side by side.",
+      "hi": "पुराने सुपर थर्मल संयंत्रों में से एक, छत्तीसगढ़ के कोरबा कोयला क्षेत्र में, जहाँ खदान और बॉयलर लगभग साथ-साथ हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-CG"
+    ]
+  },
+  {
+    "id": "ramagundam",
+    "status": "draft",
+    "name": {
+      "en": "Ramagundam",
+      "hi": "रामागुंडम"
+    },
+    "anchor": {
+      "lat": 18.76,
+      "lon": 79.47
+    },
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2600,
+    "commissioned": 1983,
+    "blurb": {
+      "en": "Telangana's largest coal station, on the Godavari coalfield, with a floating solar array added on its own reservoir.",
+      "hi": "तेलंगाना का सबसे बड़ा कोयला संयंत्र, गोदावरी कोयला क्षेत्र पर, जिसके अपने जलाशय पर तैरता सौर संयंत्र भी जोड़ा गया है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-TS"
+    ]
+  },
+  {
+    "id": "tehri",
+    "status": "draft",
+    "name": {
+      "en": "Tehri",
+      "hi": "टिहरी"
+    },
+    "anchor": {
+      "lat": 30.3778,
+      "lon": 78.4803
+    },
+    "category": "hydro",
+    "priority": 1,
+    "capacity_mw": 2400,
+    "commissioned": 2006,
+    "blurb": {
+      "en": "India's tallest dam, on the Bhagirathi in Uttarakhand. It pumps water back uphill at night to generate again at peak, so it stores power as well as making it.",
+      "hi": "भारत का सबसे ऊँचा बाँध, उत्तराखंड में भागीरथी पर। यह रात में पानी वापस ऊपर पंप करता है ताकि व्यस्त समय में फिर बिजली बने; यह बिजली बनाता भी है और भंडारित भी करता है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-UK"
+    ]
+  },
+  {
+    "id": "srisailam",
+    "status": "draft",
+    "name": {
+      "en": "Srisailam",
+      "hi": "श्रीशैलम"
+    },
+    "anchor": {
+      "lat": 16.0872,
+      "lon": 78.8997
+    },
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 1670,
+    "commissioned": 1981,
+    "blurb": {
+      "en": "A dam on the Krishna between Andhra Pradesh and Telangana, generating on both banks and supplying irrigation canals as well.",
+      "hi": "आंध्र प्रदेश और तेलंगाना के बीच कृष्णा पर बाँध, दोनों किनारों पर बिजली बनाता है और सिंचाई नहरों को भी पानी देता है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-TS"
+    ]
+  },
+  {
+    "id": "nathpa-jhakri",
+    "status": "draft",
+    "name": {
+      "en": "Nathpa Jhakri",
+      "hi": "नाथपा झाकड़ी"
+    },
+    "anchor": {
+      "lat": 31.55,
+      "lon": 77.85
+    },
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 1500,
+    "commissioned": 2003,
+    "blurb": {
+      "en": "A run-of-the-river station on the Satluj in Himachal Pradesh: the water is carried 27 km through a tunnel inside the mountain before it drops to the turbines.",
+      "hi": "हिमाचल प्रदेश में सतलुज पर नदी-प्रवाह संयंत्र: पानी पहाड़ के भीतर 27 किमी लंबी सुरंग से लाया जाता है और फिर टरबाइनों पर गिरता है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-HP"
+    ]
+  },
+  {
+    "id": "koyna",
+    "status": "draft",
+    "name": {
+      "en": "Koyna",
+      "hi": "कोयना"
+    },
+    "anchor": {
+      "lat": 17.4,
+      "lon": 73.75
+    },
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 1960,
+    "commissioned": 1962,
+    "blurb": {
+      "en": "Maharashtra's oldest large hydro scheme, in the Western Ghats, turning the monsoon that falls on the seaward slope into power for the plateau behind it.",
+      "hi": "महाराष्ट्र की सबसे पुरानी बड़ी जलविद्युत योजना, पश्चिमी घाट में; समुद्र की ओर की ढलान पर गिरने वाले मानसून को पीछे के पठार के लिए बिजली में बदलती है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-MH"
+    ]
+  },
+  {
+    "id": "bhakra",
+    "status": "draft",
+    "name": {
+      "en": "Bhakra",
+      "hi": "भाखड़ा"
+    },
+    "anchor": {
+      "lat": 31.4108,
+      "lon": 76.4333
+    },
+    "category": "hydro",
+    "priority": 1,
+    "capacity_mw": 1325,
+    "commissioned": 1963,
+    "blurb": {
+      "en": "The dam on the Satluj that Nehru called a temple of modern India. Its canals water Punjab, Haryana and Rajasthan as much as its turbines light them.",
+      "hi": "सतलुज पर वह बाँध जिसे नेहरू ने आधुनिक भारत का मंदिर कहा। इसकी नहरें पंजाब, हरियाणा और राजस्थान को उतना ही सींचती हैं जितना इसकी टरबाइनें उन्हें रोशन करती हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-HP"
+    ]
+  },
+  {
+    "id": "kudankulam",
+    "status": "draft",
+    "name": {
+      "en": "Kudankulam",
+      "hi": "कुडनकुलम"
+    },
+    "anchor": {
+      "lat": 8.1681,
+      "lon": 77.7122
+    },
+    "category": "nuclear",
+    "priority": 1,
+    "capacity_mw": 2000,
+    "commissioned": 2013,
+    "blurb": {
+      "en": "India's largest nuclear station, on the Tamil Nadu coast, built with Russian reactors that are cooled by sea water.",
+      "hi": "भारत का सबसे बड़ा परमाणु संयंत्र, तमिलनाडु के तट पर, रूसी रिएक्टरों से बना, जो समुद्री पानी से ठंडे होते हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-TN"
+    ]
+  },
+  {
+    "id": "tarapur",
+    "status": "draft",
+    "name": {
+      "en": "Tarapur",
+      "hi": "तारापुर"
+    },
+    "anchor": {
+      "lat": 19.83,
+      "lon": 72.66
+    },
+    "category": "nuclear",
+    "priority": 2,
+    "capacity_mw": 1400,
+    "commissioned": 1969,
+    "blurb": {
+      "en": "India's first nuclear power station, north of Mumbai. Two of its four reactors have been running since 1969, among the oldest still operating anywhere.",
+      "hi": "भारत का पहला परमाणु विद्युत संयंत्र, मुंबई के उत्तर में। इसके चार में से दो रिएक्टर 1969 से चल रहे हैं, जो कहीं भी चालू सबसे पुराने रिएक्टरों में से हैं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-MH"
+    ]
+  },
+  {
+    "id": "rawatbhata",
+    "status": "draft",
+    "name": {
+      "en": "Rawatbhata",
+      "hi": "रावतभाटा"
+    },
+    "anchor": {
+      "lat": 24.87,
+      "lon": 75.6
+    },
+    "category": "nuclear",
+    "priority": 3,
+    "capacity_mw": 1180,
+    "commissioned": 1973,
+    "blurb": {
+      "en": "A Rajasthan station on the Chambal, and the first site where India built pressurised heavy water reactors of its own design.",
+      "hi": "चंबल पर राजस्थान का संयंत्र, और पहला स्थान जहाँ भारत ने अपने डिज़ाइन के दाबित भारी जल रिएक्टर बनाए।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-RJ"
+    ]
+  },
+  {
+    "id": "bhadla",
+    "status": "draft",
+    "name": {
+      "en": "Bhadla Solar Park",
+      "hi": "भादला सौर पार्क"
+    },
+    "anchor": {
+      "lat": 27.539,
+      "lon": 71.914
+    },
+    "category": "solar",
+    "priority": 1,
+    "capacity_mw": 2245,
+    "commissioned": 2018,
+    "blurb": {
+      "en": "One of the largest solar parks in the world, on the Thar desert floor in Rajasthan, where the land is flat, cheap and among the sunniest in India.",
+      "hi": "दुनिया के सबसे बड़े सौर पार्कों में से एक, राजस्थान में थार की समतल ज़मीन पर, जहाँ भूमि सस्ती और भारत की सबसे धूप वाली जगहों में है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-RJ"
+    ]
+  },
+  {
+    "id": "pavagada",
+    "status": "draft",
+    "name": {
+      "en": "Pavagada Solar Park",
+      "hi": "पावागड़ा सौर पार्क"
+    },
+    "anchor": {
+      "lat": 14.1,
+      "lon": 77.2833
+    },
+    "category": "solar",
+    "priority": 2,
+    "capacity_mw": 2050,
+    "commissioned": 2018,
+    "blurb": {
+      "en": "A Karnataka solar park built on land leased from farmers rather than bought, on a drought-prone plateau where crops had been failing.",
+      "hi": "कर्नाटक का सौर पार्क, किसानों से खरीदी नहीं बल्कि पट्टे पर ली गई ज़मीन पर, सूखाग्रस्त पठार पर जहाँ फसलें विफल हो रही थीं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-KA"
+    ]
+  },
+  {
+    "id": "kurnool",
+    "status": "draft",
+    "name": {
+      "en": "Kurnool Ultra Mega Solar",
+      "hi": "कुरनूल अल्ट्रा मेगा सौर"
+    },
+    "anchor": {
+      "lat": 15.68,
+      "lon": 78.28
+    },
+    "category": "solar",
+    "priority": 3,
+    "capacity_mw": 1000,
+    "commissioned": 2017,
+    "blurb": {
+      "en": "An Andhra Pradesh solar park in the rain shadow of the Eastern Ghats, one of the first in India at the thousand-megawatt scale.",
+      "hi": "पूर्वी घाट की वृष्टिछाया में आंध्र प्रदेश का सौर पार्क, भारत में हज़ार मेगावाट के पैमाने के पहले पार्कों में से एक।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-AP"
+    ]
+  },
+  {
+    "id": "muppandal",
+    "status": "draft",
+    "name": {
+      "en": "Muppandal",
+      "hi": "मुप्पंडल"
+    },
+    "anchor": {
+      "lat": 8.26,
+      "lon": 77.55
+    },
+    "category": "wind",
+    "priority": 2,
+    "capacity_mw": 1500,
+    "commissioned": 1986,
+    "blurb": {
+      "en": "A wind farm in the Aralvaimozhi gap, the break in the Western Ghats where the south-west monsoon funnels through and the wind blows hardest in India.",
+      "hi": "अरलवायमोषि दर्रे में पवन फार्म, पश्चिमी घाट का वह खाँचा जहाँ दक्षिण-पश्चिम मानसून सिमटकर गुजरता है और भारत में सबसे तेज़ हवा चलती है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-TN"
+    ]
+  },
+  {
+    "id": "jaisalmer-wind",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer Wind Park",
+      "hi": "जैसलमेर पवन पार्क"
+    },
+    "anchor": {
+      "lat": 26.92,
+      "lon": 70.9
+    },
+    "category": "wind",
+    "priority": 3,
+    "capacity_mw": 1064,
+    "commissioned": 2001,
+    "blurb": {
+      "en": "A wind park spread across the Thar in Rajasthan, built up turbine by turbine over two decades rather than all at once.",
+      "hi": "राजस्थान में थार में फैला पवन पार्क, दो दशकों में एक-एक टरबाइन जोड़कर बना, एक साथ नहीं।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-RJ"
+    ]
+  },
+  {
+    "id": "dabhol",
+    "status": "draft",
+    "name": {
+      "en": "Dabhol",
+      "hi": "दाभोल"
+    },
+    "anchor": {
+      "lat": 17.57,
+      "lon": 73.2
+    },
+    "category": "gas",
+    "priority": 3,
+    "capacity_mw": 1967,
+    "commissioned": 1999,
+    "blurb": {
+      "en": "A gas station on the Konkan coast with its own terminal for liquefied natural gas, and a long history of running well below capacity for want of fuel.",
+      "hi": "कोंकण तट पर गैस संयंत्र, द्रवित प्राकृतिक गैस के अपने टर्मिनल के साथ, और ईंधन की कमी से क्षमता से काफी नीचे चलने का लंबा इतिहास।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-MH"
+    ]
+  },
+  {
+    "id": "kawas",
+    "status": "draft",
+    "name": {
+      "en": "Kawas",
+      "hi": "कवास"
+    },
+    "anchor": {
+      "lat": 21.13,
+      "lon": 72.72
+    },
+    "category": "gas",
+    "priority": 3,
+    "capacity_mw": 656,
+    "commissioned": 1992,
+    "blurb": {
+      "en": "A gas station near Surat, fed by the Hazira terminal, of a generation built when domestic gas from the Bombay High looked plentiful.",
+      "hi": "सूरत के पास गैस संयंत्र, हज़ीरा टर्मिनल से ईंधन लेता है; उस पीढ़ी का जब बॉम्बे हाई की घरेलू गैस प्रचुर लगती थी।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-GJ"
+    ]
+  },
+  {
+    "id": "sardar-sarovar",
+    "status": "draft",
+    "name": {
+      "en": "Sardar Sarovar",
+      "hi": "सरदार सरोवर"
+    },
+    "anchor": {
+      "lat": 21.83,
+      "lon": 73.75
+    },
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 1450,
+    "commissioned": 2006,
+    "blurb": {
+      "en": "The Narmada dam in Gujarat, generating in two powerhouses; its canal reaches further than its wires, carrying water into Rajasthan.",
+      "hi": "गुजरात में नर्मदा बाँध, दो विद्युत गृहों में बिजली बनाता है; इसकी नहर इसकी तारों से दूर तक जाती है और राजस्थान तक पानी ले जाती है।"
+    },
+    "sources": [
+      "https://cea.nic.in/installed-capacity-report/"
+    ],
+    "regions": [
+      "IN-GJ"
+    ]
+  }
+]
