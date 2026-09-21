@@ -101,8 +101,16 @@ def main():
     km_per_px = km[1] / height
     hh = dem.box_down(h16.astype(np.float32), 2)
     land2 = dem.box_down(land.astype(np.float32), 2) >= 0.5
-    ao = dem.ambient_occlusion(hh, km_per_px * 2)
-    r = int(np.ceil(dem.COAST_RANGE_KM * 3 / (km_per_px * 2)))
+    # The plate searches its horizon about 45 km out; at this pitch that is three cells,
+    # not thirteen, or the backdrop's hills would shade each other across 200 km and the
+    # sheet would read far darker than the plate it hands over to.
+    reach = dem.AO_STEPS[-1] * (grid.HEIGHT_KM / 1024) * 2
+    steps = tuple(s for s in dem.AO_STEPS if s * km_per_px * 2 <= reach) or (1,)
+    ao = dem.ambient_occlusion(hh, km_per_px * 2, steps=steps)
+    print(f'  ambient occlusion: {len(steps)} steps, reaching {max(steps) * km_per_px * 2:.0f} km')
+    # The same coastal shadow the plate bakes, in km. Widening it here was what made the
+    # sea change tone across the band where the two sheets hand over.
+    r = max(1, int(np.ceil(dem.COAST_RANGE_KM / (km_per_px * 2))))
     d = dem.bounded_distance(land2, r)
     coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
     shade = np.dstack([np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
@@ -115,7 +123,7 @@ def main():
                     width_km=round(km[0], 1), height_km=round(km[1], 1), scale=SCALE,
                     source=f'terrarium z{ZOOM}')
     s2 = pack.write(p2, shade, 'uint8', 'plane', kind='world-shade', km_per_px=km_per_px * 2,
-                    channels_meaning=['ao', 'coast'], coast_range_km=dem.COAST_RANGE_KM * 3,
+                    channels_meaning=['ao', 'coast'], coast_range_km=dem.COAST_RANGE_KM,
                     ao_curve={'h_ref': dem.H_REF, 'gamma': dem.GAMMA, 'exaggeration': dem.AO_EXAG})
     print(f'  {width}x{height}: {km_per_px:.1f} km/px, heights {h16.min()}..{h16.max()} m, '
           f'land {land.mean() * 100:.1f}%; wrote {os.path.relpath(p1, ROOT)} ({s1 / 1024:.0f} KB), '

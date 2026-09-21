@@ -123,12 +123,19 @@ def shift(a, dy, dx, fill=0.0):
     return out
 
 
-def ambient_occlusion(h_m, km_per_px):
-    """Horizon-based sky visibility on the exaggerated terrain, 8 directions x 6 distances."""
+AO_STEPS = (1, 2, 3, 5, 8, 13)
+
+
+def ambient_occlusion(h_m, km_per_px, steps=AO_STEPS):
+    """Horizon-based sky visibility on the exaggerated terrain, 8 directions x 6 distances.
+
+    `steps` are in cells, so how far the horizon is searched in km follows the raster's
+    own pitch. A coarser raster wanting the same look has to ask for fewer of them, or
+    its hills cast shadows from five times further away and it comes out darker.
+    """
     y = AO_EXAG * (np.maximum(h_m, 0.0) / H_REF) ** GAMMA * H_REF / 1000.0     # km, as rendered
     occl = np.zeros_like(y)
     dirs = [(0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1)]
-    steps = [1, 2, 3, 5, 8, 13]
     for dy, dx in dirs:
         horizon = np.zeros_like(y)
         for s in steps:
