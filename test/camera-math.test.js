@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import {
   basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, groundAnchor,
   groundPoint, groundShift, holdAnchor, kmPerPixel, LIMITS, orbitAbout, paddedCentre,
-  project, TARGET_MARGIN, TARGET_MARGIN_VIEW, zoomAbout,
+  project, TARGET_MARGIN, TARGET_MARGIN_VIEW, unwrapYaw, wrapYaw, zoomAbout,
 } from '../src/engine/camera-math.js';
 
 /** A deterministic generator, so a failure is always the same failure. */
@@ -227,6 +227,52 @@ test('a sea-level pivot drifts high ground when the view tilts; a 3D one does no
   const now = orbitAbout(cam, cam.yaw, cam.pitch + 20, { point: summit, sx: was[0], sy: was[1] }, vp);
   const [qx, qy] = project(now, summit, vp);
   close(Math.hypot(qx - was[0], qy - was[1]), 0, 1e-6, 'the summit stays put');
+});
+
+// --- yaw goes the whole way round (PLAN.md D2 amended, F3)
+
+test('yaw has no limits, and clampCamera brings it into one turn', () => {
+  assert.equal(LIMITS.yaw, undefined, 'the yaw clamp is gone');
+  for (const [given, want] of [[0, 0], [-12, -12], [180, 180], [-180, 180], [181, -179], [360, 0], [540, 180], [-725, -5]]) {
+    close(wrapYaw(given), want, 1e-9, `wrapYaw(${given})`);
+  }
+  // south-up is reachable, which is the whole point
+  close(clampCamera({ zoom: 1000, yaw: 168, pitch: 56 }).yaw, 168, 0, 'south-up survives the clamp');
+  close(clampCamera({ zoom: 1000, yaw: 900, pitch: 56 }).yaw, 180, 0, 'and two and a half turns is half a turn');
+});
+
+test('a flight turns the short way, however the two angles are written', () => {
+  for (const [from, to, want] of [
+    [170, -170, 190],        // 20 degrees on, not 340 back
+    [-170, 170, -190],
+    [-12, 168, 168],         // home to south-up: half a turn either way, take it forwards
+    [0, 90, 90],
+    [179, -179, 181],
+    [350, 10, 370],          // unwrapped inputs work too
+  ]) {
+    const got = unwrapYaw(from, to);
+    close(got, want, 1e-9, `unwrapYaw(${from}, ${to})`);
+    close(wrapYaw(got), wrapYaw(to), 1e-9, 'and it is still the same angle');
+    assert.ok(Math.abs(got - from) <= 180 + 1e-9, `and never the long way: ${Math.abs(got - from)} degrees`);
+  }
+});
+
+test('the maths holds all the way round, not just in the old +-40 window', () => {
+  const vp = { w: 1400, h: 900 };
+  const r = rng(11);
+  for (let yaw = -180; yaw <= 180; yaw += 7.5) {
+    const cam = { ...DEFAULT_CAMERA, yaw, zoom: 1500 };
+    const sx = (r() - 0.5) * vp.w, sy = (r() - 0.5) * vp.h;
+    const [gx, gz] = groundPoint(cam, sx, sy, vp);
+    const [px, py] = project(cam, [gx, 0, gz], vp);
+    close(px, sx, 1e-6, `round trip at yaw ${yaw}`);
+    close(py, sy, 1e-6, `round trip at yaw ${yaw}`);
+    // and a turn from here still holds what it grabbed
+    const held = { point: [gx, 60, gz], sx, sy };
+    const turned = orbitAbout(cam, yaw + 37, cam.pitch, held, vp);
+    const [qx, qy] = project(turned, held.point, vp);
+    close(Math.hypot(qx - sx, qy - sy), 0, 1e-6, `anchor held at yaw ${yaw}`);
+  }
 });
 
 // --- keeping the model on the table (PLAN.md F2)

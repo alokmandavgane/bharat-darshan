@@ -1,6 +1,7 @@
 // @ts-check
 // Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
+import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { glyphSvg } from '../glyphs.js';
 
@@ -276,7 +277,17 @@ export function createShell(root, store) {
     setAbout(false);
     store.set('sheetSnap', { name: 'peek', t: performance.now() });
   });
-  store.subscribe('camera', (c) => resetBtn.style.setProperty('--yaw', `${c.yaw.toFixed(1)}deg`), { immediate: true });
+  // The needle turns with the map. Now that the model goes the whole way round, the
+  // compass is the only way back to north from a turned view, so it says so when the
+  // view is turned rather than sitting there looking like decoration (F3).
+  store.subscribe('camera', (c) => {
+    resetBtn.style.setProperty('--yaw', `${c.yaw.toFixed(1)}deg`);
+    const turned = Math.abs(wrapYaw(c.yaw - DEFAULT_CAMERA.yaw)) > 8;
+    resetBtn.dataset.turned = turned ? 'yes' : '';
+    const label = t(turned ? 'view.north' : 'view.reset');
+    resetBtn.setAttribute('aria-label', label);
+    resetBtn.title = label;
+  }, { immediate: true });
   tourBtn.addEventListener('click', () => store.set('tour', { playing: !store.get('tour')?.playing }));
   function renderTour() {
     const tr = store.get('tour') || {};

@@ -49,6 +49,7 @@
   "chip.surroundings": "Surroundings",
   "facts.draft.long": "This card is a draft: written from the sources listed, not yet reviewed.",
   "view.reset": "Reset the view",
+  "view.north": "Turn back to north",
   "tour.play": "Play a tour of the places",
   "tour.pause": "Pause the tour",
   "layer.group.physical": "Land and water",

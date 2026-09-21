@@ -49,6 +49,7 @@
   "chip.surroundings": "आस-पास",
   "facts.draft.long": "यह कार्ड एक मसौदा है: दिए गए स्रोतों से लिखा गया, समीक्षा अभी बाकी।",
   "view.reset": "दृश्य रीसेट करें",
+  "view.north": "उत्तर की ओर लौटें",
   "tour.play": "स्थानों का भ्रमण चलाएँ",
   "tour.pause": "भ्रमण रोकें",
   "layer.group.physical": "भूमि और जल",

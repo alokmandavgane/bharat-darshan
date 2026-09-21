@@ -558,6 +558,13 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .compass { transform: rotate(var(--yaw, 0deg)); transition: transform 120ms linear; }
 .needle-n { fill: var(--accent); }
 .needle-s { fill: currentColor; fill-opacity: 0.4; }
+/* The model turns the whole way round, so the compass is the only way back to north.
+   It brightens once the view is turned, instead of looking like an ornament. */
+.reset-button[data-turned="yes"] {
+  border-color: var(--accent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 2px 8px rgba(154, 61, 26, 0.28);
+}
+.reset-button[data-turned="yes"] .needle-s { fill-opacity: 0.6; }
 
 /* --- markers of point layers: clay tokens standing on the terrain ---
    The button is a zero-size anchor moved with transform: translate(); the token is a

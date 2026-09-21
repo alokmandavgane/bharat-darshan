@@ -10,7 +10,11 @@
 
 const DEG = Math.PI / 180;
 
-export const LIMITS = { zoom: [180, 9500], yaw: [-40, 40], pitch: [25, 89] };
+// Yaw has no limits: the model turns the whole way round (D2 as amended, D13, F3). A
+// model on a table that stops a third of the way is a broken turntable, and looking at
+// the Himalaya from the north or at the peninsula from the south is the thing a 3D
+// atlas can do that a printed one cannot. The compass is the way back to north.
+export const LIMITS = { zoom: [180, 9500], pitch: [25, 89] };
 export const DEFAULT_CAMERA = { x: 0, z: 0, zoom: 4200, yaw: -12, pitch: 56 };   // the home view's angles
 // Absolute floors. The engine tightens them to what the loaded rasters can actually
 // resolve (refreshZoomFloor in index.js), so the model never magnifies into mush.
@@ -27,9 +31,24 @@ export function clampCamera(cam) {
   return {
     ...cam,
     zoom: clamp(cam.zoom, LIMITS.zoom[0], LIMITS.zoom[1]),
-    yaw: clamp(cam.yaw, LIMITS.yaw[0], LIMITS.yaw[1]),
+    yaw: wrapYaw(cam.yaw),
     pitch: clamp(cam.pitch, LIMITS.pitch[0], LIMITS.pitch[1]),
   };
+}
+
+/** An angle in degrees brought into (-180, 180]. */
+export function wrapYaw(yaw) {
+  const y = (((yaw + 180) % 360) + 360) % 360 - 180;
+  return y === -180 ? 180 : y;
+}
+
+/**
+ * The same angle as `to`, written so that tweening from `from` takes the short way.
+ * Without this a flight from 170 degrees home to -12 spins 342 the wrong way round;
+ * `tween` interpolates plain numbers and should not have to know what an angle is.
+ */
+export function unwrapYaw(from, to) {
+  return from + wrapYaw(to - from);
 }
 
 export function clamp(v, lo, hi) {

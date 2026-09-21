@@ -6,7 +6,7 @@ import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { choroplethLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createWorld } from './world.js';
-import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
+import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
 import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
@@ -385,7 +385,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   function flyTo(target, ms = 900) {
     cancelFly?.();
     const from = store.get('camera');
-    cancelFly = tween(from, target, ms, (v) => store.set('camera', v, { source: 'tween' }), {
+    // Yaw runs the whole way round now, so a flight has to be told which way to turn:
+    // from 170 degrees, home at -12 is 22 degrees away, not 342 (F3).
+    const to = { ...target, yaw: unwrapYaw(from.yaw, target.yaw) };
+    cancelFly = tween(from, to, ms, (v) => store.set('camera', { ...v, yaw: wrapYaw(v.yaw) }, { source: 'tween' }), {
       onDone: () => { cancelFly = null; },
     });
   }
