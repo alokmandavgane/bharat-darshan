@@ -517,9 +517,9 @@ District-level languages with script samples and greeting audio; places, food an
 festivals with card-carousel sync; a month scrubber ("India through the year");
 search; first ~150 reviewed items. Exit: GI products added with data files only.
 *Part done (2026-09-21): both layer types exist plus a third, `regional`; the card
-carousel, search and the month scrubber all work; and population density and 30
-festivals went in as data alone. Left: districts, which need a boundary source;
-languages and food; and the reviewed items, which are the owner's.*
+carousel, search and the month scrubber all work; and population density, 30
+festivals and 23 languages went in as data alone. Left: districts, which need a
+boundary source; food; and the reviewed items, which are the owner's.*
 
 **Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
 monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
@@ -971,6 +971,20 @@ docs/DEPLOY.md).
   months, which at startup -- before the catalogue has landed -- threw away a month the
   URL had asked for. Anything that clears state on a "nothing here" test has to know the
   difference between nothing and not yet.
+- 2026-09-21, sixteenth round: languages, the second regional layer.
+  The twenty-two of the Eighth Schedule and English, each with its name in its own
+  script, its family, its first-language speakers from the 2011 census and a greeting to
+  try. A state's card now reads Bengali বাংলা, Nepali नेपाली, Santali ᱥᱟᱱᱛᱟᱲᱤ.
+  The rule is where a language is *official*, not where it is spoken, because the two
+  are not the same and a map that blurred them would be making a claim. Sindhi is the one
+  Eighth Schedule language with no state of its own in India, Sindh having gone to
+  Pakistan in 1947, so it is listed where its speakers are concentrated and its own blurb
+  says the rule is bent for it. English carries no speaker count: it is an associate
+  official language of the Union rather than a census mother tongue for most who use it,
+  and the optional-field path leaves the row out rather than printing a nought.
+  One thing the layer asked for and got: a regional item's second line falls back from
+  the month it falls in, which a festival has, to the name it calls itself by, which a
+  language has. Whatever tells an item apart at a glance.
 
 ### What exists
 
@@ -1031,11 +1045,12 @@ docs/DEPLOY.md).
 
 ### Next
 
-1. Phase 3 next: languages and food as content, drafted the way the festivals were.
-   Districts still need a district boundary source that meets the boundary rule in
-   CLAUDE.md, which is a sourcing decision before it is code. The scrubber has no map
-   expression yet -- it changes what the sheet says, not what the model shows -- which
-   is worth a look once there is more dated content than festivals.
+1. Phase 3 next: food as content, drafted the way the festivals and languages were, and
+   probably regional for the same reason -- a dish belongs to a region, and two states
+   hold GI tags on the same sweet. Districts still need a district boundary source that
+   meets the boundary rule in CLAUDE.md, which is a sourcing decision before it is code.
+   The scrubber has no map expression yet -- it changes what the sheet says, not what the
+   model shows -- which is worth a look once there is more dated content than festivals.
 2. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
