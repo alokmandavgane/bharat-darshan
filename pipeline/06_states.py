@@ -10,7 +10,7 @@ Per unit, over its bounding box padded by PAD_KM, at KM_PER_PX:
   states/<slug>-heights.bin.gz   int16 metres
   states/<slug>-shade.bin.gz     uint8 2ch: ambient occlusion, coastal shadow
   states/<slug>-ids.bin.gz       uint8 state id (the mask the block discards against)
-  states/<slug>-borders.bin.gz   uint8 2ch internal / external border fields
+  states/<slug>-edge.bin.gz      uint8 signed distance to the unit's own outline, 128 on it
 
 The mask is the unit's smoothed outline from step 1 filled at this resolution, not the
 country ID raster resampled: that raster is 1.7 km per pixel, and stamping its staircase
@@ -50,6 +50,7 @@ KM_PER_PX = 0.35        # about five times finer than the 2048 country tier
 PAD_KM = 6.0            # the block pads its uv rect past the bbox; keep data under it
 SENTINEL_M = -500.0     # flat fill outside the unit
 BLEED_KM = 10.0         # real heights kept this far outside it (walls, ambient occlusion)
+EDGE_RANGE_PX = 6       # half-width of the unit's signed edge field, in package pixels
 
 
 def crop(mosaic, xr, zoom, rect, km_px):
@@ -68,20 +69,45 @@ def crop(mosaic, xr, zoom, rect, km_px):
     return dem.sample_bilinear(mosaic, mx, my), w, h
 
 
-def unit_mask(loops, rect, w, h):
-    """Fill the unit's outline loops (scene km, from step 1) at this crop's resolution.
+def unit_rings(loops, rect, w, h):
+    """The unit's outline loops (scene km, from step 1) in this crop's pixel coordinates."""
+    x0, z0, x1, z1 = rect
+    out = []
+    for loop in loops:
+        px = np.asarray(loop, dtype=np.float64)
+        px = np.column_stack([(px[:, 0] - x0) / ((x1 - x0) / w), (px[:, 1] - z0) / ((z1 - z0) / h)])
+        if len(px) >= 3:
+            out.append(px)
+    return out
+
+
+def unit_mask(rings, w, h):
+    """Fill the unit's outline at this crop's resolution.
 
     The loops are the boundary the state view draws; filling them here is what keeps the
     block's top surface on the same curve as its walls. Outer loops run clockwise on
     screen and holes the other way, which is how enclaves are punched back out.
     """
-    x0, z0, x1, z1 = rect
-    rings = []
-    for loop in loops:
-        px = np.asarray(loop, dtype=np.float64)
-        px = np.column_stack([(px[:, 0] - x0) / ((x1 - x0) / w), (px[:, 1] - z0) / ((z1 - z0) / h)])
-        rings.append((px, contour.shoelace(px) < 0))
-    return raster.rasterise([(1, rings)], w, h) > 0
+    return raster.rasterise([(1, [(r, contour.shoelace(r) < 0) for r in rings])], w, h) > 0
+
+
+def unit_edge(rings, inside, w, h):
+    """Signed distance to the unit's outline: 128 on it, above inside, below outside.
+
+    The block discards against the ID mask, which is a hard step however smooth the
+    curve it was filled from, and the socket the block leaves in the country plate was
+    cut from the 1.7 km ID raster altogether. One field measured to these loops gives
+    both a clean edge at any zoom: the block fades its own rim over a screen pixel, and
+    the plate cuts the socket where the walls stand rather than where the raster steps.
+
+    It replaces the two border fields a package used to carry, which were always
+    entirely zero: `border_fields` wants land on both sides of an edge, and a package
+    has one labelled id and nothing else.
+    """
+    segs = [np.column_stack([r, np.roll(r, -1, axis=0)]) for r in rings]
+    d = raster.distance_to_segments(np.concatenate(segs), w, h, EDGE_RANGE_PX)
+    signed = np.where(inside, d, -d)
+    return np.clip(np.round(127.5 + 127.5 * signed / EDGE_RANGE_PX), 0, 255).astype(np.uint8)
 
 
 def main():
@@ -111,7 +137,8 @@ def main():
         h_m, w, h = crop(mosaic, xr, args.zoom, rect, args.km_per_px)
         with open(os.path.join(out_root, 'regions', 'outlines', f'{u["slug"]}.json'), encoding='utf-8') as f:
             loops = json.load(f)['loops']
-        inside = unit_mask(loops, rect, w, h)
+        rings = unit_rings(loops, rect, w, h)
+        inside = unit_mask(rings, w, h)
         bleed_px = int(np.ceil(BLEED_KM / args.km_per_px))
         h_m = np.where(raster.bounded_distance(inside, bleed_px) < bleed_px, h_m, SENTINEL_M)
 
@@ -129,21 +156,21 @@ def main():
         coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
         shade = np.dstack([np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
                            np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
-        borders = dem.border_fields(ids, inside)
+        edge = unit_edge(rings, inside, w, h)
 
         files, size = {}, 0
         for name, arr, dtype, pred in (
             ('heights', h16, 'int16', 'plane'),
             ('shade', shade, 'uint8', 'plane'),
             ('ids', ids, 'uint8', 'left'),
-            ('borders', borders, 'uint8', 'plane'),
+            ('edge', edge, 'uint8', 'plane'),
         ):
             rel = f'states/{u["slug"]}-{name}.bin.gz'
             meta = {'km_per_px': args.km_per_px * (2 if name == 'shade' else 1), 'unit': u['id']}
             if name == 'shade':
                 meta |= {'channels_meaning': ['ao', 'coast'], 'coast_range_km': dem.COAST_RANGE_KM}
-            if name == 'borders':
-                meta |= {'range_px': dem.BORDER_RANGE_PX}
+            if name == 'edge':
+                meta |= {'range_px': EDGE_RANGE_PX, 'zero': 128}
             size += pack.write(os.path.join(out_root, rel), arr, dtype, predictor=pred,
                                kind=f'state-{name}', **meta)
             files[name] = rel
