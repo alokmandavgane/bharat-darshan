@@ -62,12 +62,12 @@
  ],
  "files": {
   "regions/states-borders-1024.bin.gz": {
-   "size": 95664,
-   "sha256": "72901810ebf7"
+   "size": 138973,
+   "sha256": "33c9c840dc7d"
   },
   "regions/states-borders-2048.bin.gz": {
-   "size": 235746,
-   "sha256": "002578cd3902"
+   "size": 302843,
+   "sha256": "c52bbf598446"
   },
   "regions/states-ids-1024.bin.gz": {
    "size": 12825,
