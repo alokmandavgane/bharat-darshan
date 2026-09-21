@@ -84,8 +84,17 @@ export function createShell(root, store) {
     const chip = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
     if (!chip) return;
     const id = chip.dataset.layer;
+    const catalog = store.get('catalog') || [];
     const active = new Set(store.get('layers')?.active || []);
-    if (active.has(id)) active.delete(id); else active.add(id);
+    if (active.has(id)) active.delete(id);
+    else {
+      // Two choropleths at once would fight over the same clay, so switching one on
+      // switches the others off. The type says so, never a layer's name.
+      if (catalog.find((l) => l.id === id)?.type === 'choropleth') {
+        for (const l of catalog) if (l.type === 'choropleth' && l.id !== id) active.delete(l.id);
+      }
+      active.add(id);
+    }
     store.set('layers', { active: [...active] });
   });
 
@@ -139,7 +148,46 @@ export function createShell(root, store) {
   }
 
   /** A swatch and a name per category: a dot for points, a stroke for lines. */
+  /** A choropleth's own legend: its bands, their ranges, the unit, and any caveat. */
+  function scaleLegend(layer) {
+    const scale = layer.scale || [];
+    if (scale.length < 2) return null;
+    const out = document.createDocumentFragment();
+    const ul = document.createElement('ul');
+    ul.className = 'legend';
+    ul.dataset.kind = 'choropleth';
+    scale.forEach((band, i) => {
+      const li = document.createElement('li');
+      const sw = document.createElement('span');
+      sw.className = 'legend-swatch';
+      sw.style.setProperty('--c', band.color);
+      const next = scale[i + 1];
+      const label = next
+        ? `${formatNumber(band.from)}\u2013${formatNumber(next.from)}`
+        : `${formatNumber(band.from)}+`;
+      li.append(sw, document.createTextNode(label));
+      ul.appendChild(li);
+    });
+    out.appendChild(ul);
+    // "{n} per km²" with nothing in place of the number is the unit on its own.
+    const unit = pick(layer.unit || {}).replace('{n}', '').trim();
+    if (unit) {
+      const p = document.createElement('p');
+      p.className = 'legend-unit';
+      p.textContent = unit;
+      out.appendChild(p);
+    }
+    if (layer.note) {
+      const p = document.createElement('p');
+      p.className = 'legend-note';
+      p.textContent = pick(layer.note);
+      out.appendChild(p);
+    }
+    return out;
+  }
+
   function layerLegend(layer) {
+    if (layer.type === 'choropleth') return scaleLegend(layer);
     const cats = layer.categories || [];
     if (cats.length < 2) return null;
     const ul = document.createElement('ul');

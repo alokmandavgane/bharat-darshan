@@ -6,7 +6,7 @@ import {
 } from 'three';
 import frag from './shaders/terrain.frag.glsl?raw';
 import vert from './shaders/terrain.vert.glsl?raw';
-import { byteTexture, grainTexture, heightTexture } from './textures.js';
+import { byteTexture, grainTexture, heightTexture, zeroTexture } from './textures.js';
 
 /** Vertical curve y_km = exag * (h / hRef)^gamma * hRef / 1000. Keep in step with pipeline/02_dem.py. */
 export const CURVE = { gamma: 0.65, hRef: 8000 };
@@ -92,6 +92,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uOnlyIndia: { value: 1 },
     // 1 only on the backdrop, which ends as a round pool instead of at its rect.
     uPool: { value: 0 },
+    // The choropleth layer on show, if any: a lookup by region id and its band colours.
+    uChoroLut: { value: zeroTexture() },
+    uChoroColors: { value: Array.from({ length: 8 }, () => new Color('#000000')) },
+    uChoroMix: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
@@ -158,11 +162,30 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   }
   setTier(tierData);
 
+  /** Apply to the plate and to every sibling that shares its rasters (the lifted block). */
+  const blank = uniforms.uChoroLut.value;   // read as "no region has a value"
+  function broadcast(fn) {
+    fn(uniforms);
+    siblings.forEach((m) => fn(m.uniforms));
+  }
+
   return {
     mesh, material, uniforms, setTier, siblingMaterial, grid: { cols, rows: grid },
+    /** Bind a choropleth's lookup, or null to unbind it. */
+    setChoropleth(look) {
+      broadcast((u) => {
+        u.uChoroLut.value = look ? look.texture : blank;
+        if (look) look.colors.forEach((c, i) => u.uChoroColors.value[i].copy(c));
+      });
+    },
+    /** How far it has faded in, 0..1. */
+    setChoroMix(v) {
+      broadcast((u) => { u.uChoroMix.value = v; });
+    },
     dispose() {
       textures.forEach((t) => t.dispose());
       uniforms.uGrain.value.dispose();
+      blank.dispose();
       geometry.dispose();
       material.dispose();
     },

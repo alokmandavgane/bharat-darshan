@@ -3,6 +3,7 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
+import { choroplethLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createWorld } from './world.js';
 import { basis, DEFAULT_CAMERA, fitBounds, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
@@ -151,6 +152,41 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     return true;
   }
 
+  // --- choropleths: at most one is drawn at a time (PLAN.md section 10, layer sprawl),
+  // so changing one fades out through the clay and back rather than cross-dissolving two
+  // lookups. The whole layer is one 256-texel texture; swapping it costs nothing.
+  const choroFiles = new Map();      // layer id -> its file, once fetched
+  let choroId = null;                // the one on show
+  let choroLook = null;
+  let cancelChoro = null;
+
+  function fadeChoro(to, ms, onDone) {
+    cancelChoro?.();
+    cancelChoro = tween({ v: terrain.uniforms.uChoroMix.value }, { v: to }, ms,
+      (s) => { terrain.setChoroMix(s.v); invalidate(); },
+      { onDone: () => { cancelChoro = null; onDone?.(); } });
+  }
+
+  /** Which choropleth the visitor has switched on, or null. */
+  function activeChoro() {
+    const active = store.get('layers')?.active || [];
+    return active.find((id) => manifest?.layers?.find((l) => l.id === id)?.type === 'choropleth') || null;
+  }
+
+  function showChoropleth(id) {
+    if (!terrain || id === choroId) return;
+    if (id && !choroFiles.has(id)) return;        // still being fetched; the load calls back
+    const put = () => {
+      choroLook?.dispose();
+      choroLook = id ? choroplethLookup(choroFiles.get(id)) : null;
+      terrain.setChoropleth(choroLook);
+      choroId = id;
+      fadeChoro(id ? 1 : 0, 350);
+    };
+    if (terrain.uniforms.uChoroMix.value <= 0.01) put();
+    else fadeChoro(0, 250, put);
+  }
+
   // --- layers (data, never ids): load a layer's file the first time it is switched on
   const loading = new Set();
   const failed = new Set();
@@ -184,8 +220,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
         done((data) => { points.setLayer(data); tour.refresh(); });
       } else if (entry.type === 'lines' && lines && !lines.has(id)) {
         done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); });
+      } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
+        done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
       }
     }
+    showChoropleth(activeChoro());
     invalidate();
   }
   store.subscribe('layers', loadActiveLayers);
@@ -650,6 +689,6 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     start, invalidate, flyTo, fit, pick, project, quality,
     get viewport() { return viewport; },
     get level() { return level; },
-    dispose() { world?.dispose(); lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
+    dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }

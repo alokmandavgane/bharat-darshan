@@ -28,6 +28,9 @@ uniform float uHole;           // state id drawn as a flat dark socket, or -1
 uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform float uOnlyIndia;      // 1: draw India alone as a cut-out on the page, no sea or neighbours
 uniform float uPool;           // 1 on the backdrop: end as a round pool, not at the rect
+uniform sampler2D uChoroLut;   // r: band index, g: 255 where a region has a value (NEAREST)
+uniform vec3 uChoroColors[8];  // the scale's band colours
+uniform float uChoroMix;       // 0..1: how far the choropleth has faded in
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -114,6 +117,15 @@ void main() {
   vec3 light = sky * 0.50 + sun * 0.62 * diff;
   float ao = mix(1.0, shade.r, 0.75);
   vec3 albedo = bandColour(h);
+  // A choropleth tints the clay rather than covering it: the value replaces the
+  // hypsometric colour, and the same light, ambient occlusion and grain go over the top,
+  // so the relief is still there to read under the colour. A region with no value keeps
+  // its own colour, and so do the sea, the neighbours and the backdrop, whose id is 0.
+  if (uChoroMix > 0.0) {
+    vec2 lut = texture(uChoroLut, vec2((id + 0.5) / 256.0, 0.5)).rg;
+    int band = clamp(int(lut.r * 255.0 + 0.5), 0, 7);
+    albedo = mix(albedo, uChoroColors[band], uChoroMix * step(0.5, lut.g));
+  }
   vec3 col = albedo * light * ao;
 
   // neighbours: same relief, paler and quieter, so India reads without drawing their lines

@@ -14,9 +14,12 @@ Layer types known today:
            curated items either by name or by routing through waypoints, then
            projected, clipped to India and simplified. With "flow": true every run is
            also pointed downstream, against the heightmap
+  choropleth  a values.csv of region,value beside layer.json; the build turns the ISO
+           codes into raster ids and the runtime makes the id-to-colour lookup
 The engine knows types, never layer ids.
 """
 import argparse
+import csv
 import json
 import os
 import sys
@@ -25,7 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TYPES = ('points', 'lines')
+TYPES = ('points', 'lines', 'choropleth')
 JOINS = ('name', 'route')   # how a lines item finds its geometry: by the source's names, or through waypoints
 STATUSES = ('draft', 'reviewed')
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
@@ -67,7 +70,14 @@ def validate_layer(layer, folder):
     if not bilingual(layer.get('title')):
         p.append('layer.title needs en and hi')
     cats = layer.get('categories') or []
-    if not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
+    # A choropleth is coloured by a scale, not sorted into categories.
+    if layer.get('type') == 'choropleth':
+        if cats:
+            p.append('a choropleth has a scale, not categories')
+        p += validate_scale(layer.get('scale'))
+        if not bilingual(layer.get('unit')):
+            p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
+    elif not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
@@ -83,6 +93,53 @@ def validate_layer(layer, folder):
         if not bilingual(spec.get('label')):
             p.append(f'field {name}: label needs en and hi')
     return p
+
+
+def validate_scale(scale):
+    """The bands a choropleth colours by: an ascending lower bound and a colour each."""
+    if not isinstance(scale, list) or len(scale) < 2:
+        return ['scale must list at least two bands']
+    p = []
+    last = None
+    for i, band in enumerate(scale):
+        if not isinstance(band.get('from'), (int, float)):
+            p.append(f'scale band {i}: from must be a number')
+        elif last is not None and band['from'] <= last:
+            p.append(f'scale band {i}: from must be greater than the band before it')
+        else:
+            last = band['from']
+        if not isinstance(band.get('color'), str) or not band['color'].startswith('#'):
+            p.append(f'scale band {i}: color must be a hex string')
+    return p
+
+
+def build_choropleth(layer, folder, by_iso, by_id):
+    """values.csv of region,value -> { raster id: value }. Returns (out, problems)."""
+    path = os.path.join(folder, 'values.csv')
+    if not os.path.exists(path):
+        return {}, ['a choropleth needs values.csv beside layer.json']
+    values, problems = {}, []
+    with open(path, encoding='utf-8') as f:
+        rows = list(csv.reader(f))
+    head = [c.strip().lower() for c in rows[0]] if rows else []
+    if head[:2] != ['region', 'value']:
+        return {}, ['values.csv must start with a region,value header']
+    for n, row in enumerate(rows[1:], start=2):
+        if not row or not row[0].strip():
+            continue
+        code = row[0].strip()
+        if code not in by_iso:
+            problems.append(f'values.csv line {n}: {code} is not an ISO 3166-2:IN code')
+            continue
+        try:
+            values[by_iso[code]['id']] = float(row[1])
+        except (IndexError, ValueError):
+            problems.append(f'values.csv line {n}: {row[1:2]} is not a number')
+    # Regions with no value keep their own clay colour, but say which they are out loud.
+    missing = sorted(by_id[i]['iso'] for i in set(by_id) - set(values))
+    if missing:
+        print(f"    no value for {len(missing)}: {', '.join(missing)}")
+    return values, problems
 
 
 def validate_line_item(it, cats, join, fields=()):
@@ -216,6 +273,10 @@ def build_layer(folder, states, ids, heights, out):
     height, width = ids.shape
     seen = set()
     out_items = []
+    if layer.get('type') == 'choropleth' and not problems:
+        values, choro_problems = build_choropleth(layer, folder, by_iso, by_id)
+        problems += choro_problems
+        return finish(layer, [], out, problems, order=lambda i: i['id'], extra={'values': values})
     if layer.get('type') == 'lines' and not problems:
         out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems
@@ -241,16 +302,20 @@ def build_layer(folder, states, ids, heights, out):
     return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
 
 
-def finish(layer, out_items, out, problems, order):
+def finish(layer, out_items, out, problems, order, extra=None):
     """Write public/data/layers/<id>.json, whatever the type put in out_items."""
     if problems:
         return layer, None, problems
     out_items.sort(key=order)
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'title', 'icon', 'group', 'categories', 'fields', 'attribution') if k in layer}
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'title', 'icon', 'group', 'categories',
+                                  'fields', 'scale', 'unit', 'note', 'sources', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')
     data['items'] = out_items
+    if extra:
+        data.update(extra)
+        data['count'] = len(extra.get('values', out_items))
     os.makedirs(os.path.join(out, 'layers'), exist_ok=True)
     path = os.path.join(out, 'layers', f"{layer['id']}.json")
     with open(path, 'w', encoding='utf-8') as f:
@@ -280,8 +345,9 @@ def main():
             for p in problems:
                 print('  ' + p)
         else:
-            n = sum(1 for _ in json.load(open(path, encoding='utf-8'))['items'])
-            print(f"{name}: {n} items -> {os.path.relpath(path, ROOT)} ({os.path.getsize(path) / 1024:.0f} KB)")
+            data = json.load(open(path, encoding='utf-8'))
+            what = 'regions' if data['type'] == 'choropleth' else 'items'
+            print(f"{name}: {data['count']} {what} -> {os.path.relpath(path, ROOT)} ({os.path.getsize(path) / 1024:.0f} KB)")
     if failed:
         sys.exit(1)
 
