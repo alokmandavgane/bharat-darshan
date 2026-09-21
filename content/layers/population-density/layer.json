@@ -1,0 +1,32 @@
+{
+  "id": "population-density",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Population density",
+    "hi": "जनसंख्या घनत्व"
+  },
+  "icon": "city",
+  "default_on": false,
+  "unit": {
+    "en": "{n} per km²",
+    "hi": "{n} प्रति वर्ग किमी"
+  },
+  "scale": [
+    { "from": 0,    "color": "#e5dcc6" },
+    { "from": 50,   "color": "#d8c49c" },
+    { "from": 150,  "color": "#c9a678" },
+    { "from": 300,  "color": "#b8835a" },
+    { "from": 500,  "color": "#9c5f3f" },
+    { "from": 1000, "color": "#78422e" }
+  ],
+  "note": {
+    "en": "Jammu and Kashmir and Ladakh are left uncoloured: the 2011 census predates their reorganisation in 2019, and published areas for them differ by which territory is counted.",
+    "hi": "जम्मू और कश्मीर तथा लद्दाख रंगहीन छोड़े गए हैं: 2011 की जनगणना उनके 2019 के पुनर्गठन से पहले की है, और उनके प्रकाशित क्षेत्रफल इस पर निर्भर करते हैं कि कौन-सा भूभाग गिना जाए।"
+  },
+  "sources": [
+    "https://censusindia.gov.in/census.website/data/census-tables"
+  ],
+  "attribution": "Density is the 2011 census population over the published area of each state and union territory, the same figures the state cards carry.",
+  "_scale": "Each band gives its lower bound in people per km²; the engine reads the scale, never a layer's name."
+}
