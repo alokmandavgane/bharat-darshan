@@ -1,0 +1,20 @@
+{
+  "id": "culture",
+  "section": "culture",
+  "order": 1,
+  "title": {
+    "en": "Festivals and languages",
+    "hi": "त्योहार और भाषाएँ"
+  },
+  "blurb": {
+    "en": "What a state keeps rather than what stands in it: the festivals of its year and the languages it is official in. Lift a state to read its own list.",
+    "hi": "राज्य में जो खड़ा है उससे अधिक जो वह सहेजता है: उसके वर्ष के त्योहार और वे भाषाएँ जिनमें वह शासित है। किसी राज्य को उठाकर उसकी अपनी सूची पढ़ें।"
+  },
+  "layers": [
+    "festivals",
+    "languages",
+    "places"
+  ],
+  "relief": 10,
+  "status": "draft"
+}

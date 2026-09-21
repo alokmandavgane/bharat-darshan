@@ -1,0 +1,20 @@
+{
+  "id": "transport",
+  "section": "transport",
+  "order": 1,
+  "title": {
+    "en": "Roads and railways",
+    "hi": "सड़कें और रेलमार्ग"
+  },
+  "blurb": {
+    "en": "The trunk routes: national highways and the main railway lines that carry most of what moves between the cities.",
+    "hi": "मुख्य मार्ग: राष्ट्रीय राजमार्ग और वे प्रमुख रेल लाइनें जो नगरों के बीच का अधिकांश यातायात ढोती हैं।"
+  },
+  "layers": [
+    "roads",
+    "rail",
+    "places"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

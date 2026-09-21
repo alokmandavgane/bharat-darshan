@@ -886,6 +886,10 @@
   "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
  ],
  "files": {
+  "plates.json": {
+   "size": 6097,
+   "sha256": "584002615cb2"
+  },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
    "sha256": "568a3c12bd63"

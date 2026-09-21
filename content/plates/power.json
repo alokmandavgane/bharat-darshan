@@ -1,0 +1,18 @@
+{
+  "id": "power",
+  "section": "industry",
+  "order": 1,
+  "title": {
+    "en": "Power stations",
+    "hi": "विद्युत संयंत्र"
+  },
+  "blurb": {
+    "en": "Where India's electricity is made, sized by installed capacity and coloured by fuel: coal on the coalfields, hydro in the hills, solar in the desert.",
+    "hi": "भारत की बिजली कहाँ बनती है — स्थापित क्षमता के आकार में और ईंधन के रंग में: कोयला कोयला क्षेत्रों पर, जल पहाड़ों में, सौर मरुस्थल में।"
+  },
+  "layers": [
+    "power"
+  ],
+  "relief": 10,
+  "status": "draft"
+}

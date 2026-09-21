@@ -1,0 +1,19 @@
+{
+  "id": "monsoon",
+  "section": "climate",
+  "order": 1,
+  "title": {
+    "en": "The monsoon",
+    "hi": "मानसून"
+  },
+  "blurb": {
+    "en": "Where the rain comes from and the order it arrives in: two branches off the sea in June, and the withdrawal from September.",
+    "hi": "वर्षा कहाँ से आती है और किस क्रम में: जून में समुद्र से दो शाखाएँ, और सितंबर से वापसी।"
+  },
+  "layers": [
+    "monsoon",
+    "physiography"
+  ],
+  "relief": 12,
+  "status": "draft"
+}

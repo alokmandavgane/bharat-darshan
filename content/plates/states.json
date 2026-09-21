@@ -1,0 +1,18 @@
+{
+  "id": "states",
+  "section": "political",
+  "order": 1,
+  "title": {
+    "en": "States and union territories",
+    "hi": "राज्य और केंद्र शासित प्रदेश"
+  },
+  "blurb": {
+    "en": "The 28 states and 8 union territories, coloured by the zonal council each belongs to. Tap any one to lift it out of the map.",
+    "hi": "28 राज्य और 8 केंद्र शासित प्रदेश, अपनी-अपनी क्षेत्रीय परिषद के रंग में। किसी को भी छूकर उसे मानचित्र से उठाकर देखें।"
+  },
+  "layers": [
+    "zones"
+  ],
+  "relief": 6,
+  "status": "draft"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rivers",
+  "section": "physical",
+  "order": 3,
+  "title": {
+    "en": "Rivers",
+    "hi": "नदियाँ"
+  },
+  "blurb": {
+    "en": "Where the water goes. The crests run downstream, so the Ganga reads east and the Narmada west, which is the thing a still map cannot show.",
+    "hi": "पानी कहाँ जाता है। लहरें प्रवाह की दिशा में चलती हैं, इसलिए गंगा पूर्व और नर्मदा पश्चिम पढ़ी जाती है — जो स्थिर मानचित्र नहीं दिखा सकता।"
+  },
+  "layers": [
+    "rivers",
+    "reference-lines"
+  ],
+  "relief": 12,
+  "status": "draft"
+}

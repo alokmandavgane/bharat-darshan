@@ -1,0 +1,18 @@
+{
+  "id": "physical-divisions",
+  "section": "physical",
+  "order": 2,
+  "title": {
+    "en": "Physical divisions",
+    "hi": "भौतिक विभाग"
+  },
+  "blurb": {
+    "en": "Mountains, plateaus, plains, desert and coast, each filled and named. The divisions are regions rather than boundaries: they fade into one another.",
+    "hi": "पर्वत, पठार, मैदान, मरुस्थल और तट, प्रत्येक रंगा और नामांकित। ये विभाग सीमाएँ नहीं, क्षेत्र हैं: एक दूसरे में घुलते हुए।"
+  },
+  "layers": [
+    "physiography"
+  ],
+  "relief": 10,
+  "status": "draft"
+}

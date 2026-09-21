@@ -1,0 +1,19 @@
+{
+  "id": "relief",
+  "section": "physical",
+  "order": 1,
+  "title": {
+    "en": "Relief",
+    "hi": "उच्चावच"
+  },
+  "blurb": {
+    "en": "The land itself: the Himalaya at the back, the Deccan tilted east, the Ghats down both coasts. Named ranges, peaks and passes sit on it.",
+    "hi": "भूमि स्वयं: पीछे हिमालय, पूर्व की ओर झुका दक्कन, दोनों तटों पर घाट। इस पर नामांकित श्रेणियाँ, शिखर और दर्रे।"
+  },
+  "layers": [
+    "ranges",
+    "summits"
+  ],
+  "relief": 14,
+  "status": "draft"
+}
