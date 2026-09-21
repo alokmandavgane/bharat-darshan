@@ -961,6 +961,16 @@ workflow, more UI languages, the history section.
     Until then the fallback is geoBoundaries ADM2 (ODbL, 2021, no codes).
 11. **Resolved on 2026-09-21** with question 4: "Bharat Darshan" stays, with "an atlas of
     India" as the line under it. Revisit before launch, not before.
+12. Pipeline reproducibility: `pipeline/requirements.txt` asks for `numpy>=1.26`, and
+    "reproducible byte for byte" does not survive that range. On 2026-09-21, on a fresh
+    machine with numpy 2.5.3 and no pipeline change at all, `shade-2048.bin.gz` came back
+    687,155 bytes against the committed 687,146 -- a marginal numerical difference in the
+    ambient occlusion at the finer tier, invisible on screen but enough to make every
+    rebuild look like a data change in `git status`. Pin numpy (and pillow) to the
+    versions the committed data was built with, or drop the byte-for-byte claim to
+    "reproducible on one machine" and stop treating a terrain diff as a signal? Pinning
+    is the recommendation: the guarantee is what makes an unexpected diff worth looking
+    at.
 
 Resolved on 2026-09-20: stylised look (D8); no React, minimal dependencies (D7);
 English + Hindi at launch (D9); AI-drafted, human-reviewed content (D10); layers must
@@ -1456,6 +1466,26 @@ docs/DEPLOY.md).
   And the fourth shape for "where the model is" was the first that is actually it. A box,
   a convex hull and the 36 units' boxes each park the view on open water, each for its own
   reason. The mask costs 4.7 KB and has none of those problems.
+- 2026-09-21, twentieth round: Phase 5 begun with its smallest primitive, the categorical
+  choropleth, and the zonal councils as the dataset that proves it. A layer says
+  `"scale": "categorical"` and then declares `categories` the way a points or lines layer
+  already does; values.csv keeps its `region,value` header and holds a category id.
+  One lookup still serves both kinds -- the shader reads an index into the same eight
+  colours either way and cannot tell them apart -- so the engine change is which list the
+  colours come from, and the legend's is which fork it takes.
+  The proving dataset is not the one this plan suggested. "States in pastel fills, no two
+  neighbours alike" wants an adjacency graph the build does not have, and produces a
+  legend of colours that mean nothing, which is not a legend. The zonal councils colour
+  the same 36 units from a real source, so it is still the political map and the key is
+  worth reading. Drafted, and wants review: values.csv has no per-row status, which is a
+  gap in the choropleth type that did not matter while the only choropleth was arithmetic
+  off the census and matters now that one carries a claim.
+  Two things about this machine, both worth the next session knowing. numpy and pillow
+  were not installed at all, so the pipeline could not run; `.venv/` is already
+  git-ignored and a project venv is the setup the README's `requirements.txt` implies.
+  And with numpy 2.5.3 and no pipeline change, `shade-2048.bin.gz` rebuilt 9 bytes
+  different from the committed one -- see open question 12. Steps 4 and 5 were run alone
+  and the terrain restored, so this round's data commit is the new layer and nothing else.
 
 ### What exists
 
