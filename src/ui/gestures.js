@@ -59,8 +59,10 @@ export function attachGestures(canvas, store) {
       // Mouse: the left button turns the model, the right one slides it. A finger pans.
       const orbit = rec.type === 'mouse' && rec.button === 0 && !e.shiftKey;
       if (orbit) {
+        // The model follows the hand: drag right and it turns right, drag down and it
+        // tips its far side towards you, as if a finger were on the table itself.
         const c = cam();
-        write(orbitAbout(c, c.yaw - dx * 0.25, c.pitch + dy * 0.25, 0, 0, vp));
+        write(orbitAbout(c, c.yaw + dx * 0.25, c.pitch - dy * 0.25, 0, 0, vp));
       } else {
         const c = cam();
         const [gx, gz] = groundShift(c, -dx, -dy, vp);
