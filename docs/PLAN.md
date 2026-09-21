@@ -185,10 +185,17 @@ no right-drag worth the name), plus Q/E and the compass.
 From a look at the home view as it stands: the clay is good, and the model still reads as
 a picture laid on a page. In rough order of effect per hour:
 
-1. **Put it on the table.** The cut-out has walls and no shadow, so it floats. A soft
-   shadow on the paper, offset away from the light, drawn from the signed outline field
-   that already ships (`uIndiaEdge`): one quad, no new data. Same for a lifted block on
-   the plate. This is the single thing most likely to turn "map" into "object".
+1. **Put it on the table.** *Done 2026-09-21, with two corrections to this plan.* The
+   shadow cannot come from `uIndiaEdge`: that field is signed distance in a narrow band
+   (`uEdgeRangeKm` is 6.8 km at the first-view tier), so a look 85 km along the light
+   lands outside everything it can say and comes back saturated -- measured, a flat wash
+   of 0.06 over the whole page rather than a shadow. It is six weighted taps of the ID
+   raster back along the light instead, coarse and stepped where the field is smooth,
+   but the taps and their falloff blur that away at the size a shadow is. And it is
+   thrown the height of the *relief*, not of the 22 km walls: a wall-sized shadow is
+   about 5 px at the home view and reads as an outline round the coast rather than as a
+   thing standing on a table. Knobs in `SHADOW` in `src/engine/terrain.js`. Still to do:
+   the same for a lifted block on the plate.
 2. **An entrance.** On a cold load of the home view the model rises out of the page:
    relief 0 -> 12 while the camera tips from near top-down to the home angle, ~1.4 s,
    once, skipped for deep links and reduced motion. The relief tween already exists.

@@ -22,6 +22,8 @@ uniform float uGamma;
 uniform float uHRef;
 uniform float uKmPerPx;        // world size of one screen pixel (orthographic)
 uniform vec2 uLightDir;        // key light's ground direction, turned with the camera (F4)
+uniform vec3 uShadow;          // the model's shadow on the paper: throw km, jitter km, strength
+uniform vec3 uShadowTint;      // what colour the paper goes where the model blocks the light
 uniform float uSelected;       // state id or -1
 uniform float uHover;          // state id or -1
 uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
@@ -100,7 +102,38 @@ void main() {
   }
   float edgeKm = (texture(uIndiaEdge, vUv).r * 2.0 - 1.0) * uEdgeRangeKm;
   float inIndia = smoothstep(-aaKm, aaKm, edgeKm);
-  if (uOnlyIndia > 0.5 && plate > 0.5 && edgeKm < -2.0 * aaKm) discard;
+
+  // The model's shadow on the paper. A cut-out with walls standing on a page should cast
+  // one, and without it the country reads as printed on the page rather than laid on it.
+  //
+  // It is a search back along the light for the model: step towards the light, and every
+  // step that lands on the country is the country standing between this patch of paper
+  // and the lamp. Nearer steps count for more, so the shade is deepest against the coast
+  // and thins away from it, which is the penumbra a thick slab throws.
+  //
+  // The country is read from the ID raster rather than from uIndiaEdge, which would be
+  // the obvious choice and is the wrong one: that field is signed distance in a narrow
+  // band -- uEdgeRangeKm is 6.8 km at the first-view tier -- so a look 26 km along the
+  // light lands outside everything it can say and comes back saturated. The raster is
+  // coarse and stepped where the field is smooth, but six offset taps and the falloff
+  // between them blur that away at the size a shadow is.
+  float shade_ = 0.0;
+  if (uOnlyIndia > 0.5 && plate > 0.5 && uShadow.z > 0.0 && inIndia < 0.999) {
+    vec2 dir = normalize(uLightDir);
+    vec2 side = vec2(-dir.y, dir.x);
+    float acc = 0.0, wsum = 0.0;
+    for (int i = 0; i < 6; i++) {
+      float t = (float(i) + 0.5) / 6.0;
+      // a little sideways jitter as well, to break up the raster's 1.7 km stair
+      vec2 p = vUv + (dir * (t * uShadow.x) + side * ((float(i) - 2.5) * uShadow.y * 0.22)) / uSizeKm;
+      float w = 1.0 - 0.62 * t;
+      acc += w * step(0.5, texture(uIds, luv(p)).r * 255.0);
+      wsum += w;
+    }
+    shade_ = (acc / wsum) * uShadow.z * (1.0 - inIndia);
+  }
+  // Outside the cut-out the plate draws nothing -- unless it is drawing the shadow.
+  if (uOnlyIndia > 0.5 && plate > 0.5 && edgeKm < -2.0 * aaKm && shade_ <= 0.002) discard;
   float india = mix(step(0.5, id), inIndia, plate);
   // Inside the cut-out everything is the model, whatever the heightmap says the sea does.
   // Without this the silhouette is clean but frays just inside itself, where coastal
@@ -231,5 +264,11 @@ void main() {
   if (uPool > 0.5) fade = 1.0 - smoothstep(0.52, 0.86, length(vPos.xz / (uSizeKm * 0.5)));
   fade *= mine;                                           // the block's rim, softened
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
-  outColor = vec4(o.rgb * fade, fade);
+  // The shadow lies under the model, so the clay composites over it rather than being
+  // mixed with it: a + b(1 - a), premultiplied, which is one sheet over another.
+  float sa = shade_ * smoothstep(0.0, 420.0, min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x,
+                                                 min(vUv.y, 1.0 - vUv.y) * uSizeKm.y));
+  if (sa <= 0.0) { outColor = vec4(o.rgb * fade, fade); return; }
+  vec3 tint = linearToOutputTexel(vec4(uShadowTint, 1.0)).rgb;
+  outColor = vec4(o.rgb * fade + tint * sa * (1.0 - fade), fade + sa * (1.0 - fade));
 }

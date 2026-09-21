@@ -12,6 +12,17 @@ import { byteTexture, grainTexture, heightTexture, zeroTexture } from './texture
 /** Vertical curve y_km = exag * (h / hRef)^gamma * hRef / 1000. Keep in step with pipeline/02_dem.py. */
 export const CURVE = { gamma: 0.65, hRef: 8000 };
 
+/**
+ * The shadow the model casts on the paper (PLAN.md section 3, "The missing wow" 1).
+ * `offsetKm` is how far it is thrown: the light sits at about 44 degrees, so it is
+ * roughly the model's height, and the model is as tall as its relief -- up to 96 km at
+ * the default exaggeration -- rather than as tall as its 22 km walls. A shadow sized to
+ * the walls alone came out about 5 px at the home view and read as an outline round the
+ * coast rather than as a shadow under a thing. `softKm` is the penumbra, `strength` how
+ * dark the paper goes. All four are knobs: turn them here and look.
+ */
+export const SHADOW = { offsetKm: 85, softKm: 34, strength: 0.42, tint: '#9c8a70' };
+
 /** Warm, desaturated clay palette (sRGB hex; three.js converts to linear for the shader). */
 export const PALETTE = {
   table: '#efe6d6',
@@ -88,6 +99,8 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     // the model, so setLightYaw turns it with the camera and the lit side of a hill
     // stays the side nearest the top-left of the screen however far the model is turned.
     uLightDir: { value: new Vector2(-1, -1) },      // north-west at yaw 0; see setLightYaw
+    uShadow: { value: new Vector3(SHADOW.offsetKm, SHADOW.softKm, SHADOW.strength) },
+    uShadowTint: { value: new Color(SHADOW.tint) },
     uSelected: { value: -1 },
     uHover: { value: -1 },
     uRegion: { value: -1 },
