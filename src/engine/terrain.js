@@ -65,6 +65,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uShade: { value: null },
     uIds: { value: null },
     uBorders: { value: null },
+    // India's own outline as a signed field: the cut-out's silhouette comes from this,
+    // not from the ID raster, so it matches the walls standing on it.
+    uIndiaEdge: { value: null },
+    uEdgeRangeKm: { value: 1 },
     uBorderRangeKm: { value: 1 },
     uBorderTexelKm: { value: 1 },
     uGrain: { value: grainTexture() },
@@ -119,12 +123,14 @@ export function createTerrain({ tierData, grid, sizeKm }) {
       uIds: byteTexture(data.ids, { nearest: true }),
       uBorders: byteTexture(data.borders),
     };
+    if (data.edge) next.uIndiaEdge = byteTexture(data.edge);
     const old = new Set(textures);
     const apply = (u) => {
       for (const [k, tex] of Object.entries(next)) if (!u[k].value || old.has(u[k].value)) u[k].value = tex;
       u.uHeightTexel.value.set(1 / data.heights.width, 1 / data.heights.height);
       u.uBorderRangeKm.value = data.borders.header.range_px * data.borders.header.km_per_px;
       u.uBorderTexelKm.value = data.borders.header.km_per_px;
+      if (data.edge) u.uEdgeRangeKm.value = data.edge.header.range_px * data.edge.header.km_per_px;
     };
     apply(uniforms);
     siblings.forEach((m) => apply(m.uniforms));

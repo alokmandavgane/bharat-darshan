@@ -21,6 +21,11 @@ Outputs, per tier H:
                                      coastal shadow (ocean pixels near land). AO reads fine
                                      when upsampled (PLAN.md section 3); full resolution would
                                      cost 4x the bytes.
+  regions/india-edge-{H}.bin.gz      uint8: signed distance to India's own outline, 128 on the
+                                     line, rising inside and falling outside over range_px
+                                     pixels. The cut-out's silhouette is drawn from this rather
+                                     than from the ID raster, whose staircase the smoothed walls
+                                     standing on it did not match.
   regions/states-borders-{H}.bin.gz  uint8 x2: distance to the nearest state/state border and
                                      to the international land boundary (coast excluded),
                                      255 on the line falling to 0 at range_px pixels; sampled
@@ -43,7 +48,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from pipeline.lib import fetch, grid, lcc, pack, raster  # noqa: E402
+from pipeline.lib import contour, fetch, grid, lcc, pack, raster  # noqa: E402
 
 ROOT = fetch.ROOT
 BBOX = (grid.LON_MIN, grid.LAT_MIN, grid.LON_MAX, grid.LAT_MAX)
@@ -54,6 +59,7 @@ H_REF, GAMMA, AO_EXAG = 8000.0, 0.65, 12.0
 COAST_RANGE_KM = 30.0
 OCEAN_STEP_M = 25.0
 BORDER_RANGE_PX = 8
+EDGE_RANGE_PX = 4      # half-width of the India cut-out's signed field, in pixels
 
 
 def load_mosaic(zoom, xr):
@@ -192,6 +198,31 @@ def border_segments(out_dir, ids, land, width, height):
             np.concatenate(external) if external else empty)
 
 
+def india_edge(out_dir, width, height):
+    """Signed distance to India's outline: 128 on the line, above it inside, below outside.
+
+    The cut-out's edge was the ID raster's staircase while the walls standing on it
+    followed the smoothed outline, so the coast and the international boundary came out
+    sawn wherever the camera got close. Measuring the distance to those same loops and
+    filling them for the sign puts the silhouette and its walls on one curve.
+    """
+    with open(os.path.join(out_dir, 'india.json'), encoding='utf-8') as f:
+        loops = json.load(f)['loops']
+    sx, sz = width / grid.WIDTH_KM, height / grid.HEIGHT_KM
+    rings, segs = [], []
+    for loop in loops:
+        p = np.asarray(loop, dtype=np.float64)
+        if len(p) < 3:
+            continue
+        px = np.column_stack([(p[:, 0] + grid.WIDTH_KM / 2) * sx, (p[:, 1] + grid.HEIGHT_KM / 2) * sz])
+        rings.append((px, contour.shoelace(px) < 0))          # holes wind the other way
+        segs.append(np.column_stack([px, np.roll(px, -1, axis=0)]))
+    inside = raster.rasterise([(1, rings)], width, height) > 0
+    d = raster.distance_to_segments(np.concatenate(segs), width, height, EDGE_RANGE_PX)
+    signed = np.where(inside, d, -d)
+    return np.clip(np.round(127.5 + 127.5 * signed / EDGE_RANGE_PX), 0, 255).astype(np.uint8)
+
+
 def border_fields(internal, external, width, height):
     """(h, w, 2) uint8: encoded distance to internal and to external land borders."""
     out = []
@@ -263,11 +294,13 @@ def main():
         seg_int, seg_ext = border_segments(os.path.join(args.out, 'regions', 'outlines'),
                                            ids, land, width, height)
         borders = border_fields(seg_int, seg_ext, width, height)
+        edge = india_edge(os.path.join(args.out, 'regions', 'outlines'), width, height)
         print(f'  border lines: {len(seg_int)} state segments, {len(seg_ext)} international')
 
         p1 = os.path.join(out_dir, f'heights-{height}.bin.gz')
         p2 = os.path.join(out_dir, f'shade-{height}.bin.gz')
         p3 = os.path.join(args.out, 'regions', f'states-borders-{height}.bin.gz')
+        p4 = os.path.join(args.out, 'regions', f'india-edge-{height}.bin.gz')
         s1 = pack.write(p1, h16, 'int16', 'plane', kind='heights', units='m', km_per_px=km_per_px,
                         min=int(h16.min()), max=int(h16.max()), ocean_step_m=OCEAN_STEP_M,
                         land_threshold_m=-OCEAN_STEP_M / 2, source=f'terrarium z{args.zoom}, box {f}')
@@ -276,10 +309,13 @@ def main():
                         ao_curve={'h_ref': H_REF, 'gamma': GAMMA, 'exaggeration': AO_EXAG})
         s3 = pack.write(p3, borders, 'uint8', 'plane', kind='border-sdf', range_px=BORDER_RANGE_PX,
                         km_per_px=km_per_px, channels_meaning=['internal', 'external'])
+        s4 = pack.write(p4, edge, 'uint8', 'plane', kind='india-sdf', range_px=EDGE_RANGE_PX,
+                        km_per_px=km_per_px, zero=128)
         preview(h16.astype(np.float32), shade, borders, os.path.join(ROOT, 'pipeline', 'tmp', f'preview-terrain-{height}.png'))
         print(f'  {width}x{height}: {km_per_px:.2f} km/px, box {f}, heights {h16.min()}..{h16.max()} m, '
               f'land {land.mean() * 100:.1f}%; wrote {os.path.relpath(p1, ROOT)} ({s1 / 1024:.0f} KB), '
-              f'{os.path.relpath(p2, ROOT)} ({s2 / 1024:.0f} KB), {os.path.relpath(p3, ROOT)} ({s3 / 1024:.0f} KB)  [{time.time() - t:.1f}s]')
+              f'{os.path.relpath(p2, ROOT)} ({s2 / 1024:.0f} KB), {os.path.relpath(p3, ROOT)} ({s3 / 1024:.0f} KB), '
+              f'{os.path.relpath(p4, ROOT)} ({s4 / 1024:.0f} KB)  [{time.time() - t:.1f}s]')
 
 
 if __name__ == '__main__':

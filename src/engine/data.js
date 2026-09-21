@@ -26,9 +26,9 @@ function versioned(manifest, rel) {
 export async function loadTier(manifest, tier) {
   const t = manifest.tiers[tier];
   if (!t) throw new Error(`no tier ${tier} in manifest`);
-  const [heights, shade, ids, borders] = await Promise.all(
-    [t.heights, t.shade, t.ids, t.borders].map((rel) => loadPack(versioned(manifest, rel))));
-  return { tier, heights, shade, ids, borders };
+  const [heights, shade, ids, borders, edge] = await Promise.all(
+    [t.heights, t.shade, t.ids, t.borders, t.edge].map((rel) => (rel ? loadPack(versioned(manifest, rel)) : null)));
+  return { tier, heights, shade, ids, borders, edge };
 }
 
 export async function loadStates(manifest) {

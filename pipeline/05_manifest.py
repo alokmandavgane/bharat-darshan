@@ -38,7 +38,8 @@ def main():
     tiers = {}
     for rel in files:
         base = os.path.basename(rel)
-        for prefix, key in (('heights-', 'heights'), ('shade-', 'shade'), ('states-ids-', 'ids'), ('states-borders-', 'borders')):
+        for prefix, key in (('heights-', 'heights'), ('shade-', 'shade'), ('states-ids-', 'ids'),
+                            ('states-borders-', 'borders'), ('india-edge-', 'edge')):
             if base.startswith(prefix) and base.endswith('.bin.gz'):
                 h = base[len(prefix):-len('.bin.gz')]
                 tiers.setdefault(h, {})[key] = rel

@@ -6,6 +6,8 @@ uniform vec2 uHeightTexel;     // 1 / heightmap size
 uniform vec4 uLocalRect;       // country-uv rect the bound rasters cover; (0,0,1,1) is the country tier
 uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half res, LINEAR)
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
+uniform sampler2D uIndiaEdge;  // signed distance to India's outline: 0.5 on it, up inside
+uniform float uEdgeRangeKm;    // distance the field reaches, each way
 uniform sampler2D uBorders;    // r: internal, g: external border field, 255 on the line
 uniform float uBorderRangeKm;  // distance at which the border field reaches 0
 uniform float uBorderTexelKm;  // world size of one border-field texel
@@ -63,8 +65,17 @@ void main() {
   vec2 shade = texture(uShade, luv(vUv)).rg;
   float id = floor(texture(uIds, luv(vUv)).r * 255.0 + 0.5);
   if (uRegion >= 0.0 && abs(id - uRegion) >= 0.5) discard;
-  if (uOnlyIndia > 0.5 && id < 0.5) discard;
-  float india = step(0.5, id);
+
+  // The country's own silhouette comes from the signed field, not from the ID raster:
+  // the walls standing on it follow the smoothed outline, and a staircase underneath a
+  // smooth wall is what made the coast look sawn. The field is a country raster, so it
+  // is read in country uv and only by the plate -- a lifted block has its own mask.
+  float aaKm = 0.75 * uKmPerPx;
+  float plate = step(uRegion, -0.5);
+  float edgeKm = (texture(uIndiaEdge, vUv).r * 2.0 - 1.0) * uEdgeRangeKm;
+  float inIndia = smoothstep(-aaKm, aaKm, edgeKm);
+  if (uOnlyIndia > 0.5 && plate > 0.5 && edgeKm < -2.0 * aaKm) discard;
+  float india = mix(step(0.5, id), inIndia, plate);
   float hole = uHole >= 0.0 ? 1.0 - step(0.5, abs(id - uHole)) : 0.0;
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
@@ -106,7 +117,7 @@ void main() {
   vec2 b = texture(uBorders, luv(vUv)).rg;
   float dInt = (1.0 - b.r) * uBorderRangeKm;
   float dExt = (1.0 - b.g) * uBorderRangeKm;
-  float aa = 0.75 * uKmPerPx;
+  float aa = aaKm;
   float grain = 0.75 * uBorderTexelKm;
   float askInt = 1.1 * uKmPerPx, askExt = 1.6 * uKmPerPx;
   float held = 1.0 - smoothstep(2.0, 6.0, grain / max(askInt, 1e-6));
@@ -138,19 +149,23 @@ void main() {
   }
   col = mix(col, col * 1.07 + 0.015, hov);
 
-  // --- state view: the rest of the country steps back, the socket is flat and dark
+  // --- state view: the rest of the country steps back, the socket is flat and dark.
+  // The socket is the one edge still cut from the ID raster, a state at a time being
+  // more than one field can hold; feathering it over a texel turns its staircase into
+  // a shadow, which is what a cut in clay looks like anyway.
+  float socket = hole * smoothstep(0.0, 1.2 * uBorderTexelKm, min(dInt, dExt));
   float lumd = dot(col, vec3(0.3, 0.59, 0.11));
-  col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - hole));
-  col = mix(col, uTable * 0.5, hole);
+  col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - socket));
+  col = mix(col, uTable * 0.5, socket);
 
   // --- paper grain in world space
   float g = texture(uGrain, vPos.xz * 0.022).r;
-  col *= 0.94 + 0.12 * g * (1.0 - hole);
+  col *= 0.94 + 0.12 * g * (1.0 - socket);
 
   // dissolve into the page (premultiplied alpha) instead of ending at a rim
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
   float fade = smoothstep(0.0, 420.0, edge);
-  if (uOnlyIndia > 0.5) fade *= land;                     // a soft coastline on the cut-out
+  if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   outColor = vec4(o.rgb * fade, fade);
 }
