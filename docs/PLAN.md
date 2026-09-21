@@ -1,11 +1,13 @@
 # Bharat Darshan (भारत दर्शन): implementation plan
 
-An interactive, isometric 3D map of India for exploring the country's geography and
-culture: relief, rivers, roads, railways, languages, places, food, festivals, and
-many more layers over time (GI-tagged products, crafts, wildlife...). Most users will
-be on phones; bigger screens should use their full width.
+An online interactive atlas of India on an isometric 3D model of the country. Like a
+printed atlas it has pages -- political, physical, climate, minerals, industries,
+transport, people, culture -- and unlike one, every page is the same model you can turn,
+tilt, enter a state of, and tap for the facts. It grows by adding data: many sources,
+many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
+screens should use their full width.
 
-Last updated: 2026-09-20. Status and next steps are at the bottom of this file;
+Last updated: 2026-09-21. Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -23,20 +25,31 @@ look, which is where the delight comes from.
 The project is meant to keep growing by adding layers. The test of the architecture
 is that **a new layer is a folder of data files, not a code change** (section 5).
 
+**The atlas direction (2026-09-21).** The owner's vision is an atlas with many, many data
+sources, not a showcase with a dozen layers. That changes the order of work, not the
+architecture: first make the model a pleasure to handle and to look at (section 3,
+"Camera handling" and "The missing wow"), then finish the set of drawing primitives so
+that any thematic map an atlas carries can be expressed as data (section 5, "Primitives"),
+then add the atlas's own structure -- plates and a contents page (section 5, "Plates") --
+and from there on the work is sourcing and reviewing data, plate by plate.
+
 ## 2. Decisions
 
 | # | Decision | Why |
 |---|----------|-----|
 | D1 | Custom three.js scene, not MapLibre / deck.gl | Map libraries give tiles, labels and picking for free, but bring a perspective camera, Web Mercator and a "map app" look. As far as I know MapLibre has no true orthographic camera, and its WebGL text has historically been weak at shaping Indic scripts (re-check before relying on this). Limiting scope to two levels (country, state) keeps the custom cost manageable. The data pipeline is identical either way, so MapLibre + PMTiles remains the fallback if the Phase 0 spike disappoints. |
-| D2 | Orthographic camera, north-up with a slight turn; not strict 45° isometric | Strict isometric (45° yaw, 35.26° elevation) turns India into a wide diamond: poor use of a portrait phone, and the silhouette stops being recognisable. About 15° of yaw with a 50-55° tilt keeps the familiar shape, suits portrait screens (India is about 3,200 km north-south by 2,900 km east-west), and keeps the Himalaya at the back where exaggerated relief never hides anything. Clamp yaw to roughly ±40°. |
+| D2 | Orthographic camera, north-up with a slight turn; not strict 45° isometric | Strict isometric (45° yaw, 35.26° elevation) turns India into a wide diamond: poor use of a portrait phone, and the silhouette stops being recognisable. About 15° of yaw with a 50-55° tilt keeps the familiar shape, suits portrait screens (India is about 3,200 km north-south by 2,900 km east-west), and keeps the Himalaya at the back where exaggerated relief never hides anything. **Amended 2026-09-21:** that describes the *home* view, and it stays the home view, the poster and every share image. The ±40° yaw clamp is dropped: the model turns the whole way round, because a model on a table that stops a third of the way is a broken turntable, and looking at the Himalaya from Tibet or at the peninsula from the south is exactly what a 3D atlas can do that a printed one cannot. The compass brings north back. See D13. |
 | D3 | Two semantic levels instead of continuous zoom | Country view, then state view. Tap a state: the camera flies in, the state lifts out as its own block, the rest dims, and a lazily loaded state package (higher-res terrain, denser networks, districts, more places) swaps in. Street-level detail is out of scope; this is a showcase, not navigation. |
 | D4 | Tap + bottom sheet is the core interaction; hover is a desktop enhancement | Phones have no hover. "Hover to learn" becomes: tap a state and it lifts out, with its card in the sheet, plus a swipeable card carousel that flies the camera to each item. There is no second step to press: a tap is the way in, and Back is the way out. Desktop adds real hover tooltips over the same data. |
-| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`, `regional`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5. |
+| D5 | Layers are data, not code | The engine knows a few layer *types* (`terrain`, `choropleth`, `lines`, `points`, `regional`), never individual layers. A layer is a folder: a `layer.json` plus `items.json`. Adding "GI-tagged products" must not touch `src/`. See section 5; the full set of types the atlas needs is its "Primitives" table (D12). |
 | D6 | Official boundaries from day one | Use Survey of India-compliant external boundaries (all of J&K and Ladakh including Aksai Chin; Arunachal Pradesh) and the current 28 states + 8 UTs. Default Natural Earth and OSM country outlines show de-facto lines, which is a legal problem for a map published in India. Review every rendered view, including share images. |
 | D7 | Minimal dependencies: vanilla JS, no framework | Owner preference, and the same conventions as the owner's `gol` project: plain JS ES modules, no TypeScript, no JSX, no UI framework. **three.js is the only runtime dependency; Vite is the only build tool.** Store, router, i18n, bottom sheet and gestures are small in-repo modules. Raw WebGL2 without three.js was considered: it would save about 150 KB, but costs plumbing time and gives up a library the owner already knows well. Revisit only if the JS budget is threatened. |
 | D8 | Stylised look: a hand-made clay / paper model, not realism | More distinctive, and cheaper: no imagery, low-frequency colour, tolerant of coarser meshes. Details in section 3. |
 | D9 | English + Hindi at launch | Bilingual from the first screen, not retrofitted. Details in section 3. |
 | D10 | Content is AI-drafted, human-reviewed | Every item carries sources and a review status; only reviewed items ship. Details in section 5. |
+| D11 | It is an atlas: plates over layers | A printed atlas is a sequence of pages, each one map with a title, a legend and a source line. Here a **plate** is a JSON file naming a base style, the layers that are on, a camera and a few words; the contents page lists plates by section. A plate is the same shape as a story snapshot and a shared URL, so it needs no engine work, and it is the answer to layer sprawl: nobody faces a list of eighty switches, they open "Minerals". Layers remain the unit of data and stay individually switchable for anyone who wants to combine them. Adding a plate must not touch `src/`, the same rule as D5. |
+| D12 | Primitives first, then data | With many sources coming, the engine work that matters is the closed set of ways to draw: finish it once, each primitive proven against one real dataset, each with the full contract (legend, picking, card, search, URL, both languages). After that a new map is sourcing and review, never rendering. The catalogue is in section 5. |
+| D13 | One camera rule: the point you grab is the point that stays | Every turn, tilt and zoom pivots on the surface point under the pointer (or between the fingers) at the moment the gesture began, in 3D, and that point does not move on screen for the rest of the gesture. Yaw is free through 360°; the target is kept on the model; the key light belongs to the viewer's room, not to the model, so it stays upper-left of the screen as the model turns. Reasoning and the faults this replaces are in section 3, "Camera handling". |
 
 ## 3. Experience design
 
@@ -58,7 +71,7 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
 | Go deeper | Tap the state, or pick it from the list | Click |
 | Put it down | Tap the state already lifted | Click it |
 | Browse | Swipe the card carousel; camera follows | Same list in the side panel; arrow keys |
-| Move | Drag pan, pinch zoom, twist rotate, two-finger drag tilt | Left-drag turns, right-drag slides, wheel zooms |
+| Move | Drag pan, pinch zoom, twist rotate, two-finger drag tilt; one two-finger gesture does one thing (see "Camera handling") | Left-drag slides, right-drag or Ctrl/Alt-drag turns and tilts, wheel zooms, Q/E turns |
 | Back | Back gesture / sheet header (URL-driven) | Esc / breadcrumb |
 
 - Branch on capability (`@media (hover: hover) and (pointer: fine)`, `pointerType`),
@@ -69,6 +82,128 @@ is that **a new layer is a folder of data files, not a code change** (section 5)
   make every region reachable from the list and search regardless.
 - Later: long-press-and-drag "scrub" mode with a tooltip offset above the finger, as
   a true hover equivalent on touch.
+
+### Camera handling (D13; diagnosed 2026-09-21, not yet built)
+
+The complaint: after a pan, turning the model pivots somewhere unpredictable, and the
+model cannot be turned far enough to put the south on top. Both are real, both are in
+`src/ui/gestures.js` and `src/engine/camera-math.js`, and they come with company.
+Reproduced in the browser: zoomed to the east coast, grabbed the Odisha shore, dragged
+350 px right -- the shore left the screen on an arc and the yaw stopped dead at 40°.
+
+What is wrong:
+
+1. **The mouse pivot is the canvas centre, not what was grabbed.** Left-drag calls
+   `orbitAbout(c, yaw, pitch, 0, 0, vp)`: screen point (0, 0). After any pan or
+   zoom-about-cursor that point is arbitrary, usually empty paper, and it ignores the
+   padding, so on a wide screen it sits 200 px right of the visible middle, half under the panel, and on a phone
+   it can be under the sheet. The model swings on an arm instead of turning in place.
+2. **The target is unbounded.** `clampCamera` clamps zoom, yaw and pitch and leaves `x`
+   and `z` alone. A few drags carry the pivot thousands of km off the model, which makes
+   (1) wilder, and India can be lost off screen altogether with nothing to bring it back
+   but the compass.
+3. **The pivot lies on the sea-level plane.** `groundPoint` answers for `y = 0`, while
+   the surface being looked at is up to ~90 km higher at relief 12, and higher again on a
+   lifted block. Yaw does not care (the axis is vertical) but every tilt slides the
+   grabbed point up or down the screen by `h * Δcos(pitch)`.
+4. **Touch does everything at once.** Each two-finger move applies pan, zoom, twist and
+   tilt together, and the midpoint's vertical travel feeds *both* the pan and the pitch.
+   So a two-finger drag pans and tilts at the same time, and an ordinary pinch whose
+   fingers drift wobbles the yaw and the pitch. Nothing classifies the gesture and
+   nothing has a threshold.
+5. **Yaw is clamped to ±40°** (D2 as first written), so there is no south-up. Lifting
+   the clamp alone is not enough: `tween` interpolates yaw as a plain number, so a flight
+   from 170° to -170° would spin 340° the long way; the wall shader hardcodes the
+   north-west light; the idle sway and the tour assume small angles.
+6. **The idle sway, the tour's sway and the compass write yaw directly**, which pivots
+   on the canvas centre, so with a sheet open the country drifts behind it as it sways.
+7. **Drags stop dead.** No momentum. Not a bug, but it is most of why the model feels
+   like a picture being repositioned rather than an object being pushed.
+
+The fixes, in the order to build them (each its own commit). F8's tests come first, so
+every fix after them is checked against something:
+
+- **F1. Grab-point pivot.** On pointer-down (mouse) or second-finger-down (touch) the UI
+  sets `grab { x, y }` in the store; the engine answers synchronously with
+  `pivot { x, y, z }`, the surface point its picker already finds (heightfield, lifted
+  block included) -- the same handshake as `tap` -> `selection`, so the UI still never
+  touches the engine. `orbitAbout` takes that 3D pivot and the screen position it had at
+  grab time and holds the one on the other for the whole gesture; `project` already
+  handles height. A grab that misses the model falls back to the surface point at the
+  *padded* centre. `zoomAbout` gets the same 3D point, so zooming on a Himalayan peak no
+  longer creeps.
+- **F2. Keep the model on the table.** A pure `clampTarget(cam, bounds, viewport, pad)`:
+  the ground point at the padded centre may not leave the level's bounds (the country
+  hull's box, or the lifted state's) grown by a margin. Rubber-band past the edge while
+  the finger is down, ease back on release.
+- **F3. Free yaw.** Drop `LIMITS.yaw`; normalise to (-180°, 180°]; `flyTo` unwraps the
+  target yaw to the nearest turn before tweening, so `tween.js` stays ignorant of angles.
+  `?cam=` already carries yaw. The compass needle already turns with the map and already
+  resets; give it a visible "not north" state, since it is now the only way home from
+  upside-down. Pitch keeps its 25-89° range.
+- **F4. The light stays with the viewer.** One `uLightAzimuth` uniform, home azimuth plus
+  camera yaw, read by the terrain, block, backdrop and wall shaders in place of the
+  constant. Turning a model under a lamp is what this looks like in a room, and it is also
+  the cartographic rule: light from the bottom of the screen inverts relief to the eye,
+  valleys reading as ridges, worst near top-down. Baked AO and the coastal shadow are
+  direction-free, so nothing in the pipeline changes.
+- **F5. One gesture, one meaning on touch.** Two fingers start undecided. Both moving the
+  same way, mostly vertical, with the spread and the angle between them barely changing
+  -> *tilt*, and only tilt. Anything else -> *pinch/pan*, with twist joining only once
+  the angle has moved ~8°, then latched. The mode holds until a finger lifts. This is
+  what Google Maps and Mapbox do and what thumbs already expect.
+- **F6. Momentum.** Release velocity carries pan and turn on with an exponential decay
+  (~300 ms), killed by the next touch, off under reduced motion. It only runs while
+  something moves, so render-on-demand stands.
+- **F7. Everything else pivots properly too.** Idle sway, tour sway and keyboard turning
+  go through `orbitAbout` about the padded centre instead of writing yaw.
+- **F8. Pin it down.** `camera-math.js` is pure, so it gets tests with `node --test`
+  (standard library, no dependency): the pivot's projection is unchanged by `orbitAbout`
+  for random yaw, pitch and height; yaw unwrapping takes the short way; `clampTarget`
+  holds. And one headless check: grab a point, turn through 360°, the point under the
+  cursor has moved less than a pixel.
+
+**F0. Desktop buttons go back** (open question 8, resolved 2026-09-21). The sixth round
+made left-drag turn the model and right-drag slide it. With a pivot that is wherever the
+canvas centre happened to be, that put the least predictable motion on the most used
+button. F1 cures the unpredictability whichever button it is on, but left-drag slides
+again: an atlas is read zoomed in, zoomed in the commonest act is sliding the map, every
+map a visitor has ever used slides on left-drag, and one finger on a phone already pans
+-- one model for both. Turn and tilt go on right-drag and Ctrl/Alt-drag (trackpads have
+no right-drag worth the name), plus Q/E and the compass.
+
+### The missing wow (proposals, 2026-09-21; the look is the owner's call)
+
+From a look at the home view as it stands: the clay is good, and the model still reads as
+a picture laid on a page. In rough order of effect per hour:
+
+1. **Put it on the table.** The cut-out has walls and no shadow, so it floats. A soft
+   shadow on the paper, offset away from the light, drawn from the signed outline field
+   that already ships (`uIndiaEdge`): one quad, no new data. Same for a lifted block on
+   the plate. This is the single thing most likely to turn "map" into "object".
+2. **An entrance.** On a cold load of the home view the model rises out of the page:
+   relief 0 -> 12 while the camera tips from near top-down to the home angle, ~1.4 s,
+   once, skipped for deep links and reduced motion. The relief tween already exists.
+3. **Handling is the look.** F1, F5 and F6 above. An object that turns about your finger
+   and coasts to a stop is most of what "tactile" means on a screen.
+4. **Let the relief show.** At country zoom the default places layer puts ~40 large
+   tokens over the model and the markers are what you see. Smaller tokens that grow with
+   zoom, harder thinning at the home view, a staggered spring as they appear, and a
+   contact shadow so they stand on the clay instead of lying on the glass.
+5. **Bolder form at distance.** At 4 km per pixel the per-texel normal is fine grain;
+   the big forms (the Ghats' scarp, the Deccan's tilt, the Gangetic trough) want a
+   second, broader normal blended in as the view pulls back, so the country reads as
+   sculpture from across the room and as terrain close up.
+6. **Atlas furniture.** A title cartouche for the open plate in Yatra One, a scale bar
+   (honest along the screen's x, the camera being orthographic), a compass rose that
+   turns, and a graticule scored faintly into the table beyond the model -- which also
+   makes turning legible, since the table's lines turn with it.
+7. **Miniature depth of field** on the high tier, already planned in "Layout".
+8. **A warmer room.** A vignette and a slight warm-to-cool falloff across the paper from
+   the light's side; the page is currently one flat cream.
+
+Items 1-4 are the round to do first; 5-8 are there to be picked from once those are in
+and looked at on the reference phone.
 
 ### Layout
 
@@ -114,6 +249,11 @@ Desktop / tablet landscape:
 - The layer list will grow long. Group layers (physical, networks, people, culture,
   produce...), make the phone chip row a scrollable shortlist with an "all layers"
   sheet behind it, and give the desktop panel collapsible groups.
+- With the atlas direction (D11) the way in is the **contents**, not the layer list: the
+  country sheet opens on the atlas's sections and their plates, the chip row on a phone
+  holds the open plate's own layers, and the full layer list moves behind "all layers"
+  for anyone who wants to mix their own. The contents is ordinary DOM, so it is also the
+  screen-reader, search-engine and no-WebGL view of the atlas.
 - Canvas: `touch-action: none`, no page scroll, `overscroll-behavior: none` (stops
   pull-to-refresh on Android Chrome).
 - Desktop extras: more simultaneous labels, higher-res data tier, tilt-shift depth of
@@ -124,7 +264,8 @@ Desktop / tablet landscape:
 - **Material.** Matte clay / paper. No specular highlights, no satellite imagery or
   photo textures. A tiny tiling grain texture multiplied over everything.
 - **Light.** One soft key light from the north-west (cartographic convention) plus
-  generous ambient, with wrap lighting so shaded slopes never go black. Baked ambient
+  generous ambient; north-west of the *screen*, so it holds its place as the model
+  turns (D13, F4), with wrap lighting so shaded slopes never go black. Baked ambient
   occlusion from the pipeline gives the tactile creases: valleys darker, ridges
   lighter.
 - **Colour.** A restrained banded hypsometric palette, 6-8 bands with soft edges
@@ -206,6 +347,8 @@ bharat-darshan/
   pipeline/          offline data build; raw/ and cache/ are git-ignored
   content/
     layers/<id>/     one folder per layer: layer.json + items.json (section 5)
+    plates/<id>.json one file per atlas page: base, layers, camera, words (planned)
+    sources.json     every dataset once: licence, vintage, URL (planned)
     states/          per-state facts and copy
   public/data/       generated, content-hashed assets + manifest.json
   src/
@@ -318,10 +461,102 @@ Rules that keep this honest:
 
 - The engine knows layer types, never layer ids. `grep -r "gi-products" src/` must
   return nothing.
-- New layer *types* are engine work and should be rare: `raster` overlays (rainfall,
-  night lights, forest cover) and `flows` (monsoon advance, migration) are the likely
-  next two.
+- New layer *types* are engine work, and with the atlas direction they are the engine
+  work: the closed set is in "Primitives" below, to be finished before the data pours in.
 - Phase 3 exit criterion: the GI products layer goes in using data files only.
+
+### Primitives: the closed set of ways to draw (D12)
+
+Every thematic map in a school atlas is one of about ten drawings. The plan is to have
+all of them, each proven on one real dataset, each honouring the full contract -- legend
+from `layer.json`, picking, tooltip, card with declared `fields`, search, URL, both
+languages, cut correctly between the plate and a lifted block -- so that after this a new
+map is a folder and a source, whatever it shows.
+
+| Primitive | Draws | Atlas maps it carries | Status | First dataset to prove it |
+|-----------|-------|-----------------------|--------|---------------------------|
+| `terrain` | the clay relief | physical | built | -- |
+| `choropleth`, banded | a number per region, in bands | density, literacy, sex ratio, rainfall by state, crop output | built (states) | population density (done) |
+| `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | small: a `scale.type` | states in pastel fills, no two neighbours alike |
+| `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | blocked on a boundary source (open question 10) | Census 2011 literacy |
+| `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
+| `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | small: a `source.kind` | reference lines |
+| `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
+| `symbols` | a circle (or glyph) **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | new; shares the points path, adds a size scale and a size legend | power plants by capacity and fuel |
+| `areas` | named polygons that are not regions: fill, hatch or outline, draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | new; rasterised by the build to an id raster + edge field, so it reuses the choropleth lookup and the border shader | physiographic divisions, then coalfields |
+| `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
+| `flows` | curved arrows between places, width by volume, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | new; the ribbon shader plus an arc and an arrowhead | monsoon onset |
+| `prisms` | a region or a spot extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state; rainfall columns at stations | new; the block extruder already exists | state population |
+| `regional` | nothing on the map; listed on a state's card | festivals, languages, food | built | done |
+
+Two things cut across all of them rather than being primitives:
+
+- **Time.** Any layer may declare a time field (month already works this way; year is
+  the obvious next). The scrubber shows itself when something on show can be scrubbed and
+  the primitive redraws for the chosen step: a choropleth swaps its lookup, symbols
+  resize, flows advance. Census decades and the monsoon's month-by-month advance are the
+  first users.
+- **Charts on cards.** A `series` field type (year,value pairs) the card draws as a small
+  inline SVG spark-bar. No chart library.
+
+Rules for building them: smallest first (categorical choropleth, generated lines,
+symbols, areas, raster, flows, prisms); one primitive per round, never a primitive
+without its proving dataset; each must degrade on the low tier rather than drop out; and
+only one fill-type layer (choropleth, areas, raster) tints the clay at a time, by the
+same type-decides rule that already keeps choropleths exclusive.
+
+### Base styles
+
+A thematic map wants a quieter base than the physical one, or its colours fight the
+hypsometric bands. Three, chosen by the plate, never by a layer id: **physical** (today's
+bands), **political** (categorical state fills over gentle relief) and **plain** (one warm
+clay, relief by light alone) for everything thematic. It is a uniform or two on the
+existing terrain material, with the same fade-through-clay the choropleths use.
+
+### Plates: the atlas's pages (D11)
+
+```
+content/plates/minerals.json
+```
+
+```json
+{
+  "id": "minerals",
+  "section": "resources",
+  "title": { "en": "Minerals", "hi": "खनिज" },
+  "blurb": { "en": "...", "hi": "..." },
+  "base": "plain",
+  "layers": ["coalfields", "mines", "rail"],
+  "relief": 8,
+  "camera": "home",
+  "status": "draft"
+}
+```
+
+- A plate is a preset of view state, nothing more: opening one sets `base`, `layers`,
+  `relief` and the camera through the store, exactly as a URL or a story step does. The
+  engine never learns the word.
+- URL: `/en/atlas/minerals`, with its own share image and Open Graph shell from the same
+  Vite plugin that makes `/en` and `/hi`. State view composes: `/en/atlas/minerals/state/jharkhand`.
+- Sections (the contents page's headings, strings keyed by id like layer groups):
+  political, physical, climate, resources, agriculture, industry and energy, transport,
+  people, culture, history.
+- The legend, the source line and the data's vintage come from the plate's layers, so a
+  plate cannot show a map without saying where it came from and when.
+- The build validates a plate the way it validates a layer: every layer it names exists,
+  both languages present, only `reviewed` plates ship. `grep -r minerals src/` stays
+  empty.
+- Stories (Phase 4) become a plate with steps.
+
+### Source registry
+
+With dozens of datasets, attribution per layer stops scaling: the same census or the same
+yearbook feeds ten layers. `content/sources.json` declares each source once -- id, title,
+publisher, URL, licence, vintage, date retrieved -- and layers and items cite it by id
+(plain URLs stay legal for one-off facts). The build fails on an unknown id or a source
+with no licence, the credits screen is generated from it, and each legend shows its
+source and year. Government of India open data is mostly under GODL-India, which allows
+reuse with attribution; anything else is checked before it is used, not after.
 
 ### Base item schema
 
@@ -425,7 +660,9 @@ seasonality. Media needs credit, licence and source on every entry.
   arrives. Never block on the network.
 - **Camera rig.** Orthographic; tweened `target / zoom / yaw / pitch` with
   interruptible ~900 ms eases; "fit bounds with padding" as the one framing primitive
-  (handles sheet, panels, orientation change and resize).
+  (handles sheet, panels, orientation change and resize). Per D13: yaw is free and flights
+  take the short way round; every turn, tilt and zoom holds a 3D pivot fixed on screen;
+  the target is clamped to the level's bounds; the key light's azimuth follows the yaw.
 
 ## 7. Data pipeline and sources
 
@@ -439,6 +676,24 @@ seasonality. Media needs credit, licence and source on every entry.
 | Languages | Census 2011 C-16 mother-tongue tables, district level | Latest census available. Colour by family, shade by language; top-5 list and a diversity index per district. |
 | Places, food, festivals | Curated; seed from the UNESCO list, Wikidata | Wikimedia Commons images with licence tracked per item. |
 | GI products (later) | Geographical Indications Registry | 600+ registered items with category and state; anchors need geocoding and review. |
+
+Candidate sources for the atlas's plates. These are from memory, as leads: each one's
+licence, vintage and boundary treatment is checked and entered in `content/sources.json`
+before a byte of it ships, and any dataset that draws India's outline is used for its
+values only, never its shapes (D6).
+
+| Section | Plates | Primitive | Leads |
+|---------|--------|-----------|-------|
+| Political | States and capitals; districts; Lok Sabha seats by state | categorical choropleth, points, prisms | what is already built; Election Commission of India |
+| Physical | Relief; physiographic divisions; rivers and basins; soils; geology | terrain, areas, lines | India-WRIS (basins); NBSS&LUP (soils); Geological Survey of India |
+| Climate | Annual and monsoon rainfall; temperature; monsoon onset; cyclone tracks; climate zones | raster, flows, lines | IMD normals and gridded rainfall; IMD onset isochrones |
+| Resources | Coal and lignite fields; metallic and non-metallic minerals; forests; protected areas | areas, symbols, raster | Indian Minerals Yearbook (IBM); GSI; Forest Survey of India ISFR; WII ENVIS |
+| Agriculture | Principal crops; irrigation; cropping seasons | choropleth, time | Directorate of Economics and Statistics; data.gov.in |
+| Industry and energy | Power plants by fuel and size; refineries and pipelines; steel; industrial corridors | symbols, lines, areas | Central Electricity Authority; WRI Global Power Plant Database (CC BY 4.0); PPAC |
+| Transport | Highways; railways; ports by cargo; airports; national waterways | lines, symbols | built; Indian Ports Association; AAI; IWAI |
+| People | Density; literacy; sex ratio; urbanisation; decadal growth; religions; languages | choropleth, time, regional | Census of India 2011 and earlier; NFHS for anything newer |
+| Culture | Places; festivals; food; GI products; crafts; classical arts | points, regional | built; GI Registry; UNESCO; Wikidata |
+| History | Later, and carefully: extents of empires are contested and need sources per boundary | areas + time | -- |
 
 Pipeline steps (numbered scripts in `pipeline/`, re-runnable end to end):
 
@@ -521,14 +776,39 @@ carousel, search and the month scrubber all work; and population density, 30
 festivals and 23 languages went in as data alone. Left: districts, which need a
 boundary source; food; and the reviewed items, which are the owner's.*
 
-**Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
-monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
-are declarative state, a story is a list of state snapshots with captions. Trains on
-famous routes, low-poly landmarks, haptics, share cards, accessibility pass, PWA.
+**Re-ordered on 2026-09-21 for the atlas direction (D11-D13).** Phases 0-3 above stand
+as the record of what was built. What is left of Phase 3 (food, districts, reviewed
+items) moves into Phase 7; the order from here is handling, look, primitives, atlas,
+data.
 
-**Later.** More layers (crafts and handlooms, classical dance and music traditions,
-national parks and wildlife, forts, pilgrimage circuits, climate, cricket grounds),
-`raster` and `flows` layer types, a contribution workflow, more UI languages.
+**Phase 4: handling and look (1-2 weeks). Next.** Section 3, "Camera handling" F1-F8
+in that order, then "The missing wow" 1-4. One fix per commit; the camera maths gets its
+tests first so every later fix is checked against them. Exit: the 360° pivot check
+passes; on the reference phone a pinch never tilts and a tilt never pans; and the owner
+says wow -- the Phase 0 exit criterion that was never signed off.
+
+**Phase 5: primitives (3-4 weeks).** Section 5's catalogue, smallest first, one per
+round, each with its proving dataset and the full contract: categorical choropleth (the
+political map) -> generated lines (graticule, Tropic of Cancer) -> `symbols` (power
+plants) -> `areas` (physiographic divisions, coalfields) -> `raster` (rainfall) ->
+`flows` (monsoon onset) -> `prisms` (state population). Base styles and the year
+scrubber land with the first primitive that needs them. District choropleths join when
+open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
+exist, and `src/` names none of them.
+
+**Phase 6: the atlas shell (1-2 weeks).** Plates, the contents page, `/atlas/<id>` URLs
+with share images, the source registry and generated credits, the cartouche, scale bar
+and legend as atlas furniture. Exit: a plate added with a JSON file only, and the first
+ten plates -- one or two per section -- reading as an atlas rather than a demo.
+
+**Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
+source table in section 7. Content is the long pole: sourcing, licences, review. Food,
+GI products, crafts and the rest of the culture layers continue here. Alongside:
+stories as plates with steps (follow the Ganga, the monsoon's advance, the Golden
+Quadrilateral), the poster image, accessibility pass, PWA, the CI budgets.
+
+**Later.** Trains on famous routes, low-poly landmarks, haptics, a contribution
+workflow, more UI languages, the history section.
 
 ## 10. Risks
 
@@ -542,7 +822,18 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
   (both West Bengal and Odisha hold rasgulla GI tags). Cite sources, keep a neutral
   tone, add a "suggest a correction" link.
 - **Layer sprawl.** Many layers on a small screen: groups, a shortlist on phones, and
-  mutually exclusive choropleths keep it usable.
+  mutually exclusive choropleths keep it usable. At atlas scale the answer is plates
+  (D11): the visitor chooses a map, not switches.
+- **Data sprawl.** Dozens of sources with different licences, vintages and ideas of
+  India's outline. The source registry, values-not-shapes for anything with a boundary
+  (D6), and a vintage on every legend are the defence. A 2011 census figure beside a 2023
+  production figure must say so.
+- **Budgets under many layers.** Nothing new is `default_on`; a plate's first view is
+  budgeted like the home view (<= ~1.5 MB including its layers); rasters ship at the
+  tier's resolution, 8-bit, one at a time.
+- **Free rotation.** Relief can now stand in front of what it used to stand behind, and
+  labels and tokens are not depth-tested against it. Accept at first; if it grates, fade
+  markers whose anchor the heightfield hides from the camera.
 - **iOS Safari quirks.** Memory limits, viewport units, context loss on backgrounding,
   no vibration API. Test early.
 
@@ -556,7 +847,7 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
    system fonts.
 4. Name: "Bharat Darshan" also names IRCTC's tourist-train scheme and a park in
    Delhi. Fine for a project; check domain availability and search competition before
-   launch.
+   launch. Resolved on 2026-09-21 along with question 11: the name stays.
 
 5. **Resolved**, by what Phase 1 shipped: layers are `layer.json` + `items.json`,
    read with `json` from the standard library. No YAML parser, so no new dependency
@@ -568,6 +859,18 @@ national parks and wildlife, forts, pilgrimage circuits, climate, cricket ground
 7. Portrait phones show India width-limited (about 7 km/px), with paper above and
    below the model. Accept, or nudge the default yaw / pitch / padding, or move the
    relief slider into the sheet to give the map more height?
+
+8. **Resolved on 2026-09-21**: left-drag slides the map again, and turning moves to
+   right-drag and Ctrl/Alt-drag (plus Q/E and the compass). An atlas is read zoomed in,
+   where sliding is the commonest act, and one finger on a phone already pans.
+9. **Resolved on 2026-09-21**: the key light stays with the viewer, upper-left of the
+   screen, as the model turns (F4). Turning a model under a lamp is what this looks like
+   in a room, and light from the bottom of the screen inverts relief to the eye.
+10. District boundaries: a source that carries the current districts *and* sits inside the
+    Survey of India outline. It gates every district-level plate, which is most of the
+    census. Being researched on 2026-09-21; the answer lands in section 7 when it does.
+11. **Resolved on 2026-09-21** with question 4: "Bharat Darshan" stays, with "an atlas of
+    India" as the line under it. Revisit before launch, not before.
 
 Resolved on 2026-09-20: stylised look (D8); no React, minimal dependencies (D7);
 English + Hindi at launch (D9); AI-drafted, human-reviewed content (D10); layers must
@@ -985,6 +1288,26 @@ docs/DEPLOY.md).
   One thing the layer asked for and got: a regional item's second line falls back from
   the month it falls in, which a festival has, to the name it calls itself by, which a
   language has. Whatever tells an item apart at a glance.
+- 2026-09-21, seventeenth round: a change of direction, plan only, no code.
+  The owner's vision is an online interactive atlas -- political and physical pages,
+  minerals, industries and the rest, from many data sources -- and the UX comes first,
+  because the handling has real faults and the look is still short of wow. Recorded as
+  D11 (plates over layers), D12 (primitives first) and D13 (one camera rule), with D2
+  amended to drop the yaw clamp. New in this file: "Camera handling" and "The missing
+  wow" in section 3; "Primitives", "Base styles", "Plates" and "Source registry" in
+  section 5; the candidate source table in section 7; the roadmap re-ordered from Phase 4
+  on; open questions 8-11.
+  The camera faults were read out of the code and one was reproduced in the browser: the
+  mouse orbit pivots on the canvas centre rather than the point grabbed, so after a pan
+  the model swings on an arm (grab the Odisha shore, drag right, it leaves the screen);
+  `x`/`z` are never clamped, so the pivot can be carried off the model entirely; the pivot
+  lies at sea level under terrain up to ~90 km high at relief 12, so tilting slides it;
+  two-finger touch applies pan, zoom, twist and tilt in the same move, with the midpoint's
+  vertical travel feeding both pan and pitch; and yaw stops at ±40°. None of it is fixed
+  yet: F0-F8 are the next round.
+  The owner answered four open questions on reading this: left-drag slides the map again
+  and turning moves to the right button (8); the light stays with the viewer (9); the
+  name stays (4 and 11); and the district boundary source is mine to find (10).
 
 ### What exists
 
@@ -1045,7 +1368,14 @@ docs/DEPLOY.md).
 
 ### Next
 
-1. Phase 3 next: food as content, drafted the way the festivals and languages were, and
+0. **Phase 4, handling and look, before anything else** (section 9). F8's tests for
+   `camera-math.js` first, then F0 (left-drag slides again), F1 (grab-point pivot via a
+   `grab` -> `pivot` handshake in the store), F2 (`clampTarget`), F3 (free yaw,
+   short-way flights), F4 (light follows yaw), F5 (touch classification), F6
+   (momentum), F7 (idle, tour and keys through `orbitAbout`). Then the table shadow,
+   the entrance, and the marker pass. Items 1-4 below wait behind this and fold into
+   Phases 5-7.
+1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts still need a district boundary source that
    meets the boundary rule in CLAUDE.md, which is a sourcing decision before it is code.

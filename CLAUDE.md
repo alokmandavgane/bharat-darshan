@@ -1,7 +1,8 @@
 # Bharat Darshan
 
-Interactive isometric 3D map of India (geography + culture layers), mobile first,
-English + Hindi. Read [docs/PLAN.md](docs/PLAN.md) before doing anything: it holds
+An online interactive atlas of India on an isometric 3D model: pages ("plates") for
+political, physical, climate, resources, industry, people, culture, fed by many data
+sources. Mobile first, English + Hindi. Read [docs/PLAN.md](docs/PLAN.md) before doing anything: it holds
 the decisions, architecture, data sources, budgets, roadmap, open questions and
 current status.
 
@@ -9,13 +10,23 @@ current status.
 
 - Pre-baked 3D diorama: offline data pipeline + custom three.js (WebGL2) scene.
   Not MapLibre / deck.gl, unless the Phase 0 spike fails its exit criteria.
-- Orthographic camera, north-up with a slight yaw. Not strict 45° isometric.
+- Orthographic camera. The home view is north-up with a slight yaw, not strict 45°
+  isometric; yaw is free through 360° and the compass brings north back.
+- One camera rule (D13): a turn, tilt or zoom pivots on the 3D surface point grabbed
+  when the gesture began, and that point stays put on screen. The target stays on the
+  model; the key light stays upper-left of the screen as the model turns.
 - Two semantic levels (country, state) with lazily loaded state packages. No
   street-level detail.
 - Tap + bottom sheet is the core interaction; hover is a desktop enhancement.
 - Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.json`
   plus `items.json`). The engine knows layer types (terrain, choropleth, lines,
-  points), never layer ids. Adding a layer must not need changes under `src/`.
+  points, regional, and the rest of PLAN.md section 5's "Primitives" table), never
+  layer ids. Adding a layer must not need changes under `src/`.
+- Primitives first, then data (D12): finish the closed set of layer types, each proven
+  on one real dataset with the full contract (legend, picking, card, search, URL, both
+  languages), before adding maps in bulk.
+- Plates over layers (D11): an atlas page is a JSON file under `content/plates/` naming
+  a base style, layers and a camera. Adding a plate must not need changes under `src/`.
 - Stylised look: a hand-made clay / paper model. No imagery, no realism.
 - English + Hindi from the first screen. Every user-facing string and content field
   exists in both.
