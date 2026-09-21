@@ -61,6 +61,13 @@ def lonlat_to_scene(lon, lat):
     return to_scene(*lcc.forward(lon, lat))
 
 
+def scene_to_pixel(x, z, width, height):
+    """Scene km -> continuous pixel coordinates (col, row) in a raster of the given size."""
+    col = (np.asarray(x) + WIDTH_KM / 2) / WIDTH_KM * width
+    row = (np.asarray(z) + HEIGHT_KM / 2) / HEIGHT_KM * height
+    return col, row
+
+
 def lonlat_to_pixel(lon, lat, width, height):
     """Degrees -> continuous pixel coordinates (col, row) in a raster of the given size."""
     x, y = lcc.forward(lon, lat)

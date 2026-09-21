@@ -8,6 +8,7 @@
   },
   "icon": "wave",
   "default_on": true,
+  "flow": true,
   "source": {
     "format": "shapefile-polyline",
     "match": "name",

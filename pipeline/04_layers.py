@@ -11,7 +11,8 @@ to show (only reviewed items, unless drafts are switched on).
 Layer types known today:
   points   an anchor per item, validated against the ID raster
   lines    geometry fetched from the source named in layer.json and joined to the curated
-           items by name, then projected, clipped to India and simplified
+           items by name, then projected, clipped to India and simplified. With
+           "flow": true every run is also pointed downstream, against the heightmap
 The engine knows types, never layer ids.
 """
 import argparse
@@ -32,6 +33,19 @@ BLURB_MAX = 240
 
 def bilingual(v):
     return isinstance(v, dict) and bool(v.get('en')) and bool(v.get('hi'))
+
+
+def height_loader(out, states):
+    """The finest heights tier, read once and only if some layer asks to point downstream."""
+    cache = {}
+
+    def get():
+        if 'h' not in cache:
+            finest = max(states['tiers'], key=int)
+            _, h = pack.read(os.path.join(out, 'terrain', f'heights-{finest}.bin.gz'))
+            cache['h'] = h[:, :, 0]
+        return cache['h']
+    return get
 
 
 def load_states(out):
@@ -57,6 +71,8 @@ def validate_layer(layer, folder):
         src = layer.get('source') or {}
         if not src.get('files') or not src.get('format'):
             p.append('a lines layer needs source.format and source.files')
+    elif layer.get('flow'):
+        p.append('only a lines layer can set flow')
     for name, spec in (layer.get('fields') or {}).items():
         if spec.get('type') not in FIELD_TYPES:
             p.append(f'field {name}: type must be one of {FIELD_TYPES}')
@@ -89,17 +105,19 @@ def validate_line_item(it, cats):
     return p
 
 
-def build_lines(layer, folder, items, cats, ids):
+def build_lines(layer, folder, items, cats, ids, heights):
     """Join each curated item to its geometry. Returns (out_items, problems)."""
     src = layer['source']
     raw = os.path.join(fetch.RAW, 'layers', layer['id'])
     by_name = lines.load_source(src, raw)
+    # A layer that animates its flow needs its runs pointed downstream; nothing else does.
+    relief = heights() if layer.get('flow') else None
     out, problems = [], []
     for it in items:
         problems += validate_line_item(it, cats)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
-        runs, km = lines.build(it, by_name, ids, float(src.get('simplify_km', 1.0)))
+        runs, km = lines.build(it, by_name, ids, float(src.get('simplify_km', 1.0)), relief)
         if not runs:
             problems.append(f"{it['id']}: no geometry matched {it['source_names']}")
             continue
@@ -156,7 +174,7 @@ def validate_item(it, cats, by_iso, ids, width, height, fields):
     return p, here
 
 
-def build_layer(folder, states, ids, out):
+def build_layer(folder, states, ids, heights, out):
     with open(os.path.join(folder, 'layer.json'), encoding='utf-8') as f:
         layer = json.load(f)
     problems = validate_layer(layer, folder)
@@ -170,7 +188,7 @@ def build_layer(folder, states, ids, out):
     seen = set()
     out_items = []
     if layer.get('type') == 'lines' and not problems:
-        out_items, line_problems = build_lines(layer, folder, items, cats, ids)
+        out_items, line_problems = build_lines(layer, folder, items, cats, ids, heights)
         problems += line_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
     for it in items:
@@ -199,7 +217,7 @@ def finish(layer, out_items, out, problems, order):
     if problems:
         return layer, None, problems
     out_items.sort(key=order)
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group', 'categories', 'fields', 'attribution') if k in layer}
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'title', 'icon', 'group', 'categories', 'fields', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')
@@ -220,12 +238,13 @@ def main():
         print('no content/layers')
         return
     states, ids = load_states(args.out)
+    heights = height_loader(args.out, states)
     failed = False
     for name in sorted(os.listdir(root)):
         folder = os.path.join(root, name)
         if not os.path.isfile(os.path.join(folder, 'layer.json')):
             continue
-        layer, path, problems = build_layer(folder, states, ids, args.out)
+        layer, path, problems = build_layer(folder, states, ids, heights, args.out)
         if problems:
             failed = True
             print(f'{name}: {len(problems)} problem(s)')

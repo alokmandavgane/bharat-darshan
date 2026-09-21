@@ -57,7 +57,28 @@ def _clip(xz, inside):
     return runs
 
 
-def project(parts, ids, simplify_km):
+def _orient(run, heights):
+    """Turn a run round if it climbs, so it reads source to mouth.
+
+    Water is the one thing on a map with a direction of its own, and the source does not
+    carry it: Natural Earth's centrelines are not digitised downstream, and a run clipped
+    at the border can come out either way about. The bed is the record. Fit height against
+    distance along the run and reverse it when the fit rises.
+    """
+    if len(run) < 3:
+        return run
+    h, w = heights.shape
+    col, row = grid.scene_to_pixel(run[:, 0], run[:, 1], w, h)
+    z = heights[np.clip(row.astype(int), 0, h - 1), np.clip(col.astype(int), 0, w - 1)].astype(np.float64)
+    d = np.concatenate([[0.0], np.cumsum(np.hypot(*np.diff(run, axis=0).T))])
+    dd = d - d.mean()
+    if not dd.any():
+        return run
+    slope = float((dd * (z - z.mean())).sum() / (dd * dd).sum())
+    return run[::-1] if slope > 0 else run
+
+
+def project(parts, ids, simplify_km, heights=None):
     """lon/lat parts -> scene-km runs inside India, simplified. Returns [(n, 2) arrays]."""
     height, width = ids.shape
     km_per_px = grid.HEIGHT_KM / height
@@ -73,7 +94,7 @@ def project(parts, ids, simplify_km):
                 continue
             simple = contour.simplify_line(run, simplify_km)
             if len(simple) >= 2 and _length(simple) > km_per_px:
-                out.append(simple)
+                out.append(simple if heights is None else _orient(simple, heights))
     return out
 
 
@@ -81,11 +102,14 @@ def _length(run):
     return float(np.hypot(*np.diff(run, axis=0).T).sum())
 
 
-def build(item, by_name, ids, simplify_km):
-    """Geometry for one curated item: its source names joined, projected and clipped."""
+def build(item, by_name, ids, simplify_km, heights=None):
+    """Geometry for one curated item: its source names joined, projected and clipped.
+
+    With `heights`, every run is pointed downstream, for a layer that animates its flow.
+    """
     parts = []
     for name in item.get('source_names') or []:
         parts.extend(by_name.get(fold(name), []))
-    runs = project(parts, ids, simplify_km)
+    runs = project(parts, ids, simplify_km, heights)
     runs.sort(key=lambda r: -_length(r))
     return runs, sum(_length(r) for r in runs)
