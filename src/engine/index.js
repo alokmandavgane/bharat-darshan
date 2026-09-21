@@ -11,7 +11,7 @@ import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, l
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
-import { biasedPick, createHeightfield, pickTerrain, projectGround } from './picking.js';
+import { biasedPick, createHeightfield, landMask, pickTerrain, projectGround } from './picking.js';
 import { createPoints } from './points.js';
 import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
@@ -61,6 +61,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let worldLoad = null;
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
+  let tierIds = null;          // the tier on screen, for the land mask the camera clamp uses
+  let countryMask = null;      // ...and that mask for the whole country, built once
   let stateIndex = null;       // the state-package index, once fetched
   let pkgLoad = null;          // AbortController for the package in flight
   let countryKmPerPx = 0;      // ground size of one height texel in the country tier on screen
@@ -427,12 +429,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   function publishBounds() {
     const regions = store.get('regions');
     if (!regions) return;
-    // The country goes as all 36 units' boxes rather than one around the lot: see
-    // clampTarget for why one box, or a hull, parks the view on open water.
+    // Where the model is, as a coarse mask of the ID raster rather than as a box round
+    // it: see clampTarget for why a box, or a hull, parks the view on open water. The
+    // country's is built once with the tier; a state's is filtered to that unit, which
+    // is a pass over the raster and happens only when the level changes.
+    if (!tierIds) return;
     const u = level.name === 'state' ? regions.byId[level.id] : null;
     store.set('bounds', u
-      ? { boxes: [[...u.bbox]], extent: [...u.bbox] }
-      : { boxes: regions.units.map((x) => [...x.bbox]), extent: [...regions.bbox] });
+      ? { mask: landMask(tierIds, sizeKm, u.id), extent: [...u.bbox] }
+      : { mask: countryMask || (countryMask = landMask(tierIds, sizeKm)), extent: [...regions.bbox] });
   }
 
   /** The compass: everything cleared by the UI, the country framed again from the default angles. */
@@ -755,6 +760,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     refreshZoomFloor();
     terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
     field = createHeightfield(first, sizeKm, terrain.grid);
+    tierIds = first;
+    publishBounds();                      // the mask needs the raster, which only exists now
     scene.add(terrain.mesh);
     lines = createLines(scene, terrain.uniforms);
     lines.setView(viewport.w, viewport.h, store.get('camera').zoom);

@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import {
   basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, FLING, flingFrom, groundAnchor,
   groundPoint, groundShift, holdAnchor, kmPerPixel, lightDirection, LIMITS, orbitAbout, paddedCentre,
-  project, TARGET_MARGIN, TARGET_MARGIN_VIEW, unwrapYaw, wrapYaw, zoomAbout,
+  nearestLand, project, TARGET_MARGIN, TARGET_MARGIN_VIEW, unwrapYaw, wrapYaw, zoomAbout,
 } from '../src/engine/camera-math.js';
 
 /** A deterministic generator, so a failure is always the same failure. */
@@ -41,6 +41,27 @@ function cameras(r, n = 40) {
     });
   }
   return out;
+}
+
+/** A land mask like the engine's, from a list of scene-km boxes that are "model". */
+function maskOf(parts, extent, cellKm = 50) {
+  const [x0, z0, x1, z1] = extent;
+  const cols = Math.max(1, Math.round((x1 - x0) / cellKm));
+  const rows = Math.max(1, Math.round((z1 - z0) / cellKm));
+  const cellW = (x1 - x0) / cols, cellH = (z1 - z0) / rows;
+  const cells = new Uint8Array(cols * rows);
+  for (let j = 0; j < rows; j++) {
+    for (let i = 0; i < cols; i++) {
+      const cx = x0 + (i + 0.5) * cellW, cz = z0 + (j + 0.5) * cellH;
+      if (parts.some(([a, b, c, d]) => cx >= a && cx <= c && cz >= b && cz <= d)) cells[j * cols + i] = 1;
+    }
+  }
+  return { cols, rows, cellW, cellH, x0, z0, cells };
+}
+
+/** Bounds as the engine publishes them: where the model is, and the box round it. */
+function boundsOf(parts, extent) {
+  return { mask: maskOf(parts, extent), extent };
 }
 
 const close = (a, b, tol, what) =>
@@ -339,7 +360,7 @@ test('at yaw 0 the light is the north-west the look was designed around', () => 
 test('clampTarget holds the middle of the view inside the bounds, with a margin', () => {
   const vp = { w: 1400, h: 900 };
   const pad = { top: 0, right: 0, bottom: 0, left: 0 };
-  const bounds = { boxes: [[-1000, -1200, 1000, 1200]], extent: [-1000, -1200, 1000, 1200] };
+  const bounds = boundsOf([[-1000, -1200, 1000, 1200]], [-1000, -1200, 1000, 1200]);
   const margin = (cam) => [
     Math.min(2000 * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW),
     Math.min(2400 * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW),
@@ -360,7 +381,7 @@ test('clampTarget holds the middle of the view inside the bounds, with a margin'
 test('clampTarget leaves a camera that is already looking at the model alone', () => {
   const vp = { w: 1400, h: 900 };
   const pad = { top: 104, right: 420, bottom: 36, left: 24 };
-  const bounds = { boxes: [[-1600, -1700, 1600, 1700]], extent: [-1600, -1700, 1600, 1700] };
+  const bounds = boundsOf([[-1600, -1700, 1600, 1700]], [-1600, -1700, 1600, 1700]);
   // fit frames the box at the padded centre, so a fitted camera must never be moved
   const b = bounds.extent;
   const fitted = fitBounds({ ...DEFAULT_CAMERA }, { x0: b[0], z0: b[1], x1: b[2], z1: b[3] }, vp, pad);
@@ -372,7 +393,7 @@ test('clampTarget measures from the padded middle, not the canvas middle', () =>
   // With a panel over the right of the screen, the model should be allowed to sit in
   // the space that is left, not be dragged under the panel to satisfy the clamp.
   const vp = { w: 1400, h: 900 };
-  const bounds = { boxes: [[-500, -500, 500, 500]], extent: [-500, -500, 500, 500] };
+  const bounds = boundsOf([[-500, -500, 500, 500]], [-500, -500, 500, 500]);
   const bare = { top: 0, right: 0, bottom: 0, left: 0 };
   const panel = { top: 0, right: 600, bottom: 0, left: 0 };
   const cam = { ...DEFAULT_CAMERA, zoom: 1000, x: 900, z: 0 };
@@ -387,37 +408,54 @@ test('clampTarget measures from the padded middle, not the canvas middle', () =>
   }
 });
 
-test('several boxes keep the view off the emptiness one box around them allows', () => {
+test('the mask keeps the view off water a box or a hull would allow', () => {
   // Two parts with a gap between them, as the mainland and the Andamans have. One box
   // around both lets the view sit in the middle of the gap -- 1,200 km of Bay of Bengal
-  // with nothing on screen -- and so does their convex hull. Their own boxes do not.
+  // with nothing on screen -- and so does their convex hull. The mask does not.
   const vp = { w: 1400, h: 900 };
   const pad = { top: 0, right: 0, bottom: 0, left: 0 };
   const mainland = [-1000, -1000, 0, 1000];
   const island = [1100, 200, 1200, 500];
   const extent = [-1000, -1000, 1200, 1000];
   const margin = Math.min(2200 * TARGET_MARGIN, 2000 * TARGET_MARGIN, 1000 * TARGET_MARGIN_VIEW);
+  const cell = 50;
   const at = (x, z) => ({ ...DEFAULT_CAMERA, zoom: 1000, yaw: 0, pitch: 90, x, z });
+  const parts = boundsOf([mainland, island], extent);
+  const whole = boundsOf([extent], extent);
 
-  // the middle of the gap: one box says yes, the parts say no
+  // the middle of the gap: one solid box says yes, the two parts say no
   const gap = at(550, 0);
-  assert.equal(clampTarget(gap, { boxes: [extent], extent }, vp, pad), gap, 'one box allows the gap');
-  const pulled = clampTarget(gap, { boxes: [mainland, island], extent }, vp, pad);
-  assert.notEqual(pulled, gap, 'the parts do not');
-  close(groundPoint(pulled, 0, 0, vp)[0], margin, 1e-6, 'pulled back to a margin off the mainland');
+  assert.equal(clampTarget(gap, whole, vp, pad), gap, 'a box over the lot allows the gap');
+  const pulled = clampTarget(gap, parts, vp, pad);
+  assert.notEqual(pulled, gap, 'the mask does not');
+  close(groundPoint(pulled, 0, 0, vp)[0], margin, cell, 'pulled back to about a margin off the mainland');
 
   // and the island is still a place you can be, once you are there
   const there = at(1150, 350);
-  assert.equal(clampTarget(there, { boxes: [mainland, island], extent }, vp, pad), there, 'inside the island');
-  // just off its coast is fine too
+  assert.equal(clampTarget(there, parts, vp, pad), there, 'on the island, untouched');
   const nearby = at(1200 + margin / 2, 350);
-  assert.equal(clampTarget(nearby, { boxes: [mainland, island], extent }, vp, pad), nearby, 'within the margin');
+  assert.equal(clampTarget(nearby, parts, vp, pad), nearby, 'and just off its coast');
+  // the east side of the gap belongs to the island, not to the mainland it is further from
+  const [nx] = nearestLand(parts.mask, 1000, 350);
+  assert.ok(nx > 500, `nearest model to the gap's east side should be the island, got x=${nx}`);
+});
+
+test('nearestLand answers zero on the model and the true distance off it', () => {
+  const extent = [-500, -500, 500, 500];
+  const m = maskOf([[-500, -500, 0, 0]], extent);      // one quadrant is model
+  close(nearestLand(m, -250, -250)[2], 0, 0, 'well inside');
+  const [qx, qz, d] = nearestLand(m, 300, -250);       // due east of it
+  close(d, 300, 50, 'distance east');
+  close(qz, -250, 50, 'and the nearest point is level with it');
+  assert.ok(qx <= 0 + 50, 'on the model side');
+  // diagonally off the corner
+  close(nearestLand(m, 300, 300)[2], Math.hypot(300, 300), 80, 'off the corner');
 });
 
 test('give lets a gesture stretch past the bounds, but never run away', () => {
   const vp = { w: 1400, h: 900 };
   const pad = { top: 0, right: 0, bottom: 0, left: 0 };
-  const bounds = { boxes: [[-1000, -1000, 1000, 1000]], extent: [-1000, -1000, 1000, 1000] };
+  const bounds = boundsOf([[-1000, -1000, 1000, 1000]], [-1000, -1000, 1000, 1000]);
   const give = 150;
   // zoom 1000: a third of the view (300 km) is less than a fifth of the bounds (400 km)
   const limit = 1000 + Math.min(2000 * TARGET_MARGIN, 1000 * TARGET_MARGIN_VIEW);

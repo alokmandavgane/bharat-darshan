@@ -132,18 +132,19 @@ every fix after them is checked against something:
   handles height. A grab that misses the model falls back to the surface point at the
   *padded* centre. `zoomAbout` gets the same 3D point, so zooming on a Himalayan peak no
   longer creeps.
-- **F2. Keep the model on the table.** A pure `clampTarget(cam, bounds, viewport, pad)`:
-  the ground point at the padded centre may not leave the level's bounds (the country
-  hull's box, or the lifted state's) grown by a margin. Rubber-band past the edge while
-  the finger is down, ease back on release. *Done, with a residual: the bounds are the
-  36 units' bounding boxes, and a coastal state's box has corners out at sea, so at the
-  very end of a hard drag the view can still sit offshore with the model reduced to a
-  sliver in one corner. It is bounded (about 1,300 km from the middle rather than the
-  12,000 km it used to reach) and one drag brings it back, but it is not yet the rule it
-  should be. The proper test is distance to the coast, and the pipeline already bakes
-  exactly that: `uIndiaEdge`, the signed distance field the plate cuts its silhouette
-  from. Sampling it needs a second `grab`-style handshake, since only the engine holds
-  the texture.*
+- **F2. Keep the model on the table.** *Done.* A pure
+  `clampTarget(cam, bounds, viewport, pad)`: the ground point at the padded centre may
+  not stray more than a margin from the model. Rubber-band past that while the finger is
+  down, ease back on release. What "the model" means took four goes, and the three that
+  failed are worth remembering, because each looks right until it is measured: one box
+  round India has corners in Afghanistan and in open ocean; its convex hull fixes the
+  corners and spans the 1,200 km of the Bay of Bengal to the Andamans; the 36 units' own
+  boxes fix that and have offshore corners of their own, one level down. All three park
+  the view on empty water. What shipped is a coarse land mask built from the ID raster,
+  one cell per 50 km, 67 x 70 cells and 4.7 KB, rebuilt filtered to one unit when a
+  state is lifted. *Not* `uIndiaEdge`, which would be the obvious choice: that field is
+  signed distance in a band 6.8 km wide, so anything asked of it past that comes back
+  saturated. (The same trap caught the shadow; see "The missing wow" 1.)
 - **F3. Free yaw.** *Done.* Drop `LIMITS.yaw`; normalise to (-180°, 180°]; `flyTo` unwraps the
   target yaw to the nearest turn before tweening, so `tween.js` stays ignorant of angles.
   `?cam=` already carries yaw. The compass needle already turns with the map and already

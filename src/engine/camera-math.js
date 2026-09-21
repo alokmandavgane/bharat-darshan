@@ -181,50 +181,62 @@ function soft(v, lo, hi, give) {
 }
 
 /**
- * The nearest point of an axis-aligned box, and how far away it is. A point inside is
- * its own nearest point, at zero.
+ * The nearest point of the model to a ground point, and how far away it is, from the
+ * coarse land mask the engine builds out of the ID raster. A point on the model is its
+ * own nearest point, at zero.
  */
-function nearestInBox(px, pz, [x0, z0, x1, z1]) {
-  const qx = clamp(px, x0, x1), qz = clamp(pz, z0, z1);
-  return [qx, qz, Math.hypot(qx - px, qz - pz)];
+export function nearestLand(mask, px, pz) {
+  const ci = Math.floor((px - mask.x0) / mask.cellW);
+  const cj = Math.floor((pz - mask.z0) / mask.cellH);
+  if (ci >= 0 && cj >= 0 && ci < mask.cols && cj < mask.rows && mask.cells[cj * mask.cols + ci]) {
+    return [px, pz, 0];
+  }
+  let nx = px, nz = pz, best = Infinity;
+  for (let j = 0; j < mask.rows; j++) {
+    const z0 = mask.z0 + j * mask.cellH, z1 = z0 + mask.cellH;
+    const dz = Math.max(z0 - pz, 0, pz - z1);
+    if (dz >= best) continue;                              // the whole row is further than what we have
+    for (let i = 0; i < mask.cols; i++) {
+      if (!mask.cells[j * mask.cols + i]) continue;
+      const x0 = mask.x0 + i * mask.cellW, x1 = x0 + mask.cellW;
+      const dx = Math.max(x0 - px, 0, px - x1);
+      const d = Math.hypot(dx, dz);
+      if (d < best) { best = d; nx = clamp(px, x0, x1); nz = clamp(pz, z0, z1); }
+    }
+  }
+  return [nx, nz, best];
 }
 
 /**
  * Keep the model on the table. `clampCamera` holds the zoom and the angles and says
  * nothing about where the camera is looking, so a few drags could carry the view
  * thousands of km off the model with nothing but the compass to bring it back. The
- * ground point under the middle of what can be seen has to stay within `margin` of one
- * of the level's boxes.
+ * ground point under the middle of what can be seen has to stay within `margin` of the
+ * model itself.
  *
- * Several boxes, rather than one around the lot, because India is not a rectangle and
- * neither is its convex hull any better: one box has corners in Afghanistan and in the
- * ocean south-east of Sri Lanka, and a hull spans the 1,200 km of the Bay of Bengal
- * between the mainland and the Andamans. Both leave the view parked on open water with
- * nothing on screen. The units' own boxes describe the country closely enough, and the
- * far island groups become places you reach by naming them rather than by dragging
- * across an empty sea -- which is how an atlas is read anyway.
+ * Of the model, not of a box round it. Every cheaper shape is wrong somewhere: one box
+ * round India has corners in Afghanistan and in open ocean, its convex hull spans the
+ * Bay of Bengal, and the 36 units' own boxes have offshore corners one level down. All
+ * three were tried and all three park the view on empty water. The mask the engine
+ * builds from the ID raster has none of those problems and costs about 4,700 bytes.
  *
- * @param {{ boxes: number[][], extent: number[] } | null} bounds
- *   the level's parts and the box around them all, in scene km; null leaves the camera alone
+ * @param {{ mask: any, extent: number[] } | null} bounds
+ *   where the model is at this level, and the box around it; null leaves the camera alone
  * @param {number} give  km of springy overshoot to allow, for a gesture in progress
  */
 export function clampTarget(cam, bounds, viewport, pad, give = 0) {
-  if (!bounds?.boxes?.length) return cam;
+  if (!bounds?.mask) return cam;
   const [cx, cy] = paddedCentre(viewport, pad);
   const [gx, gz] = groundPoint(cam, cx, cy, viewport);
+  const [nx, nz, d] = nearestLand(bounds.mask, gx, gz);
+  if (d === 0) return cam;                                 // over the model: nothing to do
   // The margin is the smaller of a fraction of the whole model and a fraction of the
   // view, so it is about a fifth of the screen whatever the zoom.
   const [x0, z0, x1, z1] = bounds.extent;
   const margin = Math.min((x1 - x0) * TARGET_MARGIN, (z1 - z0) * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW);
-  let nx = gx, nz = gz, best = Infinity;
-  for (const box of bounds.boxes) {
-    const [qx, qz, d] = nearestInBox(gx, gz, box);
-    if (d < best) { best = d; nx = qx; nz = qz; }
-    if (d === 0) return cam;                               // inside one of them: nothing to do
-  }
-  const allow = soft(best, 0, margin, give);
-  if (best <= allow) return cam;
-  const f = allow / best;
+  const allow = soft(d, 0, margin, give);
+  if (d <= allow) return cam;
+  const f = allow / d;
   const tx = nx + (gx - nx) * f, tz = nz + (gz - nz) * f;
   return { ...cam, x: cam.x + (tx - gx), z: cam.z + (tz - gz) };
 }

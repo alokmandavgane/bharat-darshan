@@ -103,6 +103,39 @@ export function projectGround(cam, viewport, x, z, field, liftKm, raised = null)
   return projectPoint(cam, [x, y, z], viewport);
 }
 
+/**
+ * A coarse "where the model actually is" mask from the ID raster: one cell per ~50 km,
+ * set wherever any texel in it belongs to a region (PLAN.md F2).
+ *
+ * The camera clamp needs to know how far the view has strayed from the model, and every
+ * cheaper shape for that is wrong somewhere. One box round India has corners in
+ * Afghanistan and in the ocean south-east of Sri Lanka; its convex hull fixes the
+ * corners and spans the 1,200 km of the Bay of Bengal between the mainland and the
+ * Andamans; the 36 units' own boxes fix that and still have offshore corners of their
+ * own, one level down. A mask has none of those problems and is about 4,700 bytes.
+ *
+ * @param {{ ids: { width: number, height: number, data: ArrayLike<number> } }} tier
+ * @param {{ w: number, h: number }} sizeKm
+ * @param {number} [onlyId]  keep just one unit's land, for the state view
+ */
+export function landMask(tier, sizeKm, onlyId = 0) {
+  const { width: w, height: h, data } = tier.ids;
+  const cols = Math.max(1, Math.round(sizeKm.w / LAND_CELL_KM));
+  const rows = Math.max(1, Math.round(sizeKm.h / LAND_CELL_KM));
+  const cells = new Uint8Array(cols * rows);
+  for (let y = 0; y < h; y++) {
+    const row = Math.min(rows - 1, Math.floor((y / h) * rows)) * cols;
+    for (let x = 0; x < w; x++) {
+      const id = data[y * w + x];
+      if (!id || (onlyId && id !== onlyId)) continue;
+      cells[row + Math.min(cols - 1, Math.floor((x / w) * cols))] = 1;
+    }
+  }
+  return { cols, rows, cellW: sizeKm.w / cols, cellH: sizeKm.h / rows, x0: -sizeKm.w / 2, z0: -sizeKm.h / 2, cells };
+}
+
+export const LAND_CELL_KM = 50;
+
 /** Units below this size are hard to hit on a phone and win ties within the bias radius. */
 export const SMALL_UNIT_KM2 = 12000;
 export const BIAS_RADIUS_PX = 24;
