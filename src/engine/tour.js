@@ -25,6 +25,7 @@ export function createTour(store, { stops, visit, home }) {
   let at = -1;                     // index of the stop on show, -1 before the first
   let timer = 0;
   let playing = false;
+  let baseYaw = DEFAULT_CAMERA.yaw;   // the angle the tour sways either side of
 
   const d2 = (a, b) => (a.item.x - b.item.x) ** 2 + (a.item.z - b.item.z) ** 2;
 
@@ -66,7 +67,10 @@ export function createTour(store, { stops, visit, home }) {
       return;
     }
     const stop_ = route[at];
-    const yaw = DEFAULT_CAMERA.yaw + (at % 2 ? SWAY_DEG : -SWAY_DEG);
+    // The sway is about the angle the view was at when the tour started, not about the
+    // default one: now that the model turns the whole way round, a tour begun from a
+    // deliberately turned view should keep it rather than snapping back to north (F7).
+    const yaw = baseYaw + (at % 2 ? SWAY_DEG : -SWAY_DEG);
     const words = String(stop_.item.blurb?.en || '').split(/\s+/).filter(Boolean).length;
     const dwell = clamp(DWELL_BASE_MS + words * DWELL_PER_WORD_MS, DWELL_MS[0], DWELL_MS[1]);
     const ms = visit(stop_, { ms: FLY_MS, yaw });
@@ -78,6 +82,7 @@ export function createTour(store, { stops, visit, home }) {
     if (playing) return;
     if (at < 0 || at >= route.length - 1) { route = order(stops()); at = -1; }   // afresh, or from the top again
     if (!route.length) { publish(); return; }
+    baseYaw = store.get('camera').yaw;
     playing = true;
     publish();
     next();

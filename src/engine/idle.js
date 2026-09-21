@@ -4,7 +4,7 @@
 // Any interaction stops it at once; it returns after a pause, and only while the
 // country view is at rest (nothing selected, no tour, no flight). Frames are capped so
 // a phone left on the table spends little on it.
-import { clampCamera } from './camera-math.js';
+import { clampCamera, groundAnchor, orbitAbout, paddedCentre } from './camera-math.js';
 import { reducedMotion } from './tween.js';
 
 export const IDLE = {
@@ -24,6 +24,7 @@ export function createIdle(store, { allowed }) {
   let raf = 0;
   let timer = 0;
   let base = null;       // the camera at rest that the sway moves around
+  let pivot = null;      // and the point it turns about: the middle of what can be seen
   let t0 = 0;
   let last = 0;
   let running = false;
@@ -33,6 +34,7 @@ export function createIdle(store, { allowed }) {
     raf = 0;
     running = false;
     base = null;
+    pivot = null;
   }
 
   /** Something happened: stop, and start the pause before the next sway. */
@@ -46,6 +48,12 @@ export function createIdle(store, { allowed }) {
   function start() {
     if (running || !allowed()) return;
     base = { ...store.get('camera') };
+    // Turn about the middle of what can be seen, not the middle of the canvas: with the
+    // sheet up or a panel out those are 200 px apart, and swaying about the canvas
+    // walked the country out from behind the sheet and back (PLAN.md F7).
+    const vp = store.get('viewport');
+    const [cx, cy] = paddedCentre(vp, store.get('padding'));
+    pivot = groundAnchor(base, cx, cy, vp);
     t0 = performance.now();
     last = 0;
     running = true;
@@ -63,8 +71,9 @@ export function createIdle(store, { allowed }) {
     const amp = e * e * (3 - 2 * e);                       // smooth start
     const phase = (2 * Math.PI * t) / IDLE.period;
     const s = Math.sin(phase);
-    // the pivot is the point under the screen centre, so only the angles move
-    store.set('camera', clampCamera({ ...base, yaw: base.yaw + amp * IDLE.yaw * s, pitch: base.pitch - amp * IDLE.pitch * s * s }), { source: 'idle' });
+    const swayed = orbitAbout(base, base.yaw + amp * IDLE.yaw * s, base.pitch - amp * IDLE.pitch * s * s,
+                              pivot, store.get('viewport'));
+    store.set('camera', clampCamera(swayed), { source: 'idle' });
   }
 
   // Anyone else moving the camera (gestures, flights, fits, the URL) ends the sway.
