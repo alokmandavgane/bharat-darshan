@@ -5,10 +5,12 @@ A `lines` layer names its geometry source in `layer.json` and its features in
 by name, because that is the only field a source and a content folder reliably share,
 and folding accents off both sides is what makes "Godävari" meet "Godavari".
 
-An item joins its geometry one of two ways. `source_names` matches the source's own
+An item joins its geometry one of three ways. `source_names` matches the source's own
 names, which is how rivers work. `waypoints` names the places a route is known by and
 the build walks the source's parts between them, for a source that carries geometry
-but no names -- which is every road and railway over India in Natural Earth.
+but no names -- which is every road and railway over India in Natural Earth. And
+`geometry` describes a line that no dataset should have to supply because it is defined
+rather than surveyed: a parallel or a meridian, given as the number that defines it.
 
 Everything leaves here in scene km on the project grid, clipped to the ID raster: the
 map draws India alone by default, so a river that carried on into Tibet would trail
@@ -121,16 +123,50 @@ def _length(run):
     return float(np.hypot(*np.diff(run, axis=0).T).sum())
 
 
+# The step a generated line is sampled at, in degrees. A parallel is a straight line in
+# EPSG:7755 only at the projection's standard parallels; everywhere else it curves, so it
+# has to be walked rather than drawn between its two ends. At 0.05 degrees that is about
+# 5.5 km a step, well under the simplify tolerance that follows, so the curve is the
+# projection's and not the sampling's.
+GENERATED_STEP_DEG = 0.05
+
+
+def generate(geometry):
+    """
+    A line defined rather than surveyed: `{"parallel": 23.4394}` or `{"meridian": 82.5}`,
+    walked across the project grid's geographic box. Returns lon/lat parts, or [] if the
+    line does not cross the box at all.
+    """
+    if not isinstance(geometry, dict):
+        return []
+    lat = geometry.get('parallel')
+    lon = geometry.get('meridian')
+    if isinstance(lat, (int, float)) and not isinstance(lat, bool):
+        if not grid.LAT_MIN <= lat <= grid.LAT_MAX:
+            return []
+        lons = np.arange(grid.LON_MIN, grid.LON_MAX + GENERATED_STEP_DEG, GENERATED_STEP_DEG)
+        return [np.column_stack([lons, np.full(len(lons), float(lat))])]
+    if isinstance(lon, (int, float)) and not isinstance(lon, bool):
+        if not grid.LON_MIN <= lon <= grid.LON_MAX:
+            return []
+        lats = np.arange(grid.LAT_MIN, grid.LAT_MAX + GENERATED_STEP_DEG, GENERATED_STEP_DEG)
+        return [np.column_stack([np.full(len(lats), float(lon)), lats])]
+    return []
+
+
 def build(item, index, ids, simplify_km, heights=None):
     """Geometry for one curated item, projected and clipped.
 
     `index` is whatever the layer's source gave: a name index for an item that lists
-    source_names, a network for one that lists the waypoints its route runs through.
+    source_names, a network for one that lists the waypoints its route runs through, and
+    nothing at all for one that describes its own geometry.
     With `heights`, every run is pointed downstream, for a layer that animates its flow.
     Returns (runs, km, note); the note says how the routing went, or nothing for a name join.
     """
     note = None
-    if item.get('waypoints'):
+    if item.get('geometry'):
+        parts = generate(item['geometry'])
+    elif item.get('waypoints'):
         joined, note = route(item['waypoints'], index)
         parts = joined or []
     else:

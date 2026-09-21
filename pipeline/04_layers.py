@@ -31,7 +31,8 @@ from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional')
-JOINS = ('name', 'route')   # how a lines item finds its geometry: by the source's names, or through waypoints
+GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
+JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
 FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int}
@@ -100,7 +101,13 @@ def validate_layer(layer, folder):
         p.append('categories need id and a bilingual title')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
-        if not src.get('files') or not src.get('format'):
+        if src.get('join') == GENERATED:
+            # Nothing is fetched: each item describes a line that is defined rather than
+            # surveyed, and the build walks it across the grid. A parallel has no
+            # publisher to credit and no file to download.
+            if src.get('files') or src.get('format'):
+                p.append('a generated layer fetches nothing: drop source.files and source.format')
+        elif not src.get('files') or not src.get('format'):
             p.append('a lines layer needs source.format and source.files')
         if src.get('join', 'name') not in JOINS:
             p.append(f"source.join must be one of {JOINS}")
@@ -250,7 +257,13 @@ def validate_line_item(it, cats, join, fields=()):
         p.append(f"{tag}: unknown category {it.get('category')!r}")
     if it.get('rank') not in (1, 2, 3):
         p.append(f'{tag}: rank must be 1, 2 or 3')
-    if join == 'route':
+    if join == GENERATED:
+        g = it.get('geometry')
+        if not isinstance(g, dict) or set(g) - {'parallel', 'meridian'} or len(g) != 1:
+            p.append(f'{tag}: geometry must be exactly one of parallel or meridian')
+        elif not isinstance(list(g.values())[0], (int, float)) or isinstance(list(g.values())[0], bool):
+            p.append(f'{tag}: geometry must give a number of degrees')
+    elif join == 'route':
         w = it.get('waypoints') or []
         if len(w) < 2:
             p.append(f'{tag}: waypoints must list at least two places for a routed layer')
@@ -275,10 +288,14 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
     src = layer['source']
     join = src.get('join', 'name')
     raw = os.path.join(fetch.RAW, 'layers', layer['id'])
-    # A named source is indexed by name; a nameless one becomes a graph to walk.
-    index = (lines.network(lines.load_parts(src, raw), ids,
-                           [w for it in items for w in (it.get('waypoints') or [])])
-             if join == 'route' else lines.load_source(src, raw))
+    # A named source is indexed by name; a nameless one becomes a graph to walk; a
+    # generated one has no source to load at all.
+    index = {}
+    if join == 'route':
+        index = lines.network(lines.load_parts(src, raw), ids,
+                              [w for it in items for w in (it.get('waypoints') or [])])
+    elif join != GENERATED:
+        index = lines.load_source(src, raw)
     if join == 'route':
         print(f"    network: {len(index['parts'])} parts, {len(index['nodes'])} junctions inside India")
     # A layer that animates its flow needs its runs pointed downstream; nothing else does.
