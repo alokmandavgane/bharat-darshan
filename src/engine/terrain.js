@@ -97,8 +97,13 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
     uBandTops: { value: Float32Array.from(PALETTE.tops) },
   };
+  // Premultiplied and blended, so the plate composites over whatever is behind it rather
+  // than overwriting it. On its own that changes nothing -- the canvas is premultiplied
+  // over a transparent clear -- but it is what lets the backdrop show through the rim the
+  // plate fades out over, instead of the page showing through both.
   const material = new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms, side: DoubleSide,
+    transparent: true, premultipliedAlpha: true, depthWrite: true,
   });
 
   /**

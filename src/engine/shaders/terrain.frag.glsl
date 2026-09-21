@@ -196,17 +196,18 @@ void main() {
 
   // dissolve into the page (premultiplied alpha) instead of ending at a rim
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
-  // The backdrop is three times the plate across, so it needs a proportionate run-out or
-  // it ends as a rectangle on the page rather than as land running out of the picture.
-  float fadeKm = uInnerKm.x > 0.0 ? 0.16 * uSizeKm.y : 420.0;
-  float fade = smoothstep(0.0, fadeKm, edge);
+  float fade = smoothstep(0.0, 420.0, edge);
   if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
-  // The backdrop comes in exactly as the plate sinks into the page. The plate's rim fade
-  // runs over its last 420 km, which is the outer quarter of its half-extent, so the two
-  // alphas are complements of one smoothstep and never leave the page showing between.
+  // The backdrop comes in exactly as the plate sinks into the page: the plate's rim fade
+  // runs over its last 420 km, the outer quarter of its half-extent, so the two alphas
+  // are complements of one smoothstep and never leave the page showing between them.
+  // Going out it is a round pool, not a rectangle. The projection is the plate's, which
+  // is what lets the two meet at all, and a cone stretches badly five thousand km from
+  // its parallels -- so the corners, where it is worst, are dissolved before they show.
   if (uInnerKm.x > 0.0) {
     vec2 q = abs(vPos.xz) / uInnerKm;
-    fade *= smoothstep(0.75, 1.0, max(q.x, q.y));
+    fade = smoothstep(0.75, 1.0, max(q.x, q.y));
+    fade *= 1.0 - smoothstep(0.52, 0.86, length(vPos.xz / (uSizeKm * 0.5)));
   }
   fade *= mine;                                           // the block's rim, softened
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
