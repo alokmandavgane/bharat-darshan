@@ -981,24 +981,24 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. Phase 3 next, in the order they unblock each other: search across layer items (the
+1. Phase 3 next, in the order they unblock each other: search across layer items (the
    list box already searches states), then the month scrubber, then districts, which
    need a district boundary source that meets the boundary rule in CLAUDE.md. Languages,
    food and festivals are content, drafted the same way the places were.
-1. Roads and rail ship as drafts: read the eight highway and five railway cards and
+2. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
    a gap. Konkan, Kalka-Shimla and the Nilgiri Mountain Railway wait for a source with
    names in it.
-2. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
+3. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
    and band edges in `src/engine/shaders/terrain.frag.glsl`.
-3. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
+4. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
    question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
    the state view, the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
-4. Settle open questions 6-7.
+5. Settle open questions 6-7.
