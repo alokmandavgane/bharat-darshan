@@ -1,0 +1,34 @@
+{
+  "id": "ranges",
+  "type": "points",
+  "marker": "label",
+  "group": "physical",
+  "title": {
+    "en": "Mountain ranges",
+    "hi": "पर्वत श्रेणियाँ"
+  },
+  "icon": "mountain",
+  "default_on": true,
+  "categories": [
+    {
+      "id": "fold",
+      "title": {
+        "en": "Fold mountains",
+        "hi": "वलित पर्वत"
+      },
+      "icon": "mountain",
+      "color": "#7a6a86"
+    },
+    {
+      "id": "block",
+      "title": {
+        "en": "Block and plateau",
+        "hi": "खंड और पठार"
+      },
+      "icon": "mountain",
+      "color": "#8a7550"
+    }
+  ],
+  "attribution": "Range extents and elevations checked against Wikipedia and the Geological Survey of India.",
+  "_marker": "marker: label draws the name alone, with no token: a range is a stretch of country, not a spot on it."
+}

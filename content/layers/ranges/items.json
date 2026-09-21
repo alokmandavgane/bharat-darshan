@@ -1,0 +1,435 @@
+[
+  {
+    "id": "himalaya",
+    "status": "draft",
+    "name": {
+      "en": "Himalaya",
+      "hi": "हिमालय"
+    },
+    "anchor": {
+      "lat": 30.35,
+      "lon": 79.55
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "fold",
+    "priority": 1,
+    "blurb": {
+      "en": "The wall raised where India drove into Asia, running 2,400 km across the north and holding every peak on earth above 7,200 m. India's stretch spans Ladakh to Arunachal.",
+      "hi": "भारत के एशिया से टकराने पर उठी दीवार, उत्तर में 2,400 किमी तक फैली और पृथ्वी की 7,200 मीटर से ऊँची हर चोटी इसी में है। भारत में लद्दाख से अरुणाचल तक फैली है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Himalayas"
+    ]
+  },
+  {
+    "id": "western-ghats",
+    "status": "draft",
+    "name": {
+      "en": "Western Ghats",
+      "hi": "पश्चिमी घाट"
+    },
+    "anchor": {
+      "lat": 13.45,
+      "lon": 75.15
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "block",
+    "priority": 1,
+    "blurb": {
+      "en": "A 1,600 km escarpment down the west coast, older than the Himalaya and one of the world's eight hottest biodiversity hotspots; it wrings the monsoon out before it reaches the Deccan.",
+      "hi": "पश्चिमी तट के साथ 1,600 किमी लंबी कगार, हिमालय से पुरानी और विश्व के आठ सर्वाधिक जैवविविध स्थलों में से एक; मानसून को दक्कन पहुँचने से पहले यही निचोड़ लेती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Western_Ghats",
+      "https://whc.unesco.org/en/list/1342"
+    ]
+  },
+  {
+    "id": "eastern-ghats",
+    "status": "draft",
+    "name": {
+      "en": "Eastern Ghats",
+      "hi": "पूर्वी घाट"
+    },
+    "anchor": {
+      "lat": 18.3,
+      "lon": 82.9
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "block",
+    "priority": 2,
+    "blurb": {
+      "en": "A broken chain along the Bay of Bengal, cut through by the Mahanadi, Godavari and Krishna; lower and far older than the Western Ghats it meets in the Nilgiris.",
+      "hi": "बंगाल की खाड़ी के साथ टूटी-फूटी श्रृंखला, जिसे महानदी, गोदावरी और कृष्णा काटती हैं; पश्चिमी घाट से नीची और कहीं अधिक प्राचीन, दोनों नीलगिरि में मिलते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Eastern_Ghats"
+    ]
+  },
+  {
+    "id": "aravalli",
+    "status": "draft",
+    "name": {
+      "en": "Aravalli",
+      "hi": "अरावली"
+    },
+    "anchor": {
+      "lat": 25.2,
+      "lon": 73.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "block",
+    "priority": 1,
+    "blurb": {
+      "en": "Among the oldest fold mountains on earth, worn down over some 1,800 million years; the range still splits Rajasthan into desert on one side and plains on the other.",
+      "hi": "पृथ्वी की सबसे प्राचीन वलित पर्वतमालाओं में से एक, लगभग 180 करोड़ वर्षों में घिसकर छोटी हो गई; आज भी राजस्थान को एक ओर मरुस्थल और दूसरी ओर मैदान में बाँटती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Aravalli_Range"
+    ]
+  },
+  {
+    "id": "vindhya",
+    "status": "draft",
+    "name": {
+      "en": "Vindhya",
+      "hi": "विंध्य"
+    },
+    "anchor": {
+      "lat": 23.3,
+      "lon": 78.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "block",
+    "priority": 2,
+    "blurb": {
+      "en": "The scarp that classical texts made the boundary between north and south, running east from Gujarat above the Narmada trough.",
+      "hi": "वह कगार जिसे शास्त्रों ने उत्तर और दक्षिण की सीमा माना, गुजरात से पूर्व की ओर नर्मदा की द्रोणी के ऊपर चलती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vindhya_Range"
+    ]
+  },
+  {
+    "id": "satpura",
+    "status": "draft",
+    "name": {
+      "en": "Satpura",
+      "hi": "सतपुड़ा"
+    },
+    "anchor": {
+      "lat": 22.05,
+      "lon": 78.2
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "block",
+    "priority": 2,
+    "blurb": {
+      "en": "A block range south of the Narmada, its teak and sal forests still among the least broken in central India.",
+      "hi": "नर्मदा के दक्षिण की खंड पर्वतमाला, जिसके सागौन और साल के वन मध्य भारत में आज भी सबसे कम कटे हुए हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Satpura_Range"
+    ]
+  },
+  {
+    "id": "karakoram",
+    "status": "draft",
+    "name": {
+      "en": "Karakoram",
+      "hi": "काराकोरम"
+    },
+    "anchor": {
+      "lat": 35.2,
+      "lon": 77.1
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "fold",
+    "priority": 2,
+    "blurb": {
+      "en": "Beyond the Indus, with the greatest concentration of peaks above 8,000 m outside Nepal and the longest glaciers outside the poles, the Siachen among them.",
+      "hi": "सिंधु के पार, नेपाल के बाहर 8,000 मीटर से ऊँची चोटियों का सबसे बड़ा जमघट और ध्रुवों के बाहर सबसे लंबे हिमनद, जिनमें सियाचिन है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Karakoram"
+    ]
+  },
+  {
+    "id": "zanskar",
+    "status": "draft",
+    "name": {
+      "en": "Zanskar",
+      "hi": "ज़ांस्कर"
+    },
+    "anchor": {
+      "lat": 33.6,
+      "lon": 77.0
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "fold",
+    "priority": 3,
+    "blurb": {
+      "en": "The range between the Indus and the main Himalaya, its river gorges frozen solid in winter into the Chadar walking route.",
+      "hi": "सिंधु और मुख्य हिमालय के बीच की श्रेणी, जिसकी नदी-घाटियाँ जाड़े में जमकर 'चादर' पैदल मार्ग बन जाती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Zanskar_Range"
+    ]
+  },
+  {
+    "id": "pir-panjal",
+    "status": "draft",
+    "name": {
+      "en": "Pir Panjal",
+      "hi": "पीर पंजाल"
+    },
+    "anchor": {
+      "lat": 33.45,
+      "lon": 74.7
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "fold",
+    "priority": 3,
+    "blurb": {
+      "en": "The outermost great range of the western Himalaya, separating the Kashmir valley from the Jammu plains.",
+      "hi": "पश्चिमी हिमालय की सबसे बाहरी बड़ी श्रेणी, जो कश्मीर घाटी को जम्मू के मैदानों से अलग करती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pir_Panjal_Range"
+    ]
+  },
+  {
+    "id": "dhauladhar",
+    "status": "draft",
+    "name": {
+      "en": "Dhauladhar",
+      "hi": "धौलाधार"
+    },
+    "anchor": {
+      "lat": 32.25,
+      "lon": 76.4
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "fold",
+    "priority": 3,
+    "blurb": {
+      "en": "The 'white range' rising abruptly behind Dharamshala, climbing more than 3,500 m from the Kangra valley in a single wall.",
+      "hi": "धर्मशाला के पीछे अचानक उठती 'श्वेत श्रेणी', जो काँगड़ा घाटी से एक ही दीवार में 3,500 मीटर से अधिक ऊपर चढ़ जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dhauladhar"
+    ]
+  },
+  {
+    "id": "shivalik",
+    "status": "draft",
+    "name": {
+      "en": "Shivalik",
+      "hi": "शिवालिक"
+    },
+    "anchor": {
+      "lat": 30.4,
+      "lon": 77.85
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "fold",
+    "priority": 3,
+    "blurb": {
+      "en": "The youngest and lowest Himalayan rank, built of the debris the mountains shed; its beds hold some of the richest vertebrate fossils in Asia.",
+      "hi": "हिमालय की सबसे नई और नीची श्रेणी, पहाड़ों से बहकर आए मलबे से बनी; इसकी परतों में एशिया के सबसे समृद्ध कशेरुकी जीवाश्म मिलते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sivalik_Hills"
+    ]
+  },
+  {
+    "id": "nilgiri",
+    "status": "draft",
+    "name": {
+      "en": "Nilgiri",
+      "hi": "नीलगिरि"
+    },
+    "anchor": {
+      "lat": 11.4,
+      "lon": 76.65
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "block",
+    "priority": 2,
+    "blurb": {
+      "en": "The blue hills where the Western and Eastern Ghats meet, rising above 2,600 m at Doddabetta; shola grassland and tea above the plains.",
+      "hi": "नीले पहाड़ जहाँ पश्चिमी और पूर्वी घाट मिलते हैं, दोड्डाबेट्टा पर 2,600 मीटर से ऊपर; मैदानों के ऊपर शोला घास के मैदान और चाय।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nilgiri_Mountains"
+    ]
+  },
+  {
+    "id": "anaimalai",
+    "status": "draft",
+    "name": {
+      "en": "Anaimalai",
+      "hi": "अन्नामलाई"
+    },
+    "anchor": {
+      "lat": 10.3,
+      "lon": 77.0
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "block",
+    "priority": 3,
+    "blurb": {
+      "en": "South of the Palghat gap, holding Anamudi at 2,695 m, the highest point in India south of the Himalaya.",
+      "hi": "पालघाट दर्रे के दक्षिण में, जहाँ 2,695 मीटर ऊँचा अनामुडी है, हिमालय के दक्षिण में भारत का सर्वोच्च शिखर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anaimalai_Hills"
+    ]
+  },
+  {
+    "id": "cardamom-hills",
+    "status": "draft",
+    "name": {
+      "en": "Cardamom Hills",
+      "hi": "इलायची पहाड़ियाँ"
+    },
+    "anchor": {
+      "lat": 9.7,
+      "lon": 77.15
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "block",
+    "priority": 3,
+    "blurb": {
+      "en": "The southern end of the Western Ghats, named for the spice terraced across its slopes since the spice trade began.",
+      "hi": "पश्चिमी घाट का दक्षिणी छोर, जिसका नाम उस मसाले से पड़ा जो मसाला-व्यापार के आरंभ से इसकी ढलानों पर उगाया जाता रहा है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Cardamom_Hills"
+    ]
+  },
+  {
+    "id": "maikal",
+    "status": "draft",
+    "name": {
+      "en": "Maikal",
+      "hi": "मैकल"
+    },
+    "anchor": {
+      "lat": 22.6,
+      "lon": 81.5
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "block",
+    "priority": 3,
+    "blurb": {
+      "en": "The hinge where the Satpura meets the Vindhya, and the watershed at Amarkantak from which the Narmada runs west and the Son east.",
+      "hi": "वह जोड़ जहाँ सतपुड़ा विंध्य से मिलती है, और अमरकंटक का जलविभाजक जहाँ से नर्मदा पश्चिम और सोन पूर्व को बहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Maikal_Range"
+    ]
+  },
+  {
+    "id": "khasi-hills",
+    "status": "draft",
+    "name": {
+      "en": "Khasi Hills",
+      "hi": "खासी पहाड़ियाँ"
+    },
+    "anchor": {
+      "lat": 25.45,
+      "lon": 91.6
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "category": "block",
+    "priority": 3,
+    "blurb": {
+      "en": "The Meghalaya plateau's southern edge, where Mawsynram and Cherrapunji take the full force of the Bay of Bengal monsoon.",
+      "hi": "मेघालय पठार का दक्षिणी छोर, जहाँ मॉसिनराम और चेरापूंजी बंगाल की खाड़ी के मानसून का पूरा वेग झेलते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Khasi_Hills"
+    ]
+  },
+  {
+    "id": "purvanchal",
+    "status": "draft",
+    "name": {
+      "en": "Purvanchal",
+      "hi": "पूर्वांचल"
+    },
+    "anchor": {
+      "lat": 25.95,
+      "lon": 94.35
+    },
+    "regions": [
+      "IN-NL"
+    ],
+    "category": "fold",
+    "priority": 3,
+    "blurb": {
+      "en": "The Himalaya's eastern hook, curving south through Nagaland and Manipur as the Patkai, Naga and Manipur hills.",
+      "hi": "हिमालय का पूर्वी मोड़, जो नागालैंड और मणिपुर से होकर पटकाई, नागा और मणिपुर पहाड़ियों के रूप में दक्षिण की ओर मुड़ता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Purvanchal_Range"
+    ]
+  },
+  {
+    "id": "nallamala",
+    "status": "draft",
+    "name": {
+      "en": "Nallamala",
+      "hi": "नल्लामला"
+    },
+    "anchor": {
+      "lat": 16.05,
+      "lon": 78.9
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "block",
+    "priority": 3,
+    "blurb": {
+      "en": "A long forested spur of the Eastern Ghats above the Krishna gorge, holding the Srisailam temple and one of India's largest tiger reserves.",
+      "hi": "कृष्णा घाटी के ऊपर पूर्वी घाट की लंबी वनाच्छादित शाखा, जिसमें श्रीशैलम मंदिर और भारत के सबसे बड़े बाघ अभयारण्यों में से एक है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nallamala_Hills"
+    ]
+  }
+]

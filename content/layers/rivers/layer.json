@@ -1,0 +1,42 @@
+{
+  "id": "rivers",
+  "type": "lines",
+  "group": "physical",
+  "title": {
+    "en": "Rivers",
+    "hi": "नदियाँ"
+  },
+  "icon": "wave",
+  "default_on": true,
+  "source": {
+    "format": "shapefile-polyline",
+    "match": "name",
+    "files": {
+      "ne_rivers.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.shp",
+      "ne_rivers.dbf": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.dbf",
+      "ne_rivers.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.prj"
+    },
+    "encoding": "utf-8",
+    "simplify_km": 1.2
+  },
+  "categories": [
+    {
+      "id": "snow-fed",
+      "title": {
+        "en": "Snow-fed",
+        "hi": "हिमपोषित"
+      },
+      "color": "#4d86a8"
+    },
+    {
+      "id": "rain-fed",
+      "title": {
+        "en": "Rain-fed",
+        "hi": "वर्षापोषित"
+      },
+      "color": "#6a9a86"
+    }
+  ],
+  "attribution": "River centrelines: Natural Earth 10m physical vectors (public domain). Names, courses and facts checked against Wikipedia and India-WRIS.",
+  "_rank": "1 is a great river drawn widest, 3 a tributary drawn finest; the engine reads rank, never a river's name."
+}

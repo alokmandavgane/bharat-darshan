@@ -1,0 +1,591 @@
+[
+  {
+    "id": "ganga",
+    "status": "draft",
+    "name": {
+      "en": "Ganga",
+      "hi": "गंगा"
+    },
+    "category": "snow-fed",
+    "rank": 1,
+    "source_names": [
+      "Ganges"
+    ],
+    "blurb": {
+      "en": "Rises as the Bhagirathi at Gaumukh in the Garhwal Himalaya and runs 2,525 km to the Bay of Bengal. India's national river, and the one the ghats of Haridwar, Prayagraj and Varanasi were built for.",
+      "hi": "गढ़वाल हिमालय में गौमुख से भागीरथी के रूप में निकलकर 2,525 किमी बहती हुई बंगाल की खाड़ी में गिरती है। भारत की राष्ट्रीय नदी, जिसके किनारे हरिद्वार, प्रयागराज और वाराणसी के घाट बने।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ganges_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "yamuna",
+    "status": "draft",
+    "name": {
+      "en": "Yamuna",
+      "hi": "यमुना"
+    },
+    "category": "snow-fed",
+    "rank": 2,
+    "source_names": [
+      "Yamuna"
+    ],
+    "blurb": {
+      "en": "The Ganga's longest tributary: 1,376 km from the Yamunotri glacier past Delhi, Mathura and Agra to the confluence at Prayagraj.",
+      "hi": "गंगा की सबसे लंबी सहायक नदी: यमुनोत्री हिमनद से 1,376 किमी बहकर दिल्ली, मथुरा और आगरा होते हुए प्रयागराज के संगम तक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Yamuna_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "brahmaputra",
+    "status": "draft",
+    "name": {
+      "en": "Brahmaputra",
+      "hi": "ब्रह्मपुत्र"
+    },
+    "category": "snow-fed",
+    "rank": 1,
+    "source_names": [
+      "Brahmaputra",
+      "Dihang"
+    ],
+    "blurb": {
+      "en": "The Yarlung Tsangpo of Tibet turns south through Arunachal as the Siang, then braids the width of the Assam valley. One of the few rivers in India carried as a masculine name.",
+      "hi": "तिब्बत की यारलुंग सांग्पो अरुणाचल में सियांग बनकर दक्षिण मुड़ती है और असम घाटी में चौड़ी धाराओं में बहती है। भारत की गिनी-चुनी पुल्लिंग नामधारी नदियों में से एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brahmaputra_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "indus",
+    "status": "draft",
+    "name": {
+      "en": "Indus",
+      "hi": "सिन्धु"
+    },
+    "category": "snow-fed",
+    "rank": 1,
+    "source_names": [
+      "Indus"
+    ],
+    "blurb": {
+      "en": "The Sindhu rises near Lake Manasarovar and crosses Ladakh before entering Pakistan. It gave India its name, and the Harappan cities grew on its plains.",
+      "hi": "मानसरोवर के पास से निकलकर लद्दाख पार कर पाकिस्तान में प्रवेश करती है। इसी से भारत को 'इंडिया' नाम मिला और इसके मैदानों में हड़प्पा सभ्यता के नगर बसे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Indus_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "sutlej",
+    "status": "draft",
+    "name": {
+      "en": "Sutlej",
+      "hi": "सतलुज"
+    },
+    "category": "snow-fed",
+    "rank": 2,
+    "source_names": [
+      "Sutlej"
+    ],
+    "blurb": {
+      "en": "The longest of the five rivers of Punjab, from Rakshastal in Tibet through the Bhakra gorge; the Bhakra Nangal dam holds it back at the Himalayan foot.",
+      "hi": "पंजाब की पाँच नदियों में सबसे लंबी, तिब्बत के राक्षसताल से भाखड़ा की घाटी तक; हिमालय के छोर पर भाखड़ा नांगल बाँध इसे रोकता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sutlej_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "chenab",
+    "status": "draft",
+    "name": {
+      "en": "Chenab",
+      "hi": "चनाब"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Chenab"
+    ],
+    "blurb": {
+      "en": "Formed where the Chandra and Bhaga meet at Tandi in Lahaul, it cuts deep gorges through Jammu on its way to the Punjab plains.",
+      "hi": "लाहौल के तांदी में चंद्रा और भागा के मिलने से बनती है, और जम्मू की गहरी घाटियाँ काटती हुई पंजाब के मैदानों तक पहुँचती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chenab_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "jhelum",
+    "status": "draft",
+    "name": {
+      "en": "Jhelum",
+      "hi": "झेलम"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Jhelum"
+    ],
+    "blurb": {
+      "en": "Rises at Verinag and flows the length of the Kashmir valley through Srinagar and Wular lake, the largest freshwater lake in the subcontinent's north.",
+      "hi": "वेरीनाग से निकलकर कश्मीर घाटी की पूरी लंबाई में श्रीनगर और वुलर झील से होकर बहती है, जो उत्तर भारत की सबसे बड़ी मीठे पानी की झील है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jhelum_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "ravi",
+    "status": "draft",
+    "name": {
+      "en": "Ravi",
+      "hi": "रावी"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Ravi"
+    ],
+    "blurb": {
+      "en": "The smallest of the Punjab five, rising in the Bara Bhangal of Himachal and passing Chamba and Lahore's old frontier.",
+      "hi": "पंजाब की पाँच नदियों में सबसे छोटी, हिमाचल के बड़ा भंगाल से निकलकर चंबा और लाहौर की पुरानी सरहद से होकर बहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ravi_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "beas",
+    "status": "draft",
+    "name": {
+      "en": "Beas",
+      "hi": "ब्यास"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Beas"
+    ],
+    "blurb": {
+      "en": "From Beas Kund below the Rohtang pass through the Kullu valley; the eastern limit of Alexander's march, and now tied to the Sutlej at Pong.",
+      "hi": "रोहतांग दर्रे के नीचे ब्यास कुंड से निकलकर कुल्लू घाटी से बहती है; सिकंदर की चढ़ाई की पूर्वी सीमा, और अब पौंग पर सतलुज से जुड़ी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Beas_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "ghaghara",
+    "status": "draft",
+    "name": {
+      "en": "Ghaghara",
+      "hi": "घाघरा"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Ghäghara"
+    ],
+    "blurb": {
+      "en": "The Karnali of Nepal becomes the Ghaghara in the plains and is the Ganga's largest tributary by volume, joining it below Chhapra.",
+      "hi": "नेपाल की कर्णाली मैदानों में घाघरा कहलाती है; जलराशि के हिसाब से गंगा की सबसे बड़ी सहायक नदी, जो छपरा के नीचे उसमें मिलती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ghaghara_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "gandak",
+    "status": "draft",
+    "name": {
+      "en": "Gandak",
+      "hi": "गंडक"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Gandak"
+    ],
+    "blurb": {
+      "en": "The Narayani of Nepal, joining the Ganga at Patna. Its bed yields the shaligram stones kept in household shrines across India.",
+      "hi": "नेपाल की नारायणी, जो पटना में गंगा से मिलती है। इसके तल से मिलने वाले शालिग्राम पूरे भारत के घरेलू मंदिरों में रखे जाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gandak_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "teesta",
+    "status": "draft",
+    "name": {
+      "en": "Teesta",
+      "hi": "तीस्ता"
+    },
+    "category": "snow-fed",
+    "rank": 3,
+    "source_names": [
+      "Tista"
+    ],
+    "blurb": {
+      "en": "Sikkim's main river, gathering from the Zemu glacier and running through steep gorges to the Brahmaputra in Bangladesh.",
+      "hi": "सिक्किम की मुख्य नदी, ज़ेमू हिमनद से जल लेकर तीखी घाटियों से बहती हुई बांग्लादेश में ब्रह्मपुत्र से मिलती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Teesta_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "narmada",
+    "status": "draft",
+    "name": {
+      "en": "Narmada",
+      "hi": "नर्मदा"
+    },
+    "category": "rain-fed",
+    "rank": 2,
+    "source_names": [
+      "Narmada"
+    ],
+    "blurb": {
+      "en": "Rises at Amarkantak and runs 1,312 km west between the Vindhya and Satpura ranges to the Arabian Sea; one of the few great Indian rivers flowing westward.",
+      "hi": "अमरकंटक से निकलकर विंध्य और सतपुड़ा के बीच 1,312 किमी पश्चिम बहती हुई अरब सागर में गिरती है; पश्चिम की ओर बहने वाली गिनी-चुनी बड़ी नदियों में से एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Narmada_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "tapti",
+    "status": "draft",
+    "name": {
+      "en": "Tapti",
+      "hi": "ताप्ती"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Tapi"
+    ],
+    "blurb": {
+      "en": "The other westward river, from Multai in Betul through the Satpura trough to the Gulf of Khambhat past Surat.",
+      "hi": "पश्चिम की ओर बहने वाली दूसरी नदी, बैतूल के मुलताई से सतपुड़ा की द्रोणी होते हुए सूरत के पास खंभात की खाड़ी तक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tapti_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "mahanadi",
+    "status": "draft",
+    "name": {
+      "en": "Mahanadi",
+      "hi": "महानदी"
+    },
+    "category": "rain-fed",
+    "rank": 2,
+    "source_names": [
+      "Mahäna Nadï"
+    ],
+    "blurb": {
+      "en": "Gathers in the Chhattisgarh plains and breaks through the Eastern Ghats to a wide delta in Odisha; the Hirakud dam across it is among the world's longest earthen dams.",
+      "hi": "छत्तीसगढ़ के मैदानों में जल जुटाकर पूर्वी घाट तोड़ती हुई ओडिशा में चौड़ा डेल्टा बनाती है; इस पर बना हीराकुंड विश्व के सबसे लंबे मिट्टी के बाँधों में है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mahanadi_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "godavari",
+    "status": "draft",
+    "name": {
+      "en": "Godavari",
+      "hi": "गोदावरी"
+    },
+    "category": "rain-fed",
+    "rank": 1,
+    "source_names": [
+      "Godävari"
+    ],
+    "blurb": {
+      "en": "The Dakshina Ganga, 1,465 km from Trimbakeshwar near Nashik across the Deccan to a delta in Andhra Pradesh; the longest river of peninsular India.",
+      "hi": "दक्षिण गंगा, नासिक के पास त्र्यंबकेश्वर से 1,465 किमी दक्कन पार कर आंध्र प्रदेश में डेल्टा बनाती है; प्रायद्वीपीय भारत की सबसे लंबी नदी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Godavari_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "krishna",
+    "status": "draft",
+    "name": {
+      "en": "Krishna",
+      "hi": "कृष्णा"
+    },
+    "category": "rain-fed",
+    "rank": 2,
+    "source_names": [
+      "Krishna"
+    ],
+    "blurb": {
+      "en": "From Mahabaleshwar in the Western Ghats across the Deccan to the Bay of Bengal, past the Nagarjuna Sagar and Srisailam reservoirs.",
+      "hi": "पश्चिमी घाट के महाबलेश्वर से दक्कन पार कर बंगाल की खाड़ी तक, नागार्जुन सागर और श्रीशैलम जलाशयों से होकर बहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Krishna_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "bhima",
+    "status": "draft",
+    "name": {
+      "en": "Bhima",
+      "hi": "भीमा"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Bhima"
+    ],
+    "blurb": {
+      "en": "The Krishna's largest tributary, rising at Bhimashankar and running past Pandharpur, the seat of the Varkari pilgrimage.",
+      "hi": "कृष्णा की सबसे बड़ी सहायक नदी, भीमाशंकर से निकलकर वारकरी यात्रा के केंद्र पंढरपुर से होकर बहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhima_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "tungabhadra",
+    "status": "draft",
+    "name": {
+      "en": "Tungabhadra",
+      "hi": "तुंगभद्रा"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Tungabhadra"
+    ],
+    "blurb": {
+      "en": "Formed where the Tunga and Bhadra meet; Vijayanagara's capital at Hampi was built along its boulder-strewn banks.",
+      "hi": "तुंगा और भद्रा के संगम से बनी; विजयनगर की राजधानी हम्पी इसके पथरीले किनारों पर बसाई गई थी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tungabhadra_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "kaveri",
+    "status": "draft",
+    "name": {
+      "en": "Kaveri",
+      "hi": "कावेरी"
+    },
+    "category": "rain-fed",
+    "rank": 2,
+    "source_names": [
+      "Cauvery"
+    ],
+    "blurb": {
+      "en": "Rises at Talakaveri in Kodagu and crosses Karnataka and Tamil Nadu to a delta at Poompuhar; the Grand Anicut has diverted it since the Chola period.",
+      "hi": "कोडगु के तलकावेरी से निकलकर कर्नाटक और तमिलनाडु पार कर पूम्पुहार में डेल्टा बनाती है; चोल काल से कल्लणै बाँध इसका जल मोड़ता आया है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kaveri_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "penna",
+    "status": "draft",
+    "name": {
+      "en": "Penna",
+      "hi": "पेन्ना"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Penner"
+    ],
+    "blurb": {
+      "en": "Rises in the Nandi hills and crosses Rayalaseema to the Bay of Bengal near Nellore, through some of the driest country in the peninsula.",
+      "hi": "नंदी पहाड़ियों से निकलकर रायलसीमा पार कर नेल्लोर के पास बंगाल की खाड़ी में गिरती है, प्रायद्वीप के सबसे शुष्क इलाकों से होकर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Penna_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "chambal",
+    "status": "draft",
+    "name": {
+      "en": "Chambal",
+      "hi": "चम्बल"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Chambal"
+    ],
+    "blurb": {
+      "en": "Rises in the Vindhyas at Janapav and cuts the ravine country of the Malwa border before joining the Yamuna; one of India's cleanest rivers.",
+      "hi": "विंध्य की जानापाव पहाड़ी से निकलकर मालवा की सीमा के बीहड़ काटती हुई यमुना में मिलती है; भारत की सबसे स्वच्छ नदियों में से एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chambal_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "betwa",
+    "status": "draft",
+    "name": {
+      "en": "Betwa",
+      "hi": "बेतवा"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Betwa"
+    ],
+    "blurb": {
+      "en": "From the Vindhyan plateau past Orchha and Jhansi to the Yamuna at Hamirpur; the Vetravati of Sanskrit texts.",
+      "hi": "विंध्य पठार से ओरछा और झाँसी होते हुए हमीरपुर में यमुना से मिलती है; संस्कृत ग्रंथों की वेत्रवती।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Betwa_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "son",
+    "status": "draft",
+    "name": {
+      "en": "Son",
+      "hi": "सोन"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Son"
+    ],
+    "blurb": {
+      "en": "Also rises at Amarkantak, but runs north-east to the Ganga above Patna, the largest of its southern tributaries.",
+      "hi": "यह भी अमरकंटक से निकलती है, पर उत्तर-पूर्व बहकर पटना के ऊपर गंगा में मिलती है; गंगा की दक्षिणी सहायक नदियों में सबसे बड़ी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Son_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "mahi",
+    "status": "draft",
+    "name": {
+      "en": "Mahi",
+      "hi": "माही"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Mahi"
+    ],
+    "blurb": {
+      "en": "One of three rivers crossing the Tropic of Cancer twice, from the Vindhyas through Gujarat to the Gulf of Khambhat.",
+      "hi": "कर्क रेखा को दो बार पार करने वाली तीन नदियों में से एक, विंध्य से गुजरात होते हुए खंभात की खाड़ी तक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mahi_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "wainganga",
+    "status": "draft",
+    "name": {
+      "en": "Wainganga",
+      "hi": "वैनगंगा"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Wainganga"
+    ],
+    "blurb": {
+      "en": "Drains the Satpura forests of eastern Maharashtra and joins the Wardha to form the Pranhita, the Godavari's largest tributary.",
+      "hi": "पूर्वी महाराष्ट्र के सतपुड़ा वनों का जल ढोकर वर्धा से मिलकर प्राणहिता बनाती है, जो गोदावरी की सबसे बड़ी सहायक नदी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Wainganga_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "indravati",
+    "status": "draft",
+    "name": {
+      "en": "Indravati",
+      "hi": "इंद्रावती"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Indravati"
+    ],
+    "blurb": {
+      "en": "Crosses the Bastar plateau to the Godavari, dropping over the Chitrakote falls, the widest waterfall in India.",
+      "hi": "बस्तर पठार पार कर गोदावरी में मिलती है, रास्ते में चित्रकोट जलप्रपात बनाती है जो भारत का सबसे चौड़ा जलप्रपात है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Indravati_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "brahmani",
+    "status": "draft",
+    "name": {
+      "en": "Brahmani",
+      "hi": "ब्राह्मणी"
+    },
+    "category": "rain-fed",
+    "rank": 3,
+    "source_names": [
+      "Brahmani"
+    ],
+    "blurb": {
+      "en": "Formed where the Sankh and South Koel meet near Rourkela, reaching the Bay of Bengal beside the Mahanadi delta.",
+      "hi": "राउरकेला के पास शंख और दक्षिण कोयल के संगम से बनती है और महानदी डेल्टा के साथ बंगाल की खाड़ी तक पहुँचती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brahmani_River",
+      "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  }
+]
