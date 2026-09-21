@@ -388,8 +388,20 @@ def validate_line_item(it, cats, join, fields=()):
         p.append(f'{tag}: rank must be 1, 2 or 3')
     if join == GENERATED:
         g = it.get('geometry')
-        if not isinstance(g, dict) or set(g) - {'parallel', 'meridian'} or len(g) != 1:
-            p.append(f'{tag}: geometry must be exactly one of parallel or meridian')
+        if not isinstance(g, dict):
+            p.append(f'{tag}: geometry must say what line to draw')
+        elif 'from' in g or 'to' in g:
+            # A flow: an arc between two places, optionally bowed.
+            ends = [g.get('from'), g.get('to')]
+            if any(not isinstance(e, dict) or not all(isinstance(e.get(k), (int, float)) for k in ('lat', 'lon'))
+                   for e in ends):
+                p.append(f'{tag}: geometry.from and geometry.to each need numeric lat and lon')
+            if 'bow' in g and not isinstance(g['bow'], (int, float)):
+                p.append(f'{tag}: geometry.bow must be a number')
+            if set(g) - {'from', 'to', 'bow'}:
+                p.append(f'{tag}: a flow takes from, to and bow, nothing else')
+        elif set(g) - {'parallel', 'meridian'} or len(g) != 1:
+            p.append(f'{tag}: geometry must be a flow (from/to) or exactly one of parallel or meridian')
         elif not isinstance(list(g.values())[0], (int, float)) or isinstance(list(g.values())[0], bool):
             p.append(f'{tag}: geometry must give a number of degrees')
     elif join == 'route':
@@ -427,24 +439,37 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
         index = lines.load_source(src, raw)
     if join == 'route':
         print(f"    network: {len(index['parts'])} parts, {len(index['nodes'])} junctions inside India")
-    # A layer that animates its flow needs its runs pointed downstream; nothing else does.
-    relief = heights() if layer.get('flow') else None
+    # A layer that animates its flow needs its runs pointed downstream -- but only one
+    # that is drawing water. An arrow already knows which way it goes, it was given from
+    # and to; fitting it against the heightmap turned the monsoon round and had it
+    # arriving from Kerala into the Arabian Sea.
+    relief = heights() if layer.get('flow') and not layer.get('arrows') else None
     out, problems = [], []
     for it in items:
         problems += validate_line_item(it, cats, join, fields)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
-        runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief)
+        runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief,
+                                     clip=not layer.get('arrows'))
         if not runs:
             why = (note or {}).get('why') or (f"names {it['source_names']}" if join == 'name' else 'nothing came back')
             problems.append(f"{it['id']}: no geometry: {why}")
             continue
+        widths = None
+        # An arrows layer ships a width profile per run, which is what shapes the head,
+        # and the head brings vertices of its own: see shape_arrow.
+        if layer.get('arrows'):
+            shaped = [lines.shape_arrow(r) for r in runs]
+            runs = [r for r, _ in shaped]
+            widths = [[round(float(w), 3) for w in ws] for _, ws in shaped]
         entry = {
             'id': it['id'], 'name': it['name'], 'category': it['category'], 'rank': it['rank'],
             'km': round(km, 1),
             'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
         }
+        if widths:
+            entry['widths'] = widths
         for name in fields:                      # the columns the layer declared for itself
             if it.get(name) is not None:
                 entry[name] = it[name]
@@ -566,7 +591,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
         return layer, None, problems
     out_items.sort(key=order)
     data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'size', 'title', 'icon', 'group', 'categories',
-                                  'fields', 'scale', 'height', 'unit', 'note', 'sources', 'attribution') if k in layer}
+                                  'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')

@@ -124,8 +124,15 @@ def _orient(run, heights):
     return run[::-1] if slope > 0 else run
 
 
-def project(parts, ids, simplify_km, heights=None):
-    """lon/lat parts -> scene-km runs inside India, simplified. Returns [(n, 2) arrays]."""
+def project(parts, ids, simplify_km, heights=None, clip=True):
+    """
+    lon/lat parts -> scene-km runs, simplified. Returns [(n, 2) arrays].
+
+    Clipped to India by default, because the map draws India alone and a river carrying
+    on into Tibet would trail off over blank paper. An arrow is the exception: the
+    monsoon's whole story is that it arrives from the sea, so a flow that stopped at the
+    coast would be telling the opposite of it.
+    """
     height, width = ids.shape
     km_per_px = grid.HEIGHT_KM / height
     out = []
@@ -135,7 +142,8 @@ def project(parts, ids, simplify_km, heights=None):
         col, row = grid.lonlat_to_pixel(part[:, 0], part[:, 1], width, height)
         c = np.clip(col.astype(int), 0, width - 1)
         r = np.clip(row.astype(int), 0, height - 1)
-        for run in _clip(xz, ids[r, c] > 0):
+        inside = np.ones(len(xz), dtype=bool) if not clip else ids[r, c] > 0
+        for run in _clip(xz, inside):
             if len(run) < 2:
                 continue
             simple = contour.simplify_line(run, simplify_km)
@@ -154,6 +162,67 @@ def _length(run):
 # 5.5 km a step, well under the simplify tolerance that follows, so the curve is the
 # projection's and not the sampling's.
 GENERATED_STEP_DEG = 0.05
+
+
+ARROW_KM = 260.0       # how far back from the tip the head reaches
+SHAFT_WIDEN = 2.4      # an arrow's shaft against a river of the same rank
+ARROW_WIDEN = 3.0      # and the head against its own shaft
+ARROW_STEPS = 8        # vertices the head is shaped from
+
+
+def arc(a, b, bow=0.22, steps=64):
+    """
+    A flow's course: a quadratic bend from `a` to `b`, bulging left of the straight line
+    by `bow` of its length. Bent rather than straight because two arrows between nearby
+    places would otherwise lie on top of each other, and because a flow on a map is a
+    movement rather than a measurement -- the monsoon does not arrive along a ruler.
+    Returns a lon/lat part.
+    """
+    ax, ay = float(a['lon']), float(a['lat'])
+    bx, by = float(b['lon']), float(b['lat'])
+    mx, my = (ax + bx) / 2.0, (ay + by) / 2.0
+    dx, dy = bx - ax, by - ay
+    cx, cy = mx - dy * bow, my + dx * bow          # control point, perpendicular to the chord
+    t = np.linspace(0.0, 1.0, steps)[:, None]
+    p = (1 - t) ** 2 * np.array([ax, ay]) + 2 * (1 - t) * t * np.array([cx, cy]) + t ** 2 * np.array([bx, by])
+    return p
+
+
+def _resample(run, d, targets):
+    """Points along a polyline at the given distances from its start."""
+    return np.column_stack([np.interp(targets, d, run[:, 0]), np.interp(targets, d, run[:, 1])])
+
+
+def shape_arrow(run):
+    """
+    Turn a run into an arrow: the shaft as it is, and a head with vertices of its own.
+    Returns (run, widths), the widths being a multiplier the ribbon's half-width is
+    scaled by -- 1 along the shaft, swelling over the last ARROW_KM, a point at the tip.
+
+    The head has to be resampled rather than shaped in place. Simplification is what
+    makes a 2,200 km arc nine points, and nine points across 2,200 km leaves one inside
+    the last ninety, so a profile laid over the vertices that survive produces no head at
+    all -- which is what it did the first time.
+
+    Shaping the ribbon is the trick worth keeping: an arrowhead as separate geometry
+    would need its own mesh, its own picking and its own place in the draw order.
+    """
+    d = np.concatenate([[0.0], np.cumsum(np.hypot(*np.diff(run, axis=0).T))])
+    total = float(d[-1])
+    head_km = min(ARROW_KM, total * 0.45)           # a short flow still gets a head
+    if total <= 1e-6 or len(run) < 2:
+        return run, np.ones(len(run))
+    base = total - head_km
+    shaft = run[d < base]
+    if len(shaft) < 1:
+        shaft = run[:1]
+    head = _resample(run, d, np.linspace(base, total, ARROW_STEPS))
+    out = np.vstack([shaft, head])
+    t = np.concatenate([np.zeros(len(shaft)), np.linspace(0.0, 1.0, ARROW_STEPS)])
+    w = SHAFT_WIDEN * (1.0 + (ARROW_WIDEN - 1.0) * (1.0 - t) ** 0.55)
+    w[:len(shaft)] = SHAFT_WIDEN
+    w[-1] = 0.0                                     # the tip is a point
+    return out, w
 
 
 def generate(geometry):
@@ -176,10 +245,12 @@ def generate(geometry):
             return []
         lats = np.arange(grid.LAT_MIN, grid.LAT_MAX + GENERATED_STEP_DEG, GENERATED_STEP_DEG)
         return [np.column_stack([np.full(len(lats), float(lon)), lats])]
+    if isinstance(geometry.get('from'), dict) and isinstance(geometry.get('to'), dict):
+        return [arc(geometry['from'], geometry['to'], float(geometry.get('bow', 0.22)))]
     return []
 
 
-def build(item, index, ids, simplify_km, heights=None):
+def build(item, index, ids, simplify_km, heights=None, clip=True):
     """Geometry for one curated item, projected and clipped.
 
     `index` is whatever the layer's source gave: a name index for an item that lists
@@ -198,7 +269,7 @@ def build(item, index, ids, simplify_km, heights=None):
         parts = []
         for name in item.get('source_names') or []:
             parts.extend(index.get(fold(name), []))
-    runs = project(parts, ids, simplify_km, heights)
+    runs = project(parts, ids, simplify_km, heights, clip=clip)
     runs.sort(key=lambda r: -_length(r))
     return runs, sum(_length(r) for r in runs), note
 

@@ -31,7 +31,10 @@ export function linesGeometry(data) {
         if (flat[i + 1] > z1) z1 = flat[i + 1];
       }
       mine.push(flat);
-      runs.push({ flat, colour, rank: item.rank || 3, idx });
+      // A flow carries a width profile with its geometry: 1 along the shaft, a swell and
+      // then a point at the tip, which is what makes the arrowhead. Anything else is a
+      // line of even weight.
+      runs.push({ flat, colour, rank: item.rank || 3, idx, widen: (item.widths || [])[mine.length - 1] || null });
     }
     return { item, idx, runs: mine, bbox: [x0, z0, x1, z1] };
   }).filter((r) => r.runs.length);
@@ -41,6 +44,7 @@ export function linesGeometry(data) {
   const side = new Float32Array(points * 2);
   const dist = new Float32Array(points * 2);        // km from the run's start, for the flow
   const rank = new Float32Array(points * 2);
+  const widen = new Float32Array(points * 2);
   const colour = new Float32Array(points * 2 * 3);
   const itemIdx = new Float32Array(points * 2);
   const index = new Uint32Array(Math.max(0, (points - runs.length) * 6));
@@ -64,6 +68,7 @@ export function linesGeometry(data) {
         side[v] = s;
         dist[v] = along;
         rank[v] = run.rank;
+        widen[v] = run.widen ? run.widen[i] : 1;
         itemIdx[v] = run.idx;
         colour[v * 3] = run.colour.r; colour[v * 3 + 1] = run.colour.g; colour[v * 3 + 2] = run.colour.b;
         v++;
@@ -81,6 +86,7 @@ export function linesGeometry(data) {
   g.setAttribute('side', new BufferAttribute(side, 1));
   g.setAttribute('dist', new BufferAttribute(dist, 1));
   g.setAttribute('rank', new BufferAttribute(rank, 1));
+  g.setAttribute('widen', new BufferAttribute(widen, 1));
   g.setAttribute('colour', new BufferAttribute(colour, 3));
   g.setAttribute('itemIdx', new BufferAttribute(itemIdx, 1));
   g.setIndex(new BufferAttribute(index, 1));

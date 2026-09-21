@@ -18,6 +18,8 @@ in float side;               // -1 or 1: which edge of the ribbon
 in float rank;               // 1, 2 or 3
 in float itemIdx;            // which item of the layer this vertex belongs to
 in float dist;               // km from the start of the run, which is its upstream end
+in float widen;              // per-vertex width multiplier: 1 for a line, a swell and a
+                             // point for a flow's arrowhead
 in vec3 colour;
 
 out vec3 vColour;
@@ -49,7 +51,7 @@ void main() {
   vec2 n = vec2(-t.y, t.x);
   // A picked line thickens rather than changing colour: it is still the same river.
   vSel = uSelectedIdx >= 0.0 && abs(itemIdx - uSelectedIdx) < 0.5 ? 1.0 : 0.0;
-  float halfPx = byRank(uRankPx) * (1.0 + 0.9 * vSel);
+  float halfPx = byRank(uRankPx) * widen * (1.0 + 0.9 * vSel);
   clip.xy += n * side * halfPx / uResolution * 2.0 * clip.w;
 
   vColour = colour;
