@@ -18,9 +18,10 @@ Outputs, per tier H (public/data/regions/), all on the project grid (pipeline/li
                           reviewed), bbox + anchor in scene km, and area_km2 counted from raster
                           pixels (within a few percent; it ranks units for touch hit-testing and is
                           not a fact to display)
-  outlines/<slug>.json    simplified outline loops of each unit in scene km, traced from the
-                          finest ID raster (walls of the lifted state block, tight camera fits);
-                          outlines/india.json is the whole country
+  outlines/<slug>.json    smoothed outline loops of each unit in scene km, traced from the
+                          finest ID raster. These are the one boundary the state view uses:
+                          the walls of the lifted block, and the mask step 6 fills for its
+                          top. outlines/india.json is the whole country.
 The border distance fields are made in step 2, which knows where the coast is.
 A colour preview goes to pipeline/tmp/preview-states-{H}.png for eyeballing.
 """
@@ -59,6 +60,13 @@ def load_units():
 
 
 BLURB_MAX = 240
+
+# Outline smoothing (lib/contour.py). The state block draws these loops, and fills them
+# for its top surface, at about 0.35 km per pixel -- five times finer than the raster
+# they are traced from -- so the pixel staircase has to be filtered out rather than
+# merely simplified, and the tolerance has to stay well under the blur width.
+OUTLINE_SIGMA_PX = 1.2
+OUTLINE_TOL_PX = 0.2
 
 
 def validate_facts(u):
@@ -178,11 +186,12 @@ def write_outlines(ids, width, height, units_by_id, out_dir):
     total = 0
     jobs = [(u['slug'], u['id'], ids == u['id']) for u in units_by_id.values()] + [('india', 0, ids > 0)]
     for slug, uid, mask in jobs:
-        loops = contour.trace(mask, tol=1.0, min_area=2.0)
+        loops = contour.trace(mask, tol=OUTLINE_TOL_PX, min_area=2.0, sigma=OUTLINE_SIGMA_PX)
         out = [[[round(-grid.WIDTH_KM / 2 + x * sx, 1), round(-grid.HEIGHT_KM / 2 + y * sz, 1)] for x, y in loop.tolist()] for loop in loops]
         total += sum(len(l) for l in out)
         with open(os.path.join(out_dir, f'{slug}.json'), 'w', encoding='utf-8') as f:
-            json.dump({'id': uid, 'slug': slug, 'km_per_px': round(sz, 4), 'loops': out}, f, separators=(',', ':'))
+            json.dump({'id': uid, 'slug': slug, 'km_per_px': round(sz, 4),
+                       'smoothed_km': round(OUTLINE_SIGMA_PX * sz, 3), 'loops': out}, f, separators=(',', ':'))
     print(f'  wrote {len(jobs)} outlines ({total} points) to {os.path.relpath(out_dir, ROOT)}/')
 
 

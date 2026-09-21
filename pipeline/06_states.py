@@ -12,9 +12,17 @@ Per unit, over its bounding box padded by PAD_KM, at KM_PER_PX:
   states/<slug>-ids.bin.gz       uint8 state id (the mask the block discards against)
   states/<slug>-borders.bin.gz   uint8 2ch internal / external border fields
 
-Everything outside the unit is flattened to SENTINEL_M so it costs almost nothing
-once the plane predictor and gzip are through with it; the block discards those
-fragments anyway.
+The mask is the unit's smoothed outline from step 1 filled at this resolution, not the
+country ID raster resampled: that raster is 1.7 km per pixel, and stamping its staircase
+into a 0.35 km one is what made the lifted block's edge look sawn rather than moulded.
+The block's walls follow the same loops, so its top and its sides now share one curve.
+
+Everything further than BLEED_KM outside the unit is flattened to SENTINEL_M so it costs
+almost nothing once the plane predictor and gzip are through with it; the block discards
+those fragments anyway. The band that is kept gives the walls real ground to stand on --
+they sample the heightmap on the outline itself, where LINEAR filtering would otherwise
+drag in the sentinel -- and keeps the ambient occlusion along the edge from being cast by
+a 500 m pit that is not there.
 
 Needs the zoom 8 mosaic (about 600 m per pixel), which is finer than the zoom 7 the
 country tiers use:  python3 -m pipeline.lib.fetch 8
@@ -28,7 +36,7 @@ import sys
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from pipeline.lib import grid, lcc, pack  # noqa: E402
+from pipeline.lib import contour, grid, lcc, pack, raster  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,6 +49,7 @@ _spec.loader.exec_module(dem)
 KM_PER_PX = 0.35        # about five times finer than the 2048 country tier
 PAD_KM = 6.0            # the block pads its uv rect past the bbox; keep data under it
 SENTINEL_M = -500.0     # flat fill outside the unit
+BLEED_KM = 10.0         # real heights kept this far outside it (walls, ambient occlusion)
 
 
 def crop(mosaic, xr, zoom, rect, km_px):
@@ -51,22 +60,28 @@ def crop(mosaic, xr, zoom, rect, km_px):
     sx = x0 + (np.arange(w) + 0.5) * (x1 - x0) / w
     sz = z0 + (np.arange(h) + 0.5) * (z1 - z0) / h
     SX, SZ = np.meshgrid(sx, sz)
-    east = SX * 1000.0 + grid.E_CENTRE
-    north = grid.N_CENTRE - SZ * 1000.0
-    lon, lat = lcc.inverse(east, north)
+    lon, lat = lcc.inverse(SX * 1000.0 + grid.E_CENTRE, grid.N_CENTRE - SZ * 1000.0)
     n = 2 ** zoom * 256.0
     mx = (lon + 180.0) / 360.0 * n - xr[0] * 256
     lr = np.radians(lat)
     my = (1.0 - np.log(np.tan(lr) + 1.0 / np.cos(lr)) / np.pi) / 2.0 * n - xr[2] * 256
-    return dem.sample_bilinear(mosaic, mx, my), w, h, east, north
+    return dem.sample_bilinear(mosaic, mx, my), w, h
 
 
-def unit_mask(east, north, ids_r, uid):
-    """Nearest-sample the country id raster at these projected coordinates."""
-    ih, iw = ids_r.shape
-    col = np.clip(((east - grid.E_MIN) / (grid.E_MAX - grid.E_MIN) * iw).astype(int), 0, iw - 1)
-    row = np.clip(((grid.N_MAX - north) / (grid.N_MAX - grid.N_MIN) * ih).astype(int), 0, ih - 1)
-    return ids_r[row, col] == uid
+def unit_mask(loops, rect, w, h):
+    """Fill the unit's outline loops (scene km, from step 1) at this crop's resolution.
+
+    The loops are the boundary the state view draws; filling them here is what keeps the
+    block's top surface on the same curve as its walls. Outer loops run clockwise on
+    screen and holes the other way, which is how enclaves are punched back out.
+    """
+    x0, z0, x1, z1 = rect
+    rings = []
+    for loop in loops:
+        px = np.asarray(loop, dtype=np.float64)
+        px = np.column_stack([(px[:, 0] - x0) / ((x1 - x0) / w), (px[:, 1] - z0) / ((z1 - z0) / h)])
+        rings.append((px, contour.shoelace(px) < 0))
+    return raster.rasterise([(1, rings)], w, h) > 0
 
 
 def main():
@@ -81,9 +96,6 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
 
     states = json.load(open(os.path.join(out_root, 'regions', 'states.json'), encoding='utf-8'))
-    finest = max(states['tiers'], key=int)
-    _, ids_raster = pack.read(os.path.join(out_root, states['tiers'][finest]['ids']))
-    ids_raster = ids_raster[:, :, 0]
 
     xr = dem.fetch.tile_range(args.zoom, *dem.BBOX, margin=grid.TILE_MARGIN)
     mosaic = dem.load_mosaic(args.zoom, xr)
@@ -96,9 +108,12 @@ def main():
             continue
         x0, z0, x1, z1 = u['bbox']
         rect = [x0 - PAD_KM, z0 - PAD_KM, x1 + PAD_KM, z1 + PAD_KM]
-        h_m, w, h, east, north = crop(mosaic, xr, args.zoom, rect, args.km_per_px)
-        inside = unit_mask(east, north, ids_raster, u['id'])
-        h_m = np.where(inside, h_m, SENTINEL_M)
+        h_m, w, h = crop(mosaic, xr, args.zoom, rect, args.km_per_px)
+        with open(os.path.join(out_root, 'regions', 'outlines', f'{u["slug"]}.json'), encoding='utf-8') as f:
+            loops = json.load(f)['loops']
+        inside = unit_mask(loops, rect, w, h)
+        bleed_px = int(np.ceil(BLEED_KM / args.km_per_px))
+        h_m = np.where(raster.bounded_distance(inside, bleed_px) < bleed_px, h_m, SENTINEL_M)
 
         ids = np.where(inside, u['id'], 0).astype(np.uint8)
         h16 = np.clip(np.round(h_m), -32768, 32767).astype(np.int16)
@@ -141,8 +156,9 @@ def main():
         print(f'  {u["slug"]:42} {w:5d}x{h:<5d} {size // 1024:6d} KB  {inside.mean():5.1%} fill')
 
     with open(os.path.join(out_dir, 'index.json'), 'w', encoding='utf-8') as f:
-        json.dump({'km_per_px': args.km_per_px, 'pad_km': PAD_KM,
-                   'source': f'terrarium z{args.zoom}', 'units': index}, f, separators=(',', ':'))
+        json.dump({'km_per_px': args.km_per_px, 'pad_km': PAD_KM, 'bleed_km': BLEED_KM,
+                   'source': f'terrarium z{args.zoom}', 'mask': 'regions/outlines',
+                   'units': index}, f, separators=(',', ':'))
     print(f'  {len(index)} state packages, {total / 1048576:.1f} MB total')
 
 
