@@ -53,11 +53,77 @@
    "default_on": true,
    "count": 139,
    "reviewed": 0,
+   "categories": [
+    {
+     "id": "heritage",
+     "title": {
+      "en": "Heritage",
+      "hi": "विरासत"
+     },
+     "icon": "monument",
+     "color": "#b4552e"
+    },
+    {
+     "id": "nature",
+     "title": {
+      "en": "Nature",
+      "hi": "प्रकृति"
+     },
+     "icon": "leaf",
+     "color": "#5f8a5a"
+    },
+    {
+     "id": "beach",
+     "title": {
+      "en": "Beaches",
+      "hi": "समुद्र तट"
+     },
+     "icon": "wave",
+     "color": "#3f8f9e"
+    },
+    {
+     "id": "hill",
+     "title": {
+      "en": "Hills",
+      "hi": "पहाड़"
+     },
+     "icon": "mountain",
+     "color": "#6d6f86"
+    },
+    {
+     "id": "wildlife",
+     "title": {
+      "en": "Wildlife",
+      "hi": "वन्यजीव"
+     },
+     "icon": "paw",
+     "color": "#a86f2f"
+    },
+    {
+     "id": "pilgrimage",
+     "title": {
+      "en": "Pilgrimage",
+      "hi": "तीर्थ"
+     },
+     "icon": "temple",
+     "color": "#d08a2c"
+    },
+    {
+     "id": "city",
+     "title": {
+      "en": "Cities",
+      "hi": "शहर"
+     },
+     "icon": "city",
+     "color": "#4e5b8a"
+    }
+   ],
    "path": "layers/places.json"
   },
   {
    "id": "ranges",
    "type": "points",
+   "marker": "label",
    "title": {
     "en": "Mountain ranges",
     "hi": "पर्वत श्रेणियाँ"
@@ -67,6 +133,26 @@
    "default_on": true,
    "count": 18,
    "reviewed": 0,
+   "categories": [
+    {
+     "id": "fold",
+     "title": {
+      "en": "Fold mountains",
+      "hi": "वलित पर्वत"
+     },
+     "icon": "mountain",
+     "color": "#7a6a86"
+    },
+    {
+     "id": "block",
+     "title": {
+      "en": "Block and plateau",
+      "hi": "खंड और पठार"
+     },
+     "icon": "mountain",
+     "color": "#8a7550"
+    }
+   ],
    "path": "layers/ranges.json"
   },
   {
@@ -81,7 +167,59 @@
    "default_on": true,
    "count": 28,
    "reviewed": 0,
+   "categories": [
+    {
+     "id": "snow-fed",
+     "title": {
+      "en": "Snow-fed",
+      "hi": "हिमपोषित"
+     },
+     "color": "#4d86a8"
+    },
+    {
+     "id": "rain-fed",
+     "title": {
+      "en": "Rain-fed",
+      "hi": "वर्षापोषित"
+     },
+     "color": "#6a9a86"
+    }
+   ],
    "path": "layers/rivers.json"
+  },
+  {
+   "id": "summits",
+   "type": "points",
+   "title": {
+    "en": "Peaks and passes",
+    "hi": "शिखर और दर्रे"
+   },
+   "icon": "mountain",
+   "group": "physical",
+   "default_on": false,
+   "count": 28,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "peak",
+     "title": {
+      "en": "Peaks",
+      "hi": "शिखर"
+     },
+     "icon": "mountain",
+     "color": "#6d6f86"
+    },
+    {
+     "id": "pass",
+     "title": {
+      "en": "Passes",
+      "hi": "दर्रे"
+     },
+     "icon": "mountain",
+     "color": "#8a7550"
+    }
+   ],
+   "path": "layers/summits.json"
   }
  ],
  "attribution": [
@@ -268,6 +406,10 @@
   "layers/rivers.json": {
    "size": 52765,
    "sha256": "4b1f96c8bee9"
+  },
+  "layers/summits.json": {
+   "size": 19426,
+   "sha256": "c04de561cbb7"
   },
   "states/andaman-and-nicobar-islands-borders.bin.gz": {
    "size": 3249,
