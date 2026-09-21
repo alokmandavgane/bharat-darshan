@@ -32,8 +32,9 @@ export function setLanguage(lang, root = document) {
 }
 
 /** @param {string} key @param {Record<string, string|number>} [params] */
-export function t(key, params) {
-  let s = dicts[current][key] ?? dicts.en[key] ?? key;
+/** `fallback` is for keys built from data (a layer's group, say), which may not exist. */
+export function t(key, params, fallback) {
+  let s = dicts[current][key] ?? dicts.en[key] ?? fallback ?? key;
   if (params) s = s.replace(/\{(\w+)\}/g, (_, k) => String(params[k] ?? ''));
   return s;
 }

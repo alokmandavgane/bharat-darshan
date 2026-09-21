@@ -80,19 +80,66 @@ export function createShell(root, store) {
     store.set('layers', { active: [...active] });
   });
 
-  /** One chip per layer in the catalogue (data, never ids), after the Relief chip. */
+  /**
+   * The layer switches, grouped as the catalogue groups them and each carrying its
+   * legend while it is on. Everything here is data: the group is a field on the layer,
+   * its heading a string keyed by that field, and the swatches are the layer's own
+   * categories. No layer id appears in this file.
+   */
   function renderChips() {
-    chips.querySelectorAll('button[data-layer]').forEach((b) => b.remove());
+    chips.replaceChildren();
     const active = new Set(store.get('layers')?.active || []);
+    const byGroup = new Map();
     for (const layer of store.get('catalog') || []) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'chip';
-      b.dataset.layer = layer.id;
-      b.setAttribute('aria-pressed', String(active.has(layer.id)));
-      b.textContent = pick(layer.title);
-      chips.appendChild(b);
+      const g = layer.group || 'other';
+      if (!byGroup.has(g)) byGroup.set(g, []);
+      byGroup.get(g).push(layer);
     }
+    for (const [group, list] of byGroup) {
+      const section = document.createElement('div');
+      section.className = 'layer-group';
+      if (byGroup.size > 1) {
+        const h = document.createElement('h4');
+        h.textContent = t(`layer.group.${group}`, {}, group);
+        section.appendChild(h);
+      }
+      const row = document.createElement('div');
+      row.className = 'chips';
+      for (const layer of list) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'chip';
+        b.dataset.layer = layer.id;
+        b.setAttribute('aria-pressed', String(active.has(layer.id)));
+        b.textContent = pick(layer.title);
+        row.appendChild(b);
+      }
+      section.appendChild(row);
+      for (const layer of list) {
+        if (!active.has(layer.id) || layer.marker === 'label') continue;
+        const legend = layerLegend(layer);
+        if (legend) section.appendChild(legend);
+      }
+      chips.appendChild(section);
+    }
+  }
+
+  /** A swatch and a name per category: a dot for points, a stroke for lines. */
+  function layerLegend(layer) {
+    const cats = layer.categories || [];
+    if (cats.length < 2) return null;
+    const ul = document.createElement('ul');
+    ul.className = 'legend';
+    ul.dataset.kind = layer.type;
+    for (const c of cats) {
+      const li = document.createElement('li');
+      const sw = document.createElement('span');
+      sw.className = 'legend-swatch';
+      sw.style.setProperty('--c', c.color || 'var(--ink)');
+      li.append(sw, document.createTextNode(pick(c.title)));
+      ul.appendChild(li);
+    }
+    return ul;
   }
 
 
@@ -196,6 +243,19 @@ export function createShell(root, store) {
   }
 
   /** The fact card for a unit: structured, sourced, shown only once reviewed (or with drafts on). */
+  /** One label/value row as its own definition list, for cards with a single fact. */
+  function factRow(label, value) {
+    const dl = document.createElement('dl');
+    const div = document.createElement('div');
+    const dt = document.createElement('dt');
+    dt.textContent = label;
+    const dd = document.createElement('dd');
+    dd.textContent = value;
+    div.append(dt, dd);
+    dl.appendChild(div);
+    return dl;
+  }
+
   function renderFacts(u) {
     facts.replaceChildren();
     const f = u.facts;
@@ -269,6 +329,17 @@ export function createShell(root, store) {
       subtitle.textContent = [cat ? pick(cat.title) : pick(layer?.title), region ? pick(region.name) : ''].filter(Boolean).join(' · ');
       facts.hidden = false;
       facts.replaceChildren();
+      // A line item knows how far it runs inside India; a point has no such number.
+      if (typeof it.km === 'number') {
+        facts.appendChild(factRow(t('facts.length'), t('facts.km', { n: formatNumber(Math.round(it.km)) })));
+      }
+      // Columns the layer declared for itself (PLAN.md section 5): label and unit are data.
+      for (const [name, spec] of Object.entries(sel.fields || {})) {
+        const v = it[name];
+        if (v === undefined || v === null) continue;
+        const shown = typeof v === 'number' ? formatNumber(v) : String(v);
+        facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
+      }
       const p = document.createElement('p');
       p.className = 'facts-blurb';
       p.textContent = pick(it.blurb);
@@ -318,12 +389,13 @@ export function createShell(root, store) {
     renderFacts(u);
   }
 
-  /** Hover: a pointer cursor over a state and, on fine pointers, a tooltip with its name. */
+  /** Hover: a pointer cursor over a state or a line and, on fine pointers, its name. */
   function renderHover() {
     const r = store.get('regions');
     const id = store.get('hover');
     const p = store.get('pointer');
-    const u = id && r ? r.byId[id] : null;
+    const line = store.get('hoverLine');
+    const u = line || (id && r ? r.byId[id] : null);
     canvas.dataset.hover = u ? '1' : '';
     if (!u || !p || !fine.matches) { tooltip.hidden = true; return; }
     tooltip.textContent = pick(u.name);
@@ -351,6 +423,7 @@ export function createShell(root, store) {
   store.subscribe('catalog', renderChips, { immediate: true });
   store.subscribe('layers', renderChips);
   store.subscribe('hover', renderHover);
+  store.subscribe('hoverLine', renderHover);
   store.subscribe('pointer', renderHover);
   store.subscribe('status', renderStatus, { immediate: true });
   renderLang();

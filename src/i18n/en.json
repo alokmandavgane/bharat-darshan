@@ -35,6 +35,8 @@
   "facts.languages": "Official languages",
   "facts.area": "Area",
   "facts.area.value": "{n} km²",
+  "facts.length": "Length in India",
+  "facts.km": "{n} km",
   "facts.population": "Population (2011 Census)",
   "facts.sources": "Sources",
   "facts.draft": "Draft, not yet reviewed",
@@ -48,5 +50,7 @@
   "facts.draft.long": "This card is a draft: written from the sources listed, not yet reviewed.",
   "view.reset": "Reset the view",
   "tour.play": "Play a tour of the places",
-  "tour.pause": "Pause the tour"
+  "tour.pause": "Pause the tour",
+  "layer.group.physical": "Land and water",
+  "layer.group.culture": "People and places"
 }

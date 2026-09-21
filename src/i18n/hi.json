@@ -35,6 +35,8 @@
   "facts.languages": "आधिकारिक भाषाएँ",
   "facts.area": "क्षेत्रफल",
   "facts.area.value": "{n} वर्ग किमी",
+  "facts.length": "भारत में लंबाई",
+  "facts.km": "{n} किमी",
   "facts.population": "जनसंख्या (2011 जनगणना)",
   "facts.sources": "स्रोत",
   "facts.draft": "मसौदा, समीक्षा बाकी",
@@ -48,5 +50,7 @@
   "facts.draft.long": "यह कार्ड एक मसौदा है: दिए गए स्रोतों से लिखा गया, समीक्षा अभी बाकी।",
   "view.reset": "दृश्य रीसेट करें",
   "tour.play": "स्थानों का भ्रमण चलाएँ",
-  "tour.pause": "भ्रमण रोकें"
+  "tour.pause": "भ्रमण रोकें",
+  "layer.group.physical": "भूमि और जल",
+  "layer.group.culture": "लोग और स्थान"
 }
