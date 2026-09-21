@@ -90,6 +90,8 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uDim: { value: 0 },
     uLift: { value: 0 },
     uOnlyIndia: { value: 1 },
+    // Non-zero only on the backdrop: the half-extents of the plate it hands over to.
+    uInnerKm: { value: new Vector2(0, 0) },
     uTable: { value: new Color(PALETTE.table) },
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
@@ -102,8 +104,9 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   /**
    * A second material with the same shaders and textures but its own scalar uniforms,
    * for the lifted block. Textures are shared by reference, never re-uploaded.
+   * `independent` keeps it out of the tier swap, for a mesh that brings its own rasters.
    */
-  function siblingMaterial() {
+  function siblingMaterial({ independent = false } = {}) {
     const u = {};
     for (const [k, { value }] of Object.entries(uniforms)) {
       u[k] = { value: value && typeof value === 'object' && !value.isTexture && typeof value.clone === 'function' ? value.clone()
@@ -111,6 +114,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
         : Array.isArray(value) ? value.map((c) => c.clone()) : value };
     }
     const m = new ShaderMaterial({ glslVersion: GLSL3, vertexShader: vert, fragmentShader: frag, uniforms: u, side: DoubleSide });
+    if (independent) return m;        // the backdrop binds its own rasters; a tier swap must not reach it
     siblings.add(m);
     const dispose = m.dispose.bind(m);
     m.dispose = () => { siblings.delete(m); dispose(); };

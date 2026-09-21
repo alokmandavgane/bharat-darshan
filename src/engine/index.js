@@ -4,8 +4,9 @@
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { createLines } from './lines.js';
+import { createWorld } from './world.js';
 import { basis, DEFAULT_CAMERA, fitBounds, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
-import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, unionBbox } from './data.js';
+import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
@@ -51,6 +52,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let block = null;            // the lifted state block while in the state view
   let dropping = null;         // the outgoing block mid-sink, so a handover cancels nothing
   let lines = null;            // every `lines` layer on screen, once loaded
+  let world = null;            // the wide backdrop, once Surroundings has asked for it
+  let worldLoad = null;
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
   let stateIndex = null;       // the state-package index, once fetched
@@ -166,6 +169,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     terrain.uniforms.uKmPerPx.value = kmPerPx;
     if (block) block.material.uniforms.uKmPerPx.value = kmPerPx;
     lines?.setView(viewport.w, viewport.h, c.zoom);
+    world?.setKmPerPx(kmPerPx);
   }
 
   /**
@@ -254,8 +258,17 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const target = (r.on ? r.amount : 0) * (level.name === 'state' ? STATE_EXAG : 1);
     const u = terrain.uniforms.uExag;
     cancelRelief?.();
-    if (!animate) { u.value = target; invalidate(); return; }
-    cancelRelief = tween({ v: u.value }, { v: target }, 650, ({ v }) => { u.value = v; invalidate(); });
+    if (!animate) {
+      u.value = target;
+      world?.setCurve({ exag: target, gamma: terrain.uniforms.uGamma.value, hRef: terrain.uniforms.uHRef.value });
+      invalidate();
+      return;
+    }
+    cancelRelief = tween({ v: u.value }, { v: target }, 650, ({ v }) => {
+      u.value = v;
+      world?.setCurve({ exag: v, gamma: terrain.uniforms.uGamma.value, hRef: terrain.uniforms.uHRef.value });
+      invalidate();
+    });
   }
   store.subscribe('relief', (r, _, meta) => applyRelief(r, !!meta.animate));
   store.subscribe('selection', (id) => { if (terrain) { terrain.uniforms.uSelected.value = id ?? -1; invalidate(); } });
@@ -533,7 +546,26 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!terrain) return;
     terrain.uniforms.uOnlyIndia.value = on ? 0 : 1;
     if (countryWalls) countryWalls.visible = !on;
+    if (world) world.mesh.visible = on;
+    else if (on) loadBackdrop();
     invalidate();
+  }
+
+  /**
+   * The land around India, fetched the first time it is asked for. It is never on the
+   * first view: the map opens as a cut-out on the page, and only Surroundings wants it.
+   */
+  function loadBackdrop() {
+    if (worldLoad || store.get('saveData')) return;
+    worldLoad = loadWorld(manifest).then((data) => {
+      if (!data || !terrain || world) return;
+      world = createWorld({ data, terrain, innerKm: sizeKm, grid: Math.round(quality.grid / 2) });
+      world.mesh.visible = !!store.get('surroundings');
+      world.setCurve({ exag: terrain.uniforms.uExag.value, gamma: terrain.uniforms.uGamma.value,
+                       hRef: terrain.uniforms.uHRef.value });
+      scene.add(world.mesh);
+      invalidate();
+    }).catch((err) => console.warn('backdrop skipped:', err));
   }
   store.subscribe('surroundings', applySurroundings);
 
@@ -541,6 +573,6 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     start, invalidate, flyTo, fit, pick, project, quality,
     get viewport() { return viewport; },
     get level() { return level; },
-    dispose() { lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
+    dispose() { world?.dispose(); lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }

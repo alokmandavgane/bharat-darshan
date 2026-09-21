@@ -31,6 +31,14 @@ export async function loadTier(manifest, tier) {
   return { tier, heights, shade, ids, borders, edge };
 }
 
+/** The wide backdrop, fetched the first time Surroundings is switched on. */
+export async function loadWorld(manifest) {
+  const w = manifest.world;
+  if (!w) return null;
+  const [heights, shade] = await Promise.all([w.heights, w.shade].map((rel) => loadPack(versioned(manifest, rel))));
+  return { heights, shade };
+}
+
 export async function loadStates(manifest) {
   return loadJson(manifest.regions.states);
 }

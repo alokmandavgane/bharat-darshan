@@ -35,6 +35,11 @@ export function byteTexture(pack, { nearest = false } = {}) {
   return finish(tex, nearest ? NearestFilter : LinearFilter);
 }
 
+/** A 1x1 black texture, for a material that must bind a sampler it never reads. */
+export function zeroTexture() {
+  return finish(new DataTexture(new Uint8Array(4), 1, 1, RGBAFormat, UnsignedByteType), NearestFilter);
+}
+
 /** A small tiling value-noise texture for the paper grain. */
 export function grainTexture(size = 128, seed = 7) {
   let s = seed >>> 0;

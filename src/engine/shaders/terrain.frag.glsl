@@ -27,6 +27,7 @@ uniform float uRegion;         // draw only this state id (the lifted block), or
 uniform float uHole;           // state id drawn as a flat dark socket, or -1
 uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform float uOnlyIndia;      // 1: draw India alone as a cut-out on the page, no sea or neighbours
+uniform vec2 uInnerKm;         // backdrop only: half-extents of the plate it hands over to
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
@@ -195,8 +196,18 @@ void main() {
 
   // dissolve into the page (premultiplied alpha) instead of ending at a rim
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
-  float fade = smoothstep(0.0, 420.0, edge);
+  // The backdrop is three times the plate across, so it needs a proportionate run-out or
+  // it ends as a rectangle on the page rather than as land running out of the picture.
+  float fadeKm = uInnerKm.x > 0.0 ? 0.16 * uSizeKm.y : 420.0;
+  float fade = smoothstep(0.0, fadeKm, edge);
   if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
+  // The backdrop comes in exactly as the plate sinks into the page. The plate's rim fade
+  // runs over its last 420 km, which is the outer quarter of its half-extent, so the two
+  // alphas are complements of one smoothstep and never leave the page showing between.
+  if (uInnerKm.x > 0.0) {
+    vec2 q = abs(vPos.xz) / uInnerKm;
+    fade *= smoothstep(0.75, 1.0, max(q.x, q.y));
+  }
   fade *= mine;                                           // the block's rim, softened
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   outColor = vec4(o.rgb * fade, fade);
