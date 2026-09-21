@@ -29,7 +29,7 @@ TYPES = ('points', 'lines')
 JOINS = ('name', 'route')   # how a lines item finds its geometry: by the source's names, or through waypoints
 STATUSES = ('draft', 'reviewed')
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
-FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str}
+FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int}
 BLURB_MAX = 240
 
 
@@ -85,7 +85,7 @@ def validate_layer(layer, folder):
     return p
 
 
-def validate_line_item(it, cats, join):
+def validate_line_item(it, cats, join, fields=()):
     """A line item carries no anchor: its geometry comes from the source."""
     tag = it.get('id', '?')
     p = []
@@ -112,10 +112,17 @@ def validate_line_item(it, cats, join):
         p.append(f'{tag}: source_names must name at least one feature in the source')
     if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
         p.append(f'{tag}: sources must list at least one URL')
+    for name, spec in (fields or {}).items():
+        v = it.get(name)
+        if v is None:
+            if spec.get('required'):
+                p.append(f'{tag}: {name} is required by the layer')
+        elif not isinstance(v, FIELD_TYPES[spec['type']]) or isinstance(v, bool):
+            p.append(f"{tag}: {name} must be {spec['type']}")
     return p
 
 
-def build_lines(layer, folder, items, cats, ids, heights):
+def build_lines(layer, folder, items, cats, fields, ids, heights):
     """Join each curated item to its geometry. Returns (out_items, problems)."""
     src = layer['source']
     join = src.get('join', 'name')
@@ -130,7 +137,7 @@ def build_lines(layer, folder, items, cats, ids, heights):
     relief = heights() if layer.get('flow') else None
     out, problems = [], []
     for it in items:
-        problems += validate_line_item(it, cats, join)
+        problems += validate_line_item(it, cats, join, fields)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
         runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief)
@@ -138,12 +145,16 @@ def build_lines(layer, folder, items, cats, ids, heights):
             why = (note or {}).get('why') or (f"names {it['source_names']}" if join == 'name' else 'nothing came back')
             problems.append(f"{it['id']}: no geometry: {why}")
             continue
-        out.append({
+        entry = {
             'id': it['id'], 'name': it['name'], 'category': it['category'], 'rank': it['rank'],
             'km': round(km, 1),
             'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
-        })
+        }
+        for name in fields:                      # the columns the layer declared for itself
+            if it.get(name) is not None:
+                entry[name] = it[name]
+        out.append(entry)
         tail = f"  waypoints {max(note['snap']):.0f} km off at worst" if note else ''
         print(f"    {it['id']:20} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km{tail}")
     return out, problems
@@ -206,7 +217,7 @@ def build_layer(folder, states, ids, heights, out):
     seen = set()
     out_items = []
     if layer.get('type') == 'lines' and not problems:
-        out_items, line_problems = build_lines(layer, folder, items, cats, ids, heights)
+        out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
     for it in items:

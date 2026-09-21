@@ -175,7 +175,7 @@ export function createLines(scene, terrainUniforms) {
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, records, categories: data.categories || [], flow, plate, block: null };
+      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, plate, block: null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
@@ -214,7 +214,7 @@ export function createLines(scene, terrainUniforms) {
               const d2 = segDist2(x, z, flat[i], flat[i + 1], flat[i + 2], flat[i + 3]);
               if (d2 > max2) continue;
               const score = d2 + (rec.item.rank || 3) * 0.02 * max2;
-              if (!best || score < best.score) best = { layer: id, item: rec.item, categories: l.categories, score };
+              if (!best || score < best.score) best = { layer: id, item: rec.item, categories: l.categories, fields: l.fields, score };
             }
           }
         }

@@ -497,7 +497,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // A line sits on top of the state it crosses, so it gets the tap first.
     const hit = lineAt(tap.x, tap.y, tap.type === 'touch' || tap.type === 'pen' ? 14 : 9);
     if (hit) {
-      store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories });
+      store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories, fields: hit.fields });
       return;
     }
     store.set('item', null);

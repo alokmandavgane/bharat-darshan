@@ -343,7 +343,8 @@ export function createShell(root, store) {
       for (const [name, spec] of Object.entries(sel.fields || {})) {
         const v = it[name];
         if (v === undefined || v === null) continue;
-        const shown = typeof v === 'number' ? formatNumber(v) : String(v);
+        // A year is a number but not a quantity: 1866, not 1,866.
+        const shown = typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
         facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
       }
       const p = document.createElement('p');
