@@ -132,6 +132,26 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
   document.addEventListener('visibilitychange', flowCheck);
 
+  /**
+   * A link can name an item before its layer has been fetched, so the store carries the
+   * stub { layer, id } and this fills in the rest as soon as that layer lands. An id the
+   * layer turns out not to have is cleared rather than left as an empty card.
+   */
+  function resolveItem(layerId) {
+    const sel = store.get('item');
+    if (!sel || sel.data || sel.layer !== layerId) return;
+    const line = lines?.find(layerId, sel.id);
+    if (line) {
+      store.set('item', { layer: layerId, id: sel.id, data: line.item, categories: line.categories, fields: line.fields },
+                { source: 'init' });
+      return;
+    }
+    const data = points.find(layerId, sel.id);
+    store.set('item', data
+      ? { layer: layerId, id: sel.id, data, categories: points.categories(layerId), fields: points.fields(layerId) }
+      : null, { source: 'init' });
+  }
+
   // --- layers (data, never ids): load a layer's file the first time it is switched on
   const loading = new Set();
   const failed = new Set();
@@ -150,7 +170,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       if (!entry) continue;
       const done = (fn) => {
         loading.add(id);
-        loadJson(entry.path).then((data) => { fn(data); invalidate(); })
+        loadJson(entry.path).then((data) => { fn(data); resolveItem(id); invalidate(); })
           .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
           .finally(() => loading.delete(id));
       };
@@ -183,17 +203,20 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     lines?.setSelected(sel ? { layer: sel.layer, id: sel.id } : null);
     invalidate();
     if (!sel || meta.source === 'tour') return;
+    // A link arrives at its item rather than flying to it from wherever the default
+    // camera happened to be, which is how /state/<slug> already opens.
+    const ms = meta.source === 'init' ? 0 : undefined;
     const item = points.find(sel.layer, sel.id);
-    if (item) return flyToItem(item);
+    if (item) return flyToItem(item, ms === undefined ? {} : { ms });
     const line = lines?.find(sel.layer, sel.id);
-    if (line) fitBox(line.bbox);
+    if (line) fitBox(line.bbox, ms);
   });
 
   /** Frame a scene-km box, the way entering a state frames its unit. */
-  function fitBox([x0, z0, x1, z1]) {
+  function fitBox([x0, z0, x1, z1], ms = 800) {
     cameraTouched = true;
     const lift = raised ? raised.km : 0;
-    flyTo(fitBounds(store.get('camera'), { x0, z0, x1, z1, ymax: lift + 40 }, viewport, store.get('padding')), 800);
+    flyTo(fitBounds(store.get('camera'), { x0, z0, x1, z1, ymax: lift + 40 }, viewport, store.get('padding')), ms);
   }
 
   function applyCamera() {
@@ -562,7 +585,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (lv?.name === 'state' && byId[lv.id]) {
       level = lv;
       enterState(byId[lv.id], true);
-    } else {
+    } else if (!cameraTouched) {
+      // Not an unconditional fit: the layer files are fetched the moment the catalogue
+      // lands, which is before the first tier is awaited, so an item named in the URL is
+      // often already framed by the time this runs and framing the country again would
+      // throw the visitor back out to it.
       fit(false);
     }
     invalidate();

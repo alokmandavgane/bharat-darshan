@@ -20,7 +20,6 @@ const store = createStore({
   lang,
   camera: { ...DEFAULT_CAMERA },
   relief: { on: url.relief !== 0, amount: url.relief && url.relief > 0 ? url.relief : DEFAULT_RELIEF },
-  layers: ['relief'],
   padding: { top: 0, right: 0, bottom: 0, left: 0 },
   viewport: { w: window.innerWidth, h: window.innerHeight },
   sheet: { snap: 'peek', peek: 0 },
@@ -30,8 +29,15 @@ const store = createStore({
   pointer: null,
   flyTo: null,
   focus: null,
-  item: null,
-  layers: null,          // { active: [...] } once the manifest says which layers exist
+  // A deep link to an item is a stub, { layer, id }: the engine fills in the data once
+  // that layer has arrived (see resolveItem).
+  item: url.item ? { layer: url.item.layer, id: url.item.id } : null,
+  // { active: [...] } once the manifest says which layers exist, or straight from the URL.
+  // An item's own layer is switched on whatever else the link asked for: a card with
+  // nothing drawn under it is not what the link meant.
+  layers: url.layers
+    ? { active: url.item && !url.layers.includes(url.item.layer) ? [...url.layers, url.item.layer] : url.layers }
+    : null,
   catalog: [],
   level: { name: 'country', id: null },
   home: null,            // { t }: a request to clear everything and frame the country again
@@ -70,6 +76,14 @@ if (!supported) {
     labelText: (unit, lang) => unit.name[lang] || unit.name.en,
   });
   attachGestures(canvas, store);
+  if (url.item && !url.layers) {
+    // The catalogue's defaults land first; add the linked item's layer to them once.
+    const unsub = store.subscribe('layers', (l) => {
+      if (!l) return;
+      if (!l.active.includes(url.item.layer)) store.set('layers', { active: [...l.active, url.item.layer] });
+      unsub();
+    });
+  }
   if (url.view || url.state) {
     // Restore /state/<slug> or ?state=<slug> once the units are known, before the first frame.
     const unsub = store.subscribe('regions', (r) => {

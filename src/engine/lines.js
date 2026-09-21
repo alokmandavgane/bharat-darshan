@@ -221,9 +221,11 @@ export function createLines(scene, terrainUniforms) {
       }
       return best;
     },
-    /** A line item by id, for the card and the camera. */
+    /** A line item by id, for the card and the camera, with what the card needs about it. */
     find(layerId, itemId) {
-      return layers.get(layerId)?.records.find((r) => r.item.id === itemId) || null;
+      const l = layers.get(layerId);
+      const rec = l?.records.find((r) => r.item.id === itemId);
+      return rec ? { ...rec, categories: l.categories, fields: l.fields } : null;
     },
     /** Highlight one item, or nothing. */
     setSelected(sel) {
