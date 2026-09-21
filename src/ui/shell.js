@@ -234,7 +234,39 @@ export function createShell(root, store) {
     return out;
   }
 
+  /**
+   * A `prisms` layer's key: what the columns' heights mean. Each bar is drawn at the
+   * fraction of the range its value sits at, which is the same linear map the vertex
+   * shader raises the ground by.
+   */
+  function heightLegend(layer) {
+    if (layer.type !== 'prisms' || !layer.height?.legend?.length) return null;
+    const [lo, hi] = layer.height.domain || [0, 1];
+    const out = document.createDocumentFragment();
+    const ul = document.createElement('ul');
+    ul.className = 'legend legend-heights';
+    for (const v of layer.height.legend) {
+      const li = document.createElement('li');
+      const bar = document.createElement('span');
+      bar.className = 'legend-bar';
+      bar.style.setProperty('--h', `${(Math.min(1, Math.max(0, (v - lo) / ((hi - lo) || 1))) * 34 + 2).toFixed(1)}px`);
+      const unit = pick(layer.unit || {});
+      li.append(bar, document.createTextNode(unit ? unit.replace('{n}', formatNumber(v)) : formatNumber(v)));
+      ul.appendChild(li);
+    }
+    out.append(ul);
+    if (layer.note) {
+      const p = document.createElement('p');
+      p.className = 'legend-note';
+      p.textContent = pick(layer.note);
+      out.append(p);
+    }
+    return out;
+  }
+
   function layerLegend(layer) {
+    const heights = heightLegend(layer);
+    if (heights) return heights;
     // A choropleth coloured by a numeric scale reads as ranges of a unit; one coloured by
     // category reads as its categories, like any other layer, and only the caveat differs.
     const categorical = layer.scale === CATEGORICAL;

@@ -3,7 +3,7 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
-import { asChoropleth, choroplethLookup, FILL_TYPES } from './choropleth.js';
+import { asChoropleth, choroplethLookup, FILL_TYPES, prismLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createWorld } from './world.js';
 import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
@@ -217,6 +217,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let choroId = null;                // the one on show
   let choroLook = null;
   let areaFill = null;        // the `areas` layer on show, for picking an area by its raster
+  const prismFiles = new Map();
+  let prismLook = null;
+  let prismKm = 0;           // how far the top of the prisms layer's range stands up
+  let prismValues = null;    // { values, domain }: the same lift on the CPU, for picking
   let cancelChoro = null;
 
   function fadeChoro(to, ms, onDone) {
@@ -252,6 +256,23 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     };
     if (terrain.uniforms.uChoroMix.value <= 0.01) put();
     else fadeChoro(0, 250, put);
+  }
+
+  /**
+   * The `prisms` layer on show, if any. Height is its own channel -- a fill colours the
+   * clay, a prism raises it -- so this is independent of which fill is on.
+   */
+  function showPrisms() {
+    if (!terrain) return;
+    const active = store.get('layers')?.active || [];
+    const id = active.find((x) => manifest?.layers?.find((l) => l.id === x)?.type === 'prisms') || null;
+    const file = id ? prismFiles.get(id) : null;
+    prismLook?.dispose();
+    prismLook = file ? prismLookup(file) : null;
+    prismKm = file?.height?.km || 0;
+    terrain.setPrisms(prismLook, prismKm);
+    prismValues = file ? { values: file.values, domain: file.height?.domain || [0, 1] } : null;
+    invalidate();
   }
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
@@ -301,11 +322,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           })
           .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
           .finally(() => loading.delete(id));
+      } else if (entry.type === 'prisms' && !prismFiles.has(id)) {
+        done((data) => { prismFiles.set(id, data); showPrisms(); });
       } else if (entry.type === 'regional' && !regionalFiles.has(id)) {
         done((data) => { regionalFiles.set(id, data); publishRegional(); publishIndex(); });
       }
     }
     showChoropleth(activeChoro());
+    showPrisms();
     publishRegional();
     publishIndex();
     invalidate();
@@ -502,9 +526,23 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   const liftKm = (hM) => (hM <= 0 ? 0 : terrain.uniforms.uExag.value * Math.pow(hM / CURVE.hRef, CURVE.gamma) * CURVE.hRef * 0.001);
 
   /** Terrain hit under a screen point (px from the viewport centre, y up), or null before load. */
+  /**
+   * A `prisms` layer raises the ground in the vertex shader, so the CPU heightfield has
+   * to be told the same thing or every pick would land on the ground the prism stands on
+   * rather than on its top. -1 asks for the tallest, which is where a ray must start.
+   */
+  function prismLift(id) {
+    if (!prismValues || !prismKm) return 0;
+    if (id === -1) return prismKm;
+    const v = prismValues.values?.[id];
+    if (v === undefined) return 0;
+    const [lo, hi] = prismValues.domain;
+    return prismKm * Math.min(1, Math.max(0, (v - lo) / ((hi - lo) || 1)));
+  }
+
   function pick(sx, sy) {
     if (!field) return null;
-    return pickTerrain(store.get('camera'), viewport, sx, sy, field, liftKm, raised);
+    return pickTerrain(store.get('camera'), viewport, sx, sy, field, liftKm, raised, prismLift);
   }
 
   /**
@@ -527,7 +565,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   /** Screen position (px from the viewport centre, y up) of a ground point [x, z] on the terrain. */
   function project(point) {
     if (!field) return null;
-    return projectGround(store.get('camera'), viewport, point[0], point[1], field, liftKm, raised);
+    return projectGround(store.get('camera'), viewport, point[0], point[1], field, liftKm, raised, prismLift);
   }
 
   // --- state view: the unit lifts out as a block, the rest steps back, the camera flies in

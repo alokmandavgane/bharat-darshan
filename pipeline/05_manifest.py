@@ -57,7 +57,7 @@ def main():
             # layer itself is fetched; the item bodies stay in the layer file.
             layers.append({k: L[k] for k in ('id', 'type', 'marker', 'size', 'title', 'icon', 'group',
                                              'default_on', 'count', 'reviewed', 'categories',
-                                             'fields', 'scale', 'unit', 'note') if k in L}
+                                             'fields', 'scale', 'height', 'unit', 'note') if k in L}
                           | {'path': f'layers/{n}'})
     world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')
              if os.path.exists(os.path.join(out, 'terrain', f'world-{k}.bin.gz'))}

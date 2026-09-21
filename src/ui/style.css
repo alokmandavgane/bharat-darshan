@@ -245,6 +245,16 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .legend[data-kind="points"] .legend-swatch { width: 10px; height: 10px; border-radius: 50%; }
 .legend[data-kind="lines"] .legend-swatch { width: 16px; height: 3px; border-radius: 2px; }
 /* A symbols layer's size key: each circle at the diameter the map would draw it at. */
+/* A prisms layer's key: a column at the height the map would raise the ground to. */
+.legend-heights { align-items: flex-end; gap: 6px 14px; }
+.legend-heights li { align-items: flex-end; }
+.legend-bar {
+  width: 9px;
+  height: var(--h);
+  flex: none;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ink) 34%, transparent), color-mix(in srgb, var(--ink) 18%, transparent));
+}
 .legend-sizes { align-items: flex-end; gap: 6px 14px; }
 .legend-sizes li { align-items: center; }
 .legend-size {

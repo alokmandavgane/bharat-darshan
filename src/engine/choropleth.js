@@ -32,6 +32,38 @@ export function asChoropleth(file) {
   };
 }
 
+/**
+ * A `prisms` layer -> the per-region heights the vertex shader raises the ground by
+ * (PLAN.md section 5). The same 256-texel lookup as a choropleth's, holding a fraction
+ * of the layer's range rather than a band index: r is where the region's value sits
+ * between the domain's ends, g marks that it has one at all.
+ *
+ * Linear, not square-rooted as a symbol's radius is. A circle is read by its area and a
+ * column by its height, so height should go as the value: twice the people, twice the
+ * column.
+ * @param {{ height: { domain: number[] }, values: Record<string, number> }} layer
+ */
+export function prismLookup(layer) {
+  const [lo, hi] = layer.height?.domain || [0, 1];
+  const span = (hi - lo) || 1;
+  const data = new Uint8Array(256 * 2);
+  for (const [id, value] of Object.entries(layer.values || {})) {
+    const i = Number(id);
+    if (!Number.isInteger(i) || i < 1 || i > 255 || !Number.isFinite(value)) continue;
+    const t = Math.min(1, Math.max(0, (Number(value) - lo) / span));
+    data[i * 2] = Math.round(t * 255);
+    data[i * 2 + 1] = 255;
+  }
+  const texture = new DataTexture(data, 256, 1, RGFormat, UnsignedByteType);
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
+  texture.generateMipmaps = false;
+  texture.flipY = false;
+  texture.unpackAlignment = 1;
+  texture.needsUpdate = true;
+  return { texture, dispose: () => texture.dispose() };
+}
+
 /** The band a value falls in: the last one whose `from` it has reached. */
 export function bandOf(scale, value) {
   let at = 0;

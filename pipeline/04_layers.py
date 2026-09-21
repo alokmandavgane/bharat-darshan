@@ -36,7 +36,7 @@ from PIL import Image  # noqa: E402
 from pipeline.lib import fetch, grid, lines, pack, raster, shapefile  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas')
+TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
@@ -103,6 +103,15 @@ def validate_layer(layer, folder):
             p += validate_scale(layer.get('scale'))
             if not bilingual(layer.get('unit')):
                 p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
+    elif layer.get('type') == 'prisms':
+        # The drawing only a 3D atlas has: the ground of a region raised by a value.
+        # It reads values.csv exactly as a choropleth does, and declares how far the top
+        # of its range should stand up. It has no categories: a column is one quantity.
+        if cats:
+            p.append('a prisms layer has a height, not categories')
+        p += validate_height(layer.get('height'))
+        if not bilingual(layer.get('unit')):
+            p.append('a prisms layer needs a bilingual unit template, e.g. "{n} people"')
     elif not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
     if layer.get('type') == 'areas':
@@ -192,6 +201,24 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
         problems.append(f"nothing of these falls inside India: {', '.join(missing)}")
     print(f'    raster {width}x{height} -> {rel} ({size // 1024} KB)')
     return out_items, problems
+
+
+def validate_height(h):
+    """How far a prisms layer stands up: the value range, the km at the top, the key."""
+    if not isinstance(h, dict):
+        return ['a prisms layer needs a height: { domain, km, legend }']
+    p = []
+    d = h.get('domain')
+    if not (isinstance(d, list) and len(d) == 2 and all(isinstance(n, (int, float)) for n in d)):
+        p.append('height.domain must be two numbers')
+    elif d[0] >= d[1]:
+        p.append('height.domain must ascend')
+    if not isinstance(h.get('km'), (int, float)) or h['km'] <= 0:
+        p.append('height.km must say how far the top of the range stands up, in km')
+    legend = h.get('legend')
+    if not (isinstance(legend, list) and legend and all(isinstance(n, (int, float)) for n in legend)):
+        p.append('height.legend must list the values the key shows a column for')
+    return p
 
 
 def validate_size(layer):
@@ -487,6 +514,10 @@ def build_layer(folder, states, ids, heights, out):
         out_items, region_problems = build_regional(items, cats, by_iso, by_id, fields)
         problems += region_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
+    if layer.get('type') == 'prisms' and not problems:
+        values, prism_problems = build_choropleth(layer, folder, by_iso, by_id)
+        problems += prism_problems
+        return finish(layer, [], out, problems, order=lambda i: i['id'], extra={'values': values})
     if layer.get('type') == 'choropleth' and not problems:
         values, choro_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += choro_problems
@@ -535,7 +566,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
         return layer, None, problems
     out_items.sort(key=order)
     data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'size', 'title', 'icon', 'group', 'categories',
-                                  'fields', 'scale', 'unit', 'note', 'sources', 'attribution') if k in layer}
+                                  'fields', 'scale', 'height', 'unit', 'note', 'sources', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')

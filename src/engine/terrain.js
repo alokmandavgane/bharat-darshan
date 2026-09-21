@@ -115,6 +115,9 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     // 1 only on the backdrop, which ends as a round pool instead of at its rect.
     uPool: { value: 0 },
     // The choropleth layer on show, if any: a lookup by region id and its band colours.
+    // A `prisms` layer: per-region height, read in the vertex shader.
+    uPrismLut: { value: zeroTexture() },
+    uPrismKm: { value: 0 },
     uChoroLut: { value: zeroTexture() },
     // An `areas` layer's own id raster, when one is the fill on show; otherwise the
     // fill is indexed by the state ids the terrain already has.
@@ -224,6 +227,17 @@ export function createTerrain({ tierData, grid, sizeKm }) {
       broadcast((u) => {
         u.uChoroIds.value = texture || blank;
         u.uChoroOwnIds.value = texture ? 1 : 0;
+      });
+    },
+    /**
+     * A `prisms` layer, or null: the lookup of per-region heights and how far the top of
+     * its range stands up, in km. Colour and height are separate channels, so a prisms
+     * layer and a fill can be on together.
+     */
+    setPrisms(look, km) {
+      broadcast((u) => {
+        u.uPrismLut.value = look ? look.texture : blank;
+        u.uPrismKm.value = look ? km : 0;
       });
     },
     /** How far it has faded in, 0..1. */
