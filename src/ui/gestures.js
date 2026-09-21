@@ -15,6 +15,14 @@ const TAP_SLOP = 8;         // px of travel that still counts as a tap
 const TAP_MS = 350;
 const DOUBLE_MS = 300;
 const GIVE = 0.12;          // how far past the bounds a hand may stretch the view, x the view height
+// What two fingers mean (F5). A gesture pans until it has travelled this far, then
+// commits: fingers together and mostly vertical (the spread within TILT_SPREAD_PX and
+// the angle within TILT_TWIST_DEG) is a tilt, anything else is the map.
+const MODE_SLOP_PX = 12;
+const TILT_SPREAD_PX = 24;
+const TILT_TWIST_DEG = 7;
+const TWIST_LATCH_DEG = 8;  // how far the fingers must turn before a twist becomes a turn
+const TILT_PER_PX = 0.2;    // degrees of pitch per pixel the midpoint travels
 
 /**
  * Taps land in the store as `tap` { x, y, type } and pointer moves (fine pointers, no
@@ -27,7 +35,8 @@ export function attachGestures(canvas, store) {
   /** @type {Map<number, {x:number,y:number,sx:number,sy:number,t:number,type:string,button:number}>} */
   const pointers = new Map();
   let lastTap = 0;
-  let pinch = null; // { dist, angle, midX, midY }
+  let pinch = null; // { dist, angle, midX, midY }: the two fingers, last move
+  let two = null;   // { mode, twist, start }: what this two-finger gesture turned out to mean
 
   const viewport = () => store.get('viewport');
   const cam = () => store.get('camera');
@@ -101,6 +110,7 @@ export function attachGestures(canvas, store) {
       held = rec.turn ? turnAnchor(p.x, p.y) : null;
     } else if (pointers.size === 2) {
       pinch = pinchState();
+      two = { mode: 'undecided', twist: false, start: { ...pinch } };
       held = turnAnchor(pinch.midX, pinch.midY);   // two fingers hold the point between them
     }
     e.preventDefault();
@@ -136,31 +146,77 @@ export function attachGestures(canvas, store) {
         const [gx, gz] = groundShift(c, -dx, -dy, vp);
         write({ ...c, x: c.x + gx, z: c.z + gz });
       }
-    } else if (pointers.size === 2 && pinch && held) {
+    } else if (pointers.size === 2 && pinch && held && two) {
       const now = pinchState();
+      decideTwoFinger(now);
       let c = cam();
-      // Pinch to zoom, twist to turn, both fingers down the screen to tilt...
-      if (pinch.dist > 20 && now.dist > 20) {
-        c = { ...c, zoom: clamp(c.zoom * (pinch.dist / now.dist), LIMITS.zoom[0], LIMITS.zoom[1]) };
+      if (two.mode === 'tilt') {
+        // Tilting and nothing else: the fingers are travelling together, so the point
+        // they took hold of stays where it was on screen rather than following them.
+        write(orbitAbout(c, c.yaw, c.pitch + (now.midY - pinch.midY) * TILT_PER_PX, held, vp));
+      } else {
+        // Pinch to zoom; twist to turn, but only once it has latched.
+        if (two.mode === 'map' && pinch.dist > 20 && now.dist > 20) {
+          c = { ...c, zoom: clamp(c.zoom * (pinch.dist / now.dist), LIMITS.zoom[0], LIMITS.zoom[1]) };
+        }
+        if (two.twist) c = clampCamera({ ...c, yaw: c.yaw - (deltaAngle(now.angle, pinch.angle) * 180) / Math.PI });
+        // And the gesture keeps the point it took hold of between the fingers, wherever
+        // the fingers have carried it. That is the pan, and there is no separate one:
+        // holding the anchor to the new midpoint is exactly what a pan means.
+        write(holdAnchor(c, { ...held, sx: now.midX, sy: now.midY }, vp));
       }
-      let dAng = now.angle - pinch.angle;
-      if (dAng > Math.PI) dAng -= 2 * Math.PI; else if (dAng < -Math.PI) dAng += 2 * Math.PI;
-      c = clampCamera({ ...c, yaw: c.yaw - (dAng * 180) / Math.PI, pitch: c.pitch + (now.midY - pinch.midY) * 0.2 });
-      // ...and the whole gesture keeps the point it took hold of between the fingers,
-      // wherever the fingers have carried it. That is the pan, and there is no separate
-      // one: holding the anchor to the new midpoint is exactly what a pan means.
-      write(holdAnchor(c, { ...held, sx: now.midX, sy: now.midY }, vp));
       pinch = now;
     }
+  }
+
+  /** The signed difference between two angles, in radians, brought into (-pi, pi]. */
+  function deltaAngle(a, b) {
+    let d = a - b;
+    if (d > Math.PI) d -= 2 * Math.PI; else if (d < -Math.PI) d += 2 * Math.PI;
+    return d;
+  }
+
+  /**
+   * What are those two fingers asking for (PLAN.md F5)? Everything at once was the old
+   * answer: each move applied pan, zoom, twist and tilt together, with the midpoint's
+   * vertical travel feeding both the pan and the pitch. So a two-finger drag panned and
+   * tilted at the same time, and an ordinary pinch whose fingers drifted wobbled the
+   * yaw and the pitch.
+   *
+   * Now a gesture starts undecided -- panning, which is harmless and is what a hand
+   * expects to happen at once -- and commits after a few pixels of travel. Fingers
+   * moving together, mostly up or down the screen, with the spread and the angle between
+   * them barely changing, mean tilt and nothing else. Anything else is the map: pinch and
+   * pan, with twist joining only once the angle has really moved, and latching there.
+   * The mode holds until a finger lifts.
+   */
+  function decideTwoFinger(now) {
+    const turned = Math.abs(deltaAngle(now.angle, two.start.angle) * 180) / Math.PI;
+    if (two.mode !== 'undecided') {
+      if (two.mode === 'map' && !two.twist && turned > TWIST_LATCH_DEG) two.twist = true;
+      return;
+    }
+    const spread = Math.abs(now.dist - two.start.dist);
+    const dx = now.midX - two.start.midX, dy = now.midY - two.start.midY;
+    if (Math.max(spread, Math.hypot(dx, dy)) < MODE_SLOP_PX && turned < TWIST_LATCH_DEG) return;
+    const together = spread < TILT_SPREAD_PX && turned < TILT_TWIST_DEG;
+    two.mode = together && Math.abs(dy) > Math.abs(dx) * 1.5 ? 'tilt' : 'map';
+    if (two.mode === 'map' && turned > TWIST_LATCH_DEG) two.twist = true;
   }
 
   function onUp(e) {
     const rec = pointers.get(e.pointerId);
     if (!rec) return;
     pointers.delete(e.pointerId);
-    if (pointers.size === 0) { held = null; settle(); }
-    else if (pointers.size === 1) { pinch = null; held = null; resetOrigins(); }
-    else if (pointers.size === 2) { pinch = pinchState(); held = turnAnchor(pinch.midX, pinch.midY); }
+    // A finger lifting ends the two-finger gesture and whatever it had decided to be;
+    // if two are still down, what is left is a new one, undecided again.
+    if (pointers.size === 0) { held = null; two = null; settle(); }
+    else if (pointers.size === 1) { pinch = null; two = null; held = null; resetOrigins(); }
+    else if (pointers.size === 2) {
+      pinch = pinchState();
+      two = { mode: 'undecided', twist: false, start: { ...pinch } };
+      held = turnAnchor(pinch.midX, pinch.midY);
+    }
     const moved = Math.hypot(rec.x - rec.sx, rec.y - rec.sy);
     const dt = performance.now() - rec.t;
     if (pointers.size === 0 && moved < TAP_SLOP && dt < TAP_MS && rec.button === 0) {
