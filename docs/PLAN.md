@@ -530,6 +530,16 @@ What every layer of a given type gets without writing code:
   The lift happens on the GPU, so the CPU heightfield the picker marches against has to
   be told the same thing or every tap on a raised region lands on the ground beneath it.
 
+- **`flows`**: not a type of its own but a third kind of generated geometry on `lines`.
+  The layer sets `"arrows": true` and an item gives `{ from, to, bow }`; the build bends
+  an arc between the two places and shapes the ribbon into an arrowhead with a per-vertex
+  width multiplier, so the head picks, fades, animates and takes its colour exactly as a
+  river does. Two things an arrow does not inherit from a river: it is never turned
+  downstream against the heightmap, having been given its direction, and it is not
+  clipped to India, because a monsoon arrow that stopped at the coast would tell the
+  opposite of the story. The head is resampled rather than shaped over whatever vertices
+  simplification left, or a long arc has none to shape.
+
 A `points` layer can set `marker: "label"` to be drawn as its name alone, with no token,
 for things that are a stretch of country rather than a spot on it (mountain ranges,
 plateaus, deserts). Tokens claim their screen space first, so a label yields to a place.
@@ -562,7 +572,7 @@ map is a folder and a source, whatever it shows.
 | `symbols` | a circle **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions, filled and draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
-| `flows` | curved arrows between places, width by volume, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | new; the ribbon shader plus an arc and an arrowhead | monsoon onset |
+| `flows` | curved arrows between places, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` on a `lines` layer) | the monsoon's advance (done) |
 | `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
 | `regional` | nothing on the map; listed on a state's card | festivals, languages, food | built | done |
 
@@ -919,7 +929,8 @@ round, each with its proving dataset and the full contract: categorical chorople
 proven by the Tropic of Cancer and the Standard Meridian*) -> `symbols` (*done
 2026-09-21, proven by 24 power stations*) -> `areas` (*done 2026-09-21, proven by 16
 physical divisions*) -> `prisms` (*done 2026-09-21, proven by the 2011 population*) ->
-`raster` (rainfall, **blocked**: see open question 13) -> `flows` (monsoon onset). Base styles and the year
+`flows` (*done 2026-09-21, proven by the monsoon's advance*). Only `raster` is left, and
+it is **blocked on licensing**: see open question 13. Base styles and the year
 scrubber land with the first primitive that needs them. District choropleths join when
 open question 10 has an answer. Exit: a mineral map, a rainfall map and a political map
 exist, and `src/` names none of them.
@@ -1619,6 +1630,22 @@ docs/DEPLOY.md).
   And two population maps now exist that look alike and say different things -- density
   colours a state by how crowded it is, prisms raise it by how many people live there,
   and Delhi is the extreme of one and invisible in the other. Both notes say which.
+- 2026-09-21, twenty-fifth round: `flows`, proven by the monsoon's advance, and with it
+  every primitive of Phase 5 except `raster`, which is blocked on licensing rather than
+  on code (open question 13).
+  It turned out not to be a type at all: a `lines` layer with `"arrows": true` and a
+  third kind of generated geometry. The head is the existing ribbon widened by a
+  per-vertex multiplier, so it picks, fades, animates and colours like a river for free.
+  Three faults, and all three were the primitive inheriting something right for rivers.
+  The head needs vertices of its own, because simplification leaves a 2,200 km arc nine
+  points and one of them inside the last ninety km -- a width profile over the survivors
+  produced no head at all. `flow: true` also turns a run downstream against the
+  heightmap, which is right for water whose direction the source does not carry and had
+  the monsoon arriving from Kerala into the Arabian Sea. And everything is clipped to
+  India, which would have stopped the arrows at the coast and told the opposite of the
+  story they are for.
+  Worth remembering as a shape of bug: each of those was a default that had been correct
+  every previous time it ran.
 
 ### What exists
 
@@ -1679,6 +1706,15 @@ docs/DEPLOY.md).
 
 ### Next
 
+0. **Phase 5 is done bar one primitive.** Six of the seven are built, each proven on a
+   real dataset with the full contract, and `src/` names none of the layers. Only
+   `raster` is left and it is blocked on licensing, not on code: open question 13 sets
+   out the three ways out. Once it is unblocked, or set aside, Phase 6 is the atlas shell
+   -- plates, the contents page, `/atlas/<id>` URLs, the source registry, the cartouche
+   and the scale bar -- which is what turns eighteen layers into pages someone can read.
+   Two smaller things wait there too: the group vocabulary is physical / culture /
+   network, and three layers have now been filed under a heading that does not really fit
+   them, which Phase 6's sections are meant to settle.
 0. **Phase 4 is done bar the owner's eyes.** F0-F8 and "The missing wow" items 1, 2 and
    4 all shipped on 2026-09-21, one commit each; item 3 was the handling itself. What
    remains needs a phone and a person: judge the momentum, the entrance and the new
