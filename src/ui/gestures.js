@@ -2,7 +2,9 @@
 // Pointer gestures on the map canvas -> camera changes in the store. One finger drags
 // the ground; two fingers pinch (zoom about the midpoint), twist (yaw) and drag
 // vertically together (tilt). Mouse: drag pans, wheel zooms about the cursor,
-// right-drag or shift-drag orbits. Double tap / click zooms in about the point.
+// left-drag orbits, right-drag (or shift-drag) pans. Double tap / click zooms in about
+// the point. Touch is unchanged: one finger pans, two rotate and pinch, because a phone
+// has no second button and panning is what a finger on a map is for.
 import { clampCamera, groundShift, orbitAbout, zoomAbout } from '../engine/camera-math.js';
 
 const TAP_SLOP = 8;         // px of travel that still counts as a tap
@@ -54,7 +56,8 @@ export function attachGestures(canvas, store) {
     rec.x = p.x; rec.y = p.y;
     const vp = viewport();
     if (pointers.size === 1) {
-      const orbit = rec.button === 2 || e.shiftKey;
+      // Mouse: the left button turns the model, the right one slides it. A finger pans.
+      const orbit = rec.type === 'mouse' && rec.button === 0 && !e.shiftKey;
       if (orbit) {
         const c = cam();
         write(orbitAbout(c, c.yaw - dx * 0.25, c.pitch + dy * 0.25, 0, 0, vp));
