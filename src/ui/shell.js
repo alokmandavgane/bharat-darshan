@@ -252,8 +252,14 @@ export function createShell(root, store) {
   }, { immediate: true });
   search.addEventListener('input', () => renderList());
   list.addEventListener('click', (e) => {
-    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id]');
+    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id], button[data-layer]');
     if (!btn) return;
+    if (btn.dataset.layer) {
+      // A found item is opened by name alone; the engine fills it in and flies to it.
+      store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
+      store.set('sheetSnap', { name: 'peek', t: performance.now() });
+      return;
+    }
     const id = Number(btn.dataset.id);
     store.set('selection', id);
     // Picking from the list goes as deep as tapping the map does.
@@ -275,29 +281,46 @@ export function createShell(root, store) {
     return parts.filter((n, i, a) => n && n !== u.name[cur] && a.indexOf(n) === i).join(' · ');
   }
 
-  /** Sorted, filtered list of every unit so each one is reachable without hitting it. */
+  const SEARCH_HITS = 40;      // enough to find anything, few enough to stay light on a phone
+
+  /** One row of the list: a button with its name and a quieter second line. */
+  function listRow(name, alt, data) {
+    const li = document.createElement('li');
+    const b = document.createElement('button');
+    b.type = 'button';
+    Object.assign(b.dataset, data);
+    const main = document.createElement('span');
+    main.className = 'unit-list-name';
+    main.textContent = name;
+    const second = document.createElement('span');
+    second.className = 'unit-list-alt';
+    second.textContent = alt;
+    b.append(main, second);
+    li.appendChild(b);
+    return li;
+  }
+
+  /**
+   * Every unit, so each one is reachable without hitting it, and -- once something is
+   * typed -- whatever the layers on show can also answer with. The engine publishes that
+   * index, so this searches exactly what is drawn: a state view finds that state's places.
+   */
   function renderList() {
     const r = store.get('regions');
     if (!r) return;
     const lang = currentLanguage();
     const q = search.value.trim().toLowerCase();
-    const match = (u) => !q || Object.values(u.name).some((n) => n && n.toLowerCase().includes(q));
-    const units = r.units.filter(match).sort((a, b) => pick(a.name).localeCompare(pick(b.name), lang));
-    list.replaceChildren(...units.map((u) => {
-      const li = document.createElement('li');
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.dataset.id = String(u.id);
-      const main = document.createElement('span');
-      main.className = 'unit-list-name';
-      main.textContent = pick(u.name);
-      const alt = document.createElement('span');
-      alt.className = 'unit-list-alt';
-      alt.textContent = otherNames(u);
-      b.append(main, alt);
-      li.appendChild(b);
-      return li;
-    }));
+    const hit = (name) => Object.values(name || {}).some((n) => n && String(n).toLowerCase().includes(q));
+    const units = r.units.filter((u) => !q || hit(u.name)).sort((a, b) => pick(a.name).localeCompare(pick(b.name), lang));
+    const rows = units.map((u) => listRow(pick(u.name), otherNames(u), { id: String(u.id) }));
+    if (q) {
+      const catalog = store.get('catalog') || [];
+      for (const x of (store.get('index') || []).filter((i) => hit(i.name)).slice(0, SEARCH_HITS)) {
+        const layer = catalog.find((l) => l.id === x.layer);
+        rows.push(listRow(pick(x.name), layer ? pick(layer.title) : '', { layer: x.layer, item: x.id }));
+      }
+    }
+    list.replaceChildren(...rows);
   }
 
   function hostOf(url) {
@@ -509,6 +532,7 @@ export function createShell(root, store) {
   store.subscribe('level', renderSelection);
   store.subscribe('drafts', renderSelection);
   store.subscribe('item', () => { renderSelection(); renderSteps(); });
+  store.subscribe('index', renderList);
   store.subscribe('tour', renderSteps);
   for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
   store.subscribe('catalog', renderChips, { immediate: true });

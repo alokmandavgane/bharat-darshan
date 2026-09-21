@@ -87,6 +87,18 @@ export function linesGeometry(data) {
   return { geometry: g, records };
 }
 
+/**
+ * Does this run pass through the region the test answers for? Asked of the run's own
+ * points, not its bounding box: a highway from Kashmir to Kanyakumari has a box that
+ * contains every state, so a box test would offer it in all of them.
+ */
+function reaches(rec, inside) {
+  for (const flat of rec.runs) {
+    for (let i = 0; i + 1 < flat.length; i += 2) if (inside(flat[i], flat[i + 1])) return true;
+  }
+  return false;
+}
+
 /** Square of the distance from (x, z) to the segment a-b, in scene km. */
 function segDist2(x, z, ax, az, bx, bz) {
   const vx = bx - ax, vz = bz - az;
@@ -220,6 +232,22 @@ export function createLines(scene, terrainUniforms) {
         }
       }
       return best;
+    },
+    /**
+     * Every item of the layers on show, for the search index. With a test (is this point
+     * in the lifted unit?), only the runs that pass through it: a search inside Kerala
+     * should not answer with a highway that never comes near it.
+     */
+    list(active, inside = null) {
+      const out = [];
+      for (const [id, l] of layers) {
+        if (!active.has(id)) continue;
+        for (const rec of l.records) {
+          if (inside && !reaches(rec, inside)) continue;
+          out.push({ layer: id, item: rec.item });
+        }
+      }
+      return out;
     },
     /** A line item by id, for the card and the camera, with what the card needs about it. */
     find(layerId, itemId) {

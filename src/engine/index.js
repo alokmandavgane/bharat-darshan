@@ -152,6 +152,25 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     return true;
   }
 
+  /**
+   * What the search box can find: every item of the layers on show, by name. The engine
+   * publishes it rather than the shell fetching the layer files a second time, and it
+   * narrows exactly as the map does -- a state view lists that state's places only.
+   */
+  function publishIndex() {
+    const active = new Set(store.get('layers')?.active || []);
+    const drafts = !!store.get('drafts');
+    const lv = store.get('level') || level;
+    // In a state view a run counts only where it actually crosses that state, which the
+    // ID raster answers exactly; a bounding box would reach into the neighbours.
+    const inState = lv?.name === 'state' && field ? (x, z) => field.idAt(x, z) === lv.id : null;
+    const rows = [
+      ...points.list({ active, drafts, level: lv }),
+      ...(lines?.list(active, inState) || []),
+    ].map(({ layer, item }) => ({ layer, id: item.id, name: item.name }));
+    store.set('index', rows);
+  }
+
   // --- choropleths: at most one is drawn at a time (PLAN.md section 10, layer sprawl),
   // so changing one fades out through the clay and back rather than cross-dissolving two
   // lookups. The whole layer is one 256-texel texture; swapping it costs nothing.
@@ -217,17 +236,20 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           .finally(() => loading.delete(id));
       };
       if (entry.type === 'points' && !points.loaded.includes(id)) {
-        done((data) => { points.setLayer(data); tour.refresh(); });
+        done((data) => { points.setLayer(data); tour.refresh(); publishIndex(); });
       } else if (entry.type === 'lines' && lines && !lines.has(id)) {
-        done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); });
+        done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); publishIndex(); });
       } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
         done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
       }
     }
     showChoropleth(activeChoro());
+    publishIndex();
     invalidate();
   }
   store.subscribe('layers', loadActiveLayers);
+  store.subscribe('drafts', publishIndex);
+  store.subscribe('level', publishIndex);
 
   /** Fly to a place: closer at country level, a pan inside a state; returns the flight time. */
   function flyToItem(item, { ms = 800, yaw = undefined } = {}) {
