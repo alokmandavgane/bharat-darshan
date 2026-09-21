@@ -52,5 +52,6 @@
   "tour.play": "Play a tour of the places",
   "tour.pause": "Pause the tour",
   "layer.group.physical": "Land and water",
-  "layer.group.culture": "People and places"
+  "layer.group.culture": "People and places",
+  "layer.group.network": "Roads and rail"
 }

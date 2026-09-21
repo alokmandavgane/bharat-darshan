@@ -1,0 +1,251 @@
+[
+  {
+    "id": "howrah-delhi",
+    "status": "draft",
+    "name": {
+      "en": "Howrah–Delhi main line",
+      "hi": "हावड़ा–दिल्ली मुख्य लाइन"
+    },
+    "category": "trunk",
+    "rank": 1,
+    "opened": 1866,
+    "waypoints": [
+      {
+        "lat": 22.583,
+        "lon": 88.342
+      },
+      {
+        "lat": 23.685,
+        "lon": 86.983
+      },
+      {
+        "lat": 23.795,
+        "lon": 86.43
+      },
+      {
+        "lat": 24.796,
+        "lon": 85.001
+      },
+      {
+        "lat": 25.285,
+        "lon": 83.12
+      },
+      {
+        "lat": 25.436,
+        "lon": 81.847
+      },
+      {
+        "lat": 26.45,
+        "lon": 80.332
+      },
+      {
+        "lat": 27.897,
+        "lon": 78.088
+      },
+      {
+        "lat": 28.614,
+        "lon": 77.209
+      }
+    ],
+    "blurb": {
+      "en": "1,451 km from Howrah to Delhi by the Grand Chord, through Asansol, Gaya, Prayagraj and Kanpur. Through running between the two cities began in 1866.",
+      "hi": "ग्रैंड कॉर्ड से हावड़ा से दिल्ली तक 1,451 किमी, आसनसोल, गया, प्रयागराज और कानपुर होते हुए। दोनों शहरों के बीच सीधी रेल 1866 में शुरू हुई।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Howrah%E2%80%93Delhi_main_line",
+      "https://en.wikipedia.org/wiki/Grand_Chord"
+    ]
+  },
+  {
+    "id": "mumbai-delhi",
+    "status": "draft",
+    "name": {
+      "en": "Mumbai–Delhi main line",
+      "hi": "मुंबई–दिल्ली मुख्य लाइन"
+    },
+    "category": "trunk",
+    "rank": 1,
+    "opened": 1928,
+    "waypoints": [
+      {
+        "lat": 18.969,
+        "lon": 72.82
+      },
+      {
+        "lat": 21.17,
+        "lon": 72.831
+      },
+      {
+        "lat": 22.307,
+        "lon": 73.181
+      },
+      {
+        "lat": 23.334,
+        "lon": 75.037
+      },
+      {
+        "lat": 25.213,
+        "lon": 75.865
+      },
+      {
+        "lat": 26.023,
+        "lon": 76.348
+      },
+      {
+        "lat": 27.492,
+        "lon": 77.673
+      },
+      {
+        "lat": 28.614,
+        "lon": 77.209
+      }
+    ],
+    "blurb": {
+      "en": "1,386 km from Mumbai Central to Delhi through Vadodara, Ratlam and Kota, the Western Railway trunk route and the fastest corridor in the country for decades.",
+      "hi": "मुंबई सेंट्रल से वडोदरा, रतलाम और कोटा होते हुए दिल्ली तक 1,386 किमी, पश्चिम रेलवे का मुख्य मार्ग और दशकों तक देश का सबसे तेज़ गलियारा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mumbai%E2%80%93Delhi_main_line",
+      "https://wr.indianrailways.gov.in/"
+    ]
+  },
+  {
+    "id": "chennai-howrah",
+    "status": "draft",
+    "name": {
+      "en": "Chennai–Howrah main line",
+      "hi": "चेन्नई–हावड़ा मुख्य लाइन"
+    },
+    "category": "coastal",
+    "rank": 1,
+    "opened": 1900,
+    "waypoints": [
+      {
+        "lat": 13.083,
+        "lon": 80.27
+      },
+      {
+        "lat": 14.443,
+        "lon": 79.987
+      },
+      {
+        "lat": 16.507,
+        "lon": 80.648
+      },
+      {
+        "lat": 17.005,
+        "lon": 81.804
+      },
+      {
+        "lat": 17.687,
+        "lon": 83.218
+      },
+      {
+        "lat": 19.315,
+        "lon": 84.793
+      },
+      {
+        "lat": 20.296,
+        "lon": 85.825
+      },
+      {
+        "lat": 22.346,
+        "lon": 87.232
+      },
+      {
+        "lat": 22.583,
+        "lon": 88.342
+      }
+    ],
+    "blurb": {
+      "en": "1,662 km up the eastern seaboard through Vijayawada, Visakhapatnam and Bhubaneswar, the line that joined Madras to Calcutta at the turn of the twentieth century.",
+      "hi": "विजयवाड़ा, विशाखापत्तनम और भुवनेश्वर होते हुए पूर्वी तट पर 1,662 किमी, वह लाइन जिसने बीसवीं सदी की शुरुआत में मद्रास को कलकत्ता से जोड़ा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Howrah%E2%80%93Chennai_main_line",
+      "https://ser.indianrailways.gov.in/"
+    ]
+  },
+  {
+    "id": "mumbai-chennai",
+    "status": "draft",
+    "name": {
+      "en": "Mumbai–Chennai main line",
+      "hi": "मुंबई–चेन्नई मुख्य लाइन"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "opened": 1871,
+    "waypoints": [
+      {
+        "lat": 18.969,
+        "lon": 72.82
+      },
+      {
+        "lat": 18.52,
+        "lon": 73.857
+      },
+      {
+        "lat": 17.659,
+        "lon": 75.906
+      },
+      {
+        "lat": 17.329,
+        "lon": 76.834
+      },
+      {
+        "lat": 15.166,
+        "lon": 77.366
+      },
+      {
+        "lat": 13.647,
+        "lon": 79.513
+      },
+      {
+        "lat": 13.083,
+        "lon": 80.27
+      }
+    ],
+    "blurb": {
+      "en": "1,279 km across the Deccan through Pune, Solapur and Guntakal, completed in 1871 and the first rail link between the two presidency capitals.",
+      "hi": "पुणे, सोलापुर और गुंतकल होते हुए दक्कन के पार 1,279 किमी, 1871 में पूर्ण और दोनों प्रेसीडेंसी राजधानियों के बीच पहली रेल कड़ी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mumbai%E2%80%93Chennai_line",
+      "https://cr.indianrailways.gov.in/"
+    ]
+  },
+  {
+    "id": "darjeeling-himalayan",
+    "status": "draft",
+    "name": {
+      "en": "Darjeeling Himalayan Railway",
+      "hi": "दार्जिलिंग हिमालयन रेलवे"
+    },
+    "category": "mountain",
+    "rank": 3,
+    "opened": 1881,
+    "waypoints": [
+      {
+        "lat": 26.685,
+        "lon": 88.435
+      },
+      {
+        "lat": 26.881,
+        "lon": 88.277
+      },
+      {
+        "lat": 27.041,
+        "lon": 88.263
+      }
+    ],
+    "blurb": {
+      "en": "88 km of 2 ft gauge from New Jalpaiguri to Darjeeling, climbing 2,000 m by loops and zigzags. Opened in 1881 and inscribed by UNESCO in 1999.",
+      "hi": "न्यू जलपाईगुड़ी से दार्जिलिंग तक 88 किमी की 2 फुट गेज लाइन, लूप और ज़िगज़ैग से 2,000 मीटर चढ़ती है। 1881 में आरंभ, 1999 में यूनेस्को सूची में।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Darjeeling_Himalayan_Railway",
+      "https://whc.unesco.org/en/list/944/"
+    ]
+  }
+]

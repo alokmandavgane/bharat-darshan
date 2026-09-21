@@ -52,5 +52,6 @@
   "tour.play": "स्थानों का भ्रमण चलाएँ",
   "tour.pause": "भ्रमण रोकें",
   "layer.group.physical": "भूमि और जल",
-  "layer.group.culture": "लोग और स्थान"
+  "layer.group.culture": "लोग और स्थान",
+  "layer.group.network": "सड़क और रेल"
 }

@@ -1,0 +1,58 @@
+{
+  "id": "rail",
+  "type": "lines",
+  "group": "network",
+  "title": {
+    "en": "Railways",
+    "hi": "रेलमार्ग"
+  },
+  "icon": "rail",
+  "default_on": false,
+  "source": {
+    "format": "shapefile-polyline",
+    "join": "route",
+    "files": {
+      "ne_rail.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_railroads.shp",
+      "ne_rail.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_railroads.prj"
+    },
+    "simplify_km": 1.5
+  },
+  "categories": [
+    {
+      "id": "trunk",
+      "title": {
+        "en": "Trunk line",
+        "hi": "प्रमुख लाइन"
+      },
+      "color": "#5b6f86"
+    },
+    {
+      "id": "coastal",
+      "title": {
+        "en": "Coastal line",
+        "hi": "तटीय लाइन"
+      },
+      "color": "#4f7f84"
+    },
+    {
+      "id": "mountain",
+      "title": {
+        "en": "Mountain line",
+        "hi": "पर्वतीय लाइन"
+      },
+      "color": "#6b6480"
+    }
+  ],
+  "fields": {
+    "opened": {
+      "type": "year",
+      "label": {
+        "en": "Opened",
+        "hi": "आरंभ"
+      }
+    }
+  },
+  "attribution": "Railway centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each line is the course the source holds between the places listed in this folder. Names, dates and lengths checked against Indian Railways and Wikipedia.",
+  "_join": "The source has geometry but no names, so an item lists the places its line is known by and the build walks the source's own parts between them.",
+  "_rank": "1 is a trunk line drawn widest, 3 a short one drawn finest; the engine reads rank, never a line's name."
+}

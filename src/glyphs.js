@@ -12,6 +12,8 @@ export const GLYPHS = {
   paw: '<circle cx="7" cy="9" r="1.8"/><circle cx="12" cy="6" r="1.8"/><circle cx="17" cy="9" r="1.8"/><path d="M12 12c-3 0-5.5 2.6-5.5 5.2 0 1.4.9 1.8 1.8 1.8 1.6 0 2.2-.9 3.7-.9s2.1.9 3.7.9c.9 0 1.8-.4 1.8-1.8C17.5 14.6 15 12 12 12z"/>',
   city: '<path d="M3 21h18M5 21V9h5v12M10 21V4h6v17M16 21v-8h4v8M7 12h1M7 15h1M12 8h2M12 12h2M12 16h2"/>',
   pin: '<path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>',
+  road: '<path d="M8 21L10 3M16 21L14 3M12 7v3M12 13v3"/>',
+  rail: '<path d="M9 21L7 3M17 21L15 3M5 8h13M4 14h13"/>',
 };
 
 export function glyphSvg(name) {
