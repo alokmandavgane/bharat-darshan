@@ -101,6 +101,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uLightDir: { value: new Vector2(-1, -1) },      // north-west at yaw 0; see setLightYaw
     uShadow: { value: new Vector3(SHADOW.offsetKm, SHADOW.softKm, SHADOW.strength) },
     uShadowTint: { value: new Color(SHADOW.tint) },
+    // How far the state view's block stands above the plate, so the plate can draw the
+    // shadow it throws. Not uLift, which the vertex shader raises geometry by: the
+    // plate's own must stay 0 or the plate would rise with the block.
+    uBlockLift: { value: 0 },
     uSelected: { value: -1 },
     uHover: { value: -1 },
     uRegion: { value: -1 },

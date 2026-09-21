@@ -523,6 +523,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     cancelLevel = tween(from, to, immediate ? 0 : 450, ({ lift, dim }) => {
       if (block) block.setLift(lift);
       if (raised) raised.km = lift;
+      terrain.uniforms.uBlockLift.value = lift;      // the plate draws the block's shadow
       terrain.uniforms.uDim.value = dim;
       invalidate();
     }, { easing: easeOutCubic });
@@ -594,6 +595,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       const to = handover ? { lift: 0, dim: from.dim } : { lift: 0, dim: 0 };
       const cancel = tween(from, to, animate ? 350 : 0, ({ lift, dim }) => {
         b.setLift(lift);
+        // The shadow sinks with the block that casts it -- except on a handover, where
+        // the incoming block is already rising and writing this uniform itself, and the
+        // socket the shadow is drawn around (uHole) is already the new state's. Two
+        // tweens writing it in the same frames would fight over it.
+        if (!handover) terrain.uniforms.uBlockLift.value = lift;
         terrain.uniforms.uDim.value = dim;
         invalidate();
       }, { onDone: () => { dropping = null; done(); } });
@@ -601,6 +607,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     } else if (!handover) {
       terrain.uniforms.uDim.value = 0;
       terrain.uniforms.uHole.value = -1;
+      terrain.uniforms.uBlockLift.value = 0;
     }
     if (handover) return;
     cancelLevel?.();

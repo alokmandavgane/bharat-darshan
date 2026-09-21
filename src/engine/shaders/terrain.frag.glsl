@@ -24,6 +24,12 @@ uniform float uKmPerPx;        // world size of one screen pixel (orthographic)
 uniform vec2 uLightDir;        // key light's ground direction, turned with the camera (F4)
 uniform vec3 uShadow;          // the model's shadow on the paper: throw km, jitter km, strength
 uniform vec3 uShadowTint;      // what colour the paper goes where the model blocks the light
+uniform float uBlockLift;      // km the state view's block stands above the plate, or 0
+
+// How far a shadow is thrown per km of height: the light is (uLightDir, 1.35) with
+// |uLightDir| = sqrt(2), so its elevation is atan(1.35 / sqrt(2)) and this is its
+// cotangent. Keep it in step with terrain.frag's L and with wall.vert.
+const float LIGHT_COT = 1.0476;
 uniform float uSelected;       // state id or -1
 uniform float uHover;          // state id or -1
 uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
@@ -240,6 +246,27 @@ void main() {
     : hole * smoothstep(0.0, 1.2 * uBorderTexelKm, min(dInt, dExt));
   float lumd = dot(col, vec3(0.3, 0.59, 0.11));
   col = mix(col, mix(vec3(lumd), col, 0.45) * 0.82, uDim * land * (1.0 - socket));
+
+  // The lifted block's own shadow, on the country around its socket. The same search
+  // back along the light as the plate's shadow on the paper, but looking for the block's
+  // footprint -- the id it was cut from -- and thrown by how far it now stands above the
+  // plate rather than by the height of the relief. Only the plate draws it: the block is
+  // the thing casting it.
+  if (plate > 0.5 && uHole >= 0.0 && uBlockLift > 0.0 && uShadow.z > 0.0) {
+    vec2 dir = normalize(uLightDir);
+    vec2 side = vec2(-dir.y, dir.x);
+    float acc = 0.0, wsum = 0.0;
+    for (int i = 0; i < 6; i++) {
+      float t = (float(i) + 0.5) / 6.0;
+      vec2 p = vUv + (dir * (t * uBlockLift * LIGHT_COT) + side * ((float(i) - 2.5) * uBlockLift * 0.06)) / uSizeKm;
+      float w = 1.0 - 0.6 * t;
+      float idp = floor(texture(uIds, luv(p)).r * 255.0 + 0.5);
+      acc += w * (1.0 - step(0.5, abs(idp - uHole)));
+      wsum += w;
+    }
+    col *= 1.0 - (acc / wsum) * uShadow.z * (1.0 - socket) * land;
+  }
+
   col = mix(col, uTable * 0.5, socket);
 
   // --- paper grain in world space

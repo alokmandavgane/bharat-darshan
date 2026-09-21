@@ -195,8 +195,10 @@ a picture laid on a page. In rough order of effect per hour:
    but the taps and their falloff blur that away at the size a shadow is. And it is
    thrown the height of the *relief*, not of the 22 km walls: a wall-sized shadow is
    about 5 px at the home view and reads as an outline round the coast rather than as a
-   thing standing on a table. Knobs in `SHADOW` in `src/engine/terrain.js`. Still to do:
-   the same for a lifted block on the plate.
+   thing standing on a table. Knobs in `SHADOW` in `src/engine/terrain.js`. The lifted
+   block casts one too, on the country around its socket: the same search, looking for
+   the id it was cut from, and thrown by how far it stands above the plate rather than by
+   the height of the relief.
 2. **An entrance.** *Done 2026-09-21.* On a cold load of the home view the model rises
    out of the page: relief 0 -> 12 while the camera tips from 84 degrees to the home
    angle, 1.4 s, once, skipped for reduced motion, for the poster, and for any link that
@@ -1512,8 +1514,7 @@ docs/DEPLOY.md).
    marker density on the reference device, and give the verdict that is the Phase 0 exit
    criterion and has never been signed off. Items 5-8 of that list wait behind that
    verdict on purpose -- they are there to be picked from once 1-4 have been looked at,
-   not done blind. The one loose end in the code is the lifted block, which still has no
-   shadow of its own on the plate.
+   not done blind.
 1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts still need a district boundary source that
