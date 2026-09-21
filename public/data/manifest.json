@@ -48,6 +48,54 @@
  },
  "layers": [
   {
+   "id": "festivals",
+   "type": "regional",
+   "title": {
+    "en": "Festivals",
+    "hi": "त्योहार"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 30,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "harvest",
+     "title": {
+      "en": "Harvest",
+      "hi": "फ़सल"
+     },
+     "color": "#b9893f"
+    },
+    {
+     "id": "devotional",
+     "title": {
+      "en": "Devotional",
+      "hi": "धार्मिक"
+     },
+     "color": "#a8503a"
+    },
+    {
+     "id": "seasonal",
+     "title": {
+      "en": "New year and season",
+      "hi": "नववर्ष और ऋतु"
+     },
+     "color": "#5f8a5a"
+    },
+    {
+     "id": "fair",
+     "title": {
+      "en": "Fair and gathering",
+      "hi": "मेला"
+     },
+     "color": "#4d7f97"
+    }
+   ],
+   "path": "layers/festivals.json"
+  },
+  {
    "id": "places",
    "type": "points",
    "title": {
@@ -536,6 +584,10 @@
   "regions/outlines/west-bengal.json": {
    "size": 11521,
    "sha256": "e66f945fbc8e"
+  },
+  "layers/festivals.json": {
+   "size": 26034,
+   "sha256": "28bd1065b8af"
   },
   "layers/places.json": {
    "size": 122864,
