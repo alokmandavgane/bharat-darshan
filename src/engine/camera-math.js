@@ -126,6 +126,72 @@ export function orbitAbout(cam, yaw, pitch, anchor, viewport) {
   return holdAnchor(clampCamera({ ...cam, yaw, pitch }), anchor, viewport);
 }
 
+// How far outside its own bounds the middle of the view may sit. Enough that the edge
+// of the model can be brought past the middle of the screen and looked at with some
+// room around it, and no more: a fifth of the bounds is 570 km of empty paper on a
+// country 2,900 km wide, which is a whole screen of nothing at any close zoom. So it is
+// the smaller of a fifth of the bounds and a third of the view height, which is about a
+// fifth of the screen at every zoom.
+export const TARGET_MARGIN = 0.2;
+export const TARGET_MARGIN_VIEW = 0.15;
+
+/** Clamp to [lo, hi], or with `give` km of springy overshoot that never runs away. */
+function soft(v, lo, hi, give) {
+  if (v >= lo && v <= hi) return v;
+  const over = v < lo ? lo - v : v - hi;
+  const past = give > 0 ? give * (1 - Math.exp(-over / give)) : 0;
+  return v < lo ? lo - past : hi + past;
+}
+
+/**
+ * The nearest point of an axis-aligned box, and how far away it is. A point inside is
+ * its own nearest point, at zero.
+ */
+function nearestInBox(px, pz, [x0, z0, x1, z1]) {
+  const qx = clamp(px, x0, x1), qz = clamp(pz, z0, z1);
+  return [qx, qz, Math.hypot(qx - px, qz - pz)];
+}
+
+/**
+ * Keep the model on the table. `clampCamera` holds the zoom and the angles and says
+ * nothing about where the camera is looking, so a few drags could carry the view
+ * thousands of km off the model with nothing but the compass to bring it back. The
+ * ground point under the middle of what can be seen has to stay within `margin` of one
+ * of the level's boxes.
+ *
+ * Several boxes, rather than one around the lot, because India is not a rectangle and
+ * neither is its convex hull any better: one box has corners in Afghanistan and in the
+ * ocean south-east of Sri Lanka, and a hull spans the 1,200 km of the Bay of Bengal
+ * between the mainland and the Andamans. Both leave the view parked on open water with
+ * nothing on screen. The units' own boxes describe the country closely enough, and the
+ * far island groups become places you reach by naming them rather than by dragging
+ * across an empty sea -- which is how an atlas is read anyway.
+ *
+ * @param {{ boxes: number[][], extent: number[] } | null} bounds
+ *   the level's parts and the box around them all, in scene km; null leaves the camera alone
+ * @param {number} give  km of springy overshoot to allow, for a gesture in progress
+ */
+export function clampTarget(cam, bounds, viewport, pad, give = 0) {
+  if (!bounds?.boxes?.length) return cam;
+  const [cx, cy] = paddedCentre(viewport, pad);
+  const [gx, gz] = groundPoint(cam, cx, cy, viewport);
+  // The margin is the smaller of a fraction of the whole model and a fraction of the
+  // view, so it is about a fifth of the screen whatever the zoom.
+  const [x0, z0, x1, z1] = bounds.extent;
+  const margin = Math.min((x1 - x0) * TARGET_MARGIN, (z1 - z0) * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW);
+  let nx = gx, nz = gz, best = Infinity;
+  for (const box of bounds.boxes) {
+    const [qx, qz, d] = nearestInBox(gx, gz, box);
+    if (d < best) { best = d; nx = qx; nz = qz; }
+    if (d === 0) return cam;                               // inside one of them: nothing to do
+  }
+  const allow = soft(best, 0, margin, give);
+  if (best <= allow) return cam;
+  const f = allow / best;
+  const tx = nx + (gx - nx) * f, tz = nz + (gz - nz) * f;
+  return { ...cam, x: cam.x + (tx - gx), z: cam.z + (tz - gz) };
+}
+
 /**
  * The one framing primitive: the camera (same yaw/pitch) that shows a scene box
  * inside the viewport minus padding, centred in the remaining area.

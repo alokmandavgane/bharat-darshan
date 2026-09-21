@@ -410,6 +410,22 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     else store.set('camera', target, { source: 'fit' });
   }
 
+  /**
+   * How far the view may wander (PLAN.md F2): the country, or the unit lifted out of it.
+   * The UI does the clamping -- it is where a gesture ends and where a spring back
+   * belongs -- but only the engine knows how big the model is, so it says so here.
+   */
+  function publishBounds() {
+    const regions = store.get('regions');
+    if (!regions) return;
+    // The country goes as all 36 units' boxes rather than one around the lot: see
+    // clampTarget for why one box, or a hull, parks the view on open water.
+    const u = level.name === 'state' ? regions.byId[level.id] : null;
+    store.set('bounds', u
+      ? { boxes: [[...u.bbox]], extent: [...u.bbox] }
+      : { boxes: regions.units.map((x) => [...x.bbox]), extent: [...regions.bbox] });
+  }
+
   /** The compass: everything cleared by the UI, the country framed again from the default angles. */
   store.subscribe('home', (req) => {
     if (!req || !terrain) return;
@@ -582,6 +598,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   store.subscribe('level', (lv, prev, meta) => {
     level = lv || { name: 'country' };
+    publishBounds();
     if (!terrain) return;
     const immediate = meta.source === 'init';
     if (level.name === 'state') {
@@ -682,6 +699,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const states = await loadStates(manifest);
     const byId = Object.fromEntries(states.units.map((u) => [u.id, u]));
     store.set('regions', { units: states.units, byId, bbox: unionBbox(states.units), hull: states.country?.hull, grid: manifest.grid });
+    publishBounds();
     store.set('catalog', manifest.layers || []);
     if (!store.get('layers')) store.set('layers', { active: (manifest.layers || []).filter((l) => l.default_on).map((l) => l.id) });
     const first = await loadTier(manifest, FIRST_TIER);

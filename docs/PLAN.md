@@ -135,7 +135,15 @@ every fix after them is checked against something:
 - **F2. Keep the model on the table.** A pure `clampTarget(cam, bounds, viewport, pad)`:
   the ground point at the padded centre may not leave the level's bounds (the country
   hull's box, or the lifted state's) grown by a margin. Rubber-band past the edge while
-  the finger is down, ease back on release.
+  the finger is down, ease back on release. *Done, with a residual: the bounds are the
+  36 units' bounding boxes, and a coastal state's box has corners out at sea, so at the
+  very end of a hard drag the view can still sit offshore with the model reduced to a
+  sliver in one corner. It is bounded (about 1,300 km from the middle rather than the
+  12,000 km it used to reach) and one drag brings it back, but it is not yet the rule it
+  should be. The proper test is distance to the coast, and the pipeline already bakes
+  exactly that: `uIndiaEdge`, the signed distance field the plate cuts its silhouette
+  from. Sampling it needs a second `grab`-style handshake, since only the engine holds
+  the texture.*
 - **F3. Free yaw.** Drop `LIMITS.yaw`; normalise to (-180°, 180°]; `flyTo` unwraps the
   target yaw to the nearest turn before tweening, so `tween.js` stays ignorant of angles.
   `?cam=` already carries yaw. The compass needle already turns with the map and already

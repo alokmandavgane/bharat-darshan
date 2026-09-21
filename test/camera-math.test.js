@@ -9,9 +9,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  basis, clamp, clampCamera, DEFAULT_CAMERA, fitBounds, groundAnchor, groundPoint,
-  groundShift, holdAnchor, kmPerPixel, LIMITS, orbitAbout, paddedCentre, project,
-  zoomAbout,
+  basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, groundAnchor,
+  groundPoint, groundShift, holdAnchor, kmPerPixel, LIMITS, orbitAbout, paddedCentre,
+  project, TARGET_MARGIN, TARGET_MARGIN_VIEW, zoomAbout,
 } from '../src/engine/camera-math.js';
 
 /** A deterministic generator, so a failure is always the same failure. */
@@ -227,6 +227,106 @@ test('a sea-level pivot drifts high ground when the view tilts; a 3D one does no
   const now = orbitAbout(cam, cam.yaw, cam.pitch + 20, { point: summit, sx: was[0], sy: was[1] }, vp);
   const [qx, qy] = project(now, summit, vp);
   close(Math.hypot(qx - was[0], qy - was[1]), 0, 1e-6, 'the summit stays put');
+});
+
+// --- keeping the model on the table (PLAN.md F2)
+
+test('clampTarget holds the middle of the view inside the bounds, with a margin', () => {
+  const vp = { w: 1400, h: 900 };
+  const pad = { top: 0, right: 0, bottom: 0, left: 0 };
+  const bounds = { boxes: [[-1000, -1200, 1000, 1200]], extent: [-1000, -1200, 1000, 1200] };
+  const margin = (cam) => [
+    Math.min(2000 * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW),
+    Math.min(2400 * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW),
+  ];
+  const r = rng(9);
+  for (const cam of cameras(r, 24)) {
+    const c = clampTarget(cam, bounds, vp, pad);
+    const [gx, gz] = groundPoint(c, 0, 0, vp);
+    const [mx, mz] = margin(cam);
+    assert.ok(gx >= bounds.extent[0] - mx - 1e-6 && gx <= bounds.extent[2] + mx + 1e-6, `x ${gx} held`);
+    assert.ok(gz >= bounds.extent[1] - mz - 1e-6 && gz <= bounds.extent[3] + mz + 1e-6, `z ${gz} held`);
+    close(c.zoom, cam.zoom, 0, 'the clamp only moves the target');
+    close(c.yaw, cam.yaw, 0, 'the clamp only moves the target');
+    close(c.pitch, cam.pitch, 0, 'the clamp only moves the target');
+  }
+});
+
+test('clampTarget leaves a camera that is already looking at the model alone', () => {
+  const vp = { w: 1400, h: 900 };
+  const pad = { top: 104, right: 420, bottom: 36, left: 24 };
+  const bounds = { boxes: [[-1600, -1700, 1600, 1700]], extent: [-1600, -1700, 1600, 1700] };
+  // fit frames the box at the padded centre, so a fitted camera must never be moved
+  const b = bounds.extent;
+  const fitted = fitBounds({ ...DEFAULT_CAMERA }, { x0: b[0], z0: b[1], x1: b[2], z1: b[3] }, vp, pad);
+  assert.equal(clampTarget(fitted, bounds, vp, pad), fitted, 'the same object back, untouched');
+  assert.equal(clampTarget(fitted, null, vp, pad), fitted, 'no bounds, no clamp');
+});
+
+test('clampTarget measures from the padded middle, not the canvas middle', () => {
+  // With a panel over the right of the screen, the model should be allowed to sit in
+  // the space that is left, not be dragged under the panel to satisfy the clamp.
+  const vp = { w: 1400, h: 900 };
+  const bounds = { boxes: [[-500, -500, 500, 500]], extent: [-500, -500, 500, 500] };
+  const bare = { top: 0, right: 0, bottom: 0, left: 0 };
+  const panel = { top: 0, right: 600, bottom: 0, left: 0 };
+  const cam = { ...DEFAULT_CAMERA, zoom: 1000, x: 900, z: 0 };
+  const a = clampTarget(cam, bounds, vp, bare);
+  const b = clampTarget(cam, bounds, vp, panel);
+  assert.notEqual(a.x, b.x, 'the padding changes where the limit falls');
+  // each holds its own centre
+  for (const [c, pad] of [[a, bare], [b, panel]]) {
+    const [cx, cy] = paddedCentre(vp, pad);
+    const [gx] = groundPoint(c, cx, cy, vp);
+    assert.ok(gx <= bounds.extent[2] + Math.min(1000 * TARGET_MARGIN, cam.zoom * TARGET_MARGIN_VIEW) + 1e-6, `held its own centre: ${gx}`);
+  }
+});
+
+test('several boxes keep the view off the emptiness one box around them allows', () => {
+  // Two parts with a gap between them, as the mainland and the Andamans have. One box
+  // around both lets the view sit in the middle of the gap -- 1,200 km of Bay of Bengal
+  // with nothing on screen -- and so does their convex hull. Their own boxes do not.
+  const vp = { w: 1400, h: 900 };
+  const pad = { top: 0, right: 0, bottom: 0, left: 0 };
+  const mainland = [-1000, -1000, 0, 1000];
+  const island = [1100, 200, 1200, 500];
+  const extent = [-1000, -1000, 1200, 1000];
+  const margin = Math.min(2200 * TARGET_MARGIN, 2000 * TARGET_MARGIN, 1000 * TARGET_MARGIN_VIEW);
+  const at = (x, z) => ({ ...DEFAULT_CAMERA, zoom: 1000, yaw: 0, pitch: 90, x, z });
+
+  // the middle of the gap: one box says yes, the parts say no
+  const gap = at(550, 0);
+  assert.equal(clampTarget(gap, { boxes: [extent], extent }, vp, pad), gap, 'one box allows the gap');
+  const pulled = clampTarget(gap, { boxes: [mainland, island], extent }, vp, pad);
+  assert.notEqual(pulled, gap, 'the parts do not');
+  close(groundPoint(pulled, 0, 0, vp)[0], margin, 1e-6, 'pulled back to a margin off the mainland');
+
+  // and the island is still a place you can be, once you are there
+  const there = at(1150, 350);
+  assert.equal(clampTarget(there, { boxes: [mainland, island], extent }, vp, pad), there, 'inside the island');
+  // just off its coast is fine too
+  const nearby = at(1200 + margin / 2, 350);
+  assert.equal(clampTarget(nearby, { boxes: [mainland, island], extent }, vp, pad), nearby, 'within the margin');
+});
+
+test('give lets a gesture stretch past the bounds, but never run away', () => {
+  const vp = { w: 1400, h: 900 };
+  const pad = { top: 0, right: 0, bottom: 0, left: 0 };
+  const bounds = { boxes: [[-1000, -1000, 1000, 1000]], extent: [-1000, -1000, 1000, 1000] };
+  const give = 150;
+  // zoom 1000: a third of the view (300 km) is less than a fifth of the bounds (400 km)
+  const limit = 1000 + Math.min(2000 * TARGET_MARGIN, 1000 * TARGET_MARGIN_VIEW);
+  let last = -Infinity;
+  for (const x of [1300, 1500, 2000, 5000, 50000]) {
+    const c = clampTarget({ ...DEFAULT_CAMERA, zoom: 1000, yaw: 0, pitch: 90, x, z: 0 }, bounds, vp, pad, give);
+    const [gx] = groundPoint(c, 0, 0, vp);
+    assert.ok(gx > last - 1e-9, `stretching further goes further: ${gx} after ${last}`);
+    assert.ok(gx < limit + give + 1e-6, `and never past the give: ${gx}`);
+    last = gx;
+  }
+  // and with no give it is a hard stop
+  const hard = clampTarget({ ...DEFAULT_CAMERA, zoom: 1000, yaw: 0, pitch: 90, x: 50000, z: 0 }, bounds, vp, pad, 0);
+  close(groundPoint(hard, 0, 0, vp)[0], limit, 1e-6, 'no give, no overshoot');
 });
 
 test('paddedCentre is the middle of what the panels leave visible', () => {

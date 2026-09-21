@@ -7,13 +7,14 @@
 // finger pans, two rotate and pinch, because a phone has no second button and panning
 // is what a finger on a map is for.
 import {
-  clamp, clampCamera, groundAnchor, groundShift, holdAnchor, LIMITS, orbitAbout,
-  paddedCentre, zoomAbout,
+  clamp, clampCamera, clampTarget, groundAnchor, groundShift, holdAnchor, LIMITS,
+  orbitAbout, paddedCentre, zoomAbout,
 } from '../engine/camera-math.js';
 
 const TAP_SLOP = 8;         // px of travel that still counts as a tap
 const TAP_MS = 350;
 const DOUBLE_MS = 300;
+const GIVE = 0.12;          // how far past the bounds a hand may stretch the view, x the view height
 
 /**
  * Taps land in the store as `tap` { x, y, type } and pointer moves (fine pointers, no
@@ -30,7 +31,26 @@ export function attachGestures(canvas, store) {
 
   const viewport = () => store.get('viewport');
   const cam = () => store.get('camera');
-  const write = (next) => store.set('camera', clampCamera(next), { source: 'gesture' });
+
+  /**
+   * Every camera change a gesture makes goes through here, so the model cannot be
+   * pushed off the table (PLAN.md F2). While a hand is down the bounds are springy --
+   * the view can be stretched a little past them and the stretch never runs away -- and
+   * `settle` eases it back when the hand comes off.
+   */
+  function write(next) {
+    const c = clampCamera(next);
+    const give = pointers.size ? GIVE * c.zoom : 0;
+    store.set('camera', clampTarget(c, store.get('bounds'), viewport(), store.get('padding'), give),
+              { source: 'gesture' });
+  }
+
+  /** The hands are off: if the view was stretched past its bounds, let it go back. */
+  function settle() {
+    const c = cam();
+    const home = clampTarget(c, store.get('bounds'), viewport(), store.get('padding'), 0);
+    if (home !== c) store.set('flyTo', { camera: home, ms: 280, id: performance.now() });
+  }
 
   /**
    * What the hand has hold of (PLAN.md D13): ask the engine for the surface point under
@@ -138,7 +158,7 @@ export function attachGestures(canvas, store) {
     const rec = pointers.get(e.pointerId);
     if (!rec) return;
     pointers.delete(e.pointerId);
-    if (pointers.size === 0) held = null;
+    if (pointers.size === 0) { held = null; settle(); }
     else if (pointers.size === 1) { pinch = null; held = null; resetOrigins(); }
     else if (pointers.size === 2) { pinch = pinchState(); held = turnAnchor(pinch.midX, pinch.midY); }
     const moved = Math.hypot(rec.x - rec.sx, rec.y - rec.sy);

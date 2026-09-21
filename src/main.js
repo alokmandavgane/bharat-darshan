@@ -32,6 +32,9 @@ const store = createStore({
   // about that (PLAN.md D13). The UI still never calls the engine.
   grab: null,
   pivot: null,
+  // How far the view may wander: the engine says how big the model is at this level and
+  // the gestures keep the middle of the view inside it (PLAN.md F2).
+  bounds: null,
   flyTo: null,
   focus: null,
   // A deep link to an item opens it by name alone; the engine fills in the data once that
