@@ -624,6 +624,35 @@ docs/DEPLOY.md).
   other camera write, tap or hover stops it at once; reduced motion disables it.
   With the denser layer, priority-3 places now appear one zoom step later (below
   2,400 km of view height) so the whole-country view keeps its state labels.
+- 2026-09-21: the lifted block's edge, which read as sawn rather than moulded. Three
+  faults, one cause: `06_states.py` built each package's mask by nearest-sampling the
+  1.71 km country ID raster at 0.35 km, so the block's top stepped in 3.3 km risers;
+  the walls followed a different curve, because `contour.trace` rounded the staircase
+  with Chaikin and then let a one-pixel Douglas-Peucker tolerance flatten it back into
+  8 km chords; and where the wall strayed outside the mask it sampled the -500 m
+  sentinel fill, so its top collapsed to the lift plane in spikes. Now there is one
+  boundary: `contour.trace` low-pass filters the traced loop along its arc length
+  (Gaussian, sigma 1.2 px, mean turn 13.2 degrees -> 6.6) and simplifies at 0.2 px, and
+  step 6 fills those same loops for the mask. The west edge of Chhattisgarh steps in
+  0.70 km rather than 3.27. Heights are now kept for 10 km outside the unit instead of
+  being flattened at its edge: the walls need real ground under the outline they stand
+  on, and the ambient occlusion along the rim was being cast by a pit that is not there
+  (up to 200 levels of 255 out, 31 at p95). That costs 11% on the packages, 27.2 -> 31.8
+  MB; the largest is Maharashtra at 2.6 MB, so section 8's "<= ~1 MB per state package"
+  has been wrong since the packages were built and needs a decision, not just an edit.
+  Two engine fixes alongside: the block's material is a sibling with its own scalars and
+  nobody was updating its `uKmPerPx`, so it drew border lines at the scale it was born
+  at; and the border fields are only as sharp as the raster they were baked from, so
+  past MAX_MAGNIFY the line is the border texel itself -- a blocky ribbon across the
+  surrounding country once a package pulls the zoom floor five times closer. They now
+  fade out instead.
+  Two pre-existing faults found while checking this, both left alone:
+  `/en/state/goa` (and other small units) lands on `?state=goa` with the country-wide
+  camera instead of entering the state view, while Kerala and Chhattisgarh are fine;
+  and every state package's border field is entirely zero, because `border_fields`
+  asks for land on both sides of an edge and a package has only one labelled id, so a
+  lifted block draws neither a scored edge nor a selection outline, and each package
+  carries about 5 KB of zeros.
 
 ### What exists
 
