@@ -511,10 +511,11 @@ the source cannot supply are noted in the status log below.*
 District-level languages with script samples and greeting audio; places, food and
 festivals with card-carousel sync; a month scrubber ("India through the year");
 search; first ~150 reviewed items. Exit: GI products added with data files only.
-*Part done (2026-09-21): both layer types exist, the card carousel works, and the
-first choropleth (population density) went in as data alone. Left: districts, which
-need a boundary source; languages, food and festivals; the month scrubber; search;
-and the reviewed items, which are the owner's.*
+*Part done (2026-09-21): both layer types exist, the card carousel works, search
+finds everything on show, and the first choropleth (population density) went in as
+data alone. Left: districts, which need a boundary source; languages, food and
+festivals; the month scrubber, which wants that content before it has anything to
+scrub; and the reviewed items, which are the owner's.*
 
 **Phase 4: delight and launch (2-3 weeks).** Guided stories (follow the Ganga, the
 monsoon's advance, the Golden Quadrilateral). Because camera, layers and selection
@@ -921,6 +922,19 @@ docs/DEPLOY.md).
   Only one choropleth is drawn at a time -- two would fight over the same clay -- so
   switching one on switches the others off, and changing between them fades out through
   the clay and back. The type decides that, never a layer's name.
+- 2026-09-21, thirteenth round: search finds what is on the map.
+  The list box found states and union territories; it now also finds whatever the layers
+  on show can answer with. The engine publishes an index of every item's name rather than
+  the shell fetching the layer files again, so what can be found is exactly what is
+  drawn. 198 things at country level, 7 inside Kerala.
+  Narrowing a run to a state is the part worth recording. A bounding box is no good: a
+  highway from Kashmir to Kanyakumari has a box that contains every state, and a box test
+  duly offered NH 44 in Kerala and the Darjeeling Himalayan Railway in Bihar. Asking the
+  ID raster about the run's own points instead is exact and no more expensive, and it
+  only runs when the level changes. Kerala answers with NH 66; Bihar with the Ganga, the
+  Gandak, the Ghaghara, the Son, NH 19, NH 27 and the Howrah-Delhi main line.
+  Both languages come free, the index carrying the whole name object: "गंगा" finds the
+  Ganga and the Wainganga.
 
 ### What exists
 
@@ -981,10 +995,12 @@ docs/DEPLOY.md).
 
 ### Next
 
-1. Phase 3 next, in the order they unblock each other: search across layer items (the
-   list box already searches states), then the month scrubber, then districts, which
-   need a district boundary source that meets the boundary rule in CLAUDE.md. Languages,
-   food and festivals are content, drafted the same way the places were.
+1. Phase 3 next. The engine side is done: both layer types, the carousel, search. What
+   is left needs a decision first. Festivals, food and languages are content, drafted
+   the way the places were and needing the same review; the month scrubber wants the
+   festival content before it has anything to scrub; districts need a district boundary
+   source that meets the boundary rule in CLAUDE.md. A festivals layer needs no engine
+   change at all -- points with a declared month field -- so it is the one to start.
 2. Roads and rail ship as drafts: read the eight highway and five railway cards and
    flip their `status` when they are right. The courses are the source's, so check the
    two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
