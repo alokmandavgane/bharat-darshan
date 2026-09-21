@@ -105,6 +105,75 @@
    "path": "layers/festivals.json"
   },
   {
+   "id": "languages",
+   "type": "regional",
+   "title": {
+    "en": "Languages",
+    "hi": "भाषाएँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 23,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "indo-aryan",
+     "title": {
+      "en": "Indo-Aryan",
+      "hi": "भारोपीय-आर्य"
+     },
+     "color": "#b4552e"
+    },
+    {
+     "id": "dravidian",
+     "title": {
+      "en": "Dravidian",
+      "hi": "द्रविड़"
+     },
+     "color": "#4d7f97"
+    },
+    {
+     "id": "tibeto-burman",
+     "title": {
+      "en": "Tibeto-Burman",
+      "hi": "तिब्बती-बर्मी"
+     },
+     "color": "#5f8a5a"
+    },
+    {
+     "id": "austroasiatic",
+     "title": {
+      "en": "Austroasiatic",
+      "hi": "आस्ट्रो-एशियाई"
+     },
+     "color": "#8a6f3f"
+    },
+    {
+     "id": "other",
+     "title": {
+      "en": "Other",
+      "hi": "अन्य"
+     },
+     "color": "#7a6a85"
+    }
+   ],
+   "fields": {
+    "speakers": {
+     "type": "int",
+     "label": {
+      "en": "First-language speakers",
+      "hi": "मातृभाषी"
+     },
+     "unit": {
+      "en": "{n} (2011 census)",
+      "hi": "{n} (2011 जनगणना)"
+     }
+    }
+   },
+   "path": "layers/languages.json"
+  },
+  {
    "id": "places",
    "type": "points",
    "title": {
@@ -620,6 +689,10 @@
   "layers/festivals.json": {
    "size": 26034,
    "sha256": "28bd1065b8af"
+  },
+  "layers/languages.json": {
+   "size": 22214,
+   "sha256": "3b8eb63899a2"
   },
   "layers/places.json": {
    "size": 122864,
