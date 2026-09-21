@@ -10,7 +10,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   basis, clamp, clampCamera, clampTarget, DEFAULT_CAMERA, fitBounds, groundAnchor,
-  groundPoint, groundShift, holdAnchor, kmPerPixel, LIMITS, orbitAbout, paddedCentre,
+  groundPoint, groundShift, holdAnchor, kmPerPixel, lightDirection, LIMITS, orbitAbout, paddedCentre,
   project, TARGET_MARGIN, TARGET_MARGIN_VIEW, unwrapYaw, wrapYaw, zoomAbout,
 } from '../src/engine/camera-math.js';
 
@@ -273,6 +273,35 @@ test('the maths holds all the way round, not just in the old +-40 window', () =>
     const [qx, qy] = project(turned, held.point, vp);
     close(Math.hypot(qx - sx, qy - sy), 0, 1e-6, `anchor held at yaw ${yaw}`);
   }
+});
+
+// --- the light stays with the viewer (PLAN.md F4)
+
+test('the key light keeps its place on screen however far the model turns', () => {
+  const r = rng(12);
+  for (let i = 0; i < 40; i++) {
+    const yaw = -180 + r() * 360;
+    const [lx, lz] = lightDirection(yaw);
+    // Project the light's ground direction onto the screen axes for this yaw: it must
+    // always come from up and to the left, by the same amount.
+    const { right, forward } = basis(yaw, 0);
+    const alongRight = lx * right[0] + lz * right[2];
+    const alongUp = lx * forward[0] + lz * forward[2];
+    close(alongRight, -1, 1e-12, `screen x at yaw ${yaw}`);
+    close(alongUp, 1, 1e-12, `screen y at yaw ${yaw}`);
+    // and the horizontal length never changes, so the light's elevation is constant
+    close(Math.hypot(lx, lz), Math.SQRT2, 1e-12, 'length');
+  }
+});
+
+test('at yaw 0 the light is the north-west the look was designed around', () => {
+  const [x, z] = lightDirection(0);
+  close(x, -1, 1e-12, 'west');        // -x is west
+  close(z, -1, 1e-12, 'north');       // -z is north
+  // and a body-fixed light would not have done this: at south-up it points the other way
+  const [sx, sz] = lightDirection(180);
+  close(sx, 1, 1e-12, 'east at south-up');
+  close(sz, 1, 1e-12, 'south at south-up');
 });
 
 // --- keeping the model on the table (PLAN.md F2)

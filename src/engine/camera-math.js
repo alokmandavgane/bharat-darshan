@@ -85,6 +85,24 @@ export function groundPoint(cam, sxPx, syPx, viewport) {
   return [cam.x + dx, cam.z + dz];
 }
 
+/**
+ * The key light's ground direction for a camera yaw (PLAN.md F4). The light belongs to
+ * the viewer's room rather than to the model: it comes from over the left shoulder, so
+ * on screen it is always up and to the left, and turning the model is like turning a
+ * thing under a lamp. That is also the cartographic rule -- light from the bottom of
+ * the screen makes the eye read valleys as ridges -- and with yaw free to go the whole
+ * way round, a lamp fixed to the model's north-west would light a south-up view from
+ * below.
+ *
+ * It is `forward - right` in ground coordinates, which at yaw 0 is the north-west the
+ * look was designed around. Its length is always sqrt(2), so the light's height above
+ * the ground (the caller's y) means the same thing at every angle.
+ */
+export function lightDirection(yaw) {
+  const { right, forward } = basis(yaw, 0);
+  return [forward[0] - right[0], forward[2] - right[2]];
+}
+
 /** The middle of the area the header, panels and sheet leave visible. */
 export function paddedCentre(viewport, pad) {
   return [(pad.left - pad.right) / 2, (pad.bottom - pad.top) / 2];

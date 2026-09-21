@@ -343,6 +343,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (block) block.material.uniforms.uKmPerPx.value = kmPerPx;
     lines?.setView(viewport.w, viewport.h, c.zoom);
     world?.setKmPerPx(kmPerPx);
+    // The key light turns with the camera, so it stays over the viewer's left shoulder
+    // instead of being bolted to the model's north-west (F4).
+    const lit = terrain.setLightYaw(c.yaw);
+    world?.setLightDir(lit.x, lit.y);
   }
 
   /**
@@ -785,6 +789,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     start, invalidate, flyTo, fit, pick, project, quality,
     get viewport() { return viewport; },
     get level() { return level; },
+    // For checks from the console or a script through window.bd, as CLAUDE.md describes:
+    // the uniforms are what a look at the shading has to be measured against.
+    get terrain() { return terrain; },
     dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }

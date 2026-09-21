@@ -4,6 +4,7 @@
 import {
   BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Sphere, Vector2, Vector3, Vector4,
 } from 'three';
+import { lightDirection } from './camera-math.js';
 import frag from './shaders/terrain.frag.glsl?raw';
 import vert from './shaders/terrain.vert.glsl?raw';
 import { byteTexture, grainTexture, heightTexture, zeroTexture } from './textures.js';
@@ -83,6 +84,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uGamma: { value: CURVE.gamma },
     uHRef: { value: CURVE.hRef },
     uKmPerPx: { value: 4 },
+    // The key light's ground direction. It belongs to the viewer's room rather than to
+    // the model, so setLightYaw turns it with the camera and the lit side of a hill
+    // stays the side nearest the top-left of the screen however far the model is turned.
+    uLightDir: { value: new Vector2(-1, -1) },      // north-west at yaw 0; see setLightYaw
     uSelected: { value: -1 },
     uHover: { value: -1 },
     uRegion: { value: -1 },
@@ -171,6 +176,17 @@ export function createTerrain({ tierData, grid, sizeKm }) {
 
   return {
     mesh, material, uniforms, setTier, siblingMaterial, grid: { cols, rows: grid },
+    /**
+     * Turn the key light with the camera, so it keeps its place over the viewer's left
+     * shoulder however far the model is turned (PLAN.md F4). At yaw 0 this is the
+     * north-west the look was designed around; the horizontal part always has length
+     * sqrt(2), so the light's height above the ground never changes with the turn.
+     */
+    setLightYaw(yawDeg) {
+      const [x, z] = lightDirection(yawDeg);
+      broadcast((u) => u.uLightDir.value.set(x, z));
+      return uniforms.uLightDir.value;
+    },
     /** Bind a choropleth's lookup, or null to unbind it. */
     setChoropleth(look) {
       broadcast((u) => {

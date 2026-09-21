@@ -49,6 +49,8 @@ export function wallMaterial(terrainUniforms, depthKm, liftUniform) {
       uHeight: terrainUniforms.uHeight, uSizeKm: terrainUniforms.uSizeKm, uExag: terrainUniforms.uExag,
       uGamma: terrainUniforms.uGamma, uHRef: terrainUniforms.uHRef, uLift: liftUniform || { value: 0 },
       uLocalRect: terrainUniforms.uLocalRect,
+      // Shared, not copied, so the walls turn with the light the terrain is lit by (F4).
+      uLightDir: terrainUniforms.uLightDir,
       uDepth: { value: depthKm }, uWall: { value: new Color(WALL_COLOUR) },
     },
   });

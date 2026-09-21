@@ -64,6 +64,9 @@ export function createWorld({ data, terrain, grid }) {
       u.uHRef.value = hRef;
     },
     setKmPerPx(km) { u.uKmPerPx.value = km; },
+    // The backdrop binds its own rasters, so it is not one of the terrain's siblings and
+    // broadcasts do not reach it: it has to be told the light's direction like the scale.
+    setLightDir(x, z) { u.uLightDir.value.set(x, z); },
     dispose() {
       geometry.dispose();
       material.dispose();

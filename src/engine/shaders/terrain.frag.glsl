@@ -21,6 +21,7 @@ uniform float uExag;
 uniform float uGamma;
 uniform float uHRef;
 uniform float uKmPerPx;        // world size of one screen pixel (orthographic)
+uniform vec2 uLightDir;        // key light's ground direction, turned with the camera (F4)
 uniform float uSelected;       // state id or -1
 uniform float uHover;          // state id or -1
 uniform float uRegion;         // draw only this state id (the lifted block), or -1 for everything
@@ -109,7 +110,13 @@ void main() {
 
   // --- land: colour by height, lit by one soft light with wrap, creased by AO
   vec3 n = terrainNormal(luv(vUv));
-  vec3 L = normalize(vec3(-1.0, 1.35, -1.0));         // from the north-west, high
+  // The key light belongs to the room, not to the model: it stays over the viewer's
+  // left shoulder as the model turns, so turning it is like turning a thing under a
+  // lamp. It is also the cartographic rule -- light from the bottom of the screen makes
+  // the eye read valleys as ridges -- and now that yaw goes the whole way round, a lamp
+  // bolted to the model's north-west would light the south-up view from below.
+  // uLightDir is the home north-west direction turned by the camera's yaw (see terrain.js).
+  vec3 L = normalize(vec3(uLightDir.x, 1.35, uLightDir.y));
   float wrap = 0.6;
   float diff = clamp((dot(n, L) + wrap) / (1.0 + wrap), 0.0, 1.0);
   vec3 sun = vec3(1.0, 0.97, 0.92);
