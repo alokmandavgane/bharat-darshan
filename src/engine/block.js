@@ -4,6 +4,7 @@
 // along its traced outline so it reads as a slab lifted out of the country.
 import { BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Group, Mesh, ShaderMaterial } from 'three';
 import { gridGeometry } from './terrain.js';
+import { byteTexture, heightTexture } from './textures.js';
 import wallFrag from './shaders/wall.frag.glsl?raw';
 import wallVert from './shaders/wall.vert.glsl?raw';
 
@@ -47,6 +48,7 @@ export function wallMaterial(terrainUniforms, depthKm, liftUniform) {
     uniforms: {
       uHeight: terrainUniforms.uHeight, uSizeKm: terrainUniforms.uSizeKm, uExag: terrainUniforms.uExag,
       uGamma: terrainUniforms.uGamma, uHRef: terrainUniforms.uHRef, uLift: liftUniform || { value: 0 },
+      uLocalRect: terrainUniforms.uLocalRect,
       uDepth: { value: depthKm }, uWall: { value: new Color(WALL_COLOUR) },
     },
   });
@@ -96,6 +98,7 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
   const group = new Group();
   group.add(top);
   let wall = null;
+  let local = [];              // textures owned by this block, from its state package
 
   /** Build the walls once the outline (loops of [x, z] in scene km) has arrived. */
   function setOutline(loops) {
@@ -106,15 +109,41 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
     group.add(wall);
   }
 
+  /**
+   * Swap in the unit's own hi-res rasters (PLAN.md D3). The mesh keeps its country-space
+   * uv, so the geometry and the camera are untouched; only the sampling moves, through
+   * uLocalRect. The walls share these uniforms and follow automatically.
+   */
+  function setPackage(pkg, sizeKm) {
+    const next = {
+      uHeight: heightTexture(pkg.heights),
+      uShade: byteTexture(pkg.shade),
+      uIds: byteTexture(pkg.ids, { nearest: true }),
+      uBorders: byteTexture(pkg.borders),
+    };
+    const u = material.uniforms;
+    for (const [k, tex] of Object.entries(next)) u[k].value = tex;
+    u.uHeightTexel.value.set(1 / pkg.heights.width, 1 / pkg.heights.height);
+    u.uBorderRangeKm.value = pkg.borders.header.range_px * pkg.borders.header.km_per_px;
+    const [x0, z0, x1, z1] = pkg.rect;
+    u.uLocalRect.value.set(x0 / sizeKm.w + 0.5, z0 / sizeKm.h + 0.5,
+                           (x1 - x0) / sizeKm.w, (z1 - z0) / sizeKm.h);
+    local.forEach((t) => t.dispose());
+    local = Object.values(next);
+  }
+
   return {
     group, material, unit,
     setOutline,
+    setPackage,
     setLift(km) { material.uniforms.uLift.value = km; },
     dispose() {
       geometry.dispose();
       wall?.geometry.dispose();
       wallMat.dispose();
       material.dispose();
+      local.forEach((t) => t.dispose());
+      local = [];
     },
   };
 }

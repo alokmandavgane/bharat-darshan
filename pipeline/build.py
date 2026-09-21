@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STEPS = ['01_boundaries.py', '02_dem.py', '04_layers.py', '05_manifest.py']
+STEPS = ['01_boundaries.py', '02_dem.py', '04_layers.py', '06_states.py', '05_manifest.py']
 
 
 def main():

@@ -12,7 +12,11 @@ const DEG = Math.PI / 180;
 
 export const LIMITS = { zoom: [180, 9500], yaw: [-40, 40], pitch: [25, 89] };
 export const DEFAULT_CAMERA = { x: 0, z: 0, zoom: 4200, yaw: -12, pitch: 56 };   // the home view's angles
+// Absolute floors. The engine tightens them to what the loaded rasters can actually
+// resolve (refreshZoomFloor in index.js), so the model never magnifies into mush.
 export const ZOOM_MIN = { country: 180, state: 30 };
+// Height texels per screen pixel allowed before detail reads as blur rather than relief.
+export const MAX_MAGNIFY = 2.5;
 
 /** The state view allows a much closer look than the country view. */
 export function setZoomFloor(km) {

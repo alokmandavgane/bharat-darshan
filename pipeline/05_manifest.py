@@ -59,6 +59,7 @@ def main():
         'grid': grid.describe(),
         'tiers': {h: tiers[h] for h in sorted(tiers, key=int)},
         'regions': {'states': 'regions/states.json', 'count': len(states['units'])},
+        'states': 'states/index.json' if os.path.exists(os.path.join(out, 'states', 'index.json')) else None,
         'layers': layers,
         'attribution': [
             states.get('attribution', ''),

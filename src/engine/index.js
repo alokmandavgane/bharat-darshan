@@ -3,8 +3,8 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
-import { basis, DEFAULT_CAMERA, fitBounds, setZoomFloor, ZOOM_MIN } from './camera-math.js';
-import { loadJson, loadManifest, loadStates, loadTier, unionBbox } from './data.js';
+import { basis, DEFAULT_CAMERA, fitBounds, MAX_MAGNIFY, setZoomFloor, ZOOM_MIN } from './camera-math.js';
+import { loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { loadPack } from './pack.js';
@@ -51,6 +51,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let block = null;            // the lifted state block while in the state view
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
+  let stateIndex = null;       // the state-package index, once fetched
+  let pkgLoad = null;          // AbortController for the package in flight
+  let countryKmPerPx = 0;      // ground size of one height texel in the country tier on screen
+  let localKmPerPx = 0;        // ...and in the state package, while one is bound
   let cancelLevel = null;
   let countryWalls = null;     // the cut-out's sides when surroundings are hidden
   const labels = createLabels(labelContainer, labelText);
@@ -128,6 +132,19 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     terrain.uniforms.uKmPerPx.value = c.zoom / viewport.h;
   }
 
+  /**
+   * Keep the closest zoom to what the loaded heightmap can resolve. The country tier is
+   * about 1.7 km per texel, so the old fixed 180 km floor magnified it more than eight
+   * times; the state view's 30 km floor magnified it fifty. A package is five times
+   * finer, and this floor moves with it instead of staying a constant.
+   */
+  function refreshZoomFloor() {
+    const kmPerPx = block && localKmPerPx ? localKmPerPx : countryKmPerPx;
+    const hard = block ? ZOOM_MIN.state : ZOOM_MIN.country;
+    if (!kmPerPx) return setZoomFloor(hard);
+    setZoomFloor(Math.max(hard, kmPerPx * viewport.h / MAX_MAGNIFY));
+  }
+
   function resize() {
     const r = canvas.getBoundingClientRect();
     const w = Math.max(1, Math.round(r.width)), h = Math.max(1, Math.round(r.height));
@@ -135,6 +152,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     viewport = { w, h };
     renderer.setSize(w, h, false);
     store.set('viewport', viewport);
+    refreshZoomFloor();
     if (!cameraTouched) fit(false);
     invalidate();
   }
@@ -244,7 +262,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     scene.add(block.group);
     raised = { id: unit.id, km: 0 };
     terrain.uniforms.uHole.value = unit.id;
-    setZoomFloor(ZOOM_MIN.state);
+    localKmPerPx = 0;
+    refreshZoomFloor();
     cancelLevel?.();
     const from = { lift: 0, dim: terrain.uniforms.uDim.value };
     const to = { lift: dims.lift, dim: 1 };
@@ -261,13 +280,37 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     loadJson(`regions/outlines/${unit.slug}.json`).then((o) => {
       if (block && block.unit.id === unit.id) { block.setOutline(o.loops); invalidate(); }
     }).catch((err) => console.warn('outline skipped:', err));
+    loadUnitPackage(unit);
+  }
+
+  /** The unit's hi-res rasters, on the same never-block-on-the-network terms as the walls. */
+  async function loadUnitPackage(unit) {
+    if (store.get('saveData')) return;
+    pkgLoad?.abort();
+    pkgLoad = new AbortController();
+    const { signal } = pkgLoad;
+    try {
+      if (!stateIndex) stateIndex = await loadStateIndex(manifest);
+      const entry = stateIndex?.units?.[unit.slug];
+      if (!entry) return;
+      const pkg = await loadStatePackage(manifest, entry, signal);
+      if (signal.aborted || !block || block.unit.id !== unit.id) return;
+      block.setPackage(pkg, sizeKm);
+      localKmPerPx = entry.km_per_px;
+      refreshZoomFloor();
+      invalidate();
+    } catch (err) {
+      if (!signal.aborted) console.warn('state package skipped:', err);
+    }
   }
 
   function exitState(animate) {
     const b = block;
     block = null;
     raised = null;
-    setZoomFloor(ZOOM_MIN.country);
+    pkgLoad?.abort();
+    pkgLoad = null;
+    localKmPerPx = 0;
     cancelLevel?.();
     if (b) {
       const done = () => { scene.remove(b.group); b.dispose(); terrain.uniforms.uHole.value = -1; invalidate(); };
@@ -277,6 +320,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       terrain.uniforms.uDim.value = 0;
       terrain.uniforms.uHole.value = -1;
     }
+    refreshZoomFloor();
     applyRelief(store.get('relief'), animate);
     cameraTouched = false;
     fit(animate);
@@ -347,6 +391,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!store.get('layers')) store.set('layers', { active: (manifest.layers || []).filter((l) => l.default_on).map((l) => l.id) });
     const first = await loadTier(manifest, FIRST_TIER);
     sizeKm = { w: manifest.grid.width_km, h: manifest.grid.height_km };
+    countryKmPerPx = sizeKm.h / first.heights.height;
+    refreshZoomFloor();
     terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
     field = createHeightfield(first, sizeKm, terrain.grid);
     scene.add(terrain.mesh);
@@ -370,7 +416,13 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('status', 'ready');
     if (quality.heightTier !== FIRST_TIER && manifest.tiers[quality.heightTier]) {
       loadTier(manifest, quality.heightTier)
-        .then((t) => { terrain.setTier(t); field = createHeightfield(t, sizeKm, terrain.grid); invalidate(); })
+        .then((t) => {
+          terrain.setTier(t);
+          field = createHeightfield(t, sizeKm, terrain.grid);
+          countryKmPerPx = sizeKm.h / t.heights.height;
+          refreshZoomFloor();
+          invalidate();
+        })
         .catch((err) => console.warn('finer tier skipped:', err));
     }
     return { manifest, quality };

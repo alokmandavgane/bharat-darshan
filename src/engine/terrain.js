@@ -2,7 +2,7 @@
 // The terrain: one grid mesh displaced by the heightmap in the vertex shader, shaded by
 // the clay / paper fragment shader. Layer-agnostic: it knows textures, not layers.
 import {
-  BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Sphere, Vector2, Vector3,
+  BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Sphere, Vector2, Vector3, Vector4,
 } from 'three';
 import frag from './shaders/terrain.frag.glsl?raw';
 import vert from './shaders/terrain.vert.glsl?raw';
@@ -59,6 +59,9 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   const uniforms = {
     uHeight: { value: null },
     uHeightTexel: { value: new Vector2(1, 1) },
+    // Which slice of country uv the bound rasters cover: identity for the country tiers,
+    // the unit's padded bbox once a state package is swapped in (see setLocal in block.js).
+    uLocalRect: { value: new Vector4(0, 0, 1, 1) },
     uShade: { value: null },
     uIds: { value: null },
     uBorders: { value: null },
