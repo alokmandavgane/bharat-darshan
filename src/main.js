@@ -39,6 +39,8 @@ const store = createStore({
     ? { active: url.item && !url.layers.includes(url.item.layer) ? [...url.layers, url.item.layer] : url.layers }
     : null,
   catalog: [],
+  // The scrubber: 1..12 to keep only what falls in that month, or null for the whole year.
+  month: url.month,
   level: { name: 'country', id: null },
   home: null,            // { t }: a request to clear everything and frame the country again
   tour: { playing: false, index: -1, total: 0 },

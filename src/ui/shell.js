@@ -31,9 +31,12 @@ export function createShell(root, store) {
   const stepNext = $('.card-next');
   const stepCount = $('.card-count');
   const listWrap = $('.unit-list-wrap');
+  const monthPanel = $('.month-panel');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
   const chips = $('.layer-chips');
+  const scrubber = $('.scrubber');
+  const scrubberRow = $('.scrubber-row');
   const sheet = $('.sheet');
   const sheetBody = $('.sheet-body');
   const infoBtn = $('.sheet-info');
@@ -79,6 +82,11 @@ export function createShell(root, store) {
     if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     else store.set('selection', null);
+  });
+  scrubberRow.addEventListener('click', (e) => {
+    const b = /** @type {HTMLElement} */ (e.target).closest('button[data-month]');
+    if (!b) return;
+    store.set('month', b.dataset.month ? Number(b.dataset.month) : null);
   });
   chips.addEventListener('click', (e) => {
     const chip = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
@@ -148,6 +156,41 @@ export function createShell(root, store) {
   }
 
   /** A swatch and a name per category: a dot for points, a stroke for lines. */
+  /**
+   * The scrubber (PLAN.md section 9, "India through the year"): thirteen switches, the
+   * whole year and each month. It appears only when something on show has months to
+   * scrub, which the layer's own declared fields say, so no layer id appears here.
+   */
+  function renderScrubber() {
+    const catalog = store.get('catalog') || [];
+    // Before the catalogue lands there is nothing to say, and nothing to clear either:
+    // clearing here would throw away a month the URL asked for.
+    if (!catalog.length) { scrubber.hidden = true; return; }
+    const active = new Set(store.get('layers')?.active || []);
+    const has = catalog.some((l) => active.has(l.id)
+      && Object.values(l.fields || {}).some((f) => f.type === 'month'));
+    scrubber.hidden = !has;
+    if (!has) {
+      if (store.get('month')) store.set('month', null);
+      return;
+    }
+    const at = store.get('month');
+    const make = (value, label, title) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip chip-month';
+      b.dataset.month = value === null ? '' : String(value);
+      b.setAttribute('aria-pressed', String(at === value));
+      b.textContent = label;
+      if (title) b.title = title;
+      return b;
+    };
+    scrubberRow.replaceChildren(
+      make(null, t('month.all')),
+      ...Array.from({ length: 12 }, (_, i) => make(i + 1, t(`month.short.${i + 1}`), t(`month.${i + 1}`))),
+    );
+  }
+
   /** A choropleth's own legend: its bands, their ranges, the unit, and any caveat. */
   function scaleLegend(layer) {
     const scale = layer.scale || [];
@@ -406,8 +449,12 @@ export function createShell(root, store) {
    */
   function regionalSections(unitId) {
     for (const layer of store.get('regional') || []) {
+      const month = store.get('month');
       const mine = (layer.items || []).filter((i) => (i.regions || []).includes(unitId)
-        && (store.get('drafts') || i.status === 'reviewed'));
+        && (store.get('drafts') || i.status === 'reviewed')
+        // An item with no month of its own is never scrubbed away; Eid moves through the
+        // year, and hiding it eleven months in twelve would be a lie.
+        && !(month && i.month && i.month !== month));
       if (!mine.length) continue;
       const h = document.createElement('h2');
       h.className = 'facts-heading';
@@ -431,6 +478,58 @@ export function createShell(root, store) {
       }
       facts.append(h, ul);
     }
+  }
+
+  /**
+   * With a month chosen and no state lifted, the sheet answers for the whole country:
+   * what falls in it, and where. The engine's index is already narrowed to the month,
+   * so this is only the rendering of it.
+   */
+  function renderMonth() {
+    monthPanel.replaceChildren();
+    const month = store.get('month');
+    monthPanel.hidden = !month;
+    if (!month) return;
+    const name = t(`month.${month}`);
+    const h = document.createElement('h2');
+    h.className = 'facts-heading';
+    h.textContent = t('sheet.month.heading', { month: name });
+    const rows = (store.get('regional') || []).flatMap((layer) => {
+      // Items with a month of their own, and those with none: Eid can fall in any month,
+      // so leaving it out of every month's list would be the wrong kind of tidy.
+      const keep = (layer.items || []).filter((i) => (i.month === month || !i.month)
+        && (store.get('drafts') || i.status === 'reviewed'));
+      return keep.map((i) => ({ layer, item: i }));
+    });
+    if (!rows.length) {
+      const p = document.createElement('p');
+      p.className = 'legend-note';
+      p.textContent = t('scrubber.none', { month: name });
+      monthPanel.append(h, p);
+      return;
+    }
+    const r = store.get('regions');
+    const ul = document.createElement('ul');
+    ul.className = 'facts-list';
+    for (const { layer, item } of rows) {
+      const where = (item.regions || []).map((x) => r?.byId?.[x]).filter(Boolean);
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.dataset.layer = layer.id;
+      b.dataset.item = item.id;
+      const nm = document.createElement('span');
+      nm.textContent = pick(item.name);
+      const sub = document.createElement('span');
+      sub.className = 'facts-list-when';
+      sub.textContent = where.length > 3
+        ? t('facts.regions', { n: formatNumber(where.length) })
+        : where.map((x) => pick(x.name)).join(', ');
+      b.append(nm, sub);
+      li.appendChild(b);
+      ul.appendChild(li);
+    }
+    monthPanel.append(h, ul);
   }
 
   /** Where the open card sits in the tour's route, or -1 when it is not one of its stops. */
@@ -531,6 +630,7 @@ export function createShell(root, store) {
     listWrap.hidden = !!u;
     if (!u) {
       renderList();
+      renderMonth();
       setDraft(false);
       title.textContent = t('sheet.title');
       alt.hidden = true;
@@ -580,11 +680,12 @@ export function createShell(root, store) {
   store.subscribe('drafts', renderSelection);
   store.subscribe('item', () => { renderSelection(); renderSteps(); });
   store.subscribe('index', renderList);
-  store.subscribe('regional', renderSelection);
+  store.subscribe('regional', () => { renderSelection(); renderScrubber(); });
+  store.subscribe('month', () => { renderScrubber(); renderSelection(); });
   store.subscribe('tour', renderSteps);
   for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
-  store.subscribe('catalog', renderChips, { immediate: true });
-  store.subscribe('layers', renderChips);
+  store.subscribe('catalog', () => { renderChips(); renderScrubber(); }, { immediate: true });
+  store.subscribe('layers', () => { renderChips(); renderScrubber(); });
   store.subscribe('hover', renderHover);
   store.subscribe('hoverLine', renderHover);
   store.subscribe('pointer', renderHover);

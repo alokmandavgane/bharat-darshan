@@ -70,5 +70,21 @@
   "month.10": "अक्तूबर",
   "month.11": "नवंबर",
   "month.12": "दिसंबर",
-  "facts.regions": "{n} राज्यों और प्रदेशों में"
+  "facts.regions": "{n} राज्यों और प्रदेशों में",
+  "scrubber.heading": "वर्ष भर",
+  "month.all": "पूरा वर्ष",
+  "month.short.1": "जन",
+  "month.short.2": "फ़र",
+  "month.short.3": "मार्च",
+  "month.short.4": "अप्रै",
+  "month.short.5": "मई",
+  "month.short.6": "जून",
+  "month.short.7": "जुल",
+  "month.short.8": "अग",
+  "month.short.9": "सित",
+  "month.short.10": "अक्तू",
+  "month.short.11": "नव",
+  "month.short.12": "दिस",
+  "scrubber.none": "{month} में दिखाए गए में कुछ नहीं पड़ता।",
+  "sheet.month.heading": "{month} में"
 }

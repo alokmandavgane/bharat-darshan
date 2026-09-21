@@ -70,5 +70,21 @@
   "month.10": "October",
   "month.11": "November",
   "month.12": "December",
-  "facts.regions": "in {n} states and territories"
+  "facts.regions": "in {n} states and territories",
+  "scrubber.heading": "Through the year",
+  "month.all": "All year",
+  "month.short.1": "Jan",
+  "month.short.2": "Feb",
+  "month.short.3": "Mar",
+  "month.short.4": "Apr",
+  "month.short.5": "May",
+  "month.short.6": "Jun",
+  "month.short.7": "Jul",
+  "month.short.8": "Aug",
+  "month.short.9": "Sep",
+  "month.short.10": "Oct",
+  "month.short.11": "Nov",
+  "month.short.12": "Dec",
+  "scrubber.none": "Nothing on show falls in {month}.",
+  "sheet.month.heading": "In {month}"
 }

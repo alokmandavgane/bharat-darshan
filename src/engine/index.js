@@ -168,14 +168,18 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('regional', active.filter((id) => regionalFiles.has(id)).map((id) => regionalFiles.get(id)));
   }
 
-  /** The regional items on show, narrowed to the lifted state when there is one. */
+  /** The regional items on show: the lifted state's, and the scrubbed month's. */
   function regionalRows(active, drafts, lv) {
+    const month = store.get('month');
     const out = [];
     for (const [id, data] of regionalFiles) {
       if (!active.has(id)) continue;
       for (const item of data.items || []) {
         if (!drafts && item.status !== 'reviewed') continue;
         if (lv?.name === 'state' && !(item.regions || []).includes(lv.id)) continue;
+        // An item with no month of its own is never scrubbed away: Eid moves through
+        // the year, and hiding it in eleven months out of twelve would be a lie.
+        if (month && item.month && item.month !== month) continue;
         out.push({ layer: id, item });
       }
     }
@@ -284,6 +288,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   store.subscribe('layers', loadActiveLayers);
   store.subscribe('drafts', publishIndex);
   store.subscribe('level', publishIndex);
+  store.subscribe('month', publishIndex);
 
   /** Fly to a place: closer at country level, a pan inside a state; returns the flight time. */
   function flyToItem(item, { ms = 800, yaw = undefined } = {}) {

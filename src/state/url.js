@@ -5,6 +5,7 @@
 //   /en/state/kerala            the state view, pushState: Back leaves it
 //   ...?layers=rivers,roads     the layers on show, when they are not the defaults
 //   ...?item=rivers:ganga       a river, a peak, a place: whatever card is open
+//   ...?month=10                the scrubber: only what falls in that month
 //   ...?relief=18&cam=x,z,zoom,yaw,pitch   relief and, once the user has moved, the camera
 //   ...?drafts=1                show unreviewed content (also on in dev builds)
 // History API only.
@@ -25,6 +26,7 @@ export function readUrl(loc = location) {
   const layers = q.has('layers')
     ? (q.get('layers') === 'none' ? [] : q.get('layers').split(',').filter(Boolean))
     : null;
+  const month = Number(q.get('month'));
   const item = (q.get('item') || '').split(':');
   return {
     lang, rest,
@@ -32,6 +34,7 @@ export function readUrl(loc = location) {
     state: q.get('state') || null,
     layers,
     item: item.length === 2 && item[0] && item[1] ? { layer: item[0], id: item[1] } : null,
+    month: Number.isInteger(month) && month >= 1 && month <= 12 ? month : null,
     relief: Number.isFinite(relief) ? relief : null,
     cam,
     drafts: q.get('drafts') === '1',
@@ -39,12 +42,13 @@ export function readUrl(loc = location) {
 }
 
 export function buildUrl({ lang, view = null, state = null, layers = null, item = null,
-                           relief, cam = null, drafts = false }) {
+                           month = null, relief, cam = null, drafts = false }) {
   const path = '/' + [lang, ...(view ? ['state', view] : [])].filter(Boolean).join('/');
   const q = new URLSearchParams();
   if (!view && state) q.set('state', state);
   if (layers) q.set('layers', layers.length ? layers.join(',') : 'none');
   if (item) q.set('item', `${item.layer}:${item.id}`);
+  if (month) q.set('month', String(month));
   if (relief !== undefined && relief !== DEFAULT_RELIEF) q.set('relief', String(relief));
   if (cam) q.set('cam', [cam.x.toFixed(0), cam.z.toFixed(0), cam.zoom.toFixed(0), cam.yaw.toFixed(1), cam.pitch.toFixed(1)].join(','));
   if (drafts) q.set('drafts', '1');
@@ -85,6 +89,7 @@ export function syncUrl(store) {
       state: slugOf(store.get('selection')),
       layers: layersParam(),
       item: item?.layer && item?.id ? { layer: item.layer, id: item.id } : null,
+      month: store.get('month') || null,
       relief: relief.on ? relief.amount : 0,
       cam: camTouched ? store.get('camera') : null,
       drafts: draftsFromUrl && !!store.get('drafts'),
@@ -107,6 +112,7 @@ export function syncUrl(store) {
   store.subscribe('layers', () => write());
   store.subscribe('catalog', () => write());
   store.subscribe('item', () => write());
+  store.subscribe('month', () => write());
   store.subscribe('level', (lv, prev, meta) => {
     if (meta.source === 'popstate') return;
     // A level restored from the URL must still be written back: `selection` is set first
@@ -143,6 +149,7 @@ export function syncUrl(store) {
     applying = true;
     if (u.lang) store.set('lang', u.lang);
     if (u.layers) store.set('layers', { active: u.layers });
+    store.set('month', u.month);
     store.set('item', u.item);
     const viewId = idOf(u.view);
     store.set('level', viewId ? { name: 'state', id: viewId } : { name: 'country', id: null }, { source: 'popstate' });
