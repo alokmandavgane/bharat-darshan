@@ -1,0 +1,85 @@
+{
+  "id": "physiography",
+  "type": "areas",
+  "group": "physical",
+  "title": {
+    "en": "Physical divisions",
+    "hi": "भौतिक विभाग"
+  },
+  "icon": "mountain",
+  "default_on": false,
+  "source": {
+    "format": "shapefile-polygon",
+    "match": "NAME",
+    "encoding": "utf-8",
+    "files": {
+      "ne_regions.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_geography_regions_polys.shp",
+      "ne_regions.dbf": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_geography_regions_polys.dbf",
+      "ne_regions.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_geography_regions_polys.prj"
+    }
+  },
+  "categories": [
+    {
+      "id": "mountains",
+      "color": "#8d7f6a",
+      "title": {
+        "en": "Mountains and hills",
+        "hi": "पर्वत और पहाड़ियाँ"
+      }
+    },
+    {
+      "id": "plateau",
+      "color": "#a98f63",
+      "title": {
+        "en": "Plateau",
+        "hi": "पठार"
+      }
+    },
+    {
+      "id": "plain",
+      "color": "#9aaa72",
+      "title": {
+        "en": "Plain",
+        "hi": "मैदान"
+      }
+    },
+    {
+      "id": "desert",
+      "color": "#cbb277",
+      "title": {
+        "en": "Desert",
+        "hi": "मरुस्थल"
+      }
+    },
+    {
+      "id": "coast",
+      "color": "#7fa79b",
+      "title": {
+        "en": "Coast and delta",
+        "hi": "तट और डेल्टा"
+      }
+    }
+  ],
+  "fields": {
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "Physical divisions have no surveyed borders: a plateau fades into a plain over tens of kilometres and different textbooks draw the line differently. These outlines are Natural Earth's generalised ones, clipped to India, and are meant to be read as regions rather than as boundaries.",
+    "hi": "भौतिक विभागों की कोई सर्वेक्षित सीमा नहीं होती: पठार दसियों किलोमीटर में मैदान में बदल जाता है और अलग-अलग पुस्तकें रेखा अलग खींचती हैं। ये Natural Earth की सामान्यीकृत रूपरेखाएँ हैं, भारत तक सीमित, और इन्हें सीमाओं के बजाय क्षेत्रों की तरह पढ़ा जाए।"
+  },
+  "sources": [
+    "https://www.naturalearthdata.com/downloads/10m-physical-vectors/"
+  ],
+  "attribution": "Region outlines: Natural Earth 10m physical regions (public domain), clipped to India and rasterised by the build.",
+  "_type": "\"areas\" joins polygons by name the way a lines layer joins courses, then rasterises them: the engine reads the type, never this layer's name."
+}

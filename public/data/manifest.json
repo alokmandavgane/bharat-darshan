@@ -174,6 +174,79 @@
    "path": "layers/languages.json"
   },
   {
+   "id": "physiography",
+   "type": "areas",
+   "title": {
+    "en": "Physical divisions",
+    "hi": "भौतिक विभाग"
+   },
+   "icon": "mountain",
+   "group": "physical",
+   "default_on": false,
+   "count": 16,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "mountains",
+     "color": "#8d7f6a",
+     "title": {
+      "en": "Mountains and hills",
+      "hi": "पर्वत और पहाड़ियाँ"
+     }
+    },
+    {
+     "id": "plateau",
+     "color": "#a98f63",
+     "title": {
+      "en": "Plateau",
+      "hi": "पठार"
+     }
+    },
+    {
+     "id": "plain",
+     "color": "#9aaa72",
+     "title": {
+      "en": "Plain",
+      "hi": "मैदान"
+     }
+    },
+    {
+     "id": "desert",
+     "color": "#cbb277",
+     "title": {
+      "en": "Desert",
+      "hi": "मरुस्थल"
+     }
+    },
+    {
+     "id": "coast",
+     "color": "#7fa79b",
+     "title": {
+      "en": "Coast and delta",
+      "hi": "तट और डेल्टा"
+     }
+    }
+   ],
+   "fields": {
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "Physical divisions have no surveyed borders: a plateau fades into a plain over tens of kilometres and different textbooks draw the line differently. These outlines are Natural Earth's generalised ones, clipped to India, and are meant to be read as regions rather than as boundaries.",
+    "hi": "भौतिक विभागों की कोई सर्वेक्षित सीमा नहीं होती: पठार दसियों किलोमीटर में मैदान में बदल जाता है और अलग-अलग पुस्तकें रेखा अलग खींचती हैं। ये Natural Earth की सामान्यीकृत रूपरेखाएँ हैं, भारत तक सीमित, और इन्हें सीमाओं के बजाय क्षेत्रों की तरह पढ़ा जाए।"
+   },
+   "path": "layers/physiography.json"
+  },
+  {
    "id": "places",
    "type": "points",
    "title": {
@@ -909,6 +982,14 @@
   "layers/languages.json": {
    "size": 22214,
    "sha256": "3b8eb63899a2"
+  },
+  "layers/physiography-areas.bin.gz": {
+   "size": 7773,
+   "sha256": "d9c033ba0803"
+  },
+  "layers/physiography.json": {
+   "size": 14355,
+   "sha256": "c987e794e59a"
   },
   "layers/places.json": {
    "size": 122864,
