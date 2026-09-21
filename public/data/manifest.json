@@ -23,12 +23,14 @@
  },
  "tiers": {
   "1024": {
+   "edge": "regions/india-edge-1024.bin.gz",
    "borders": "regions/states-borders-1024.bin.gz",
    "ids": "regions/states-ids-1024.bin.gz",
    "heights": "terrain/heights-1024.bin.gz",
    "shade": "terrain/shade-1024.bin.gz"
   },
   "2048": {
+   "edge": "regions/india-edge-2048.bin.gz",
    "borders": "regions/states-borders-2048.bin.gz",
    "ids": "regions/states-ids-2048.bin.gz",
    "heights": "terrain/heights-2048.bin.gz",
@@ -227,6 +229,14 @@
   "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
  ],
  "files": {
+  "regions/india-edge-1024.bin.gz": {
+   "size": 44836,
+   "sha256": "568a3c12bd63"
+  },
+  "regions/india-edge-2048.bin.gz": {
+   "size": 96423,
+   "sha256": "1d728256888a"
+  },
   "regions/states-borders-1024.bin.gz": {
    "size": 138973,
    "sha256": "33c9c840dc7d"
