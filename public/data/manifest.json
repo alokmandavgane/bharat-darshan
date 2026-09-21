@@ -93,6 +93,15 @@
      "color": "#4d7f97"
     }
    ],
+   "fields": {
+    "month": {
+     "type": "month",
+     "label": {
+      "en": "Usually in",
+      "hi": "प्रायः"
+     }
+    }
+   },
    "path": "layers/festivals.json"
   },
   {
@@ -260,6 +269,15 @@
      "color": "#6b6480"
     }
    ],
+   "fields": {
+    "opened": {
+     "type": "year",
+     "label": {
+      "en": "Opened",
+      "hi": "आरंभ"
+     }
+    }
+   },
    "path": "layers/rail.json"
   },
   {
@@ -401,6 +419,20 @@
      "color": "#8a7550"
     }
    ],
+   "fields": {
+    "elevation_m": {
+     "type": "int",
+     "required": true,
+     "label": {
+      "en": "Elevation",
+      "hi": "ऊँचाई"
+     },
+     "unit": {
+      "en": "{n} m",
+      "hi": "{n} मी"
+     }
+    }
+   },
    "path": "layers/summits.json"
   }
  ],
