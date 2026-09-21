@@ -773,6 +773,32 @@ docs/DEPLOY.md).
   And a tap on the state already lifted puts it back down, clearing the selection.
   The layer switches are small and carry their layer's glyph; the glyph set moved to
   src/glyphs.js, shared by the markers that draw tokens and the menu that draws chips.
+- 2026-09-21, seventh round.
+  The socket, done properly. Every state package had been carrying two border fields
+  that were entirely zero -- `border_fields` wants land on both sides of an edge, and a
+  package has one labelled id -- so they are replaced by a signed distance to the unit's
+  own outline. The plate cuts its socket from it and the block trims its own rim with
+  it, both landing on the curve the walls stand on instead of on the step the ID raster
+  takes; until the package arrives, and under saveData, the feathered raster stands in.
+  Border lines are now drawn only on the plate, which the zero field had been hiding.
+  About 60 KB a package against the 5 KB of zeros: 31.8 -> 33.2 MB, none on first view.
+  The coast was still fraying a pixel inside its own smooth silhouette: coastal texels
+  reading below sea level were painted as ocean at full opacity, inside a cut-out that
+  is all model by definition. Inside the outline everything is land now.
+  Rotation follows the hand: dragging right turned the model left and dragging down
+  tipped it away, which is backwards for something you reach out and turn on a table.
+  And the land around India, so Surroundings is a landscape rather than a small island
+  of terrain ending a few hundred km out. `03_world.py` crops a sheet three grid tiles
+  across and down from a low zoom of the same elevation source -- 1216x1280 at about
+  8 km per pixel, the Horn of Africa to Indonesia -- and the engine lays it under the
+  plate as the terrain's own material with its own rasters bound, so the clay look
+  cannot drift. It sits four km under the plate's sheet, because both are flat at sea
+  level over the ocean and without the gap the water came out in depth-fighting
+  stripes, and it fades in as the complement of the plate's own rim fade. 1.5 MB,
+  fetched on the first toggle, skipped under saveData.
+  Left: a faint seam still shows where the two sheets hand over, the plate's quiet
+  neighbours being a different resolution and a different ambient occlusion from the
+  backdrop's. Worth another look before Phase 4.
 
 ### What exists
 
