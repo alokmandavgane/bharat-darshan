@@ -52,7 +52,10 @@ def main():
                 continue
             with open(os.path.join(layers_dir, n), encoding='utf-8') as f:
                 L = json.load(f)
-            layers.append({k: L[k] for k in ('id', 'type', 'title', 'icon', 'group', 'default_on', 'count', 'reviewed') if k in L}
+            # categories and marker ride along so the menu can draw a legend before the
+            # layer itself is fetched; the item bodies stay in the layer file.
+            layers.append({k: L[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group',
+                                             'default_on', 'count', 'reviewed', 'categories') if k in L}
                           | {'path': f'layers/{n}'})
     manifest = {
         'version': 1,

@@ -25,6 +25,8 @@ from pipeline.lib import fetch, grid, lines, pack  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines')
 STATUSES = ('draft', 'reviewed')
+# Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
+FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str}
 BLURB_MAX = 240
 
 
@@ -55,6 +57,11 @@ def validate_layer(layer, folder):
         src = layer.get('source') or {}
         if not src.get('files') or not src.get('format'):
             p.append('a lines layer needs source.format and source.files')
+    for name, spec in (layer.get('fields') or {}).items():
+        if spec.get('type') not in FIELD_TYPES:
+            p.append(f'field {name}: type must be one of {FIELD_TYPES}')
+        if not bilingual(spec.get('label')):
+            p.append(f'field {name}: label needs en and hi')
     return p
 
 
@@ -106,7 +113,7 @@ def build_lines(layer, folder, items, cats, ids):
     return out, problems
 
 
-def validate_item(it, cats, by_iso, ids, width, height):
+def validate_item(it, cats, by_iso, ids, width, height, fields):
     tag = it.get('id', '?')
     p = []
     if it.get('status') not in STATUSES:
@@ -124,6 +131,13 @@ def validate_item(it, cats, by_iso, ids, width, height):
         p.append(f'{tag}: priority must be 1, 2 or 3')
     if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
         p.append(f'{tag}: sources must list at least one URL')
+    for name, spec in fields.items():
+        v = it.get(name)
+        if v is None:
+            if spec.get('required'):
+                p.append(f'{tag}: {name} is required by the layer')
+        elif not isinstance(v, FIELD_TYPES[spec['type']]) or isinstance(v, bool):
+            p.append(f"{tag}: {name} must be {spec['type']}")
     a = it.get('anchor') or {}
     if not (isinstance(a.get('lat'), (int, float)) and isinstance(a.get('lon'), (int, float))):
         p.append(f'{tag}: anchor needs numeric lat and lon')
@@ -149,6 +163,7 @@ def build_layer(folder, states, ids, out):
     items_path = os.path.join(folder, 'items.json')
     items = json.load(open(items_path, encoding='utf-8')) if os.path.exists(items_path) else []
     cats = {c['id'] for c in layer.get('categories', [])}
+    fields = layer.get('fields') or {}
     by_iso = {u['iso']: u for u in states['units']}
     by_id = {u['id']: u for u in states['units']}
     height, width = ids.shape
@@ -162,16 +177,20 @@ def build_layer(folder, states, ids, out):
         if it.get('id') in seen:
             problems.append(f"{it.get('id')}: duplicate id")
         seen.add(it.get('id'))
-        p, region = validate_item(it, cats, by_iso, ids, width, height)
+        p, region = validate_item(it, cats, by_iso, ids, width, height, fields)
         problems += p
         if p:
             continue
         x, z = grid.lonlat_to_scene(it['anchor']['lon'], it['anchor']['lat'])
-        out_items.append({
+        entry = {
             'id': it['id'], 'name': it['name'], 'category': it['category'], 'priority': it['priority'],
             'x': round(float(x), 1), 'z': round(float(z), 1), 'region': region, 'regionSlug': by_id[region]['slug'],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
-        })
+        }
+        for name in fields:
+            if it.get(name) is not None:
+                entry[name] = it[name]
+        out_items.append(entry)
     return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
 
 
@@ -180,7 +199,7 @@ def finish(layer, out_items, out, problems, order):
     if problems:
         return layer, None, problems
     out_items.sort(key=order)
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group', 'categories', 'attribution') if k in layer}
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'title', 'icon', 'group', 'categories', 'fields', 'attribution') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')
