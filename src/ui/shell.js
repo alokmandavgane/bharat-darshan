@@ -2,6 +2,7 @@
 // Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
+import { glyphSvg } from '../glyphs.js';
 
 /**
  * @param {Document} root
@@ -108,10 +109,15 @@ export function createShell(root, store) {
       for (const layer of list) {
         const b = document.createElement('button');
         b.type = 'button';
-        b.className = 'chip';
+        b.className = 'chip chip-layer';
         b.dataset.layer = layer.id;
         b.setAttribute('aria-pressed', String(active.has(layer.id)));
-        b.textContent = pick(layer.title);
+        const ic = document.createElement('span');
+        ic.className = 'chip-icon';
+        ic.innerHTML = glyphSvg(layer.icon);         // static markup from the glyph set only
+        const label = document.createElement('span');
+        label.textContent = pick(layer.title);
+        b.append(ic, label);
         row.appendChild(b);
       }
       section.appendChild(row);

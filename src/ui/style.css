@@ -264,6 +264,19 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   border-color: transparent;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
 }
+/* A switch is a small thing you flick, not a call to action: the layer chips are
+   compact and carry the layer's own glyph. Declared after .chip so it wins on order. */
+.chip-layer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  padding: 4px 10px 4px 7px;
+  min-height: 28px;
+}
+.chip-icon { display: flex; opacity: 0.75; }
+.chip-icon svg { width: 14px; height: 14px; }
+.chip-layer[aria-pressed="true"] .chip-icon { opacity: 1; }
 .relief {
   display: flex;
   align-items: center;
