@@ -48,6 +48,99 @@
  },
  "layers": [
   {
+   "id": "basins",
+   "type": "areas",
+   "title": {
+    "en": "River basins",
+    "hi": "नदी बेसिन"
+   },
+   "icon": "wave",
+   "group": "physical",
+   "default_on": false,
+   "count": 25,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "himalayan-bay",
+     "color": "#5f8fb0",
+     "title": {
+      "en": "To the Bay of Bengal, from the Himalaya",
+      "hi": "हिमालय से बंगाल की खाड़ी तक"
+     }
+    },
+    {
+     "id": "peninsular-bay",
+     "color": "#8db39a",
+     "title": {
+      "en": "To the Bay of Bengal, across the peninsula",
+      "hi": "प्रायद्वीप पार कर बंगाल की खाड़ी तक"
+     }
+    },
+    {
+     "id": "himalayan-arabian",
+     "color": "#b98f5e",
+     "title": {
+      "en": "To the Arabian Sea, from the Himalaya",
+      "hi": "हिमालय से अरब सागर तक"
+     }
+    },
+    {
+     "id": "peninsular-arabian",
+     "color": "#d0a86e",
+     "title": {
+      "en": "To the Arabian Sea, from the west of the peninsula",
+      "hi": "प्रायद्वीप के पश्चिम से अरब सागर तक"
+     }
+    },
+    {
+     "id": "inland",
+     "color": "#d9c793",
+     "title": {
+      "en": "Never reaches the sea",
+      "hi": "समुद्र तक कभी नहीं पहुँचता"
+     }
+    },
+    {
+     "id": "abroad",
+     "color": "#9d90b6",
+     "title": {
+      "en": "Leaves India for Myanmar and Bangladesh",
+      "hi": "भारत से म्यांमार और बांग्लादेश जाता है"
+     }
+    },
+    {
+     "id": "islands",
+     "color": "#7fa6a2",
+     "title": {
+      "en": "Island drainage",
+      "hi": "द्वीपों का अपवाह"
+     }
+    }
+   ],
+   "fields": {
+    "area_km2": {
+     "type": "int",
+     "label": {
+      "en": "Basin area",
+      "hi": "बेसिन क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "Every drop of rain in India ends up in one of these. The colour says where: the Bay of Bengal, the Arabian Sea, or nowhere at all. The line between the blues and the ochres is the country's great divide, and it runs down the Western Ghats, only fifty to a hundred km from the west coast.",
+    "hi": "भारत में गिरने वाली हर बूँद इनमें से किसी एक में पहुँचती है। रंग बताता है कहाँ: बंगाल की खाड़ी, अरब सागर, या कहीं नहीं। नीले और गेरुए रंगों के बीच की रेखा देश का महान जल-विभाजक है, और वह पश्चिमी घाट के साथ चलती है, पश्चिमी तट से केवल पचास से सौ किमी दूर।"
+   },
+   "sources": [
+    "indian-water-features",
+    "india-wris"
+   ],
+   "path": "layers/basins.json"
+  },
+  {
    "id": "cities",
    "type": "points",
    "marker": "dot",
@@ -1477,8 +1570,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 11771,
-   "sha256": "de7a819901b2"
+   "size": 12736,
+   "sha256": "38e38044c3a5"
   },
   "sources.json": {
    "size": 27967,
@@ -1659,6 +1752,14 @@
   "regions/outlines/west-bengal.json": {
    "size": 11521,
    "sha256": "e66f945fbc8e"
+  },
+  "layers/basins-areas.bin.gz": {
+   "size": 10351,
+   "sha256": "f67a9e963962"
+  },
+  "layers/basins.json": {
+   "size": 23240,
+   "sha256": "5e58b3ef8fb1"
   },
   "layers/cities.json": {
    "size": 308980,
