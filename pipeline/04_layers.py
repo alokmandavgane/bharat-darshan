@@ -162,8 +162,8 @@ def validate_layer(layer, folder, registry):
             p.append(f"source.dump must be one of {GEONAMES_DUMPS}")
     if layer.get('type') == 'areas':
         src = layer.get('source') or {}
-        if src.get('format') != 'shapefile-polygon' or not src.get('files'):
-            p.append('an areas layer needs source.format "shapefile-polygon" and source.files')
+        if src.get('format') not in ('shapefile-polygon', 'geojson-polygon', 'pmtiles-polygon') or not src.get('files'):
+            p.append('an areas layer needs a polygon source.format (shapefile, geojson or pmtiles) and source.files')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
         if src.get('format') == DISTRICTS:

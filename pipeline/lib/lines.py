@@ -32,7 +32,9 @@ def fold(name):
     return ''.join(c for c in s if not unicodedata.combining(c)).strip().lower()
 
 
-FORMATS = ('shapefile-polyline', 'shapefile-polygon', 'geojson-polyline', 'geojson-polygon', 'pmtiles-polyline')
+FORMATS = ('shapefile-polyline', 'shapefile-polygon', 'geojson-polyline', 'geojson-polygon',
+           'pmtiles-polyline', 'pmtiles-polygon')
+PMTILES = ('pmtiles-polyline', 'pmtiles-polygon')
 GEOJSON = ('geojson-polyline', 'geojson-polygon')
 
 
@@ -89,7 +91,7 @@ def _files(source, raw_dir):
         paths[name] = dest
     if source['format'] in GEOJSON:
         return next(p for n, p in paths.items() if n.endswith(('.geojson', '.json'))), None
-    if source['format'] == 'pmtiles-polyline':
+    if source['format'] in PMTILES:
         return next(p for n, p in paths.items() if n.endswith('.pmtiles')), None
     return (next(p for n, p in paths.items() if n.endswith('.shp')),
             next((p for n, p in paths.items() if n.endswith('.dbf')), None))
@@ -119,8 +121,9 @@ def _features(source, raw_dir, polygons=False):
     if source['format'] in GEOJSON:
         yield from read_geojson(path)
         return
-    if source['format'] == 'pmtiles-polyline':
-        yield from pmtiles.features(pmtiles.Archive(path), int(source.get('zoom', 10)), source.get('layer'))
+    if source['format'] in PMTILES:
+        yield from pmtiles.features(pmtiles.Archive(path), int(source.get('zoom', 10)), source.get('layer'),
+                                    polygons=source['format'] == 'pmtiles-polygon')
         return
     reader = shapefile.read_polygons if polygons else shapefile.read_polylines
     rows = shapefile.read_dbf(dbf, encoding=source.get('encoding', 'latin-1'))[1] if dbf else None
@@ -158,7 +161,7 @@ def qualified(props, source):
 def load_source(source, raw_dir):
     """Download a layer's geometry files and index their parts by folded name."""
     by_name = {}
-    rows = features(source, raw_dir) if source.get('format') == 'pmtiles-polyline' else _features(source, raw_dir)
+    rows = features(source, raw_dir) if source.get('format') in PMTILES else _features(source, raw_dir)
     for props, parts in rows:
         if parts:
             for name in qualified(props, source):

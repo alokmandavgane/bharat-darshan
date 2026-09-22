@@ -278,12 +278,20 @@ def _clip_to_square(pts, extent):
     return out
 
 
-def features(archive, zoom, layer=None):
+def features(archive, zoom, layer=None, polygons=False):
     """
-    Every line feature of one zoom, as (properties, [(n, 2) lon/lat arrays]).
+    Every line feature of one zoom -- or every polygon, with `polygons` -- as
+    (properties, [(n, 2) lon/lat arrays]).
 
-    Geometry is clipped to each tile's own square before it leaves, so a feature that
-    crosses tiles arrives as several pieces meeting exactly on the tile edges.
+    A line is clipped to each tile's own square before it leaves, so a feature that
+    crosses tiles arrives as several pieces meeting exactly on the tile edges. A polygon
+    is left as the tile drew it, buffer and all: each tile's piece is the polygon cut to
+    a box, the union of the pieces is the polygon, and anything that fills them -- a
+    raster -- fills the overlaps with the same id twice and loses nothing.
+
+    Rings come out wound the way a shapefile winds them (outer clockwise in lon/lat, holes
+    the other way) without being touched, so the polygon reader that already knows
+    shapefiles knows these.
     """
     for z, tx, ty, data in archive.tiles(zoom):
         scale = 2 ** z
@@ -313,12 +321,16 @@ def features(archive, zoom, layer=None):
                         gtype = v
                     elif f3 == 4:
                         geom = _packed(v)
-                if gtype != 2:                   # lines only
+                if gtype != (3 if polygons else 2):
                     continue
                 props = {keys[tags[k]]: values[tags[k + 1]] for k in range(0, len(tags) - 1, 2)}
                 parts = []
                 for line in _lines(geom):
-                    for piece in _clip_to_square(line, extent):
+                    # A vector tile's outer ring has a positive area with y pointing down;
+                    # turned into latitude, which points up, that is clockwise -- already the
+                    # way a shapefile winds it, so a polygon passes through as it is.
+                    pieces = [line] if polygons else _clip_to_square(line, extent)
+                    for piece in pieces:
                         a = np.asarray(piece, dtype=np.float64)
                         lon = (tx + a[:, 0] / extent) / scale * 360.0 - 180.0
                         yy = (ty + a[:, 1] / extent) / scale
