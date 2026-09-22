@@ -341,10 +341,13 @@ void main() {
   float g = texture(uGrain, vPos.xz * 0.022).r;
   col *= 0.94 + 0.12 * g * (1.0 - socket);
 
-  // dissolve into the page (premultiplied alpha) instead of ending at a rim
+  // Dissolve into what is behind over the last 420 km of the data (premultiplied alpha)
+  // instead of ending at a rim: on the backdrop, that is where the fine raster hands
+  // over to the coarse one. The cut-out ends on the outline and nowhere else: the west
+  // of Kutch lies 20 km inside the rect, and a rim fade there took it away.
   float edge = min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x, min(vUv.y, 1.0 - vUv.y) * uSizeKm.y);
-  float fade = smoothstep(0.0, 420.0, edge);
-  if (uOnlyIndia > 0.5 && plate > 0.5) fade *= inIndia;   // the cut-out ends on the outline
+  float rim = smoothstep(0.0, 420.0, edge);
+  float fade = uOnlyIndia > 0.5 && plate > 0.5 ? inIndia : rim;
   // The backdrop is solid the whole way in under the plate, and the engine clears the
   // depth buffer between the two, so the plate covers it wherever the plate is opaque.
   // Fading it in under the plate's own fade looks like the same thing and is not: one
@@ -361,8 +364,7 @@ void main() {
   vec4 o = linearToOutputTexel(vec4(col, 1.0));
   // The shadow lies under the model, so the clay composites over it rather than being
   // mixed with it: a + b(1 - a), premultiplied, which is one sheet over another.
-  float sa = shade_ * smoothstep(0.0, 420.0, min(min(vUv.x, 1.0 - vUv.x) * uSizeKm.x,
-                                                 min(vUv.y, 1.0 - vUv.y) * uSizeKm.y));
+  float sa = shade_ * rim;
   if (sa <= 0.0) { outColor = vec4(o.rgb * fade, fade); return; }
   vec3 tint = linearToOutputTexel(vec4(uShadowTint, 1.0)).rgb;
   outColor = vec4(o.rgb * fade + tint * sa * (1.0 - fade), fade + sa * (1.0 - fade));

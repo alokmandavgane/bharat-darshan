@@ -36,9 +36,11 @@ void main() {
     vec2 pr = texture(uPrismLut, vec2((id + 0.5) / 256.0, 0.5)).rg;
     y += uPrismKm * pr.r * step(0.5, pr.g);
   }
-  // the model settles into the paper towards the edge of the data, no hard rim
-  float edge = min(min(uv.x, 1.0 - uv.x) * uSizeKm.x, min(uv.y, 1.0 - uv.y) * uSizeKm.y);
-  y *= smoothstep(0.0, 260.0, edge);
+  // The relief runs at full height to the edge of the data. It used to settle into the
+  // paper over the last 260 km, from when the plate was a rectangle lying on the page;
+  // now the plate is a cut-out with walls or sits on a backdrop that keeps its own
+  // height, and a strip of Tibet sinking to sea level along the plate's north edge
+  // read as a trench dug round the model.
   vec3 p = vec3((uv.x - 0.5) * uSizeKm.x, y + uLift, (uv.y - 0.5) * uSizeKm.y);
   vUv = uv;
   vPos = p;
