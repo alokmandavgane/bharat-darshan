@@ -620,6 +620,25 @@ bands), **political** (categorical state fills over gentle relief) and **plain**
 clay, relief by light alone) for everything thematic. It is a uniform or two on the
 existing terrain material, with the same fade-through-clay the choropleths use.
 
+*`physical` and `plain` shipped on 2026-09-22.* `plain` is two uniforms -- the clay colour
+and how far it has faded in -- and one `mix` where the hypsometric colour used to be
+assigned, so the light and the baked occlusion carry the whole of the relief. The base is
+a property of the page: it arrives through the store like the layers do, crossfades over
+420 ms when a page opens or closes, and the backdrop is told as well, or the neighbours
+would stay banded while India went clay. Four pages ask for it: power, transport, culture
+and people. On the people page it is the prism walls that gain the most -- a column of
+population had been showing hypsometric rock up its sides.
+
+`political` is **specified and not built**, and the build refuses a page that asks for it
+rather than quietly drawing physical. The design, for when a page wants it: the colours
+cannot be hashed from the state id, because a political map's one job is that neighbours
+differ, so it wants an offline greedy colouring of the state adjacency graph (which the ID
+raster already gives: any two neighbouring pixels with different non-zero ids are an edge)
+emitted as a colour index per unit, then drawn through a second fill channel of its own so
+that a page's choropleth still composes over it. It is maybe 150 lines, and nothing today
+would use it: the one political page reads better as the zonal councils it already shows.
+D12's rule applies to base styles too -- build it when a page needs it.
+
 ### Plates: the atlas's pages (D11)
 
 ```
@@ -1004,7 +1023,9 @@ Then the share shells, the same day: 18 Open Graph shells generated from `plates
 and poster mode now renders a page's own card. The card images themselves need a
 Playwright run (`node tools/share-image.mjs`) and until then each page's shell points at
 its language card. The cartouche, the scale bar and the graticule followed the same day,
-which is the furniture done. Left: base styles for the thematic pages.*
+which is the furniture done, and the `plain` base style after them. What is left of the
+phase is not code: the tenth page and the four sections with no page yet (resources,
+agriculture, history, and a second political one), and the 18 card images.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1798,6 +1819,23 @@ docs/DEPLOY.md).
   cut-out, surroundings, relief off (the grid crosses the flat model, as a flat map's
   should) and the state view (nothing to say at 200 km, and nothing wrong either).
 
+- 2026-09-22, thirty-first round: the `plain` base style, which is what the thematic pages
+  had been waiting for. Two uniforms and one `mix` where the hypsometric colour used to be
+  assigned: the bands give way to one warm clay and the light and baked occlusion carry
+  the relief by themselves, which is what a clay model looks like before anyone paints
+  heights onto it. It crossfades over 420 ms as a page opens or closes, and the backdrop
+  is told too, or the neighbours would stay banded while India went clay.
+  The colour took five tries in the browser, which is the only way to pick one: the light
+  and the grain take about a third of the value out, so the first honest-looking clay
+  (`#c9b8a0`) came out mushroom grey on screen. `#e8cb9c` is warm at the value the shader
+  leaves it at, and it holds the orange of a highway and the blue of a railway against it.
+  Four pages ask for it -- power, transport, culture, people -- and the people page gains
+  the most, because a column of population had been showing hypsometric rock up its sides.
+  `political` is specified in section 5 and not built: a political map's one job is that
+  neighbours differ, which needs an offline colouring of the adjacency graph rather than a
+  hash, and no page today would use it. The build refuses a page that asks for it, so
+  nobody ships one that silently comes out physical.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1861,12 +1899,13 @@ docs/DEPLOY.md).
    shells are in. What is left: **the 18 card images need a Playwright run** --
    `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
    to see the list); this machine has no Playwright and it is a tool, not a dependency, so
-   it was not installed to get them. The atlas furniture is done: cartouche, scale bar
-   and graticule in, compass rose ruled out (section 3, item 6). What is left of the phase
-   is **base styles** (section 5): several thematic pages would read better over a quieter
-   base -- flat clay, relief by light alone -- than over the full hypsometric one, and it
-   is a uniform or two on the terrain material rather than new drawing. Two smaller things
-   the registry left behind: `content/layers/<id>/layer.json` still carries an
+   it was not installed to get them. Everything else in the phase is built: the
+   furniture (cartouche, scale bar, graticule; compass rose ruled out) and the `plain`
+   base style, which four pages now use. What remains of Phase 6 is **content, not code**
+   -- its exit asks for ten pages reading as an atlas, and there are nine across seven
+   sections, so resources, agriculture and history have nothing yet. `political` as a base
+   style is specified in section 5 and deliberately unbuilt until a page needs it. Two
+   smaller things the registry left behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
