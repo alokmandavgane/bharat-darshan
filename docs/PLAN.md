@@ -347,10 +347,11 @@ Desktop / tablet landscape:
   lifts like a puzzle piece with clean-cut, paler sides.
 - **Neighbours.** Same relief, lighter and desaturated via the region mask, so India
   stands out without drawing anyone else's lines.
-- **Markers.** One clay set, in three sizes of thing: a token with a glyph for a place,
-  a bead the size of a pinhead for a town, and a figurine for a thing made or grown --
-  low-poly, flat-shaded, vertex-coloured, lit by the same key light as the terrain,
-  standing on it with a contact shadow. Nothing flat: a 2D sticker on a 3D model reads
+- **Markers.** One clay set, in four kinds of thing: a peg with a glyph on its head for a
+  place, a bead the size of a pinhead for a town, a counter sized by a value for a
+  quantity, and a figurine for a thing made or grown -- low-poly, flat-shaded,
+  vertex-coloured, lit by the same key light as the terrain, standing on it with a
+  contact shadow, all of them instanced by the GPU. Nothing flat: a 2D sticker on a 3D model reads
   as a label, not as a thing on the model (decided 2026-09-22; the sticker icons were the
   first cut).
 - **Motion.** Short, springy, restrained. Mountains grow when relief toggles; state
@@ -616,7 +617,7 @@ map is a folder and a source, whatever it shows.
 | `points`, dot | a clay bead the size of a pinhead, sized by a value, drawn by the GPU with only the names in HTML | every town, ports, stations, mines | built (`"marker": "dot"`) | every state's ten biggest towns, generated from GeoNames (done) |
 | `points`, model | a figurine built from a recipe (`content/models/`), standing on the relief, instanced by the GPU | GI products, crops, crafts, animals, monuments | built (`"marker": "model"`) | GI tags (done) |
 | `points`, generated | items made by the build from a source and merged with the curated ones | towns, stations, airports, plants by the hundred | built (`"source": { "format": "geonames" }`) | cities (done) |
-| `symbols` | a circle **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
+| `symbols` | a counter **sized by a value**, coloured by category, lying on the relief and drawn by the GPU | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions, filled and draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
 | `flows` | curved arrows between places, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` on a `lines` layer) | the monsoon's advance (done) |
@@ -2011,6 +2012,36 @@ docs/DEPLOY.md).
   Also: the default layers land before the first tier does, so they were handed to the
   DOM before the GPU marker module existed; the engine now hands them over once it is.
   Sizes after: app JS 53 KB gzipped, three.js 142 KB.
+
+- 2026-09-22, the counters. The last DOM markers were the proportional circles of a
+  `symbols` layer -- flat discs with a CSS highlight, beside figurines that are lit and
+  stand -- so they join the instanced path as clay counters: a shallow dome lying on the
+  relief, sized by the same sizer as before (a layer's declared diameter is halved on the
+  way in, a counter and a bead both being radius 1), with the pale collar a cartographer
+  draws round a proportional circle so two that overlap still read as two. A flat top
+  would not do: a cylinder's face and its rim meet the wrapped light at nearly the same
+  angle, so the first cut read as a blot. `points.js` now draws nothing at all -- every
+  marker is the GPU's, and what is left of a marker element is its name -- which took the
+  DOM token, its contact shadow and its pop animation out of the stylesheet with it.
+  Three things this turned up, each worth more than the change that found them:
+  - **A lathe is wound in the order of its profile.** The counter's was written from the
+    top down, which turned the surface inside out: front-face culling hid the dome and
+    showed the collar through it. `test/models.test.js` now measures, for every recipe,
+    the area-weighted lean of its faces away from its own centre, which is negative
+    exactly when a part is inside out. It reproduced the bug before the fix.
+  - **A marker must stand on the surface the mesh draws, not on the raster it samples.**
+    The mesh lifts its own vertices and the rasteriser interpolates between them, so
+    between two vertices the drawn ground sits above the height at a point in the middle
+    -- on the phone's coarse grid by more than a counter lying flat on it is tall, and
+    all but two of them were buried. The marker shader now lifts the four corners of the
+    grid cell and mixes them, which is what the mesh itself does. Pegs and figurines
+    never showed it because they stand a hundred km up.
+  - **A regression from the round before:** beads and figurines were not restricted to
+    the lifted state, which the DOM markers had always been, so a state view kept the
+    whole country's towns. Every GPU marker now belongs to the state it is in.
+  Also, a scaled-down screenshot loses small markers entirely: two rounds running, a
+  0.6-scale capture showed two counters where a full-resolution one showed all
+  twenty-four. Check the marker work at full size.
 
 ### What exists
 

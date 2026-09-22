@@ -319,8 +319,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
-  /** A points layer the GPU draws: everything but a proportional circle or a bare name. */
-  const drawnByGpu = (data) => !['symbol', 'label'].includes(data.marker);
+  /** A points layer the GPU draws: everything but a layer that is only a name. */
+  const drawnByGpu = (data) => data.marker !== 'label';
   const loading = new Set();
   const failed = new Set();
 
@@ -927,7 +927,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     publishBounds();                      // the mask needs the raster, which only exists now
     scene.add(terrain.mesh);
     lines = createLines(scene, terrain.uniforms);
-    marks = createMarks(scene, terrain.uniforms, { loadRecipe: (name) => loadJson(`models/${name}.json`) });
+    marks = createMarks(scene, terrain.uniforms, { grid: terrain.grid, loadRecipe: (name) => loadJson(`models/${name}.json`) });
     // The default layers are small and usually land before the first tier does, so they
     // were handed to points.js with no GPU to draw them yet: hand them over now.
     for (const id of points.loaded) {

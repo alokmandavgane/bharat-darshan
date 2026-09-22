@@ -36,6 +36,10 @@ function primitive(part) {
 /**
  * Build a recipe into one geometry: `position`, `normal` (flat, per face), `color`
  * (the part's own) and `tint` (1 where the item's colour replaces it).
+ *
+ * A `lathe` profile runs bottom to top: three.js winds the surface in the order of the
+ * points, so a profile written downwards faces inward and the part disappears behind
+ * whatever is inside it. `test/models.test.js` checks every recipe for this.
  * @param {{ id: string, footprint?: number, parts: any[] }} recipe
  * @returns {{ geometry: BufferGeometry, footprint: number, height: number }}
  */
@@ -86,6 +90,27 @@ export function buildModel(recipe) {
 /** The bead a `dot` layer draws: a low-poly sphere of radius 1, standing on the ground. */
 export function beadGeometry() {
   return buildModel({ id: 'bead', footprint: 1.15, parts: [{ shape: 'sphere', r: 1, at: [0, 1, 0], color: '#ffffff', tint: true, segments: 10 }] });
+}
+
+/**
+ * The counter a `symbols` layer draws: a low clay disc of radius 1 lying on the ground,
+ * splayed a little at the base as clay pressed down would be. It is read by its area, so
+ * it carries no glyph and its shape is self-similar -- twice the radius is twice the rim
+ * and four times the face, which is what keeps one counter comparable with the next.
+ */
+export function coinGeometry() {
+  // A dome rather than a flat top: a cylinder's face and its rim meet the wrapped light
+  // at nearly the same angle, so a flat counter reads as a blot. Across a shallow dome
+  // the light falls away from the key side, which is what makes it read as a thing.
+  return buildModel({ id: 'coin', footprint: 1.42, parts: [
+    // The pale collar a cartographer draws round a proportional circle, so that two
+    // counters which overlap still read as two.
+    { shape: 'cylinder', rt: 1.14, rb: 1.14, h: 0.12, at: [0, 0.06, 0], color: '#f4ecdc', segments: 22 },
+    // Bottom to top: a lathe is wound in the order of its profile, and one written from
+    // the top down turns the surface inside out.
+    { shape: 'lathe', profile: [[1, 0.1], [1, 0.2], [0.82, 0.31], [0.5, 0.35], [0, 0.36]],
+      color: '#ffffff', tint: true, segments: 22 },
+  ] });
 }
 
 /** Where a peg's head is, so the glyph decal can sit on it (model units). */

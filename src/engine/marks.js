@@ -1,17 +1,17 @@
 // @ts-check
 // Markers drawn by the GPU (PLAN.md section 5): the clay `token` -- a peg with a tinted
-// head and the category's glyph on it -- the `dot`, a bead the size of a pinhead, and
-// the `model`, a figurine built from a recipe. All are instanced: one draw call per
-// kind of thing, however many of them. All stand on the terrain by reading the
+// head and the category's glyph on it -- the `dot`, a bead the size of a pinhead, the
+// `symbol`, a counter whose face carries a value, and the `model`, a figurine built from
+// a recipe. All are instanced: one draw call per kind of thing, however many of them. All stand on the terrain by reading the
 // heightmap in the vertex shader, so nothing is placed per frame on the CPU. A soft
 // shadow disc under each, and the glyph decal on a peg's head, are further instanced
 // draws sharing the same buffers. HTML carries only the names (points.js); picking is
 // done here by projecting the anchors, since a bead has no element to click.
 // The engine knows the marker kinds, never a layer's id.
 import { CircleGeometry, Color, DynamicDrawUsage, GLSL3, InstancedBufferAttribute, InstancedBufferGeometry, Mesh,
-  PlaneGeometry, ShaderMaterial } from 'three';
+  PlaneGeometry, ShaderMaterial, Vector2 } from 'three';
 import { loadGlyphAtlas } from './glyph-atlas.js';
-import { beadGeometry, buildModel, PEG, pegGeometry } from './models.js';
+import { beadGeometry, buildModel, coinGeometry, PEG, pegGeometry } from './models.js';
 import { symbolSizer } from './points.js';
 import markFrag from './shaders/mark.frag.glsl?raw';
 import markVert from './shaders/mark.vert.glsl?raw';
@@ -25,13 +25,18 @@ const STAGGER_S = 0.026;         // between one marker appearing and the next
 const STAGGER_MAX_S = 0.9;
 const BEAD = 'bead';
 const PEG_MODEL = 'peg';
+const COIN = 'coin';
+// A counter lies on the ground, so a tilted view foreshortens it -- every one of them by
+// the same amount, which is what keeps them comparable, and which is what happens to a
+// printed proportional circle when the map it is on is tilted.
+const KINDS = ['dot', 'model', 'symbol'];
 
 /**
  * @param {import('three').Scene} scene
  * @param {Record<string, { value: any }>} tu  the terrain's uniforms, shared so a marker rides what the terrain does
  * @param {{ loadRecipe: (name: string) => Promise<any> }} opts
  */
-export function createMarks(scene, tu, { loadRecipe }) {
+export function createMarks(scene, tu, { loadRecipe, grid }) {
   /** @type {Map<string, any>} */
   const layers = new Map();
   /** @type {Map<string, Promise<{ geometry: any, footprint: number, height: number }>>} */
@@ -42,6 +47,8 @@ export function createMarks(scene, tu, { loadRecipe }) {
   const uTime = { value: 0 };
   const uAtlas = { value: null };
   const uAtlasCols = { value: 4 };
+  // The terrain mesh's quad counts: a marker stands on the surface that mesh draws.
+  const uGrid = { value: new Vector2(grid.cols, grid.rows) };
   let sig = '';
   let until = 0;                 // ms until which something is still springing up
 
@@ -54,7 +61,7 @@ export function createMarks(scene, tu, { loadRecipe }) {
         uHeight: tu.uHeight, uSizeKm: tu.uSizeKm, uExag: tu.uExag, uGamma: tu.uGamma, uHRef: tu.uHRef,
         uIds: tu.uIds, uHole: tu.uHole, uBlockLift: tu.uBlockLift, uPrismLut: tu.uPrismLut, uPrismKm: tu.uPrismKm,
         uKmPerPx: tu.uKmPerPx, uLightDir: tu.uLightDir,
-        uScale, uTime, uAtlas, uAtlasCols, uFootprint: { value: footprint }, uDecal: { value: decal ? 1 : 0 },
+        uScale, uTime, uAtlas, uAtlasCols, uGrid, uFootprint: { value: footprint }, uDecal: { value: decal ? 1 : 0 },
         uHeadY: { value: PEG.headY }, uHeadR: { value: PEG.headR },
       },
     });
@@ -62,9 +69,8 @@ export function createMarks(scene, tu, { loadRecipe }) {
 
   function getModel(name) {
     if (!models.has(name)) {
-      models.set(name, name === BEAD ? Promise.resolve(beadGeometry())
-        : name === PEG_MODEL ? Promise.resolve(pegGeometry())
-          : loadRecipe(name).then(buildModel));
+      const own = { [BEAD]: beadGeometry, [PEG_MODEL]: pegGeometry, [COIN]: coinGeometry }[name];
+      models.set(name, own ? Promise.resolve(own()) : loadRecipe(name).then(buildModel));
     }
     return /** @type {Promise<any>} */ (models.get(name));
   }
@@ -105,7 +111,7 @@ export function createMarks(scene, tu, { loadRecipe }) {
    */
   async function setLayer(layer) {
     remove(layer.id);
-    const kind = ['dot', 'model'].includes(layer.marker) ? layer.marker : 'token';
+    const kind = KINDS.includes(layer.marker) ? layer.marker : 'token';
     const cats = Object.fromEntries((layer.categories || []).map((c) => [c.id, c]));
     const sizeOf = symbolSizer(layer.size);
     const entry = { layer, kind, records: [], groups: [] };
@@ -122,10 +128,14 @@ export function createMarks(scene, tu, { loadRecipe }) {
       const cat = cats[item.category] || {};
       const c = new Color(item.color || cat.color || '#b4552e');
       const glyphName = cat.icon || layer.icon;
+      // `iSize` is px per model unit, and a bead and a counter are both radius 1, so a
+      // layer's declared diameter is halved on the way in.
       const rec = {
         item, index: -1, group: null, tint: [c.r, c.g, c.b],
-        size: kind === 'dot' ? (layer.size ? sizeOf(item) : DOT_PX) : kind === 'model' ? MODEL_PX : (TOKEN_PX[item.priority] || TOKEN_PX[3]),
-        model: kind === 'dot' ? BEAD : kind === 'model' ? item.model : PEG_MODEL,
+        size: kind === 'dot' ? (layer.size ? sizeOf(item) : DOT_PX)
+          : kind === 'symbol' ? sizeOf(item) / 2
+            : kind === 'model' ? MODEL_PX : (TOKEN_PX[item.priority] || TOKEN_PX[3]),
+        model: { dot: BEAD, symbol: COIN, model: item.model }[kind] || PEG_MODEL,
         glyph: atlas ? (atlas.index.get(glyphName) ?? atlas.index.get('pin') ?? 0) : 0,
       };
       entry.records.push(rec);
@@ -182,10 +192,13 @@ export function createMarks(scene, tu, { loadRecipe }) {
         let show = drafts || it.status === 'reviewed';
         // The scrubber: an item with a month of its own goes with its month.
         if (show && month && it.month && it.month !== month) show = false;
-        // A token inside a state view belongs to that state.
-        if (show && entry.kind === 'token' && level.name === 'state') show = it.region === level.id;
-        // Tokens and beads thin with the zoom; a figurine is the point of its page.
-        else if (show && entry.kind !== 'model' && it.priority > maxPriority && !isSel) show = false;
+        // Inside a state view every marker belongs to that state: the rest of the country
+        // has stepped back, and its markers would be standing on a stage they left.
+        if (show && level.name === 'state') show = it.region === level.id;
+        // Tokens and beads thin with the zoom. A figurine is the point of its page, and a
+        // counter's whole job is the comparison with the next one, so neither is thinned:
+        // the reader switched that layer on to see the set.
+        if (show && !['model', 'symbol'].includes(entry.kind) && it.priority > maxPriority && !isSel) show = false;
         const g = rec.group;
         if (show && !g.shown[rec.index]) {
           // Just arrived: it springs up after the ones before it, none of them too late.
@@ -219,6 +232,7 @@ export function createMarks(scene, tu, { loadRecipe }) {
         const px = rec.size * uScale.value;                       // screen px per model unit
         const h = entry.kind === 'dot' ? px * 2 : rec.group.height * px;
         const r = Math.max(maxPx, (entry.kind === 'dot' ? 1.5 : rec.group.footprint) * px);
+        // A counter is wide and flat: it is hit anywhere on its face, not just at its centre.
         const dx = sx - p[0];
         const dy = sy - p[1];
         const t = Math.max(0, Math.min(h, dy));

@@ -96,9 +96,12 @@ export function layerMark(layer) {
         + `<circle cx="20" cy="15" r="8" fill="${c(0)}"/><circle cx="17" cy="12" r="2.2" fill="rgba(255,255,255,.5)"/>`;
       break;
     case 'symbol':
-      body = `<circle cx="16" cy="23" r="12" fill="${c(0)}" opacity=".85"/>`
-        + `<circle cx="29" cy="14" r="7.5" fill="${c(1)}" opacity=".9"/>`
-        + `<circle cx="31" cy="30" r="4.5" fill="${c(2)}"/>`;
+      // Counters lying on the ground, biggest behind, each with its own soft shadow.
+      body = `<ellipse cx="16" cy="25" rx="13" ry="10" fill="rgba(60,45,30,.18)"/>`
+        + `<ellipse cx="16" cy="23" rx="12" ry="9" fill="${c(0)}"/>`
+        + `<ellipse cx="29" cy="15" rx="8" ry="6.5" fill="rgba(60,45,30,.16)"/>`
+        + `<ellipse cx="29" cy="13.5" rx="7.5" ry="6" fill="${c(1)}"/>`
+        + `<ellipse cx="31" cy="31" rx="4.5" ry="3.6" fill="${c(2)}"/>`;
       break;
     case 'label':
       body = `<text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2" fill="${c(0)}">ABC</text>`;

@@ -15,6 +15,7 @@ uniform float uBlockLift;    // km it stands above the plate
 uniform sampler2D uPrismLut;
 uniform float uPrismKm;
 uniform float uKmPerPx;      // world size of one screen pixel (orthographic)
+uniform vec2 uGrid;          // quads across and down in the terrain mesh
 uniform float uScale;        // the zoom's marker scale, shared with the HTML tokens
 uniform float uFootprint;    // > 0: this draw is the shadow disc, at this radius in model units
 uniform float uDecal;        // 1: this draw is the glyph quad on a peg's head
@@ -43,9 +44,29 @@ float lift(float h) {
   return h <= 0.0 ? 0.0 : uExag * pow(h / uHRef, uGamma) * uHRef * 0.001;
 }
 
+/**
+ * The ground a marker stands on, which is the surface the terrain mesh *draws* and not
+ * the raster it samples. The mesh lifts its own vertices and the rasteriser interpolates
+ * between them, so between two vertices the drawn ground can sit well above the height
+ * at a point in the middle -- on the phone's coarse grid, by more than a thing lying
+ * flat on it is tall, and the counters were being buried. Lifting the four corners of
+ * the cell and mixing them is exactly what the mesh does.
+ */
+float groundAt(vec2 uv0) {
+  vec2 g = uv0 * uGrid;
+  vec2 i0 = floor(g);
+  vec2 f = g - i0;
+  vec2 a = i0 / uGrid, b = (i0 + 1.0) / uGrid;
+  float h00 = lift(texture(uHeight, a).r);
+  float h10 = lift(texture(uHeight, vec2(b.x, a.y)).r);
+  float h01 = lift(texture(uHeight, vec2(a.x, b.y)).r);
+  float h11 = lift(texture(uHeight, b).r);
+  return mix(mix(h00, h10, f.x), mix(h01, h11, f.x), f.y);
+}
+
 void main() {
   vec2 uv0 = iAnchor / uSizeKm + 0.5;
-  float y = lift(texture(uHeight, uv0).r);
+  float y = max(groundAt(uv0), lift(texture(uHeight, uv0).r));
   float id = floor(texture(uIds, uv0).r * 255.0 + 0.5);
   if (uHole >= 0.0 && abs(id - uHole) < 0.5) y += uBlockLift;
   if (uPrismKm > 0.0) {

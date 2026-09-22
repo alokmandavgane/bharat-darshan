@@ -2,10 +2,10 @@
 // The `points` layer type (PLAN.md section 5) as HTML markers: sticker-like pins that
 // ride the terrain (and the lifted block) through the same projection as the labels.
 // A layer's `marker` says what the element is: the name alone for a stretch of country
-// (`label`), a proportional circle (`symbol`), or -- for the clay pegs (the default
-// `token`), the `dot` beads and the `model` figurines the GPU draws (marks.js) -- only
-// the name, set beside the bead or above the peg or figurine. The engine knows this
-// type and these markers, never a layer's id.
+// (`label`), or -- for everything the GPU draws (marks.js): the clay pegs of the default
+// `token`, the `dot` beads, the `symbol` counters and the `model` figurines -- only the
+// name, set beside the bead or above the peg, the counter or the figurine. The engine
+// knows this type and these markers, never a layer's id.
 const TOKEN = { 1: 26, 2: 22, 3: 19 };   // token diameter by priority, px, close up
 const GAP = 2;
 const NAME_ZOOM = 1800;                  // below this view height, the most famous places show their names
@@ -15,7 +15,6 @@ const NAME_ZOOM = 1800;                  // below this view height, the most fam
 // anyone sees, and the relief they are standing on is not.
 const SIZE_ZOOM = [1200, 4600];          // view height over which they shrink
 const SIZE_SCALE = [1, 0.62];            // ...from this to this
-const POP_STAGGER_MS = 26;               // between one token appearing and the next
 const MODEL_PX = 32;                     // about how tall a figurine or a peg stands, for its name tag
 
 /**
@@ -87,7 +86,7 @@ export function createPoints(container, { text, onSelect }) {
       const cat = cats[item.category] || {};
       const el = document.createElement('button');
       el.type = 'button';
-      el.className = `marker marker-p${item.priority} marker-new marker-as-${kind}`;
+      el.className = `marker marker-as-${kind}`;
       el.dataset.layer = layer.id;
       el.dataset.item = item.id;
       el.hidden = true;
@@ -99,15 +98,7 @@ export function createPoints(container, { text, onSelect }) {
       if (asSymbol || asDot) el.style.setProperty('--base', `${base.toFixed(1)}px`);
       const name = document.createElement('span');
       name.className = 'marker-name';
-      if (asSymbol) {
-        // A proportional circle is read by its area; a glyph inside one that may be ten
-        // pixels across is not read at all, so a symbol is the disc alone.
-        const token = document.createElement('span');
-        token.className = 'marker-token';
-        el.append(token, name);
-      } else {
-        el.append(name);                 // the GPU draws the thing itself; this is its name
-      }
+      el.append(name);                   // the GPU draws the thing itself; this is its name
       container.appendChild(el);
       // Label width is estimated from the text, never measured: reading offsetWidth in
       // the per-frame loop would force a layout on every marker, every frame.
@@ -135,17 +126,18 @@ export function createPoints(container, { text, onSelect }) {
       container.style.setProperty('--mscale', mscale.toFixed(3));
       lastScale = mscale;
     }
-    let popped = 0;
     // Tokens claim their space first whatever order the layers arrived in, so a range
     // label or a town's name yields to a place rather than being drawn under one.
-    const rank = (k) => (k === 'token' || k === 'symbol' || k === 'model' ? 0 : 1);
+    // Names of things that stand up claim their space before names laid flat on the map.
+    const rank = (k) => (k === 'label' || k === 'dot' ? 1 : 0);
     const order = [...layers].sort((a, b) => rank(a[1].layer.marker || 'token') - rank(b[1].layer.marker || 'token'));
     for (const [id, { items }] of order) {
       const on = active.has(id);
       for (const rec of items) {
         const { item, el, name, kind } = rec;
         const asLabel = kind === 'label', asDot = kind === 'dot', asSymbol = kind === 'symbol';
-        const asModel = kind === 'model' || kind === 'token';   // a peg's name hangs above it like a figurine's
+        // A peg's and a counter's name hang above them, like a figurine's.
+        const asModel = kind === 'model' || kind === 'token';
         const isSel = selected && selected.layer === id && selected.id === item.id;
         const size = (rec.base || TOKEN[item.priority] || TOKEN[3]) * mscale;
         let show = on && (drafts || item.status === 'reviewed');
@@ -164,9 +156,9 @@ export function createPoints(container, { text, onSelect }) {
         const cx = viewport.w / 2 + p[0], cy = viewport.h / 2 - p[1];
         const onScreen = cx > -size && cx < viewport.w + size && cy > -size && cy < viewport.h + size;
         const half = (asLabel ? rec.w : size) / 2 + GAP;
-        // A token is a pin: it stands above the point it marks. A symbol is a
-        // proportional circle and sits centred on it. A bead's name sits to its right; a
-        // figurine's name tag hangs above it; each claims the rectangle it fills.
+        // A bead's name sits to its right; a peg's and a figurine's tag hangs above it;
+        // a counter lies flat with its name above its top edge. Each claims what it fills.
+        const wide = Math.max(half, rec.w / 2);
         const rect = asLabel
           ? [cx - half, cy - rec.h / 2 - GAP, cx + half, cy + rec.h / 2 + GAP]
           : asDot
@@ -174,22 +166,11 @@ export function createPoints(container, { text, onSelect }) {
             : asModel
               ? [cx - rec.w / 2, cy - MODEL_PX * mscale - rec.h - GAP, cx + rec.w / 2, cy + GAP]
               : asSymbol
-                ? [cx - half, cy - half, cx + half, cy + half]
+                ? [cx - wide, cy - size / 2 - rec.h - GAP, cx + wide, cy + size / 2 + GAP]
                 : [cx - half, cy - size * 0.85 - GAP, cx + half, cy + GAP];
         const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
         // the most famous places always show, even overlapping a little; the rest keep clear
-        if (!onScreen || (!clear && !isSel && (item.priority > 1 || asDot))) { el.hidden = true; rec.up = false; continue; }
-        // Coming into view: the tokens spring up one after another rather than all at
-        // once, which reads as a handful of pieces being set down on the model. The
-        // delay is set while the element is still hidden, and a hidden marker is
-        // display: none, so unhiding it starts the animation afresh on its own -- no
-        // class juggling and, more to the point, no offsetWidth read to force a reflow,
-        // which during a zoom-in would be one layout per token arriving.
-        if (!rec.up) {
-          rec.up = true;
-          el.style.setProperty('--pop-delay', `${popped * POP_STAGGER_MS}ms`);
-          popped += 1;
-        }
+        if (!onScreen || (!clear && !isSel && (item.priority > 1 || asDot))) { el.hidden = true; continue; }
         el.hidden = false;
         // Sub-pixel: rounding to whole pixels makes markers jitter against a canvas
         // that moves smoothly under them during a flight.

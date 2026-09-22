@@ -980,53 +980,11 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
   pointer-events: auto;
   will-change: transform;
 }
-/* The token's size is its own by priority, scaled by how far the camera has pulled
-   back (--mscale, set once a frame on the container by points.js). A sticker on a model
-   does not keep its screen size while the model shrinks. */
-.marker-p1 { --base: 32px; }
-.marker-p2 { --base: 27px; }
-.marker-p3 { --base: 24px; }
-.marker { --size: calc(var(--base, 28px) * var(--mscale, 1)); }
-.marker::before {                              /* contact shadow on the ground */
-  content: "";
-  position: absolute;
-  left: calc(var(--size) / -2);
-  top: -5px;
-  width: var(--size);
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(60, 45, 30, 0.32);
-  filter: blur(2px);
-}
-.marker-token {
-  position: absolute;
-  left: calc(var(--size) / -2);
-  top: calc(var(--size) * -0.85);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 28%, color-mix(in srgb, var(--c) 62%, white) 0%, var(--c) 52%, color-mix(in srgb, var(--c) 72%, black) 100%);
-  box-shadow: 0 3px 0 color-mix(in srgb, var(--c) 55%, black), 0 7px 10px rgba(60, 45, 30, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  display: grid;
-  place-items: center;
-  color: #fff8ec;
-  transition: transform 140ms cubic-bezier(.2,.8,.2,1), box-shadow 140ms;
-}
-.marker-token svg { width: calc(var(--size) * 0.56); height: calc(var(--size) * 0.56); filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.18)); }
-/* Tokens spring up as they come into view, one after another rather than all at once.
-   A hidden marker is display: none, so unhiding it starts this afresh; the stagger is
-   --pop-delay, set per token while it is still hidden. */
-.marker-new .marker-token {
-  animation: token-pop 460ms cubic-bezier(.2,.9,.3,1.35) both;
-  animation-delay: var(--pop-delay, 0ms);
-}
-@keyframes token-pop {
-  from { transform: translateY(-14px) scale(0.4); opacity: 0; }
-  to { transform: none; opacity: 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .marker-new .marker-token { animation: none; }
-}
+/* The thing itself -- peg, bead, counter, figurine -- is drawn by the GPU (marks.js),
+   which also gives it its shadow and springs it up as it arrives. What is left here is
+   the name: --size is what the name has to clear, and --mscale the zoom's shrink, both
+   in step with the drawing. */
+.marker { --size: 0px; }
 .marker-name {
   position: absolute;
   left: calc(var(--size) / 2 + 6px);
@@ -1048,7 +1006,6 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 /* A `dot` layer: the GPU draws the bead (marks.js); this is its name, set to its right
    in small type with a halo, the way a town's name sits on a printed map. --base is the
    bead's radius, --mscale the zoom's shrink, both shared with the drawing. */
-.marker-as-dot { --size: 0px; }
 .marker-as-dot::before { display: none; }
 .marker-as-dot .marker-name {
   display: block;
@@ -1070,7 +1027,6 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 .marker-as-dot:hover .marker-name, .marker-as-dot:focus-visible .marker-name, .marker-as-dot.marker-active .marker-name { color: var(--accent-deep); }
 /* A `model` layer's figurine, and the clay peg of a `token` layer, are drawn by the GPU;
    the name tag hangs above them on hover, when open, and for the famous close up. */
-.marker-as-model, .marker-as-token { --size: 0px; }
 .marker-as-model::before, .marker-as-token::before { display: none; }
 .marker-as-model .marker-name, .marker-as-token .marker-name {
   left: 50%;
@@ -1079,22 +1035,15 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 }
 /* A `marker: label` layer: the name alone, set quietly into the relief, no token and no
    card-like plate. A range is a stretch of country, so it reads as part of the map. */
-/* A `symbols` layer: a proportional circle centred on the point it marks, rather than a
-   pin standing above it. Its diameter is the value (--base, written once per item by
-   points.js), so it carries no glyph -- a disc that may be ten pixels across is read by
-   its area and nothing else -- and no contact shadow, having nothing to stand on. */
-.marker-as-symbol .marker-token {
-  top: calc(var(--size) / -2);
-  background: radial-gradient(circle at 36% 30%, color-mix(in srgb, var(--c) 42%, white) 0%, var(--c) 64%, color-mix(in srgb, var(--c) 78%, black) 100%);
-  box-shadow: 0 1px 4px rgba(60, 45, 30, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  opacity: 0.92;
-}
+/* A `symbols` layer: the GPU draws the counter (marks.js), lying on the ground with its
+   face carrying the value; --base is its diameter, so its name clears its top edge. */
 .marker-as-symbol::before { display: none; }
-.marker-as-symbol .marker-name { top: -0.7em; }
-.marker-as-symbol:hover .marker-token, .marker-as-symbol:focus-visible .marker-token,
-.marker-as-symbol.marker-active .marker-token { transform: none; opacity: 1; }
+.marker-as-symbol .marker-name {
+  left: 50%;
+  top: calc(var(--base, 12px) * var(--mscale, 1) * -0.5 - 4px);
+  transform: translate(-50%, -100%);
+}
 
-.marker-as-label { --size: 0px; }
 .marker-as-label::before { display: none; }
 .marker-as-label .marker-name {
   display: block;
@@ -1116,12 +1065,7 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 .marker-as-label:hover .marker-name, .marker-as-label:focus-visible .marker-name,
 .marker-as-label.marker-active .marker-name { color: var(--accent-deep); }
 .marker:hover .marker-name, .marker:focus-visible .marker-name, .marker-active .marker-name, .marker-named .marker-name { display: block; }
-.marker:hover .marker-token, .marker:focus-visible .marker-token { transform: translateY(-3px) scale(1.08); }
 .marker:focus-visible { outline: none; }
-.marker-active .marker-token {
-  transform: translateY(-4px) scale(1.12);
-  box-shadow: 0 0 0 3px var(--gold), 0 4px 0 color-mix(in srgb, var(--c) 55%, black), 0 10px 14px rgba(60, 45, 30, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
 .marker-active .marker-name { border-color: var(--gold); }
 
 /* --- HTML labels over the map --- */

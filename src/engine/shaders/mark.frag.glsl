@@ -30,7 +30,9 @@ void main() {
   vec3 L = normalize(vec3(uLightDir.x, 1.35, uLightDir.y));
   float wrap = 0.5;
   float diff = clamp((dot(n, L) + wrap) / (1.0 + wrap), 0.0, 1.0);
-  vec3 col = vColor * (0.62 + 0.5 * diff) + vColor * 0.1 * max(n.y, 0.0);
+  // Key light, then a little pale sky on whatever faces up -- the sheen a matte clay
+  // thing has under an open sky, and what keeps a dark counter from reading as a hole.
+  vec3 col = vColor * (0.6 + 0.5 * diff) + vec3(0.95, 0.93, 0.88) * 0.1 * max(n.y, 0.0);
   if (vSel > 0.5) col = mix(col, vec3(0.86, 0.66, 0.26), 0.3) * 1.12;
   // The colours are linear here, as every three.js colour is; the screen wants sRGB.
   outColor = linearToOutputTexel(vec4(col, 1.0));
