@@ -115,7 +115,7 @@ export function createPoints(container, { text, onSelect }) {
   }
 
   /** Reposition markers for the frame just drawn; returns the screen rects they occupy. */
-  function update({ project, level, viewport, camera, active, selected, lang, drafts, month = null }) {
+  function update({ project, level, viewport, camera, active, selected, lang, drafts, month = null, stateNames = null, stateNamesFirst = true }) {
     const placed = [];
     if (!container) return placed;
     const maxPriority = priorityAt(camera.zoom);
@@ -126,12 +126,22 @@ export function createPoints(container, { text, onSelect }) {
       container.style.setProperty('--mscale', mscale.toFixed(3));
       lastScale = mscale;
     }
-    // Tokens claim their space first whatever order the layers arrived in, so a range
-    // label or a town's name yields to a place rather than being drawn under one.
-    // Names of things that stand up claim their space before names laid flat on the map.
-    const rank = (k) => (k === 'label' || k === 'dot' ? 1 : 0);
+    // Who yields to whom, whatever order the layers arrived in: things that stand up
+    // claim their space first, then names laid flat on the map (a range's), and the
+    // towns' names last. The state names, which `stateNames` places, go before the
+    // range names when the map is about India (no page open: a phone's whole-country
+    // view should name Rajasthan, not the Aravalli across it) and after them on a page,
+    // whose own names are the point of it. A town's name always yields to its state's;
+    // the bead itself is drawn by the GPU regardless.
+    const rank = (k) => (k === 'dot' ? 2 : k === 'label' ? 1 : 0);
     const order = [...layers].sort((a, b) => rank(a[1].layer.marker || 'token') - rank(b[1].layer.marker || 'token'));
+    const statesAt = stateNamesFirst ? 1 : 2;
+    let stateNamesPlaced = false;
     for (const [id, { items }] of order) {
+      if (!stateNamesPlaced && rank(layers.get(id).layer.marker || 'token') >= statesAt) {
+        if (stateNames) placed.push(...stateNames(placed));
+        stateNamesPlaced = true;
+      }
       const on = active.has(id);
       for (const rec of items) {
         const { item, el, name, kind } = rec;
@@ -169,8 +179,9 @@ export function createPoints(container, { text, onSelect }) {
                 ? [cx - wide, cy - size / 2 - rec.h - GAP, cx + wide, cy + size / 2 + GAP]
                 : [cx - half, cy - size * 0.85 - GAP, cx + half, cy + GAP];
         const clear = !placed.some((r) => rect[0] < r[2] && rect[2] > r[0] && rect[1] < r[3] && rect[3] > r[1]);
-        // the most famous places always show, even overlapping a little; the rest keep clear
-        if (!onScreen || (!clear && !isSel && (item.priority > 1 || asDot))) { el.hidden = true; continue; }
+        // The most famous places always show, even overlapping a little; the rest keep
+        // clear. A name laid flat on the map is nothing but text, so it never overlaps.
+        if (!onScreen || (!clear && !isSel && (item.priority > 1 || asDot || asLabel))) { el.hidden = true; continue; }
         el.hidden = false;
         // Sub-pixel: rounding to whole pixels makes markers jitter against a canvas
         // that moves smoothly under them during a flight.
@@ -186,6 +197,7 @@ export function createPoints(container, { text, onSelect }) {
         placed.push(rect);
       }
     }
+    if (!stateNamesPlaced && stateNames) placed.push(...stateNames(placed));
     return placed;
   }
 

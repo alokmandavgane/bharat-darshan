@@ -121,11 +121,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom), now }) || 0;
     draw();
     if (until > now) invalidate();      // pieces are still springing up
-    // markers first (they are interactive), then labels keep clear of them
-    const taken = points.update({ project, level, viewport, camera: cam, active,
-      selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month') });
-    labels.update({ project, level, viewport, camera: store.get('camera'), regions: store.get('regions'),
-      selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken });
+    // Markers first (they are interactive), the state names among them where points.js
+    // says -- ahead of a page's own names only when no page is open -- and the towns'
+    // names last, keeping clear of everything.
+    points.update({ project, level, viewport, camera: cam, active,
+      selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month'),
+      stateNamesFirst: !store.get('plate'),
+      stateNames: (taken) => labels.update({ project, level, viewport, camera: cam, regions: store.get('regions'),
+        selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken }) });
   }
 
   // --- the flow (PLAN.md section 8): the one thing here that draws while nothing has

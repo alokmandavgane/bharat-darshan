@@ -1106,6 +1106,7 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 .label:lang(hi) { font-size: 13px; }
 .label-l:lang(hi) { font-size: 15px; }
 .label-s:lang(hi) { font-size: 12px; }
+.label-stack { white-space: pre; text-align: center; line-height: 1.08; }
 .label-active { color: var(--accent-deep); }
 
 /* --- hover tooltip (fine pointers only) --- */
