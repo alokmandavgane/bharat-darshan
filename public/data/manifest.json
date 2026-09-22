@@ -131,8 +131,8 @@
     }
    },
    "note": {
-    "en": "Every drop of rain in India ends up in one of these. The colour says where: the Bay of Bengal, the Arabian Sea, or nowhere at all. The line between the blues and the ochres is the country's great divide, and it runs down the Western Ghats, only fifty to a hundred km from the west coast.",
-    "hi": "भारत में गिरने वाली हर बूँद इनमें से किसी एक में पहुँचती है। रंग बताता है कहाँ: बंगाल की खाड़ी, अरब सागर, या कहीं नहीं। नीले और गेरुए रंगों के बीच की रेखा देश का महान जल-विभाजक है, और वह पश्चिमी घाट के साथ चलती है, पश्चिमी तट से केवल पचास से सौ किमी दूर।"
+    "en": "Every drop of rain in India ends up in one of these. The colour says where: the Bay of Bengal, the Arabian Sea, or nowhere at all. In the peninsula the line between the greens and the ochres is the great divide, and it runs down the Western Ghats, only fifty to a hundred km from the west coast.",
+    "hi": "भारत में गिरने वाली हर बूँद इनमें से किसी एक में पहुँचती है। रंग बताता है कहाँ: बंगाल की खाड़ी, अरब सागर, या कहीं नहीं। प्रायद्वीप में हरे और गेरुए रंगों के बीच की रेखा महान जल-विभाजक है, और वह पश्चिमी घाट के साथ चलती है, पश्चिमी तट से केवल पचास से सौ किमी दूर।"
    },
    "sources": [
     "indian-water-features",
@@ -1570,8 +1570,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 12736,
-   "sha256": "38e38044c3a5"
+   "size": 12778,
+   "sha256": "2ab6abbc55c1"
   },
   "sources.json": {
    "size": 27967,
@@ -1758,8 +1758,8 @@
    "sha256": "f67a9e963962"
   },
   "layers/basins.json": {
-   "size": 23240,
-   "sha256": "5e58b3ef8fb1"
+   "size": 23269,
+   "sha256": "23c2656b88f4"
   },
   "layers/cities.json": {
    "size": 308980,
