@@ -32,7 +32,7 @@ export function firstColour(layer) {
  */
 export function kindOf(layer) {
   switch (layer.type) {
-    case 'points': return layer.marker === 'symbol' ? 'symbol' : layer.marker === 'label' ? 'label' : 'token';
+    case 'points': return ['symbol', 'label', 'dot', 'model'].includes(layer.marker) ? layer.marker : 'token';
     case 'lines': return 'lines';
     case 'choropleth': return Array.isArray(layer.scale) ? 'ramp' : 'mosaic';
     case 'areas': return 'mosaic';
@@ -81,6 +81,16 @@ export function layerMark(layer) {
         + `<ellipse cx="17" cy="33" rx="9" ry="2.5" fill="rgba(60,45,30,.25)"/>`
         + `<circle cx="17" cy="20" r="11" fill="${c(0)}"/>`
         + glyph(layer.icon, 9.5, 12.5, 0.62, PAPER, 2.4);
+      break;
+    case 'dot':
+      body = `<ellipse cx="14" cy="27" rx="8" ry="2.2" fill="rgba(60,45,30,.22)"/><circle cx="14" cy="21" r="6.5" fill="${c(0)}"/>`
+        + `<ellipse cx="27" cy="18" rx="5" ry="1.5" fill="rgba(60,45,30,.2)"/><circle cx="27" cy="14" r="4" fill="${c(1)}"/>`
+        + `<circle cx="28" cy="28" r="2.6" fill="${c(2)}"/><circle cx="12" cy="18.5" r="1.8" fill="rgba(255,255,255,.55)"/>`;
+      break;
+    case 'model':
+      body = `<ellipse cx="20" cy="33" rx="12" ry="3" fill="rgba(60,45,30,.22)"/>`
+        + `<rect x="9" y="22" width="22" height="10" rx="2.5" fill="${c(1)}"/>`
+        + `<circle cx="20" cy="15" r="8" fill="${c(0)}"/><circle cx="17" cy="12" r="2.2" fill="rgba(255,255,255,.5)"/>`;
       break;
     case 'symbol':
       body = `<circle cx="16" cy="23" r="12" fill="${c(0)}" opacity=".85"/>`
@@ -203,8 +213,9 @@ function heightKey(layer, compact) {
  * diameter the map would draw it at, by the same sizer the engine uses.
  */
 function sizeKey(layer) {
-  if (layer.marker !== 'symbol' || !layer.size?.legend?.length) return null;
+  if (!['symbol', 'dot'].includes(layer.marker) || !layer.size?.legend?.length) return null;
   const sizer = symbolSizer(layer.size);
+  const across = layer.marker === 'dot' ? 2 : 1;      // a bead's size is its radius; the key shows the bead
   const ul = document.createElement('ul');
   ul.className = 'legend legend-sizes';
   const unit = pick((layer.fields || {})[layer.size.field]?.unit || {});
@@ -212,7 +223,7 @@ function sizeKey(layer) {
     const li = document.createElement('li');
     const sw = document.createElement('span');
     sw.className = 'legend-size';
-    sw.style.setProperty('--d', `${sizer({ [layer.size.field]: v }).toFixed(1)}px`);
+    sw.style.setProperty('--d', `${(sizer({ [layer.size.field]: v }) * across).toFixed(1)}px`);
     li.append(sw, document.createTextNode(unit ? unit.replace('{n}', formatNumber(v)) : formatNumber(v)));
     ul.appendChild(li);
   }

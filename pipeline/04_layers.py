@@ -19,15 +19,27 @@ Layer types known today:
   areas    named polygons that are not regions -- coalfields, physiographic divisions --
            joined to the source by name like a river, then rasterised into one uint8 id
            raster for the layer and clipped to India
-  regional a list per region: items belong to the states that keep them and carry no
-           anchor, so they are read in the state view rather than drawn on the map
-The engine knows types, never layer ids.
+  regional a list per region: items belong to the states that keep them and are read in
+           the state view; one that also names an anchor -- the place it is most seen at --
+           is drawn there as well
+A points layer's `marker` says how it draws: a clay token (default), a name alone
+(label), a proportional circle (symbol), a bead the size of a pinhead (dot), or a
+figurine built from a recipe under content/models/ (model). A points layer may also be
+generated from a source (`source.format: "geonames"`) and merged with its curated items.
+The engine knows types and markers, never layer ids.
 """
 import argparse
 import csv
+import hashlib
+import io
 import json
 import os
+import re
 import sys
+import unicodedata
+import urllib.parse
+import urllib.request
+import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np  # noqa: E402
@@ -41,6 +53,13 @@ TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
+MARKERS = ('symbol', 'label', 'dot', 'model')
+MODELS_DIR = os.path.join(ROOT, 'content', 'models')
+# The primitives a figurine recipe is built from: what three.js can make from a few numbers.
+SHAPES = {
+    'sphere': ('r',), 'cylinder': ('rt', 'rb', 'h'), 'cone': ('r', 'h'), 'box': ('w', 'h', 'd'),
+    'torus': ('r', 'tube'), 'lathe': ('profile',), 'extrude': ('outline', 'depth'),
+}
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
 FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int}
 BLURB_MAX = 240
@@ -127,6 +146,15 @@ def validate_layer(layer, folder, registry):
             p.append('a prisms layer needs a bilingual unit template, e.g. "{n} people"')
     elif not cats or any(not (c.get('id') and bilingual(c.get('title'))) for c in cats):
         p.append('categories need id and a bilingual title')
+    if layer.get('marker') is not None:
+        if layer.get('type') != 'points':
+            p.append('only a points layer has a marker')
+        elif layer['marker'] not in MARKERS:
+            p.append(f'marker must be one of {MARKERS}')
+    if layer.get('type') == 'points':
+        src = layer.get('source') or {}
+        if src and src.get('format') != 'geonames':
+            p.append('a points layer can only be generated from source.format "geonames"')
     if layer.get('type') == 'areas':
         src = layer.get('source') or {}
         if src.get('format') != 'shapefile-polygon' or not src.get('files'):
@@ -235,13 +263,16 @@ def validate_height(h):
 
 
 def validate_size(layer):
-    """A `symbols` layer draws a circle whose area is a value: marker and size go together."""
+    """
+    A `symbols` layer draws a circle whose area is a value: marker and size go together.
+    A `dot` layer may size its beads the same way, or draw them all one size.
+    """
     size = layer.get('size')
-    if layer.get('marker') == 'symbol':
+    if layer.get('marker') in ('symbol', 'dot'):
         if layer.get('type') != 'points':
             return ['only a points layer can draw symbols']
         if not isinstance(size, dict):
-            return ['a symbol layer needs a size: { field, domain, range, legend }']
+            return ['a symbol layer needs a size: { field, domain, range, legend }'] if layer['marker'] == 'symbol' else []
         p = []
         field = size.get('field')
         if field not in (layer.get('fields') or {}):
@@ -324,10 +355,30 @@ def build_choropleth(layer, folder, by_iso, by_id):
     return values, problems
 
 
-def validate_regional_item(it, cats, by_iso, fields):
-    """A regional item has no anchor: it belongs to the regions that keep it."""
+def validate_regional_item(it, cats, by_iso, fields, ids=None, width=0, height=0):
+    """
+    A regional item belongs to the regions that keep it. It may also name an anchor,
+    the one place it is most seen at, so the map has somewhere to draw it: Onam at
+    Thrissur, the Hornbill festival at Kisama. Returns (problems, region id at the
+    anchor or None).
+    """
     tag = it.get('id', '?')
     p = []
+    here = None
+    a = it.get('anchor')
+    if a is not None:
+        if not (isinstance(a, dict) and isinstance(a.get('lat'), (int, float)) and isinstance(a.get('lon'), (int, float))):
+            p.append(f'{tag}: anchor needs numeric lat and lon')
+        elif ids is not None:
+            col, row = grid.lonlat_to_pixel(a['lon'], a['lat'], width, height)
+            c, r = int(col), int(row)
+            here = int(ids[r, c]) if 0 <= r < height and 0 <= c < width else 0
+            regions = it.get('regions') or []
+            claimed = [by_iso[x]['id'] for x in regions if x in by_iso]
+            if not here:
+                p.append(f"{tag}: anchor ({a['lat']}, {a['lon']}) falls outside India")
+            elif EVERYWHERE not in regions and here not in claimed:
+                p.append(f"{tag}: anchor ({a['lat']}, {a['lon']}) falls in region id {here}, not in claimed {regions}")
     if it.get('status') not in STATUSES:
         p.append(f'{tag}: status must be draft or reviewed')
     if not bilingual(it.get('name')):
@@ -356,28 +407,33 @@ def validate_regional_item(it, cats, by_iso, fields):
             p.append(f"{tag}: {name} must be {spec['type']}")
         elif spec['type'] == 'month' and not 1 <= v <= 12:
             p.append(f'{tag}: {name} must be a month, 1 to 12')
-    return p
+    return p, here
 
 
-def build_regional(items, cats, by_iso, by_id, fields):
+def build_regional(items, cats, by_iso, by_id, fields, ids, width, height):
     """Items that belong to regions rather than to a point on the map."""
     out, problems = [], []
     for it in items:
-        p = validate_regional_item(it, cats, by_iso, fields)
+        p, here = validate_regional_item(it, cats, by_iso, fields, ids, width, height)
         problems += p
         if p:
             continue
         # A festival kept the country over says so once rather than listing 36 codes.
-        ids = (sorted(by_id) if EVERYWHERE in it['regions']
-               else [by_iso[r]['id'] for r in it['regions']])
+        region_ids = (sorted(by_id) if EVERYWHERE in it['regions']
+                      else [by_iso[r]['id'] for r in it['regions']])
         entry = {
             'id': it['id'], 'name': it['name'], 'category': it['category'], 'priority': it['priority'],
-            'regions': ids, 'regionSlugs': [by_id[i]['slug'] for i in ids],
+            'regions': region_ids, 'regionSlugs': [by_id[i]['slug'] for i in region_ids],
             'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
         }
         for name in fields:
             if it.get(name) is not None:
                 entry[name] = it[name]
+        if here:
+            # Drawn as well as listed: the engine's points type reads x, z and region
+            # exactly as it does for a place.
+            x, z = grid.lonlat_to_scene(it['anchor']['lon'], it['anchor']['lat'])
+            entry.update({'x': round(float(x), 1), 'z': round(float(z), 1), 'region': here, 'regionSlug': by_id[here]['slug']})
         out.append(entry)
     return out, problems
 
@@ -492,6 +548,256 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
     return out, problems
 
 
+def validate_model(name, m):
+    """A figurine recipe: a few primitives, each placed, turned, scaled and coloured."""
+    p = []
+    if m.get('id') != name:
+        p.append(f'model {name}: id must equal the file name')
+    fp = m.get('footprint', 1)
+    if not isinstance(fp, (int, float)) or fp <= 0:
+        p.append(f'model {name}: footprint must be a positive number (the shadow\'s radius, in model units)')
+    parts = m.get('parts')
+    if not isinstance(parts, list) or not parts:
+        p.append(f'model {name}: parts must list at least one shape')
+        return p
+    for i, part in enumerate(parts):
+        where = f'model {name} part {i}'
+        shape = part.get('shape')
+        if shape not in SHAPES:
+            p.append(f'{where}: shape must be one of {tuple(SHAPES)}')
+            continue
+        for key in SHAPES[shape]:
+            v = part.get(key)
+            if key in ('profile', 'outline'):
+                ok = isinstance(v, list) and len(v) >= 3 and all(
+                    isinstance(q, list) and len(q) == 2 and all(isinstance(n, (int, float)) for n in q) for q in v)
+            else:
+                ok = isinstance(v, (int, float)) and v > 0
+            if not ok:
+                p.append(f'{where}: {shape} needs {key}')
+        if not isinstance(part.get('color'), str) or not re.match(r'^#[0-9a-fA-F]{6}$', part['color']):
+            p.append(f'{where}: color must be a six-digit hex colour')
+        for key in ('at', 'rot', 'scale'):
+            v = part.get(key)
+            if v is not None and not (isinstance(v, list) and len(v) == 3 and all(isinstance(n, (int, float)) for n in v)):
+                p.append(f'{where}: {key} must be three numbers')
+        for key in ('segments',):
+            v = part.get(key)
+            if v is not None and not (isinstance(v, int) and 3 <= v <= 64):
+                p.append(f'{where}: segments must be an integer from 3 to 64')
+    return p
+
+
+def load_models():
+    """Every recipe under content/models/, validated. Returns ({name: recipe}, problems)."""
+    models, problems = {}, []
+    if not os.path.isdir(MODELS_DIR):
+        return models, problems
+    for n in sorted(os.listdir(MODELS_DIR)):
+        if not n.endswith('.json'):
+            continue
+        name = n[:-5]
+        with open(os.path.join(MODELS_DIR, n), encoding='utf-8') as f:
+            m = json.load(f)
+        p = validate_model(name, m)
+        problems += p
+        if not p:
+            models[name] = m
+    return models, problems
+
+
+def write_models(models, out):
+    """The recipes ship as they are, minified: a few hundred bytes each."""
+    d = os.path.join(out, 'models')
+    os.makedirs(d, exist_ok=True)
+    for n in os.listdir(d):
+        if n.endswith('.json') and n[:-5] not in models:
+            os.remove(os.path.join(d, n))
+    for name, m in models.items():
+        data = {k: m[k] for k in ('id', 'footprint', 'parts') if k in m}
+        with open(os.path.join(d, f'{name}.json'), 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+    if models:
+        print(f"models: {len(models)} recipes -> public/data/models/")
+
+
+def resolve_models(layer, out_items, models):
+    """A model layer's items each name a recipe: their own, their category's, or the layer's."""
+    p = []
+    by_cat = {c['id']: c.get('model') for c in layer.get('categories', [])}
+    for it in out_items:
+        name = it.get('model') or by_cat.get(it['category']) or layer.get('model')
+        if not name:
+            p.append(f"{it['id']}: no model: give the item, its category or the layer one")
+        elif name not in models:
+            p.append(f"{it['id']}: no recipe content/models/{name}.json")
+        else:
+            it['model'] = name
+    return p
+
+
+# --- a points layer generated from GeoNames, merged with what is curated by hand
+GEONAMES_URL = 'https://download.geonames.org/export/dump/cities15000.zip'
+WIKIDATA_SPARQL = 'https://query.wikidata.org/sparql'
+FEATURE_CATEGORY = {'PPLC': 'national', 'PPLA': 'capital'}      # any other populated place is a city
+SKIP_FEATURES = ('PPLX', 'PPLQ', 'PPLR', 'PPLF', 'PPLL', 'PPLW', 'PPLH')   # a section of a place, abandoned, religious, a farm, a locality
+# GeoNames sometimes files a district under a town's name with the district's population.
+# Wikidata knows what a thing is, so a candidate whose item is one of these is not a town.
+NOT_A_TOWN = ('district', 'taluk', 'tehsil', 'tahsil', 'mandal', 'subdistrict', 'sub-district',
+              'block', 'division', 'metropolitan area', 'urban agglomeration', 'municipality of')
+POOL = 3     # candidates looked up per region, as a multiple of the number wanted
+
+
+def fold(s):
+    return ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c)).lower().strip()
+
+
+def slugify(s):
+    return re.sub(r'[^a-z0-9]+', '-', fold(s)).strip('-')
+
+
+def wikidata_lookup(gids, raw):
+    """
+    What Wikidata says about a set of GeoNames ids: the item, its Hindi name, its
+    population and what it is. One query per batch, cached by the set of ids asked for,
+    so a rebuild with the same candidates never asks again.
+    """
+    key = hashlib.sha1(','.join(sorted(gids)).encode()).hexdigest()[:12]
+    cache = os.path.join(raw, f'wikidata-{key}.json')
+    if os.path.exists(cache):
+        with open(cache, encoding='utf-8') as f:
+            return json.load(f)
+    out = {}
+    ids = sorted(gids)
+    for i in range(0, len(ids), 150):
+        vals = ' '.join(f'"{g}"' for g in ids[i:i + 150])
+        q = ('SELECT ?gn ?item ?hi ?pop ?clsLabel WHERE { VALUES ?gn { ' + vals + ' } '
+             '?item wdt:P1566 ?gn . OPTIONAL { ?item rdfs:label ?hi FILTER(LANG(?hi)="hi") } '
+             'OPTIONAL { ?item wdt:P1082 ?pop } OPTIONAL { ?item wdt:P31 ?cls . ?cls rdfs:label ?clsLabel FILTER(LANG(?clsLabel)="en") } }')
+        url = WIKIDATA_SPARQL + '?format=json&query=' + urllib.parse.quote(q)
+        req = urllib.request.Request(url, headers={'User-Agent': fetch.USER_AGENT, 'Accept': 'application/sparql-results+json'})
+        with urllib.request.urlopen(req, timeout=180) as r:
+            data = json.load(r)
+        for b in data['results']['bindings']:
+            gn = b['gn']['value']
+            rec = out.setdefault(gn, {'item': b['item']['value'].rsplit('/', 1)[-1], 'hi': None, 'pop': None, 'classes': []})
+            if 'hi' in b and not rec['hi']:
+                rec['hi'] = b['hi']['value']
+            if 'pop' in b:
+                try:
+                    rec['pop'] = max(rec['pop'] or 0, int(float(b['pop']['value'])))
+                except ValueError:
+                    pass
+            if 'clsLabel' in b and b['clsLabel']['value'] not in rec['classes']:
+                rec['classes'].append(b['clsLabel']['value'])
+        print(f'    wikidata: {min(i + 150, len(ids))} of {len(ids)} looked up')
+    os.makedirs(raw, exist_ok=True)
+    with open(cache, 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, indent=0, sort_keys=True)
+    return out
+
+
+def build_geonames(layer, curated, cats, fields, ids, by_id, out_items):
+    """
+    The biggest towns of every region from GeoNames, checked against Wikidata, with the
+    curated items laid over them. Returns (out_items, problems).
+
+    GeoNames gives the candidates, ranked by its population; the ID raster says which
+    region each stands in; Wikidata then vouches for each one -- it must have an item,
+    that item must not be a district or a taluk filed under a town's name, and it must
+    carry the town's name in Hindi, or it does not ship. Where Wikidata has a population
+    it wins, since GeoNames' figure is the one most often wrong.
+    """
+    src = layer['source']
+    per = int(src.get('top_per_region', 10))
+    minpop = int(src.get('min_population', 0))
+    raw = os.path.join(fetch.RAW, 'geonames')
+    fetch.download(GEONAMES_URL, os.path.join(raw, 'cities15000.zip'), quiet=True)
+    height, width = ids.shape
+    rows = []
+    with zipfile.ZipFile(os.path.join(raw, 'cities15000.zip')) as z, z.open('cities15000.txt') as f:
+        for line in io.TextIOWrapper(f, encoding='utf-8'):
+            q = line.rstrip('\n').split('\t')
+            if q[8] != 'IN' or not q[7].startswith('PPL') or q[7] in SKIP_FEATURES:
+                continue
+            col, row = grid.lonlat_to_pixel(float(q[5]), float(q[4]), width, height)
+            c, r = int(col), int(row)
+            region = int(ids[r, c]) if 0 <= r < height and 0 <= c < width else 0
+            if region:
+                rows.append({'gid': q[0], 'name': q[2] or q[1], 'lat': float(q[4]), 'lon': float(q[5]),
+                             'feature': q[7], 'pop': int(q[14] or 0), 'region': region})
+    by_region = {}
+    for row in rows:
+        by_region.setdefault(row['region'], []).append(row)
+    pool = []
+    for region, lst in by_region.items():
+        lst.sort(key=lambda r: -r['pop'])
+        pool += lst[:per * POOL]
+    wd = wikidata_lookup([r['gid'] for r in pool], raw)
+    kept = {}
+    dropped = {'no item': 0, 'no hindi name': 0, 'not a town': 0, 'too small': 0}
+    for row in pool:
+        w = wd.get(row['gid'])
+        if not w:
+            dropped['no item'] += 1
+            continue
+        if any(word in cls.lower() for cls in w['classes'] for word in NOT_A_TOWN):
+            dropped['not a town'] += 1
+            continue
+        if not w['hi']:
+            dropped['no hindi name'] += 1
+            continue
+        pop = w['pop'] or row['pop']
+        if pop < minpop:
+            dropped['too small'] += 1
+            continue
+        kept.setdefault(row['region'], []).append({**row, 'pop': pop, 'hi': w['hi'], 'item': w['item']})
+    # The curated items claim their names first: whatever was written by hand wins over
+    # the generated row for the same town, and the generated set fills in around it.
+    taken = {(it['region'], fold(it['name']['en'])) for it in out_items}
+    seen_ids = {it['id'] for it in out_items}
+    field = (layer.get('size') or {}).get('field')
+    added = 0
+    for region, lst in sorted(kept.items()):
+        lst.sort(key=lambda r: -r['pop'])
+        rank = 0
+        for row in lst:
+            if rank >= per:
+                break
+            if (region, fold(row['name'])) in taken:
+                rank += 1
+                continue
+            rank += 1
+            slug = slugify(row['name'])
+            if slug in seen_ids:
+                slug = f"{slug}-{by_id[region]['slug']}"
+            if slug in seen_ids:
+                slug = f"{slug}-{row['gid']}"
+            seen_ids.add(slug)
+            taken.add((region, fold(row['name'])))
+            category = FEATURE_CATEGORY.get(row['feature'], 'city')
+            if category not in cats:
+                category = 'city'
+            x, z = grid.lonlat_to_scene(row['lon'], row['lat'])
+            entry = {
+                'id': slug, 'name': {'en': row['name'], 'hi': row['hi']}, 'category': category,
+                # The capital and the three biggest towns of a state are worth a name at the
+                # middle zooms; the rest arrive close up.
+                'priority': 2 if category != 'city' or rank <= 3 else 3,
+                'x': round(float(x), 1), 'z': round(float(z), 1), 'region': region, 'regionSlug': by_id[region]['slug'],
+                'sources': [f"https://www.geonames.org/{row['gid']}", f"https://www.wikidata.org/wiki/{row['item']}"],
+                'status': 'reviewed' if src.get('trust') else 'draft',
+            }
+            if field:
+                entry[field] = int(row['pop'])
+            out_items.append(entry)
+            added += 1
+    covered = sorted(by_id[r]['slug'] for r in kept)
+    print(f"    geonames: {len(rows)} towns in India, {len(pool)} looked up, {added} added, "
+          f"{len(by_id) - len(covered)} regions without one; dropped " + ', '.join(f'{v} {k}' for k, v in dropped.items()))
+    return out_items, []
+
+
 def validate_item(it, cats, by_iso, ids, width, height, fields):
     tag = it.get('id', '?')
     p = []
@@ -517,6 +823,11 @@ def validate_item(it, cats, by_iso, ids, width, height, fields):
                 p.append(f'{tag}: {name} is required by the layer')
         elif not isinstance(v, FIELD_TYPES[spec['type']]) or isinstance(v, bool):
             p.append(f"{tag}: {name} must be {spec['type']}")
+    # A figurine's own recipe and tint, on a `model` layer (validated against the recipes later).
+    if it.get('model') is not None and not isinstance(it['model'], str):
+        p.append(f'{tag}: model must name a recipe under content/models')
+    if it.get('color') is not None and not (isinstance(it['color'], str) and re.match(r'^#[0-9a-fA-F]{6}$', it['color'])):
+        p.append(f'{tag}: color must be a six-digit hex colour')
     a = it.get('anchor') or {}
     if not (isinstance(a.get('lat'), (int, float)) and isinstance(a.get('lon'), (int, float))):
         p.append(f'{tag}: anchor needs numeric lat and lon')
@@ -535,7 +846,7 @@ def validate_item(it, cats, by_iso, ids, width, height, fields):
     return p, here
 
 
-def build_layer(folder, states, ids, heights, out, registry):
+def build_layer(folder, states, ids, heights, out, registry, models):
     with open(os.path.join(folder, 'layer.json'), encoding='utf-8') as f:
         layer = json.load(f)
     problems = validate_layer(layer, folder, registry)
@@ -549,7 +860,7 @@ def build_layer(folder, states, ids, heights, out, registry):
     seen = set()
     out_items = []
     if layer.get('type') == 'regional' and not problems:
-        out_items, region_problems = build_regional(items, cats, by_iso, by_id, fields)
+        out_items, region_problems = build_regional(items, cats, by_iso, by_id, fields, ids, width, height)
         problems += region_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
     if layer.get('type') == 'prisms' and not problems:
@@ -586,11 +897,19 @@ def build_layer(folder, states, ids, heights, out, registry):
         for name in fields:
             if it.get(name) is not None:
                 entry[name] = it[name]
+        for key in ('model', 'color'):
+            if it.get(key):
+                entry[key] = it[key]
         out_items.append(entry)
+    if layer.get('source') and not problems:
+        out_items, gen_problems = build_geonames(layer, items, cats, fields, ids, by_id, out_items)
+        problems += gen_problems
+    if layer.get('marker') == 'model' and not problems:
+        problems += resolve_models(layer, out_items, models)
     # Tokens are written most important first, so the thinning keeps those. A symbol's
     # importance is its value, and the biggest circle should claim its space before the
     # circle it would otherwise hide behind.
-    if layer.get('marker') == 'symbol':
+    if layer.get('marker') in ('symbol', 'dot') and (layer.get('size') or {}).get('field'):
         field = (layer.get('size') or {}).get('field')
         order = lambda i: (-(i.get(field) or 0), i['id'])    # noqa: E731
     else:
@@ -607,7 +926,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
     # the build did with the source, for whoever edits the layer. What the reader is owed --
     # who published it, under what licence -- is the registry's job now, and saying it twice
     # is the sprawl the registry exists to stop.
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'size', 'title', 'icon', 'group', 'categories',
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'model', 'flow', 'size', 'title', 'icon', 'group', 'categories',
                                   'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
@@ -635,11 +954,18 @@ def main():
     states, ids = load_states(args.out)
     heights = height_loader(args.out, states)
     failed = False
+    models, model_problems = load_models()
+    if model_problems:
+        failed = True
+        print(f'content/models: {len(model_problems)} problem(s)')
+        for p in model_problems:
+            print('  ' + p)
+    write_models(models, args.out)
     for name in sorted(os.listdir(root)):
         folder = os.path.join(root, name)
         if not os.path.isfile(os.path.join(folder, 'layer.json')):
             continue
-        layer, path, problems = build_layer(folder, states, ids, heights, args.out, registry)
+        layer, path, problems = build_layer(folder, states, ids, heights, args.out, registry, models)
         if problems:
             failed = True
             print(f'{name}: {len(problems)} problem(s)')

@@ -982,10 +982,12 @@ export function createShell(root, store) {
         : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
       facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
     }
-    const p = document.createElement('p');
-    p.className = 'facts-blurb';
-    p.textContent = pick(it.blurb);
-    facts.appendChild(p);
+    if (pick(it.blurb)) {
+      const p = document.createElement('p');
+      p.className = 'facts-blurb';
+      p.textContent = pick(it.blurb);
+      facts.appendChild(p);
+    }
     if (it.sources?.length) {
       const ps = document.createElement('p');
       ps.className = 'facts-sources';

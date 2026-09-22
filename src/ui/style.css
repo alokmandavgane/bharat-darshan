@@ -1040,18 +1040,50 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
   top: calc(var(--size) * -0.85 + var(--size) / 2);
   transform: translateY(-50%);
   display: none;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
   background: linear-gradient(180deg, var(--card-top), var(--card-bottom));
   border: 1px solid var(--gold-soft);
   box-shadow: 0 2px 6px rgba(84, 56, 28, 0.18);
   color: var(--ink);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.3;
   white-space: nowrap;
 }
-.marker-name:lang(hi) { font-size: 13px; }
+.marker-name:lang(hi) { font-size: 12px; }
+/* A `dot` layer: the GPU draws the bead (marks.js); this is its name, set to its right
+   in small type with a halo, the way a town's name sits on a printed map. --base is the
+   bead's radius, --mscale the zoom's shrink, both shared with the drawing. */
+.marker-as-dot { --size: 0px; }
+.marker-as-dot::before { display: none; }
+.marker-as-dot .marker-name {
+  display: block;
+  position: absolute;
+  left: calc(var(--base, 2.4px) * var(--mscale, 1) + 5px);
+  top: 0;
+  transform: translateY(-60%);
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: color-mix(in srgb, var(--ink) 80%, transparent);
+  text-shadow: 0 0 3px var(--paper), 0 0 5px var(--paper), 0 1px 0 var(--paper);
+}
+.marker-as-dot .marker-name:lang(hi) { font-size: 11.5px; }
+.marker-as-dot:hover .marker-name, .marker-as-dot:focus-visible .marker-name, .marker-as-dot.marker-active .marker-name { color: var(--accent-deep); }
+/* A `model` layer: the figurine is drawn by the GPU; its name tag hangs above it on
+   hover, when open, and for the famous close up, like a token's. */
+.marker-as-model { --size: 0px; }
+.marker-as-model::before { display: none; }
+.marker-as-model .marker-name {
+  left: 50%;
+  top: calc(-34px * var(--mscale, 1));
+  transform: translate(-50%, -100%);
+}
 /* A `marker: label` layer: the name alone, set quietly into the relief, no token and no
    card-like plate. A range is a stretch of country, so it reads as part of the map. */
 /* A `symbols` layer: a proportional circle centred on the point it marks, rather than a

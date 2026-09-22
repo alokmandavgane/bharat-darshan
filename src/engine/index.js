@@ -11,9 +11,10 @@ import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFlo
 import { DATA_BASE, loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
+import { createMarks } from './marks.js';
 import { loadPack } from './pack.js';
 import { biasedPick, createHeightfield, landMask, pickTerrain, projectGround } from './picking.js';
-import { createPoints } from './points.js';
+import { createPoints, markerScale, priorityAt } from './points.js';
 import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
 import { byteTexture } from './textures.js';
@@ -58,6 +59,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let block = null;            // the lifted state block while in the state view
   let dropping = null;         // the outgoing block mid-sink, so a handover cancels nothing
   let lines = null;            // every `lines` layer on screen, once loaded
+  let marks = null;            // the beads and figurines the GPU draws (marks.js), once the terrain exists
   let world = null;            // the wide backdrop, once Surroundings has asked for it
   let worldLoad = null;
   let graticule = null;        // the parallels and meridians, once they have been asked for
@@ -108,10 +110,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   function render() {
     needsRender = false;
     if (!terrain) return;
+    const cam = store.get('camera');
+    const active = new Set(store.get('layers')?.active || []);
+    // The GPU markers decide what shows before the frame is drawn; the HTML ones after,
+    // since they are placed on it. Both thin by the same zoom bands and shrink together.
+    marks?.setView({ active, level, drafts: !!store.get('drafts'), month: store.get('month'),
+      maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom) });
     draw();
     // markers first (they are interactive), then labels keep clear of them
-    const taken = points.update({ project, level, viewport, camera: store.get('camera'), active: new Set(store.get('layers')?.active || []),
-      selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts') });
+    const taken = points.update({ project, level, viewport, camera: cam, active,
+      selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month') });
     labels.update({ project, level, viewport, camera: store.get('camera'), regions: store.get('regions'),
       selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken });
   }
@@ -205,8 +213,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // In a state view a run counts only where it actually crosses that state, which the
     // ID raster answers exactly; a bounding box would reach into the neighbours.
     const inState = lv?.name === 'state' && field ? (x, z) => field.idAt(x, z) === lv.id : null;
+    // A regional item with a home is drawn as a point too; it is listed once, as regional.
     const rows = [
-      ...points.list({ active, drafts, level: lv }),
+      ...points.list({ active, drafts, level: lv }).filter(({ layer }) => !regionalFiles.has(layer)),
       ...(lines?.list(active, inState) || []),
       ...regionalRows(active, drafts, lv),
     ].map(({ layer, item }) => ({ layer, id: item.id, name: item.name }));
@@ -335,7 +344,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           .finally(() => loading.delete(id));
       };
       if (entry.type === 'points' && !points.loaded.includes(id)) {
-        done((data) => { points.setLayer(data); tour.refresh(); publishIndex(); });
+        done((data) => {
+          points.setLayer(data);
+          // Beads and figurines are drawn by the GPU; the HTML element then carries only
+          // the name. The figurines take a moment to build, so the frame follows them.
+          if (data.marker === 'dot' || data.marker === 'model') marks?.setLayer(data).then(invalidate);
+          tour.refresh();
+          publishIndex();
+        });
       } else if (entry.type === 'lines' && lines && !lines.has(id)) {
         done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); publishIndex(); });
       } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
@@ -355,7 +371,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       } else if (entry.type === 'prisms' && !prismFiles.has(id)) {
         done((data) => { prismFiles.set(id, data); showPrisms(); });
       } else if (entry.type === 'regional' && !regionalFiles.has(id)) {
-        done((data) => { regionalFiles.set(id, data); publishRegional(); publishIndex(); });
+        done((data) => {
+          regionalFiles.set(id, data);
+          // Items with a home are drawn there as tokens, exactly as a place is; the rest
+          // are read in the state cards alone.
+          const anchored = (data.items || []).filter((i) => typeof i.x === 'number');
+          if (anchored.length) { points.setLayer({ ...data, items: anchored }); tour.refresh(); }
+          publishRegional();
+          publishIndex();
+        });
       }
     }
     showChoropleth(activeChoro());
@@ -741,7 +765,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   // --- the tour (tour.js): every place on show, with its card, one flight after another
   const tour = createTour(store, {
-    stops: () => points.list({ active: new Set(store.get('layers')?.active || []), drafts: !!store.get('drafts'), level }),
+    stops: () => points.list({ active: new Set(store.get('layers')?.active || []), drafts: !!store.get('drafts'), level, tour: true }),
     visit: ({ layer, item }, opts) => {
       store.set('item', { layer, id: item.id, data: item, categories: points.categories(layer) }, { source: 'tour' });
       return flyToItem(item, opts);
@@ -781,10 +805,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('pivot', { point: [hit.x, hit.y, hit.z], sx: g.x, sy: g.y, onModel: !!hit.id });
   });
 
+  /** A bead or a figurine under a screen point: they have no element of their own to click. */
+  function markAt(sx, sy, px) {
+    return marks?.nearest(project, sx, sy, px, new Set(store.get('layers')?.active || [])) || null;
+  }
+
   store.subscribe('tap', (tap) => {
     if (!tap || !field) return;
-    // A line sits on top of the state it crosses, so it gets the tap first.
-    const hit = lineAt(tap.x, tap.y, tap.type === 'touch' || tap.type === 'pen' ? 14 : 9);
+    const coarse = tap.type === 'touch' || tap.type === 'pen';
+    // A marker stands on the state, and a line sits on it, so they get the tap first.
+    const hit = markAt(tap.x, tap.y, coarse ? 16 : 10) || lineAt(tap.x, tap.y, coarse ? 14 : 9);
     if (hit) {
       store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories, fields: hit.fields });
       return;
@@ -817,7 +847,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     hoverRaf = requestAnimationFrame(() => {
       hoverRaf = 0;
       const p = store.get('pointer');
-      const hit = p ? lineAt(p.x, p.y) : null;
+      const hit = p ? (markAt(p.x, p.y, 8) || lineAt(p.x, p.y)) : null;
       const was = store.get('hoverLine');
       if (hit?.item.id !== was?.id || hit?.layer !== was?.layer) {
         store.set('hoverLine', hit ? { layer: hit.layer, id: hit.item.id, name: hit.item.name } : null);
@@ -886,6 +916,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     publishBounds();                      // the mask needs the raster, which only exists now
     scene.add(terrain.mesh);
     lines = createLines(scene, terrain.uniforms);
+    marks = createMarks(scene, terrain.uniforms, { loadRecipe: (name) => loadJson(`models/${name}.json`) });
     lines.setView(viewport.w, viewport.h, store.get('camera').zoom);
     loadActiveLayers();
     applySurroundings(!!store.get('surroundings'));
@@ -989,6 +1020,6 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // For checks from the console or a script through window.bd, as CLAUDE.md describes:
     // the uniforms are what a look at the shading has to be measured against.
     get terrain() { return terrain; },
-    dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
+    dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); marks?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }
