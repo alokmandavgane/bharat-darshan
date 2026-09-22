@@ -14,7 +14,7 @@
   "sheet.subtitle": "{states} states · {uts} union territories",
   "sheet.about.heading": "About this map",
   "sheet.about.body": "A hand-made model of India: terrain from open elevation data, official state boundaries, in English and Hindi. Drag to pan, pinch to zoom, twist to turn, drag with two fingers to tilt.",
-  "sheet.next": "Tap a state to lift it out of the map. The play button tours the places on show; the compass resets the view. Layers so far: places, rivers, mountain ranges, peaks and passes, highways, railways, population density and festivals. Coming next: languages and food.",
+  "sheet.next": "Tap a state to lift it out of the map; tap a peg, a bead or a figurine for its card. The contents lists the atlas's pages, the key on the map says what is drawn, and the menu holds every layer. The play button tours the places on show; the compass turns the view back to north.",
   "sheet.credits.heading": "Data and credits",
   "status.loading": "Loading the map…",
   "status.loading.terrain": "Loading terrain…",

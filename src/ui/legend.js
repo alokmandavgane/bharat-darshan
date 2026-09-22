@@ -76,11 +76,14 @@ export function layerMark(layer) {
   let body = '';
   switch (kindOf(layer)) {
     case 'token':
-      body = (cs.length > 1 ? `<circle cx="31" cy="12" r="5" fill="${c(1)}"/>` : '')
-        + (cs.length > 2 ? `<circle cx="32" cy="27" r="4" fill="${c(2)}"/>` : '')
-        + `<ellipse cx="17" cy="33" rx="9" ry="2.5" fill="rgba(60,45,30,.25)"/>`
-        + `<circle cx="17" cy="20" r="11" fill="${c(0)}"/>`
-        + glyph(layer.icon, 9.5, 12.5, 0.62, PAPER, 2.4);
+      // A peg, as on the model: a pale post, a head in the first colour with the glyph
+      // on it, and the other colours' heads behind it.
+      body = (cs.length > 1 ? `<circle cx="31" cy="13" r="4.5" fill="${c(1)}"/><rect x="30" y="17" width="2" height="6" fill="#d9cdb5"/>` : '')
+        + (cs.length > 2 ? `<circle cx="32" cy="28" r="3.5" fill="${c(2)}"/><rect x="31.2" y="31" width="1.6" height="4" fill="#d9cdb5"/>` : '')
+        + `<ellipse cx="17" cy="35" rx="7" ry="2" fill="rgba(60,45,30,.25)"/>`
+        + `<path d="M15.6 24h2.8l0.8 10h-4.4z" fill="#d9cdb5"/>`
+        + `<circle cx="17" cy="16" r="10" fill="${c(0)}"/><circle cx="13.5" cy="12" r="2.4" fill="rgba(255,255,255,.35)"/>`
+        + glyph(layer.icon, 10.2, 9.2, 0.56, PAPER, 2.4);
       break;
     case 'dot':
       body = `<ellipse cx="14" cy="27" rx="8" ry="2.2" fill="rgba(60,45,30,.22)"/><circle cx="14" cy="21" r="6.5" fill="${c(0)}"/>`
