@@ -1205,7 +1205,7 @@
    "icon": "wave",
    "group": "physical",
    "default_on": true,
-   "count": 28,
+   "count": 29,
    "reviewed": 0,
    "categories": [
     {
@@ -1223,10 +1223,22 @@
       "hi": "वर्षापोषित"
      },
      "color": "#6a9a86"
+    },
+    {
+     "id": "network",
+     "title": {
+      "en": "Other river",
+      "hi": "अन्य नदी"
+     },
+     "color": "#7d9fb3"
     }
    ],
+   "note": {
+    "en": "India's rivers as the government's water survey draws them: the 28 told here by name over every other river it counts as major, 47,000 km of it. Open a state and every river inside it at least 40 km long joins them, at five times the detail. The flow runs downstream, found from the relief.",
+    "hi": "भारत की नदियाँ, जैसे सरकार का जल सर्वेक्षण उन्हें खींचता है: यहाँ नाम सहित कही गई 28 नदियाँ, उन सब प्रमुख नदियों के ऊपर जिन्हें वह गिनता है — कुल 47,000 किमी। किसी राज्य को खोलें, तो उसके भीतर की हर 40 किमी से लंबी नदी इनसे आ मिलती है, पाँच गुना बारीकी से। प्रवाह नीचे की ओर चलता है, जो उभार से जाना गया है।"
+   },
    "sources": [
-    "natural-earth",
+    "indian-water-features",
     "india-wris",
     "wikipedia"
    ],
@@ -1469,8 +1481,8 @@
    "sha256": "de7a819901b2"
   },
   "sources.json": {
-   "size": 25939,
-   "sha256": "cd1182b6ebcf"
+   "size": 27967,
+   "sha256": "2c51e5515d3c"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1721,8 +1733,8 @@
    "sha256": "8af61f4706aa"
   },
   "layers/rivers.json": {
-   "size": 52676,
-   "sha256": "b561f5b2ab8e"
+   "size": 201734,
+   "sha256": "74b402d72399"
   },
   "layers/roads.json": {
    "size": 441330,
@@ -1867,6 +1879,146 @@
   "layers/district-lines/west-bengal.json": {
    "size": 38225,
    "sha256": "7246900142af"
+  },
+  "layers/rivers/andaman-and-nicobar-islands.json": {
+   "size": 1282,
+   "sha256": "9d3284e633f3"
+  },
+  "layers/rivers/andhra-pradesh.json": {
+   "size": 122351,
+   "sha256": "bbe0e3adbd09"
+  },
+  "layers/rivers/arunachal-pradesh.json": {
+   "size": 47556,
+   "sha256": "64eb7b8ba34c"
+  },
+  "layers/rivers/assam.json": {
+   "size": 141123,
+   "sha256": "4f1ff8769e1e"
+  },
+  "layers/rivers/bihar.json": {
+   "size": 182005,
+   "sha256": "e4c67e713286"
+  },
+  "layers/rivers/chandigarh.json": {
+   "size": 633,
+   "sha256": "3a1472b3e68f"
+  },
+  "layers/rivers/chhattisgarh.json": {
+   "size": 145201,
+   "sha256": "d8bb02655134"
+  },
+  "layers/rivers/dadra-and-nagar-haveli-and-daman-and-diu.json": {
+   "size": 2231,
+   "sha256": "d3e0dce8f8f3"
+  },
+  "layers/rivers/delhi.json": {
+   "size": 2078,
+   "sha256": "c40a3c43a006"
+  },
+  "layers/rivers/goa.json": {
+   "size": 3484,
+   "sha256": "19b810f99578"
+  },
+  "layers/rivers/gujarat.json": {
+   "size": 154138,
+   "sha256": "68c609863b6b"
+  },
+  "layers/rivers/haryana.json": {
+   "size": 24453,
+   "sha256": "14dd7837f2c6"
+  },
+  "layers/rivers/himachal-pradesh.json": {
+   "size": 30842,
+   "sha256": "aeb7a647d86b"
+  },
+  "layers/rivers/jammu-and-kashmir.json": {
+   "size": 28389,
+   "sha256": "a8fb7dec9675"
+  },
+  "layers/rivers/jharkhand.json": {
+   "size": 90646,
+   "sha256": "193a2cf3488a"
+  },
+  "layers/rivers/karnataka.json": {
+   "size": 160726,
+   "sha256": "b699b5852cb9"
+  },
+  "layers/rivers/kerala.json": {
+   "size": 53269,
+   "sha256": "2e01f8bbbe47"
+  },
+  "layers/rivers/ladakh.json": {
+   "size": 27495,
+   "sha256": "62efd6540e1f"
+  },
+  "layers/rivers/madhya-pradesh.json": {
+   "size": 378381,
+   "sha256": "7d7e7e93f019"
+  },
+  "layers/rivers/maharashtra.json": {
+   "size": 283305,
+   "sha256": "e7a86dcb6521"
+  },
+  "layers/rivers/manipur.json": {
+   "size": 34863,
+   "sha256": "1b9d4378df3f"
+  },
+  "layers/rivers/meghalaya.json": {
+   "size": 20118,
+   "sha256": "e1e1ae5724eb"
+  },
+  "layers/rivers/mizoram.json": {
+   "size": 29900,
+   "sha256": "3dfa55e8d36a"
+  },
+  "layers/rivers/nagaland.json": {
+   "size": 22377,
+   "sha256": "4c5504213fd9"
+  },
+  "layers/rivers/odisha.json": {
+   "size": 149405,
+   "sha256": "820544800e64"
+  },
+  "layers/rivers/puducherry.json": {
+   "size": 2833,
+   "sha256": "aff2f3f41fea"
+  },
+  "layers/rivers/punjab.json": {
+   "size": 40510,
+   "sha256": "d9601c510f19"
+  },
+  "layers/rivers/rajasthan.json": {
+   "size": 142499,
+   "sha256": "cbc44e83e384"
+  },
+  "layers/rivers/sikkim.json": {
+   "size": 2817,
+   "sha256": "f452c2285586"
+  },
+  "layers/rivers/tamil-nadu.json": {
+   "size": 125391,
+   "sha256": "04659a89bd82"
+  },
+  "layers/rivers/telangana.json": {
+   "size": 89885,
+   "sha256": "c57eabf5ba3c"
+  },
+  "layers/rivers/tripura.json": {
+   "size": 13319,
+   "sha256": "ddbc60a3860a"
+  },
+  "layers/rivers/uttar-pradesh.json": {
+   "size": 435233,
+   "sha256": "6889be23bddc"
+  },
+  "layers/rivers/uttarakhand.json": {
+   "size": 60900,
+   "sha256": "e028af76c869"
+  },
+  "layers/rivers/west-bengal.json": {
+   "size": 120538,
+   "sha256": "6db11fb4bdef"
   },
   "models/apricot.json": {
    "size": 399,
