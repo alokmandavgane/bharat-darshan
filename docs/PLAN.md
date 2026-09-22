@@ -235,11 +235,18 @@ a picture laid on a page. In rough order of effect per hour:
    The compass rose is **not** wanted: the compass control in the corner already turns
    with the model, says "turn back to north" once the view is off north, and is the way
    back; a second rose on the table would be decoration competing with a control.
-   The graticule is the one left, and it is engine work rather than content: as a layer
-   every parallel would need a name, a blurb in two languages and a card nobody wants, so
-   it belongs as furniture -- pre-projected by the pipeline (the runtime has no projection
-   code, D3), drawn on the table at y = 0 where the model itself hides it, with its own
-   switch beside Relief and Surroundings.
+   *The graticule shipped on 2026-09-22*, as furniture rather than content: as a layer
+   every parallel would need a name, a blurb in two languages and a card nobody wants.
+   `08_graticule.py` walks the parallels and meridians every 5 degrees, projects them and
+   clips them to the board (the runtime has no projection code, D3); the engine draws the
+   lot as one `LineSegments` of 54 hairlines, 1.8 KB over the wire, fetched the first time
+   the switch is used. Meridians come out straight and parallels bowed, which is what a
+   Lambert conformal conic does, and turning the model turns its grid with it -- the point
+   of having it. It sits a quarter of a km above the paper and writes no depth: drawn
+   after the terrain and left to the depth test, so the model hides its own lines and the
+   grid shows on the table around it, and on the sea once Surroundings puts one there.
+   With relief off the model is flat and the grid crosses it, which is what a flat map
+   should look like.
 7. **Miniature depth of field** on the high tier, already planned in "Layout".
 8. **A warmer room.** A vignette and a slight warm-to-cool falloff across the paper from
    the light's side; the page is currently one flat cream.
@@ -996,9 +1003,8 @@ enforced by the build, with the credits screen and every source line generated f
 Then the share shells, the same day: 18 Open Graph shells generated from `plates.json`,
 and poster mode now renders a page's own card. The card images themselves need a
 Playwright run (`node tools/share-image.mjs`) and until then each page's shell points at
-its language card. The cartouche and the scale bar followed the same day. Left: the
-graticule, which section 3's item 6 now sets out as furniture rather than as a layer, and
-base styles for the thematic pages.*
+its language card. The cartouche, the scale bar and the graticule followed the same day,
+which is the furniture done. Left: base styles for the thematic pages.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1777,6 +1783,21 @@ docs/DEPLOY.md).
   The compass rose on the list is ruled out rather than built, and the graticule is now
   specified as furniture rather than as a layer -- reasons in section 3, item 6.
 
+- 2026-09-22, thirtieth round: the graticule, and with it the furniture is done. Twelve
+  lines every 5 degrees, walked across the projection by `08_graticule.py`, clipped to the
+  board and shipped as 1.8 KB the engine fetches the first time the switch is used. What
+  it draws is the projection itself: the meridians come out straight, the parallels bowed,
+  and the grid turns with the model, which was the argument for having it.
+  The depth behaviour took three goes and is the whole of the work. `renderOrder = -1`
+  with no depth write hid the grid everywhere, because the terrain is transparent too and
+  simply painted over it afterwards. Letting the pass order alone hid it under the sea the
+  moment Surroundings was switched on. What is right is the pattern the line layers
+  already use: drawn after the terrain, writing no depth, and placed by the depth test --
+  a quarter of a km above the paper, which is above the sea sheet and far below any land,
+  so the model hides its own lines and the table keeps them. Checked in all four states:
+  cut-out, surroundings, relief off (the grid crosses the flat model, as a flat map's
+  should) and the state view (nothing to say at 200 km, and nothing wrong either).
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1840,12 +1861,12 @@ docs/DEPLOY.md).
    shells are in. What is left: **the 18 card images need a Playwright run** --
    `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
    to see the list); this machine has no Playwright and it is a tool, not a dependency, so
-   it was not installed to get them. Of the atlas furniture, the cartouche and the scale
-   bar are in and the compass rose is ruled out (section 3, item 6); the graticule is
-   left, and it wants a pipeline step emitting pre-projected parallels and meridians plus
-   a faint line pass on the table, with a switch beside Relief. Base styles (section 5)
-   would also help the thematic pages: several of them would read better over a quieter
-   base than the full hypsometric one. Two smaller things the registry left behind: `content/layers/<id>/layer.json` still carries an
+   it was not installed to get them. The atlas furniture is done: cartouche, scale bar
+   and graticule in, compass rose ruled out (section 3, item 6). What is left of the phase
+   is **base styles** (section 5): several thematic pages would read better over a quieter
+   base -- flat clay, relief by light alone -- than over the full hypsometric one, and it
+   is a uniform or two on the terrain material rather than new drawing. Two smaller things
+   the registry left behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
