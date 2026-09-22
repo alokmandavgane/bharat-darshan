@@ -1869,6 +1869,23 @@ docs/DEPLOY.md).
   than published numbers, and a history layer would restate 20-odd places the `places`
   layer already holds. Cities restates nothing.
 
+- 2026-09-22, thirty-fourth round: iron and steel, which is the page the minerals one was
+  asking for: fourteen works, eleven of them inland between the Jharkhand coal and the
+  Odisha and Chhattisgarh ore, three on the coast importing what they melt. The
+  categories carry that distinction and the inland ones take the same rust colour the
+  minerals page gives iron ore, so the two pages read as one argument.
+  The round's finding is about composition, and it cost a page layout to learn. The plate
+  first named `["steel", "minerals"]`, on the reasoning that the coal and the ore explain
+  the plants -- and the map said no: 36 tokens on one screen, and the mineral gems sitting
+  on top of the works the page is about. **Primitives compose across channels, not within
+  one.** Population as height under density as colour works because they are two channels;
+  arrows over areas works for the same reason; two token layers are one channel and fight
+  over the same paper. The page now names its own layer and the blurb points at the other,
+  which is what prose is for.
+  Also: `power` was filed under "Roads and rail" and `steel` would have gone under "Rocks
+  and mining". Both are now "Works and power", which is one more of the group headings the
+  sections were meant to settle -- strings, no code.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1936,8 +1953,8 @@ docs/DEPLOY.md).
    brought two more. Everything else in Phase 6 is built and its exit is met: ten pages
    across eight sections, each of them a JSON file. `political` as a base style is
    specified in section 5 and deliberately unbuilt until a page needs it.
-   **Phase 7 is the work now.** Cities landed on 2026-09-22 as its first page; the 52
-   items of minerals and cities are drafts and want reading. The two still-empty sections
+   **Phase 7 is the work now.** Cities and iron-and-steel landed on 2026-09-22; the 66
+   items of minerals, cities and steel are drafts and want reading. The two still-empty sections
    were looked at and both are harder than they sound:
    - **Agriculture** wants a crop map, which would be the first choropleth whose values
      are claims rather than published numbers. A leading crop per state needs a source
