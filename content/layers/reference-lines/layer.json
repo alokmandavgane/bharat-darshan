@@ -30,6 +30,10 @@
       "label": { "en": "Position", "hi": "स्थिति" }
     }
   },
+  "sources": [
+    "iers-conventions",
+    "npl-india"
+  ],
   "attribution": "Reference lines are defined, not surveyed: the build walks each one across the projection and clips it to the country, so what is drawn is the projection's own curve.",
   "_source": "\"join\": \"generated\" means no file is fetched: each item describes its own line, and the engine reads the layer type, never this layer's name."
 }

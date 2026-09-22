@@ -22,8 +22,8 @@
     "hi": "पाँच क्षेत्रीय परिषदें राज्य पुनर्गठन अधिनियम 1956 से बनीं; पूर्वोत्तर परिषद अलग है, जो 1971 के अपने अधिनियम से बनी, और सिक्किम 2002 में उसमें शामिल हुआ। ये पड़ोसी राज्यों के बीच के विषयों पर सलाहकार निकाय हैं, प्रशासनिक विभाजन नहीं, और ये जनगणना या रेलवे के क्षेत्र नहीं हैं।"
   },
   "sources": [
-    "https://www.mha.gov.in/en/divisionofmha/inter-state-council-division",
-    "https://necouncil.gov.in/"
+    "mha-inter-state-council",
+    "north-eastern-council"
   ],
   "attribution": "Zonal council membership: Ministry of Home Affairs, Inter-State Council Secretariat; North Eastern Council.",
   "_scale": "\"categorical\" means each region carries a category id rather than a number: values.csv holds this layer's own category ids, and the engine reads the type, never the layer's name."

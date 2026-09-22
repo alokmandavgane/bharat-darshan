@@ -29,6 +29,10 @@
       "color": "#8a7550"
     }
   ],
+  "sources": [
+    "gsi",
+    "wikipedia"
+  ],
   "attribution": "Range extents and elevations checked against Wikipedia and the Geological Survey of India.",
   "_marker": "marker: label draws the name alone, with no token: a range is a stretch of country, not a spot on it."
 }

@@ -23,7 +23,9 @@
     "en": "Normal dates, not a forecast: the south-west monsoon reaches Kerala around 1 June and covers the country by early July, but any given year runs days or weeks either side. The arrows show where the rain comes from and the order it arrives in, which is the part that hardly varies.",
     "hi": "सामान्य तिथियाँ, पूर्वानुमान नहीं: दक्षिण-पश्चिम मानसून लगभग 1 जून को केरल पहुँचता है और जुलाई के आरंभ तक पूरे देश में फैल जाता है, पर किसी भी वर्ष में यह कुछ दिन या सप्ताह आगे-पीछे हो सकता है। तीर बताते हैं कि वर्षा कहाँ से आती है और किस क्रम में, जो लगभग नहीं बदलता।"
   },
-  "sources": [ "https://mausam.imd.gov.in/" ],
+  "sources": [
+    "imd"
+  ],
   "attribution": "Normal onset and withdrawal dates: India Meteorological Department.",
   "_arrows": "\"arrows\": true makes the build shape each run's width into an arrowhead and keeps it unclipped, so a flow may come in off the sea. The engine reads the width profile, never this layer's name."
 }

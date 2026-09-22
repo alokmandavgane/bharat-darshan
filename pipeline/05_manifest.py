@@ -5,6 +5,12 @@ The runtime fetches manifest.json first and resolves everything else through it,
 data files can be cached forever by their hashed name once we move to hashed names.
 For now files keep plain names and the manifest carries their sha256 prefix and size,
 which is enough for cache busting via a query string.
+
+This step also writes public/data/sources.json: the source registry, cut down to the
+sources the atlas actually cites, which is what the credits screen and every legend's
+source line are generated from (PLAN.md section 5, "Source registry"). Being generated
+from what the layers cite, it cannot credit a dataset the atlas does not use, and it
+cannot leave out one it does.
 """
 import hashlib
 import json
@@ -13,6 +19,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.lib import grid  # noqa: E402
+from pipeline.lib import sources as sources_lib  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,8 +32,29 @@ def digest(path):
     return h.hexdigest()[:12]
 
 
+def write_sources(out):
+    """The cited slice of the registry, from the layer files this build just wrote."""
+    registry = sources_lib.load(ROOT)
+    cited = []
+    for dirname in ('layers',):
+        d = os.path.join(out, dirname)
+        for n in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+            if not n.endswith('.json'):
+                continue
+            with open(os.path.join(d, n), encoding='utf-8') as f:
+                cited += registry.ids(json.load(f).get('sources'))
+    data = registry.runtime(cited)
+    path = os.path.join(out, 'sources.json')
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+    print(f"sources: {len(data['sources'])} cited, {len(data['licences'])} licences "
+          f"-> {os.path.relpath(path, ROOT)} ({os.path.getsize(path) / 1024:.0f} KB)")
+    return data
+
+
 def main():
     out = os.path.join(ROOT, 'public', 'data')
+    write_sources(out)
     files = {}
     for dirpath, _, names in os.walk(out):
         for n in sorted(names):
@@ -57,7 +85,7 @@ def main():
             # layer itself is fetched; the item bodies stay in the layer file.
             layers.append({k: L[k] for k in ('id', 'type', 'marker', 'size', 'title', 'icon', 'group',
                                              'default_on', 'count', 'reviewed', 'categories',
-                                             'fields', 'scale', 'height', 'unit', 'note') if k in L}
+                                             'fields', 'scale', 'height', 'unit', 'note', 'sources') if k in L}
                           | {'path': f'layers/{n}'})
     world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')
              if os.path.exists(os.path.join(out, 'terrain', f'world-{k}.bin.gz'))}
@@ -69,11 +97,9 @@ def main():
         'states': 'states/index.json' if os.path.exists(os.path.join(out, 'states', 'index.json')) else None,
         'world': world or None,
         'layers': layers,
-        'attribution': [
-            states.get('attribution', ''),
-            'Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; '
-            'see https://github.com/tilezen/joerd/blob/master/docs/attribution.md',
-        ],
+        # Who to credit is no longer prose in this file: sources.json holds the registry,
+        # each layer cites it by id, and the credits screen is generated from both.
+        'sources': 'sources.json',
         'files': files,
     }
     with open(os.path.join(out, 'manifest.json'), 'w', encoding='utf-8') as f:

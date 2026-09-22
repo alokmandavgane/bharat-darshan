@@ -17,6 +17,10 @@
       "label": { "en": "Usually in", "hi": "प्रायः" }
     }
   },
+  "sources": [
+    "wikipedia",
+    "unesco-ich"
+  ],
   "attribution": "Festival dates follow the lunar and solar calendars and move from year to year; the month given is the one each usually falls in. Every item is drafted from the sources it lists and awaits review.",
   "_regions": "The states and union territories that keep it, or \"*\" for one kept the country over."
 }

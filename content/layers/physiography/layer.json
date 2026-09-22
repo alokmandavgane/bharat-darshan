@@ -78,7 +78,7 @@
     "hi": "भौतिक विभागों की कोई सर्वेक्षित सीमा नहीं होती: पठार दसियों किलोमीटर में मैदान में बदल जाता है और अलग-अलग पुस्तकें रेखा अलग खींचती हैं। ये Natural Earth की सामान्यीकृत रूपरेखाएँ हैं, भारत तक सीमित, और इन्हें सीमाओं के बजाय क्षेत्रों की तरह पढ़ा जाए।"
   },
   "sources": [
-    "https://www.naturalearthdata.com/downloads/10m-physical-vectors/"
+    "natural-earth"
   ],
   "attribution": "Region outlines: Natural Earth 10m physical regions (public domain), clipped to India and rasterised by the build.",
   "_type": "\"areas\" joins polygons by name the way a lines layer joins courses, then rasterises them: the engine reads the type, never this layer's name."

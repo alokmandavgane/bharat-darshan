@@ -25,7 +25,7 @@
     "hi": "जम्मू और कश्मीर तथा लद्दाख रंगहीन छोड़े गए हैं: 2011 की जनगणना उनके 2019 के पुनर्गठन से पहले की है, और उनके प्रकाशित क्षेत्रफल इस पर निर्भर करते हैं कि कौन-सा भूभाग गिना जाए।"
   },
   "sources": [
-    "https://censusindia.gov.in/census.website/data/census-tables"
+    "census-2011"
   ],
   "attribution": "Density is the 2011 census population over the published area of each state and union territory, the same figures the state cards carry.",
   "_scale": "Each band gives its lower bound in people per km²; the engine reads the scale, never a layer's name."

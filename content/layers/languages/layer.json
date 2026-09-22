@@ -19,6 +19,10 @@
       "unit": { "en": "{n} (2011 census)", "hi": "{n} (2011 जनगणना)" }
     }
   },
+  "sources": [
+    "census-2011",
+    "wikipedia"
+  ],
   "attribution": "The twenty-two languages of the Eighth Schedule to the Constitution, and English. A language is listed against the states and union territories where it is an official or additional official language, except where a note says otherwise. Speaker counts are first-language speakers from the 2011 census.",
   "_regions": "Where it is official, not where it is spoken: the two are not the same and the blurb says so where they differ."
 }

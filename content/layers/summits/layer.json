@@ -42,5 +42,9 @@
       "color": "#8a7550"
     }
   ],
+  "sources": [
+    "survey-of-india",
+    "wikipedia"
+  ],
   "attribution": "Elevations and locations from Wikipedia and Survey of India topographic sheets; peaks outside Indian-administered territory are left out."
 }

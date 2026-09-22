@@ -52,6 +52,11 @@
       }
     }
   },
+  "sources": [
+    "natural-earth",
+    "indian-railways",
+    "wikipedia"
+  ],
   "attribution": "Railway centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each line is the course the source holds between the places listed in this folder. Names, dates and lengths checked against Indian Railways and Wikipedia.",
   "_join": "The source has geometry but no names, so an item lists the places its line is known by and the build walks the source's own parts between them.",
   "_rank": "1 is a trunk line drawn widest, 3 a short one drawn finest; the engine reads rank, never a line's name."

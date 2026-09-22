@@ -34,6 +34,7 @@ import numpy as np  # noqa: E402
 from PIL import Image  # noqa: E402
 
 from pipeline.lib import fetch, grid, lines, pack, raster, shapefile  # noqa: E402
+from pipeline.lib import sources as sources_lib  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
@@ -73,10 +74,22 @@ def load_states(out):
     return states, ids[:, :, 0]
 
 
-def validate_layer(layer, folder):
+def validate_layer(layer, folder, registry):
     p = []
     if layer.get('id') != os.path.basename(folder):
         p.append('layer.id must equal the folder name')
+    # Where the layer came from, cited by id against content/sources.json. A map that
+    # cannot say where it came from does not ship, so this is a hard failure and not a
+    # warning; items may still cite a plain URL for a one-off fact.
+    cites = layer.get('sources')
+    if not isinstance(cites, list) or not cites:
+        p.append('layer.sources must name at least one id from content/sources.json')
+    else:
+        p += registry.check(cites, 'layer.sources')
+        # A bare URL is a citation but not a credit: nothing knows its title, its licence or
+        # its year, so a page built on this layer could not say whose map it is.
+        if not registry.ids(cites):
+            p.append('layer.sources cites only URLs: at least one must be an id from content/sources.json')
     if layer.get('type') not in TYPES:
         p.append(f"layer.type must be one of {TYPES}")
     if not bilingual(layer.get('title')):
@@ -522,10 +535,10 @@ def validate_item(it, cats, by_iso, ids, width, height, fields):
     return p, here
 
 
-def build_layer(folder, states, ids, heights, out):
+def build_layer(folder, states, ids, heights, out, registry):
     with open(os.path.join(folder, 'layer.json'), encoding='utf-8') as f:
         layer = json.load(f)
-    problems = validate_layer(layer, folder)
+    problems = validate_layer(layer, folder, registry)
     items_path = os.path.join(folder, 'items.json')
     items = json.load(open(items_path, encoding='utf-8')) if os.path.exists(items_path) else []
     cats = {c['id'] for c in layer.get('categories', [])}
@@ -590,8 +603,12 @@ def finish(layer, out_items, out, problems, order, extra=None):
     if problems:
         return layer, None, problems
     out_items.sort(key=order)
+    # `attribution` stays in content/layers/<id>/layer.json and is not shipped: it says what
+    # the build did with the source, for whoever edits the layer. What the reader is owed --
+    # who published it, under what licence -- is the registry's job now, and saying it twice
+    # is the sprawl the registry exists to stop.
     data = {k: layer[k] for k in ('id', 'type', 'marker', 'flow', 'size', 'title', 'icon', 'group', 'categories',
-                                  'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources', 'attribution') if k in layer}
+                                  'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)
     data['reviewed'] = sum(1 for i in out_items if i['status'] == 'reviewed')
@@ -614,6 +631,7 @@ def main():
     if not os.path.isdir(root):
         print('no content/layers')
         return
+    registry = sources_lib.load(ROOT)
     states, ids = load_states(args.out)
     heights = height_loader(args.out, states)
     failed = False
@@ -621,7 +639,7 @@ def main():
         folder = os.path.join(root, name)
         if not os.path.isfile(os.path.join(folder, 'layer.json')):
             continue
-        layer, path, problems = build_layer(folder, states, ids, heights, args.out)
+        layer, path, problems = build_layer(folder, states, ids, heights, args.out, registry)
         if problems:
             failed = True
             print(f'{name}: {len(problems)} problem(s)')

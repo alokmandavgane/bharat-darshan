@@ -38,6 +38,11 @@
       "color": "#6a9a86"
     }
   ],
+  "sources": [
+    "natural-earth",
+    "india-wris",
+    "wikipedia"
+  ],
   "attribution": "River centrelines: Natural Earth 10m physical vectors (public domain). Names, courses and facts checked against Wikipedia and India-WRIS.",
   "_rank": "1 is a great river drawn widest, 3 a tributary drawn finest; the engine reads rank, never a river's name."
 }

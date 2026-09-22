@@ -40,7 +40,7 @@
     "hi": "स्थापित क्षमता, यानी पूरी क्षमता पर संयंत्र कितना बना सकता है, न कि वह कितना बनाता है: एक सौर पार्क वर्ष भर में लगभग पाँचवें हिस्से पर और कोयला संयंत्र लगभग दो-तिहाई पर चलता है। इकाइयाँ जुड़ने और हटने से क्षमताएँ बदलती रहती हैं।"
   },
   "sources": [
-    "https://cea.nic.in/installed-capacity-report/"
+    "cea-installed-capacity"
   ],
   "attribution": "Capacities from Central Electricity Authority installed-capacity reporting and the operators' own published figures.",
   "_marker": "\"symbol\" draws a circle whose area is the value in size.field, instead of a token: the engine reads the marker and the size spec, never this layer's name."

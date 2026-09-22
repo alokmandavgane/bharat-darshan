@@ -74,6 +74,10 @@
       "color": "#4e5b8a"
     }
   ],
+  "sources": [
+    "unesco-world-heritage",
+    "wikipedia"
+  ],
   "attribution": "Curated places; descriptions drafted from UNESCO World Heritage and Wikipedia pages, pending review.",
   "_icons": "icon names come from the engine's glyph set (src/engine/points.js): monument, temple, leaf, wave, mountain, paw, city, pin"
 }
