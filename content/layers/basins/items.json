@@ -1,0 +1,547 @@
+[
+  {
+    "id": "ganga",
+    "status": "draft",
+    "name": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "category": "himalayan-bay",
+    "rank": 1,
+    "source_names": [
+      "2A"
+    ],
+    "blurb": {
+      "en": "The largest basin in India, over a quarter of the country: the Ganga and the Yamuna, the Himalayan rivers from the Ghaghara to the Kosi, and from the south the Chambal, Betwa and Son.",
+      "hi": "भारत का सबसे बड़ा बेसिन, देश के एक-चौथाई से अधिक: गंगा और यमुना, घाघरा से कोसी तक की हिमालयी नदियाँ, और दक्षिण से चंबल, बेतवा और सोन।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Ganga_Basin"
+    ],
+    "area_km2": 861452
+  },
+  {
+    "id": "brahmaputra",
+    "status": "draft",
+    "name": {
+      "en": "Brahmaputra basin",
+      "hi": "ब्रह्मपुत्र बेसिन"
+    },
+    "category": "himalayan-bay",
+    "rank": 1,
+    "source_names": [
+      "2B"
+    ],
+    "blurb": {
+      "en": "The river that enters India as the Siang in Arunachal and leaves it through the Assam valley for Bangladesh; per km² it carries more water than any other basin in the country.",
+      "hi": "वह नदी जो अरुणाचल में सियांग बनकर भारत में आती है और असम घाटी से होकर बांग्लादेश चली जाती है; प्रति वर्ग किमी यह देश के किसी भी बेसिन से अधिक पानी बहाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Brahmaputra_River"
+    ],
+    "area_km2": 194413
+  },
+  {
+    "id": "barak",
+    "status": "draft",
+    "name": {
+      "en": "Barak and others",
+      "hi": "बराक एवं अन्य"
+    },
+    "category": "himalayan-bay",
+    "rank": 3,
+    "source_names": [
+      "2C"
+    ],
+    "blurb": {
+      "en": "The Barak and its neighbours, rising in the hills of Manipur and draining the Cachar plain of southern Assam into Bangladesh, where it joins the Meghna.",
+      "hi": "बराक और उसकी पड़ोसी नदियाँ, जो मणिपुर की पहाड़ियों से निकलकर दक्षिणी असम के कछार मैदान से होकर बांग्लादेश में मेघना से मिलती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Barak_River"
+    ],
+    "area_km2": 41723
+  },
+  {
+    "id": "indus",
+    "status": "draft",
+    "name": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "category": "himalayan-arabian",
+    "rank": 1,
+    "source_names": [
+      "01"
+    ],
+    "blurb": {
+      "en": "The Indus and its five rivers of the Punjab -- the Jhelum, Chenab, Ravi, Beas and Satluj -- as far as India's border; everything here reaches the Arabian Sea by way of Pakistan.",
+      "hi": "सिंधु और पंजाब की उसकी पाँच नदियाँ — झेलम, चिनाब, रावी, ब्यास और सतलुज — भारत की सीमा तक; यहाँ का सारा पानी पाकिस्तान होकर अरब सागर पहुँचता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Indus_River"
+    ],
+    "area_km2": 321289
+  },
+  {
+    "id": "godavari",
+    "status": "draft",
+    "name": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 1,
+    "source_names": [
+      "03"
+    ],
+    "blurb": {
+      "en": "The largest basin of the peninsula. The Godavari rises at Trimbak near Nashik, eighty km from the Arabian Sea, and crosses the whole Deccan to reach the Bay of Bengal.",
+      "hi": "प्रायद्वीप का सबसे बड़ा बेसिन। गोदावरी नासिक के पास त्र्यंबक में, अरब सागर से अस्सी किमी दूर निकलती है, और पूरा दक्कन पार कर बंगाल की खाड़ी तक पहुँचती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Godavari_River"
+    ],
+    "area_km2": 312812
+  },
+  {
+    "id": "krishna",
+    "status": "draft",
+    "name": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 1,
+    "source_names": [
+      "04"
+    ],
+    "blurb": {
+      "en": "The Krishna with the Bhima and the Tungabhadra, rising at Mahabaleshwar in the Western Ghats and draining four states on its way to the delta below Vijayawada.",
+      "hi": "भीमा और तुंगभद्रा सहित कृष्णा, जो पश्चिमी घाट में महाबलेश्वर से निकलकर विजयवाड़ा के नीचे डेल्टा तक पहुँचते हुए चार राज्यों का पानी बहाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Krishna_River"
+    ],
+    "area_km2": 258948
+  },
+  {
+    "id": "mahanadi",
+    "status": "draft",
+    "name": {
+      "en": "Mahanadi basin",
+      "hi": "महानदी बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "08"
+    ],
+    "blurb": {
+      "en": "The Chhattisgarh plain and most of Odisha, gathered into one river at the Hirakud dam and let out through the delta at Cuttack.",
+      "hi": "छत्तीसगढ़ का मैदान और ओडिशा का अधिकांश भाग, जो हीराकुड बाँध पर एक नदी में सिमटकर कटक के डेल्टा से निकलता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Mahanadi"
+    ],
+    "area_km2": 141589
+  },
+  {
+    "id": "cauvery",
+    "status": "draft",
+    "name": {
+      "en": "Cauvery basin",
+      "hi": "कावेरी बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "05"
+    ],
+    "blurb": {
+      "en": "From Talakaveri in Kodagu across the Mysore plateau to the delta at Thanjavur; a basin shared by four states and argued over by them for more than a century.",
+      "hi": "कोडगु के तलकावेरी से मैसूर पठार पार कर तंजावुर के डेल्टा तक; चार राज्यों का साझा बेसिन, जिस पर वे एक सदी से अधिक से विवाद करते आए हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Kaveri"
+    ],
+    "area_km2": 81155
+  },
+  {
+    "id": "pennar",
+    "status": "draft",
+    "name": {
+      "en": "Pennar basin",
+      "hi": "पेन्नार बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 3,
+    "source_names": [
+      "09"
+    ],
+    "blurb": {
+      "en": "The Pennar and its tributaries across the dry Rayalaseema country to the sea at Nellore; one of the least rainy basins in the peninsula.",
+      "hi": "पेन्नार और उसकी सहायक नदियाँ, शुष्क रायलसीमा पार कर नेल्लोर पर समुद्र तक; प्रायद्वीप के सबसे कम वर्षा वाले बेसिनों में एक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Penna_River"
+    ],
+    "area_km2": 55213
+  },
+  {
+    "id": "brahmani",
+    "status": "draft",
+    "name": {
+      "en": "Brahmani and Baitarani",
+      "hi": "ब्राह्मणी और बैतरणी"
+    },
+    "category": "peninsular-bay",
+    "rank": 3,
+    "source_names": [
+      "07"
+    ],
+    "blurb": {
+      "en": "Two rivers of the Chhotanagpur plateau that reach the sea together through one delta in Odisha, beside the mangroves of Bhitarkanika.",
+      "hi": "छोटानागपुर पठार की दो नदियाँ, जो ओडिशा में भितरकनिका के मैंग्रोव के पास एक ही डेल्टा से होकर साथ-साथ समुद्र तक पहुँचती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Brahmani_River"
+    ],
+    "area_km2": 51822
+  },
+  {
+    "id": "subarnarekha",
+    "status": "draft",
+    "name": {
+      "en": "Subarnarekha basin",
+      "hi": "सुवर्णरेखा बेसिन"
+    },
+    "category": "peninsular-bay",
+    "rank": 3,
+    "source_names": [
+      "06"
+    ],
+    "blurb": {
+      "en": "The 'streak of gold', rising near Ranchi and running past Jamshedpur to the sea on the border of Odisha and West Bengal.",
+      "hi": "'सोने की रेखा', जो राँची के पास निकलकर जमशेदपुर के पास से होते हुए ओडिशा और पश्चिम बंगाल की सीमा पर समुद्र तक जाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Subarnarekha_River"
+    ],
+    "area_km2": 29196
+  },
+  {
+    "id": "efr-mahanadi-pennar",
+    "status": "draft",
+    "name": {
+      "en": "East-flowing rivers, Mahanadi to Pennar",
+      "hi": "महानदी से पेन्नार तक पूर्ववाहिनी नदियाँ"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "16"
+    ],
+    "blurb": {
+      "en": "The short rivers of the Eastern Ghats between the big deltas -- the Rushikulya, the Vamsadhara, the Nagavali -- each running its own way to the Bay.",
+      "hi": "बड़े डेल्टाओं के बीच पूर्वी घाट की छोटी नदियाँ — ऋषिकुल्या, वंशधारा, नागावली — हर एक अपने रास्ते खाड़ी तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Eastern_Ghats"
+    ],
+    "area_km2": 86643
+  },
+  {
+    "id": "efr-pennar-kanyakumari",
+    "status": "draft",
+    "name": {
+      "en": "East-flowing rivers, Pennar to Kanyakumari",
+      "hi": "पेन्नार से कन्याकुमारी तक पूर्ववाहिनी नदियाँ"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "17"
+    ],
+    "blurb": {
+      "en": "Tamil Nadu south of the Kaveri: the Palar, the Vaigai, the Thamirabarani and the tanks they feed, a country watered as much by storage as by rivers.",
+      "hi": "कावेरी के दक्षिण का तमिलनाडु: पालार, वैगई, ताम्रपर्णी और उनसे भरने वाले तालाब — ऐसा देश जो नदियों जितना ही जलाशयों से सिंचता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Vaigai_River"
+    ],
+    "area_km2": 100139
+  },
+  {
+    "id": "narmada",
+    "status": "draft",
+    "name": {
+      "en": "Narmada basin",
+      "hi": "नर्मदा बेसिन"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "12"
+    ],
+    "blurb": {
+      "en": "A long narrow trough between the Vindhya and the Satpura, drained west from Amarkantak to the Gulf of Khambhat; the Narmada is the largest river in India to flow into the Arabian Sea.",
+      "hi": "विंध्य और सतपुड़ा के बीच एक लंबी सँकरी घाटी, जो अमरकंटक से पश्चिम में खंभात की खाड़ी तक बहती है; नर्मदा अरब सागर में गिरने वाली भारत की सबसे बड़ी नदी है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Narmada_River"
+    ],
+    "area_km2": 98796
+  },
+  {
+    "id": "tapi",
+    "status": "draft",
+    "name": {
+      "en": "Tapi basin",
+      "hi": "ताप्ती बेसिन"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "13"
+    ],
+    "blurb": {
+      "en": "The Tapi and the Purna, running west in their own trough south of the Satpura to the sea at Surat.",
+      "hi": "ताप्ती और पूर्णा, सतपुड़ा के दक्षिण में अपनी घाटी में पश्चिम की ओर बहती हुई सूरत पर समुद्र तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Tapti_River"
+    ],
+    "area_km2": 65145
+  },
+  {
+    "id": "mahi",
+    "status": "draft",
+    "name": {
+      "en": "Mahi basin",
+      "hi": "माही बेसिन"
+    },
+    "category": "peninsular-arabian",
+    "rank": 3,
+    "source_names": [
+      "10"
+    ],
+    "blurb": {
+      "en": "The Mahi, which rises in the Vindhya of Madhya Pradesh, loops through southern Rajasthan and reaches the sea in Gujarat; it crosses the Tropic of Cancer twice.",
+      "hi": "माही, जो मध्य प्रदेश के विंध्य से निकलकर दक्षिणी राजस्थान में घूमती हुई गुजरात में समुद्र तक पहुँचती है; यह कर्क रेखा को दो बार पार करती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Mahi_River"
+    ],
+    "area_km2": 34842
+  },
+  {
+    "id": "sabarmati",
+    "status": "draft",
+    "name": {
+      "en": "Sabarmati basin",
+      "hi": "साबरमती बेसिन"
+    },
+    "category": "peninsular-arabian",
+    "rank": 3,
+    "source_names": [
+      "11"
+    ],
+    "blurb": {
+      "en": "From the Aravalli of Rajasthan past Ahmedabad to the Gulf of Khambhat; the river of the Gandhi ashram, dry for much of the year above the city.",
+      "hi": "राजस्थान की अरावली से अहमदाबाद के पास से खंभात की खाड़ी तक; गांधी आश्रम की नदी, जो शहर के ऊपर साल के अधिकांश समय सूखी रहती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Sabarmati_River"
+    ],
+    "area_km2": 21674
+  },
+  {
+    "id": "wfr-tapi-tadri",
+    "status": "draft",
+    "name": {
+      "en": "West-flowing rivers, Tapi to Tadri",
+      "hi": "ताप्ती से तदड़ी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "14"
+    ],
+    "blurb": {
+      "en": "The Konkan: dozens of short, fast rivers falling off the Western Ghats straight into the sea, carrying far more water than their size suggests in the monsoon.",
+      "hi": "कोंकण: पश्चिमी घाट से सीधे समुद्र में गिरती दर्जनों छोटी, तेज़ नदियाँ, जो वर्षा ऋतु में अपने आकार से कहीं अधिक पानी ढोती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Konkan"
+    ],
+    "area_km2": 55940
+  },
+  {
+    "id": "wfr-tadri-kanyakumari",
+    "status": "draft",
+    "name": {
+      "en": "West-flowing rivers, Tadri to Kanyakumari",
+      "hi": "तदड़ी से कन्याकुमारी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "15"
+    ],
+    "blurb": {
+      "en": "Coastal Karnataka and all of Kerala: the Sharavathi, the Periyar, the Pamba and forty-odd others, the wettest basin of the peninsula.",
+      "hi": "तटीय कर्नाटक और पूरा केरल: शरावती, पेरियार, पंपा और चालीस-एक अन्य, प्रायद्वीप का सबसे आर्द्र बेसिन।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Periyar_River"
+    ],
+    "area_km2": 56177
+  },
+  {
+    "id": "kutch-saurashtra-luni",
+    "status": "draft",
+    "name": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "18"
+    ],
+    "blurb": {
+      "en": "The west-flowing rivers of Kutch and Saurashtra, and the Luni, which crosses the Thar from Ajmer and fades into the salt of the Rann before it reaches the sea.",
+      "hi": "कच्छ और सौराष्ट्र की पश्चिमवाहिनी नदियाँ, और लूणी, जो अजमेर से थार पार करती है और समुद्र तक पहुँचने से पहले रण के नमक में खो जाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Luni_River"
+    ]
+  },
+  {
+    "id": "rajasthan-inland",
+    "status": "draft",
+    "name": {
+      "en": "Inland drainage of Rajasthan",
+      "hi": "राजस्थान का अंतःस्थलीय अपवाह"
+    },
+    "category": "inland",
+    "rank": 3,
+    "source_names": [
+      "19"
+    ],
+    "blurb": {
+      "en": "Streams of the Thar that never reach a river or the sea, ending in salt lakes like Sambhar or in the sand. The Water Commission counts this area in with the Luni's basin.",
+      "hi": "थार की वे धाराएँ जो कभी किसी नदी या समुद्र तक नहीं पहुँचतीं, और सांभर जैसी खारी झीलों या रेत में समाप्त होती हैं। जल आयोग इस क्षेत्र को लूणी के बेसिन में गिनता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Thar_Desert"
+    ]
+  },
+  {
+    "id": "north-ladakh",
+    "status": "draft",
+    "name": {
+      "en": "North Ladakh, not draining into the Indus",
+      "hi": "सिंधु में न गिरने वाला उत्तर लद्दाख"
+    },
+    "category": "inland",
+    "rank": 3,
+    "source_names": [
+      "21"
+    ],
+    "blurb": {
+      "en": "The high plateau of Aksai Chin and the Karakoram's far side, whose water runs to the lakes of the Tibetan plateau and the Tarim, never to the Indus.",
+      "hi": "अक्साई चिन का ऊँचा पठार और काराकोरम का दूसरा छोर, जिसका पानी तिब्बती पठार की झीलों और तारिम की ओर जाता है, सिंधु में कभी नहीं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Aksai_Chin"
+    ]
+  },
+  {
+    "id": "myanmar-bangladesh",
+    "status": "draft",
+    "name": {
+      "en": "Rivers draining to Myanmar and Bangladesh",
+      "hi": "म्यांमार और बांग्लादेश जाने वाली नदियाँ"
+    },
+    "category": "abroad",
+    "rank": 3,
+    "source_names": [
+      "20"
+    ],
+    "blurb": {
+      "en": "The hills of Manipur, Mizoram and Tripura that drain east to the Chindwin and the Kaladan in Myanmar, or west into Bangladesh, rather than into any Indian river.",
+      "hi": "मणिपुर, मिज़ोरम और त्रिपुरा की वे पहाड़ियाँ जिनका पानी किसी भारतीय नदी में नहीं, बल्कि पूर्व में म्यांमार की चिंदविन और कलादान में, या पश्चिम में बांग्लादेश जाता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Chindwin_River"
+    ],
+    "area_km2": 36202
+  },
+  {
+    "id": "andaman-nicobar",
+    "status": "draft",
+    "name": {
+      "en": "Andaman and Nicobar Islands",
+      "hi": "अंडमान और निकोबार द्वीपसमूह"
+    },
+    "category": "islands",
+    "rank": 3,
+    "source_names": [
+      "22"
+    ],
+    "blurb": {
+      "en": "The islands' own short streams, each running off its hills straight into the Andaman Sea or the Bay; no island is big enough for a river of any length.",
+      "hi": "द्वीपों की अपनी छोटी धाराएँ, हर एक अपनी पहाड़ियों से सीधे अंडमान सागर या खाड़ी में; कोई द्वीप इतना बड़ा नहीं कि उस पर कोई लंबी नदी हो।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Andaman_and_Nicobar_Islands"
+    ]
+  },
+  {
+    "id": "lakshadweep",
+    "status": "draft",
+    "name": {
+      "en": "Lakshadweep",
+      "hi": "लक्षद्वीप"
+    },
+    "category": "islands",
+    "rank": 3,
+    "source_names": [
+      "23"
+    ],
+    "blurb": {
+      "en": "Coral atolls with no rivers at all: rain soaks straight into the sand and floats as a lens of fresh water on the sea water beneath.",
+      "hi": "प्रवाल द्वीप, जिन पर कोई नदी नहीं: वर्षा सीधे रेत में समा जाती है और नीचे के खारे पानी पर मीठे पानी के एक लेंस की तरह तैरती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/",
+      "https://en.wikipedia.org/wiki/Lakshadweep"
+    ]
+  }
+]
