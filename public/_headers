@@ -34,6 +34,13 @@
 /hi/index.html
   Cache-Control: no-cache
 
+# One shell per page of the atlas (vite.config.js), for link previews.
+/en/atlas/*
+  Cache-Control: no-cache
+
+/hi/atlas/*
+  Cache-Control: no-cache
+
 /sw.js
   Cache-Control: no-cache
 
