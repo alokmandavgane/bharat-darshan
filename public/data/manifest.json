@@ -73,7 +73,7 @@
    },
    "icon": "city",
    "group": "culture",
-   "default_on": false,
+   "default_on": true,
    "count": 249,
    "reviewed": 0,
    "categories": [
@@ -655,7 +655,7 @@
    },
    "icon": "pin",
    "group": "culture",
-   "default_on": true,
+   "default_on": false,
    "count": 139,
    "reviewed": 0,
    "categories": [
@@ -1322,8 +1322,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 10809,
-   "sha256": "463dfa26e652"
+   "size": 10821,
+   "sha256": "bceaa66e75b3"
   },
   "sources.json": {
    "size": 20277,
@@ -1506,8 +1506,8 @@
    "sha256": "e66f945fbc8e"
   },
   "layers/cities.json": {
-   "size": 86659,
-   "sha256": "7d30e28e4e2f"
+   "size": 86658,
+   "sha256": "9fada8fab6f3"
   },
   "layers/festivals.json": {
    "size": 27590,
@@ -1542,8 +1542,8 @@
    "sha256": "919e303fbf65"
   },
   "layers/places.json": {
-   "size": 122795,
-   "sha256": "63924e8fe2d0"
+   "size": 122796,
+   "sha256": "ad20604e4e3b"
   },
   "layers/population-density.json": {
    "size": 1528,
@@ -2267,11 +2267,11 @@
   },
   "terrain/shade-1024.bin.gz": {
    "size": 160041,
-   "sha256": "17e06999d4af"
+   "sha256": "de8682b020d1"
   },
   "terrain/shade-2048.bin.gz": {
-   "size": 687146,
-   "sha256": "43430e0c01fb"
+   "size": 687155,
+   "sha256": "7a4a09fca8b0"
   },
   "terrain/world-heights.bin.gz": {
    "size": 436548,
