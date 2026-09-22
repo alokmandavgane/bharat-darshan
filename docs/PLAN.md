@@ -1024,8 +1024,10 @@ and poster mode now renders a page's own card. The card images themselves need a
 Playwright run (`node tools/share-image.mjs`) and until then each page's shell points at
 its language card. The cartouche, the scale bar and the graticule followed the same day,
 which is the furniture done, and the `plain` base style after them. What is left of the
-phase is not code: the tenth page and the four sections with no page yet (resources,
-agriculture, history, and a second political one), and the 18 card images.*
+phase is not code: the tenth page landed the same day, as minerals, which opened the
+resources section and met the exit -- ten pages across eight sections, every one of them a
+JSON file. Agriculture and history are still empty, and the 20 card images still want a
+Playwright run.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1836,6 +1838,22 @@ docs/DEPLOY.md).
   hash, and no page today would use it. The build refuses a page that asks for it, so
   nobody ships one that silently comes out physical.
 
+- 2026-09-22, thirty-second round: the tenth page, and the resources section opened.
+  `minerals`, 22 fields, belts and mining districts in eleven commodities, which is the
+  plan's own worked example of a plate finally built. Everything it needed already
+  existed: a `points` layer with tokens, the registry (one new entry, the Indian Minerals
+  Yearbook), the plain base, the cartouche, the source line. The only code was one glyph.
+  Content discipline held in two places. The anchors are checked against the ID raster, as
+  every points layer's are, and it caught exactly one: Singrauli at 24.11N 82.67E is on the
+  Uttar Pradesh side of a field that straddles the border, so the item now claims both
+  states, which is what its blurb already said. And the Wikipedia titles were verified
+  against the API before being written down -- four I would have guessed were wrong
+  (`Joda, Odisha`, `Hutti Gold Mines`, `Rampura Agucha mine`, `Panchpatmali` are missing
+  or redirects), and a citation that 404s is worse than no citation. Every item ships
+  `draft` and wants the owner's reading.
+  Also: the layer groups gained `resources` ("Rocks and mining"), which is a string and no
+  code, and is the first of the headings the sections were meant to settle.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1899,13 +1917,17 @@ docs/DEPLOY.md).
    shells are in. What is left: **the 18 card images need a Playwright run** --
    `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
    to see the list); this machine has no Playwright and it is a tool, not a dependency, so
-   it was not installed to get them. Everything else in the phase is built: the
-   furniture (cartouche, scale bar, graticule; compass rose ruled out) and the `plain`
-   base style, which four pages now use. What remains of Phase 6 is **content, not code**
-   -- its exit asks for ten pages reading as an atlas, and there are nine across seven
-   sections, so resources, agriculture and history have nothing yet. `political` as a base
-   style is specified in section 5 and deliberately unbuilt until a page needs it. Two
-   smaller things the registry left behind: `content/layers/<id>/layer.json` still carries an
+   it was not installed to get them -- there are 20 of them now, the tenth page having
+   brought two more. Everything else in Phase 6 is built and its exit is met: ten pages
+   across eight sections, each of them a JSON file. `political` as a base style is
+   specified in section 5 and deliberately unbuilt until a page needs it.
+   **Phase 7 is now the work**, and the two empty sections say where to start: agriculture
+   wants a crop map, which would be the first choropleth whose values are claims rather
+   than published numbers -- a leading crop per state needs a source table, not memory,
+   and a choropleth has no per-item review gate to catch a wrong one; history wants either
+   a `places`-like layer of sites by period or the empires as `areas`, which is the harder
+   and the better map. The 22 mineral items are drafts and want reading. Two smaller
+   things the registry left behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
