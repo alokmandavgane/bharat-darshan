@@ -1,0 +1,8 @@
+# Cloudflare Pages rewrites (status 200). Only paths that have no file of their own:
+# a state inside a language or a page. Without these the host answers such a link with
+# the root shell, which is English, so a pasted /hi/... link previewed in English.
+# Paths with a shell of their own (/hi/, /hi/atlas/<page>/) are served as files.
+/en/state/*                 /en/index.html                 200
+/hi/state/*                 /hi/index.html                 200
+/en/atlas/:page/state/*     /en/atlas/:page/index.html     200
+/hi/atlas/:page/state/*     /hi/atlas/:page/index.html     200

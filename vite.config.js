@@ -69,14 +69,16 @@ function rewriteHead(html, m) {
   return html;
 }
 
+// Every shell is a directory index on the host, which answers `/en` with a redirect to
+// `/en/`; the URLs written into the head carry the slash so a link preview is one fetch.
 function languageMeta(lang, dir) {
   return {
     lang,
     ...META[lang],
-    url: `${SITE}/${lang}`,
+    url: `${SITE}/${lang}/`,
     image: shareImage(lang, null, dir),
-    alt_en: `${SITE}/en`,
-    alt_hi: `${SITE}/hi`,
+    alt_en: `${SITE}/en/`,
+    alt_hi: `${SITE}/hi/`,
     alt_default: `${SITE}/`,
   };
 }
@@ -100,11 +102,11 @@ function plateMeta(plate, lang, dir) {
     title: `${title} · ${NAME[lang]}`,
     description,
     alt,
-    url: `${SITE}/${lang}/atlas/${plate.id}`,
+    url: `${SITE}/${lang}/atlas/${plate.id}/`,
     image: shareImage(lang, plate.id, dir),
-    alt_en: `${SITE}/en/atlas/${plate.id}`,
-    alt_hi: `${SITE}/hi/atlas/${plate.id}`,
-    alt_default: `${SITE}/atlas/${plate.id}`,
+    alt_en: `${SITE}/en/atlas/${plate.id}/`,
+    alt_hi: `${SITE}/hi/atlas/${plate.id}/`,
+    alt_default: `${SITE}/atlas/${plate.id}/`,
   };
 }
 

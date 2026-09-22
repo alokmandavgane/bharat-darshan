@@ -18,9 +18,11 @@ Decision context: PLAN.md section 6 (hosting) and open question 2.
 `public/_headers` is copied into `dist/` by Vite and sets caching. It relies on two
 facts about the code: packs are fetched with `?v=<sha256>` from `manifest.json` (so
 `/data/*` is immutable) and the app gunzips `*.bin.gz` itself (so no
-`Content-Encoding` is set). There is no `_redirects` file: Pages serves `index.html`
-for unknown paths on its own when the build has no `404.html`, which is the SPA
-behaviour the router needs. Do not add a `404.html` without adding a rewrite rule.
+`Content-Encoding` is set). `public/_redirects` holds four 200 rewrites, one per
+language for a state inside the country and inside a page, so that a `/hi/...` deep
+link gets the Hindi shell (and a page's own card) rather than the root one; every
+other unknown path falls back to `index.html`, which Pages does on its own when the
+build has no `404.html`. Do not add a `404.html` without adding a rewrite rule.
 
 ## Limits to keep in mind
 
