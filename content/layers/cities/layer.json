@@ -51,11 +51,11 @@
   "size": {
     "field": "population",
     "domain": [
-      40000,
+      15000,
       12500000
     ],
     "range": [
-      1.6,
+      1.2,
       6.5
     ],
     "legend": [
@@ -65,8 +65,8 @@
     ]
   },
   "note": {
-    "en": "Every state's ten biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation.",
-    "hi": "हर राज्य के दस सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं।"
+    "en": "Every state's fifty biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation, which is why Delhi is smaller here than the city you have been to.",
+    "hi": "हर राज्य के पचास सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं — इसीलिए दिल्ली यहाँ उस शहर से छोटी है जो आपने देखा है।"
   },
   "sources": [
     "census-2011",
@@ -74,11 +74,12 @@
     "wikidata",
     "wikipedia"
   ],
-  "attribution": "The thirty largest municipal corporations at the 2011 census are curated by hand; every state's ten biggest towns are generated from GeoNames cities15000, placed by the ID raster, and kept only when Wikidata has the town with a Hindi name and confirms it is a town rather than a district filed under one.",
+  "attribution": "The thirty largest municipal corporations at the 2011 census are curated by hand; every state's fifty biggest towns are generated from GeoNames cities5000, placed by the ID raster, and kept only when Wikidata has the town with a Hindi name and confirms it is a town rather than a district filed under one.",
   "source": {
     "format": "geonames",
-    "top_per_region": 10,
-    "min_population": 30000
+    "dump": "cities5000",
+    "top_per_region": 50,
+    "min_population": 15000
   },
   "_source": "top_per_region and min_population are the generator's knobs; a curated item with the same name in the same state replaces the generated row. The engine reads marker and size, never this layer's name."
 }

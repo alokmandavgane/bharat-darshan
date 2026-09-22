@@ -778,5 +778,31 @@
       "https://censusindia.gov.in/census.website/data/census-tables"
     ],
     "population": 1198491
+  },
+  {
+    "id": "kavaratti",
+    "status": "draft",
+    "name": {
+      "en": "Kavaratti",
+      "hi": "कवरत्ती"
+    },
+    "anchor": {
+      "lat": 10.5669,
+      "lon": 72.642
+    },
+    "regions": [
+      "IN-LD"
+    ],
+    "category": "capital",
+    "priority": 2,
+    "blurb": {
+      "en": "The capital of Lakshadweep, on a coral atoll 400 km off the Kerala coast. The smallest capital in India: about eleven thousand people on a strip of sand around a lagoon.",
+      "hi": "लक्षद्वीप की राजधानी, केरल तट से 400 किमी दूर एक प्रवाल द्वीप पर। भारत की सबसे छोटी राजधानी: एक लैगून के गिर्द रेत की पट्टी पर लगभग ग्यारह हज़ार लोग।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kavaratti",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ],
+    "population": 11473
   }
 ]
