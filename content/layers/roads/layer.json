@@ -41,14 +41,26 @@
         "hi": "पर्वतीय मार्ग"
       },
       "color": "#8c6a5a"
+    },
+    {
+      "id": "network",
+      "title": {
+        "en": "Other highway",
+        "hi": "अन्य राजमार्ग"
+      },
+      "color": "#9b8b76"
     }
   ],
+  "note": {
+    "en": "Thirty-five highways named and told, drawn over the whole road network the source holds inside India — about 54,000 km of it, fine and unnamed, so the shape of the country's traffic shows and not just the eight roads anyone can name. A route's course is the source's; the numbers are the Ministry's.",
+    "hi": "पैंतीस राजमार्ग नाम और कथा सहित, उस पूरे सड़क-जाल पर खिंचे जो स्रोत में भारत के भीतर है — लगभग 54,000 किमी, महीन और बेनाम, ताकि देश के यातायात का आकार दिखे, न कि केवल वे आठ सड़कें जिनके नाम सब जानते हैं। मार्ग की रेखा स्रोत की है; संख्याएँ मंत्रालय की।"
+  },
   "sources": [
     "natural-earth",
     "morth",
     "wikipedia"
   ],
-  "attribution": "Road centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each route is the course the source holds between the places listed in this folder. Numbers and facts checked against the Ministry of Road Transport and Highways and Wikipedia.",
+  "attribution": "Road centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each named route is the course the source holds between the places listed in this folder, and the unnamed network item is the whole of the source inside India. Numbers and facts checked against the Ministry of Road Transport and Highways and Wikipedia.",
   "_join": "The source has geometry but no names, so an item lists the places its route is known by and the build walks the source's own parts between them.",
   "_rank": "1 is a trunk route drawn widest, 3 a short one drawn finest; the engine reads rank, never a road's number."
 }

@@ -582,5 +582,1233 @@
       "https://en.wikipedia.org/wiki/Srinagar%E2%80%93Leh_highway",
       "https://en.wikipedia.org/wiki/National_Highway_1_(India)"
     ]
+  },
+  {
+    "id": "nh-30",
+    "status": "draft",
+    "name": {
+      "en": "NH 30",
+      "hi": "रा॰रा॰ 30"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "waypoints": [
+      {
+        "place": "Sitarganj",
+        "lat": 28.9293,
+        "lon": 79.7044
+      },
+      {
+        "place": "Bareilly",
+        "lat": 28.3668,
+        "lon": 79.4317
+      },
+      {
+        "place": "Lucknow",
+        "lat": 26.8393,
+        "lon": 80.9231
+      },
+      {
+        "place": "Prayagraj",
+        "lat": 25.4448,
+        "lon": 81.8432
+      },
+      {
+        "place": "Rewa",
+        "lat": 24.5326,
+        "lon": 81.2923
+      },
+      {
+        "place": "Jabalpur",
+        "lat": 23.167,
+        "lon": 79.9501
+      },
+      {
+        "place": "Raipur",
+        "lat": 21.2333,
+        "lon": 81.6333
+      },
+      {
+        "place": "Jagdalpur",
+        "lat": 19.0814,
+        "lon": 82.0213
+      },
+      {
+        "place": "Vijayawada",
+        "lat": 16.5074,
+        "lon": 80.6466
+      }
+    ],
+    "blurb": {
+      "en": "2,025 km from the Uttarakhand tarai to the Krishna delta, down the length of the country's middle: Lucknow, Prayagraj, Jabalpur, Raipur and the Bastar forests before it reaches Vijayawada.",
+      "hi": "उत्तराखंड की तराई से कृष्णा के डेल्टा तक 2,025 किमी, देश के बीचोंबीच से होकर: लखनऊ, प्रयागराज, जबलपुर, रायपुर और बस्तर के जंगल, फिर विजयवाड़ा।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-53",
+    "status": "draft",
+    "name": {
+      "en": "NH 53",
+      "hi": "रा॰रा॰ 53"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "waypoints": [
+      {
+        "place": "Surat",
+        "lat": 21.1959,
+        "lon": 72.8302
+      },
+      {
+        "place": "Dhule",
+        "lat": 20.9013,
+        "lon": 74.7774
+      },
+      {
+        "place": "Jalgaon",
+        "lat": 21.0029,
+        "lon": 75.566
+      },
+      {
+        "place": "Akola",
+        "lat": 20.7096,
+        "lon": 76.9981
+      },
+      {
+        "place": "Nagpur",
+        "lat": 21.1463,
+        "lon": 79.0849
+      },
+      {
+        "place": "Bhandara",
+        "lat": 21.1682,
+        "lon": 79.6488
+      },
+      {
+        "place": "Raipur",
+        "lat": 21.2333,
+        "lon": 81.6333
+      },
+      {
+        "place": "Sambalpur",
+        "lat": 21.4653,
+        "lon": 83.9757
+      },
+      {
+        "place": "Angul",
+        "lat": 20.8409,
+        "lon": 85.1019
+      },
+      {
+        "place": "Cuttack",
+        "lat": 20.465,
+        "lon": 85.8793
+      },
+      {
+        "place": "Paradip",
+        "lat": 20.3164,
+        "lon": 86.6085
+      }
+    ],
+    "blurb": {
+      "en": "The old NH 6, from the Gujarat coast at Hazira across the Deccan and the Chhattisgarh plain to Paradip on the Bay of Bengal: 1,849 km, and the road the country's coal and steel move beside.",
+      "hi": "पुराना रा॰रा॰ 6, हज़ीरा के गुजरात तट से दक्कन और छत्तीसगढ़ के मैदान पार कर बंगाल की खाड़ी पर पारादीप तक: 1,849 किमी, और वह सड़क जिसके साथ देश का कोयला और इस्पात चलता है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-47",
+    "status": "draft",
+    "name": {
+      "en": "NH 47",
+      "hi": "रा॰रा॰ 47"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "waypoints": [
+      {
+        "place": "Ahmedabad",
+        "lat": 23.0258,
+        "lon": 72.5873
+      },
+      {
+        "place": "Godhra",
+        "lat": 22.7755,
+        "lon": 73.6149
+      },
+      {
+        "place": "Dahod",
+        "lat": 22.8328,
+        "lon": 74.2599
+      },
+      {
+        "place": "Indore",
+        "lat": 22.7179,
+        "lon": 75.8333
+      },
+      {
+        "place": "Khandwa",
+        "lat": 21.8243,
+        "lon": 76.3509
+      },
+      {
+        "place": "Betul",
+        "lat": 21.9006,
+        "lon": 77.9023
+      },
+      {
+        "place": "Nagpur",
+        "lat": 21.1463,
+        "lon": 79.0849
+      }
+    ],
+    "blurb": {
+      "en": "Bamanbore in Saurashtra to Nagpur, 1,089 km: across Gujarat, up the Malwa plateau at Indore, over the Satpura at Betul and down into Vidarbha.",
+      "hi": "सौराष्ट्र के बामनबोर से नागपुर तक 1,089 किमी: गुजरात पार कर, इंदौर पर मालवा के पठार पर चढ़कर, बैतूल पर सतपुड़ा लाँघकर विदर्भ में।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-65",
+    "status": "draft",
+    "name": {
+      "en": "NH 65",
+      "hi": "रा॰रा॰ 65"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "waypoints": [
+      {
+        "place": "Pune",
+        "lat": 18.5196,
+        "lon": 73.8554
+      },
+      {
+        "place": "Solapur",
+        "lat": 17.6715,
+        "lon": 75.9104
+      },
+      {
+        "place": "Hyderabad",
+        "lat": 17.384,
+        "lon": 78.4564
+      },
+      {
+        "place": "Suryapet",
+        "lat": 17.1405,
+        "lon": 79.6205
+      },
+      {
+        "place": "Vijayawada",
+        "lat": 16.5074,
+        "lon": 80.6466
+      }
+    ],
+    "blurb": {
+      "en": "The old NH 9 across the Deccan: Pune to Machilipatnam by way of Solapur, Hyderabad and Vijayawada, 926 km of black-soil country and the shortest line between the two coasts here.",
+      "hi": "दक्कन के आर-पार पुराना रा॰रा॰ 9: पुणे से मछलीपट्टनम, सोलापुर, हैदराबाद और विजयवाड़ा होते हुए, 926 किमी काली मिट्टी का देश और यहाँ दोनों तटों के बीच सबसे छोटी रेखा।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-52",
+    "status": "draft",
+    "name": {
+      "en": "NH 52",
+      "hi": "रा॰रा॰ 52"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Bikaner",
+        "lat": 28.0176,
+        "lon": 73.3149
+      },
+      {
+        "place": "Jodhpur",
+        "lat": 26.2684,
+        "lon": 73.0059
+      },
+      {
+        "place": "Udaipur",
+        "lat": 24.5858,
+        "lon": 73.7135
+      },
+      {
+        "place": "Ahmedabad",
+        "lat": 23.0258,
+        "lon": 72.5873
+      }
+    ],
+    "blurb": {
+      "en": "Drawn here for its Rajasthan stretch, from Bikaner through Jodhpur and Udaipur into Gujarat. The full highway runs 2,401 km from Sangrur in Punjab to Ankola on the Karnataka coast.",
+      "hi": "यहाँ इसका राजस्थान वाला हिस्सा खिंचा है, बीकानेर से जोधपुर और उदयपुर होते हुए गुजरात तक। पूरा राजमार्ग पंजाब के संगरूर से कर्नाटक तट पर अंकोला तक 2,401 किमी है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-61",
+    "status": "draft",
+    "name": {
+      "en": "NH 61",
+      "hi": "रा॰रा॰ 61"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Thane",
+        "lat": 19.197,
+        "lon": 72.9635
+      },
+      {
+        "place": "Nashik",
+        "lat": 19.9973,
+        "lon": 73.791
+      },
+      {
+        "place": "Aurangabad",
+        "lat": 19.8776,
+        "lon": 75.3423
+      },
+      {
+        "place": "Jalna",
+        "lat": 19.841,
+        "lon": 75.8864
+      },
+      {
+        "place": "Nanded",
+        "lat": 19.1602,
+        "lon": 77.315
+      },
+      {
+        "place": "Nizamabad",
+        "lat": 18.6715,
+        "lon": 78.0988
+      }
+    ],
+    "blurb": {
+      "en": "Bhiwandi to Jagtial, 814 km along the Godavari's own country: over the Western Ghats at Nashik, then Aurangabad, Nanded and the Telangana plateau.",
+      "hi": "भिवंडी से जगतियाल तक 814 किमी, गोदावरी के अपने देश से होकर: नासिक पर पश्चिमी घाट लाँघकर, फिर औरंगाबाद, नांदेड़ और तेलंगाना का पठार।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-9",
+    "status": "draft",
+    "name": {
+      "en": "NH 9",
+      "hi": "रा॰रा॰ 9"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Delhi",
+        "lat": 28.6519,
+        "lon": 77.2315
+      },
+      {
+        "place": "Moradabad",
+        "lat": 28.8389,
+        "lon": 78.7768
+      },
+      {
+        "place": "Bareilly",
+        "lat": 28.3668,
+        "lon": 79.4317
+      },
+      {
+        "place": "Sitapur",
+        "lat": 27.5619,
+        "lon": 80.6826
+      },
+      {
+        "place": "Lucknow",
+        "lat": 26.8393,
+        "lon": 80.9231
+      }
+    ],
+    "blurb": {
+      "en": "Drawn from Delhi to Lucknow, the busy middle of a 954 km highway that begins at Fazilka on the Pakistan border and ends at Jauljibi where the Kali river meets Nepal.",
+      "hi": "यहाँ दिल्ली से लखनऊ तक खिंचा है, उस 954 किमी राजमार्ग का व्यस्त मध्य जो पाकिस्तान सीमा पर फ़ाज़िल्का से शुरू होकर जौलजीबी पर समाप्त होता है, जहाँ काली नदी नेपाल से मिलती है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-31",
+    "status": "draft",
+    "name": {
+      "en": "NH 31",
+      "hi": "रा॰रा॰ 31"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Lucknow",
+        "lat": 26.8393,
+        "lon": 80.9231
+      },
+      {
+        "place": "Gorakhpur",
+        "lat": 26.7663,
+        "lon": 83.3689
+      },
+      {
+        "place": "Muzaffarpur",
+        "lat": 26.1226,
+        "lon": 85.3906
+      },
+      {
+        "place": "Purnia",
+        "lat": 25.7789,
+        "lon": 87.4742
+      }
+    ],
+    "blurb": {
+      "en": "Across the northern plain under the Himalaya: Lucknow, Gorakhpur and Muzaffarpur to Purnia, through the most densely peopled farmland in India. The full highway runs 992 km.",
+      "hi": "हिमालय के नीचे उत्तरी मैदान के आर-पार: लखनऊ, गोरखपुर और मुज़फ़्फ़रपुर से पूर्णिया तक, भारत की सबसे सघन बसी खेती-भूमि से होकर। पूरा राजमार्ग 992 किमी है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-32",
+    "status": "draft",
+    "name": {
+      "en": "NH 32",
+      "hi": "रा॰रा॰ 32"
+    },
+    "category": "coastal",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Chennai",
+        "lat": 13.0878,
+        "lon": 80.2785
+      },
+      {
+        "place": "Villupuram",
+        "lat": 11.9398,
+        "lon": 79.4924
+      },
+      {
+        "place": "Tiruchirappalli",
+        "lat": 10.8155,
+        "lon": 78.6965
+      },
+      {
+        "place": "Madurai",
+        "lat": 9.919,
+        "lon": 78.1195
+      },
+      {
+        "place": "Tirunelveli",
+        "lat": 8.7274,
+        "lon": 77.6838
+      }
+    ],
+    "blurb": {
+      "en": "Chennai to Thoothukudi, 657 km down the Tamil country; drawn here as far as Tirunelveli, through Villupuram, Tiruchirappalli and Madurai.",
+      "hi": "चेन्नई से तूतीकोरिन तक 657 किमी, तमिल देश से होकर; यहाँ तिरुनेलवेली तक खिंचा है, विल्लुपुरम, तिरुचिरापल्ली और मदुरै होते हुए।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-67",
+    "status": "draft",
+    "name": {
+      "en": "NH 67",
+      "hi": "रा॰रा॰ 67"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Nellore",
+        "lat": 14.4499,
+        "lon": 79.987
+      },
+      {
+        "place": "Kadapa",
+        "lat": 14.48,
+        "lon": 78.8235
+      },
+      {
+        "place": "Anantapur",
+        "lat": 14.6778,
+        "lon": 77.6081
+      },
+      {
+        "place": "Tumakuru",
+        "lat": 13.3414,
+        "lon": 77.1022
+      },
+      {
+        "place": "Bengaluru",
+        "lat": 12.9719,
+        "lon": 77.5937
+      }
+    ],
+    "blurb": {
+      "en": "Krishnapatnam port to Ramanagara, 814 km inland across Rayalaseema: the dry heart of the peninsula, from the Coromandel coast up to the Karnataka plateau.",
+      "hi": "कृष्णपट्टनम बंदरगाह से रामनगर तक 814 किमी, रायलसीमा के आर-पार भीतर की ओर: प्रायद्वीप का शुष्क हृदय, कोरोमंडल तट से कर्नाटक के पठार तक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-75",
+    "status": "draft",
+    "name": {
+      "en": "NH 75",
+      "hi": "रा॰रा॰ 75"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Mangalore",
+        "lat": 12.9172,
+        "lon": 74.856
+      },
+      {
+        "place": "Hassan",
+        "lat": 13.0071,
+        "lon": 76.0962
+      },
+      {
+        "place": "Bengaluru",
+        "lat": 12.9719,
+        "lon": 77.5937
+      },
+      {
+        "place": "Kolar",
+        "lat": 13.1377,
+        "lon": 78.13
+      },
+      {
+        "place": "Vellore",
+        "lat": 12.9184,
+        "lon": 79.1325
+      }
+    ],
+    "blurb": {
+      "en": "Bantval on the Arabian Sea to Katpadi, 567 km; drawn here up the Western Ghats through Hassan to Bengaluru and on to the Kolar gold country.",
+      "hi": "अरब सागर पर बंटवाल से काटपाडी तक 567 किमी; यहाँ हासन होते हुए पश्चिमी घाट चढ़कर बेंगलूरु और आगे कोलार के सोने के देश तक खिंचा है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-40",
+    "status": "draft",
+    "name": {
+      "en": "NH 40",
+      "hi": "रा॰रा॰ 40"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Kurnool",
+        "lat": 15.8289,
+        "lon": 78.036
+      },
+      {
+        "place": "Anantapur",
+        "lat": 14.6778,
+        "lon": 77.6081
+      },
+      {
+        "place": "Chittoor",
+        "lat": 13.2105,
+        "lon": 79.0956
+      },
+      {
+        "place": "Vellore",
+        "lat": 12.9184,
+        "lon": 79.1325
+      }
+    ],
+    "blurb": {
+      "en": "Kurnool to Ranipettai, 414 km across the driest part of the peninsula: Anantapur and Chittoor, country of groundnut, granite and long rainless summers.",
+      "hi": "कर्नूल से रानीपेट तक 414 किमी, प्रायद्वीप के सबसे शुष्क भाग से होकर: अनंतपुर और चित्तूर, मूँगफली, ग्रेनाइट और लंबी बेपानी गर्मियों का देश।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-69",
+    "status": "draft",
+    "name": {
+      "en": "NH 69",
+      "hi": "रा॰रा॰ 69"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Shivamogga",
+        "lat": 13.9316,
+        "lon": 75.5679
+      },
+      {
+        "place": "Chitradurga",
+        "lat": 14.2226,
+        "lon": 76.4004
+      },
+      {
+        "place": "Anantapur",
+        "lat": 14.6778,
+        "lon": 77.6081
+      },
+      {
+        "place": "Tirupati",
+        "lat": 13.6355,
+        "lon": 79.4199
+      }
+    ],
+    "blurb": {
+      "en": "Honnavar on the Konkan coast to Renigunta, 750 km; drawn here from Shivamogga east across the Deccan to Tirupati, one of the two roads that cross Karnataka the short way.",
+      "hi": "कोंकण तट पर होन्नावर से रेणिगुंटा तक 750 किमी; यहाँ शिवमोग्गा से पूरब में दक्कन पार कर तिरुपति तक खिंचा है, कर्नाटक को छोटे रास्ते काटने वाली दो सड़कों में एक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-46",
+    "status": "draft",
+    "name": {
+      "en": "NH 46",
+      "hi": "रा॰रा॰ 46"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Gwalior",
+        "lat": 26.2298,
+        "lon": 78.1734
+      },
+      {
+        "place": "Shivpuri",
+        "lat": 25.4238,
+        "lon": 77.6622
+      },
+      {
+        "place": "Guna",
+        "lat": 24.6469,
+        "lon": 77.3113
+      },
+      {
+        "place": "Bhopal",
+        "lat": 23.2547,
+        "lon": 77.4029
+      },
+      {
+        "place": "Hoshangabad",
+        "lat": 22.7475,
+        "lon": 77.7274
+      },
+      {
+        "place": "Betul",
+        "lat": 21.9006,
+        "lon": 77.9023
+      }
+    ],
+    "blurb": {
+      "en": "Gwalior to Betul, 650 km straight down Madhya Pradesh: the Chambal ravines, the Malwa plateau at Guna, Bhopal, and the Narmada at Hoshangabad before the Satpura.",
+      "hi": "ग्वालियर से बैतूल तक 650 किमी, सीधे मध्य प्रदेश के नीचे: चंबल के बीहड़, गुना पर मालवा का पठार, भोपाल, और सतपुड़ा से पहले होशंगाबाद पर नर्मदा।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-34",
+    "status": "draft",
+    "name": {
+      "en": "NH 34",
+      "hi": "रा॰रा॰ 34"
+    },
+    "category": "mountain",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Rishikesh",
+        "lat": 30.1078,
+        "lon": 78.2926
+      },
+      {
+        "place": "Meerut",
+        "lat": 28.98,
+        "lon": 77.7064
+      },
+      {
+        "place": "Aligarh",
+        "lat": 27.8815,
+        "lon": 78.0746
+      },
+      {
+        "place": "Agra",
+        "lat": 27.1833,
+        "lon": 78.0167
+      },
+      {
+        "place": "Gwalior",
+        "lat": 26.2298,
+        "lon": 78.1734
+      },
+      {
+        "place": "Jhansi",
+        "lat": 25.4589,
+        "lon": 78.5799
+      },
+      {
+        "place": "Sagar",
+        "lat": 23.8388,
+        "lon": 78.7387
+      }
+    ],
+    "blurb": {
+      "en": "The pilgrim road made a highway: 1,521 km from Gangotri to Lakhnadon. Drawn here from Rishikesh, where the Ganga leaves the hills, south through Agra and Jhansi to Sagar.",
+      "hi": "तीर्थ-मार्ग जो राजमार्ग बना: गंगोत्री से लखनादौन तक 1,521 किमी। यहाँ ऋषिकेश से खिंचा है, जहाँ गंगा पहाड़ छोड़ती है, दक्षिण में आगरा और झाँसी होते हुए सागर तक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-5",
+    "status": "draft",
+    "name": {
+      "en": "NH 5",
+      "hi": "रा॰रा॰ 5"
+    },
+    "category": "mountain",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Ambala",
+        "lat": 30.361,
+        "lon": 76.7978
+      },
+      {
+        "place": "Chandigarh",
+        "lat": 30.7363,
+        "lon": 76.7884
+      },
+      {
+        "place": "Shimla",
+        "lat": 31.1044,
+        "lon": 77.1666
+      },
+      {
+        "place": "Sarahan",
+        "lat": 31.5099,
+        "lon": 77.7939
+      }
+    ],
+    "blurb": {
+      "en": "The Hindustan–Tibet road, laid by Lord Dalhousie's engineers from Kalka to the Sutlej: Shimla, Rampur and on to Shipki La on the Chinese border, 700 km in all.",
+      "hi": "हिंदुस्तान–तिब्बत सड़क, जो लॉर्ड डलहौज़ी के अभियंताओं ने कालका से सतलुज तक बनाई: शिमला, रामपुर और आगे चीन सीमा पर शिपकी ला तक, कुल 700 किमी।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-10",
+    "status": "draft",
+    "name": {
+      "en": "NH 10",
+      "hi": "रा॰रा॰ 10"
+    },
+    "category": "mountain",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Siliguri",
+        "lat": 26.71,
+        "lon": 88.4285
+      },
+      {
+        "place": "Kalimpong",
+        "lat": 27.0346,
+        "lon": 88.6308
+      },
+      {
+        "place": "Gangtok",
+        "lat": 27.3257,
+        "lon": 88.6122
+      }
+    ],
+    "blurb": {
+      "en": "Siliguri to Nathu La, 174 km: Sikkim's one road to the plains, up the Teesta gorge to Gangtok and on to the pass into Tibet. A landslide here cuts a state off.",
+      "hi": "सिलीगुड़ी से नाथू ला तक 174 किमी: मैदानों तक सिक्किम की इकलौती सड़क, तीस्ता की घाटी चढ़कर गंगटोक और आगे तिब्बत के दर्रे तक। यहाँ एक भूस्खलन पूरे राज्य को काट देता है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-2",
+    "status": "draft",
+    "name": {
+      "en": "NH 2",
+      "hi": "रा॰रा॰ 2"
+    },
+    "category": "mountain",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Dibrugarh",
+        "lat": 27.4799,
+        "lon": 94.9084
+      },
+      {
+        "place": "Jorhat",
+        "lat": 26.7575,
+        "lon": 94.2031
+      },
+      {
+        "place": "Dimapur",
+        "lat": 25.9117,
+        "lon": 93.7217
+      },
+      {
+        "place": "Kohima",
+        "lat": 25.6747,
+        "lon": 94.111
+      },
+      {
+        "place": "Imphal",
+        "lat": 24.8081,
+        "lon": 93.9442
+      }
+    ],
+    "blurb": {
+      "en": "Dibrugarh to Siaha, 1,326 km through four north-eastern states. Drawn here to Imphal: the Dimapur–Kohima–Imphal stretch is the lifeline Manipur is supplied along.",
+      "hi": "डिब्रूगढ़ से सियाहा तक 1,326 किमी, चार पूर्वोत्तर राज्यों से होकर। यहाँ इंफाल तक खिंचा है: दीमापुर–कोहिमा–इंफाल वह जीवनरेखा है जिससे मणिपुर को रसद मिलती है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-17",
+    "status": "draft",
+    "name": {
+      "en": "NH 17",
+      "hi": "रा॰रा॰ 17"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Guwahati",
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      {
+        "place": "Bongaigaon",
+        "lat": 26.477,
+        "lon": 90.5581
+      },
+      {
+        "place": "Siliguri",
+        "lat": 26.71,
+        "lon": 88.4285
+      }
+    ],
+    "blurb": {
+      "en": "Guwahati to Sevoke, 576 km along the Brahmaputra's north bank and then through the Siliguri corridor — the twenty-kilometre neck of land the whole north-east hangs from.",
+      "hi": "गुवाहाटी से सेवक तक 576 किमी, ब्रह्मपुत्र के उत्तरी तट के साथ और फिर सिलीगुड़ी गलियारे से होकर — बीस किलोमीटर चौड़ी वह गर्दन जिस पर समूचा पूर्वोत्तर टिका है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-18",
+    "status": "draft",
+    "name": {
+      "en": "NH 18",
+      "hi": "रा॰रा॰ 18"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Koderma",
+        "lat": 24.4675,
+        "lon": 85.594
+      },
+      {
+        "place": "Bokaro",
+        "lat": 23.6693,
+        "lon": 86.1516
+      },
+      {
+        "place": "Purulia",
+        "lat": 23.3306,
+        "lon": 86.363
+      },
+      {
+        "place": "Kharagpur",
+        "lat": 22.3397,
+        "lon": 87.325
+      },
+      {
+        "place": "Balasore",
+        "lat": 21.4927,
+        "lon": 86.9335
+      }
+    ],
+    "blurb": {
+      "en": "Koderma to Balasore, 594 km across the Chhotanagpur coalfields and the Bengal-Odisha border country: Bokaro, Purulia and Kharagpur to the Bay.",
+      "hi": "कोडरमा से बालासोर तक 594 किमी, छोटानागपुर के कोयला क्षेत्रों और बंगाल-ओडिशा सीमांत से होकर: बोकारो, पुरुलिया और खड़गपुर से खाड़ी तक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-20",
+    "status": "draft",
+    "name": {
+      "en": "NH 20",
+      "hi": "रा॰रा॰ 20"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Patna",
+        "lat": 25.5941,
+        "lon": 85.1356
+      },
+      {
+        "place": "Hazaribagh",
+        "lat": 23.9924,
+        "lon": 85.3616
+      },
+      {
+        "place": "Ranchi",
+        "lat": 23.3432,
+        "lon": 85.3094
+      }
+    ],
+    "blurb": {
+      "en": "Bakhtiyarpur to Panikoili, 729 km. Drawn here from Patna up onto the Chhotanagpur plateau at Hazaribagh and Ranchi — the Ganga plain to the ore country in one climb.",
+      "hi": "बख़्तियारपुर से पानीकोइली तक 729 किमी। यहाँ पटना से खिंचा है, हज़ारीबाग़ और राँची पर छोटानागपुर के पठार तक — एक ही चढ़ाई में गंगा का मैदान से अयस्क का देश।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-26",
+    "status": "draft",
+    "name": {
+      "en": "NH 26",
+      "hi": "रा॰रा॰ 26"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Vizianagaram",
+        "lat": 18.1169,
+        "lon": 83.4115
+      },
+      {
+        "place": "Rayagada",
+        "lat": 19.1713,
+        "lon": 83.4143
+      },
+      {
+        "place": "Bhawanipatna",
+        "lat": 19.9072,
+        "lon": 83.167
+      },
+      {
+        "place": "Bargarh",
+        "lat": 21.3335,
+        "lon": 83.6191
+      }
+    ],
+    "blurb": {
+      "en": "Vizianagaram to Bargarh, 555 km up through the Eastern Ghats and the bauxite hills of southern Odisha, some of the least-travelled highway country in India.",
+      "hi": "विजयनगरम से बरगढ़ तक 555 किमी, पूर्वी घाट और दक्षिण ओडिशा की बॉक्साइट पहाड़ियों से ऊपर, भारत के सबसे कम चले राजमार्ग-क्षेत्रों में से एक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-11",
+    "status": "draft",
+    "name": {
+      "en": "NH 11",
+      "hi": "रा॰रा॰ 11"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Rewari",
+        "lat": 28.199,
+        "lon": 76.6183
+      },
+      {
+        "place": "Jaipur",
+        "lat": 26.9196,
+        "lon": 75.7878
+      },
+      {
+        "place": "Bikaner",
+        "lat": 28.0176,
+        "lon": 73.3149
+      },
+      {
+        "place": "Jaisalmer",
+        "lat": 26.9176,
+        "lon": 70.9039
+      }
+    ],
+    "blurb": {
+      "en": "Rewari to Myajlar, 848 km into the Thar: Jaipur, Bikaner and Jaisalmer, the road running out of green country into sand and ending near the Pakistan border.",
+      "hi": "रेवाड़ी से म्याजलार तक 848 किमी, थार के भीतर: जयपुर, बीकानेर और जैसलमेर; हरे देश से निकलकर सड़क रेत में जाती है और पाकिस्तान सीमा के पास समाप्त होती है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-62",
+    "status": "draft",
+    "name": {
+      "en": "NH 62",
+      "hi": "रा॰रा॰ 62"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Bathinda",
+        "lat": 30.2075,
+        "lon": 74.9389
+      },
+      {
+        "place": "Bikaner",
+        "lat": 28.0176,
+        "lon": 73.3149
+      },
+      {
+        "place": "Jodhpur",
+        "lat": 26.2684,
+        "lon": 73.0059
+      }
+    ],
+    "blurb": {
+      "en": "Abohar to Pindwara, 784 km down the western edge of the country; drawn here from Bathinda in Punjab's cotton belt across the Thar to Bikaner and Jodhpur.",
+      "hi": "अबोहर से पिंडवाड़ा तक 784 किमी, देश के पश्चिमी किनारे के साथ; यहाँ पंजाब की कपास पट्टी में बठिंडा से थार पार कर बीकानेर और जोधपुर तक खिंचा है।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-54",
+    "status": "draft",
+    "name": {
+      "en": "NH 54",
+      "hi": "रा॰रा॰ 54"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Pathankot",
+        "lat": 32.2748,
+        "lon": 75.6529
+      },
+      {
+        "place": "Amritsar",
+        "lat": 31.6223,
+        "lon": 74.8753
+      },
+      {
+        "place": "Bathinda",
+        "lat": 30.2075,
+        "lon": 74.9389
+      },
+      {
+        "place": "Sri Ganganagar",
+        "lat": 29.9201,
+        "lon": 73.875
+      },
+      {
+        "place": "Bikaner",
+        "lat": 28.0176,
+        "lon": 73.3149
+      }
+    ],
+    "blurb": {
+      "en": "Pathankot to Bikaner, 684 km along the line the Partition drew: Amritsar, Bathinda and Sri Ganganagar, never far from the border, down into the Thar.",
+      "hi": "पठानकोट से बीकानेर तक 684 किमी, उसी रेखा के साथ जो विभाजन ने खींची: अमृतसर, बठिंडा और श्रीगंगानगर, सीमा से कभी दूर नहीं, और नीचे थार तक।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-58",
+    "status": "draft",
+    "name": {
+      "en": "NH 58",
+      "hi": "रा॰रा॰ 58"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Ajmer",
+        "lat": 26.4521,
+        "lon": 74.6387
+      },
+      {
+        "place": "Bhilwara",
+        "lat": 25.3471,
+        "lon": 74.6408
+      },
+      {
+        "place": "Udaipur",
+        "lat": 24.5858,
+        "lon": 73.7135
+      },
+      {
+        "place": "Palanpur",
+        "lat": 24.1713,
+        "lon": 72.4383
+      }
+    ],
+    "blurb": {
+      "en": "Fatehpur to Palanpur, 697 km down the spine of the Aravalli: Ajmer, the Bhilwara textile country, Udaipur's lakes, and out onto the Gujarat plain.",
+      "hi": "फ़तेहपुर से पालनपुर तक 697 किमी, अरावली की रीढ़ के साथ: अजमेर, भीलवाड़ा का वस्त्र-देश, उदयपुर की झीलें, और फिर गुजरात का मैदान।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "nh-21",
+    "status": "draft",
+    "name": {
+      "en": "NH 21",
+      "hi": "रा॰रा॰ 21"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "waypoints": [
+      {
+        "place": "Jaipur",
+        "lat": 26.9196,
+        "lon": 75.7878
+      },
+      {
+        "place": "Dausa",
+        "lat": 26.89,
+        "lon": 76.3358
+      },
+      {
+        "place": "Bharatpur",
+        "lat": 27.2173,
+        "lon": 77.4901
+      },
+      {
+        "place": "Agra",
+        "lat": 27.1833,
+        "lon": 78.0167
+      }
+    ],
+    "blurb": {
+      "en": "Jaipur to Bareilly, 502 km; drawn here for its western half, Jaipur through Dausa and Bharatpur to Agra — the road along the old Jaipur–Agra route of the Mughal post.",
+      "hi": "जयपुर से बरेली तक 502 किमी; यहाँ इसका पश्चिमी आधा खिंचा है, जयपुर से दौसा और भरतपुर होते हुए आगरा — मुग़ल डाक के पुराने जयपुर–आगरा मार्ग के साथ।"
+    },
+    "sources": [
+      "https://morth.nic.in/national-highways-summary",
+      "https://en.wikipedia.org/wiki/List_of_national_highways_in_India"
+    ]
+  },
+  {
+    "id": "other-highways",
+    "status": "draft",
+    "name": {
+      "en": "Other highways",
+      "hi": "अन्य राजमार्ग"
+    },
+    "category": "network",
+    "rank": 3,
+    "network": true,
+    "blurb": {
+      "en": "Every road the source holds inside India, drawn fine and unnamed under the routes that are named. It is the shape of the network rather than a list of roads: about 54,000 km of it.",
+      "hi": "स्रोत में भारत के भीतर की हर सड़क, नामित मार्गों के नीचे महीन और बेनाम खिंची। यह सड़कों की सूची नहीं, जाल का आकार है: लगभग 54,000 किमी।"
+    },
+    "sources": [
+      "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/"
+    ]
   }
 ]

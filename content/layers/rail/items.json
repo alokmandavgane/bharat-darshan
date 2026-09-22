@@ -247,5 +247,739 @@
       "https://en.wikipedia.org/wiki/Darjeeling_Himalayan_Railway",
       "https://whc.unesco.org/en/list/944/"
     ]
+  },
+  {
+    "id": "howrah-mumbai",
+    "status": "draft",
+    "name": {
+      "en": "Howrah–Mumbai main line",
+      "hi": "हावड़ा–मुंबई मुख्य लाइन"
+    },
+    "category": "trunk",
+    "rank": 1,
+    "opened": 1900,
+    "waypoints": [
+      {
+        "place": "Kolkata",
+        "lat": 22.5626,
+        "lon": 88.363
+      },
+      {
+        "place": "Asansol",
+        "lat": 23.6833,
+        "lon": 86.9833
+      },
+      {
+        "place": "Bokaro",
+        "lat": 23.6693,
+        "lon": 86.1516
+      },
+      {
+        "place": "Rourkela",
+        "lat": 22.225,
+        "lon": 84.8641
+      },
+      {
+        "place": "Raipur",
+        "lat": 21.2333,
+        "lon": 81.6333
+      },
+      {
+        "place": "Nagpur",
+        "lat": 21.1463,
+        "lon": 79.0849
+      },
+      {
+        "place": "Bhusawal",
+        "lat": 21.0436,
+        "lon": 75.7851
+      },
+      {
+        "place": "Nashik",
+        "lat": 19.9973,
+        "lon": 73.791
+      },
+      {
+        "place": "Mumbai",
+        "lat": 19.0728,
+        "lon": 72.8826
+      }
+    ],
+    "blurb": {
+      "en": "The south-eastern route between the two great ports, 1,968 km through the coal and ore country of Jharkhand and Odisha, then Raipur, Nagpur and the Tapi valley to Mumbai.",
+      "hi": "दोनों बड़े बंदरगाहों के बीच दक्षिण-पूर्वी मार्ग, झारखंड और ओडिशा के कोयला-अयस्क देश से होकर 1,968 किमी, फिर रायपुर, नागपुर और ताप्ती घाटी से मुंबई।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "delhi-chennai",
+    "status": "draft",
+    "name": {
+      "en": "Delhi–Chennai main line",
+      "hi": "दिल्ली–चेन्नई मुख्य लाइन"
+    },
+    "category": "trunk",
+    "rank": 1,
+    "opened": 1929,
+    "waypoints": [
+      {
+        "place": "Delhi",
+        "lat": 28.6519,
+        "lon": 77.2315
+      },
+      {
+        "place": "Agra",
+        "lat": 27.1833,
+        "lon": 78.0167
+      },
+      {
+        "place": "Gwalior",
+        "lat": 26.2298,
+        "lon": 78.1734
+      },
+      {
+        "place": "Jhansi",
+        "lat": 25.4589,
+        "lon": 78.5799
+      },
+      {
+        "place": "Bhopal",
+        "lat": 23.2547,
+        "lon": 77.4029
+      },
+      {
+        "place": "Nagpur",
+        "lat": 21.1463,
+        "lon": 79.0849
+      },
+      {
+        "place": "Warangal",
+        "lat": 18.0,
+        "lon": 79.5833
+      },
+      {
+        "place": "Vijayawada",
+        "lat": 16.5074,
+        "lon": 80.6466
+      },
+      {
+        "place": "Chennai",
+        "lat": 13.0878,
+        "lon": 80.2785
+      }
+    ],
+    "blurb": {
+      "en": "The Grand Trunk route down the middle of India, 2,180 km: Agra, Jhansi, Bhopal, Nagpur and Vijayawada. The Grand Trunk Express has run the whole of it since 1929.",
+      "hi": "भारत के बीचोंबीच ग्रैंड ट्रंक मार्ग, 2,180 किमी: आगरा, झाँसी, भोपाल, नागपुर और विजयवाड़ा। ग्रैंड ट्रंक एक्सप्रेस 1929 से पूरी लाइन पर चलती है।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "howrah-chennai-coast",
+    "status": "draft",
+    "name": {
+      "en": "Howrah–Chennai coastal line",
+      "hi": "हावड़ा–चेन्नई तटीय लाइन"
+    },
+    "category": "coastal",
+    "rank": 1,
+    "opened": 1900,
+    "waypoints": [
+      {
+        "place": "Kolkata",
+        "lat": 22.5626,
+        "lon": 88.363
+      },
+      {
+        "place": "Kharagpur",
+        "lat": 22.3397,
+        "lon": 87.325
+      },
+      {
+        "place": "Bhubaneswar",
+        "lat": 20.2724,
+        "lon": 85.8338
+      },
+      {
+        "place": "Visakhapatnam",
+        "lat": 17.7331,
+        "lon": 83.3162
+      },
+      {
+        "place": "Vijayawada",
+        "lat": 16.5074,
+        "lon": 80.6466
+      },
+      {
+        "place": "Chennai",
+        "lat": 13.0878,
+        "lon": 80.2785
+      }
+    ],
+    "blurb": {
+      "en": "Down the east coast through Kharagpur, the Mahanadi delta, Bhubaneswar and Visakhapatnam: the line India's iron ore and coastal freight move on, and the Coromandel Express's road.",
+      "hi": "पूर्वी तट के साथ खड़गपुर, महानदी डेल्टा, भुवनेश्वर और विशाखापत्तनम होते हुए: वही लाइन जिस पर भारत का लौह अयस्क और तटीय माल चलता है, और कोरोमंडल एक्सप्रेस का मार्ग।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "mumbai-ahmedabad",
+    "status": "draft",
+    "name": {
+      "en": "Mumbai–Ahmedabad line",
+      "hi": "मुंबई–अहमदाबाद लाइन"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "opened": 1864,
+    "waypoints": [
+      {
+        "place": "Mumbai",
+        "lat": 19.0728,
+        "lon": 72.8826
+      },
+      {
+        "place": "Surat",
+        "lat": 21.1959,
+        "lon": 72.8302
+      },
+      {
+        "place": "Vadodara",
+        "lat": 22.2994,
+        "lon": 73.2081
+      },
+      {
+        "place": "Ahmedabad",
+        "lat": 23.0258,
+        "lon": 72.5873
+      }
+    ],
+    "blurb": {
+      "en": "492 km up the Gujarat coast through Surat and Vadodara, opened by the Bombay, Baroda and Central India Railway in 1864 and now the country's first high-speed corridor as well.",
+      "hi": "सूरत और वडोदरा होते हुए गुजरात तट के साथ 492 किमी, जो बॉम्बे, बड़ौदा एंड सेंट्रल इंडिया रेलवे ने 1864 में खोली और जो अब देश का पहला अतिद्रुत गलियारा भी है।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "chennai-mangalore",
+    "status": "draft",
+    "name": {
+      "en": "Chennai–Mangaluru line",
+      "hi": "चेन्नई–मंगलूरु लाइन"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "opened": 1979,
+    "waypoints": [
+      {
+        "place": "Chennai",
+        "lat": 13.0878,
+        "lon": 80.2785
+      },
+      {
+        "place": "Katpadi",
+        "lat": 12.9695,
+        "lon": 79.1455
+      },
+      {
+        "place": "Bengaluru",
+        "lat": 12.9719,
+        "lon": 77.5937
+      },
+      {
+        "place": "Hassan",
+        "lat": 13.0071,
+        "lon": 76.0962
+      },
+      {
+        "place": "Mangalore",
+        "lat": 12.9172,
+        "lon": 74.856
+      }
+    ],
+    "blurb": {
+      "en": "Coast to coast across the peninsula: Chennai to Bengaluru, then the Hassan line down the Sakleshpur ghat in fifty-seven tunnels to the Arabian Sea at Mangaluru.",
+      "hi": "प्रायद्वीप के आर-पार तट से तट: चेन्नई से बेंगलूरु, फिर हासन लाइन सकलेशपुर घाट से सत्तावन सुरंगों में उतरकर मंगलूरु पर अरब सागर तक।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "barauni-guwahati",
+    "status": "draft",
+    "name": {
+      "en": "Barauni–Guwahati line",
+      "hi": "बरौनी–गुवाहाटी लाइन"
+    },
+    "category": "trunk",
+    "rank": 2,
+    "opened": 1950,
+    "waypoints": [
+      {
+        "place": "Barauni",
+        "lat": 25.4709,
+        "lon": 85.976
+      },
+      {
+        "place": "Katihar",
+        "lat": 25.5385,
+        "lon": 87.5704
+      },
+      {
+        "place": "Siliguri",
+        "lat": 26.71,
+        "lon": 88.4285
+      },
+      {
+        "place": "Bongaigaon",
+        "lat": 26.477,
+        "lon": 90.5581
+      },
+      {
+        "place": "Guwahati",
+        "lat": 26.1844,
+        "lon": 91.7458
+      }
+    ],
+    "blurb": {
+      "en": "The north-east's one rail link to the rest of India, through Katihar and the Siliguri corridor. Partition cut the old route through East Bengal; this line was built to replace it.",
+      "hi": "शेष भारत से पूर्वोत्तर की इकलौती रेल कड़ी, कटिहार और सिलीगुड़ी गलियारे से होकर। विभाजन ने पूर्वी बंगाल का पुराना मार्ग काट दिया; उसकी जगह यही लाइन बनी।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "guwahati-dibrugarh",
+    "status": "draft",
+    "name": {
+      "en": "Guwahati–Dibrugarh line",
+      "hi": "गुवाहाटी–डिब्रूगढ़ लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1903,
+    "waypoints": [
+      {
+        "place": "Guwahati",
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      {
+        "place": "Nagaon",
+        "lat": 26.35,
+        "lon": 92.6667
+      },
+      {
+        "place": "Jorhat",
+        "lat": 26.7575,
+        "lon": 94.2031
+      },
+      {
+        "place": "Dibrugarh",
+        "lat": 27.4799,
+        "lon": 94.9084
+      }
+    ],
+    "blurb": {
+      "en": "Up the Brahmaputra valley through the tea gardens of upper Assam to Dibrugarh, the end of the line and once the head of the river steamers to Calcutta.",
+      "hi": "ब्रह्मपुत्र घाटी में ऊपरी असम के चाय बागानों से होकर डिब्रूगढ़ तक, लाइन का अंत और कभी कलकत्ता जाने वाले नदी-जहाज़ों का शीर्ष।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "secunderabad-nagpur",
+    "status": "draft",
+    "name": {
+      "en": "Secunderabad–Nagpur line",
+      "hi": "सिकंदराबाद–नागपुर लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1929,
+    "waypoints": [
+      {
+        "place": "Hyderabad",
+        "lat": 17.384,
+        "lon": 78.4564
+      },
+      {
+        "place": "Nizamabad",
+        "lat": 18.6715,
+        "lon": 78.0988
+      },
+      {
+        "place": "Nanded",
+        "lat": 19.1602,
+        "lon": 77.315
+      },
+      {
+        "place": "Nagpur",
+        "lat": 21.1463,
+        "lon": 79.0849
+      }
+    ],
+    "blurb": {
+      "en": "The Nizam's own railway, laid from Hyderabad north through Nizamabad and Nanded to meet the Great Indian Peninsula at Nagpur.",
+      "hi": "निज़ाम की अपनी रेल, हैदराबाद से उत्तर में निज़ामाबाद और नांदेड़ होते हुए नागपुर पर ग्रेट इंडियन पेनिनसुला से मिलने तक बिछी।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "bengaluru-vasco",
+    "status": "draft",
+    "name": {
+      "en": "Bengaluru–Vasco line",
+      "hi": "बेंगलूरु–वास्को लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1888,
+    "waypoints": [
+      {
+        "place": "Bengaluru",
+        "lat": 12.9719,
+        "lon": 77.5937
+      },
+      {
+        "place": "Davanagere",
+        "lat": 14.4669,
+        "lon": 75.9269
+      },
+      {
+        "place": "Hubli",
+        "lat": 15.3478,
+        "lon": 75.1338
+      },
+      {
+        "place": "Panaji",
+        "lat": 15.4957,
+        "lon": 73.8262
+      }
+    ],
+    "blurb": {
+      "en": "Across Karnataka to the sea at Vasco da Gama, down the Braganza ghat into Goa — a metre-gauge line built to carry Deccan cotton and later Goan iron ore to a port.",
+      "hi": "कर्नाटक पार कर वास्को दा गामा पर समुद्र तक, ब्रागांज़ा घाट से उतरकर गोवा में — दक्कन की कपास और बाद में गोवा का लौह अयस्क बंदरगाह तक ले जाने को बनी मीटर गेज लाइन।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "kacheguda-bengaluru",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad–Bengaluru line",
+      "hi": "हैदराबाद–बेंगलूरु लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1916,
+    "waypoints": [
+      {
+        "place": "Hyderabad",
+        "lat": 17.384,
+        "lon": 78.4564
+      },
+      {
+        "place": "Kurnool",
+        "lat": 15.8289,
+        "lon": 78.036
+      },
+      {
+        "place": "Anantapur",
+        "lat": 14.6778,
+        "lon": 77.6081
+      },
+      {
+        "place": "Bengaluru",
+        "lat": 12.9719,
+        "lon": 77.5937
+      }
+    ],
+    "blurb": {
+      "en": "Across Rayalaseema between the two Deccan capitals, through Kurnool and Anantapur: dry, thinly peopled country and the shortest way between the cities.",
+      "hi": "दक्कन की दो राजधानियों के बीच रायलसीमा के आर-पार, कर्नूल और अनंतपुर होते हुए: शुष्क, विरल बसा देश और दोनों शहरों के बीच सबसे छोटा रास्ता।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "vijayawada-chennai",
+    "status": "draft",
+    "name": {
+      "en": "Vijayawada–Chennai line",
+      "hi": "विजयवाड़ा–चेन्नई लाइन"
+    },
+    "category": "coastal",
+    "rank": 3,
+    "opened": 1899,
+    "waypoints": [
+      {
+        "place": "Vijayawada",
+        "lat": 16.5074,
+        "lon": 80.6466
+      },
+      {
+        "place": "Nellore",
+        "lat": 14.4499,
+        "lon": 79.987
+      },
+      {
+        "place": "Chennai",
+        "lat": 13.0878,
+        "lon": 80.2785
+      }
+    ],
+    "blurb": {
+      "en": "431 km down the Coromandel coast past Nellore: the busiest stretch of track in southern India, carrying both the east-coast and the Delhi–Chennai traffic.",
+      "hi": "नेल्लोर होते हुए कोरोमंडल तट के साथ 431 किमी: दक्षिण भारत की सबसे व्यस्त पटरी, जिस पर पूर्वी तट और दिल्ली–चेन्नई दोनों का यातायात चलता है।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "agra-varanasi",
+    "status": "draft",
+    "name": {
+      "en": "Agra–Varanasi line",
+      "hi": "आगरा–वाराणसी लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1875,
+    "waypoints": [
+      {
+        "place": "Agra",
+        "lat": 27.1833,
+        "lon": 78.0167
+      },
+      {
+        "place": "Kanpur",
+        "lat": 26.4652,
+        "lon": 80.3498
+      },
+      {
+        "place": "Prayagraj",
+        "lat": 25.4448,
+        "lon": 81.8432
+      },
+      {
+        "place": "Varanasi",
+        "lat": 25.3167,
+        "lon": 83.0104
+      }
+    ],
+    "blurb": {
+      "en": "Along the Doab between the Ganga and the Yamuna: Kanpur, Prayagraj and Varanasi, the oldest railway country in northern India and still the busiest.",
+      "hi": "गंगा और यमुना के बीच दोआब के साथ: कानपुर, प्रयागराज और वाराणसी, उत्तर भारत का सबसे पुराना रेल-देश और आज भी सबसे व्यस्त।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "howrah-new-jalpaiguri",
+    "status": "draft",
+    "name": {
+      "en": "Howrah–New Jalpaiguri line",
+      "hi": "हावड़ा–न्यू जलपाईगुड़ी लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1878,
+    "waypoints": [
+      {
+        "place": "Kolkata",
+        "lat": 22.5626,
+        "lon": 88.363
+      },
+      {
+        "place": "Malda",
+        "lat": 25.0045,
+        "lon": 88.1457
+      },
+      {
+        "place": "Siliguri",
+        "lat": 26.71,
+        "lon": 88.4285
+      }
+    ],
+    "blurb": {
+      "en": "North through Malda to the foot of the Himalaya at Siliguri, where the Darjeeling Himalayan Railway begins and the line to the north-east turns east.",
+      "hi": "मालदा होते हुए उत्तर में सिलीगुड़ी पर हिमालय की तलहटी तक, जहाँ दार्जिलिंग हिमालयन रेलवे शुरू होती है और पूर्वोत्तर की लाइन पूरब मुड़ती है।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "delhi-kalka",
+    "status": "draft",
+    "name": {
+      "en": "Delhi–Kalka line",
+      "hi": "दिल्ली–कालका लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1891,
+    "waypoints": [
+      {
+        "place": "Delhi",
+        "lat": 28.6519,
+        "lon": 77.2315
+      },
+      {
+        "place": "Panipat",
+        "lat": 29.3875,
+        "lon": 76.9682
+      },
+      {
+        "place": "Ambala",
+        "lat": 30.361,
+        "lon": 76.7978
+      },
+      {
+        "place": "Chandigarh",
+        "lat": 30.7363,
+        "lon": 76.7884
+      },
+      {
+        "place": "Kalka",
+        "lat": 30.8398,
+        "lon": 76.9407
+      }
+    ],
+    "blurb": {
+      "en": "Delhi to the foot of the Shivalik at Kalka, through Panipat, Ambala and Chandigarh — the way the government went up to Shimla every summer.",
+      "hi": "दिल्ली से कालका पर शिवालिक की तलहटी तक, पानीपत, अंबाला और चंडीगढ़ होते हुए — हर गर्मी सरकार इसी रास्ते शिमला जाती थी।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "lucknow-gorakhpur",
+    "status": "draft",
+    "name": {
+      "en": "Lucknow–Gorakhpur line",
+      "hi": "लखनऊ–गोरखपुर लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1886,
+    "waypoints": [
+      {
+        "place": "Lucknow",
+        "lat": 26.8393,
+        "lon": 80.9231
+      },
+      {
+        "place": "Faizabad",
+        "lat": 26.7755,
+        "lon": 82.1502
+      },
+      {
+        "place": "Gonda",
+        "lat": 27.1318,
+        "lon": 81.9533
+      },
+      {
+        "place": "Gorakhpur",
+        "lat": 26.7663,
+        "lon": 83.3689
+      }
+    ],
+    "blurb": {
+      "en": "Across Awadh through Ayodhya and Gonda to Gorakhpur, the headquarters of North Eastern Railway and home of what was for years the longest platform in the world.",
+      "hi": "अवध के आर-पार अयोध्या और गोंडा होते हुए गोरखपुर तक, पूर्वोत्तर रेलवे का मुख्यालय और वर्षों तक विश्व के सबसे लंबे प्लेटफ़ॉर्म का घर।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "bhopal-indore",
+    "status": "draft",
+    "name": {
+      "en": "Bhopal–Indore line",
+      "hi": "भोपाल–इंदौर लाइन"
+    },
+    "category": "trunk",
+    "rank": 3,
+    "opened": 1956,
+    "waypoints": [
+      {
+        "place": "Bhopal",
+        "lat": 23.2547,
+        "lon": 77.4029
+      },
+      {
+        "place": "Ujjain",
+        "lat": 23.1824,
+        "lon": 75.7764
+      },
+      {
+        "place": "Indore",
+        "lat": 22.7179,
+        "lon": 75.8333
+      }
+    ],
+    "blurb": {
+      "en": "Across Malwa between the state capital and its largest city, by way of Ujjain on the Shipra — one of the four cities where the Kumbh Mela is held.",
+      "hi": "राजधानी और सबसे बड़े नगर के बीच मालवा के आर-पार, शिप्रा पर उज्जैन होते हुए — उन चार नगरों में एक जहाँ कुंभ मेला लगता है।"
+    },
+    "sources": [
+      "https://indianrailways.gov.in/",
+      "https://en.wikipedia.org/wiki/Indian_Railways"
+    ]
+  },
+  {
+    "id": "other-lines",
+    "status": "draft",
+    "name": {
+      "en": "Other lines",
+      "hi": "अन्य लाइनें"
+    },
+    "category": "network",
+    "rank": 3,
+    "network": true,
+    "blurb": {
+      "en": "Every railway the source holds inside India, drawn fine and unnamed under the lines that are named. About 40,000 km of it: the shape of the network, not a list of routes.",
+      "hi": "स्रोत में भारत के भीतर की हर रेल, नामित लाइनों के नीचे महीन और बेनाम खिंची। लगभग 40,000 किमी: मार्गों की सूची नहीं, जाल का आकार।"
+    },
+    "sources": [
+      "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/"
+    ]
   }
 ]

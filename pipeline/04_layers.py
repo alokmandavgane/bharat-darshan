@@ -465,7 +465,12 @@ def validate_line_item(it, cats, join, fields=()):
         p.append(f"{tag}: unknown category {it.get('category')!r}")
     if it.get('rank') not in (1, 2, 3):
         p.append(f'{tag}: rank must be 1, 2 or 3')
-    if join == GENERATED:
+    if it.get('network'):
+        # The whole of the source, drawn under the routes that are named. It claims no
+        # geometry of its own, so it needs neither waypoints nor a name in the source.
+        if it.get('waypoints') or it.get('source_names') or it.get('geometry'):
+            p.append(f'{tag}: a network item draws the whole source, so it names no geometry')
+    elif join == GENERATED:
         g = it.get('geometry')
         if not isinstance(g, dict):
             p.append(f'{tag}: geometry must say what line to draw')
@@ -513,9 +518,11 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
     # A named source is indexed by name; a nameless one becomes a graph to walk; a
     # generated one has no source to load at all.
     index = {}
+    # A network item draws every part of the source; a routed layer walks a graph built
+    # from the same parts, so they are loaded once between them.
+    parts = lines.load_parts(src, raw) if (join == 'route' or any(it.get('network') for it in items)) else []
     if join == 'route':
-        index = lines.network(lines.load_parts(src, raw), ids,
-                              [w for it in items for w in (it.get('waypoints') or [])])
+        index = lines.network(parts, ids, [w for it in items for w in (it.get('waypoints') or [])])
     elif join != GENERATED:
         index = lines.load_source(src, raw)
     if join == 'route':
@@ -530,8 +537,13 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
         problems += validate_line_item(it, cats, join, fields)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
-        runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief,
-                                     clip=not layer.get('arrows'))
+        if it.get('network'):
+            runs = lines.project(parts, ids, float(src.get('simplify_km', 1.0)))
+            km = sum(float(np.hypot(*np.diff(r, axis=0).T).sum()) for r in runs)
+            note = None
+        else:
+            runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief,
+                                         clip=not layer.get('arrows'))
         if not runs:
             why = (note or {}).get('why') or (f"names {it['source_names']}" if join == 'name' else 'nothing came back')
             problems.append(f"{it['id']}: no geometry: {why}")

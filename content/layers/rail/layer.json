@@ -41,6 +41,14 @@
         "hi": "पर्वतीय लाइन"
       },
       "color": "#6b6480"
+    },
+    {
+      "id": "network",
+      "title": {
+        "en": "Other line",
+        "hi": "अन्य लाइन"
+      },
+      "color": "#8a8d95"
     }
   ],
   "fields": {
@@ -52,12 +60,16 @@
       }
     }
   },
+  "note": {
+    "en": "Twenty-one lines named and told, drawn over the whole railway the source holds inside India — about 40,000 km of it, fine and unnamed. India's is the fourth largest network in the world and the largest under one management; what it looks like is most of what there is to say about it.",
+    "hi": "इक्कीस लाइनें नाम और कथा सहित, उस पूरी रेल पर खिंचीं जो स्रोत में भारत के भीतर है — लगभग 40,000 किमी, महीन और बेनाम। भारत का जाल विश्व में चौथा सबसे बड़ा है और एक ही प्रबंधन में सबसे बड़ा; वह दिखता कैसा है, यही उसके बारे में कहने को सबसे अधिक है।"
+  },
   "sources": [
     "natural-earth",
     "indian-railways",
     "wikipedia"
   ],
-  "attribution": "Railway centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each line is the course the source holds between the places listed in this folder. Names, dates and lengths checked against Indian Railways and Wikipedia.",
+  "attribution": "Railway centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each named line is the course the source holds between the places listed in this folder, and the unnamed network item is the whole of the source inside India. Names, dates and lengths checked against Indian Railways and Wikipedia.",
   "_join": "The source has geometry but no names, so an item lists the places its line is known by and the build walks the source's own parts between them.",
   "_rank": "1 is a trunk line drawn widest, 3 a short one drawn finest; the engine reads rank, never a line's name."
 }
