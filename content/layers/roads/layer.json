@@ -9,13 +9,15 @@
   "icon": "road",
   "default_on": false,
   "source": {
-    "format": "shapefile-polyline",
-    "join": "route",
+    "format": "geojson-polyline",
+    "join": "name",
+    "match": "Name",
+    "stitch": true,
     "files": {
-      "ne_roads.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_roads.shp",
-      "ne_roads.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_roads.prj"
+      "nh.geojson": "https://raw.githubusercontent.com/datta07/INDIAN-SHAPEFILES/master/INDIA/INDIA_NATIONAL_HIGHWAY.geojson"
     },
-    "simplify_km": 1.5
+    "simplify_km": 1.0,
+    "min_km": 0.3
   },
   "categories": [
     {
@@ -52,15 +54,15 @@
     }
   ],
   "note": {
-    "en": "Thirty-five highways named and told, drawn over the whole road network the source holds inside India — about 54,000 km of it, fine and unnamed, so the shape of the country's traffic shows and not just the eight roads anyone can name. A route's course is the source's; the numbers are the Ministry's.",
-    "hi": "पैंतीस राजमार्ग नाम और कथा सहित, उस पूरे सड़क-जाल पर खिंचे जो स्रोत में भारत के भीतर है — लगभग 54,000 किमी, महीन और बेनाम, ताकि देश के यातायात का आकार दिखे, न कि केवल वे आठ सड़कें जिनके नाम सब जानते हैं। मार्ग की रेखा स्रोत की है; संख्याएँ मंत्रालय की।"
+    "en": "Every national highway in the country, each drawn as the Ministry's own survey holds it: 124,000 km of it, with the 35 that are told by name picked out over the rest. A highway's number is in the source, so a card and its course are the same road by construction and not by a guess at where it runs.",
+    "hi": "देश का हर राष्ट्रीय राजमार्ग, मंत्रालय के अपने सर्वेक्षण के अनुसार खिंचा: कुल 1,24,000 किमी, जिनमें से 35 नाम और कथा सहित बाक़ी के ऊपर उभारे गए हैं। राजमार्ग का क्रमांक स्रोत में ही है, इसलिए कार्ड और उसकी रेखा एक ही सड़क हैं — अनुमान से नहीं, रचना से।"
   },
   "sources": [
-    "natural-earth",
+    "indian-shapefiles",
     "morth",
     "wikipedia"
   ],
-  "attribution": "Road centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each named route is the course the source holds between the places listed in this folder, and the unnamed network item is the whole of the source inside India. Numbers and facts checked against the Ministry of Road Transport and Highways and Wikipedia.",
+  "attribution": "Highway centrelines: the national highway network published by the Ministry of Road Transport and Highways through PM GatiShakti, republished as GeoJSON by INDIAN-SHAPEFILES. Every feature carries its highway number, so a named item joins its geometry by that number; the unnamed network item is everything no item has claimed. Facts checked against the Ministry's own list of primary national highways and Wikipedia.",
   "_join": "The source has geometry but no names, so an item lists the places its route is known by and the build walks the source's own parts between them.",
   "_rank": "1 is a trunk route drawn widest, 3 a short one drawn finest; the engine reads rank, never a road's number."
 }

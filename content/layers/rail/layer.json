@@ -9,13 +9,15 @@
   "icon": "rail",
   "default_on": false,
   "source": {
-    "format": "shapefile-polyline",
-    "join": "route",
+    "format": "geojson-polyline",
+    "join": "corridor",
+    "stitch": true,
     "files": {
-      "ne_rail.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_railroads.shp",
-      "ne_rail.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/ne_10m_railroads.prj"
+      "ir.geojson": "https://raw.githubusercontent.com/datta07/INDIAN-SHAPEFILES/master/INDIA/INDIAN_RAILWAYS.geojson"
     },
-    "simplify_km": 1.5
+    "simplify_km": 1.0,
+    "min_km": 0.3,
+    "corridor_km": 8.0
   },
   "categories": [
     {
@@ -61,15 +63,15 @@
     }
   },
   "note": {
-    "en": "Twenty-one lines named and told, drawn over the whole railway the source holds inside India — about 40,000 km of it, fine and unnamed. India's is the fourth largest network in the world and the largest under one management; what it looks like is most of what there is to say about it.",
-    "hi": "इक्कीस लाइनें नाम और कथा सहित, उस पूरी रेल पर खिंचीं जो स्रोत में भारत के भीतर है — लगभग 40,000 किमी, महीन और बेनाम। भारत का जाल विश्व में चौथा सबसे बड़ा है और एक ही प्रबंधन में सबसे बड़ा; वह दिखता कैसा है, यही उसके बारे में कहने को सबसे अधिक है।"
+    "en": "Indian Railways' own track centrelines, 85,000 km of them, with 21 lines told by name. The source is a drawing rather than a network -- its sections do not quite meet -- so a named line is every track the drawing holds within eight km of the way it runs, which counts in a junction's approaches and the odd parallel branch.",
+    "hi": "भारतीय रेल की अपनी पटरियों की मध्यरेखाएँ, 85,000 किमी, जिनमें 21 लाइनें नाम और कथा सहित। स्रोत जाल नहीं, एक रेखाचित्र है — उसके खंड पूरी तरह मिलते नहीं — इसलिए नामित लाइन वह सब पटरी है जो उसके मार्ग के आठ किमी के भीतर रेखाचित्र में है; इसमें जंक्शन के पहुँच-मार्ग और कभी-कभार कोई समानांतर शाखा भी गिन ली जाती है।"
   },
   "sources": [
-    "natural-earth",
+    "indian-shapefiles",
     "indian-railways",
     "wikipedia"
   ],
-  "attribution": "Railway centrelines: Natural Earth 10m cultural vectors (public domain), which carry no names over India; each named line is the course the source holds between the places listed in this folder, and the unnamed network item is the whole of the source inside India. Names, dates and lengths checked against Indian Railways and Wikipedia.",
+  "attribution": "Railway centrelines: Indian Railways' track layer, republished as GeoJSON by INDIAN-SHAPEFILES, carrying gauge but no line names. A named line lists the places it is known by and the build keeps the source's own chains that run along that way; the unnamed network item is everything no line has claimed. Names, dates and lengths checked against Indian Railways and Wikipedia.",
   "_join": "The source has geometry but no names, so an item lists the places its line is known by and the build walks the source's own parts between them.",
   "_rank": "1 is a trunk line drawn widest, 3 a short one drawn finest; the engine reads rank, never a line's name."
 }

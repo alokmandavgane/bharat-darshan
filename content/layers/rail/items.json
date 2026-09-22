@@ -975,11 +975,11 @@
     "rank": 3,
     "network": true,
     "blurb": {
-      "en": "Every railway the source holds inside India, drawn fine and unnamed under the lines that are named. About 40,000 km of it: the shape of the network, not a list of routes.",
-      "hi": "स्रोत में भारत के भीतर की हर रेल, नामित लाइनों के नीचे महीन और बेनाम खिंची। लगभग 40,000 किमी: मार्गों की सूची नहीं, जाल का आकार।"
+      "en": "Every stretch of track in Indian Railways' drawing that no line here names, drawn fine under the ones that are: about 74,000 km of the 85,000 the country's tracks run to.",
+      "hi": "भारतीय रेल के रेखाचित्र की हर वह पटरी जिसका नाम यहाँ नहीं लिया गया, नामितों के नीचे महीन खिंची: देश की कुल 85,000 किमी पटरी में से लगभग 74,000 किमी।"
     },
     "sources": [
-      "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/"
+      "https://github.com/datta07/INDIAN-SHAPEFILES"
     ]
   }
 ]

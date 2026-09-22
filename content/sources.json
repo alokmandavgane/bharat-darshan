@@ -603,6 +603,25 @@
         "en": "The government's own register of administrative units and the codes they are known by. It publishes codes and names rather than geometry, and it is the authority the district codes on this map are checked against.",
         "hi": "प्रशासनिक इकाइयों और उनके कोडों की सरकार की अपनी पंजी। यह ज्यामिति नहीं, कोड और नाम प्रकाशित करती है, और इसी के विरुद्ध इस मानचित्र के ज़िला कोड जाँचे गए हैं।"
       }
+    },
+    "indian-shapefiles": {
+      "title": {
+        "en": "INDIAN-SHAPEFILES",
+        "hi": "इंडियन शेपफ़ाइल्स"
+      },
+      "publisher": {
+        "en": "Akula Datta (INDIAN-SHAPEFILES)",
+        "hi": "अकुला दत्ता (इंडियन शेपफ़ाइल्स)"
+      },
+      "url": "https://github.com/datta07/INDIAN-SHAPEFILES",
+      "use": "data",
+      "licence": "mit",
+      "vintage": "2019",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Government geospatial layers republished as plain GeoJSON: the national highway network with every highway's number on it, Indian Railways' track centrelines with their gauge, and district polygons at survey resolution. The external boundary is the official one on all three. The highways come from the Ministry of Road Transport and Highways through PM GatiShakti and the tracks from Indian Railways and Survey of India; the licence here is the republisher's, and the collection is dated rather than live.",
+        "hi": "सरकारी भू-स्थानिक परतें सादे जियोजेसन के रूप में पुनःप्रकाशित: हर राजमार्ग के क्रमांक सहित राष्ट्रीय राजमार्ग जाल, गेज सहित भारतीय रेल की पटरियों की मध्यरेखाएँ, और सर्वेक्षण-स्तर के ज़िला बहुभुज। तीनों में बाहरी सीमा आधिकारिक है। राजमार्ग सड़क परिवहन और राजमार्ग मंत्रालय से पीएम गतिशक्ति के माध्यम से आते हैं और पटरियाँ भारतीय रेल तथा भारतीय सर्वेक्षण विभाग से; यहाँ का लाइसेंस पुनःप्रकाशक का है, और यह संग्रह सामयिक नहीं, तिथि-अंकित है।"
+      }
     }
   }
 }
