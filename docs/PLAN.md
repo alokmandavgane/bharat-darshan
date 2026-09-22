@@ -2186,6 +2186,20 @@ docs/DEPLOY.md).
     `/hi/atlas/rivers/state/kerala`) gets its language's shell and its page's card rather
     than the root English shell. Unverified on the host until the next deploy: check
     `curl -sL https://darshan.alokm.com/hi/state/kerala | grep '<html lang'` says `hi`.
+- 2026-09-22, from the reference phone at last: taps.
+  - **Panning and turning selected states.** When one of two fingers lifts,
+    `resetOrigins` restarts the survivor so the pan carries on; if it then lifted within
+    a third of a second and eight pixels -- the end of every pinch and twist -- it was a
+    tap. A finger now remembers its gesture was two-fingered and never taps, and a tap
+    is judged by distance travelled, not displacement. Checked with CDP touch events
+    against both versions (`scratchpad/touch.mjs`): pinch, twist and a wandering pan each
+    selected a state before, nothing after; a plain tap still lands.
+  - **Rivers took the taps.** 49 taps on a grid across a phone's country view: 22 rivers,
+    4 states (14 px tolerance); at 4 px still 12 rivers. At the country view a finger
+    now goes to the state and a river is a zoom away (under 2,500 km: 8 px); a cursor
+    keeps 9 px. After: 25 states, 0 rivers, 2 beads, 22 sea.
+  - The showcase video (`tools/`-less: a Playwright script in the scratchpad) was
+    recorded by driving the real app with real clicks; `recordVideo` + ffmpeg to MP4.
 
 ### What exists
 
