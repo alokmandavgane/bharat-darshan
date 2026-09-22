@@ -1,0 +1,553 @@
+[
+  {
+    "id": "jharia",
+    "status": "draft",
+    "name": {
+      "en": "Jharia coalfield",
+      "hi": "झरिया कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 23.74,
+      "lon": 86.42
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "coal",
+    "priority": 1,
+    "blurb": {
+      "en": "India's main source of coking coal, the kind steelmaking needs, west of Dhanbad. Parts of the field have been burning underground since 1916, and settlements above the fires have had to be moved.",
+      "hi": "धनबाद के पश्चिम में, इस्पात निर्माण के लिए आवश्यक कोकिंग कोयले का भारत का मुख्य स्रोत। क्षेत्र के कुछ हिस्से 1916 से भूमिगत जल रहे हैं, और आग के ऊपर बसी बस्तियाँ हटानी पड़ी हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jharia_coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "raniganj",
+    "status": "draft",
+    "name": {
+      "en": "Raniganj coalfield",
+      "hi": "रानीगंज कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 23.62,
+      "lon": 87.13
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "blurb": {
+      "en": "Where Indian coal mining began: workings were opened here in 1774, on the Damodar. The field still supplies Bengal's power stations and steel works.",
+      "hi": "भारत में कोयला खनन की शुरुआत यहीं हुई: दामोदर के किनारे 1774 में खदानें खुलीं। यह क्षेत्र आज भी बंगाल के विद्युत संयंत्रों और इस्पात कारखानों को कोयला देता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Raniganj_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "korba",
+    "status": "draft",
+    "name": {
+      "en": "Korba coalfield",
+      "hi": "कोरबा कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 22.35,
+      "lon": 82.68
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "coal",
+    "priority": 1,
+    "blurb": {
+      "en": "Thermal coal in central Chhattisgarh, burnt next to where it is dug: the power stations standing on this field are among the largest in the country.",
+      "hi": "मध्य छत्तीसगढ़ का तापीय कोयला, जो निकाले जाने के पास ही जलाया जाता है: इस क्षेत्र पर खड़े विद्युत संयंत्र देश के सबसे बड़े संयंत्रों में हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Korba_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "talcher",
+    "status": "draft",
+    "name": {
+      "en": "Talcher coalfield",
+      "hi": "तालचेर कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 20.95,
+      "lon": 85.23
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "blurb": {
+      "en": "Odisha's great thermal field, in the Mahanadi valley. Its seams lie shallow enough to be worked in vast open pits rather than mined from below.",
+      "hi": "महानदी घाटी में ओडिशा का विशाल तापीय क्षेत्र। यहाँ की परतें इतनी उथली हैं कि भूमिगत खनन के बजाय बड़े खुले गड्ढों से निकाली जाती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Talcher_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "singrauli",
+    "status": "draft",
+    "name": {
+      "en": "Singrauli coalfield",
+      "hi": "सिंगरौली कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 24.11,
+      "lon": 82.67
+    },
+    "regions": [
+      "IN-MP",
+      "IN-UP"
+    ],
+    "category": "coal",
+    "priority": 1,
+    "blurb": {
+      "en": "Coal and generation in the same place, straddling the Madhya Pradesh and Uttar Pradesh border. So much of the country's power is made here that it is called the energy capital.",
+      "hi": "कोयला और बिजली एक ही जगह — मध्य प्रदेश और उत्तर प्रदेश की सीमा पर फैला क्षेत्र। देश की इतनी बिजली यहाँ बनती है कि इसे ऊर्जा राजधानी कहा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Singrauli_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "bailadila",
+    "status": "draft",
+    "name": {
+      "en": "Bailadila",
+      "hi": "बैलाडीला"
+    },
+    "anchor": {
+      "lat": 18.65,
+      "lon": 81.23
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "iron",
+    "priority": 1,
+    "blurb": {
+      "en": "A range of high-grade haematite in Dantewada, named for the ox's hump its ridge makes. Its ore goes east by rail to Visakhapatnam, for export and for the steel plants.",
+      "hi": "दंतेवाड़ा में उच्च श्रेणी के हेमेटाइट की श्रेणी, जिसका नाम उसकी बैल के कंधे जैसी चोटी से पड़ा। यहाँ का अयस्क रेल से पूर्व में विशाखापत्तनम जाता है — निर्यात और इस्पात संयंत्रों के लिए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bailadila_Range",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "joda-barbil",
+    "status": "draft",
+    "name": {
+      "en": "Joda-Barbil belt",
+      "hi": "जोड़ा-बड़बिल पट्टी"
+    },
+    "anchor": {
+      "lat": 22.03,
+      "lon": 85.4
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "iron",
+    "priority": 1,
+    "blurb": {
+      "en": "India's busiest iron-ore country, in Kendujhar district: a belt of mines between Joda and Barbil feeding the steel plants of the east and the ports beyond them.",
+      "hi": "केंदुझर ज़िले में भारत का सबसे व्यस्त लौह अयस्क क्षेत्र: जोड़ा और बड़बिल के बीच खदानों की पट्टी, जो पूर्व के इस्पात संयंत्रों और उनके आगे बंदरगाहों को अयस्क देती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Joda",
+      "https://en.wikipedia.org/wiki/Barbil"
+    ]
+  },
+  {
+    "id": "noamundi",
+    "status": "draft",
+    "name": {
+      "en": "Noamundi",
+      "hi": "नोआमुंडी"
+    },
+    "anchor": {
+      "lat": 22.16,
+      "lon": 85.5
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "iron",
+    "priority": 2,
+    "blurb": {
+      "en": "An iron mine in the Singhbhum hills worked by Tata Steel since the 1920s, and one of the sources that made Jamshedpur possible.",
+      "hi": "सिंहभूम की पहाड़ियों में लौह अयस्क की खदान, जिसे टाटा स्टील 1920 के दशक से चला रही है; जमशेदपुर को संभव बनाने वाले स्रोतों में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Noamundi",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "sandur",
+    "status": "draft",
+    "name": {
+      "en": "Sandur belt",
+      "hi": "संदूर पट्टी"
+    },
+    "anchor": {
+      "lat": 15.09,
+      "lon": 76.55
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "iron",
+    "priority": 2,
+    "blurb": {
+      "en": "The schist belt behind Ballari and Hosapete: Karnataka's iron country, and the ore that supplies the state's steel mills.",
+      "hi": "बल्लारी और होसपेटे के पीछे की शिस्ट पट्टी: कर्नाटक का लौह क्षेत्र, और राज्य की इस्पात मिलों को अयस्क देने वाला स्रोत।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sandur",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "panchpatmali",
+    "status": "draft",
+    "name": {
+      "en": "Panchpatmali",
+      "hi": "पंचपटमाली"
+    },
+    "anchor": {
+      "lat": 18.76,
+      "lon": 82.88
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "bauxite",
+    "priority": 1,
+    "blurb": {
+      "en": "India's largest bauxite mine, on a flat-topped plateau in Koraput. The ore drops to the refinery at Damanjodi below it and is smelted into aluminium at Angul.",
+      "hi": "कोरापुट के एक सपाट पठार पर भारत की सबसे बड़ी बॉक्साइट खदान। अयस्क नीचे दामनजोड़ी की रिफ़ाइनरी में जाता है और अंगुल में गलाकर अ‍ॅल्युमिनियम बनाया जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/NALCO",
+      "https://en.wikipedia.org/wiki/Koraput_district"
+    ]
+  },
+  {
+    "id": "balaghat",
+    "status": "draft",
+    "name": {
+      "en": "Balaghat",
+      "hi": "बालाघाट"
+    },
+    "anchor": {
+      "lat": 21.81,
+      "lon": 80.19
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "manganese",
+    "priority": 2,
+    "blurb": {
+      "en": "Manganese from the Sausar belt, which runs along the Madhya Pradesh and Maharashtra border. Nearly all of it goes into steel, which cannot be made without it.",
+      "hi": "सौंसर पट्टी का मैंगनीज़, जो मध्य प्रदेश और महाराष्ट्र की सीमा के साथ चलती है। इसका लगभग सारा उपयोग इस्पात में होता है, जो इसके बिना बन ही नहीं सकता।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Balaghat",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "malanjkhand",
+    "status": "draft",
+    "name": {
+      "en": "Malanjkhand",
+      "hi": "मलाजखंड"
+    },
+    "anchor": {
+      "lat": 22.03,
+      "lon": 80.72
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "copper",
+    "priority": 1,
+    "blurb": {
+      "en": "India's largest copper deposit, in Balaghat district, worked as a single great open pit. The country still imports most of the copper it uses.",
+      "hi": "बालाघाट ज़िले में भारत का सबसे बड़ा ताँबा निक्षेप, जो एक ही बड़े खुले गड्ढे के रूप में खोदा जाता है। देश अपनी खपत का बड़ा हिस्सा आज भी आयात करता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Malanjkhand",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "khetri",
+    "status": "draft",
+    "name": {
+      "en": "Khetri",
+      "hi": "खेतड़ी"
+    },
+    "anchor": {
+      "lat": 28.0,
+      "lon": 75.79
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "copper",
+    "priority": 2,
+    "blurb": {
+      "en": "Copper in the Aravalli belt north of Jaipur, mined and smelted here since the 1960s and worked in some form for very much longer.",
+      "hi": "जयपुर के उत्तर में अरावली पट्टी का ताँबा, जिसे 1960 के दशक से यहाँ निकाला और गलाया जाता है, और किसी रूप में इससे बहुत पहले से।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Khetri_Nagar",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "rampura-agucha",
+    "status": "draft",
+    "name": {
+      "en": "Rampura Agucha",
+      "hi": "रामपुरा आगूचा"
+    },
+    "anchor": {
+      "lat": 25.83,
+      "lon": 74.72
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "zinc",
+    "priority": 1,
+    "blurb": {
+      "en": "One of the largest zinc deposits in the world, in Bhilwara district. Most of India's zinc and a good part of its lead come from this one orebody.",
+      "hi": "भीलवाड़ा ज़िले में विश्व के सबसे बड़े जस्ता निक्षेपों में से एक। भारत का अधिकांश जस्ता और सीसे का बड़ा भाग इसी एक अयस्क पिंड से आता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rampura_Agucha",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "zawar",
+    "status": "draft",
+    "name": {
+      "en": "Zawar",
+      "hi": "ज़ावर"
+    },
+    "anchor": {
+      "lat": 24.35,
+      "lon": 73.72
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "zinc",
+    "priority": 2,
+    "blurb": {
+      "en": "Zinc was smelted at Zawar in clay retorts from at least the 13th century, which is the earliest industrial zinc production known anywhere. The mines are still working.",
+      "hi": "ज़ावर में कम से कम 13वीं शताब्दी से मिट्टी की नलिकाओं में जस्ता गलाया जाता था — यह विश्व में ज्ञात सबसे प्राचीन औद्योगिक जस्ता उत्पादन है। खदानें आज भी चल रही हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Zawar",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "hutti",
+    "status": "draft",
+    "name": {
+      "en": "Hutti",
+      "hi": "हट्टी"
+    },
+    "anchor": {
+      "lat": 16.2,
+      "lon": 76.66
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "gold",
+    "priority": 1,
+    "blurb": {
+      "en": "India's only substantial working gold mine, in Raichur district, on a greenstone belt that was being worked long before it was a mine.",
+      "hi": "रायचूर ज़िले में भारत की एकमात्र बड़ी चालू सोने की खदान, एक ऐसी हरितप्रस्तर पट्टी पर जहाँ खदान बनने से बहुत पहले से काम होता रहा है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Hutti_Gold_Mines_Limited",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "kolar",
+    "status": "draft",
+    "name": {
+      "en": "Kolar Gold Fields",
+      "hi": "कोलार स्वर्ण क्षेत्र"
+    },
+    "anchor": {
+      "lat": 12.95,
+      "lon": 78.28
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "gold",
+    "priority": 2,
+    "blurb": {
+      "en": "Gold was mined here for a century, to nearly three kilometres down, which made these some of the deepest workings ever cut. The fields closed in 2001 and the town remains.",
+      "hi": "यहाँ एक शताब्दी तक सोना निकाला गया, लगभग तीन किलोमीटर की गहराई तक — अब तक खोदी गई सबसे गहरी खदानों में। 2001 में क्षेत्र बंद हो गया, नगर बना रहा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kolar_Gold_Fields",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "panna",
+    "status": "draft",
+    "name": {
+      "en": "Panna",
+      "hi": "पन्ना"
+    },
+    "anchor": {
+      "lat": 24.72,
+      "lon": 80.19
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "diamond",
+    "priority": 1,
+    "blurb": {
+      "en": "India's only working diamond mines, in the Vindhyan rocks of Panna. Stones are found both in the mechanised mine and in shallow pits licensed to individual diggers.",
+      "hi": "पन्ना की विंध्य शिलाओं में भारत की एकमात्र चालू हीरा खदानें। हीरे यंत्रचालित खदान में भी मिलते हैं और व्यक्तिगत खोदकों को दिए गए उथले गड्ढों में भी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Panna,_Madhya_Pradesh",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "koderma",
+    "status": "draft",
+    "name": {
+      "en": "Koderma mica belt",
+      "hi": "कोडरमा अभ्रक पट्टी"
+    },
+    "anchor": {
+      "lat": 24.47,
+      "lon": 85.59
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "mica",
+    "priority": 3,
+    "blurb": {
+      "en": "The belt around Koderma and Giridih was once the source of most of the world's sheet mica, split by hand into insulating flakes. Much of it is now worked out, or worked informally.",
+      "hi": "कोडरमा और गिरिडीह के आसपास की पट्टी एक समय विश्व के अधिकांश परतदार अभ्रक का स्रोत थी, जिसे हाथ से चीरकर विद्युतरोधी पत्तियाँ बनाई जाती थीं। अब बहुत कुछ समाप्त है, या अनौपचारिक रूप से चलता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kodarma",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "jaduguda",
+    "status": "draft",
+    "name": {
+      "en": "Jaduguda",
+      "hi": "जादूगोड़ा"
+    },
+    "anchor": {
+      "lat": 22.65,
+      "lon": 86.35
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "uranium",
+    "priority": 2,
+    "blurb": {
+      "en": "India's first uranium mine, working since 1967 in the Singhbhum thrust belt. It is where the country's nuclear fuel chain begins.",
+      "hi": "सिंहभूम भ्रंश पट्टी में 1967 से चालू भारत की पहली यूरेनियम खदान। देश की परमाणु ईंधन शृंखला यहीं से आरंभ होती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jaduguda_uranium_mine",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "digboi",
+    "status": "draft",
+    "name": {
+      "en": "Digboi",
+      "hi": "डिगबोई"
+    },
+    "anchor": {
+      "lat": 27.39,
+      "lon": 95.62
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "petroleum",
+    "priority": 1,
+    "blurb": {
+      "en": "Asia's first oil well was struck here in 1889, in upper Assam, and the refinery that followed in 1901 is the oldest still working anywhere.",
+      "hi": "एशिया का पहला तेल कुआँ 1889 में ऊपरी असम में यहीं निकला, और उसके बाद 1901 में बनी रिफ़ाइनरी विश्व में आज भी चल रही सबसे पुरानी रिफ़ाइनरी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Digboi",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "ankleshwar",
+    "status": "draft",
+    "name": {
+      "en": "Ankleshwar",
+      "hi": "अंकलेश्वर"
+    },
+    "anchor": {
+      "lat": 21.63,
+      "lon": 73.0
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "petroleum",
+    "priority": 2,
+    "blurb": {
+      "en": "Gujarat's first great onshore oilfield, found in 1960 in the Cambay basin, and the discovery that put the young Oil and Natural Gas Commission on its feet.",
+      "hi": "गुजरात का पहला बड़ा थलीय तेल क्षेत्र, 1960 में खंभात बेसिन में मिला — वह खोज जिसने नवगठित तेल एवं प्राकृतिक गैस आयोग को खड़ा किया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ankleshwar",
+      "https://ibm.gov.in/"
+    ]
+  }
+]

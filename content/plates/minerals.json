@@ -1,0 +1,19 @@
+{
+  "id": "minerals",
+  "section": "resources",
+  "order": 1,
+  "title": {
+    "en": "Minerals",
+    "hi": "खनिज"
+  },
+  "blurb": {
+    "en": "What the rock holds, and where. Coal and iron sit together in the east, which is why the steel plants are there; the Aravalli carries metals, and the peninsula's old shield carries almost everything else.",
+    "hi": "चट्टान में क्या है, और कहाँ। पूर्व में कोयला और लोहा साथ मिलते हैं, इसीलिए इस्पात संयंत्र वहीं हैं; अरावली धातुएँ रखती है, और प्रायद्वीप की प्राचीन ढाल लगभग बाक़ी सब।"
+  },
+  "base": "plain",
+  "layers": [
+    "minerals"
+  ],
+  "relief": 10,
+  "status": "draft"
+}
