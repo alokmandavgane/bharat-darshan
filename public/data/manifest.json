@@ -1503,8 +1503,8 @@
    "sha256": "98f4179ff786"
   },
   "layers/reference-lines.json": {
-   "size": 3183,
-   "sha256": "ce508fdde3e6"
+   "size": 3196,
+   "sha256": "8af61f4706aa"
   },
   "layers/rivers.json": {
    "size": 52676,
@@ -2211,12 +2211,12 @@
    "sha256": "43430e0c01fb"
   },
   "terrain/world-heights.bin.gz": {
-   "size": 1332026,
-   "sha256": "12aa03a74d02"
+   "size": 436548,
+   "sha256": "4b45e1305c61"
   },
   "terrain/world-shade.bin.gz": {
-   "size": 196190,
-   "sha256": "5c50a79f8496"
+   "size": 46456,
+   "sha256": "7b6d7095bae9"
   }
  }
 }
