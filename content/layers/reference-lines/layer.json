@@ -46,5 +46,5 @@
   ],
   "attribution": "Reference lines are defined, not surveyed: the build walks each one across the projection and clips it to the country, so what is drawn is the projection's own curve.",
   "_source": "\"join\": \"generated\" means no file is fetched: each item describes its own line, and the engine reads the layer type, never this layer's name.",
-  "_float": "A reference line is a wire stretched above the model, at the height of a 1,500 m hill, draped only where the land stands higher: drawn on the surface it was cut by every hill it crossed."
+  "_float": "A reference line is drawn over the model and the model never hides it: on the surface, every hill it crossed cut it into pieces. It still follows the relief, so it stays over the ground it marks."
 }

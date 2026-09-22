@@ -2,21 +2,52 @@
   "id": "monsoon",
   "type": "lines",
   "group": "physical",
-  "title": { "en": "The monsoon's advance", "hi": "मानसून की प्रगति" },
+  "title": {
+    "en": "The monsoon's advance",
+    "hi": "मानसून की प्रगति"
+  },
   "icon": "wave",
   "default_on": false,
+  "float": true,
   "arrows": true,
   "flow": true,
-  "source": { "join": "generated", "simplify_km": 4.0 },
+  "source": {
+    "join": "generated",
+    "simplify_km": 4.0
+  },
   "categories": [
-    { "id": "arabian", "color": "#3f7f9c", "title": { "en": "Arabian Sea branch", "hi": "अरब सागर शाखा" } },
-    { "id": "bengal",  "color": "#5f8f6a", "title": { "en": "Bay of Bengal branch", "hi": "बंगाल की खाड़ी शाखा" } },
-    { "id": "retreat", "color": "#b07a4a", "title": { "en": "Withdrawal", "hi": "वापसी" } }
+    {
+      "id": "arabian",
+      "color": "#3f7f9c",
+      "title": {
+        "en": "Arabian Sea branch",
+        "hi": "अरब सागर शाखा"
+      }
+    },
+    {
+      "id": "bengal",
+      "color": "#5f8f6a",
+      "title": {
+        "en": "Bay of Bengal branch",
+        "hi": "बंगाल की खाड़ी शाखा"
+      }
+    },
+    {
+      "id": "retreat",
+      "color": "#b07a4a",
+      "title": {
+        "en": "Withdrawal",
+        "hi": "वापसी"
+      }
+    }
   ],
   "fields": {
     "normal_date": {
       "type": "text",
-      "label": { "en": "Normal arrival", "hi": "सामान्य आगमन" }
+      "label": {
+        "en": "Normal arrival",
+        "hi": "सामान्य आगमन"
+      }
     }
   },
   "note": {
@@ -27,5 +58,6 @@
     "imd"
   ],
   "attribution": "Normal onset and withdrawal dates: India Meteorological Department.",
-  "_arrows": "\"arrows\": true makes the build shape each run's width into an arrowhead and keeps it unclipped, so a flow may come in off the sea. The engine reads the width profile, never this layer's name."
+  "_arrows": "\"arrows\": true makes the build shape each run's width into an arrowhead and keeps it unclipped, so a flow may come in off the sea. The engine reads the width profile, never this layer's name.",
+  "_float": "An arrow is a diagram over the country, not a thing lying on it: the model never hides it. Laid on the surface, the Ghats and the north-eastern hills sawed the branches into fragments."
 }
