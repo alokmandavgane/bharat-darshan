@@ -68,10 +68,12 @@ const store = createStore({
   // The URL asked for somewhere in particular -- a state, an item or a camera. Such a
   // visitor is arriving, not being introduced, so the engine skips the entrance.
   linked: !!(url.cam || url.view || url.state || url.item || url.plate),
-  surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
-  // Atlas furniture (PLAN.md section 3, item 6): the parallels and meridians, off until
-  // asked for. The lines are 2 KB and are fetched the first time they are switched on.
-  graticule: false,
+  // The sea and the neighbours are on by default (owner's call, 2026-09-22): the backdrop
+  // is fetched after the first frame, so the first view stays within its budget.
+  surroundings: true,
+  // Atlas furniture (PLAN.md section 3, item 6): the parallels and meridians, on by
+  // default too. The lines are 2 KB.
+  graticule: true,
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to
   // `url.drafts || import.meta.env.DEV` once the owner has reviewed them.

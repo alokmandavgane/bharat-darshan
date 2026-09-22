@@ -34,7 +34,7 @@ dem = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(dem)
 
 SCALE = 3.0          # tiles of the project grid across and down, India in the middle
-HEIGHT_PX = 1280     # about 8 km per pixel, which is all a backdrop needs
+HEIGHT_PX = 640      # about 16 km per pixel: a backdrop, and now on by default, so it is kept small
 ZOOM = 4             # terrain tiles at roughly 10 km per pixel
 OCEAN_STEP_M = 50.0  # coarser than the country tiers: this is scenery, not bathymetry
 

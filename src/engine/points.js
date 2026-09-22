@@ -1,13 +1,11 @@
 // @ts-check
 // The `points` layer type (PLAN.md section 5) as HTML markers: sticker-like pins that
 // ride the terrain (and the lifted block) through the same projection as the labels.
-// A layer's `marker` says what the element is: a clay token with the category's glyph
-// (default), the name alone for a stretch of country (`label`), a proportional circle
-// (`symbol`), or -- for the `dot` beads and `model` figurines the GPU draws (marks.js)
-// -- only the name, set beside the bead or above the figurine. The engine knows this
+// A layer's `marker` says what the element is: the name alone for a stretch of country
+// (`label`), a proportional circle (`symbol`), or -- for the clay pegs (the default
+// `token`), the `dot` beads and the `model` figurines the GPU draws (marks.js) -- only
+// the name, set beside the bead or above the peg or figurine. The engine knows this
 // type and these markers, never a layer's id.
-import { glyphSvg } from '../glyphs.js';
-
 const TOKEN = { 1: 26, 2: 22, 3: 19 };   // token diameter by priority, px, close up
 const GAP = 2;
 const NAME_ZOOM = 1800;                  // below this view height, the most famous places show their names
@@ -18,7 +16,7 @@ const NAME_ZOOM = 1800;                  // below this view height, the most fam
 const SIZE_ZOOM = [1200, 4600];          // view height over which they shrink
 const SIZE_SCALE = [1, 0.62];            // ...from this to this
 const POP_STAGGER_MS = 26;               // between one token appearing and the next
-const MODEL_PX = 32;                     // about how tall a figurine stands, for its name tag
+const MODEL_PX = 32;                     // about how tall a figurine or a peg stands, for its name tag
 
 /**
  * The famous few at country zoom, the rest as the camera comes in. The home view is
@@ -101,15 +99,14 @@ export function createPoints(container, { text, onSelect }) {
       if (asSymbol || asDot) el.style.setProperty('--base', `${base.toFixed(1)}px`);
       const name = document.createElement('span');
       name.className = 'marker-name';
-      if (asLabel || asDot || asModel) {
-        el.append(name);                 // the GPU draws the thing itself; this is its name
-      } else {
-        const token = document.createElement('span');
-        token.className = 'marker-token';
+      if (asSymbol) {
         // A proportional circle is read by its area; a glyph inside one that may be ten
         // pixels across is not read at all, so a symbol is the disc alone.
-        if (!asSymbol) token.innerHTML = glyphSvg(cat.icon || layer.icon);   // static markup from the glyph set only
+        const token = document.createElement('span');
+        token.className = 'marker-token';
         el.append(token, name);
+      } else {
+        el.append(name);                 // the GPU draws the thing itself; this is its name
       }
       container.appendChild(el);
       // Label width is estimated from the text, never measured: reading offsetWidth in
@@ -147,7 +144,8 @@ export function createPoints(container, { text, onSelect }) {
       const on = active.has(id);
       for (const rec of items) {
         const { item, el, name, kind } = rec;
-        const asLabel = kind === 'label', asDot = kind === 'dot', asModel = kind === 'model', asSymbol = kind === 'symbol';
+        const asLabel = kind === 'label', asDot = kind === 'dot', asSymbol = kind === 'symbol';
+        const asModel = kind === 'model' || kind === 'token';   // a peg's name hangs above it like a figurine's
         const isSel = selected && selected.layer === id && selected.id === item.id;
         const size = (rec.base || TOKEN[item.priority] || TOKEN[3]) * mscale;
         let show = on && (drafts || item.status === 'reviewed');
@@ -233,6 +231,11 @@ export function createPoints(container, { text, onSelect }) {
     return layers.get(layerId)?.items.find((x) => x.item.id === itemId)?.item || null;
   }
 
+  /** A loaded layer's file, as it was given: what the GPU markers are built from. */
+  function get(layerId) {
+    return layers.get(layerId)?.layer || null;
+  }
+
   /** The structured columns a layer declares on top of the base item schema. */
   function fields(layerId) {
     return layers.get(layerId)?.layer.fields || null;
@@ -242,5 +245,5 @@ export function createPoints(container, { text, onSelect }) {
     return layers.get(layerId)?.layer.categories || [];
   }
 
-  return { setLayer, remove, update, list, find, categories, fields, get loaded() { return [...layers.keys()]; } };
+  return { setLayer, remove, update, list, find, get, categories, fields, get loaded() { return [...layers.keys()]; } };
 }

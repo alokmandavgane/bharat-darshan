@@ -59,6 +59,12 @@
          its name, its key in miniature, and a switch (PLAN.md section 3, "Layout"). -->
     <div class="menu paper" id="menu" hidden>
       <div class="menu-scroll">
+        <!-- Finding a layer or a setting by name: the list is long enough to want it. -->
+        <div class="menu-find">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input class="menu-search" type="search" autocomplete="off" data-i18n-placeholder="menu.find" data-i18n-aria-label="menu.find">
+          <p class="menu-none" hidden data-i18n="list.none">Nothing found</p>
+        </div>
         <section class="menu-section menu-view">
           <div class="menu-head">
             <h3 data-i18n="menu.view">View</h3>
@@ -86,10 +92,6 @@
             <input id="relief-slider" class="relief-slider" type="range" min="0" max="30" step="1" value="12" data-i18n-aria-label="relief.aria">
             <span class="relief-value" aria-live="off">12×</span>
           </div>
-        </section>
-        <section class="menu-section scrubber" hidden>
-          <h3 data-i18n="scrubber.heading">Through the year</h3>
-          <div class="chips scrubber-row" role="group"></div>
         </section>
         <section class="menu-section">
           <h3 data-i18n="menu.layers">Layers</h3>
@@ -175,7 +177,6 @@
           </div>
           <ul class="unit-list" hidden></ul>
         </div>
-        <div class="month-panel" hidden></div>
         <!-- The atlas's pages when none is open; the open page's own words and its layers
              when one is (PLAN.md D11). -->
         <div class="contents" hidden></div>

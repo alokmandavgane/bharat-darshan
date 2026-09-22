@@ -12,6 +12,7 @@ uniform vec3 uRankPx;        // half-width in pixels for rank 1, 2, 3
 uniform vec3 uRankZoom;      // view height (km) below which each rank appears
 uniform float uZoom;
 uniform float uSelectedIdx;  // index of the highlighted item, or -1
+uniform float uFloat;        // 1: a wire above the model rather than a stroke on it
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
@@ -41,8 +42,13 @@ float byRank(vec3 v) {
 
 void main() {
   vUv = vec2(position.x / uSizeKm.x + 0.5, position.z / uSizeKm.y + 0.5);
+  float ground = lift(texture(uHeight, luv(vUv)).r);
+  // A floating line -- a parallel, a meridian -- is a wire stretched above the model at
+  // the height of a 1,500 m hill, draped only where the land stands higher, so the relief
+  // never cuts it. It rises and falls with the exaggeration like everything else.
+  if (uFloat > 0.5) ground = max(ground, lift(1500.0));
   // A hair above the surface: enough to beat z-fighting, far below anything the eye reads.
-  float y = lift(texture(uHeight, luv(vUv)).r) + uLift + 0.15;
+  float y = ground + uLift + 0.15;
   vec4 clip = projectionMatrix * modelViewMatrix * vec4(position.x, y, position.z, 1.0);
   vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y, position.z + dir.y, 1.0);
 

@@ -43,7 +43,8 @@ export function buildModel(recipe) {
   const chunks = [];
   let verts = 0;
   for (const part of recipe.parts) {
-    const g = primitive(part).toNonIndexed();       // no shared vertices: every face is flat
+    const g0 = primitive(part);
+    const g = g0.index ? g0.toNonIndexed() : g0;    // no shared vertices: every face is flat
     // Turn (y) after tilt (x) after roll (z): a petal is leaned outward and then fanned
     // round, which is the order a hand would do it in.
     const rot = part.rot || [0, 0, 0];
@@ -85,4 +86,19 @@ export function buildModel(recipe) {
 /** The bead a `dot` layer draws: a low-poly sphere of radius 1, standing on the ground. */
 export function beadGeometry() {
   return buildModel({ id: 'bead', footprint: 1.15, parts: [{ shape: 'sphere', r: 1, at: [0, 1, 0], color: '#ffffff', tint: true, segments: 10 }] });
+}
+
+/** Where a peg's head is, so the glyph decal can sit on it (model units). */
+export const PEG = { headY: 8.6, headR: 5 };
+
+/**
+ * The clay token a place is marked with: a pale post and a head in the category's
+ * colour, the glyph going on the head as a decal (marks.js). Ten units across the head,
+ * so a size of 2.6 is the 26 px token close up.
+ */
+export function pegGeometry() {
+  return buildModel({ id: 'peg', footprint: 4.6, parts: [
+    { shape: 'cylinder', rt: 1.0, rb: 1.7, h: 5, at: [0, 2.5, 0], color: '#e6dbc6', segments: 10 },
+    { shape: 'sphere', r: PEG.headR, at: [0, PEG.headY, 0], color: '#ffffff', tint: true, segments: 16 },
+  ] });
 }

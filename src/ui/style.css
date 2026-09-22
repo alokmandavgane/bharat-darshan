@@ -297,7 +297,25 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .relief-slider { flex: 1; accent-color: var(--accent); min-height: 28px; margin: 0; }
 .relief-value { min-width: 3ch; text-align: right; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--muted); }
 
-/* The scrubber's switches: the one kind of chip left. */
+/* The menu's own search: the list is long enough to want one. */
+.menu-find { position: relative; margin: 10px 0 0; }
+.menu-find .search-icon { left: 11px; }
+.menu-search {
+  font: inherit;
+  font-size: 0.9rem;
+  width: 100%;
+  margin: 0;
+  padding: 7px 12px 7px 32px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+}
+.menu-search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+.menu-none { margin: 10px 4px 2px; font-size: 0.9rem; color: var(--muted); }
+.menu[data-finding="1"] .menu-view[data-empty="1"], .menu[data-finding="1"] .relief, .menu[data-finding="1"] .menu-head { display: none; }
+.menu[data-finding="1"] .menu-view { border-top: 0; }
+
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   font: inherit;
@@ -533,10 +551,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-info:hover, .sheet-info[aria-expanded="true"] { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
 .sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
-/* The scrubber: the whole year and each month, as small switches. */
-.scrubber-row { gap: 4px; }
-.month-panel { margin-bottom: 4px; }
-.month-panel .facts-heading { margin-top: 0; }
 
 /* What a regional layer has for the state on show: read here, not drawn on the map. */
 .facts-heading {
@@ -1075,11 +1089,11 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 }
 .marker-as-dot .marker-name:lang(hi) { font-size: 11.5px; }
 .marker-as-dot:hover .marker-name, .marker-as-dot:focus-visible .marker-name, .marker-as-dot.marker-active .marker-name { color: var(--accent-deep); }
-/* A `model` layer: the figurine is drawn by the GPU; its name tag hangs above it on
-   hover, when open, and for the famous close up, like a token's. */
-.marker-as-model { --size: 0px; }
-.marker-as-model::before { display: none; }
-.marker-as-model .marker-name {
+/* A `model` layer's figurine, and the clay peg of a `token` layer, are drawn by the GPU;
+   the name tag hangs above them on hover, when open, and for the famous close up. */
+.marker-as-model, .marker-as-token { --size: 0px; }
+.marker-as-model::before, .marker-as-token::before { display: none; }
+.marker-as-model .marker-name, .marker-as-token .marker-name {
   left: 50%;
   top: calc(-34px * var(--mscale, 1));
   transform: translate(-50%, -100%);

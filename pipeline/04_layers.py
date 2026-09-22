@@ -171,8 +171,8 @@ def validate_layer(layer, folder, registry):
             p.append('a lines layer needs source.format and source.files')
         if src.get('join', 'name') not in JOINS:
             p.append(f"source.join must be one of {JOINS}")
-    elif layer.get('flow'):
-        p.append('only a lines layer can set flow')
+    elif layer.get('flow') or layer.get('float'):
+        p.append('only a lines layer can set flow or float')
     for name, spec in (layer.get('fields') or {}).items():
         if spec.get('type') not in FIELD_TYPES:
             p.append(f'field {name}: type must be one of {FIELD_TYPES}')
@@ -926,7 +926,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
     # the build did with the source, for whoever edits the layer. What the reader is owed --
     # who published it, under what licence -- is the registry's job now, and saying it twice
     # is the sprawl the registry exists to stop.
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'model', 'flow', 'size', 'title', 'icon', 'group', 'categories',
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'model', 'flow', 'float', 'size', 'title', 'icon', 'group', 'categories',
                                   'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)

@@ -46,10 +46,9 @@ export function createShell(root, store) {
   const unitsCount = $('.units-count');
   const unitGrid = $('.unit-grid');
   const contents = $('.contents');
-  const monthPanel = $('.month-panel');
   const layerList = $('.layer-list');
-  const scrubber = $('.scrubber');
-  const scrubberRow = $('.scrubber-row');
+  const menuSearch = /** @type {HTMLInputElement} */ ($('.menu-search'));
+  const menuNone = $('.menu-none');
   const sheet = $('.sheet');
   const sheetBody = $('.sheet-body');
   const infoBtn = $('.sheet-info');
@@ -102,6 +101,45 @@ export function createShell(root, store) {
   root.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !menu.hidden) { setMenu(false); e.stopImmediatePropagation(); }
   }, true);
+
+  /**
+   * The menu's own search: typing narrows the layers and the view's switches to those
+   * whose names, keys or group headings match, in whichever language is showing.
+   */
+  function filterMenu() {
+    const q = menuSearch.value.trim().toLowerCase();
+    menu.dataset.finding = q ? '1' : '';
+    let shown = 0;
+    for (const group of menu.querySelectorAll('.layer-group')) {
+      const heading = group.querySelector('h4')?.textContent?.toLowerCase() || '';
+      let any = false;
+      for (const row of group.querySelectorAll('.layer-row')) {
+        const hit = !q || heading.includes(q) || (row.textContent || '').toLowerCase().includes(q);
+        /** @type {HTMLElement} */ (row).hidden = !hit;
+        any = any || hit;
+      }
+      /** @type {HTMLElement} */ (group).hidden = !any;
+      if (any) shown++;
+    }
+    let toggles = 0;
+    for (const b of menu.querySelectorAll('.toggle')) {
+      const hit = !q || (b.textContent || '').toLowerCase().includes(q);
+      /** @type {HTMLElement} */ (b).hidden = !hit;
+      if (hit) toggles++;
+    }
+    const view = /** @type {HTMLElement} */ (menu.querySelector('.menu-view'));
+    view.dataset.empty = toggles ? '' : '1';
+    menuNone.hidden = !q || !!(shown + toggles);
+  }
+  menuSearch.addEventListener('input', filterMenu);
+  menuSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuSearch.value) { menuSearch.value = ''; filterMenu(); e.stopPropagation(); }
+  });
+  menuBtn.addEventListener('click', () => {
+    // A field that takes focus on a phone brings the keyboard up over the list; on a
+    // fine pointer it is where the hand goes next.
+    if (!menu.hidden && fine.matches) menuSearch.focus({ preventScroll: true });
+  });
   langOptions.forEach((b) => b.addEventListener('click', () => store.set('lang', b.dataset.lang)));
   function renderLang() {
     const lang = store.get('lang');
@@ -123,11 +161,6 @@ export function createShell(root, store) {
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     else if (store.get('selection')) store.set('selection', null);
     else if (store.get('plate')) closePlate();
-  });
-  scrubberRow.addEventListener('click', (e) => {
-    const b = /** @type {HTMLElement} */ (e.target).closest('button[data-month]');
-    if (!b) return;
-    store.set('month', b.dataset.month ? Number(b.dataset.month) : null);
   });
 
   /**
@@ -225,6 +258,7 @@ export function createShell(root, store) {
       for (const layer of layers) section.appendChild(layerRow(layer, active.has(layer.id)));
       layerList.appendChild(section);
     }
+    if (menuSearch.value) filterMenu();
   }
 
   const LEGEND_SOURCES = 3;   // a legend says where it came from; it is not the credits screen
@@ -380,41 +414,6 @@ export function createShell(root, store) {
     }
   }
 
-  /**
-   * The scrubber (PLAN.md section 9, "India through the year"): thirteen switches, the
-   * whole year and each month. It appears only when something on show has months to
-   * scrub, which the layer's own declared fields say, so no layer id appears here.
-   */
-  function renderScrubber() {
-    const catalog = store.get('catalog') || [];
-    // Before the catalogue lands there is nothing to say, and nothing to clear either:
-    // clearing here would throw away a month the URL asked for.
-    if (!catalog.length) { scrubber.hidden = true; return; }
-    const active = new Set(store.get('layers')?.active || []);
-    const has = catalog.some((l) => active.has(l.id)
-      && Object.values(l.fields || {}).some((f) => f.type === 'month'));
-    scrubber.hidden = !has;
-    if (!has) {
-      if (store.get('month')) store.set('month', null);
-      return;
-    }
-    const at = store.get('month');
-    const make = (value, label, title) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'chip chip-month';
-      b.dataset.month = value === null ? '' : String(value);
-      b.setAttribute('aria-pressed', String(at === value));
-      b.textContent = label;
-      if (title) b.title = title;
-      return b;
-    };
-    scrubberRow.replaceChildren(
-      make(null, t('month.all')),
-      ...Array.from({ length: 12 }, (_, i) => make(i + 1, t(`month.short.${i + 1}`), t(`month.${i + 1}`))),
-    );
-  }
-
   // --- the info button: about the map, how to use it, credits; and a card's review status
   function setAbout(open) {
     about.hidden = !open;
@@ -478,12 +477,10 @@ export function createShell(root, store) {
     if (store.get('sheet')?.snap === 'peek') store.set('sheetSnap', { name: 'half', t: performance.now() });
   });
   const openItem = (btn) => store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
-  for (const el of [facts, monthPanel]) {
-    el.addEventListener('click', (e) => {
-      const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-layer][data-item]');
-      if (btn) openItem(btn);
-    });
-  }
+  facts.addEventListener('click', (e) => {
+    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-layer][data-item]');
+    if (btn) openItem(btn);
+  });
   for (const el of [list, unitGrid]) {
     el.addEventListener('click', (e) => {
       const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id], button[data-item]');
@@ -867,62 +864,6 @@ export function createShell(root, store) {
     }
   }
 
-  /**
-   * With a month chosen and no state lifted, the sheet answers for the whole country:
-   * what falls in it, and where. The engine's index is already narrowed to the month,
-   * so this is only the rendering of it.
-   */
-  function renderMonth() {
-    monthPanel.replaceChildren();
-    const month = store.get('month');
-    monthPanel.hidden = !month;
-    if (!month) return;
-    const name = t(`month.${month}`);
-    const h = document.createElement('h2');
-    h.className = 'facts-heading';
-    h.textContent = t('sheet.month.heading', { month: name });
-    const rows = (store.get('regional') || [])
-      // Only layers that are about time at all. A language is not in any month, and
-      // listing every one of them under April is not what the year asked.
-      .filter((layer) => Object.values(layer.fields || {}).some((f) => f.type === 'month'))
-      .flatMap((layer) => {
-        // Within those, items with a month of their own and those with none: Eid can
-        // fall in any month, so leaving it out of every list would be the wrong tidy.
-        const keep = (layer.items || []).filter((i) => (i.month === month || !i.month)
-          && (store.get('drafts') || i.status === 'reviewed'));
-        return keep.map((i) => ({ layer, item: i }));
-      });
-    if (!rows.length) {
-      const p = document.createElement('p');
-      p.className = 'legend-note';
-      p.textContent = t('scrubber.none', { month: name });
-      monthPanel.append(h, p);
-      return;
-    }
-    const r = store.get('regions');
-    const ul = document.createElement('ul');
-    ul.className = 'facts-list';
-    for (const { layer, item } of rows) {
-      const where = (item.regions || []).map((x) => r?.byId?.[x]).filter(Boolean);
-      const li = document.createElement('li');
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.dataset.layer = layer.id;
-      b.dataset.item = item.id;
-      const nm = document.createElement('span');
-      nm.textContent = pick(item.name);
-      const sub = document.createElement('span');
-      sub.className = 'facts-list-when';
-      sub.textContent = where.length > 3
-        ? t('facts.regions', { n: formatNumber(where.length) })
-        : where.map((x) => pick(x.name)).join(', ');
-      b.append(nm, sub);
-      li.appendChild(b);
-      ul.appendChild(li);
-    }
-    monthPanel.append(h, ul);
-  }
-
   /** Where the open card sits in the tour's route, or -1 when it is not one of its stops. */
   function stepIndex() {
     const sel = store.get('item');
@@ -1032,7 +973,6 @@ export function createShell(root, store) {
       closeBtn.textContent = '×';
       show(facts, true);
       show(finder, false);
-      show(monthPanel, false);
       show(contents, false);
       show(units, false);
       return;
@@ -1042,7 +982,6 @@ export function createShell(root, store) {
     show(facts, !!u);
     show(finder, true);
     show(contents, false);
-    show(monthPanel, false);
     show(units, !u);
     if (u) {
       title.textContent = pick(u.name);
@@ -1059,7 +998,6 @@ export function createShell(root, store) {
     }
 
     setDraft(false);
-    renderMonth();
     contents.replaceChildren();
     const data = store.get('plates');
     alt.hidden = true;
@@ -1116,7 +1054,6 @@ export function createShell(root, store) {
   function renderLayers() {
     renderLayerList();
     renderKey();
-    renderScrubber();
     if (sheet.dataset.view === 'page') renderSheet();
   }
 
@@ -1146,7 +1083,6 @@ export function createShell(root, store) {
   fetch('/data/sources.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (d) store.set('sources', d);
   }).catch(() => {});
-  store.subscribe('month', renderScrubber);
   store.subscribe('tour', renderSteps);
   for (const k of ['selection', 'level', 'item']) store.subscribe(k, () => setAbout(false));
   store.subscribe('catalog', renderLayers, { immediate: true });

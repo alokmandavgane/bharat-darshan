@@ -119,7 +119,7 @@ function segDist2(x, z, ax, az, bx, bz) {
  * @param {any} surface uniforms of the terrain or of a lifted block
  * @param {boolean} onBlock true for the copy drawn on the lifted block
  */
-function lineMaterial(surface, onBlock, flow) {
+function lineMaterial(surface, onBlock, flow, float_ = false) {
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
     transparent: true, depthWrite: false, side: DoubleSide, premultipliedAlpha: true,
@@ -136,6 +136,7 @@ function lineMaterial(surface, onBlock, flow) {
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
       uFlow: { value: flow ? 1 : 0 },
+      uFloat: { value: float_ ? 1 : 0 },
       uTime: { value: 0 },
     },
   });
@@ -175,7 +176,7 @@ export function createLines(scene, terrainUniforms) {
   function setBlockMesh(entry) {
     if (entry.block) { scene.remove(entry.block); entry.block.material.dispose(); entry.block = null; }
     if (!blockUniforms) return;
-    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow));
+    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -189,11 +190,11 @@ export function createLines(scene, terrainUniforms) {
       this.remove(data.id);
       const { geometry, records } = linesGeometry(data);
       const flow = !!data.flow;
-      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow));
+      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, plate, block: null };
+      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);

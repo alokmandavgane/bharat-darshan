@@ -114,9 +114,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const active = new Set(store.get('layers')?.active || []);
     // The GPU markers decide what shows before the frame is drawn; the HTML ones after,
     // since they are placed on it. Both thin by the same zoom bands and shrink together.
-    marks?.setView({ active, level, drafts: !!store.get('drafts'), month: store.get('month'),
-      maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom) });
+    const now = performance.now();
+    const until = marks?.setView({ active, level, drafts: !!store.get('drafts'), month: store.get('month'),
+      maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom), now }) || 0;
     draw();
+    if (until > now) invalidate();      // pieces are still springing up
     // markers first (they are interactive), then labels keep clear of them
     const taken = points.update({ project, level, viewport, camera: cam, active,
       selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month') });
@@ -315,6 +317,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   // --- layers (data, never ids): load a layer's file the first time it is switched on
+  /** A points layer the GPU draws: everything but a proportional circle or a bare name. */
+  const drawnByGpu = (data) => !['symbol', 'label'].includes(data.marker);
   const loading = new Set();
   const failed = new Set();
 
@@ -346,9 +350,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       if (entry.type === 'points' && !points.loaded.includes(id)) {
         done((data) => {
           points.setLayer(data);
-          // Beads and figurines are drawn by the GPU; the HTML element then carries only
-          // the name. The figurines take a moment to build, so the frame follows them.
-          if (data.marker === 'dot' || data.marker === 'model') marks?.setLayer(data).then(invalidate);
+          // Pegs, beads and figurines are drawn by the GPU; the HTML element then carries
+          // only the name. The pieces take a moment to build, so the frame follows them.
+          if (drawnByGpu(data)) marks?.setLayer(data).then(invalidate);
           tour.refresh();
           publishIndex();
         });
@@ -376,7 +380,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           // Items with a home are drawn there as tokens, exactly as a place is; the rest
           // are read in the state cards alone.
           const anchored = (data.items || []).filter((i) => typeof i.x === 'number');
-          if (anchored.length) { points.setLayer({ ...data, items: anchored }); tour.refresh(); }
+          if (anchored.length) {
+            const asPoints = { ...data, items: anchored };
+            points.setLayer(asPoints);
+            marks?.setLayer(asPoints).then(invalidate);
+            tour.refresh();
+          }
           publishRegional();
           publishIndex();
         });
@@ -917,6 +926,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     scene.add(terrain.mesh);
     lines = createLines(scene, terrain.uniforms);
     marks = createMarks(scene, terrain.uniforms, { loadRecipe: (name) => loadJson(`models/${name}.json`) });
+    // The default layers are small and usually land before the first tier does, so they
+    // were handed to points.js with no GPU to draw them yet: hand them over now.
+    for (const id of points.loaded) {
+      const data = points.get(id);
+      if (data && drawnByGpu(data)) marks.setLayer(data).then(invalidate);
+    }
     lines.setView(viewport.w, viewport.h, store.get('camera').zoom);
     loadActiveLayers();
     applySurroundings(!!store.get('surroundings'));
@@ -946,6 +961,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (entrance) rise();
     invalidate();
     store.set('status', 'ready');
+    if (backdropWanted) { backdropWanted = false; loadBackdrop(); }
     if (quality.heightTier !== FIRST_TIER && manifest.tiers[quality.heightTier]) {
       loadTier(manifest, quality.heightTier)
         .then((t) => {
@@ -984,13 +1000,18 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
   store.subscribe('graticule', applyGraticule);
 
-  /** Surroundings on: sea and neighbours as before. Off (default): India alone as a cut-out with walls. */
+  /**
+   * Surroundings on (the default): sea and neighbours. Off: India alone as a cut-out with
+   * walls. The wide backdrop is fetched after the first frame is on screen, never before:
+   * it is scenery, and the first view's budget is spent on the model.
+   */
+  let backdropWanted = false;
   function applySurroundings(on) {
     if (!terrain) return;
     terrain.uniforms.uOnlyIndia.value = on ? 0 : 1;
     if (countryWalls) countryWalls.visible = !on;
     if (world) world.mesh.visible = on;
-    else if (on) loadBackdrop();
+    else if (on) { if (store.get('status') === 'ready') loadBackdrop(); else backdropWanted = true; }
     invalidate();
   }
 
@@ -1020,6 +1041,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // For checks from the console or a script through window.bd, as CLAUDE.md describes:
     // the uniforms are what a look at the shading has to be measured against.
     get terrain() { return terrain; },
+    get marks() { return marks; },
+    get world() { return world; },
     dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); marks?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
   };
 }
