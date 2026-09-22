@@ -1,0 +1,24 @@
+{
+  "id": "steel",
+  "type": "points",
+  "group": "industry",
+  "title": {
+    "en": "Iron and steel",
+    "hi": "लोहा और इस्पात"
+  },
+  "icon": "works",
+  "default_on": false,
+  "categories": [
+    { "id": "inland",  "icon": "works", "color": "#8e3f33", "title": { "en": "Inland, near the mines", "hi": "थलीय, खदानों के निकट" } },
+    { "id": "coastal", "icon": "works", "color": "#3f8a84", "title": { "en": "Coastal, near a port",   "hi": "तटीय, बंदरगाह के निकट" } }
+  ],
+  "note": {
+    "en": "Steel is made where coal and iron ore can meet cheaply, which is why most of these plants stand on the eastern belt and take the same rust colour as the ore on the minerals page. The coastal ones invert the logic: they bring the raw material in by sea.",
+    "hi": "इस्पात वहाँ बनता है जहाँ कोयला और लौह अयस्क सस्ते में मिल सकें, इसीलिए इनमें से अधिकांश संयंत्र पूर्वी पट्टी पर हैं और खनिज पृष्ठ के अयस्क वाला ही जंग-रंग लेते हैं। तटीय संयंत्र यह तर्क उलट देते हैं: वे कच्चा माल समुद्र से लाते हैं।"
+  },
+  "sources": [
+    "ministry-of-steel",
+    "wikipedia"
+  ],
+  "attribution": "Plants, their collaborations and their dates drafted from Ministry of Steel and operator material and checked against each plant's own article; every item awaits review."
+}

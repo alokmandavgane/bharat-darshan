@@ -1,0 +1,19 @@
+{
+  "id": "steel",
+  "section": "industry",
+  "order": 1,
+  "title": {
+    "en": "Iron and steel",
+    "hi": "लोहा और इस्पात"
+  },
+  "blurb": {
+    "en": "Why the works are where they are. The coal of Jharkhand and the ore of Odisha and Chhattisgarh lie close together, and eleven of these plants stand between them; three on the coast do it the other way and import what they melt.",
+    "hi": "कारखाने जहाँ हैं, वहाँ क्यों हैं। झारखंड का कोयला और ओडिशा-छत्तीसगढ़ का अयस्क पास-पास हैं, और इनमें ग्यारह संयंत्र उनके बीच खड़े हैं; तट के तीन उलटा करते हैं — जो गलाते हैं, वह आयात करते हैं।"
+  },
+  "base": "plain",
+  "layers": [
+    "steel"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

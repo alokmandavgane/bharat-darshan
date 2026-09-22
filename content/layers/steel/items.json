@@ -1,0 +1,352 @@
+[
+  {
+    "id": "jamshedpur",
+    "status": "draft",
+    "name": {
+      "en": "Jamshedpur",
+      "hi": "जमशेदपुर"
+    },
+    "anchor": {
+      "lat": 22.8,
+      "lon": 86.19
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "inland",
+    "priority": 1,
+    "blurb": {
+      "en": "India's first integrated steel plant, built by the Tatas from 1907 where the coal and the ore country meet. The town was laid out around the works.",
+      "hi": "भारत का पहला समेकित इस्पात संयंत्र, जिसे टाटा ने 1907 से वहाँ बनाया जहाँ कोयला और अयस्क के क्षेत्र मिलते हैं। नगर इसी कारखाने के चारों ओर बसाया गया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jamshedpur",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "bhilai",
+    "status": "draft",
+    "name": {
+      "en": "Bhilai",
+      "hi": "भिलाई"
+    },
+    "anchor": {
+      "lat": 21.21,
+      "lon": 81.38
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "inland",
+    "priority": 1,
+    "blurb": {
+      "en": "Built with Soviet help from the mid-1950s and long the country's rail mill: most of the track Indian Railways runs on has been rolled here.",
+      "hi": "1950 के दशक के मध्य से सोवियत सहयोग से बना, और लंबे समय तक देश की रेल-पटरी मिल: भारतीय रेल की अधिकांश पटरी यहीं ढली है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhilai_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "bokaro",
+    "status": "draft",
+    "name": {
+      "en": "Bokaro",
+      "hi": "बोकारो"
+    },
+    "anchor": {
+      "lat": 23.67,
+      "lon": 86.15
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "inland",
+    "priority": 1,
+    "blurb": {
+      "en": "A Soviet-designed plant of the 1960s and 70s, laid out for flat products, on the Damodar between the Jharia coal and Odisha's ore.",
+      "hi": "1960-70 के दशक का सोवियत अभिकल्पित संयंत्र, चपटे उत्पादों के लिए बना, दामोदर पर झरिया के कोयले और ओडिशा के अयस्क के बीच।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bokaro_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "rourkela",
+    "status": "draft",
+    "name": {
+      "en": "Rourkela",
+      "hi": "राउरकेला"
+    },
+    "anchor": {
+      "lat": 22.26,
+      "lon": 84.85
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "inland",
+    "priority": 1,
+    "blurb": {
+      "en": "The first public-sector integrated plant, built with West German collaboration at the end of the 1950s, on the Brahmani in northern Odisha.",
+      "hi": "पहला सार्वजनिक क्षेत्र का समेकित संयंत्र, 1950 के दशक के अंत में पश्चिम जर्मन सहयोग से, उत्तरी ओडिशा में ब्राह्मणी नदी पर बना।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rourkela_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "durgapur",
+    "status": "draft",
+    "name": {
+      "en": "Durgapur",
+      "hi": "दुर्गापुर"
+    },
+    "anchor": {
+      "lat": 23.55,
+      "lon": 87.32
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "inland",
+    "priority": 2,
+    "blurb": {
+      "en": "Built with British collaboration at the end of the 1950s, in the Damodar valley's industrial belt beside the Raniganj coalfield.",
+      "hi": "1950 के दशक के अंत में ब्रिटिश सहयोग से बना, रानीगंज कोयला क्षेत्र के पास दामोदर घाटी की औद्योगिक पट्टी में।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Durgapur_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "burnpur",
+    "status": "draft",
+    "name": {
+      "en": "Burnpur",
+      "hi": "बर्नपुर"
+    },
+    "anchor": {
+      "lat": 23.66,
+      "lon": 86.94
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "inland",
+    "priority": 2,
+    "blurb": {
+      "en": "The Indian Iron and Steel Company's works, going back to 1918 and now the oldest plant SAIL runs.",
+      "hi": "इंडियन आयरन एंड स्टील कंपनी का कारखाना, जिसकी शुरुआत 1918 से है और जो अब सेल का सबसे पुराना संयंत्र है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/IISCO_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "kalinganagar",
+    "status": "draft",
+    "name": {
+      "en": "Kalinganagar",
+      "hi": "कलिंगनगर"
+    },
+    "anchor": {
+      "lat": 20.98,
+      "lon": 86.02
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "inland",
+    "priority": 2,
+    "blurb": {
+      "en": "Tata Steel's greenfield plant in Jajpur, in production since 2016, on the ore belt it draws from.",
+      "hi": "जाजपुर में टाटा स्टील का नया संयंत्र, 2016 से उत्पादन में, उसी अयस्क पट्टी पर जहाँ से वह अयस्क लेता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kalinganagar",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "raigarh",
+    "status": "draft",
+    "name": {
+      "en": "Raigarh",
+      "hi": "रायगढ़"
+    },
+    "anchor": {
+      "lat": 21.9,
+      "lon": 83.4
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "inland",
+    "priority": 3,
+    "blurb": {
+      "en": "Jindal's works in eastern Chhattisgarh, which grew out of sponge iron and now rolls rails as well as plate.",
+      "hi": "पूर्वी छत्तीसगढ़ में जिंदल का कारखाना, जो स्पंज आयरन से बढ़ा और अब चादर के साथ रेल-पटरी भी ढालता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Raigarh",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "toranagallu",
+    "status": "draft",
+    "name": {
+      "en": "Toranagallu",
+      "hi": "तोरणगल्लु"
+    },
+    "anchor": {
+      "lat": 15.17,
+      "lon": 76.63
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "inland",
+    "priority": 1,
+    "blurb": {
+      "en": "JSW's Vijayanagar works, beside the Sandur iron belt: the largest steelworks on a single site in India.",
+      "hi": "संदूर लौह पट्टी के पास जेएसडब्ल्यू का विजयनगर कारखाना: भारत में एक ही स्थान पर सबसे बड़ा इस्पात संयंत्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Toranagallu",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "bhadravati",
+    "status": "draft",
+    "name": {
+      "en": "Bhadravati",
+      "hi": "भद्रावती"
+    },
+    "anchor": {
+      "lat": 13.84,
+      "lon": 75.71
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "inland",
+    "priority": 3,
+    "blurb": {
+      "en": "The Visvesvaraya works of 1923, the south's oldest steel plant, which smelted with charcoal from the forests around it before it turned to coke.",
+      "hi": "1923 का विश्वेश्वरैया कारखाना, दक्षिण का सबसे पुराना इस्पात संयंत्र, जो कोक पर आने से पहले आसपास के जंगलों के कोयले (चारकोल) से गलाता था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Visvesvaraya_Iron_and_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "salem",
+    "status": "draft",
+    "name": {
+      "en": "Salem",
+      "hi": "सेलम"
+    },
+    "anchor": {
+      "lat": 11.69,
+      "lon": 78.06
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "inland",
+    "priority": 3,
+    "blurb": {
+      "en": "SAIL's stainless steel plant in Tamil Nadu, which rolls and finishes flat stainless products rather than smelting ore.",
+      "hi": "तमिलनाडु में सेल का स्टेनलेस इस्पात संयंत्र, जो अयस्क गलाने के बजाय चपटे स्टेनलेस उत्पाद ढालता और परिष्कृत करता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Salem_Steel_Plant",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "visakhapatnam",
+    "status": "draft",
+    "name": {
+      "en": "Visakhapatnam",
+      "hi": "विशाखापत्तनम"
+    },
+    "anchor": {
+      "lat": 17.63,
+      "lon": 83.2
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "coastal",
+    "priority": 1,
+    "blurb": {
+      "en": "India's first shore-based integrated plant, on the Bay of Bengal: Bailadila ore comes in by rail and coal by ship.",
+      "hi": "भारत का पहला तटाश्रित समेकित संयंत्र, बंगाल की खाड़ी पर: बैलाडीला का अयस्क रेल से और कोयला जहाज़ से आता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rashtriya_Ispat_Nigam",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "hazira",
+    "status": "draft",
+    "name": {
+      "en": "Hazira",
+      "hi": "हज़ीरा"
+    },
+    "anchor": {
+      "lat": 21.1,
+      "lon": 72.63
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "coastal",
+    "priority": 2,
+    "blurb": {
+      "en": "On the Gujarat coast near Surat, reducing iron with natural gas rather than coke, and landing much of what it melts at its own jetty.",
+      "hi": "सूरत के पास गुजरात तट पर, कोक के बजाय प्राकृतिक गैस से लोहे का अपचयन करता है, और जो गलाता है उसका बड़ा भाग अपनी ही जेटी पर उतारता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Hazira",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "dolvi",
+    "status": "draft",
+    "name": {
+      "en": "Dolvi",
+      "hi": "डोलवी"
+    },
+    "anchor": {
+      "lat": 18.75,
+      "lon": 73.07
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "coastal",
+    "priority": 2,
+    "blurb": {
+      "en": "JSW's plant across the harbour from Mumbai, fed by sea rather than by mine, on the Amba river in Raigad district.",
+      "hi": "मुंबई के बंदरगाह के पार जेएसडब्ल्यू का संयंत्र, खदान के बजाय समुद्र से पोषित, रायगड ज़िले में अंबा नदी पर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/JSW_Steel",
+      "https://steel.gov.in/"
+    ]
+  }
+]
