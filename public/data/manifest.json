@@ -137,7 +137,7 @@
    "icon": "district",
    "group": "political",
    "default_on": false,
-   "count": 31,
+   "count": 32,
    "reviewed": 0,
    "categories": [
     {
@@ -163,6 +163,7 @@
     "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। सबसे महीन मोटाई में खिंची, ताकि जाल पहली ही स्क्रीन से पढ़ा जाए पर उस पर छा न जाए।"
    },
    "sources": [
+    "indian-shapefiles",
     "india-geodata",
     "lgd"
    ],
@@ -1100,11 +1101,11 @@
     }
    },
    "note": {
-    "en": "Twenty-one lines named and told, drawn over the whole railway the source holds inside India — about 40,000 km of it, fine and unnamed. India's is the fourth largest network in the world and the largest under one management; what it looks like is most of what there is to say about it.",
-    "hi": "इक्कीस लाइनें नाम और कथा सहित, उस पूरी रेल पर खिंचीं जो स्रोत में भारत के भीतर है — लगभग 40,000 किमी, महीन और बेनाम। भारत का जाल विश्व में चौथा सबसे बड़ा है और एक ही प्रबंधन में सबसे बड़ा; वह दिखता कैसा है, यही उसके बारे में कहने को सबसे अधिक है।"
+    "en": "Indian Railways' own track centrelines, 85,000 km of them, with 21 lines told by name. The source is a drawing rather than a network -- its sections do not quite meet -- so a named line is every track the drawing holds within eight km of the way it runs, which counts in a junction's approaches and the odd parallel branch.",
+    "hi": "भारतीय रेल की अपनी पटरियों की मध्यरेखाएँ, 85,000 किमी, जिनमें 21 लाइनें नाम और कथा सहित। स्रोत जाल नहीं, एक रेखाचित्र है — उसके खंड पूरी तरह मिलते नहीं — इसलिए नामित लाइन वह सब पटरी है जो उसके मार्ग के आठ किमी के भीतर रेखाचित्र में है; इसमें जंक्शन के पहुँच-मार्ग और कभी-कभार कोई समानांतर शाखा भी गिन ली जाती है।"
    },
    "sources": [
-    "natural-earth",
+    "indian-shapefiles",
     "indian-railways",
     "wikipedia"
    ],
@@ -1278,11 +1279,11 @@
     }
    ],
    "note": {
-    "en": "Thirty-five highways named and told, drawn over the whole road network the source holds inside India — about 54,000 km of it, fine and unnamed, so the shape of the country's traffic shows and not just the eight roads anyone can name. A route's course is the source's; the numbers are the Ministry's.",
-    "hi": "पैंतीस राजमार्ग नाम और कथा सहित, उस पूरे सड़क-जाल पर खिंचे जो स्रोत में भारत के भीतर है — लगभग 54,000 किमी, महीन और बेनाम, ताकि देश के यातायात का आकार दिखे, न कि केवल वे आठ सड़कें जिनके नाम सब जानते हैं। मार्ग की रेखा स्रोत की है; संख्याएँ मंत्रालय की।"
+    "en": "Every national highway in the country, each drawn as the Ministry's own survey holds it: 124,000 km of it, with the 35 that are told by name picked out over the rest. A highway's number is in the source, so a card and its course are the same road by construction and not by a guess at where it runs.",
+    "hi": "देश का हर राष्ट्रीय राजमार्ग, मंत्रालय के अपने सर्वेक्षण के अनुसार खिंचा: कुल 1,24,000 किमी, जिनमें से 35 नाम और कथा सहित बाक़ी के ऊपर उभारे गए हैं। राजमार्ग का क्रमांक स्रोत में ही है, इसलिए कार्ड और उसकी रेखा एक ही सड़क हैं — अनुमान से नहीं, रचना से।"
    },
    "sources": [
-    "natural-earth",
+    "indian-shapefiles",
     "morth",
     "wikipedia"
    ],
@@ -1468,8 +1469,8 @@
    "sha256": "de7a819901b2"
   },
   "sources.json": {
-   "size": 23875,
-   "sha256": "cdd0cc7d1042"
+   "size": 25939,
+   "sha256": "cd1182b6ebcf"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1652,12 +1653,12 @@
    "sha256": "20a640864fb8"
   },
   "layers/district-lines.json": {
-   "size": 265214,
-   "sha256": "6a089891ab0a"
+   "size": 408657,
+   "sha256": "94d699540189"
   },
   "layers/districts.json": {
    "size": 310433,
-   "sha256": "5dfed55284d0"
+   "sha256": "f3e39cd996fb"
   },
   "layers/festivals.json": {
    "size": 27590,
@@ -1708,8 +1709,8 @@
    "sha256": "f4569c2dd039"
   },
   "layers/rail.json": {
-   "size": 72467,
-   "sha256": "200b7ed902d8"
+   "size": 509490,
+   "sha256": "6592d7cb0a15"
   },
   "layers/ranges.json": {
    "size": 13461,
@@ -1724,8 +1725,8 @@
    "sha256": "b561f5b2ab8e"
   },
   "layers/roads.json": {
-   "size": 117590,
-   "sha256": "3e9354e2e42d"
+   "size": 441330,
+   "sha256": "f88419d1e14c"
   },
   "layers/steel.json": {
    "size": 11380,
@@ -1738,6 +1739,134 @@
   "layers/zones.json": {
    "size": 2516,
    "sha256": "8008bffeb5be"
+  },
+  "layers/district-lines/andhra-pradesh.json": {
+   "size": 62609,
+   "sha256": "655f7f2a87b9"
+  },
+  "layers/district-lines/arunachal-pradesh.json": {
+   "size": 29852,
+   "sha256": "50915e1fe620"
+  },
+  "layers/district-lines/assam.json": {
+   "size": 46074,
+   "sha256": "bca7fe25706b"
+  },
+  "layers/district-lines/bihar.json": {
+   "size": 61287,
+   "sha256": "c2a5a867936d"
+  },
+  "layers/district-lines/chhattisgarh.json": {
+   "size": 64628,
+   "sha256": "dd15e8adfe5b"
+  },
+  "layers/district-lines/delhi.json": {
+   "size": 4377,
+   "sha256": "34b4c4711d99"
+  },
+  "layers/district-lines/goa.json": {
+   "size": 1721,
+   "sha256": "94ae50335e7b"
+  },
+  "layers/district-lines/gujarat.json": {
+   "size": 114821,
+   "sha256": "ef9466c44f62"
+  },
+  "layers/district-lines/haryana.json": {
+   "size": 27289,
+   "sha256": "ba858285e6a7"
+  },
+  "layers/district-lines/himachal-pradesh.json": {
+   "size": 21715,
+   "sha256": "c78521261d82"
+  },
+  "layers/district-lines/jammu-and-kashmir.json": {
+   "size": 35204,
+   "sha256": "3c268093e30b"
+  },
+  "layers/district-lines/jharkhand.json": {
+   "size": 43140,
+   "sha256": "3d061b5ddc94"
+  },
+  "layers/district-lines/karnataka.json": {
+   "size": 99691,
+   "sha256": "adaf997f40e4"
+  },
+  "layers/district-lines/kerala.json": {
+   "size": 20399,
+   "sha256": "ba314ea6e588"
+  },
+  "layers/district-lines/ladakh.json": {
+   "size": 5380,
+   "sha256": "fda639a79587"
+  },
+  "layers/district-lines/madhya-pradesh.json": {
+   "size": 156352,
+   "sha256": "fcb759a40893"
+  },
+  "layers/district-lines/maharashtra.json": {
+   "size": 99589,
+   "sha256": "aa65f97cb65d"
+  },
+  "layers/district-lines/manipur.json": {
+   "size": 22474,
+   "sha256": "2f23004a14de"
+  },
+  "layers/district-lines/meghalaya.json": {
+   "size": 12614,
+   "sha256": "1398332a59a5"
+  },
+  "layers/district-lines/mizoram.json": {
+   "size": 14708,
+   "sha256": "1f0259bff637"
+  },
+  "layers/district-lines/nagaland.json": {
+   "size": 13616,
+   "sha256": "4e2832b7e105"
+  },
+  "layers/district-lines/odisha.json": {
+   "size": 61051,
+   "sha256": "f2d90ab30a7c"
+  },
+  "layers/district-lines/puducherry.json": {
+   "size": 6167,
+   "sha256": "71586d9d4b9d"
+  },
+  "layers/district-lines/punjab.json": {
+   "size": 39357,
+   "sha256": "55ea60290807"
+  },
+  "layers/district-lines/rajasthan.json": {
+   "size": 143324,
+   "sha256": "ed2c3aacbb43"
+  },
+  "layers/district-lines/sikkim.json": {
+   "size": 3567,
+   "sha256": "61725d7ba4e8"
+  },
+  "layers/district-lines/tamil-nadu.json": {
+   "size": 119351,
+   "sha256": "cf35b863fdc7"
+  },
+  "layers/district-lines/telangana.json": {
+   "size": 51561,
+   "sha256": "2afdfe4a7591"
+  },
+  "layers/district-lines/tripura.json": {
+   "size": 7637,
+   "sha256": "a9de7a63321d"
+  },
+  "layers/district-lines/uttar-pradesh.json": {
+   "size": 165715,
+   "sha256": "01dd3de8c3b3"
+  },
+  "layers/district-lines/uttarakhand.json": {
+   "size": 24177,
+   "sha256": "bb3c0bbed7be"
+  },
+  "layers/district-lines/west-bengal.json": {
+   "size": 38225,
+   "sha256": "7246900142af"
   },
   "models/apricot.json": {
    "size": 399,
