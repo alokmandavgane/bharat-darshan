@@ -14,7 +14,7 @@
   "layers": [
     "roads",
     "rail",
-    "places"
+    "cities"
   ],
   "relief": 8,
   "status": "draft"

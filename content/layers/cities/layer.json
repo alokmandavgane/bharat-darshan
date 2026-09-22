@@ -8,7 +8,7 @@
     "hi": "नगर"
   },
   "icon": "city",
-  "default_on": false,
+  "default_on": true,
   "categories": [
     {
       "id": "national",

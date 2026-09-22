@@ -7,7 +7,7 @@
     "hi": "स्थान"
   },
   "icon": "pin",
-  "default_on": true,
+  "default_on": false,
   "country_view": "markers",
   "categories": [
     {
