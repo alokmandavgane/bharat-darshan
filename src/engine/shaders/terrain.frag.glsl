@@ -80,6 +80,57 @@ vec3 bandColour(float h) {
   return c;
 }
 
+/** One area id resolved through the layer's lookup: its colour, and 0 alpha for "none". */
+vec4 areaColour(float aid) {
+  vec2 lut = texture(uChoroLut, vec2((aid + 0.5) / 256.0, 0.5)).rg;
+  int band = clamp(int(lut.r * 255.0 + 0.5), 0, 7);
+  return vec4(uChoroColors[band], step(0.5, lut.g));
+}
+
+/**
+ * An `areas` layer's fill, reconstructed to sub-texel accuracy.
+ *
+ * The layer ships one area id per texel, so reading it NEAREST steps along the texel
+ * grid: past the raster's own pitch -- 3.4 km, which a 700 km view crosses in four
+ * pixels -- the edges read as a staircase. Bilinear weights over the four texels around
+ * the point give each candidate area a coverage of this pixel, and the contour where a
+ * coverage passes a half is a smooth curve through the grid rather than along its steps.
+ * `fwidth` then holds that crossing to about a screen pixel, so the edge stays crisp at
+ * every zoom instead of softening as the texels grow. It is the trick a distance-field
+ * glyph is drawn with, run on a field the build already ships, so it costs no bytes.
+ *
+ * Returns the area's colour in rgb and how much of this pixel it covers in a; a is 0
+ * where the winner is "no area here", which leaves the clay alone.
+ */
+vec4 areaFill(vec2 uv) {
+  vec2 ts = vec2(textureSize(uChoroIds, 0));
+  vec2 g = uv * ts - 0.5;
+  vec2 i0 = floor(g);
+  vec2 f = g - i0;
+  float w[4] = float[4]((1.0 - f.x) * (1.0 - f.y), f.x * (1.0 - f.y),
+                        (1.0 - f.x) * f.y, f.x * f.y);
+  vec2 off[4] = vec2[4](vec2(0.5, 0.5), vec2(1.5, 0.5), vec2(0.5, 1.5), vec2(1.5, 1.5));
+  float ids[4];
+  for (int k = 0; k < 4; k++) ids[k] = floor(texture(uChoroIds, (i0 + off[k]) / ts).r * 255.0 + 0.5);
+  // The two best-covered candidates: the pixel is somewhere on the edge between them.
+  float firstId = 0.0, secondId = 0.0, firstCov = -1.0, secondCov = -1.0;
+  for (int k = 0; k < 4; k++) {
+    float cov = 0.0;
+    for (int j = 0; j < 4; j++) cov += ids[j] == ids[k] ? w[j] : 0.0;
+    if (cov > firstCov) {
+      if (ids[k] != firstId) { secondId = firstId; secondCov = firstCov; }
+      firstId = ids[k]; firstCov = cov;
+    } else if (ids[k] != firstId && cov > secondCov) { secondId = ids[k]; secondCov = cov; }
+  }
+  // Where the winner's coverage passes a half, held to a pixel so the edge is neither a
+  // staircase nor a smear. A pixel that one area covers outright never sees the blend.
+  float edge = firstCov / max(firstCov + secondCov, 1e-5);
+  float aa = max(fwidth(edge), 1e-4);
+  float t = smoothstep(0.5 - aa, 0.5 + aa, edge);
+  vec4 a = areaColour(firstId), b = areaColour(secondId);
+  return mix(b, a, t);
+}
+
 void main() {
   float h = texture(uHeight, luv(vUv)).r;
   float land = smoothstep(-20.0, -5.0, h);          // ocean texels are <= -25 m by construction
@@ -179,10 +230,15 @@ void main() {
     // `areas` layer asks its own raster, where an id is a plateau or a coalfield. That
     // raster covers the whole country, so it is read in country uv (vUv) rather than
     // through luv(), which a lifted block redirects to its own package.
-    float cid = uChoroOwnIds > 0.5 ? floor(texture(uChoroIds, vUv).r * 255.0 + 0.5) : id;
-    vec2 lut = texture(uChoroLut, vec2((cid + 0.5) / 256.0, 0.5)).rg;
-    int band = clamp(int(lut.r * 255.0 + 0.5), 0, 7);
-    albedo = mix(albedo, uChoroColors[band], uChoroMix * step(0.5, lut.g));
+    // A choropleth's edges are the state borders, which the shader already draws as
+    // crisp lines from their distance fields; an `areas` raster has no such lines behind
+    // it, so its own edges have to be reconstructed (see areaFill).
+    // A branch on a uniform, not a ternary: every page that is not an `areas` page would
+    // otherwise pay for areaFill's four samples whether or not its result was used.
+    vec4 fill;
+    if (uChoroOwnIds > 0.5) fill = areaFill(vUv);
+    else fill = areaColour(id);
+    albedo = mix(albedo, fill.rgb, uChoroMix * fill.a);
   }
   vec3 col = albedo * light * ao;
 

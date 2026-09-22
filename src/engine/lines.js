@@ -119,10 +119,18 @@ function segDist2(x, z, ax, az, bx, bz) {
  * @param {any} surface uniforms of the terrain or of a lifted block
  * @param {boolean} onBlock true for the copy drawn on the lifted block
  */
+/**
+ * @param {boolean} float_  a line the model never hides: a parallel, a meridian, a
+ *   monsoon arrow. It still follows the relief, so it stays where it belongs on the
+ *   ground -- laying it flat would slide it off the places it marks on a tilted view --
+ *   but the depth test is off, so a hill in front of it does not cut it. Raising it
+ *   instead was the first try and does not hold: something taller always comes along,
+ *   and the arrows over the Western Ghats were sawn into fragments.
+ */
 function lineMaterial(surface, onBlock, flow, float_ = false) {
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
-    transparent: true, depthWrite: false, side: DoubleSide, premultipliedAlpha: true,
+    transparent: true, depthWrite: false, depthTest: !float_, side: DoubleSide, premultipliedAlpha: true,
     uniforms: {
       uHeight: surface.uHeight, uIds: surface.uIds, uSizeKm: surface.uSizeKm,
       uExag: surface.uExag, uGamma: surface.uGamma, uHRef: surface.uHRef,
@@ -136,7 +144,6 @@ function lineMaterial(surface, onBlock, flow, float_ = false) {
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
       uFlow: { value: flow ? 1 : 0 },
-      uFloat: { value: float_ ? 1 : 0 },
       uTime: { value: 0 },
     },
   });
