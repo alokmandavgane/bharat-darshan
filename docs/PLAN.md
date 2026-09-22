@@ -2145,6 +2145,34 @@ docs/DEPLOY.md).
     (5) `drafts` is hard-coded on, so every card's info button is terracotta with "Draft,
     not yet reviewed"; fine for a soft launch, but it is what a visitor will see.
     (6) `fallback.webgl` promises "a text version of the content is on its way".
+- 2026-09-22, the suggestions done, before publishing.
+  - **Share cards rendered**: 28 of them, two per language and one per page per language,
+    on this machine's GPU through Playwright's new headless mode. Two things the tool
+    needed. Headless Chromium idles requestAnimationFrame once nothing animates, and the
+    backdrop is fetched after the first frame and asks for a redraw that never comes, so
+    every card would have shown India on bare paper; a pointer move over the canvas
+    forces the frame. And poster mode gave the GPU markers nothing to draw -- a rule from
+    the sticker days -- so "Made here" and "Cities" were bare tan; the pieces draw now,
+    the names stay off.
+  - **The sheet says what it holds**: "Contents · 13 pages" with a chevron at peek, a tap
+    on the head opens it, the line stays as the contents' heading once open. **The key
+    folds on a phone** and opens itself only where there is room; folded, its head still
+    carries every mark. **The fallback** promises nothing now.
+  - **The rim**: the vertex shader still sank the relief to sea level over the plate's last
+    260 km, from when the plate was a rectangle on the page; against a backdrop that keeps
+    its height it was a trench along the north edge, and in the cut-out it flattened the
+    Karakoram. Gone. And the cut-out's rim fade multiplied by the outline, so the west of
+    Kutch, 20 km inside the rect, faded almost away; the cut-out ends on its outline only.
+  - **What the "backdrop join" actually is, after a long look**: the plate's 3 km/px
+    neighbours strip dissolving over 420 km into the 16 km/px backdrop, visible along the
+    north edge as fine snowy Tibet turning to fog. A finer backdrop is the only cure and
+    costs bandwidth; left as a look question. A caution for the next person measuring it:
+    the key panel sits over the Arabian Sea on a desktop, and an hour went into a "missing
+    sea" that was the key's paper.
+  - **The `main.js:87` console error** appears only in a tab that has been through a Vite
+    HMR reload; two cold loads in a fresh tab are clean. Not a production issue.
+  - **Left**: drafts stay on by the owner's call (review comes later); the reference phone
+    has still not seen any of this.
 
 ### What exists
 
