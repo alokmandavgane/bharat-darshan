@@ -534,8 +534,8 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
         if wants_network:
             # The rest of the source: what no item on this layer has claimed by name, so a
             # named highway is drawn once, as itself, and not again under the tracery.
-            claimed = {lines.fold(n) for it in items for n in (it.get('source_names') or [])}
-            parts = [p for name, ps in index.items() if name not in claimed for p in ps]
+            spec = next(it['network'] for it in items if it.get('network'))
+            parts = network_parts(src, raw, items, spec if isinstance(spec, dict) else {})
     elif wants_network:
         parts = lines.load_parts(src, raw)
     if join == 'route':
@@ -591,6 +591,126 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
                 else f"  waypoints {max(note['snap']):.0f} km off at worst" if note else '')
         print(f"    {it['id']:20} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km{tail}")
     return out, problems
+
+
+def network_parts(src, raw, items, spec):
+    """
+    What a network item draws: every feature of the source that `where` admits and no
+    named item has claimed. A claim is by name, or by name in a basin -- a river called
+    Mahanadi in the Ganga basin is not the Mahanadi, and stays in the network.
+    """
+    claimed = {lines.fold(n) for it in items for n in (it.get('source_names') or [])}
+    where = spec.get('where') or {}
+    rows = lines.features(src, raw)
+    # A floor on a feature's *whole* length, summed over every piece of it: a river of
+    # twenty km is a stream, however finely a state is looked at, and the survey names
+    # twenty-eight thousand of them.
+    shortest = float(spec.get('min_length_km') or 0)
+    length = {}
+    if shortest:
+        for props, ps in rows:
+            key = lines.qualified(props, src)[-1]
+            for p in ps:
+                x, z = grid.lonlat_to_scene(p[:, 0], p[:, 1])
+                length[key] = length.get(key, 0.0) + float(np.hypot(np.diff(x), np.diff(z)).sum())
+    groups = {}
+    for props, ps in rows:
+        if any(str(props.get(k)) != str(v) for k, v in where.items()):
+            continue
+        names = lines.qualified(props, src)
+        if any(q in claimed for q in names):
+            continue
+        if shortest and length.get(names[-1], 0.0) < shortest:
+            continue
+        groups.setdefault(names[0], []).extend(ps)
+    # Stitched a name at a time, as the named items are: a chain never runs on from one
+    # road or river into another that happens to meet it end to end.
+    if src.get('stitch'):
+        return [c for ps in groups.values() for c in lines.stitch(ps)]
+    return [p for ps in groups.values() for p in ps]
+
+
+def build_line_detail(layer, items, out_items, ids, heights, out):
+    """
+    A finer copy of a named lines layer for every state, fetched when that state is lifted.
+
+    The country tier is simplified for the whole country's scale and carries only what
+    the whole country should see. Inside a lifted state both limits are wrong: the
+    courses want a finer tolerance, and the network can afford everything the source has
+    -- for rivers, every stream the survey names, where the country view carries only the
+    major ones. Each state's file holds the items that pass through it, clipped to it.
+    Returns {state slug: path}.
+    """
+    src = layer['source']
+    detail = src['detail']
+    raw = os.path.join(fetch.RAW, 'layers', layer['id'])
+    fine = float(detail.get('simplify_km', 0.2))
+    floor = detail.get('min_km')
+    index = lines.load_source(src, raw)
+    by_item = {it['id']: it for it in items}
+    shipped = {e['id']: e for e in out_items}
+    groups = []
+    for it in items:
+        if it['id'] not in shipped:
+            continue
+        if it.get('network'):
+            spec = detail['network'] if 'network' in detail else (it['network'] if isinstance(it['network'], dict) else {})
+            parts = network_parts(src, raw, items, spec)
+        else:
+            parts = [p for n in (it.get('source_names') or []) for p in index.get(lines.fold(n), [])]
+        groups.append((it, parts))
+    height, width = ids.shape
+    # Which states each part passes over, found once, so a state is handed only its own.
+    touches = []
+    for it, parts in groups:
+        where = []
+        for p in parts:
+            col, row = grid.lonlat_to_pixel(p[:, 0], p[:, 1], width, height)
+            c = np.clip(col.astype(int), 0, width - 1)
+            r = np.clip(row.astype(int), 0, height - 1)
+            where.append(set(np.unique(ids[r, c]).tolist()) - {0})
+        touches.append(where)
+    states = json.load(open(os.path.join(out, 'regions', 'states.json'), encoding='utf-8'))
+    paths, total, worst = {}, 0, 0
+    folder = os.path.join(out, 'layers', layer['id'])
+    os.makedirs(folder, exist_ok=True)
+    for unit in states['units']:
+        region = unit['id']
+        # The state and a couple of pixels round it, so a river along the border is kept;
+        # the block draws nothing outside its own outline in any case.
+        mask = raster_dilate(ids == region, 2).astype(np.uint8)
+        entries = []
+        for (it, parts), where in zip(groups, touches):
+            mine = [p for p, w in zip(parts, where) if region in w]
+            if not mine:
+                continue
+            runs = lines.project(mine, mask, fine, heights, min_km=floor)
+            if not runs:
+                continue
+            ship = shipped[it['id']]
+            entries.append({'id': ship['id'], 'category': ship['category'], 'rank': ship['rank'],
+                            'lines': [[round(float(v), 2) for v in r.reshape(-1)] for r in runs]})
+        if not entries:
+            continue
+        rel = f"layers/{layer['id']}/{unit['slug']}.json"
+        with open(os.path.join(out, rel), 'w', encoding='utf-8') as f:
+            json.dump({'id': layer['id'], 'items': entries}, f, ensure_ascii=False, separators=(',', ':'))
+        size = os.path.getsize(os.path.join(out, rel))
+        total, worst = total + size, max(worst, size)
+        paths[unit['slug']] = rel
+    print(f'    detail: {len(paths)} states at {fine} km -> {total // 1024} KB in all, {worst // 1024} KB at worst')
+    return paths
+
+
+def raster_dilate(mask, px):
+    """A boolean mask grown by `px` pixels, 4-connected."""
+    m = mask.copy()
+    for _ in range(px):
+        m[1:, :] |= m[:-1, :].copy()
+        m[:-1, :] |= m[1:, :].copy()
+        m[:, 1:] |= m[:, :-1].copy()
+        m[:, :-1] |= m[:, 1:].copy()
+    return m
 
 
 def validate_model(name, m):
@@ -1068,7 +1188,12 @@ def build_layer(folder, states, ids, heights, out, registry, models):
                           extra={'detail': detail} if detail else None)
         out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems
-        return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
+        detail = None
+        if (layer.get('source') or {}).get('detail') and not problems:
+            relief = heights() if layer.get('flow') and not layer.get('arrows') else None
+            detail = build_line_detail(layer, items, out_items, ids, relief, out)
+        return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']),
+                      extra={'detail': detail} if detail else None)
     generated = (layer.get('source') or {}).get('format') == DISTRICTS
     for it in ([] if generated else items):
         if it.get('id') in seen:
