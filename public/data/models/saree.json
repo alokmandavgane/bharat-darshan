@@ -1,0 +1,1 @@
+{"id":"saree","footprint":10,"parts":[{"shape":"box","w":16,"h":9,"d":10,"at":[0,4.5,0],"color":"#a83259","tint":true},{"shape":"box","w":16.4,"h":1.6,"d":10.4,"at":[0,2,0],"color":"#d4a63a"},{"shape":"box","w":12,"h":4,"d":8,"at":[1,11,0],"rot":[0,18,0],"color":"#a83259","tint":true},{"shape":"box","w":12.4,"h":1.2,"d":8.4,"at":[1,9.6,0],"rot":[0,18,0],"color":"#d4a63a"}]}

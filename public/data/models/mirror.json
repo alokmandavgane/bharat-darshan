@@ -1,0 +1,1 @@
+{"id":"mirror","footprint":6,"parts":[{"shape":"cylinder","rt":1.1,"rb":1.4,"h":9,"at":[0,4.5,0],"color":"#8f6b32","segments":10},{"shape":"torus","r":6.5,"tube":1.1,"at":[0,16,0],"scale":[1,1.2,1],"color":"#8f6b32","segments":16},{"shape":"cylinder","rt":6.2,"rb":6.2,"h":0.6,"at":[0,16,0],"rot":[90,0,0],"scale":[1,1,1.2],"color":"#d9d4c8","segments":16}]}

@@ -50,21 +50,21 @@
   {
    "id": "cities",
    "type": "points",
-   "marker": "symbol",
+   "marker": "dot",
    "size": {
-    "field": "population_2011",
+    "field": "population",
     "domain": [
-     1100000,
+     40000,
      12500000
     ],
     "range": [
-     10,
-     40
+     1.6,
+     6.5
     ],
     "legend": [
-     1500000,
-     5000000,
-     12000000
+     100000,
+     1000000,
+     10000000
     ]
    },
    "title": {
@@ -74,7 +74,7 @@
    "icon": "city",
    "group": "culture",
    "default_on": false,
-   "count": 30,
+   "count": 249,
    "reviewed": 0,
    "categories": [
     {
@@ -106,21 +106,23 @@
     }
    ],
    "fields": {
-    "population_2011": {
+    "population": {
      "type": "int",
      "required": true,
      "label": {
-      "en": "Population (2011 Census)",
-      "hi": "जनसंख्या (2011 जनगणना)"
+      "en": "Population",
+      "hi": "जनसंख्या"
      }
     }
    },
    "note": {
-    "en": "The thirty largest municipal corporations at the 2011 census, which is the last one taken. A corporation is not a metropolis: Mumbai's built-up area holds far more people than its own city limits, and Delhi, Thane and Vasai-Virar are all parts of larger conurbations.",
-    "hi": "2011 की जनगणना — अंतिम हुई जनगणना — के अनुसार तीस सबसे बड़ी नगर निगम सीमाएँ। निगम महानगर नहीं होता: मुंबई के बसे क्षेत्र में उसकी नगर सीमा से कहीं अधिक लोग रहते हैं, और दिल्ली, ठाणे तथा वसई-विरार सब बड़े नगरपुंजों के हिस्से हैं।"
+    "en": "Every state's ten biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation.",
+    "hi": "हर राज्य के दस सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं।"
    },
    "sources": [
     "census-2011",
+    "geonames",
+    "wikidata",
     "wikipedia"
    ],
    "path": "layers/cities.json"
@@ -185,6 +187,76 @@
     "unesco-ich"
    ],
    "path": "layers/festivals.json"
+  },
+  {
+   "id": "gi-tags",
+   "type": "points",
+   "marker": "model",
+   "title": {
+    "en": "Made here: GI tags",
+    "hi": "यहीं की पहचान: जीआई टैग"
+   },
+   "icon": "tag",
+   "group": "culture",
+   "default_on": false,
+   "count": 36,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "produce",
+     "icon": "leaf",
+     "color": "#6f8f4a",
+     "title": {
+      "en": "Grown here",
+      "hi": "यहाँ उगाया"
+     }
+    },
+    {
+     "id": "textile",
+     "icon": "tag",
+     "color": "#a83259",
+     "title": {
+      "en": "Woven here",
+      "hi": "यहाँ बुना"
+     }
+    },
+    {
+     "id": "craft",
+     "icon": "gem",
+     "color": "#3b6fa8",
+     "title": {
+      "en": "Made here",
+      "hi": "यहाँ गढ़ा"
+     }
+    },
+    {
+     "id": "food",
+     "icon": "tag",
+     "color": "#c98a3c",
+     "title": {
+      "en": "Cooked here",
+      "hi": "यहाँ पकाया"
+     }
+    }
+   ],
+   "fields": {
+    "registered": {
+     "type": "text",
+     "label": {
+      "en": "Registered (GI journal year)",
+      "hi": "पंजीकृत (जीआई पत्रिका-वर्ष)"
+     }
+    }
+   },
+   "note": {
+    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. Each figurine stands where the registered product comes from; India has granted several hundred, and these are a first few.",
+    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। हर मूर्ति वहीं खड़ी है जहाँ से पंजीकृत उत्पाद आता है; भारत ने कई सौ दिए हैं, ये पहले कुछ हैं।"
+   },
+   "sources": [
+    "gi-registry",
+    "wikipedia"
+   ],
+   "path": "layers/gi-tags.json"
   },
   {
    "id": "languages",
@@ -1191,12 +1263,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 9466,
-   "sha256": "3f427221aa24"
+   "size": 10585,
+   "sha256": "34b851084b36"
   },
   "sources.json": {
-   "size": 17656,
-   "sha256": "39191c0284df"
+   "size": 20277,
+   "sha256": "0cfe2de6b916"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1375,12 +1447,16 @@
    "sha256": "e66f945fbc8e"
   },
   "layers/cities.json": {
-   "size": 24067,
-   "sha256": "1349acb1538e"
+   "size": 86659,
+   "sha256": "7d30e28e4e2f"
   },
   "layers/festivals.json": {
-   "size": 25858,
-   "sha256": "da1aca1da16f"
+   "size": 27574,
+   "sha256": "0098f0907691"
+  },
+  "layers/gi-tags.json": {
+   "size": 33446,
+   "sha256": "b46e76887deb"
   },
   "layers/languages.json": {
    "size": 21934,
@@ -1449,6 +1525,94 @@
   "layers/zones.json": {
    "size": 2516,
    "sha256": "8008bffeb5be"
+  },
+  "models/bell.json": {
+   "size": 290,
+   "sha256": "9f6e149b6f04"
+  },
+  "models/bottle.json": {
+   "size": 324,
+   "sha256": "60411b7f971b"
+  },
+  "models/cardamom.json": {
+   "size": 728,
+   "sha256": "706a0e677ec3"
+  },
+  "models/chilli.json": {
+   "size": 525,
+   "sha256": "9c86153701a0"
+  },
+  "models/coffee.json": {
+   "size": 601,
+   "sha256": "af8136fcbaca"
+  },
+  "models/handi.json": {
+   "size": 313,
+   "sha256": "7c9405a634b4"
+  },
+  "models/laddu.json": {
+   "size": 202,
+   "sha256": "1350c27b6629"
+  },
+  "models/mango.json": {
+   "size": 387,
+   "sha256": "d174752de437"
+  },
+  "models/mirror.json": {
+   "size": 358,
+   "sha256": "0fefa7c4ec2b"
+  },
+  "models/orange.json": {
+   "size": 375,
+   "sha256": "e2799e378e07"
+  },
+  "models/painting.json": {
+   "size": 458,
+   "sha256": "5dc1635de07a"
+  },
+  "models/pepper.json": {
+   "size": 727,
+   "sha256": "124397b3cfd0"
+  },
+  "models/pineapple.json": {
+   "size": 1005,
+   "sha256": "7f49a4ce5a42"
+  },
+  "models/pot.json": {
+   "size": 262,
+   "sha256": "bdbd0203c4c7"
+  },
+  "models/rice.json": {
+   "size": 467,
+   "sha256": "425f48e13da5"
+  },
+  "models/saffron.json": {
+   "size": 1229,
+   "sha256": "dc4b9e1bd513"
+  },
+  "models/sandal.json": {
+   "size": 562,
+   "sha256": "d0d63e7caa9a"
+  },
+  "models/saree.json": {
+   "size": 376,
+   "sha256": "ffe93fe5c6ac"
+  },
+  "models/shawl.json": {
+   "size": 366,
+   "sha256": "a0e98dbe5c31"
+  },
+  "models/sweet.json": {
+   "size": 371,
+   "sha256": "3b47e841b719"
+  },
+  "models/tea.json": {
+   "size": 598,
+   "sha256": "088020cc2a26"
+  },
+  "models/toy.json": {
+   "size": 345,
+   "sha256": "f771dc009577"
   },
   "states/andaman-and-nicobar-islands-edge.bin.gz": {
    "size": 42929,

@@ -1,0 +1,1 @@
+{"id":"toy","footprint":6,"parts":[{"shape":"cylinder","rt":5,"rb":6,"h":8,"at":[0,4,0],"color":"#c9452f","segments":14},{"shape":"sphere","r":5,"at":[0,12,0],"color":"#e8b04a","segments":12},{"shape":"sphere","r":4,"at":[0,19.5,0],"color":"#f0d9b5","segments":12},{"shape":"cone","r":4.3,"h":4.5,"at":[0,24,0],"color":"#3a6fa0","segments":14}]}
