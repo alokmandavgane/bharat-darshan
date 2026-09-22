@@ -54,11 +54,11 @@
    "size": {
     "field": "population",
     "domain": [
-     40000,
+     15000,
      12500000
     ],
     "range": [
-     1.6,
+     1.2,
      6.5
     ],
     "legend": [
@@ -74,7 +74,7 @@
    "icon": "city",
    "group": "culture",
    "default_on": true,
-   "count": 249,
+   "count": 1021,
    "reviewed": 0,
    "categories": [
     {
@@ -116,8 +116,8 @@
     }
    },
    "note": {
-    "en": "Every state's ten biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation.",
-    "hi": "हर राज्य के दस सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं।"
+    "en": "Every state's fifty biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation, which is why Delhi is smaller here than the city you have been to.",
+    "hi": "हर राज्य के पचास सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं — इसीलिए दिल्ली यहाँ उस शहर से छोटी है जो आपने देखा है।"
    },
    "sources": [
     "census-2011",
@@ -126,6 +126,124 @@
     "wikipedia"
    ],
    "path": "layers/cities.json"
+  },
+  {
+   "id": "district-lines",
+   "type": "lines",
+   "title": {
+    "en": "District boundaries",
+    "hi": "ज़िला सीमाएँ"
+   },
+   "icon": "district",
+   "group": "political",
+   "default_on": false,
+   "count": 31,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "border",
+     "title": {
+      "en": "District boundary",
+      "hi": "ज़िला सीमा"
+     },
+     "color": "#7a6f5e"
+    }
+   ],
+   "fields": {
+    "districts": {
+     "type": "int",
+     "label": {
+      "en": "Districts",
+      "hi": "ज़िले"
+     }
+    }
+   },
+   "note": {
+    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Like the district names, these arrive as the camera comes in.",
+    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। ज़िलों के नामों की तरह ये भी कैमरा पास आने पर दिखती हैं।"
+   },
+   "sources": [
+    "india-geodata",
+    "lgd"
+   ],
+   "path": "layers/district-lines.json"
+  },
+  {
+   "id": "districts",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Districts",
+    "hi": "ज़िले"
+   },
+   "icon": "district",
+   "group": "political",
+   "default_on": false,
+   "count": 785,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "district",
+     "color": "#6b6355",
+     "title": {
+      "en": "District",
+      "hi": "ज़िला"
+     }
+    },
+    {
+     "id": "not-administered",
+     "color": "#8d8071",
+     "title": {
+      "en": "Not administered by India",
+      "hi": "भारत द्वारा अप्रशासित"
+     }
+    }
+   ],
+   "fields": {
+    "headquarters": {
+     "type": "name",
+     "label": {
+      "en": "Headquarters",
+      "hi": "मुख्यालय"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population",
+      "hi": "जनसंख्या"
+     }
+    },
+    "area_km2": {
+     "type": "int",
+     "label": {
+      "en": "Area",
+      "hi": "क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "lgd": {
+     "type": "int",
+     "label": {
+      "en": "LGD code",
+      "hi": "एलजीडी कोड"
+     }
+    }
+   },
+   "note": {
+    "en": "The district is the unit India is actually run by: the collector, the court, the census table. All 785 of them are here as the Local Government Directory held them in August 2024, lettered where the district's shape is deepest. They arrive as the camera comes in; at the whole-country view the state's name has the paper. Populations are the 2011 census's unless a district is newer than it.",
+    "hi": "ज़िला वह इकाई है जिससे भारत सचमुच चलता है: कलेक्टर, न्यायालय, जनगणना तालिका। सभी 785 यहाँ हैं, जैसे वे अगस्त 2024 में स्थानीय शासन निर्देशिका में थे, हर नाम अपने ज़िले के सबसे भीतरी बिंदु पर। ये कैमरा पास आने पर दिखते हैं; समूचे देश के दृश्य में काग़ज़ राज्य के नाम का है। जनसंख्या 2011 की जनगणना की है, जब तक ज़िला उससे नया न हो।"
+   },
+   "sources": [
+    "india-geodata",
+    "lgd",
+    "wikidata",
+    "census-2011"
+   ],
+   "path": "layers/districts.json"
   },
   {
    "id": "festivals",
@@ -200,7 +318,7 @@
    "icon": "tag",
    "group": "culture",
    "default_on": false,
-   "count": 36,
+   "count": 169,
    "reviewed": 0,
    "categories": [
     {
@@ -250,8 +368,8 @@
     }
    },
    "note": {
-    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. Each figurine stands where the registered product comes from; India has granted several hundred, and these are a first few.",
-    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। हर मूर्ति वहीं खड़ी है जहाँ से पंजीकृत उत्पाद आता है; भारत ने कई सौ दिए हैं, ये पहले कुछ हैं।"
+    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. India's register held 647 of them when this was drawn, and 169 stand here, one figurine each, on the spot the registered product comes from. Every state and union territory that has one is represented; Chandigarh, Lakshadweep and Dadra and Nagar Haveli and Daman and Diu have none.",
+    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। यह मानचित्र बनते समय भारत की पंजी में 647 थे, और यहाँ 169 खड़े हैं, हर एक की अपनी मूर्ति, ठीक उसी स्थान पर जहाँ से पंजीकृत उत्पाद आता है। जिस भी राज्य या केंद्रशासित प्रदेश के पास एक भी है, वह यहाँ है; चंडीगढ़, लक्षद्वीप और दादरा तथा नगर हवेली और दमन तथा दीव के पास कोई नहीं।"
    },
    "sources": [
     "gi-registry",
@@ -936,7 +1054,7 @@
    "icon": "rail",
    "group": "network",
    "default_on": false,
-   "count": 5,
+   "count": 22,
    "reviewed": 0,
    "categories": [
     {
@@ -962,6 +1080,14 @@
       "hi": "पर्वतीय लाइन"
      },
      "color": "#6b6480"
+    },
+    {
+     "id": "network",
+     "title": {
+      "en": "Other line",
+      "hi": "अन्य लाइन"
+     },
+     "color": "#8a8d95"
     }
    ],
    "fields": {
@@ -972,6 +1098,10 @@
       "hi": "आरंभ"
      }
     }
+   },
+   "note": {
+    "en": "Twenty-one lines named and told, drawn over the whole railway the source holds inside India — about 40,000 km of it, fine and unnamed. India's is the fourth largest network in the world and the largest under one management; what it looks like is most of what there is to say about it.",
+    "hi": "इक्कीस लाइनें नाम और कथा सहित, उस पूरी रेल पर खिंचीं जो स्रोत में भारत के भीतर है — लगभग 40,000 किमी, महीन और बेनाम। भारत का जाल विश्व में चौथा सबसे बड़ा है और एक ही प्रबंधन में सबसे बड़ा; वह दिखता कैसा है, यही उसके बारे में कहने को सबसे अधिक है।"
    },
    "sources": [
     "natural-earth",
@@ -1111,7 +1241,7 @@
    "icon": "road",
    "group": "network",
    "default_on": false,
-   "count": 8,
+   "count": 36,
    "reviewed": 0,
    "categories": [
     {
@@ -1137,8 +1267,20 @@
       "hi": "पर्वतीय मार्ग"
      },
      "color": "#8c6a5a"
+    },
+    {
+     "id": "network",
+     "title": {
+      "en": "Other highway",
+      "hi": "अन्य राजमार्ग"
+     },
+     "color": "#9b8b76"
     }
    ],
+   "note": {
+    "en": "Thirty-five highways named and told, drawn over the whole road network the source holds inside India — about 54,000 km of it, fine and unnamed, so the shape of the country's traffic shows and not just the eight roads anyone can name. A route's course is the source's; the numbers are the Ministry's.",
+    "hi": "पैंतीस राजमार्ग नाम और कथा सहित, उस पूरे सड़क-जाल पर खिंचे जो स्रोत में भारत के भीतर है — लगभग 54,000 किमी, महीन और बेनाम, ताकि देश के यातायात का आकार दिखे, न कि केवल वे आठ सड़कें जिनके नाम सब जानते हैं। मार्ग की रेखा स्रोत की है; संख्याएँ मंत्रालय की।"
+   },
    "sources": [
     "natural-earth",
     "morth",
@@ -1322,12 +1464,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 10821,
-   "sha256": "bceaa66e75b3"
+   "size": 11645,
+   "sha256": "b5b6dcb00356"
   },
   "sources.json": {
-   "size": 20277,
-   "sha256": "0cfe2de6b916"
+   "size": 23875,
+   "sha256": "cdd0cc7d1042"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1506,16 +1648,24 @@
    "sha256": "e66f945fbc8e"
   },
   "layers/cities.json": {
-   "size": 86658,
-   "sha256": "9fada8fab6f3"
+   "size": 308980,
+   "sha256": "20a640864fb8"
+  },
+  "layers/district-lines.json": {
+   "size": 265120,
+   "sha256": "5658f80a999e"
+  },
+  "layers/districts.json": {
+   "size": 310404,
+   "sha256": "76ed5d48cf99"
   },
   "layers/festivals.json": {
    "size": 27590,
    "sha256": "f377ba648c53"
   },
   "layers/gi-tags.json": {
-   "size": 33446,
-   "sha256": "b46e76887deb"
+   "size": 157505,
+   "sha256": "77bc5df07c24"
   },
   "layers/language-families.json": {
    "size": 2453,
@@ -1558,8 +1708,8 @@
    "sha256": "f4569c2dd039"
   },
   "layers/rail.json": {
-   "size": 8621,
-   "sha256": "5bf673308b1b"
+   "size": 72467,
+   "sha256": "200b7ed902d8"
   },
   "layers/ranges.json": {
    "size": 13461,
@@ -1574,8 +1724,8 @@
    "sha256": "b561f5b2ab8e"
   },
   "layers/roads.json": {
-   "size": 18522,
-   "sha256": "40c031d60dec"
+   "size": 117590,
+   "sha256": "3e9354e2e42d"
   },
   "layers/steel.json": {
    "size": 11380,
@@ -1588,6 +1738,14 @@
   "layers/zones.json": {
    "size": 2516,
    "sha256": "8008bffeb5be"
+  },
+  "models/apricot.json": {
+   "size": 399,
+   "sha256": "28fc942d1b05"
+  },
+  "models/banana.json": {
+   "size": 351,
+   "sha256": "fc62bdf00f6f"
   },
   "models/bell.json": {
    "size": 290,
@@ -1609,9 +1767,17 @@
    "size": 601,
    "sha256": "af8136fcbaca"
   },
+  "models/grape.json": {
+   "size": 481,
+   "sha256": "ab3eb7280fde"
+  },
   "models/handi.json": {
    "size": 313,
    "sha256": "7c9405a634b4"
+  },
+  "models/jaggery.json": {
+   "size": 244,
+   "sha256": "12706bf6beda"
   },
   "models/laddu.json": {
    "size": 202,
@@ -2267,11 +2433,11 @@
   },
   "terrain/shade-1024.bin.gz": {
    "size": 160041,
-   "sha256": "de8682b020d1"
+   "sha256": "17e06999d4af"
   },
   "terrain/shade-2048.bin.gz": {
-   "size": 687155,
-   "sha256": "7a4a09fca8b0"
+   "size": 687146,
+   "sha256": "43430e0c01fb"
   },
   "terrain/world-heights.bin.gz": {
    "size": 436548,

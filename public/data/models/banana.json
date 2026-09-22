@@ -1,0 +1,1 @@
+{"id":"banana","footprint":8,"parts":[{"shape":"cylinder","rt":1.1,"rb":1.6,"h":4,"at":[0,2,0],"color":"#6f7d43","segments":8},{"shape":"torus","r":5.5,"tube":1.5,"at":[0,6.5,0],"rot":[72,0,0],"color":"#dcae32","tint":true,"segments":10},{"shape":"torus","r":5.0,"tube":1.4,"at":[0,9.5,0],"rot":[72,60,0],"color":"#d3a52c","tint":true,"segments":10}]}
