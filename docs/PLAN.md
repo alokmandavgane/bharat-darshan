@@ -227,6 +227,19 @@ a picture laid on a page. In rough order of effect per hour:
    (honest along the screen's x, the camera being orthographic), a compass rose that
    turns, and a graticule scored faintly into the table beyond the model -- which also
    makes turning legible, since the table's lines turn with it.
+   *The cartouche and the scale bar shipped on 2026-09-22.* The cartouche carries the
+   open page's section and title, stands down inside a state view, and is the way back to
+   the contents from the map itself; the bar is a round 1/2/5 distance, exact along the
+   screen's horizontal at any yaw or tilt, which is a property of the orthographic camera
+   and the reason it is worth drawing (`src/ui/scale.js`, `test/scale.test.js`).
+   The compass rose is **not** wanted: the compass control in the corner already turns
+   with the model, says "turn back to north" once the view is off north, and is the way
+   back; a second rose on the table would be decoration competing with a control.
+   The graticule is the one left, and it is engine work rather than content: as a layer
+   every parallel would need a name, a blurb in two languages and a card nobody wants, so
+   it belongs as furniture -- pre-projected by the pipeline (the runtime has no projection
+   code, D3), drawn on the table at y = 0 where the model itself hides it, with its own
+   switch beside Relief and Surroundings.
 7. **Miniature depth of field** on the high tier, already planned in "Layout".
 8. **A warmer room.** A vignette and a slight warm-to-cool falloff across the paper from
    the light's side; the page is currently one flat cream.
@@ -983,8 +996,9 @@ enforced by the build, with the credits screen and every source line generated f
 Then the share shells, the same day: 18 Open Graph shells generated from `plates.json`,
 and poster mode now renders a page's own card. The card images themselves need a
 Playwright run (`node tools/share-image.mjs`) and until then each page's shell points at
-its language card. Left: the atlas furniture -- cartouche, scale bar, compass rose,
-graticule.*
+its language card. The cartouche and the scale bar followed the same day. Left: the
+graticule, which section 3's item 6 now sets out as furniture rather than as a layer, and
+base styles for the thematic pages.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1746,6 +1760,23 @@ docs/DEPLOY.md).
   because the Devanagari one is never letter-spaced or uppercased; that meant two spans
   rather than one string.
 
+- 2026-09-22, twenty-ninth round: two pieces of atlas furniture. The cartouche puts the
+  open page's section and title on the map, which is the only place the page is named when
+  the sheet is down, and tapping it is the way back to the contents without opening the
+  sheet first; it stands down inside a state view, where the sheet belongs to the state.
+  The scale bar is the one an orthographic camera can draw honestly: a pixel across the
+  screen is the same number of kilometres everywhere in the view at any yaw, and tilting
+  compresses only the vertical axis, so the bar is true rather than indicative. Measured
+  it: yaw 137 and pitch 34 left the bar unchanged to a tenth of a pixel. The 1/2/5 choice
+  is pure and tested across every zoom and viewport the app allows -- always a round
+  number, always inside its box, never shorter than a third of it.
+  One bug, caught by loading the page rather than by reading it: `scaleSpan` was a `const`
+  arrow declared after the camera subscriber that calls it, and `{ immediate: true }` runs
+  that subscriber at once, so the app died on the temporal dead zone before the first
+  frame. A function declaration hoists; a const does not.
+  The compass rose on the list is ruled out rather than built, and the graticule is now
+  specified as furniture rather than as a layer -- reasons in section 3, item 6.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1809,11 +1840,12 @@ docs/DEPLOY.md).
    shells are in. What is left: **the 18 card images need a Playwright run** --
    `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
    to see the list); this machine has no Playwright and it is a tool, not a dependency, so
-   it was not installed to get them. Then the atlas furniture -- a cartouche for the open
-   plate, a scale bar, a compass rose, a graticule scored into the table. Base styles
-   (section 5) would also help the thematic pages: several of them would read better over
-   a quieter base than the full hypsometric one. Two smaller things the registry left
-   behind: `content/layers/<id>/layer.json` still carries an
+   it was not installed to get them. Of the atlas furniture, the cartouche and the scale
+   bar are in and the compass rose is ruled out (section 3, item 6); the graticule is
+   left, and it wants a pipeline step emitting pre-projected parallels and meridians plus
+   a faint line pass on the table, with a switch beside Relief. Base styles (section 5)
+   would also help the thematic pages: several of them would read better over a quieter
+   base than the full hypsometric one. Two smaller things the registry left behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
