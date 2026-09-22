@@ -256,23 +256,27 @@ and looked at on the reference phone.
 
 ### Layout
 
+*Reworked 2026-09-22: the key moved onto the map, the layer chips became rows, and the
+sheet became the subject. What follows is what is built.*
+
 Phone, portrait:
 
 ```
 +------------------------+
-| Bharat Darshan  [find] |  floating header, language toggle
+| Bharat Darshan  [menu] |  floating header; the cartouche names the open page
 |                        |
 |       3D canvas        |  full bleed, 100dvh, safe-area insets
 |  (camera padded so the |
 |  selection is centred  |
 |   above the sheet)     |
-|                        |
-| [Relief][Rivers][Rail]>|  layer chips in the thumb zone, scroll sideways
-+------------------------+
+| [>] +----------------+ |  the key, bottom-left the way an atlas prints it:
+| [N] | KEY  o ~ #   v | |  one row per layer drawn, its samples, an eye to
+|     | 500 km |____|  | |  hide it, the scale bar as its foot; folds to a strip
++-----+----------------+-+  of marks (folded by default on a phone)
 |          ----          |  bottom sheet: peek / half / full
-| Kerala               ←|
-| Malayalam, 14 districts|
-| [card ] [card ] [car   |  carousel <-> camera sync
+| Rivers            [<]  |  the subject: the page, a state, or an item
+| PHYSICAL - 2 LAYERS    |
+| [find...] blurb ...    |  then "On this page" rows, and the states behind a fold
 +------------------------+
 ```
 
@@ -280,29 +284,44 @@ Desktop / tablet landscape:
 
 ```
 +------------------------------------------------------------------+
-| +-----------+                                    +-------------+ |
-| | Layers    |            3D canvas               | Detail      | |
-| | x Relief  |        (whole viewport)            | panel for   | |
-| | x Rivers  |     +---------------+              | the current | |
-| |   Roads   |     | hover tooltip |              | selection   | |
-| |   Rail    |     +---------------+              |             | |
-| |   ...     |                                    |             | |
-| | Legend    |       [ Relief --o-- 12x ]         |             | |
-| +-----------+                                    +-------------+ |
+| Bharat Darshan                                          [menu]   |  the menu drops from here:
+| PHYSICAL / Rivers                                                |  the view strip, then every
+|                     3D canvas                  +-------------+   |  layer as a row
+|               (padded between the key          | Rivers   [<]|   |
+|                and the panel)                  | PHYSICAL    |   |
+| +-------------+                                | [find...]   |   |
+| | KEY       v |                                | blurb       |   |
+| | ~ Rivers  o |                                | ON THIS PAGE|   |
+| |  - Snow-fed |                                |  rows       |   |
+| | 500 km |__| |                                | All states >|   |
+| +-------------+                                +-------------+   |
 +------------------------------------------------------------------+
 ```
 
 - India is portrait-shaped, so wide screens have natural dead space either side of
   it. Panels float there; the same camera-padding mechanism that handles the phone's
-  bottom sheet keeps the country centred between them.
-- The layer list will grow long. Group layers (physical, networks, people, culture,
-  produce...), make the phone chip row a scrollable shortlist with an "all layers"
-  sheet behind it, and give the desktop panel collapsible groups.
-- With the atlas direction (D11) the way in is the **contents**, not the layer list: the
-  country sheet opens on the atlas's sections and their plates, the chip row on a phone
-  holds the open plate's own layers, and the full layer list moves behind "all layers"
-  for anyone who wants to mix their own. The contents is ordinary DOM, so it is also the
-  screen-reader, search-engine and no-WebGL view of the atlas.
+  bottom sheet keeps the country centred between them: the panel on the right and, while
+  it is open, the key on the left. On a phone the key overlaps the map instead (framing
+  above it would leave no map), which is why it starts folded there and opens itself when
+  a page is turned to.
+- **Three things, three places.** The *key* is where a reader looks up a colour, so it is
+  on the map and not behind the menu: one row per layer drawn, with the layer's mark, its
+  samples (a dot, a stroke, a square, the bands of a choropleth, the columns of a prisms
+  layer, the circles of a symbols layer at the size the map draws them), its caveat, its
+  sources, and an eye. A page's own layer stays listed when hidden so the eye can bring it
+  back. The *menu* is for mixing your own: the view (language, relief, surroundings,
+  graticule) as one compact strip, then every layer as a row -- mark, name, key in
+  miniature, switch -- grouped as the catalogue groups them. The *sheet* is the subject:
+  the contents when nothing is open (a tile and a line per page), the open page's words,
+  sources and "On this page" rows, a state's card, or an item's card. One search field in
+  every view but a card; the 36 units behind a fold rather than under everything.
+- **A layer's mark** is a miniature of how it draws, made from its declared type and its
+  own colours (`src/ui/legend.js`): a clay token with its glyph and the other categories'
+  dots for points, three strokes for lines, a mosaic for a categorical fill, a ramp for a
+  banded one, three columns for prisms, graded circles for symbols, "ABC" for a layer of
+  names, a tagged card for a regional layer read in the state cards. The contents tile of
+  a page is the mark of its first layer that draws a thing, on the page's base. Nothing in
+  this reads a layer id (D5, D12).
 - Canvas: `touch-action: none`, no page scroll, `overscroll-behavior: none` (stops
   pull-to-refresh on Android Chrome).
 - Desktop extras: more simultaneous labels, higher-res data tier, tilt-shift depth of
@@ -1885,6 +1904,28 @@ docs/DEPLOY.md).
   Also: `power` was filed under "Roads and rail" and `steel` would have gone under "Rocks
   and mining". Both are now "Works and power", which is one more of the group headings the
   sections were meant to settle -- strings, no code.
+
+- 2026-09-22, the UI round. The owner's verdict on the shell as it stood: the menu's
+  buttons were big and said nothing about what they switched, and the sheet was a dumping
+  ground. Three things now have three places (section 3, "Layout"): the **key** is on the
+  map, bottom-left beside the compass with the scale bar as its foot, one row per layer
+  drawn with an eye to hide it; the **menu** is a compact view strip and then every layer
+  as a row with a mark, its key in miniature and a switch; the **sheet** is the subject --
+  contents with a tile per page, the open page with its words and "On this page" rows, a
+  state's card, an item's card -- with one search field and the 36 units behind a fold.
+  `src/ui/legend.js` holds the marks and the keys, all read off a layer's type and colours;
+  `shell.js` lost its chip rendering and gained one `renderSheet` that decides what the
+  head says and which blocks show, so the body is never two answers at once. Things
+  learned: on a phone the key must start folded (open, it covered the model's south) and
+  open itself when a page is turned to, including by link -- which the plate subscription
+  never sees, since a linked page is set before the store has subscribers; on a wide
+  screen the open key pads the camera on the left as the panel does on the right, and the
+  model grows back when it folds. The Relief page's tile wanted the summits, not the
+  ranges: a layer of names previews nothing, so the tile takes the first layer that draws
+  a thing. A typed search clears when the subject changes, or the results rule would hide
+  the new card. Sizes after: app JS 47 KB gzipped, CSS 7 KB; `npm test` passes; checked in
+  Chromium at 375 x 812 and 1280 x 800 in both languages. Not yet looked at on the
+  reference phone.
 
 ### What exists
 
