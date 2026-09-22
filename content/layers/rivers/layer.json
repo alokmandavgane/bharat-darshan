@@ -10,15 +10,23 @@
   "default_on": true,
   "flow": true,
   "source": {
-    "format": "shapefile-polyline",
-    "match": "name",
+    "format": "pmtiles-polyline",
     "files": {
-      "ne_rivers.shp": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.shp",
-      "ne_rivers.dbf": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.dbf",
-      "ne_rivers.prj": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_physical/ne_10m_rivers_lake_centerlines.prj"
+      "wris_rivers.pmtiles": "https://github.com/ramSeraph/indian_water_features/releases/download/rivers/WRIS_Rivers.pmtiles"
     },
-    "encoding": "utf-8",
-    "simplify_km": 1.2
+    "zoom": 10,
+    "match": "rivname",
+    "qualify": "ba_name",
+    "stitch": true,
+    "simplify_km": 1.2,
+    "min_km": 0.5,
+    "detail": {
+      "simplify_km": 0.25,
+      "min_km": 0.5,
+      "network": {
+        "min_length_km": 40
+      }
+    }
   },
   "categories": [
     {
@@ -36,13 +44,25 @@
         "hi": "वर्षापोषित"
       },
       "color": "#6a9a86"
+    },
+    {
+      "id": "network",
+      "title": {
+        "en": "Other river",
+        "hi": "अन्य नदी"
+      },
+      "color": "#7d9fb3"
     }
   ],
   "sources": [
-    "natural-earth",
+    "indian-water-features",
     "india-wris",
     "wikipedia"
   ],
-  "attribution": "River centrelines: Natural Earth 10m physical vectors (public domain). Names, courses and facts checked against Wikipedia and India-WRIS.",
-  "_rank": "1 is a great river drawn widest, 3 a tributary drawn finest; the engine reads rank, never a river's name."
+  "attribution": "River centrelines: India-WRIS's river network, republished as a PMTiles archive by indian_water_features and read at zoom 10. Every feature carries its river's name and basin, so a named river joins by name -- and by name in its basin where there are namesakes. The network item on the country tier is every other river WRIS counts as major; a lifted state adds every river in it at least 40 km long. Facts checked against India-WRIS and Wikipedia.",
+  "_rank": "1 is a great river drawn widest, 3 a tributary drawn finest; the engine reads rank, never a river's name.",
+  "note": {
+    "en": "India's rivers as the government's water survey draws them: the 28 told here by name over every other river it counts as major, 47,000 km of it. Open a state and every river inside it at least 40 km long joins them, at five times the detail. The flow runs downstream, found from the relief.",
+    "hi": "भारत की नदियाँ, जैसे सरकार का जल सर्वेक्षण उन्हें खींचता है: यहाँ नाम सहित कही गई 28 नदियाँ, उन सब प्रमुख नदियों के ऊपर जिन्हें वह गिनता है — कुल 47,000 किमी। किसी राज्य को खोलें, तो उसके भीतर की हर 40 किमी से लंबी नदी इनसे आ मिलती है, पाँच गुना बारीकी से। प्रवाह नीचे की ओर चलता है, जो उभार से जाना गया है।"
+  }
 }

@@ -9,7 +9,7 @@
     "category": "snow-fed",
     "rank": 1,
     "source_names": [
-      "Ganges"
+      "Ganga @ Ganga"
     ],
     "blurb": {
       "en": "Rises as the Bhagirathi at Gaumukh in the Garhwal Himalaya and runs 2,525 km to the Bay of Bengal. India's national river, and the one the ghats of Haridwar, Prayagraj and Varanasi were built for.",
@@ -51,8 +51,7 @@
     "category": "snow-fed",
     "rank": 1,
     "source_names": [
-      "Brahmaputra",
-      "Dihang"
+      "Brahmaputra"
     ],
     "blurb": {
       "en": "The Yarlung Tsangpo of Tibet turns south through Arunachal as the Siang, then braids the width of the Assam valley. One of the few rivers in India carried as a masculine name.",
@@ -94,7 +93,7 @@
     "category": "snow-fed",
     "rank": 2,
     "source_names": [
-      "Sutlej"
+      "Satluj"
     ],
     "blurb": {
       "en": "The longest of the five rivers of Punjab, from Rakshastal in Tibet through the Bhakra gorge; the Bhakra Nangal dam holds it back at the Himalayan foot.",
@@ -199,7 +198,7 @@
     "category": "snow-fed",
     "rank": 3,
     "source_names": [
-      "Ghäghara"
+      "Ghaghara @ Ganga"
     ],
     "blurb": {
       "en": "The Karnali of Nepal becomes the Ghaghara in the plains and is the Ganga's largest tributary by volume, joining it below Chhapra.",
@@ -241,7 +240,7 @@
     "category": "snow-fed",
     "rank": 3,
     "source_names": [
-      "Tista"
+      "Teesta"
     ],
     "blurb": {
       "en": "Sikkim's main river, gathering from the Zemu glacier and running through steep gorges to the Brahmaputra in Bangladesh.",
@@ -283,7 +282,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Tapi"
+      "Tapi @ Tapi"
     ],
     "blurb": {
       "en": "The other westward river, from Multai in Betul through the Satpura trough to the Gulf of Khambhat past Surat.",
@@ -304,7 +303,7 @@
     "category": "rain-fed",
     "rank": 2,
     "source_names": [
-      "Mahäna Nadï"
+      "Mahanadi @ Mahanadi"
     ],
     "blurb": {
       "en": "Gathers in the Chhattisgarh plains and breaks through the Eastern Ghats to a wide delta in Odisha; the Hirakud dam across it is among the world's longest earthen dams.",
@@ -325,7 +324,7 @@
     "category": "rain-fed",
     "rank": 1,
     "source_names": [
-      "Godävari"
+      "Godavari @ Godavari"
     ],
     "blurb": {
       "en": "The Dakshina Ganga, 1,465 km from Trimbakeshwar near Nashik across the Deccan to a delta in Andhra Pradesh; the longest river of peninsular India.",
@@ -346,7 +345,7 @@
     "category": "rain-fed",
     "rank": 2,
     "source_names": [
-      "Krishna"
+      "Krishna @ Krishna"
     ],
     "blurb": {
       "en": "From Mahabaleshwar in the Western Ghats across the Deccan to the Bay of Bengal, past the Nagarjuna Sagar and Srisailam reservoirs.",
@@ -367,7 +366,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Bhima"
+      "Bhima @ Krishna"
     ],
     "blurb": {
       "en": "The Krishna's largest tributary, rising at Bhimashankar and running past Pandharpur, the seat of the Varkari pilgrimage.",
@@ -409,7 +408,7 @@
     "category": "rain-fed",
     "rank": 2,
     "source_names": [
-      "Cauvery"
+      "Cauvery @ Cauvery"
     ],
     "blurb": {
       "en": "Rises at Talakaveri in Kodagu and crosses Karnataka and Tamil Nadu to a delta at Poompuhar; the Grand Anicut has diverted it since the Chola period.",
@@ -430,7 +429,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Penner"
+      "Pennar @ Pennar"
     ],
     "blurb": {
       "en": "Rises in the Nandi hills and crosses Rayalaseema to the Bay of Bengal near Nellore, through some of the driest country in the peninsula.",
@@ -451,7 +450,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Chambal"
+      "Chambal @ Ganga"
     ],
     "blurb": {
       "en": "Rises in the Vindhyas at Janapav and cuts the ravine country of the Malwa border before joining the Yamuna; one of India's cleanest rivers.",
@@ -472,7 +471,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Betwa"
+      "Betwa @ Ganga"
     ],
     "blurb": {
       "en": "From the Vindhyan plateau past Orchha and Jhansi to the Yamuna at Hamirpur; the Vetravati of Sanskrit texts.",
@@ -493,7 +492,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Son"
+      "Sone @ Ganga"
     ],
     "blurb": {
       "en": "Also rises at Amarkantak, but runs north-east to the Ganga above Patna, the largest of its southern tributaries.",
@@ -514,7 +513,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Mahi"
+      "Mahi @ Mahi"
     ],
     "blurb": {
       "en": "One of three rivers crossing the Tropic of Cancer twice, from the Vindhyas through Gujarat to the Gulf of Khambhat.",
@@ -535,7 +534,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Wainganga"
+      "Wainganga @ Godavari"
     ],
     "blurb": {
       "en": "Drains the Satpura forests of eastern Maharashtra and joins the Wardha to form the Pranhita, the Godavari's largest tributary.",
@@ -556,7 +555,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Indravati"
+      "Indravati @ Godavari"
     ],
     "blurb": {
       "en": "Crosses the Bastar plateau to the Godavari, dropping over the Chitrakote falls, the widest waterfall in India.",
@@ -577,7 +576,7 @@
     "category": "rain-fed",
     "rank": 3,
     "source_names": [
-      "Brahmani"
+      "Brahmani @ Brahmani and Baitarni"
     ],
     "blurb": {
       "en": "Formed where the Sankh and South Koel meet near Rourkela, reaching the Bay of Bengal beside the Mahanadi delta.",
@@ -586,6 +585,28 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Brahmani_River",
       "https://indiawris.gov.in/wiki/doku.php?id=river_basins"
+    ]
+  },
+  {
+    "id": "other-rivers",
+    "status": "draft",
+    "name": {
+      "en": "Other rivers",
+      "hi": "अन्य नदियाँ"
+    },
+    "category": "network",
+    "rank": 3,
+    "network": {
+      "where": {
+        "layer": "major"
+      }
+    },
+    "blurb": {
+      "en": "Every river India-WRIS counts as major that no page here names, drawn fine under the ones that are. Open a state and every stream the survey names inside it joins them.",
+      "hi": "हर वह नदी जिसे इंडिया-डब्ल्यूआरआईएस प्रमुख मानता है और जिसका नाम यहाँ नहीं लिया गया, नामितों के नीचे महीन खिंची। किसी राज्य को खोलें, तो सर्वेक्षण में उसके भीतर नामित हर धारा इनसे आ मिलती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/"
     ]
   }
 ]
