@@ -35,7 +35,7 @@ const VEL_SMOOTH = 0.72;    // how much of the previous velocity a sample keeps 
  * @param {ReturnType<import('../state/store.js').createStore>} store
  */
 export function attachGestures(canvas, store) {
-  /** @type {Map<number, {x:number,y:number,sx:number,sy:number,t:number,type:string,button:number}>} */
+  /** @type {Map<number, {x:number,y:number,sx:number,sy:number,t:number,type:string,button:number,travel:number,multi:boolean}>} */
   const pointers = new Map();
   let lastTap = 0;
   let pinch = null; // { dist, angle, midX, midY }: the two fingers, last move
@@ -156,7 +156,11 @@ export function attachGestures(canvas, store) {
     vel = null;
     canvas.setPointerCapture(e.pointerId);
     const p = local(e);
-    pointers.set(e.pointerId, { x: p.x, y: p.y, sx: p.x, sy: p.y, t: performance.now(), type: e.pointerType, button: e.button });
+    pointers.set(e.pointerId, { x: p.x, y: p.y, sx: p.x, sy: p.y, t: performance.now(), type: e.pointerType, button: e.button,
+      travel: 0, multi: pointers.size > 0 });
+    // A second finger makes the whole gesture two-fingered, for every finger in it: the
+    // one that lifts last after a pinch or a twist is not tapping.
+    if (pointers.size > 1) for (const r of pointers.values()) r.multi = true;
     if (pointers.size === 1) {
       // Which it is, is decided here and not revisited: letting go of Ctrl halfway
       // through a turn should not silently make it a pan. A mouse on the turn button
@@ -186,6 +190,7 @@ export function attachGestures(canvas, store) {
     const p = local(e);
     const dx = p.x - rec.x, dy = p.y - rec.y;
     rec.x = p.x; rec.y = p.y;
+    rec.travel += Math.hypot(dx, dy);
     const vp = viewport();
     if (pointers.size === 1) {
       // Mouse: the left button slides the map, which is what an atlas is read with, and
@@ -276,9 +281,13 @@ export function attachGestures(canvas, store) {
       two = { mode: 'undecided', twist: false, start: { ...pinch } };
       held = turnAnchor(pinch.midX, pinch.midY);
     }
-    const moved = Math.hypot(rec.x - rec.sx, rec.y - rec.sy);
+    // A tap is one finger that went down and came up without going anywhere: the
+    // distance it *travelled*, not how far it ended from where it began, since a pan
+    // that wanders back is not a tap either. And never the last finger of a two-finger
+    // gesture: `resetOrigins` restarts the survivor's origin when its partner lifts, and
+    // that made every pinch and twist ending within a third of a second select a state.
     const dt = performance.now() - rec.t;
-    if (pointers.size === 0 && moved < TAP_SLOP && dt < TAP_MS && rec.button === 0) {
+    if (pointers.size === 0 && !rec.multi && rec.travel < TAP_SLOP && dt < TAP_MS && rec.button === 0) {
       const now = performance.now();
       if (now - lastTap < DOUBLE_MS) {
         lastTap = 0;
