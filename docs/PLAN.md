@@ -376,8 +376,8 @@ bharat-darshan/
   pipeline/          offline data build; raw/ and cache/ are git-ignored
   content/
     layers/<id>/     one folder per layer: layer.json + items.json (section 5)
-    plates/<id>.json one file per atlas page: base, layers, camera, words (planned)
-    sources.json     every dataset once: licence, vintage, URL (planned)
+    plates/<id>.json one file per atlas page: base, layers, camera, words
+    sources.json     every dataset once: publisher, licence, vintage, URL, use
     states/          per-state facts and copy
   public/data/       generated, content-hashed assets + manifest.json
   src/
@@ -639,11 +639,40 @@ content/plates/minerals.json
 
 With dozens of datasets, attribution per layer stops scaling: the same census or the same
 yearbook feeds ten layers. `content/sources.json` declares each source once -- id, title,
-publisher, URL, licence, vintage, date retrieved -- and layers and items cite it by id
-(plain URLs stay legal for one-off facts). The build fails on an unknown id or a source
-with no licence, the credits screen is generated from it, and each legend shows its
-source and year. Government of India open data is mostly under GODL-India, which allows
-reuse with attribution; anything else is checked before it is used, not after.
+publisher, URL, licence, vintage, date retrieved, and a note saying what this atlas took
+from it -- and layers and plates cite it by id. A plain URL stays legal as a citation on
+one item, for a fact that has not earned an entry, but a layer must name at least one id:
+a URL has no title, no licence and no year, so a page built on it could not say whose map
+it is. *Built 2026-09-22.*
+
+The registry's teeth are in `use`, which says what we do with a source and which the
+build enforces (`pipeline/lib/sources.py`):
+
+| `use` | Means | The build requires |
+|-------|-------|--------------------|
+| `data` | files or rasters derived from it ship | a licence that permits redistribution |
+| `software` | it ships as code or a font | the same |
+| `facts` | figures checked against it | a URL a reader can follow; a licence when one is stated |
+| `blocked` | looked at, and not usable | that nothing cites it -- the build fails with the reason |
+
+`blocked` is the part worth keeping: WorldClim and CHIRPS (open question 13) are in the
+file with the reason they cannot be used and the way out, so the next person to reach for
+them is stopped by the build rather than by memory. `facts` is the honest distinction the
+project was already making informally -- a census figure in a card is a citation, not a
+redistributed dataset -- and it keeps us from claiming a licence we have not read.
+
+`public/data/sources.json` is the build's cut of the registry: only what the layers
+actually cite, plus a `base` list for the sources that make the model itself rather than
+one layer of it (boundaries, elevation, the vectors, three.js, the lettering). The credits
+screen is generated from it, so it cannot credit a dataset the atlas does not use or miss
+one it does; each legend shows the layer's sources and their year; and an open plate shows
+the union of its layers'. `src/ui/credits.js` does the resolving and is pure, so
+`test/credits.test.js` checks it both on a fixture and on the registry that ships.
+
+One prose attribution is left, inside `public/data/regions/states.json`, where step 1
+writes it as that file's own provenance line; nothing reads it on screen. Government of
+India open data is mostly under GODL-India, which allows reuse with attribution; anything
+else is checked before it is used, not after.
 
 ### Base item schema
 
@@ -941,8 +970,10 @@ and legend as atlas furniture. Exit: a plate added with a JSON file only, and th
 ten plates -- one or two per section -- reading as an atlas rather than a demo.
 *Begun 2026-09-21: plates, the contents page and `/atlas/<id>` are in, with nine pages
 across seven sections; `grep -r plate src/engine/` is empty and a page is a JSON file.
-Left: per-plate share images and Open Graph shells, the source registry and generated
-credits, and the atlas furniture -- cartouche, scale bar, compass rose, graticule.*
+The source registry followed on 2026-09-22: every dataset declared once, cited by id,
+enforced by the build, with the credits screen and every source line generated from it.
+Left: per-plate share images and Open Graph shells, and the atlas furniture -- cartouche,
+scale bar, compass rose, graticule.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1664,6 +1695,26 @@ docs/DEPLOY.md).
   Two of the pages exist only because the primitives compose: population as height with
   density as colour, and the monsoon's arrows over the physical divisions. Neither needed
   any new drawing, which is what D12 was for.
+- 2026-09-22, twenty-seventh round: the source registry. Twenty-two datasets declared
+  once in `content/sources.json` with publisher, URL, licence, what we do with it and a
+  note on what this atlas took; fifteen layers and two plates cite them by id; and the
+  credits screen, every legend's source line and every page's source line are generated
+  from the build's cut of it. The five hand-written credit strings are gone from `i18n`.
+  The part worth keeping is `use`. A source whose files ship needs a licence that permits
+  redistribution, a source we only check figures against needs a URL and no more, and a
+  source marked `blocked` fails the build for anything that cites it, printing the reason.
+  WorldClim and CHIRPS are in the file as blocked, so open question 13's two refusals are
+  now enforced rather than remembered: `layer.sources: source 'worldclim' may not be used.
+  Its terms say redistribution or commercial use is not allowed...`. That distinction also
+  keeps the file honest -- census figures are cited, not redistributed, so nothing claims
+  a licence that was never read.
+  Two rules earned themselves during the round. A layer must cite at least one registry
+  id, not only a URL: the power layer briefly reverted to its plain URL, passed validation
+  because URLs are legal, and left the power page with nothing to name -- a URL has no
+  title, licence or year. And the vintage is dropped when the title already carries it,
+  which is what "Census of India 2011, 2011" asked for. Per-layer `attribution` prose
+  stopped shipping to the runtime: it was never on screen, and two places saying who to
+  credit is the sprawl the registry exists to stop.
 
 ### What exists
 
@@ -1724,14 +1775,18 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. **Phase 6, continued.** Plates and the contents page are in. What is left of that
-   phase, roughly in order: the source registry (`content/sources.json`) and credits
-   generated from it, which is the thing that stops attribution sprawling as the plates
-   multiply; per-plate share images and Open Graph shells, so a page pasted into WhatsApp
-   shows that page; and the atlas furniture -- a cartouche for the open plate, a scale
-   bar, a compass rose, a graticule scored into the table. Base styles (section 5) would
-   also help the thematic pages: several of them would read better over a quieter base
-   than the full hypsometric one.
+0. **Phase 6, continued.** Plates, the contents page and the source registry are in.
+   What is left of that phase, roughly in order: per-plate share images and Open Graph
+   shells, so a page pasted into WhatsApp shows that page; and the atlas furniture -- a
+   cartouche for the open plate, a scale bar, a compass rose, a graticule scored into the
+   table. Base styles (section 5) would also help the thematic pages: several of them
+   would read better over a quieter base than the full hypsometric one. Two smaller
+   things the registry left behind: `content/layers/<id>/layer.json` still carries an
+   `attribution` line that the build no longer ships (it says what the build did with the
+   source, which is worth keeping for whoever edits the layer, but it is prose in a place
+   nothing reads); and items still cite plain URLs, which is by design, but the busier
+   hosts among them -- Wikipedia is on 291 items, UNESCO on 32 -- would read better
+   resolved through the registry like everything else.
 0. **Phase 5 is done bar one primitive.** Six of the seven are built, each proven on a
    real dataset with the full contract, and `src/` names none of the layers. Only
    `raster` is left and it is blocked on licensing, not on code: open question 13 sets

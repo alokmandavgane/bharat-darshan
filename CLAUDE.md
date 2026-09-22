@@ -51,6 +51,11 @@ current status.
   pipeline caches stay out of git.
 - **Content:** every media item needs credit, licence and source. Cite sources for
   facts; keep a neutral tone on contested topics.
+- **Sources:** every dataset is declared once in `content/sources.json` and cited by id;
+  each layer and plate must name at least one. The build refuses an unknown id, a layer
+  that cites only URLs, a source marked `blocked`, and a source whose licence does not
+  permit redistributing what we would ship. The credits screen and every source line are
+  generated from it, so do not hand-write attribution anywhere.
 - **Generated data:** `public/data/` is committed and rebuilt with `npm run data`
   (reproducible byte for byte; commit data changes separately from code). State
   raster ids come from `content/states/states.json` and are never renumbered.
