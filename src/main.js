@@ -53,6 +53,9 @@ const store = createStore({
   // The atlas page on show, by id, or null for the map on its own (PLAN.md D11).
   plate: url.plate,
   plates: null,          // { sections, plates } once fetched
+  // The source registry (PLAN.md section 5): every dataset the atlas cites, declared once,
+  // which the legends, the pages and the credits screen all resolve their ids through.
+  sources: null,         // { base, licences, sources } once fetched
 
   home: null,            // { t }: a request to clear everything and frame the country again
   tour: { playing: false, index: -1, total: 0 },

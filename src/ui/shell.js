@@ -7,6 +7,7 @@ import { symbolSizer } from '../engine/points.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { DEFAULT_RELIEF } from '../state/url.js';
 import { glyphSvg } from '../glyphs.js';
+import { citeLabel, creditList, hostOf, sourceList } from './credits.js';
 
 /**
  * @param {Document} root
@@ -47,6 +48,7 @@ export function createShell(root, store) {
   const infoBtn = $('.sheet-info');
   const about = $('.about');
   const aboutDraft = $('.about-draft');
+  const credits = $('.credits');
   const tourBtn = $('.tour-button');
   const resetBtn = $('.reset-button');
   const tooltip = $('.tooltip');
@@ -154,11 +156,86 @@ export function createShell(root, store) {
       }
       section.appendChild(row);
       for (const layer of list) {
-        if (!active.has(layer.id) || layer.marker === 'label') continue;
-        const legend = layerLegend(layer);
+        if (!active.has(layer.id)) continue;
+        // A layer with no key still owes the reader its source, so the line goes on
+        // whatever is drawn -- a legend is a nicety, a citation is not (PLAN.md 5).
+        const legend = layer.marker === 'label' ? null : layerLegend(layer);
         if (legend) section.appendChild(legend);
+        const src = sourceNote(layer.sources, LEGEND_SOURCES);
+        if (src) section.appendChild(src);
       }
       chips.appendChild(section);
+    }
+  }
+
+  const LEGEND_SOURCES = 3;   // a legend says where it came from; it is not the credits screen
+
+  /**
+   * "Sources: Natural Earth, India-WRIS, Wikipedia" -- the line under a legend or an open
+   * page, each name linking to the publisher and carrying the data's year where there is
+   * one. It resolves ids through the registry the build wrote, so the same census cited by
+   * ten layers is written down once (PLAN.md section 5, "Source registry").
+   */
+  function sourceNote(cites, max = 0) {
+    const reg = store.get('sources');
+    const found = sourceList(reg, cites, currentLanguage(), max);
+    if (!found.length) return null;
+    const p = document.createElement('p');
+    p.className = 'legend-sources';
+    p.append(`${t('facts.sources')}: `);
+    found.forEach((c, i) => {
+      if (i) p.append(', ');
+      if (!c.url) { p.append(citeLabel(c)); return; }
+      const a = document.createElement('a');
+      a.href = c.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = citeLabel(c);
+      p.appendChild(a);
+    });
+    if (max && (cites || []).length > found.length) p.append(' …');
+    return p;
+  }
+
+  /**
+   * The credits screen, generated from the registry (PLAN.md section 5). The sources that
+   * make the model come first -- they are on every page -- and each line says who
+   * published it, under what licence, and what this atlas took from it.
+   */
+  function renderCredits() {
+    const reg = store.get('sources');
+    const lines = creditList(reg, currentLanguage());
+    credits.replaceChildren();
+    credits.hidden = !lines.length;
+    for (const c of lines) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = c.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = citeLabel(c);
+      li.append(a);
+      if (c.publisher) li.append(` — ${c.publisher}`);
+      if (c.licence) {
+        li.append(' · ');
+        if (c.licence.url) {
+          const lic = document.createElement('a');
+          lic.href = c.licence.url;
+          lic.target = '_blank';
+          lic.rel = 'noopener';
+          lic.textContent = c.licence.title;
+          li.appendChild(lic);
+        } else {
+          li.append(c.licence.title);
+        }
+      }
+      if (c.note) {
+        const span = document.createElement('span');
+        span.className = 'credit-note';
+        span.textContent = c.note;
+        li.append(span);
+      }
+      credits.appendChild(li);
     }
   }
 
@@ -518,6 +595,10 @@ export function createShell(root, store) {
       p.className = 'contents-blurb';
       p.textContent = pick(plate.blurb);
       contents.append(back, h, p);
+      // A page cannot show a map without saying whose it is: the build unions its layers'
+      // sources into the plate, so this line is never the page's own promise (PLAN.md D11).
+      const src = sourceNote(plate.sources);
+      if (src) contents.appendChild(src);
       return;
     }
     listWrap.hidden = true;
@@ -559,10 +640,6 @@ export function createShell(root, store) {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-plate]');
     if (btn) openPlate(btn.dataset.plate || '');
   });
-
-  function hostOf(url) {
-    try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return url; }
-  }
 
   /** The fact card for a unit: structured, sourced, shown only once reviewed (or with drafts on). */
   /** One label/value row as its own definition list, for cards with a single fact. */
@@ -889,6 +966,12 @@ export function createShell(root, store) {
     if (wanted && d.plates.some((p) => p.id === wanted)) openPlate(wanted);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
+  store.subscribe('sources', () => { renderChips(); renderContents(); renderCredits(); });
+  // The source registry: every dataset once, which the legends, the pages and the credits
+  // all resolve their ids through (PLAN.md section 5, "Source registry").
+  fetch('/data/sources.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
+    if (d) store.set('sources', d);
+  }).catch(() => {});
   store.subscribe('regional', () => { renderSelection(); renderScrubber(); });
   store.subscribe('month', () => { renderScrubber(); renderSelection(); });
   store.subscribe('tour', renderSteps);
@@ -908,6 +991,7 @@ export function createShell(root, store) {
     renderHover();
     renderStatus(store.get('status'));
     renderTour();
+    renderCredits();
   });
 
   // Camera padding: header on top; on phones the sheet peek at the bottom; on wide

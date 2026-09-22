@@ -434,6 +434,15 @@ body[data-level="state"] .sheet-head { cursor: default; }
   color: var(--muted);
 }
 .legend-note { margin-top: 4px; line-height: 1.35; }
+/* Where the layer came from, generated from the source registry (PLAN.md section 5).
+   Quieter than the key above it: it is there to be checked, not read every time. */
+.legend-sources {
+  margin: 3px 0 0;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.legend-sources a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 2px; }
 
 /* The card's own steps: walk the places on show without closing the card. */
 .card-steps {
@@ -506,6 +515,10 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .about ul { padding-left: 16px; }
 .about li { font-size: 0.85rem; margin-bottom: 4px; }
 .about-draft { color: var(--accent); font-weight: 600; }
+/* The credits, one line per source: title and year, publisher, licence, then what this
+   atlas took from it on its own line, small. */
+.credits li { margin-bottom: 8px; }
+.credit-note { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.4; }
 
 /* --- fact card --- */
 .facts dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; }
