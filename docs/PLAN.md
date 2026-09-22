@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-22 (thirty-sixth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-22 (thirty-seventh round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2348,6 +2348,39 @@ docs/DEPLOY.md).
     both could probably do better now that GeoJSON is a source format. The gauge on every
     railway feature is an atlas map nobody has drawn yet.
 
+- 2026-09-22, thirty-seventh round: the rivers, on the government's own survey.
+  - **India-WRIS replaces Natural Earth.** 30,546 features naming 27,584 rivers, each with
+    its basin and sub-basin, from indian_water_features (CC0 on the india-geodata
+    catalogue's word; the republishing repo carries no licence and WRIS's own terms are
+    unconfirmed -- the registry says so). The 28 named rivers join by WRIS's name, and by
+    name *in a basin* where there are namesakes: `qualify: "ba_name"` lets an item ask for
+    "Mahanadi @ Mahanadi", because WRIS also has a 300 km Mahanadi in the Ganga basin and
+    a Brahmani in Kutch. Spellings to know: Sone, Satluj, Cauvery, Pennar, Teesta.
+    Lengths agree with the published ones (Narmada 1,328 km to 1,312).
+  - **It only ships as PMTiles, Parquet or 7z**, and of those only a tile archive can be
+    read without a dependency, so `pipeline/lib/pmtiles.py` reads PMTiles v3 and decodes
+    vector tiles in about 300 lines of stdlib -- 46,000 tiles at zoom 10 in six seconds.
+    Each tile's geometry is clipped to its own square (archives draw a buffer past the
+    edge, so neighbours overlap), which lets `stitch` rejoin the pieces. The Ganga still
+    arrives as 244 chains, but that is the source's braids and confluences, not the
+    tiles: only 23 of 488 chain ends sit on a tile edge.
+  - **Two tiers, and the second is where the richness is.** The country view carries the
+    28 named rivers over every other river WRIS counts as major (47,000 km, 69 KB
+    compressed). Lift a state and every river in it at least 40 km long arrives at 0.25 km:
+    35 files, 3.1 MB in all, Uttar Pradesh the largest at 146 KB compressed. `detail` is
+    now general to any named `lines` layer, and a detail tier's network may be looser
+    than the country's (`where`, `min_length_km`). All 591,000 km of WRIS was 7.9 MB and
+    1 MB for one state; the 40 km floor keeps 42% of the length for 39% of the bytes.
+  - **HydroRIVERS was looked at and set aside.** It has no names, and its licence is a
+    contract WWF may terminate at its sole discretion that asks the licensee to keep
+    records of end users. Worth writing down so nobody reaches for it again.
+  - **A side effect caught before commit**: the new network code stitched across road
+    names, which moved the highway network by 350 km and 600 runs. Stitching a name at a
+    time, as the named items always were, restored roads and rail byte for byte.
+  - **Left**: the physical divisions are the last layer still on Natural Earth. The
+    catalogue's WRIS basins and sub-basins (also tile archives, now readable) are the
+    obvious replacement, and a basin map is one the atlas lacks anyway.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -2461,9 +2494,8 @@ docs/DEPLOY.md).
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts have their source now and are drawn as lines
    and labels, coarse over the country and sharp inside a state; what is left there is
-   the uint16 raster, which is what district choropleths need. `detail` is general to
-   `lines` layers, so rivers, roads and rail can each gain a state tier whenever they are
-   worth one -- rivers first, they are the ones a lifted state shows most of.
+   the uint16 raster, which is what district choropleths need. Rivers have their state
+   tier too; roads and rail could take one the same way when a closer look wants it.
    The scrubber has no map expression yet -- it changes what the sheet says, not what the
    model shows -- which is worth a look once there is more dated content than festivals.
 2. Roads and rail ship as drafts: 35 highway and 21 railway cards to read, plus the two
