@@ -29,7 +29,8 @@ current status.
 - Plates over layers (D11): an atlas page is a JSON file under `content/plates/` naming
   a base style, layers and a camera. Adding a plate must not need changes under `src/`.
 - Stylised look: a hand-made clay / paper model. No imagery, no realism. Markers are
-  clay too: tokens, beads and figurines standing on the relief, never flat stickers.
+  clay too: pegs, beads and figurines standing on the relief, drawn by the GPU, never
+  flat stickers. The sea, the neighbours and the graticule show by default.
 - English + Hindi from the first screen. Every user-facing string and content field
   exists in both.
 - Content is AI-drafted and human-reviewed: items carry `sources` and a `status`;

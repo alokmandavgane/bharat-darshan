@@ -311,7 +311,8 @@ Desktop / tablet landscape:
   sources, and an eye. A page's own layer stays listed when hidden so the eye can bring it
   back. The *menu* is for mixing your own: the view (language, relief, surroundings,
   graticule) as one compact strip, then every layer as a row -- mark, name, key in
-  miniature, switch -- grouped as the catalogue groups them. The *sheet* is the subject:
+  miniature, switch -- grouped as the catalogue groups them, with a search field at the
+  top that narrows them by name. The *sheet* is the subject:
   the contents when nothing is open (a tile and a line per page), the open page's words,
   sources and "On this page" rows, a state's card, or an item's card. One search field in
   every view but a card; the 36 units behind a fold rather than under everything.
@@ -1971,6 +1972,45 @@ docs/DEPLOY.md).
   the shadow disc must share the instance buffers or it drifts from what it shadows; and a
   scaled-down screenshot catches tokens mid pop-in and shows their shadows alone, which
   looked like a rendering bug and was not. Not yet looked at on the reference phone.
+
+- 2026-09-22, the second look at the overlays. The owner's notes, and what each turned
+  out to be:
+  - *The GI objects look very dark.* A colour-space slip: every three.js colour is linear,
+    and the mark shader wrote it out as it was, where the terrain and the lines convert
+    with `linearToOutputTexel` on the way out. One line, and a little more fill light.
+  - *The clay marker still needs improvement.* The tokens were the one flat thing left on
+    the model: a DOM sticker with a gradient, beside figurines that are lit and stand.
+    Now a token is a **peg** -- a pale clay post and a head in the category's colour,
+    drawn by the same instanced path as the beads and figurines -- with the category's
+    glyph as a **decal** on the head: a quad in the camera's own frame on the near side
+    of the sphere, cut from an atlas the device rasterises once from `src/glyphs.js`, so
+    the glyph is read square-on at every yaw and tilt while the head stays a lit sphere.
+    They spring up one after another as before, now in the vertex shader (`iBorn` and a
+    time uniform; the engine keeps drawing until the last one has landed). HTML keeps
+    only the name tags. `points.js` draws nothing itself now but symbols and range names.
+  - *Reference lines are cut off by relief.* They were laid on the surface, where every
+    hill in front of them hid them, which is correct for a river and wrong for the Tropic
+    of Cancer. A lines layer may now `"float": true`: a wire stretched above the model at
+    the height of a 1,500 m hill, draped only where the land stands higher, rising and
+    falling with the exaggeration. The tropic and the standard meridian float.
+  - *Show surroundings and the graticule by default.* Done. The backdrop was 1.5 MB, so
+    it is rebuilt at 640 px (471 KB; it is scenery, and its mesh was coarser than its
+    raster anyway) and fetched only after the first frame is on screen, so the first
+    view's budget still holds. What shows at a wide desktop fit deserves a word: the plate
+    reads as a softly edged rectangle on the backdrop. That is not a bug -- the open sea
+    matches across the join to two levels in 255 -- it is the plate's coastal shadow and
+    baked occlusion against a backdrop that has neither, and the backdrop ending as a
+    pool 2,600-4,300 km out. Worth a look on the reference phone before deciding whether
+    the backdrop should carry a coast band of its own.
+  - *No month filter for festivals in the legend.* The scrubber is gone from the menu, and
+    the month panel from the sheet. `?month=` still narrows what is drawn and listed, for
+    a link that asks, but nothing in the UI sets it.
+  - *A search for the setting to change.* The menu opens with a field that narrows the
+    layers and the view's switches to those whose names, keys or group headings match, in
+    the language showing; on a fine pointer it takes focus as the menu opens.
+  Also: the default layers land before the first tier does, so they were handed to the
+  DOM before the GPU marker module existed; the engine now hands them over once it is.
+  Sizes after: app JS 53 KB gzipped, three.js 142 KB.
 
 ### What exists
 
