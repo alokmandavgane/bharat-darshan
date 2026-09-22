@@ -5,6 +5,7 @@ import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
 import { asChoropleth, choroplethLookup, FILL_TYPES, prismLookup } from './choropleth.js';
 import { createLines } from './lines.js';
+import { createGraticule } from './graticule.js';
 import { createWorld } from './world.js';
 import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
 import { DATA_BASE, loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
@@ -59,6 +60,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let lines = null;            // every `lines` layer on screen, once loaded
   let world = null;            // the wide backdrop, once Surroundings has asked for it
   let worldLoad = null;
+  let graticule = null;        // the parallels and meridians, once they have been asked for
+  let graticuleLoad = null;
   let raised = null;           // { id, km }: the block, for picking and projecting
   let fineIds = null;          // 2048-tier ids for the block when the tier on screen is coarser
   let tierIds = null;          // the tier on screen, for the land mask the camera clamp uses
@@ -859,6 +862,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     lines.setView(viewport.w, viewport.h, store.get('camera').zoom);
     loadActiveLayers();
     applySurroundings(!!store.get('surroundings'));
+    if (store.get('graticule')) applyGraticule(true);
     loadJson('regions/outlines/india.json').then((o) => {
       countryWalls = createCountryWalls(o.loops, terrain.uniforms);
       countryWalls.visible = !store.get('surroundings');
@@ -898,6 +902,28 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   store.subscribe('lang', () => { labels.invalidateText(); invalidate(); });
+
+  /**
+   * The graticule: furniture on the table, fetched the first time it is switched on. It is
+   * 2 KB, but it is not on the first view either -- nothing the map opens with needs it.
+   */
+  function applyGraticule(on) {
+    if (graticule) graticule.mesh.visible = !!on;
+    else if (on) loadGraticule();
+    invalidate();
+  }
+
+  function loadGraticule() {
+    if (graticuleLoad) return;
+    graticuleLoad = loadJson(manifest.graticule || 'graticule.json').then((data) => {
+      if (!data?.lines?.length || graticule) return;
+      graticule = createGraticule(data);
+      graticule.mesh.visible = !!store.get('graticule');
+      scene.add(graticule.mesh);
+      invalidate();
+    }).catch((err) => console.warn('graticule skipped:', err));
+  }
+  store.subscribe('graticule', applyGraticule);
 
   /** Surroundings on: sea and neighbours as before. Off (default): India alone as a cut-out with walls. */
   function applySurroundings(on) {

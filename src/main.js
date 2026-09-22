@@ -65,6 +65,9 @@ const store = createStore({
   // visitor is arriving, not being introduced, so the engine skips the entrance.
   linked: !!(url.cam || url.view || url.state || url.item || url.plate),
   surroundings: false,   // India alone on the page by default; the menu can show sea and neighbours
+  // Atlas furniture (PLAN.md section 3, item 6): the parallels and meridians, off until
+  // asked for. The lines are 2 KB and are fetched the first time they are switched on.
+  graticule: false,
   // Content ships reviewed-only (D10). Drafts are on by default while the first
   // batch is being reviewed, so the demo shows the cards; flip to
   // `url.drafts || import.meta.env.DEV` once the owner has reviewed them.

@@ -21,6 +21,7 @@ export function createShell(root, store) {
   const langOptions = [...root.querySelectorAll('.lang-option')];
   const reliefChip = $('.chip-relief');
   const surroundingsChip = $('.chip-surroundings');
+  const graticuleChip = $('.chip-graticule');
   const reliefRow = $('.relief');
   const slider = /** @type {HTMLInputElement} */ ($('.relief-slider'));
   const sliderValue = $('.relief-value');
@@ -90,6 +91,8 @@ export function createShell(root, store) {
   reliefChip.addEventListener('click', () => store.set('relief', { on: !store.get('relief').on }, { animate: true }));
   surroundingsChip.addEventListener('click', () => store.set('surroundings', !store.get('surroundings')));
   store.subscribe('surroundings', (on) => surroundingsChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
+  graticuleChip.addEventListener('click', () => store.set('graticule', !store.get('graticule')));
+  store.subscribe('graticule', (on) => graticuleChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
   slider.addEventListener('input', () => store.set('relief', { amount: Number(slider.value), on: true }));
   retry.addEventListener('click', () => location.reload());
   // The card's own steps walk the tour's route by hand: a card is opened by name alone
