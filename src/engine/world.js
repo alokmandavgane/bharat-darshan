@@ -67,6 +67,8 @@ export function createWorld({ data, terrain, grid }) {
     // The backdrop binds its own rasters, so it is not one of the terrain's siblings and
     // broadcasts do not reach it: it has to be told the light's direction like the scale.
     setLightDir(x, z) { u.uLightDir.value.set(x, z); },
+    /** The base style, like the plate's: the neighbours cannot stay banded while India is clay. */
+    setPlain(value) { u.uPlain.value = value; },
     dispose() {
       geometry.dispose();
       material.dispose();

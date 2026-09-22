@@ -45,6 +45,8 @@ uniform float uChoroMix;       // 0..1: how far the choropleth has faded in
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
 uniform vec3 uBands[7];        // hypsometric palette, low to high
+uniform vec3 uClay;            // the `plain` base style's one colour
+uniform float uPlain;          // 0 bands, 1 clay (PLAN.md section 5, "Base styles")
 uniform float uBandTops[7];    // upper edge of each band, m
 
 in vec2 vUv;
@@ -164,7 +166,10 @@ void main() {
   vec3 sky = vec3(0.90, 0.93, 1.0);
   vec3 light = sky * 0.50 + sun * 0.62 * diff;
   float ao = mix(1.0, shade.r, 0.75);
-  vec3 albedo = bandColour(h);
+  // The base style. A thematic page asks for `plain` and the bands give way to one clay,
+  // so the page's own colours are the only colours on the model; the light and the baked
+  // occlusion carry the relief by themselves. Physical pages keep the bands.
+  vec3 albedo = mix(bandColour(h), uClay, uPlain);
   // A choropleth tints the clay rather than covering it: the value replaces the
   // hypsometric colour, and the same light, ambient occlusion and grain go over the top,
   // so the relief is still there to read under the colour. A region with no value keeps

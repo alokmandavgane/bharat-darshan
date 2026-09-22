@@ -29,6 +29,11 @@ export const PALETTE = {
   ocean: '#bccbd0',
   bands: ['#a6b98a', '#bec394', '#d1c08f', '#caa77e', '#ad8f76', '#a59b93', '#efece7'],
   tops: [80, 250, 600, 1200, 2500, 5400, 9000],
+  // The `plain` base style (PLAN.md section 5, "Base styles"): one warm clay for a
+  // thematic page, whose own colours would otherwise fight the hypsometric bands. The
+  // relief is still all there -- the light and the baked occlusion carry it alone, which
+  // is what a clay model looks like before anyone paints heights onto it.
+  clay: '#e8cb9c',
 };
 
 /**
@@ -126,6 +131,9 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uChoroColors: { value: Array.from({ length: 8 }, () => new Color('#000000')) },
     uChoroMix: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
+    uClay: { value: new Color(PALETTE.clay) },
+    uPlain: { value: 0 },          // 0 hypsometric bands, 1 flat clay; tweened between
+
     uOcean: { value: new Color(PALETTE.ocean) },
     uBands: { value: PALETTE.bands.map((c) => new Color(c)) },
     uBandTops: { value: Float32Array.from(PALETTE.tops) },
@@ -243,6 +251,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     /** How far it has faded in, 0..1. */
     setChoroMix(v) {
       broadcast((u) => { u.uChoroMix.value = v; });
+    },
+    /** The base style, 0 (hypsometric bands) to 1 (flat clay). Fractions are the crossfade. */
+    setPlain(v) {
+      broadcast((u) => { u.uPlain.value = v; });
     },
     dispose() {
       textures.forEach((t) => t.dispose());

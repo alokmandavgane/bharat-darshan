@@ -52,6 +52,10 @@ const store = createStore({
   level: { name: 'country', id: null },
   // The atlas page on show, by id, or null for the map on its own (PLAN.md D11).
   plate: url.plate,
+  // What the clay looks like under everything else (PLAN.md section 5, "Base styles"):
+  // `physical` hypsometric bands, or `plain` one warm clay for a thematic page. The open
+  // page chooses it; no layer ever does.
+  base: 'physical',
   plates: null,          // { sections, plates } once fetched
   // The source registry (PLAN.md section 5): every dataset the atlas cites, declared once,
   // which the legends, the pages and the credits screen all resolve their ids through.

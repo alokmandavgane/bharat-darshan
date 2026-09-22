@@ -225,6 +225,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let prismKm = 0;           // how far the top of the prisms layer's range stands up
   let prismValues = null;    // { values, domain }: the same lift on the CPU, for picking
   let cancelChoro = null;
+  let cancelBase = null;
 
   function fadeChoro(to, ms, onDone) {
     cancelChoro?.();
@@ -232,6 +233,32 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       (s) => { terrain.setChoroMix(s.v); invalidate(); },
       { onDone: () => { cancelChoro = null; onDone?.(); } });
   }
+
+  // The base styles (PLAN.md section 5): what the clay looks like under everything else.
+  // `plain` is one warm colour with the relief carried by light alone, for a thematic page
+  // whose own colours would fight the hypsometric bands. The base is a property of the
+  // page, so it arrives through the store exactly as the layers do and no layer id is
+  // involved. `political` is specified but not built, and the build refuses it.
+  const BASES = { physical: 0, plain: 1 };
+  const BASE_MS = 420;
+
+  function applyBase(name, animate = true) {
+    if (!terrain) return;
+    const to = BASES[name] ?? 0;
+    cancelBase?.();
+    if (!animate) {
+      terrain.setPlain(to);
+      world?.setPlain(to);
+      invalidate();
+      return;
+    }
+    cancelBase = tween({ v: terrain.uniforms.uPlain.value }, { v: to }, BASE_MS, (st) => {
+      terrain.setPlain(st.v);
+      world?.setPlain(st.v);
+      invalidate();
+    }, { onDone: () => { cancelBase = null; } });
+  }
+  store.subscribe('base', (name, _prev, meta) => applyBase(name, meta?.source !== 'init'));
 
   /**
    * Which fill the visitor has switched on, or null. A choropleth and an `areas` layer
@@ -862,6 +889,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     lines.setView(viewport.w, viewport.h, store.get('camera').zoom);
     loadActiveLayers();
     applySurroundings(!!store.get('surroundings'));
+    applyBase(store.get('base'), false);
     if (store.get('graticule')) applyGraticule(true);
     loadJson('regions/outlines/india.json').then((o) => {
       countryWalls = createCountryWalls(o.loops, terrain.uniforms);
@@ -947,6 +975,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       world.mesh.visible = !!store.get('surroundings');
       world.setCurve({ exag: terrain.uniforms.uExag.value, gamma: terrain.uniforms.uGamma.value,
                        hRef: terrain.uniforms.uHRef.value });
+      world.setPlain(terrain.uniforms.uPlain.value);      // it may arrive onto a plain page
       backdrop.add(world.mesh);
       invalidate();
     }).catch((err) => console.warn('backdrop skipped:', err));

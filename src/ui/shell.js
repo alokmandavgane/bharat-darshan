@@ -562,6 +562,7 @@ export function createShell(root, store) {
     store.set('plate', id);
     store.set('item', null);
     store.set('layers', { active: [...plate.layers] });
+    store.set('base', plate.base || 'physical');
     if (plate.relief !== undefined) store.set('relief', { on: plate.relief > 0, amount: plate.relief || DEFAULT_RELIEF }, { animate: true });
     if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     store.set('selection', null);
@@ -573,6 +574,7 @@ export function createShell(root, store) {
     store.set('plate', null);
     store.set('item', null);
     store.set('layers', { active: (store.get('catalog') || []).filter((l) => l.default_on).map((l) => l.id) });
+    store.set('base', 'physical');
     store.set('relief', { on: true, amount: DEFAULT_RELIEF }, { animate: true });
     renderContents();
   }
