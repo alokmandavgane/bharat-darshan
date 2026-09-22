@@ -170,6 +170,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
                 { source });
       return true;
     }
+    // An `areas` item -- a basin, a physical division -- is opened by a tap through its
+    // raster, but a link, a search result or the carousel names it by id, and without
+    // this it opened an empty card.
+    const fill = choroFiles.get(sel.layer);
+    const area = fill?.type === 'areas' ? fill.items?.find((i) => i.id === sel.id) : null;
+    if (area) {
+      store.set('item', { layer: sel.layer, id: sel.id, data: area, categories: fill.categories, fields: fill.fields },
+                { source });
+      return true;
+    }
     const line = lines?.find(sel.layer, sel.id);
     if (line) {
       store.set('item', { layer: sel.layer, id: sel.id, data: line.item, categories: line.categories, fields: line.fields },
@@ -380,6 +390,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
             const raster = await loadPack(DATA_BASE + data.raster);
             choroFiles.set(id, { ...data, raster, texture: byteTexture(raster, { nearest: true }) });
             showChoropleth(activeChoro());
+            // As for the other layer types: a link may have named an area before it arrived.
+            const sel = store.get('item');
+            if (sel && !sel.data && sel.layer === id && !fillItem(sel, 'init')) store.set('item', null);
             invalidate();
           })
           .catch((err) => { failed.add(id); console.warn(`layer ${id} skipped:`, err); })
@@ -475,8 +488,33 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const item = points.find(sel.layer, sel.id);
     if (item) return flyToItem(item, ms === undefined ? {} : { ms });
     const line = lines?.find(sel.layer, sel.id);
-    if (line) fitBox(line.bbox, ms);
+    if (line) return fitBox(line.bbox, ms);
+    // An area is framed by the texels its raster gives it, as a line is by its runs.
+    const fill = choroFiles.get(sel.layer);
+    const area = fill?.type === 'areas' && fill.raster ? fill.items?.find((i) => i.id === sel.id) : null;
+    if (area && meta.source !== 'tap') {
+      const box = areaBox(fill.raster, area.area_id);
+      if (box) fitBox(box, ms);
+    }
   });
+
+  /** An area id's extent in scene km, from its layer's raster. */
+  function areaBox({ width, height, data }, id) {
+    let c0 = width, r0 = height, c1 = -1, r1 = -1;
+    for (let r = 0; r < height; r++) {
+      for (let c = 0; c < width; c++) {
+        if (data[r * width + c] !== id) continue;
+        if (c < c0) c0 = c;
+        if (c > c1) c1 = c;
+        if (r < r0) r0 = r;
+        if (r > r1) r1 = r;
+      }
+    }
+    if (c1 < 0) return null;
+    const x = (c) => (c / width - 0.5) * sizeKm.w;
+    const z = (r) => (r / height - 0.5) * sizeKm.h;
+    return [x(c0), z(r0), x(c1 + 1), z(r1 + 1)];
+  }
 
   /** Frame a scene-km box, the way entering a state frames its unit. */
   function fitBox([x0, z0, x1, z1], ms = 800) {
@@ -889,7 +927,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // layer on to read it, and entering a state would hide what they tapped.
     const area = areaFill && pickArea(tap.x, tap.y);
     if (area) {
-      store.set('item', { layer: areaFill.id, id: area.id, data: area, categories: areaFill.categories, fields: areaFill.fields });
+      // Marked, so the card opens where the finger is: a basin is half a subcontinent,
+      // and framing it would throw away the view that was being read.
+      store.set('item', { layer: areaFill.id, id: area.id, data: area, categories: areaFill.categories, fields: areaFill.fields },
+                { source: 'tap' });
       return;
     }
     store.set('item', null);
