@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-22 (thirty-fifth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-22 (thirty-sixth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -611,7 +611,7 @@ map is a folder and a source, whatever it shows.
 | `choropleth`, banded | a number per region, in bands | density, literacy, sex ratio, rainfall by state, crop output | built (states) | population density (done) |
 | `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | built (`"scale": "categorical"`) | zonal councils (done) |
 | `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | **unblocked**: open question 10 is answered and the 785 polygons are in the build (see "District boundaries"). The raster itself is not built; the district map ships as lines and labels for now | Census 2011 literacy |
-| `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
+| `lines` | named courses, width by rank, colour by category, optional flow; joined to a source by `name`, by `route` (walking its graph) or by `corridor` (what runs along the way); optionally a finer copy per state, fetched when that state is lifted (`detail`) | rivers, roads, rail, waterways, pipelines, transmission | built | done; districts at two resolutions |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
 | `lines`, network | one item that is the *whole* of a source, drawn fine and unnamed under the routes that are named | the road and rail mesh, canals, transmission, pipelines | built (`"network": true` on an item; `"format": "districts"` for the district mesh) | roads and rail (done); district boundaries (done) |
 | `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
@@ -2287,6 +2287,67 @@ docs/DEPLOY.md).
     screen -- but "reproducible byte for byte" is no longer quite true, and the two files
     were reverted rather than committed so the shipped bytes stay as they were.
 
+- 2026-09-22, thirty-sixth round: better sources, and the state view sharpened.
+  Two asks: find roads and rail worth drawing, and stop the district lines looking
+  coarse the moment a state fills the screen.
+  - **Natural Earth is gone from both networks.** It was never a good source for India
+    -- 53,850 km of road, 39,746 km of rail, and *no names on any of it*, which is why a
+    highway had to be found by walking a graph between towns and a card could never be
+    sure the line under it was the road it named. The government surveys are published
+    as plain GeoJSON by INDIAN-SHAPEFILES (MIT over MoRTH/GatiShakti and Indian Railways
+    data): **124,000 km of national highway, 1,013 numbered routes, and the number is on
+    every feature**, so the 35 named roads join by that number and nothing is guessed.
+    Railways: 85,000 km of track centreline, with gauge.
+  - **The finding that cost the most and is worth the most.** The railway source cannot
+    be routed. Its sections do not meet: only 69% of chain ends have a neighbour within
+    200 m, and a branch's first vertex sits somewhere along the main line rather than at
+    a vertex of it. Noding the crossings and then bridging the gaps got the graph to one
+    component of 11,980 nodes out of 12,000 -- and still only 10 of 21 routes walked.
+    **A drawing is not a network, and no amount of snapping makes it one.** What works
+    instead is to stop asking for a path: `corridor` keeps the source's own chains that
+    lie within 8 km of the line through the places an item names. No connectivity, no
+    invention, every metre the source's own -- at the cost that a junction's approaches
+    and a parallel branch are counted in, which the layer's note says rather than
+    claiming route mileage.
+  - **`stitch`, which paid for itself twice.** A published network is cut wherever an
+    attribute changes, so NH 44 arrives as 2,992 fragments, most of them two points long.
+    Simplification cannot touch a two-point fragment. Stitched into chains broken only at
+    real junctions, the same network is *smaller and longer*: 13,667 runs and 102,919 km
+    became 7,434 runs and 117,422 km.
+  - **Verification, again the useful part.** Extents were read back in degrees and
+    compared against published termini. Lengths now agree with the Ministry's own
+    figures: NH 44 3,481 km of a published 4,225, NH 27 3,099 of 3,507.
+  - **Districts: the source was the ceiling.** The LGD TopoJSON's own vertices are
+    1.665 km apart (median), so simplifying at 1.5 km lost nothing -- the coarseness was
+    the file, not the build. The survey polygons have eighteen times the vertices, so the
+    mesh is drawn from those now, and written twice: the country tier at 1.5 km and a
+    file per state at 0.2 km, 32 of them, 1.6 MB in all, 161 KB at worst, fetched only
+    when that state is lifted. **A `lines` layer can do this generally** -- a `detail`
+    map of state to path, the block drawing it while the plate keeps the country's --
+    which is the "denser networks" half of D3's state package, and roads, rail and rivers
+    are next in line for it.
+    The identity is untouched: names, headquarters, populations and codes still come from
+    the directory's layer through Wikidata, which is the only thing that joins. The
+    survey polygons are asked for geometry and nothing else, and the boundary between two
+    districts is found by counting segments -- seen twice, it is an internal line; seen
+    once, it is the state's own edge, which the model draws itself.
+  - **A real bug, found by watching a build sit at 100% CPU for ten minutes.**
+    `erode` only removes a pixel whose four neighbours are inside the array, so a shape
+    touching the array edge is never worn away there and a shape *filling its bounding
+    box* is never worn away at all -- and `pole_of_inaccessibility` crops to exactly that
+    box, so its input always touches the edge. Real outlines usually come to a point near
+    the top of their box and erode from the sides, which is why it had never bitten; a
+    survey polygon set has plenty that do not. Fixed with a one-pixel false margin, plus
+    a `max_side` cap, because the loop costs one pass over the shape per pixel of its
+    inscribed radius and a country-sized mask is 600 passes over four million pixels.
+  - **What the look decided.** The district mesh reads at the home view and is drawn at
+    rank 2. The road and rail networks do not -- at rank 2 India is a solid mass of ink --
+    so they stay at rank 3 and arrive as the camera comes in. Same question, opposite
+    answers, and only the screen could tell them apart.
+  - **Left**: Natural Earth still draws the rivers and the physiographic regions, and
+    both could probably do better now that GeoJSON is a source format. The gauge on every
+    railway feature is an atlas map nobody has drawn yet.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -2400,17 +2461,18 @@ docs/DEPLOY.md).
 1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts have their source now and are drawn as lines
-   and labels; what is left there is the uint16 raster, which is what district
-   choropleths need.
+   and labels, coarse over the country and sharp inside a state; what is left there is
+   the uint16 raster, which is what district choropleths need. `detail` is general to
+   `lines` layers, so rivers, roads and rail can each gain a state tier whenever they are
+   worth one -- rivers first, they are the ones a lifted state shows most of.
    The scrubber has no map expression yet -- it changes what the sheet says, not what the
    model shows -- which is worth a look once there is more dated content than festivals.
 2. Roads and rail ship as drafts: 35 highway and 21 railway cards to read, plus the two
-   network items. The courses are the source's, so check the two Ladakh roads and NH 66
-   in particular, which run short where it is coarse or has a gap, and NH 75, which stops
-   at Kolar because Natural Earth has no road on to Vellore. Konkan, Kalka-Shimla, the
-   Nilgiri Mountain Railway, NH 50, NH 63 and NH 43 are all absent from the source
-   altogether and wait for a better one -- which is now the main thing holding the
-   transport page back, not the content.
+   network items. The source is the Ministry's own network now and a highway joins by its
+   number, so a road's course needs no checking beyond the eye; a railway's does, because
+   a corridor join takes whatever track runs along the way and will have swept in a
+   branch here and there. The gauge on every railway feature (BG, MG, NG) is an atlas map
+   waiting to be drawn.
 3. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
