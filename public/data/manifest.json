@@ -940,7 +940,12 @@
   }
  ],
  "sources": "sources.json",
+ "graticule": "graticule.json",
  "files": {
+  "graticule.json": {
+   "size": 1550,
+   "sha256": "f96275621d48"
+  },
   "plates.json": {
    "size": 6617,
    "sha256": "b3cb0bbad469"
