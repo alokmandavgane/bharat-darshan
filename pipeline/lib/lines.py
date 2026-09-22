@@ -23,7 +23,7 @@ import unicodedata
 
 import numpy as np
 
-from . import contour, fetch, grid, shapefile
+from . import contour, fetch, grid, pmtiles, shapefile
 
 
 def fold(name):
@@ -32,7 +32,7 @@ def fold(name):
     return ''.join(c for c in s if not unicodedata.combining(c)).strip().lower()
 
 
-FORMATS = ('shapefile-polyline', 'shapefile-polygon', 'geojson-polyline', 'geojson-polygon')
+FORMATS = ('shapefile-polyline', 'shapefile-polygon', 'geojson-polyline', 'geojson-polygon', 'pmtiles-polyline')
 GEOJSON = ('geojson-polyline', 'geojson-polygon')
 
 
@@ -89,8 +89,28 @@ def _files(source, raw_dir):
         paths[name] = dest
     if source['format'] in GEOJSON:
         return next(p for n, p in paths.items() if n.endswith(('.geojson', '.json'))), None
+    if source['format'] == 'pmtiles-polyline':
+        return next(p for n, p in paths.items() if n.endswith('.pmtiles')), None
     return (next(p for n, p in paths.items() if n.endswith('.shp')),
             next((p for n, p in paths.items() if n.endswith('.dbf')), None))
+
+
+_FEATURE_CACHE = {}
+
+
+def features(source, raw_dir):
+    """
+    Every feature of a source as a list, read once per build.
+
+    A tile archive is read at the zoom its layer names -- the deepest zoom that has not
+    been simplified further than the layer will simplify it anyway -- and a layer that
+    asks several questions of one source (its named items, its network, its per-state
+    detail) should not decode forty thousand tiles three times.
+    """
+    key = (source.get('format'), tuple(sorted(source.get('files', {}).items())), source.get('zoom'))
+    if key not in _FEATURE_CACHE:
+        _FEATURE_CACHE[key] = list(_features(source, raw_dir))
+    return _FEATURE_CACHE[key]
 
 
 def _features(source, raw_dir, polygons=False):
@@ -98,6 +118,9 @@ def _features(source, raw_dir, polygons=False):
     path, dbf = _files(source, raw_dir)
     if source['format'] in GEOJSON:
         yield from read_geojson(path)
+        return
+    if source['format'] == 'pmtiles-polyline':
+        yield from pmtiles.features(pmtiles.Archive(path), int(source.get('zoom', 10)), source.get('layer'))
         return
     reader = shapefile.read_polygons if polygons else shapefile.read_polylines
     rows = shapefile.read_dbf(dbf, encoding=source.get('encoding', 'latin-1'))[1] if dbf else None
@@ -113,13 +136,33 @@ def load_parts(source, raw_dir):
     return stitch(out) if source.get('stitch') else out
 
 
+def qualified(props, source):
+    """
+    The names a feature can be asked for by: its own, and -- when the source says which
+    field tells namesakes apart -- its own with that field after an `@`.
+
+    India-WRIS names 27,584 rivers, and a name is not an identity: there is a Mahanadi in
+    the Ganga basin as well as the great one, and a Brahmani in Kutch. `"qualify":
+    "ba_name"` lets an item ask for "Mahanadi @ Mahanadi" and get only the river of that
+    name in that basin.
+    """
+    key = source.get('match', 'name')
+    name = fold(props.get(key))
+    out = [name]
+    q = source.get('qualify')
+    if q and props.get(q) is not None:
+        out.append(f'{name} @ {fold(props.get(q))}')
+    return out
+
+
 def load_source(source, raw_dir):
     """Download a layer's geometry files and index their parts by folded name."""
-    key = source.get('match', 'name')
     by_name = {}
-    for props, parts in _features(source, raw_dir):
+    rows = features(source, raw_dir) if source.get('format') == 'pmtiles-polyline' else _features(source, raw_dir)
+    for props, parts in rows:
         if parts:
-            by_name.setdefault(fold(props.get(key)), []).extend(parts)
+            for name in qualified(props, source):
+                by_name.setdefault(name, []).extend(parts)
     if source.get('stitch'):
         # Stitched within a name, so a chain is never carried across from one road to another.
         return {k: stitch(v) for k, v in by_name.items()}
