@@ -867,7 +867,7 @@ def build_district_points(layer, curated, cats, fields, ids, by_id, out_items):
         entry = {
             'id': slug, 'name': {'en': name_en, 'hi': name_hi},
             'category': plain if rec['lgd'] else pok,
-            'priority': 3,                # a district is close-up detail; the state name owns the wide views
+            'priority': 2,                # the state name still comes first; districts fill in behind it
             'x': round(rec['anchor'][0], 1), 'z': round(rec['anchor'][1], 1),
             'region': rec['region'], 'regionSlug': by_id[rec['region']]['slug'],
             'sources': [districts_lib.CATALOGUE_URL]
@@ -929,7 +929,7 @@ def build_district_lines(layer, cats, fields, ids, by_id):
         out.append({
             'id': f"{unit['slug']}-districts", 'name': {
                 'en': f"Districts of {unit['name']['en']}", 'hi': f"{unit['name']['hi']} के ज़िले"},
-            'category': category, 'rank': 3,
+            'category': category, 'rank': 2,
             'km': round(sum(float(np.hypot(*np.diff(r, axis=0).T).sum()) for r in runs), 1),
             'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
             'blurb': {

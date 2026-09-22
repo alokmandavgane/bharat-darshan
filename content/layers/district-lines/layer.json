@@ -32,13 +32,13 @@
     }
   },
   "note": {
-    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Like the district names, these arrive as the camera comes in.",
-    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। ज़िलों के नामों की तरह ये भी कैमरा पास आने पर दिखती हैं।"
+    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Drawn at the finest weight, so the mesh reads from the first screen without taking it over.",
+    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। सबसे महीन मोटाई में खिंची, ताकि जाल पहली ही स्क्रीन से पढ़ा जाए पर उस पर छा न जाए।"
   },
   "sources": [
     "india-geodata",
     "lgd"
   ],
   "attribution": "District polygons from the india-geodata LGD layer, read as TopoJSON so every boundary is a shared arc; an arc whose two sides fall in different states is a state border and is dropped.",
-  "_rank": "All at rank 3, the finest weight, which is also what keeps them off the wide views."
+  "_rank": "All at rank 2, the middle weight, so the mesh is there at every zoom; rank 3 would have held it back until the camera was inside a state."
 }
