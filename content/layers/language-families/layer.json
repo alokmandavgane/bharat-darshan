@@ -1,0 +1,56 @@
+{
+  "id": "language-families",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Language families",
+    "hi": "भाषा परिवार"
+  },
+  "icon": "speech",
+  "default_on": false,
+  "scale": "categorical",
+  "categories": [
+    {
+      "id": "indo-aryan",
+      "color": "#b4552e",
+      "title": {
+        "en": "Indo-Aryan",
+        "hi": "भारोपीय-आर्य"
+      }
+    },
+    {
+      "id": "dravidian",
+      "color": "#4d7f97",
+      "title": {
+        "en": "Dravidian",
+        "hi": "द्रविड़"
+      }
+    },
+    {
+      "id": "tibeto-burman",
+      "color": "#5f8a5a",
+      "title": {
+        "en": "Tibeto-Burman",
+        "hi": "तिब्बती-बर्मी"
+      }
+    },
+    {
+      "id": "austroasiatic",
+      "color": "#8a6f3f",
+      "title": {
+        "en": "Austroasiatic",
+        "hi": "आस्ट्रो-एशियाई"
+      }
+    }
+  ],
+  "note": {
+    "en": "The family of the language most people in each state speak as a first language, at the 2011 census. It is not the same as the official language: Nagaland, Mizoram, Meghalaya and Arunachal Pradesh are governed in English but speak Naga, Mizo, Khasi and Nyishi. Nor is a state one language: every one of them holds many.",
+    "hi": "हर राज्य में सबसे अधिक लोग जिस भाषा को मातृभाषा बोलते हैं, उसका परिवार, 2011 की जनगणना के अनुसार। यह राजभाषा से अलग है: नागालैंड, मिज़ोरम, मेघालय और अरुणाचल प्रदेश का शासन अंग्रेज़ी में चलता है पर बोली नागा, मिज़ो, खासी और न्यीशी जाती है। और कोई राज्य एक भाषा का नहीं: हर एक में अनेक हैं।"
+  },
+  "sources": [
+    "census-2011",
+    "wikipedia"
+  ],
+  "attribution": "values.csv gives each state and union territory the family of its largest first-language group at the 2011 census, drafted from the census language tables as tabulated per state on Wikipedia. Every row awaits review; the debatable ones are the north-eastern states, where no single language is a majority.",
+  "_scale": "categorical: a region carries a category id, not a number. The engine reads the type and the scale, never this layer's name."
+}
