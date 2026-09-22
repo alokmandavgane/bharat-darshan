@@ -622,7 +622,7 @@ map is a folder and a source, whatever it shows.
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
 | `flows` | curved arrows between places, animated along their length, drawn over the model rather than on it | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` and `"float": true` on a `lines` layer) | the monsoon's advance (done) |
 | `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
-| `regional` | listed on a state's card; drawn as a token at its anchor when it has one (the place it is most seen at) | festivals, languages, food | built | done; festivals anchored 2026-09-22 |
+| `regional` | listed on a state's card; drawn as a peg at its anchor when it has one (the place it is most seen at), and the build says which by shipping `anchored` | festivals, languages, food | built | done; festivals anchored 2026-09-22 |
 
 Two things cut across all of them rather than being primitives:
 
@@ -2068,6 +2068,44 @@ docs/DEPLOY.md).
   Also checked, since both changes touch what a tap lands on: an `areas` layer still
   picks by its own raster, and the reconstruction moves a drawn edge by less than half a
   texel from the one picking uses.
+
+- 2026-09-22, the rivers, the roads and the languages.
+  - **Rivers and roads were sinking into their own valleys on every device but a good
+    desktop.** The question was whether they had the reference lines' problem; they did
+    not -- they have the markers' one. A line was laid at the height the heightmap gives
+    at its own vertices, while the mesh draws the bilinear surface through *its* grid,
+    and in a valley -- which is where a river is, and where a road follows it -- that
+    drawn surface sits above the point itself. Measured off the data: at the low tier's
+    256 grid **49% of river vertices and 33% of road vertices are buried**, median 0.45 km
+    and worst 15 km; at 512, 26% and 18%; at the high tier's 1024 the grid is the raster
+    and it is nothing. The line shader now samples the four corners of the mesh cell and
+    mixes them, as the marker shader does. Measured in the browser at the low tier, a
+    900 km view: 22% more river ink in the Himalaya, 10% on the Ganges plain, 2.5% over
+    the Deccan, and no change at all on the high tier. What is left after that is genuine
+    occlusion -- a ridge standing between the eye and the water -- which is 3% at the home
+    view and is the depth cue that makes the thing read as a model, so it stays.
+  - **`?quality=` had been dead since the URL learned to write itself.** The tier override
+    is how CLAUDE.md says to test on the reference phone, but `buildUrl` composes the
+    query from view state alone, so the first write dropped it, and `pickQuality` -- which
+    reads `location.search` afterwards -- never saw it. `?poster=` was going the same way.
+    Both now pass through. This is why the low tier had never been looked at in a browser.
+  - **Languages drew nothing.** The layer is `regional`, so it was a list in the state
+    cards and no ink. It now has a companion: `language-families`, a categorical
+    choropleth colouring each state by the family its people mostly speak as a first
+    language at the 2011 census. Deliberately not the *official* language, which was the
+    first thing tried and makes a bad map: Nagaland, Mizoram, Meghalaya and Arunachal are
+    governed in English, so a quarter of the north-east came out "Other" when what is
+    spoken there is Naga, Mizo, Khasi and Nyishi. The layer's note says exactly that. The
+    culture page carries it, and drops `places`: with festivals anchored it had become two
+    token layers fighting over the same paper, which is the composition rule's own case.
+  - **The key was offering colours that are nowhere on the map.** A `regional` layer with
+    no anchors draws nothing, but the key showed its categories as swatches all the same.
+    The build now ships `anchored` on a regional layer, the key reads the unanchored ones
+    as what they are ("Read in each state's card"), and an anchored one reads as the peg
+    layer it has become.
+  - **Nothing said how to get back to the contents.** Turning to a page left only an
+    arrow in the sheet's head, which does not say where it goes. The page's block opens
+    with "All pages" in words again, as the first design had it.
 
 ### What exists
 
