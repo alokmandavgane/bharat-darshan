@@ -53,7 +53,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 DISTRICTS = 'districts'     # a layer the build makes from India's district polygons
-JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
+JOINS = ('name', 'route', 'corridor', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
 MARKERS = ('symbol', 'label', 'dot', 'model')
 MODELS_DIR = os.path.join(ROOT, 'content', 'models')
@@ -488,7 +488,7 @@ def validate_line_item(it, cats, join, fields=()):
             p.append(f'{tag}: geometry must be a flow (from/to) or exactly one of parallel or meridian')
         elif not isinstance(list(g.values())[0], (int, float)) or isinstance(list(g.values())[0], bool):
             p.append(f'{tag}: geometry must give a number of degrees')
-    elif join == 'route':
+    elif join in ('route', 'corridor'):
         w = it.get('waypoints') or []
         if len(w) < 2:
             p.append(f'{tag}: waypoints must list at least two places for a routed layer')
@@ -518,32 +518,52 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
     # A named source is indexed by name; a nameless one becomes a graph to walk; a
     # generated one has no source to load at all.
     index = {}
-    # A network item draws every part of the source; a routed layer walks a graph built
-    # from the same parts, so they are loaded once between them.
-    parts = lines.load_parts(src, raw) if (join == 'route' or any(it.get('network') for it in items)) else []
-    if join == 'route':
+    wants_network = any(it.get('network') for it in items)
+    parts = []
+    if join == 'corridor':
+        # The source's chains as they are: an item takes the ones that run along its way.
+        parts = lines.load_parts(src, raw)
+        index = parts
+    elif join == 'route':
+        # A routed layer walks a graph built from the source's parts; a network item on the
+        # same layer draws those same parts, so they are loaded once between them.
+        parts = lines.load_parts(src, raw)
         index = lines.network(parts, ids, [w for it in items for w in (it.get('waypoints') or [])])
     elif join != GENERATED:
         index = lines.load_source(src, raw)
+        if wants_network:
+            # The rest of the source: what no item on this layer has claimed by name, so a
+            # named highway is drawn once, as itself, and not again under the tracery.
+            claimed = {lines.fold(n) for it in items for n in (it.get('source_names') or [])}
+            parts = [p for name, ps in index.items() if name not in claimed for p in ps]
+    elif wants_network:
+        parts = lines.load_parts(src, raw)
     if join == 'route':
         print(f"    network: {len(index['parts'])} parts, {len(index['nodes'])} junctions inside India")
+    elif join == 'corridor':
+        print(f"    corridor join: {len(parts)} chains in the source")
     # A layer that animates its flow needs its runs pointed downstream -- but only one
     # that is drawing water. An arrow already knows which way it goes, it was given from
     # and to; fitting it against the heightmap turned the monsoon round and had it
     # arriving from Kerala into the Arabian Sea.
     relief = heights() if layer.get('flow') and not layer.get('arrows') else None
     out, problems = [], []
+    claimed_chains = set()          # what the corridor items have taken, for the network item
     for it in items:
         problems += validate_line_item(it, cats, join, fields)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
         if it.get('network'):
-            runs = lines.project(parts, ids, float(src.get('simplify_km', 1.0)))
+            rest = [p for n, p in enumerate(parts) if n not in claimed_chains] if claimed_chains else parts
+            runs = lines.project(rest, ids, float(src.get('simplify_km', 1.0)), min_km=src.get('min_km'))
             km = sum(float(np.hypot(*np.diff(r, axis=0).T).sum()) for r in runs)
             note = None
         else:
+            opts = {'width_km': float(src['corridor_km'])} if src.get('corridor_km') else None
             runs, km, note = lines.build(it, index, ids, float(src.get('simplify_km', 1.0)), relief,
-                                         clip=not layer.get('arrows'))
+                                         clip=not layer.get('arrows'), min_km=src.get('min_km'),
+                                         corridor_opts=opts)
+        claimed_chains.update((note or {}).get('taken') or ())
         if not runs:
             why = (note or {}).get('why') or (f"names {it['source_names']}" if join == 'name' else 'nothing came back')
             problems.append(f"{it['id']}: no geometry: {why}")
@@ -567,7 +587,8 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
             if it.get(name) is not None:
                 entry[name] = it[name]
         out.append(entry)
-        tail = f"  waypoints {max(note['snap']):.0f} km off at worst" if note else ''
+        tail = (f"  {note['chains']} chains in its corridor" if note and 'chains' in note
+                else f"  waypoints {max(note['snap']):.0f} km off at worst" if note else '')
         print(f"    {it['id']:20} rank {it['rank']}  {len(runs):3d} runs  {sum(len(r) for r in runs):5d} pts  {km:7.0f} km{tail}")
     return out, problems
 
