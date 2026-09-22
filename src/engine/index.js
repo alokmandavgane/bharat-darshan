@@ -830,7 +830,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!tap || !field) return;
     const coarse = tap.type === 'touch' || tap.type === 'pen';
     // A marker stands on the state, and a line sits on it, so they get the tap first.
-    const hit = markAt(tap.x, tap.y, coarse ? 16 : 10) || lineAt(tap.x, tap.y, coarse ? 14 : 9);
+    // A finger is forgiven more than a cursor for a marker, which is a thing with a
+    // footprint; not for a line, which is a hair across a state the finger was more
+    // probably aiming at. At 14 px the rivers took half the taps on the plains at the
+    // whole-country view, and even at 4 px -- 33 km on a phone -- a quarter of them: a
+    // river there is one pixel wide and the state is the thing to tap. So at the
+    // country view a finger goes to the state, and a river's card is a zoom away (or
+    // a cursor's, which is precise enough at any zoom).
+    const zoom = store.get('camera').zoom;
+    const linePx = !coarse ? 9 : zoom > 2500 ? 0 : 8;
+    const hit = markAt(tap.x, tap.y, coarse ? 16 : 10) || (linePx > 0 && lineAt(tap.x, tap.y, linePx));
     if (hit) {
       store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories, fields: hit.fields });
       return;
