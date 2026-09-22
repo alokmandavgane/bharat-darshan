@@ -624,7 +624,15 @@ content/plates/minerals.json
   `relief` and the camera through the store, exactly as a URL or a story step does. The
   engine never learns the word.
 - URL: `/en/atlas/minerals`, with its own share image and Open Graph shell from the same
-  Vite plugin that makes `/en` and `/hi`. State view composes: `/en/atlas/minerals/state/jharkhand`.
+  Vite plugin that makes `/en` and `/hi` (*built 2026-09-22*): the plugin reads
+  `plates.json`, so a new page brings its own shells with it, titled and described by the
+  words the page already carries. Its card is the page itself, rendered in poster mode by
+  `tools/share-image.mjs` -- the title block shows the page's title, the same title in the
+  other language and its blurb -- and a page whose card has not been rendered yet falls
+  back to the language card rather than pointing a link preview at a 404. State view
+  composes: `/en/atlas/minerals/state/jharkhand`; those deeper paths are not shelled (the
+  host serves the root shell for unknown paths), so a shared state link previews as the
+  atlas rather than as that state.
 - Sections (the contents page's headings, strings keyed by id like layer groups):
   political, physical, climate, resources, agriculture, industry and energy, transport,
   people, culture, history.
@@ -972,8 +980,11 @@ ten plates -- one or two per section -- reading as an atlas rather than a demo.
 across seven sections; `grep -r plate src/engine/` is empty and a page is a JSON file.
 The source registry followed on 2026-09-22: every dataset declared once, cited by id,
 enforced by the build, with the credits screen and every source line generated from it.
-Left: per-plate share images and Open Graph shells, and the atlas furniture -- cartouche,
-scale bar, compass rose, graticule.*
+Then the share shells, the same day: 18 Open Graph shells generated from `plates.json`,
+and poster mode now renders a page's own card. The card images themselves need a
+Playwright run (`node tools/share-image.mjs`) and until then each page's shell points at
+its language card. Left: the atlas furniture -- cartouche, scale bar, compass rose,
+graticule.*
 
 **Phase 7: fill it, and launch (ongoing).** Plate by plate, section by section, from the
 source table in section 7. Content is the long pole: sourcing, licences, review. Food,
@@ -1716,6 +1727,25 @@ docs/DEPLOY.md).
   stopped shipping to the runtime: it was never on screen, and two places saying who to
   credit is the sprawl the registry exists to stop.
 
+- 2026-09-22, twenty-eighth round: a page of the atlas now shares as itself. The Vite
+  plugin reads `plates.json` and emits a shell per page per language -- 18 of them, with
+  the page's title, its blurb as the description, its own canonical and hreflang pair, and
+  a share card -- so adding a page still means adding one JSON file. Poster mode learned
+  the same trick: with a page open the title block becomes the page's, the atlas's name
+  shrinking to a kicker above it, which is what `tools/share-image.mjs` photographs.
+  The plugin's head rewriting moved from swapping the English strings it found to
+  replacing tags by name, which is what let a page's metadata be set the same way a
+  language's is; the two language shells came out byte-identical afterwards, which was the
+  point of checking.
+  Two things worth keeping. A page whose card has not been rendered points at its language
+  card rather than at a 404, so the shells are useful before the images exist -- and they
+  do not exist yet: no Playwright on this machine, and it is a tool, not a dependency.
+  I verified the other half instead, which is the half that could be wrong: all 18 poster
+  routes were loaded in sequence and each reached `ready` with the right page open and the
+  page's own words in the block. And the kicker's small caps are scoped to the Latin name,
+  because the Devanagari one is never letter-spaced or uppercased; that meant two spans
+  rather than one string.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1775,13 +1805,15 @@ docs/DEPLOY.md).
 
 ### Next
 
-0. **Phase 6, continued.** Plates, the contents page and the source registry are in.
-   What is left of that phase, roughly in order: per-plate share images and Open Graph
-   shells, so a page pasted into WhatsApp shows that page; and the atlas furniture -- a
-   cartouche for the open plate, a scale bar, a compass rose, a graticule scored into the
-   table. Base styles (section 5) would also help the thematic pages: several of them
-   would read better over a quieter base than the full hypsometric one. Two smaller
-   things the registry left behind: `content/layers/<id>/layer.json` still carries an
+0. **Phase 6, continued.** Plates, the contents page, the source registry and the share
+   shells are in. What is left: **the 18 card images need a Playwright run** --
+   `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
+   to see the list); this machine has no Playwright and it is a tool, not a dependency, so
+   it was not installed to get them. Then the atlas furniture -- a cartouche for the open
+   plate, a scale bar, a compass rose, a graticule scored into the table. Base styles
+   (section 5) would also help the thematic pages: several of them would read better over
+   a quieter base than the full hypsometric one. Two smaller things the registry left
+   behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
