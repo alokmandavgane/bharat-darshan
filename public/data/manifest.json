@@ -102,6 +102,10 @@
      }
     }
    },
+   "sources": [
+    "wikipedia",
+    "unesco-ich"
+   ],
    "path": "layers/festivals.json"
   },
   {
@@ -171,6 +175,10 @@
      }
     }
    },
+   "sources": [
+    "census-2011",
+    "wikipedia"
+   ],
    "path": "layers/languages.json"
   },
   {
@@ -224,6 +232,9 @@
     "en": "Normal dates, not a forecast: the south-west monsoon reaches Kerala around 1 June and covers the country by early July, but any given year runs days or weeks either side. The arrows show where the rain comes from and the order it arrives in, which is the part that hardly varies.",
     "hi": "सामान्य तिथियाँ, पूर्वानुमान नहीं: दक्षिण-पश्चिम मानसून लगभग 1 जून को केरल पहुँचता है और जुलाई के आरंभ तक पूरे देश में फैल जाता है, पर किसी भी वर्ष में यह कुछ दिन या सप्ताह आगे-पीछे हो सकता है। तीर बताते हैं कि वर्षा कहाँ से आती है और किस क्रम में, जो लगभग नहीं बदलता।"
    },
+   "sources": [
+    "imd"
+   ],
    "path": "layers/monsoon.json"
   },
   {
@@ -297,6 +308,9 @@
     "en": "Physical divisions have no surveyed borders: a plateau fades into a plain over tens of kilometres and different textbooks draw the line differently. These outlines are Natural Earth's generalised ones, clipped to India, and are meant to be read as regions rather than as boundaries.",
     "hi": "भौतिक विभागों की कोई सर्वेक्षित सीमा नहीं होती: पठार दसियों किलोमीटर में मैदान में बदल जाता है और अलग-अलग पुस्तकें रेखा अलग खींचती हैं। ये Natural Earth की सामान्यीकृत रूपरेखाएँ हैं, भारत तक सीमित, और इन्हें सीमाओं के बजाय क्षेत्रों की तरह पढ़ा जाए।"
    },
+   "sources": [
+    "natural-earth"
+   ],
    "path": "layers/physiography.json"
   },
   {
@@ -376,6 +390,10 @@
      "color": "#4e5b8a"
     }
    ],
+   "sources": [
+    "unesco-world-heritage",
+    "wikipedia"
+   ],
    "path": "layers/places.json"
   },
   {
@@ -424,6 +442,9 @@
     "en": "Jammu and Kashmir and Ladakh are left uncoloured: the 2011 census predates their reorganisation in 2019, and published areas for them differ by which territory is counted.",
     "hi": "जम्मू और कश्मीर तथा लद्दाख रंगहीन छोड़े गए हैं: 2011 की जनगणना उनके 2019 के पुनर्गठन से पहले की है, और उनके प्रकाशित क्षेत्रफल इस पर निर्भर करते हैं कि कौन-सा भूभाग गिना जाए।"
    },
+   "sources": [
+    "census-2011"
+   ],
    "path": "layers/population-density.json"
   },
   {
@@ -458,6 +479,9 @@
     "en": "The 2011 census, the latest held; the count due in 2021 was postponed. Each state's ground is raised in proportion to its people, so the column is the population and not the crowding: Uttar Pradesh stands highest with 199.8 million, Lakshadweep lowest with 64,473.",
     "hi": "2011 की जनगणना, जो अब तक की अंतिम है; 2021 की गणना स्थगित हो गई। हर राज्य की भूमि उसकी जनसंख्या के अनुपात में उठती है, इसलिए स्तंभ जनसंख्या दिखाता है, घनत्व नहीं: उत्तर प्रदेश 19.98 करोड़ के साथ सबसे ऊँचा, लक्षद्वीप 64,473 के साथ सबसे नीचा।"
    },
+   "sources": [
+    "census-2011"
+   ],
    "path": "layers/population.json"
   },
   {
@@ -564,6 +588,9 @@
     "en": "Installed capacity, which is what a station could produce at full output, not what it does produce: a solar park runs at roughly a fifth of its rating over a year and a coal station at around two thirds. Capacities change as units are added and retired.",
     "hi": "स्थापित क्षमता, यानी पूरी क्षमता पर संयंत्र कितना बना सकता है, न कि वह कितना बनाता है: एक सौर पार्क वर्ष भर में लगभग पाँचवें हिस्से पर और कोयला संयंत्र लगभग दो-तिहाई पर चलता है। इकाइयाँ जुड़ने और हटने से क्षमताएँ बदलती रहती हैं।"
    },
+   "sources": [
+    "cea-installed-capacity"
+   ],
    "path": "layers/power.json"
   },
   {
@@ -613,6 +640,11 @@
      }
     }
    },
+   "sources": [
+    "natural-earth",
+    "indian-railways",
+    "wikipedia"
+   ],
    "path": "layers/rail.json"
   },
   {
@@ -647,6 +679,10 @@
      "icon": "mountain",
      "color": "#8a7550"
     }
+   ],
+   "sources": [
+    "gsi",
+    "wikipedia"
    ],
    "path": "layers/ranges.json"
   },
@@ -689,6 +725,10 @@
      }
     }
    },
+   "sources": [
+    "iers-conventions",
+    "npl-india"
+   ],
    "path": "layers/reference-lines.json"
   },
   {
@@ -720,6 +760,11 @@
      },
      "color": "#6a9a86"
     }
+   ],
+   "sources": [
+    "natural-earth",
+    "india-wris",
+    "wikipedia"
    ],
    "path": "layers/rivers.json"
   },
@@ -760,6 +805,11 @@
      },
      "color": "#8c6a5a"
     }
+   ],
+   "sources": [
+    "natural-earth",
+    "morth",
+    "wikipedia"
    ],
    "path": "layers/roads.json"
   },
@@ -809,6 +859,10 @@
      }
     }
    },
+   "sources": [
+    "survey-of-india",
+    "wikipedia"
+   ],
    "path": "layers/summits.json"
   },
   {
@@ -878,17 +932,22 @@
     "en": "The five zonal councils were set up by the States Reorganisation Act 1956; the North Eastern Council is separate, created by its own Act in 1971, and Sikkim joined it in 2002. They are advisory bodies for matters between neighbouring states, not administrative divisions, and they are not the zones used by the census or by the railways.",
     "hi": "पाँच क्षेत्रीय परिषदें राज्य पुनर्गठन अधिनियम 1956 से बनीं; पूर्वोत्तर परिषद अलग है, जो 1971 के अपने अधिनियम से बनी, और सिक्किम 2002 में उसमें शामिल हुआ। ये पड़ोसी राज्यों के बीच के विषयों पर सलाहकार निकाय हैं, प्रशासनिक विभाजन नहीं, और ये जनगणना या रेलवे के क्षेत्र नहीं हैं।"
    },
+   "sources": [
+    "mha-inter-state-council",
+    "north-eastern-council"
+   ],
    "path": "layers/zones.json"
   }
  ],
- "attribution": [
-  "State boundaries and India outline: DataMeet India community maps (CC BY 4.0), Census of India / Survey of India lineage.",
-  "Elevation: AWS Terrain Tiles (Mapzen Terrarium), from SRTM, GMTED2010, ETOPO1 and others; see https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
- ],
+ "sources": "sources.json",
  "files": {
   "plates.json": {
-   "size": 6097,
-   "sha256": "584002615cb2"
+   "size": 6617,
+   "sha256": "b3cb0bbad469"
+  },
+  "sources.json": {
+   "size": 16192,
+   "sha256": "40cb7b33d62a"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1067,68 +1126,68 @@
    "sha256": "e66f945fbc8e"
   },
   "layers/festivals.json": {
-   "size": 26034,
-   "sha256": "28bd1065b8af"
+   "size": 25858,
+   "sha256": "da1aca1da16f"
   },
   "layers/languages.json": {
-   "size": 22214,
-   "sha256": "3b8eb63899a2"
+   "size": 21934,
+   "sha256": "22465772db1c"
   },
   "layers/monsoon.json": {
-   "size": 8627,
-   "sha256": "7d4e007273a9"
+   "size": 8520,
+   "sha256": "0ba09a80eda1"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
    "sha256": "d9c033ba0803"
   },
   "layers/physiography.json": {
-   "size": 14355,
-   "sha256": "c987e794e59a"
+   "size": 14173,
+   "sha256": "919e303fbf65"
   },
   "layers/places.json": {
-   "size": 122864,
-   "sha256": "422f9dd6ce43"
+   "size": 122795,
+   "sha256": "63924e8fe2d0"
   },
   "layers/population-density.json": {
-   "size": 1730,
-   "sha256": "9499b2abb944"
+   "size": 1528,
+   "sha256": "723dabb1bc70"
   },
   "layers/population.json": {
-   "size": 1989,
-   "sha256": "7ef0fbcd41a4"
+   "size": 1765,
+   "sha256": "a9f908c04dcc"
   },
   "layers/power.json": {
-   "size": 20899,
-   "sha256": "22b0852081e1"
+   "size": 20743,
+   "sha256": "ec9e45bc1d3a"
   },
   "layers/rail.json": {
-   "size": 8840,
-   "sha256": "13c7eaa3229b"
+   "size": 8621,
+   "sha256": "5bf673308b1b"
   },
   "layers/ranges.json": {
-   "size": 13538,
-   "sha256": "51c5a8103a23"
+   "size": 13461,
+   "sha256": "98f4179ff786"
   },
   "layers/reference-lines.json": {
-   "size": 3323,
-   "sha256": "e6f9b1c8b72e"
+   "size": 3183,
+   "sha256": "ce508fdde3e6"
   },
   "layers/rivers.json": {
-   "size": 52777,
-   "sha256": "f874d2745a27"
+   "size": 52676,
+   "sha256": "b561f5b2ab8e"
   },
   "layers/roads.json": {
-   "size": 18770,
-   "sha256": "347f18c1c7b7"
+   "size": 18522,
+   "sha256": "40c031d60dec"
   },
   "layers/summits.json": {
-   "size": 19426,
-   "sha256": "c04de561cbb7"
+   "size": 19314,
+   "sha256": "3fa1dad03db9"
   },
   "layers/zones.json": {
-   "size": 2689,
-   "sha256": "7e244c077564"
+   "size": 2516,
+   "sha256": "8008bffeb5be"
   },
   "states/andaman-and-nicobar-islands-edge.bin.gz": {
    "size": 42929,
