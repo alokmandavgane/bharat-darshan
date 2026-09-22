@@ -1,0 +1,40 @@
+{
+  "id": "cities",
+  "type": "points",
+  "marker": "symbol",
+  "group": "culture",
+  "title": {
+    "en": "Cities",
+    "hi": "नगर"
+  },
+  "icon": "city",
+  "default_on": false,
+  "categories": [
+    { "id": "national", "icon": "city", "color": "#b5432f", "title": { "en": "National capital",       "hi": "राष्ट्रीय राजधानी" } },
+    { "id": "capital",  "icon": "city", "color": "#c98a3c", "title": { "en": "State or UT capital",    "hi": "राज्य या केंद्रशासित प्रदेश की राजधानी" } },
+    { "id": "city",     "icon": "city", "color": "#6e7f8c", "title": { "en": "City",                   "hi": "नगर" } }
+  ],
+  "fields": {
+    "population_2011": {
+      "type": "int",
+      "required": true,
+      "label": { "en": "Population (2011 Census)", "hi": "जनसंख्या (2011 जनगणना)" }
+    }
+  },
+  "size": {
+    "field": "population_2011",
+    "domain": [1100000, 12500000],
+    "range": [10, 40],
+    "legend": [1500000, 5000000, 12000000]
+  },
+  "note": {
+    "en": "The thirty largest municipal corporations at the 2011 census, which is the last one taken. A corporation is not a metropolis: Mumbai's built-up area holds far more people than its own city limits, and Delhi, Thane and Vasai-Virar are all parts of larger conurbations.",
+    "hi": "2011 की जनगणना — अंतिम हुई जनगणना — के अनुसार तीस सबसे बड़ी नगर निगम सीमाएँ। निगम महानगर नहीं होता: मुंबई के बसे क्षेत्र में उसकी नगर सीमा से कहीं अधिक लोग रहते हैं, और दिल्ली, ठाणे तथा वसई-विरार सब बड़े नगरपुंजों के हिस्से हैं।"
+  },
+  "sources": [
+    "census-2011",
+    "wikipedia"
+  ],
+  "attribution": "Municipal-corporation populations from the 2011 Census of India, as tabulated on Wikipedia's list of Indian cities by population; capitals and descriptions checked against each city's own article.",
+  "_size": "A circle's area carries the population, so the sizer takes the square root of the value: twice the circle for four times the people. The engine reads size.field and this layer's own domain, never its name."
+}

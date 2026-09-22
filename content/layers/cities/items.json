@@ -1,0 +1,782 @@
+[
+  {
+    "id": "mumbai",
+    "status": "draft",
+    "name": {
+      "en": "Mumbai",
+      "hi": "मुंबई"
+    },
+    "anchor": {
+      "lat": 19.076,
+      "lon": 72.877
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 12442373,
+    "blurb": {
+      "en": "India's largest city and its financial capital, on a chain of islands joined into one peninsula. The stock exchange, the Hindi film industry and one of the world's busiest suburban railways are all here.",
+      "hi": "भारत का सबसे बड़ा नगर और वित्तीय राजधानी, द्वीपों की एक शृंखला पर जो जुड़कर एक प्रायद्वीप बन गई। शेयर बाज़ार, हिंदी फ़िल्म उद्योग और विश्व की व्यस्ततम उपनगरीय रेलों में एक, सब यहीं हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mumbai",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "delhi",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "anchor": {
+      "lat": 28.6139,
+      "lon": 77.209
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "category": "national",
+    "priority": 1,
+    "population_2011": 11034555,
+    "blurb": {
+      "en": "The national capital, built and rebuilt on the Yamuna for a thousand years; New Delhi is only the newest of its several capitals.",
+      "hi": "राष्ट्रीय राजधानी, जो यमुना किनारे एक हज़ार वर्षों से बनती और फिर बनती रही; नई दिल्ली इसकी कई राजधानियों में सबसे नई है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Delhi",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "bengaluru",
+    "status": "draft",
+    "name": {
+      "en": "Bengaluru",
+      "hi": "बेंगलुरु"
+    },
+    "anchor": {
+      "lat": 12.9716,
+      "lon": 77.5946
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 8443675,
+    "blurb": {
+      "en": "Karnataka's capital, 900 m up on the Deccan plateau, and the centre of India's software industry.",
+      "hi": "कर्नाटक की राजधानी, दक्कन के पठार पर 900 मीटर की ऊँचाई पर, और भारत के सॉफ़्टवेयर उद्योग का केंद्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bengaluru",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "hyderabad",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "anchor": {
+      "lat": 17.385,
+      "lon": 78.4867
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 6993262,
+    "blurb": {
+      "en": "Telangana's capital, founded in 1591 on the Musi: the Qutb Shahi and Nizam city, now with a large technology quarter beside it.",
+      "hi": "तेलंगाना की राजधानी, 1591 में मूसी नदी पर स्थापित: क़ुतुब शाही और निज़ाम का नगर, जिसके साथ अब एक बड़ा प्रौद्योगिकी क्षेत्र है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Hyderabad",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "chennai",
+    "status": "draft",
+    "name": {
+      "en": "Chennai",
+      "hi": "चेन्नई"
+    },
+    "anchor": {
+      "lat": 13.0827,
+      "lon": 80.2707
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 6748026,
+    "blurb": {
+      "en": "Tamil Nadu's capital on the Coromandel coast, grown out of Fort St George: a port, a carmaking centre, and the centre of Carnatic music.",
+      "hi": "कोरोमंडल तट पर तमिलनाडु की राजधानी, जो फ़ोर्ट सेंट जॉर्ज से विकसित हुई: एक बंदरगाह, मोटर निर्माण का केंद्र, और कर्नाटक संगीत का केंद्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chennai",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "ahmedabad",
+    "status": "draft",
+    "name": {
+      "en": "Ahmedabad",
+      "hi": "अहमदाबाद"
+    },
+    "anchor": {
+      "lat": 23.0225,
+      "lon": 72.5714
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "city",
+    "priority": 1,
+    "population_2011": 5577940,
+    "blurb": {
+      "en": "Gujarat's largest city, on the Sabarmati; a textile centre since the 19th century, and the first Indian city listed as World Heritage.",
+      "hi": "साबरमती किनारे गुजरात का सबसे बड़ा नगर; 19वीं सदी से कपड़ा उद्योग का केंद्र, और विश्व धरोहर में अंकित पहला भारतीय नगर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ahmedabad",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "kolkata",
+    "status": "draft",
+    "name": {
+      "en": "Kolkata",
+      "hi": "कोलकाता"
+    },
+    "anchor": {
+      "lat": 22.5726,
+      "lon": 88.3639
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 4496694,
+    "blurb": {
+      "en": "West Bengal's capital on the Hooghly, and the capital of British India until 1911; still the commercial heart of the east.",
+      "hi": "हुगली किनारे पश्चिम बंगाल की राजधानी, और 1911 तक ब्रिटिश भारत की राजधानी; आज भी पूर्व का व्यापारिक केंद्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kolkata",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "surat",
+    "status": "draft",
+    "name": {
+      "en": "Surat",
+      "hi": "सूरत"
+    },
+    "anchor": {
+      "lat": 21.1702,
+      "lon": 72.8311
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "city",
+    "priority": 1,
+    "population_2011": 4467797,
+    "blurb": {
+      "en": "The Mughals' main western port before Bombay, and now the city where most of the world's diamonds are cut and much of India's synthetic cloth woven.",
+      "hi": "बॉम्बे से पहले मुग़लों का मुख्य पश्चिमी बंदरगाह, और अब वह नगर जहाँ विश्व के अधिकांश हीरे तराशे जाते हैं और भारत का बहुत-सा कृत्रिम कपड़ा बुना जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Surat",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "pune",
+    "status": "draft",
+    "name": {
+      "en": "Pune",
+      "hi": "पुणे"
+    },
+    "anchor": {
+      "lat": 18.5204,
+      "lon": 73.8567
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 1,
+    "population_2011": 3124458,
+    "blurb": {
+      "en": "The Peshwas' capital, and Maharashtra's second city: engineering works, car factories and a great many universities.",
+      "hi": "पेशवाओं की राजधानी, और महाराष्ट्र का दूसरा बड़ा नगर: अभियांत्रिकी कारखाने, मोटर संयंत्र और बहुत से विश्वविद्यालय।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pune",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "anchor": {
+      "lat": 26.9124,
+      "lon": 75.7873
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "capital",
+    "priority": 1,
+    "population_2011": 3046163,
+    "blurb": {
+      "en": "Rajasthan's capital, laid out on a grid in 1727 by Jai Singh II. The walled city is a World Heritage Site.",
+      "hi": "राजस्थान की राजधानी, जिसे 1727 में जय सिंह द्वितीय ने ग्रिड पर बसाया। परकोटे का नगर विश्व धरोहर स्थल है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jaipur",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "lucknow",
+    "status": "draft",
+    "name": {
+      "en": "Lucknow",
+      "hi": "लखनऊ"
+    },
+    "anchor": {
+      "lat": 26.8467,
+      "lon": 80.9462
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "capital",
+    "priority": 2,
+    "population_2011": 2817105,
+    "blurb": {
+      "en": "Uttar Pradesh's capital on the Gomti, the Nawabs of Awadh's city, known for its cooking and its chikan embroidery.",
+      "hi": "गोमती किनारे उत्तर प्रदेश की राजधानी, अवध के नवाबों का नगर, अपने खानपान और चिकनकारी के लिए प्रसिद्ध।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lucknow",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "kanpur",
+    "status": "draft",
+    "name": {
+      "en": "Kanpur",
+      "hi": "कानपुर"
+    },
+    "anchor": {
+      "lat": 26.4499,
+      "lon": 80.3319
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 2765348,
+    "blurb": {
+      "en": "An industrial city on the Ganga, once the leather and cotton workshop of north India.",
+      "hi": "गंगा किनारे एक औद्योगिक नगर, जो एक समय उत्तर भारत का चमड़ा और सूती कपड़ा कारखाना था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kanpur",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "nagpur",
+    "status": "draft",
+    "name": {
+      "en": "Nagpur",
+      "hi": "नागपुर"
+    },
+    "anchor": {
+      "lat": 21.1458,
+      "lon": 79.0882
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 2405665,
+    "blurb": {
+      "en": "Near the geographic centre of the country, and Maharashtra's winter capital: oranges, and one of the busiest rail junctions in India.",
+      "hi": "देश के भौगोलिक केंद्र के निकट, और महाराष्ट्र की शीतकालीन राजधानी: संतरे, और भारत के व्यस्ततम रेल जंक्शनों में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nagpur",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "indore",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "anchor": {
+      "lat": 22.7196,
+      "lon": 75.8577
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1964086,
+    "blurb": {
+      "en": "Madhya Pradesh's largest city and its commercial centre, a Holkar capital on the Malwa plateau.",
+      "hi": "मध्य प्रदेश का सबसे बड़ा नगर और उसका व्यापारिक केंद्र, मालवा पठार पर होल्कर राजधानी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Indore",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "thane",
+    "status": "draft",
+    "name": {
+      "en": "Thane",
+      "hi": "ठाणे"
+    },
+    "anchor": {
+      "lat": 19.2183,
+      "lon": 72.9781
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1841488,
+    "blurb": {
+      "en": "At the head of the creek north of Mumbai: a Portuguese and then Maratha port town, now part of the metropolis.",
+      "hi": "मुंबई के उत्तर में खाड़ी के सिरे पर: पहले पुर्तगाली और फिर मराठा बंदरगाह, अब महानगर का हिस्सा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Thane",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "bhopal",
+    "status": "draft",
+    "name": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "anchor": {
+      "lat": 23.2599,
+      "lon": 77.4126
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "capital",
+    "priority": 2,
+    "population_2011": 1798218,
+    "blurb": {
+      "en": "Madhya Pradesh's capital, built around two lakes. The gas leak here in 1984 was the worst industrial disaster on record.",
+      "hi": "मध्य प्रदेश की राजधानी, दो झीलों के चारों ओर बसी। 1984 में यहाँ हुआ गैस रिसाव अभिलिखित सबसे भीषण औद्योगिक दुर्घटना था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhopal",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "visakhapatnam",
+    "status": "draft",
+    "name": {
+      "en": "Visakhapatnam",
+      "hi": "विशाखापत्तनम"
+    },
+    "anchor": {
+      "lat": 17.6868,
+      "lon": 83.2185
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1728128,
+    "blurb": {
+      "en": "Andhra Pradesh's largest city: a natural harbour with a shipyard, a steel plant and the Eastern Naval Command.",
+      "hi": "आंध्र प्रदेश का सबसे बड़ा नगर: एक प्राकृतिक बंदरगाह, जहाँ जहाज़ निर्माण केंद्र, इस्पात संयंत्र और पूर्वी नौसेना कमान हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Visakhapatnam",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "pimpri-chinchwad",
+    "status": "draft",
+    "name": {
+      "en": "Pimpri-Chinchwad",
+      "hi": "पिंपरी-चिंचवड़"
+    },
+    "anchor": {
+      "lat": 18.6298,
+      "lon": 73.7997
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1727692,
+    "blurb": {
+      "en": "Pune's industrial twin and a corporation of its own: car and engineering works strung along the Mumbai highway.",
+      "hi": "पुणे का औद्योगिक जुड़वाँ नगर और अपनी अलग महानगरपालिका: मुंबई राजमार्ग के साथ मोटर और अभियांत्रिकी कारखाने।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pimpri-Chinchwad",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "patna",
+    "status": "draft",
+    "name": {
+      "en": "Patna",
+      "hi": "पटना"
+    },
+    "anchor": {
+      "lat": 25.5941,
+      "lon": 85.1376
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "capital",
+    "priority": 2,
+    "population_2011": 1684222,
+    "blurb": {
+      "en": "Bihar's capital on the Ganga, standing on the site of Pataliputra, which was the Mauryan capital.",
+      "hi": "गंगा किनारे बिहार की राजधानी, जो पाटलिपुत्र के स्थान पर बसी है — मौर्य साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Patna",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "vadodara",
+    "status": "draft",
+    "name": {
+      "en": "Vadodara",
+      "hi": "वडोदरा"
+    },
+    "anchor": {
+      "lat": 22.3072,
+      "lon": 73.1812
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1670806,
+    "blurb": {
+      "en": "The Gaekwads' city in Gujarat, with a well-known university and a chemical and engineering belt around it.",
+      "hi": "गुजरात में गायकवाड़ों का नगर, एक प्रसिद्ध विश्वविद्यालय और चारों ओर रसायन तथा अभियांत्रिकी पट्टी के साथ।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vadodara",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "ghaziabad",
+    "status": "draft",
+    "name": {
+      "en": "Ghaziabad",
+      "hi": "ग़ाज़ियाबाद"
+    },
+    "anchor": {
+      "lat": 28.6692,
+      "lon": 77.4538
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1648643,
+    "blurb": {
+      "en": "On Delhi's eastern edge, inside the National Capital Region: industry, and suburbs that commute to the capital.",
+      "hi": "दिल्ली की पूर्वी सीमा पर, राष्ट्रीय राजधानी क्षेत्र के भीतर: उद्योग, और राजधानी आने-जाने वाले उपनगर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ghaziabad",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "ludhiana",
+    "status": "draft",
+    "name": {
+      "en": "Ludhiana",
+      "hi": "लुधियाना"
+    },
+    "anchor": {
+      "lat": 30.901,
+      "lon": 75.8573
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1618879,
+    "blurb": {
+      "en": "Punjab's largest city and its industrial one: hosiery, bicycles and machine tools, on the Sutlej plain.",
+      "hi": "पंजाब का सबसे बड़ा और औद्योगिक नगर: सतलुज के मैदान पर होज़री, साइकिलें और मशीन औज़ार।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ludhiana",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "agra",
+    "status": "draft",
+    "name": {
+      "en": "Agra",
+      "hi": "आगरा"
+    },
+    "anchor": {
+      "lat": 27.1767,
+      "lon": 78.0081
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1585704,
+    "blurb": {
+      "en": "The Mughal capital under Akbar and Shah Jahan. The Taj Mahal, the fort and Akbar's tomb all stand along the Yamuna here.",
+      "hi": "अकबर और शाहजहाँ के समय मुग़ल राजधानी। ताजमहल, किला और अकबर का मक़बरा सब यहीं यमुना किनारे हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Agra",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "nashik",
+    "status": "draft",
+    "name": {
+      "en": "Nashik",
+      "hi": "नासिक"
+    },
+    "anchor": {
+      "lat": 19.9975,
+      "lon": 73.7898
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1486053,
+    "blurb": {
+      "en": "A temple city on the upper Godavari that hosts the Kumbh Mela, and the centre of Indian wine growing.",
+      "hi": "ऊपरी गोदावरी पर एक मंदिर नगर, जहाँ कुंभ मेला लगता है, और भारतीय अंगूर-मदिरा उत्पादन का केंद्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nashik",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "faridabad",
+    "status": "draft",
+    "name": {
+      "en": "Faridabad",
+      "hi": "फ़रीदाबाद"
+    },
+    "anchor": {
+      "lat": 28.4089,
+      "lon": 77.3178
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1414050,
+    "blurb": {
+      "en": "Haryana's largest city, immediately south of Delhi, and one of north India's older industrial towns.",
+      "hi": "हरियाणा का सबसे बड़ा नगर, दिल्ली के ठीक दक्षिण में, और उत्तर भारत के पुराने औद्योगिक नगरों में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Faridabad",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "meerut",
+    "status": "draft",
+    "name": {
+      "en": "Meerut",
+      "hi": "मेरठ"
+    },
+    "anchor": {
+      "lat": 28.9845,
+      "lon": 77.7064
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1305429,
+    "blurb": {
+      "en": "A city of the Doab known for sports goods and scissors. The rising of 1857 began in its cantonment.",
+      "hi": "दोआब का नगर, खेल सामग्री और कैंचियों के लिए जाना जाता है। 1857 का विद्रोह इसकी छावनी से आरंभ हुआ।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Meerut",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "rajkot",
+    "status": "draft",
+    "name": {
+      "en": "Rajkot",
+      "hi": "राजकोट"
+    },
+    "anchor": {
+      "lat": 22.3039,
+      "lon": 70.8022
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1286678,
+    "blurb": {
+      "en": "Saurashtra's main city, once a princely capital, now a centre for casting and small engineering.",
+      "hi": "सौराष्ट्र का प्रमुख नगर, एक समय रियासती राजधानी, अब ढलाई और लघु अभियांत्रिकी का केंद्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rajkot",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "kalyan-dombivli",
+    "status": "draft",
+    "name": {
+      "en": "Kalyan-Dombivli",
+      "hi": "कल्याण-डोंबिवली"
+    },
+    "anchor": {
+      "lat": 19.2403,
+      "lon": 73.1305
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1247327,
+    "blurb": {
+      "en": "Two towns joined into one corporation in the Mumbai region; Kalyan was an ancient port on the Ulhas.",
+      "hi": "मुंबई क्षेत्र में दो नगर एक महानगरपालिका में जुड़े; कल्याण उल्हास नदी पर एक प्राचीन बंदरगाह था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kalyan-Dombivli",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "vasai-virar",
+    "status": "draft",
+    "name": {
+      "en": "Vasai-Virar",
+      "hi": "वसई-विरार"
+    },
+    "anchor": {
+      "lat": 19.3919,
+      "lon": 72.8397
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "city",
+    "priority": 3,
+    "population_2011": 1222390,
+    "blurb": {
+      "en": "North of Mumbai, around the Portuguese fort of Bassein, and one of the fastest-growing corporations in the country.",
+      "hi": "मुंबई के उत्तर में, बेसीन के पुर्तगाली किले के आसपास, और देश की सबसे तेज़ बढ़ती महानगरपालिकाओं में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vasai-Virar",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  },
+  {
+    "id": "varanasi",
+    "status": "draft",
+    "name": {
+      "en": "Varanasi",
+      "hi": "वाराणसी"
+    },
+    "anchor": {
+      "lat": 25.3176,
+      "lon": 82.9739
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "city",
+    "priority": 2,
+    "population_2011": 1198491,
+    "blurb": {
+      "en": "One of the oldest continuously inhabited cities, on the north-turning curve of the Ganga: the ghats, the sarees and the Kashi temple.",
+      "hi": "निरंतर बसे सबसे प्राचीन नगरों में एक, गंगा के उत्तरमुखी मोड़ पर: घाट, बनारसी साड़ियाँ और काशी का मंदिर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Varanasi",
+      "https://censusindia.gov.in/census.website/data/census-tables"
+    ]
+  }
+]

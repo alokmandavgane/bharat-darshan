@@ -1,0 +1,19 @@
+{
+  "id": "cities",
+  "section": "people",
+  "order": 2,
+  "title": {
+    "en": "Cities",
+    "hi": "नगर"
+  },
+  "blurb": {
+    "en": "The thirty largest, each circle's area carrying its population. They stand on the coasts, along the Ganga and across the Deccan; Mumbai holds about seven times as many people as Patna, so its circle covers seven times the paper.",
+    "hi": "तीस सबसे बड़े नगर; प्रत्येक वृत्त का क्षेत्रफल उसकी जनसंख्या दर्शाता है। ये तटों पर, गंगा के साथ और दक्कन भर में बसे हैं; मुंबई में पटना से लगभग सात गुना लोग हैं, इसलिए उसका वृत्त सात गुना जगह घेरता है।"
+  },
+  "base": "plain",
+  "layers": [
+    "cities"
+  ],
+  "relief": 8,
+  "status": "draft"
+}
