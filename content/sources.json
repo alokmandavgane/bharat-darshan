@@ -567,6 +567,42 @@
         "en": "The register of every geographical indication granted in India: what is protected, for whom, and the journal year it was registered in.",
         "hi": "भारत में दिए गए हर भौगोलिक संकेतक का रजिस्टर: क्या संरक्षित है, किसके लिए, और किस पत्रिका-वर्ष में पंजीकृत हुआ।"
       }
+    },
+    "india-geodata": {
+      "title": {
+        "en": "india-geodata district boundaries (LGD)",
+        "hi": "इंडिया-जियोडेटा ज़िला सीमाएँ (एलजीडी)"
+      },
+      "publisher": {
+        "en": "india-geodata catalogue",
+        "hi": "इंडिया-जियोडेटा संग्रह"
+      },
+      "url": "https://github.com/yashveeeeeeer/india-geodata",
+      "use": "data",
+      "licence": "cc-by-4.0",
+      "vintage": "2024",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "785 district polygons for all 36 states and union territories, carrying Local Government Directory and 2011 census codes, as the directory held them in August 2024. The external boundary is the official one: Aksai Chin, the Shaksgam valley and Gilgit-Baltistan inside Ladakh, Pakistan-occupied Kashmir as two named polygons with no administration of their own, and the whole of Arunachal Pradesh. The licence is the aggregator's own statement over data of Local Government Directory and Survey of India lineage; a primary statement from either publisher has not been obtained, and districts change often, so the map is dated rather than current.",
+        "hi": "सभी 36 राज्यों और केंद्रशासित प्रदेशों के 785 ज़िला बहुभुज, जिनमें स्थानीय शासन निर्देशिका और 2011 की जनगणना के कोड हैं, जैसे वे अगस्त 2024 में थे। बाहरी सीमा आधिकारिक है: अक्साई चिन, शक्सगाम घाटी और गिलगित-बाल्टिस्तान लद्दाख के भीतर, पाकिस्तान अधिकृत कश्मीर दो नामित बहुभुजों के रूप में जिनका अपना प्रशासन नहीं, और समूचा अरुणाचल प्रदेश। लाइसेंस संग्रहकर्ता का अपना कथन है, जो स्थानीय शासन निर्देशिका और भारतीय सर्वेक्षण विभाग की वंशावली वाले आँकड़ों पर है; किसी भी प्रकाशक से प्राथमिक कथन नहीं मिला है, और ज़िले अक्सर बदलते हैं, इसलिए यह मानचित्र सामयिक नहीं बल्कि तिथि-अंकित है।"
+      }
+    },
+    "lgd": {
+      "title": {
+        "en": "Local Government Directory",
+        "hi": "स्थानीय शासन निर्देशिका"
+      },
+      "publisher": {
+        "en": "Ministry of Panchayati Raj, Government of India",
+        "hi": "पंचायती राज मंत्रालय, भारत सरकार"
+      },
+      "url": "https://lgdirectory.gov.in/",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The government's own register of administrative units and the codes they are known by. It publishes codes and names rather than geometry, and it is the authority the district codes on this map are checked against.",
+        "hi": "प्रशासनिक इकाइयों और उनके कोडों की सरकार की अपनी पंजी। यह ज्यामिति नहीं, कोड और नाम प्रकाशित करती है, और इसी के विरुद्ध इस मानचित्र के ज़िला कोड जाँचे गए हैं।"
+      }
     }
   }
 }

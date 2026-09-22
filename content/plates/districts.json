@@ -1,0 +1,21 @@
+{
+  "id": "districts",
+  "section": "political",
+  "order": 2,
+  "title": {
+    "en": "Districts",
+    "hi": "ज़िले"
+  },
+  "blurb": {
+    "en": "The 785 districts India is administered by, as the Local Government Directory held them in 2024. They arrive as the camera comes in: at the whole-country view the state's name has the paper.",
+    "hi": "वे 785 ज़िले जिनसे भारत प्रशासित होता है, जैसे वे 2024 में स्थानीय शासन निर्देशिका में थे। ये कैमरा पास आने पर दिखते हैं: समूचे देश के दृश्य में काग़ज़ राज्य के नाम का है।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-lines",
+    "districts",
+    "cities"
+  ],
+  "relief": 5,
+  "status": "draft"
+}

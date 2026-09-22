@@ -1,0 +1,242 @@
+[
+  {
+    "lgd": 17,
+    "id": "hamirpur-himachal",
+    "name": {
+      "en": "Hamirpur",
+      "hi": "हमीरपुर"
+    }
+  },
+  {
+    "lgd": 599,
+    "id": "mahe",
+    "name": {
+      "en": "Mahe",
+      "hi": "माहे"
+    }
+  },
+  {
+    "lgd": 601,
+    "id": "yanam",
+    "name": {
+      "en": "Yanam",
+      "hi": "यानम"
+    }
+  },
+  {
+    "lgd": 749,
+    "id": "ntr",
+    "name": {
+      "en": "NTR",
+      "hi": "एनटीआर"
+    }
+  },
+  {
+    "lgd": 743,
+    "id": "parvathipuram-manyam",
+    "name": {
+      "en": "Parvathipuram Manyam",
+      "hi": "पार्वतीपुरम मन्यम"
+    }
+  },
+  {
+    "lgd": 761,
+    "id": "mohla-manpur-ambagarh-chowki",
+    "name": {
+      "en": "Mohla-Manpur-Ambagarh Chowki",
+      "hi": "मोहला-मानपुर-अंबागढ़ चौकी"
+    }
+  },
+  {
+    "lgd": 737,
+    "id": "malerkotla",
+    "name": {
+      "en": "Malerkotla",
+      "hi": "मलेरकोटला"
+    }
+  },
+  {
+    "lgd": 767,
+    "id": "deeg",
+    "name": {
+      "en": "Deeg",
+      "hi": "डीग"
+    }
+  },
+  {
+    "lgd": 769,
+    "id": "dudu",
+    "name": {
+      "en": "Dudu",
+      "hi": "दूदू"
+    }
+  },
+  {
+    "lgd": 772,
+    "id": "phalodi",
+    "name": {
+      "en": "Phalodi",
+      "hi": "फलौदी"
+    }
+  },
+  {
+    "lgd": 774,
+    "id": "beawar",
+    "name": {
+      "en": "Beawar",
+      "hi": "ब्यावर"
+    }
+  },
+  {
+    "lgd": 776,
+    "id": "anupgarh",
+    "name": {
+      "en": "Anupgarh",
+      "hi": "अनूपगढ़"
+    }
+  },
+  {
+    "lgd": 778,
+    "id": "jodhpur-gramin",
+    "name": {
+      "en": "Jodhpur Gramin",
+      "hi": "जोधपुर ग्रामीण"
+    }
+  },
+  {
+    "lgd": 780,
+    "id": "shahpura",
+    "name": {
+      "en": "Shahpura",
+      "hi": "शाहपुरा"
+    }
+  },
+  {
+    "lgd": 781,
+    "id": "kekri",
+    "name": {
+      "en": "Kekri",
+      "hi": "केकड़ी"
+    }
+  },
+  {
+    "lgd": 783,
+    "id": "jaipur-gramin",
+    "name": {
+      "en": "Jaipur Gramin",
+      "hi": "जयपुर ग्रामीण"
+    }
+  },
+  {
+    "lgd": 225,
+    "id": "gangtok",
+    "name": {
+      "en": "Gangtok",
+      "hi": "गंगटोक"
+    }
+  },
+  {
+    "lgd": 742,
+    "id": "soreng",
+    "name": {
+      "en": "Soreng",
+      "hi": "सोरेंग"
+    }
+  },
+  {
+    "lgd": 736,
+    "id": "noklak",
+    "name": {
+      "en": "Noklak",
+      "hi": "नोकलाक"
+    }
+  },
+  {
+    "lgd": 757,
+    "id": "tseminyu",
+    "name": {
+      "en": "Tseminyü",
+      "hi": "त्सेमिन्यू"
+    }
+  },
+  {
+    "lgd": 758,
+    "id": "chumoukedima",
+    "name": {
+      "en": "Chümoukedima",
+      "hi": "चुमुकेदिमा"
+    }
+  },
+  {
+    "lgd": 764,
+    "id": "niuland",
+    "name": {
+      "en": "Niuland",
+      "hi": "न्यूलैंड"
+    }
+  },
+  {
+    "lgd": 765,
+    "id": "shamator",
+    "name": {
+      "en": "Shamator",
+      "hi": "शामातोर"
+    }
+  },
+  {
+    "lgd": 726,
+    "id": "hnahthial",
+    "name": {
+      "en": "Hnahthial",
+      "hi": "ह्नाहथियाल"
+    }
+  },
+  {
+    "lgd": 727,
+    "id": "saitual",
+    "name": {
+      "en": "Saitual",
+      "hi": "सैतुअल"
+    }
+  },
+  {
+    "lgd": 728,
+    "id": "khawzawl",
+    "name": {
+      "en": "Khawzawl",
+      "hi": "खावज़ौल"
+    }
+  },
+  {
+    "lgd": 740,
+    "id": "eastern-west-khasi-hills",
+    "name": {
+      "en": "Eastern West Khasi Hills",
+      "hi": "पूर्वी पश्चिम खासी हिल्स"
+    }
+  },
+  {
+    "source_name": "Muzaffarabad",
+    "id": "muzaffarabad",
+    "name": {
+      "en": "Muzaffarabad",
+      "hi": "मुज़फ़्फ़राबाद"
+    },
+    "blurb": {
+      "en": "Part of the state of Jammu and Kashmir as India defines it, under Pakistani administration since 1947. It has no district of its own on India's register, so it carries no code and no figures.",
+      "hi": "भारत की परिभाषा में जम्मू और कश्मीर राज्य का भाग, जो 1947 से पाकिस्तानी प्रशासन में है। भारत की पंजी में इसका अपना ज़िला नहीं, इसलिए न कोई कोड है और न आँकड़े।"
+    }
+  },
+  {
+    "source_name": "Mirpur",
+    "id": "mirpur",
+    "name": {
+      "en": "Mirpur",
+      "hi": "मीरपुर"
+    },
+    "blurb": {
+      "en": "The southern of the two blocks of Pakistan-occupied Kashmir the source draws, on the Jhelum below Mangla. Like Muzaffarabad it is inside India's boundary and outside its administration.",
+      "hi": "स्रोत जो पाकिस्तान अधिकृत कश्मीर के दो खंड खींचता है, उनमें दक्षिणी, मंगला के नीचे झेलम पर। मुज़फ़्फ़राबाद की तरह यह भारत की सीमा के भीतर और उसके प्रशासन से बाहर है।"
+    }
+  }
+]

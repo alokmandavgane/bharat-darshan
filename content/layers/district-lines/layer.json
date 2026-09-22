@@ -1,0 +1,44 @@
+{
+  "id": "district-lines",
+  "type": "lines",
+  "group": "political",
+  "title": {
+    "en": "District boundaries",
+    "hi": "ज़िला सीमाएँ"
+  },
+  "icon": "district",
+  "default_on": false,
+  "source": {
+    "format": "districts",
+    "simplify_km": 1.5
+  },
+  "categories": [
+    {
+      "id": "border",
+      "title": {
+        "en": "District boundary",
+        "hi": "ज़िला सीमा"
+      },
+      "color": "#7a6f5e"
+    }
+  ],
+  "fields": {
+    "districts": {
+      "type": "int",
+      "label": {
+        "en": "Districts",
+        "hi": "ज़िले"
+      }
+    }
+  },
+  "note": {
+    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Like the district names, these arrive as the camera comes in.",
+    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। ज़िलों के नामों की तरह ये भी कैमरा पास आने पर दिखती हैं।"
+  },
+  "sources": [
+    "india-geodata",
+    "lgd"
+  ],
+  "attribution": "District polygons from the india-geodata LGD layer, read as TopoJSON so every boundary is a shared arc; an arc whose two sides fall in different states is a state border and is dropped.",
+  "_rank": "All at rank 3, the finest weight, which is also what keeps them off the wide views."
+}

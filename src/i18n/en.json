@@ -49,6 +49,7 @@
   "tour.play": "Play a tour of the places",
   "tour.pause": "Pause the tour",
   "layer.group.physical": "Land and water",
+  "layer.group.political": "Borders and districts",
   "layer.group.culture": "People and places",
   "layer.group.industry": "Works and power",
   "layer.group.resources": "Rocks and mining",

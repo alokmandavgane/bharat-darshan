@@ -939,9 +939,11 @@ export function createShell(root, store) {
     for (const [name, spec] of Object.entries(sel.fields || {})) {
       const v = it[name];
       if (v === undefined || v === null) continue;
-      // A year is a number but not a quantity: 1866, not 1,866. A month names itself.
+      // A year is a number but not a quantity: 1866, not 1,866. A month names itself, and
+      // a `name` is a proper name, which is written in both languages like any other.
       const shown = spec.type === 'month' ? t(`month.${v}`)
-        : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
+        : spec.type === 'name' ? pick(v)
+          : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
       facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
     }
     if (pick(it.blurb)) {

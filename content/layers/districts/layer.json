@@ -1,0 +1,79 @@
+{
+  "id": "districts",
+  "type": "points",
+  "marker": "label",
+  "group": "political",
+  "title": {
+    "en": "Districts",
+    "hi": "ज़िले"
+  },
+  "icon": "district",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "district",
+      "color": "#6b6355",
+      "title": {
+        "en": "District",
+        "hi": "ज़िला"
+      }
+    },
+    {
+      "id": "not-administered",
+      "color": "#8d8071",
+      "title": {
+        "en": "Not administered by India",
+        "hi": "भारत द्वारा अप्रशासित"
+      }
+    }
+  ],
+  "fields": {
+    "headquarters": {
+      "type": "name",
+      "label": {
+        "en": "Headquarters",
+        "hi": "मुख्यालय"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population",
+        "hi": "जनसंख्या"
+      }
+    },
+    "area_km2": {
+      "type": "int",
+      "label": {
+        "en": "Area",
+        "hi": "क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    },
+    "lgd": {
+      "type": "int",
+      "label": {
+        "en": "LGD code",
+        "hi": "एलजीडी कोड"
+      }
+    }
+  },
+  "note": {
+    "en": "The district is the unit India is actually run by: the collector, the court, the census table. All 785 of them are here as the Local Government Directory held them in August 2024, lettered where the district's shape is deepest. They arrive as the camera comes in; at the whole-country view the state's name has the paper. Populations are the 2011 census's unless a district is newer than it.",
+    "hi": "ज़िला वह इकाई है जिससे भारत सचमुच चलता है: कलेक्टर, न्यायालय, जनगणना तालिका। सभी 785 यहाँ हैं, जैसे वे अगस्त 2024 में स्थानीय शासन निर्देशिका में थे, हर नाम अपने ज़िले के सबसे भीतरी बिंदु पर। ये कैमरा पास आने पर दिखते हैं; समूचे देश के दृश्य में काग़ज़ राज्य के नाम का है। जनसंख्या 2011 की जनगणना की है, जब तक ज़िला उससे नया न हो।"
+  },
+  "sources": [
+    "india-geodata",
+    "lgd",
+    "wikidata",
+    "census-2011"
+  ],
+  "attribution": "Polygons and codes from the india-geodata LGD district layer; names in Hindi, headquarters, populations and areas from Wikidata, joined on the LGD district code (P12746). The districts too new for a Hindi label on Wikidata are named by hand in this folder's items.json and await review.",
+  "source": {
+    "format": "districts"
+  },
+  "_source": "The build fetches the district polygons itself, so this layer names no files. items.json carries only the names the generator cannot find, matched on `lgd`; everything else is generated."
+}

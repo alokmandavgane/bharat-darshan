@@ -45,12 +45,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np  # noqa: E402
 from PIL import Image  # noqa: E402
 
+from pipeline.lib import districts as districts_lib  # noqa: E402
 from pipeline.lib import fetch, grid, lines, pack, raster, shapefile, wikidata  # noqa: E402
 from pipeline.lib import sources as sources_lib  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
+DISTRICTS = 'districts'     # a layer the build makes from India's district polygons
 JOINS = ('name', 'route', GENERATED)   # how a lines item finds its geometry
 STATUSES = ('draft', 'reviewed')
 MARKERS = ('symbol', 'label', 'dot', 'model')
@@ -61,7 +63,8 @@ SHAPES = {
     'torus': ('r', 'tube'), 'lathe': ('profile',), 'extrude': ('outline', 'depth'),
 }
 # Structured columns a layer can add on top of the base item schema (PLAN.md section 5).
-FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int}
+FIELD_TYPES = {'int': int, 'number': (int, float), 'text': str, 'year': int, 'month': int,
+               'name': dict}    # a proper name, which exists in both languages like any other
 BLURB_MAX = 240
 EVERYWHERE = '*'     # a regional item kept across the whole country
 CATEGORICAL = 'categorical'   # a choropleth's scale, when regions carry a category and not a number
@@ -153,9 +156,9 @@ def validate_layer(layer, folder, registry):
             p.append(f'marker must be one of {MARKERS}')
     if layer.get('type') == 'points':
         src = layer.get('source') or {}
-        if src and src.get('format') != 'geonames':
-            p.append('a points layer can only be generated from source.format "geonames"')
-        elif src.get('dump', 'cities15000') not in GEONAMES_DUMPS:
+        if src and src.get('format') not in ('geonames', DISTRICTS):
+            p.append(f'a points layer can only be generated from source.format "geonames" or "{DISTRICTS}"')
+        elif src.get('format') == 'geonames' and src.get('dump', 'cities15000') not in GEONAMES_DUMPS:
             p.append(f"source.dump must be one of {GEONAMES_DUMPS}")
     if layer.get('type') == 'areas':
         src = layer.get('source') or {}
@@ -163,7 +166,12 @@ def validate_layer(layer, folder, registry):
             p.append('an areas layer needs source.format "shapefile-polygon" and source.files')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
-        if src.get('join') == GENERATED:
+        if src.get('format') == DISTRICTS:
+            # The district mesh: geometry and names come from one source together, so the
+            # layer names no files and its items are made by the build.
+            if src.get('files'):
+                p.append(f'a {DISTRICTS} layer fetches its own source: drop source.files')
+        elif src.get('join') == GENERATED:
             # Nothing is fetched: each item describes a line that is defined rather than
             # surveyed, and the build walks it across the grid. A parallel has no
             # publisher to credit and no file to download.
@@ -492,6 +500,8 @@ def validate_line_item(it, cats, join, fields=()):
                 p.append(f'{tag}: {name} is required by the layer')
         elif not isinstance(v, FIELD_TYPES[spec['type']]) or isinstance(v, bool):
             p.append(f"{tag}: {name} must be {spec['type']}")
+        elif spec['type'] == 'name' and not bilingual(v):
+            p.append(f'{tag}: {name} needs en and hi')
     return p
 
 
@@ -791,6 +801,139 @@ def build_geonames(layer, curated, cats, fields, ids, by_id, out_items):
     return out_items, []
 
 
+# --- India's districts: two drawings from one source (PLAN.md section 7, "District boundaries")
+DISTRICT_CACHE = {}
+
+
+def district_records(ids):
+    """The district source, read once however many layers draw from it."""
+    if 'd' not in DISTRICT_CACHE:
+        DISTRICT_CACHE['d'] = districts_lib.load(ids)
+    return DISTRICT_CACHE['d']
+
+
+def build_district_points(layer, curated, cats, fields, ids, by_id, out_items):
+    """
+    A name inside every district, with its headquarters and its figures on the card.
+
+    The source carries English names and codes; Wikidata carries the name in Hindi, the
+    headquarters, the population and the area, joined on the district's LGD code. The
+    couple of dozen districts too new for a Hindi label on Wikidata are named by hand in
+    this layer's own items.json, matched on the same code.
+    """
+    recs, _arcs = district_records(ids)
+    by_lgd, by_source_name = {}, {}
+    for it in curated:
+        if not bilingual(it.get('name')):
+            return out_items, [f"{it.get('id', '?')}: name needs en and hi"]
+        # Keyed by the LGD code, which is what the two sources meet on. The two polygons
+        # of Pakistan-occupied Kashmir have no code -- nobody administers them, so nobody
+        # numbered them -- and are matched by the name the source files them under.
+        if it.get('lgd'):
+            by_lgd[int(it['lgd'])] = it
+        elif it.get('source_name'):
+            by_source_name[fold(it['source_name'])] = it
+        else:
+            return out_items, [f"{it.get('id', '?')}: a curated district needs an lgd code or a source_name"]
+    pok = 'not-administered' if 'not-administered' in cats else sorted(cats)[0]
+    plain = 'district' if 'district' in cats else pok
+    out, unnamed = [], []
+    seen = set()
+    for rec in recs:
+        hand = by_lgd.get(rec['lgd']) if rec['lgd'] else by_source_name.get(fold(rec['name_en']))
+        name_hi = (hand or {}).get('name', {}).get('hi') or rec['name_hi']
+        name_en = (hand or {}).get('name', {}).get('en') or rec['name_en']
+        if not name_hi:
+            unnamed.append(name_en)
+            continue                      # its boundary still draws; an unnamed label would not
+        slug = slugify(name_en)
+        if slug in seen:
+            slug = f"{slug}-{by_id[rec['region']]['slug']}" if rec['region'] else slug
+        if slug in seen:
+            slug = f"{slug}-{rec['lgd']}"
+        seen.add(slug)
+        entry = {
+            'id': slug, 'name': {'en': name_en, 'hi': name_hi},
+            'category': plain if rec['lgd'] else pok,
+            'priority': 3,                # a district is close-up detail; the state name owns the wide views
+            'x': round(rec['anchor'][0], 1), 'z': round(rec['anchor'][1], 1),
+            'region': rec['region'], 'regionSlug': by_id[rec['region']]['slug'],
+            'sources': [districts_lib.CATALOGUE_URL]
+                       + ([f"https://www.wikidata.org/wiki/{rec['item']}"] if rec['item'] else []),
+            'status': 'draft',
+        }
+        if (hand or {}).get('blurb'):
+            entry['blurb'] = hand['blurb']
+        if rec['hq_en'] and rec['hq_hi'] and 'headquarters' in fields:
+            entry['headquarters'] = {'en': rec['hq_en'], 'hi': rec['hq_hi']}
+        for key, field in (('population', 'population'), ('area_km2', 'area_km2'), ('lgd', 'lgd')):
+            if field in fields and rec[key]:
+                entry[field] = int(rec[key])
+        out.append(entry)
+    out_items.extend(out)
+    print(f'    districts: {len(recs)} polygons, {len(out)} lettered, {len(unnamed)} without a name in Hindi'
+          + (f" ({', '.join(unnamed[:6])}{'...' if len(unnamed) > 6 else ''})" if unnamed else ''))
+    return out_items, []
+
+
+def build_district_lines(layer, cats, fields, ids, by_id):
+    """
+    The district mesh, one item per state: the lines *inside* a state, never its own edge.
+
+    A shared arc is the point of the TopoJSON. Every boundary is stored once, so the line
+    between two districts is drawn once however many districts meet along it. An arc is
+    kept only when it has a district on each side and both are in the same state: an arc
+    with one side is the coast or the international border, and one whose sides fall in
+    two states is the state border. The model draws both of those itself, and inking them
+    again only thickens them.
+    """
+    recs, arcs = district_records(ids)
+    owners = {}
+    for n, rec in enumerate(recs):
+        for a in rec['arcs']:
+            owners.setdefault(a, []).append(n)
+    inside = {}
+    for a, sides in owners.items():
+        if len(sides) != 2:
+            continue
+        regions = {recs[n]['region'] for n in sides}
+        if len(regions) == 1 and 0 not in regions:
+            inside.setdefault(next(iter(regions)), []).append(arcs[a])
+    counts = {}
+    for rec in recs:
+        counts[rec['region']] = counts.get(rec['region'], 0) + 1
+    category = 'border' if 'border' in cats else sorted(cats)[0]
+    simplify = float((layer.get('source') or {}).get('simplify_km', 1.5))
+    out, drawn = [], 0
+    for region, parts in sorted(inside.items()):
+        unit = by_id.get(region)
+        if not unit:
+            continue
+        runs = lines.project(parts, ids, simplify)
+        if not runs:
+            continue
+        drawn += sum(len(r) for r in runs)
+        n = counts.get(region, 0)
+        out.append({
+            'id': f"{unit['slug']}-districts", 'name': {
+                'en': f"Districts of {unit['name']['en']}", 'hi': f"{unit['name']['hi']} के ज़िले"},
+            'category': category, 'rank': 3,
+            'km': round(sum(float(np.hypot(*np.diff(r, axis=0).T).sum()) for r in runs), 1),
+            'lines': [[round(float(v), 1) for v in r.reshape(-1)] for r in runs],
+            'blurb': {
+                'en': f"{unit['name']['en']} is divided into {n} districts. The lines are the boundaries "
+                      f"between them; the state's own edge is drawn by the model itself.",
+                'hi': f"{unit['name']['hi']} {n} ज़िलों में बँटा है। ये रेखाएँ उनके बीच की सीमाएँ हैं; "
+                      f"राज्य की अपनी सीमा मॉडल स्वयं खींचता है।"},
+            'sources': [districts_lib.CATALOGUE_URL],
+            'status': 'draft',
+        })
+        if 'districts' in fields:
+            out[-1]['districts'] = n
+    print(f'    districts: {len(out)} states, {len(inside)} arc groups, {drawn} points inside state lines')
+    return out, []
+
+
 def validate_item(it, cats, by_iso, ids, width, height, fields):
     tag = it.get('id', '?')
     p = []
@@ -876,10 +1019,14 @@ def build_layer(folder, states, ids, heights, out, registry, models):
         return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']),
                       extra={'raster': f'layers/{layer["id"]}-areas.bin.gz'})
     if layer.get('type') == 'lines' and not problems:
-        out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
+        if (layer.get('source') or {}).get('format') == DISTRICTS:
+            out_items, line_problems = build_district_lines(layer, cats, fields, ids, by_id)
+        else:
+            out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
-    for it in items:
+    generated = (layer.get('source') or {}).get('format') == DISTRICTS
+    for it in ([] if generated else items):
         if it.get('id') in seen:
             problems.append(f"{it.get('id')}: duplicate id")
         seen.add(it.get('id'))
@@ -901,7 +1048,10 @@ def build_layer(folder, states, ids, heights, out, registry, models):
                 entry[key] = it[key]
         out_items.append(entry)
     if layer.get('source') and not problems:
-        out_items, gen_problems = build_geonames(layer, items, cats, fields, ids, by_id, out_items)
+        if layer['source'].get('format') == DISTRICTS:
+            out_items, gen_problems = build_district_points(layer, items, cats, fields, ids, by_id, out_items)
+        else:
+            out_items, gen_problems = build_geonames(layer, items, cats, fields, ids, by_id, out_items)
         problems += gen_problems
     if layer.get('marker') == 'model' and not problems:
         problems += resolve_models(layer, out_items, models)
