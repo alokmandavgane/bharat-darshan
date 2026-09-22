@@ -152,6 +152,17 @@
         "hi": "नदियों की लंबाई, बेसिन क्षेत्र और सहायक नदियों की सूची।"
       }
     },
+    "ibm": {
+      "title": { "en": "Indian Minerals Yearbook", "hi": "भारतीय खनिज वार्षिकी" },
+      "publisher": { "en": "Indian Bureau of Mines, Ministry of Mines", "hi": "भारतीय खान ब्यूरो, खान मंत्रालय" },
+      "url": "https://ibm.gov.in/",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Which minerals are worked where, and by whom: the yearbook is the state's own account of the mining districts.",
+        "hi": "कौन-से खनिज कहाँ और किसके द्वारा निकाले जाते हैं: यह वार्षिकी खनन ज़िलों का सरकारी लेखा है।"
+      }
+    },
     "gsi": {
       "title": { "en": "Geological Survey of India", "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण" },
       "publisher": { "en": "Geological Survey of India, Ministry of Mines", "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण, खान मंत्रालय" },
