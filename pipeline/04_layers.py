@@ -45,7 +45,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np  # noqa: E402
 from PIL import Image  # noqa: E402
 
-from pipeline.lib import fetch, grid, lines, pack, raster, shapefile  # noqa: E402
+from pipeline.lib import fetch, grid, lines, pack, raster, shapefile, wikidata  # noqa: E402
 from pipeline.lib import sources as sources_lib  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -155,6 +155,8 @@ def validate_layer(layer, folder, registry):
         src = layer.get('source') or {}
         if src and src.get('format') != 'geonames':
             p.append('a points layer can only be generated from source.format "geonames"')
+        elif src.get('dump', 'cities15000') not in GEONAMES_DUMPS:
+            p.append(f"source.dump must be one of {GEONAMES_DUMPS}")
     if layer.get('type') == 'areas':
         src = layer.get('source') or {}
         if src.get('format') != 'shapefile-polygon' or not src.get('files'):
@@ -637,7 +639,8 @@ def resolve_models(layer, out_items, models):
 
 
 # --- a points layer generated from GeoNames, merged with what is curated by hand
-GEONAMES_URL = 'https://download.geonames.org/export/dump/cities15000.zip'
+GEONAMES_URL = 'https://download.geonames.org/export/dump/{dump}.zip'
+GEONAMES_DUMPS = ('cities15000', 'cities5000', 'cities1000')   # the floor each dump's name states
 WIKIDATA_SPARQL = 'https://query.wikidata.org/sparql'
 FEATURE_CATEGORY = {'PPLC': 'national', 'PPLA': 'capital'}      # any other populated place is a city
 SKIP_FEATURES = ('PPLX', 'PPLQ', 'PPLR', 'PPLF', 'PPLL', 'PPLW', 'PPLH')   # a section of a place, abandoned, religious, a farm, a locality
@@ -645,7 +648,9 @@ SKIP_FEATURES = ('PPLX', 'PPLQ', 'PPLR', 'PPLF', 'PPLL', 'PPLW', 'PPLH')   # a s
 # Wikidata knows what a thing is, so a candidate whose item is one of these is not a town.
 NOT_A_TOWN = ('district', 'taluk', 'tehsil', 'tahsil', 'mandal', 'subdistrict', 'sub-district',
               'block', 'division', 'metropolitan area', 'urban agglomeration', 'municipality of')
-POOL = 3     # candidates looked up per region, as a multiple of the number wanted
+POOL = 5     # candidates looked up per region, as a multiple of the number wanted:
+             # most of the loss is towns GeoNames has and Wikidata has never heard of,
+             # so the pool has to be several times the number that will survive it.
 
 
 def fold(s):
@@ -659,41 +664,28 @@ def slugify(s):
 def wikidata_lookup(gids, raw):
     """
     What Wikidata says about a set of GeoNames ids: the item, its Hindi name, its
-    population and what it is. One query per batch, cached by the set of ids asked for,
-    so a rebuild with the same candidates never asks again.
+    population and what it is. Asked a batch at a time and cached a batch at a time, so a
+    run that meets a timeout resumes rather than restarts.
     """
-    key = hashlib.sha1(','.join(sorted(gids)).encode()).hexdigest()[:12]
-    cache = os.path.join(raw, f'wikidata-{key}.json')
-    if os.path.exists(cache):
-        with open(cache, encoding='utf-8') as f:
-            return json.load(f)
+    def query_for(batch):
+        vals = ' '.join(f'"{g}"' for g in batch)
+        return ('SELECT ?gn ?item ?hi ?pop ?clsLabel WHERE { VALUES ?gn { ' + vals + ' } '
+                '?item wdt:P1566 ?gn . OPTIONAL { ?item rdfs:label ?hi FILTER(LANG(?hi)="hi") } '
+                'OPTIONAL { ?item wdt:P1082 ?pop } '
+                'OPTIONAL { ?item wdt:P31 ?cls . ?cls rdfs:label ?clsLabel FILTER(LANG(?clsLabel)="en") } }')
     out = {}
-    ids = sorted(gids)
-    for i in range(0, len(ids), 150):
-        vals = ' '.join(f'"{g}"' for g in ids[i:i + 150])
-        q = ('SELECT ?gn ?item ?hi ?pop ?clsLabel WHERE { VALUES ?gn { ' + vals + ' } '
-             '?item wdt:P1566 ?gn . OPTIONAL { ?item rdfs:label ?hi FILTER(LANG(?hi)="hi") } '
-             'OPTIONAL { ?item wdt:P1082 ?pop } OPTIONAL { ?item wdt:P31 ?cls . ?cls rdfs:label ?clsLabel FILTER(LANG(?clsLabel)="en") } }')
-        url = WIKIDATA_SPARQL + '?format=json&query=' + urllib.parse.quote(q)
-        req = urllib.request.Request(url, headers={'User-Agent': fetch.USER_AGENT, 'Accept': 'application/sparql-results+json'})
-        with urllib.request.urlopen(req, timeout=180) as r:
-            data = json.load(r)
-        for b in data['results']['bindings']:
-            gn = b['gn']['value']
-            rec = out.setdefault(gn, {'item': b['item']['value'].rsplit('/', 1)[-1], 'hi': None, 'pop': None, 'classes': []})
-            if 'hi' in b and not rec['hi']:
-                rec['hi'] = b['hi']['value']
-            if 'pop' in b:
-                try:
-                    rec['pop'] = max(rec['pop'] or 0, int(float(b['pop']['value'])))
-                except ValueError:
-                    pass
-            if 'clsLabel' in b and b['clsLabel']['value'] not in rec['classes']:
-                rec['classes'].append(b['clsLabel']['value'])
-        print(f'    wikidata: {min(i + 150, len(ids))} of {len(ids)} looked up')
-    os.makedirs(raw, exist_ok=True)
-    with open(cache, 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=0, sort_keys=True)
+    for b in wikidata.batched(gids, query_for, os.path.join(raw, 'wikidata'), 'towns', 'towns'):
+        gn = b['gn']['value']
+        rec = out.setdefault(gn, {'item': b['item']['value'].rsplit('/', 1)[-1], 'hi': None, 'pop': None, 'classes': []})
+        if 'hi' in b and not rec['hi']:
+            rec['hi'] = b['hi']['value']
+        if 'pop' in b:
+            try:
+                rec['pop'] = max(rec['pop'] or 0, int(float(b['pop']['value'])))
+            except ValueError:
+                pass
+        if 'clsLabel' in b and b['clsLabel']['value'] not in rec['classes']:
+            rec['classes'].append(b['clsLabel']['value'])
     return out
 
 
@@ -712,10 +704,11 @@ def build_geonames(layer, curated, cats, fields, ids, by_id, out_items):
     per = int(src.get('top_per_region', 10))
     minpop = int(src.get('min_population', 0))
     raw = os.path.join(fetch.RAW, 'geonames')
-    fetch.download(GEONAMES_URL, os.path.join(raw, 'cities15000.zip'), quiet=True)
+    dump = src.get('dump', 'cities15000')
+    fetch.download(GEONAMES_URL.format(dump=dump), os.path.join(raw, f'{dump}.zip'), quiet=True)
     height, width = ids.shape
     rows = []
-    with zipfile.ZipFile(os.path.join(raw, 'cities15000.zip')) as z, z.open('cities15000.txt') as f:
+    with zipfile.ZipFile(os.path.join(raw, f'{dump}.zip')) as z, z.open(f'{dump}.txt') as f:
         for line in io.TextIOWrapper(f, encoding='utf-8'):
             q = line.rstrip('\n').split('\t')
             if q[8] != 'IN' or not q[7].startswith('PPL') or q[7] in SKIP_FEATURES:
