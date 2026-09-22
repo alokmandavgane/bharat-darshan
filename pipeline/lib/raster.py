@@ -134,7 +134,12 @@ def distance_to_segments(segments, width, height, radius):
 
 
 def erode(mask):
-    """4-connected erosion of a boolean mask."""
+    """4-connected erosion of a boolean mask.
+
+    A pixel on the array's own edge keeps whichever neighbour falls outside it, so a
+    shape that reaches the edge is never worn away there. Callers that erode to nothing
+    have to leave a false margin around the shape; `pole_of_inaccessibility` does.
+    """
     out = mask.copy()
     out[1:, :] &= mask[:-1, :]
     out[:-1, :] &= mask[1:, :]
@@ -143,13 +148,41 @@ def erode(mask):
     return out
 
 
-def pole_of_inaccessibility(mask):
-    """Row, col of a pixel deepest inside mask (last survivor of repeated erosion)."""
+def pole_of_inaccessibility(mask, max_side=None):
+    """
+    Row, col of a pixel deepest inside mask (last survivor of repeated erosion).
+
+    Erosion costs one pass per pixel of the inscribed radius, so a country-sized shape
+    costs six hundred passes over four million pixels. `max_side` answers on a shrunken
+    copy first and then refines within it, which is exact enough for anything that wants
+    a place to put a label and turns minutes into milliseconds.
+    """
     ys, xs = np.nonzero(mask)
     if len(ys) == 0:
         return None
     y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
-    sub = mask[y0:y1, x0:x1]
+    # A false margin around the shape, so erosion bites from every side. Without it a
+    # shape that touches the edge of its own array is never worn away there, and one that
+    # fills its bounding box is never worn away at all: erode returns it unchanged and
+    # the loop below runs for ever.
+    sub = np.zeros((y1 - y0 + 2, x1 - x0 + 2), bool)
+    sub[1:-1, 1:-1] = mask[y0:y1, x0:x1]
+    y0 -= 1
+    x0 -= 1
+    if max_side and max(sub.shape) > max_side:
+        step = int(np.ceil(max(sub.shape) / max_side))
+        coarse = sub[::step, ::step]
+        deep = pole_of_inaccessibility(coarse)
+        if deep is None:                       # too thin to survive the thinning
+            return int(ys.mean()), int(xs.mean())
+        cy, cx = deep[0] * step, deep[1] * step
+        # Refine inside a window of one coarse cell either side, at full resolution.
+        wy0, wx0 = max(0, cy - step * 2), max(0, cx - step * 2)
+        window = sub[wy0:cy + step * 2 + 1, wx0:cx + step * 2 + 1]
+        fine = pole_of_inaccessibility(window)
+        if fine is None:
+            return int(cy) + y0, int(cx) + x0
+        return int(fine[0]) + wy0 + y0, int(fine[1]) + wx0 + x0
     last = sub
     while True:
         nxt = erode(last)
