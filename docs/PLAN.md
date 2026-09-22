@@ -2173,6 +2173,19 @@ docs/DEPLOY.md).
     HMR reload; two cold loads in a fresh tab are clean. Not a production issue.
   - **Left**: drafts stay on by the owner's call (review comes later); the reference phone
     has still not seen any of this.
+- 2026-09-22, after the first deploy (darshan.alokm.com is live).
+  - **The whole country went dark at the zoom ceiling.** The border fields reach 14 km
+    from a border at the fine tier and saturate there; a 1.6 px line at 12 km per pixel
+    asked for 19 km plus 9 of anti-aliasing, so every land pixel was "on a border" and
+    took the darkening. Width capped at half the range, anti-aliasing at a quarter, and
+    the line fades once the cap is under a pixel. Cards re-rendered.
+  - **State names shrink with the zoom** (0.7 at the ceiling), through `--lscale`.
+  - **URLs in the shells carry their slash** (`/en/`, `/hi/atlas/rivers/`): the host
+    redirects the bare form, which cost every link preview a hop. And `public/_redirects`
+    has four 200 rewrites so a state deep link (`/hi/state/kerala`,
+    `/hi/atlas/rivers/state/kerala`) gets its language's shell and its page's card rather
+    than the root English shell. Unverified on the host until the next deploy: check
+    `curl -sL https://darshan.alokm.com/hi/state/kerala | grep '<html lang'` says `hi`.
 
 ### What exists
 
