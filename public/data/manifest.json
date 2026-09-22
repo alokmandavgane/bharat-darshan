@@ -159,8 +159,8 @@
     }
    },
    "note": {
-    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Like the district names, these arrive as the camera comes in.",
-    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। ज़िलों के नामों की तरह ये भी कैमरा पास आने पर दिखती हैं।"
+    "en": "The lines inside each state, one item per state. A boundary is stored once in the source and drawn once here, however many districts meet along it, and a line that is really a state border is left out: the model draws its own edges, and inking them twice only thickens them. Drawn at the finest weight, so the mesh reads from the first screen without taking it over.",
+    "hi": "हर राज्य के भीतर की रेखाएँ, प्रति राज्य एक प्रविष्टि। स्रोत में हर सीमा एक ही बार है और यहाँ भी एक ही बार खिंचती है, चाहे उस पर कितने ही ज़िले मिलते हों; और जो रेखा असल में राज्य की सीमा है, वह छोड़ दी गई है: अपने किनारे मॉडल स्वयं खींचता है, दोबारा खींचने से वे बस मोटे होते हैं। सबसे महीन मोटाई में खिंची, ताकि जाल पहली ही स्क्रीन से पढ़ा जाए पर उस पर छा न जाए।"
    },
    "sources": [
     "india-geodata",
@@ -234,8 +234,8 @@
     }
    },
    "note": {
-    "en": "The district is the unit India is actually run by: the collector, the court, the census table. All 785 of them are here as the Local Government Directory held them in August 2024, lettered where the district's shape is deepest. They arrive as the camera comes in; at the whole-country view the state's name has the paper. Populations are the 2011 census's unless a district is newer than it.",
-    "hi": "ज़िला वह इकाई है जिससे भारत सचमुच चलता है: कलेक्टर, न्यायालय, जनगणना तालिका। सभी 785 यहाँ हैं, जैसे वे अगस्त 2024 में स्थानीय शासन निर्देशिका में थे, हर नाम अपने ज़िले के सबसे भीतरी बिंदु पर। ये कैमरा पास आने पर दिखते हैं; समूचे देश के दृश्य में काग़ज़ राज्य के नाम का है। जनसंख्या 2011 की जनगणना की है, जब तक ज़िला उससे नया न हो।"
+    "en": "The district is the unit India is actually run by: the collector, the court, the census table. All 785 of them are here as the Local Government Directory held them in August 2024, lettered where the district's shape is deepest. The state's name is drawn first and the district names fill in around it as the camera comes down. Populations are the 2011 census's unless a district is newer than it.",
+    "hi": "ज़िला वह इकाई है जिससे भारत सचमुच चलता है: कलेक्टर, न्यायालय, जनगणना तालिका। सभी 785 यहाँ हैं, जैसे वे अगस्त 2024 में स्थानीय शासन निर्देशिका में थे, हर नाम अपने ज़िले के सबसे भीतरी बिंदु पर। पहले राज्य का नाम खिंचता है और कैमरा नीचे आने पर ज़िलों के नाम उसके गिर्द भरते जाते हैं। जनसंख्या 2011 की जनगणना की है, जब तक ज़िला उससे नया न हो।"
    },
    "sources": [
     "india-geodata",
@@ -1464,8 +1464,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 11645,
-   "sha256": "b5b6dcb00356"
+   "size": 11771,
+   "sha256": "de7a819901b2"
   },
   "sources.json": {
    "size": 23875,
@@ -1652,12 +1652,12 @@
    "sha256": "20a640864fb8"
   },
   "layers/district-lines.json": {
-   "size": 265120,
-   "sha256": "5658f80a999e"
+   "size": 265214,
+   "sha256": "6a089891ab0a"
   },
   "layers/districts.json": {
-   "size": 310404,
-   "sha256": "76ed5d48cf99"
+   "size": 310433,
+   "sha256": "5dfed55284d0"
   },
   "layers/festivals.json": {
    "size": 27590,
