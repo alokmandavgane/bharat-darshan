@@ -20,14 +20,16 @@ current status.
 - Tap + bottom sheet is the core interaction; hover is a desktop enhancement.
 - Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.json`
   plus `items.json`). The engine knows layer types (terrain, choropleth, lines,
-  points, regional, and the rest of PLAN.md section 5's "Primitives" table), never
-  layer ids. Adding a layer must not need changes under `src/`.
+  points, regional, and the rest of PLAN.md section 5's "Primitives" table) and marker
+  kinds (token, label, symbol, dot, model), never layer ids. A figurine is a recipe under
+  `content/models/`, not a mesh file. Adding a layer must not need changes under `src/`.
 - Primitives first, then data (D12): finish the closed set of layer types, each proven
   on one real dataset with the full contract (legend, picking, card, search, URL, both
   languages), before adding maps in bulk.
 - Plates over layers (D11): an atlas page is a JSON file under `content/plates/` naming
   a base style, layers and a camera. Adding a plate must not need changes under `src/`.
-- Stylised look: a hand-made clay / paper model. No imagery, no realism.
+- Stylised look: a hand-made clay / paper model. No imagery, no realism. Markers are
+  clay too: tokens, beads and figurines standing on the relief, never flat stickers.
 - English + Hindi from the first screen. Every user-facing string and content field
   exists in both.
 - Content is AI-drafted and human-reviewed: items carry `sources` and a `status`;

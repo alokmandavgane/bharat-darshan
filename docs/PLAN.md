@@ -346,8 +346,12 @@ Desktop / tablet landscape:
   lifts like a puzzle piece with clean-cut, paler sides.
 - **Neighbours.** Same relief, lighter and desaturated via the region mask, so India
   stands out without drawing anyone else's lines.
-- **Markers.** Paper-cut / sticker icons with a small contact shadow, one consistent
-  illustrated set.
+- **Markers.** One clay set, in three sizes of thing: a token with a glyph for a place,
+  a bead the size of a pinhead for a town, and a figurine for a thing made or grown --
+  low-poly, flat-shaded, vertex-coloured, lit by the same key light as the terrain,
+  standing on it with a contact shadow. Nothing flat: a 2D sticker on a 3D model reads
+  as a label, not as a thing on the model (decided 2026-09-22; the sticker icons were the
+  first cut).
 - **Motion.** Short, springy, restrained. Mountains grow when relief toggles; state
   lift about 400 ms; respects `prefers-reduced-motion`.
 - Why it is also cheaper: no imagery downloads, textures compress well, smooth clay
@@ -608,12 +612,15 @@ map is a folder and a source, whatever it shows.
 | `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
 | `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
+| `points`, dot | a clay bead the size of a pinhead, sized by a value, drawn by the GPU with only the names in HTML | every town, ports, stations, mines | built (`"marker": "dot"`) | every state's ten biggest towns, generated from GeoNames (done) |
+| `points`, model | a figurine built from a recipe (`content/models/`), standing on the relief, instanced by the GPU | GI products, crops, crafts, animals, monuments | built (`"marker": "model"`) | GI tags (done) |
+| `points`, generated | items made by the build from a source and merged with the curated ones | towns, stations, airports, plants by the hundred | built (`"source": { "format": "geonames" }`) | cities (done) |
 | `symbols` | a circle **sized by a value**, coloured by category | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions, filled and draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
 | `flows` | curved arrows between places, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` on a `lines` layer) | the monsoon's advance (done) |
 | `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
-| `regional` | nothing on the map; listed on a state's card | festivals, languages, food | built | done |
+| `regional` | listed on a state's card; drawn as a token at its anchor when it has one (the place it is most seen at) | festivals, languages, food | built | done; festivals anchored 2026-09-22 |
 
 Two things cut across all of them rather than being primitives:
 
@@ -1926,6 +1933,44 @@ docs/DEPLOY.md).
   the new card. Sizes after: app JS 47 KB gzipped, CSS 7 KB; `npm test` passes; checked in
   Chromium at 375 x 812 and 1280 x 800 in both languages. Not yet looked at on the
   reference phone.
+
+- 2026-09-22, the overlay round. The owner's brief: the clay tokens are good but take
+  room; festivals were listed and never drawn, and everything should be drawn; every
+  state's ten biggest towns, at a small footprint; and real 3D objects as markers, for a
+  GI-tagged layer to begin with, without much bandwidth or compute. What was done:
+  - **Tokens shrank** a fifth (26/22/19 px by priority, 0.62 at the home view).
+  - **Regional items may carry an anchor**, the one place they are most seen at (Onam at
+    Thrissur, the Hornbill at Kisama, Diwali at Ayodhya); the build checks it falls in one
+    of the item's regions, and the engine draws such items as tokens through the points
+    type while the state cards go on listing them. All 30 festivals have one.
+  - **Beads** (`marker: "dot"`) for the towns: a low-poly sphere instanced by the GPU, sized
+    by population through the same sizer as symbols, standing on the terrain by sampling
+    the heightmap in the vertex shader (so it rides the relief, the lifted block and a
+    prisms layer with nothing done per frame), with a soft instanced shadow disc under it.
+    HTML carries only the names, set beside the beads in small halo type, thinned by
+    priority and collision; picking projects the anchors, since a bead has no element.
+    The cities layer is now **generated**: `source.format: "geonames"` takes GeoNames'
+    towns, places each by the ID raster, keeps a candidate only when Wikidata has it, has
+    it as a town rather than a district filed under a town's name, and has its Hindi
+    name, takes Wikidata's population where it has one, then the ten biggest per state,
+    with the thirty curated cities laid over them. 249 towns; a rebuild reuses the cached
+    Wikidata answer. Two registry entries (GeoNames CC BY 4.0, Wikidata CC0).
+  - **Figurines** (`marker: "model"`): a recipe under `content/models/<name>.json` is a
+    few primitives -- sphere, cylinder, cone, box, torus, lathe, extrude -- each placed,
+    turned, scaled and coloured, that `src/engine/models.js` builds into one flat-shaded,
+    vertex-coloured geometry; a part marked `tint` takes the item's colour, so one saree
+    serves four silks. Twenty-two recipes at 200-1,200 bytes each, the mesh made on the
+    device; instanced per kind, lit by the terrain's key light. This was the design
+    question in the brief, and the reasons for recipes over authored models: no download
+    and no loader (GLTFLoader would be 9 KB and a format nobody edits by hand), no licence
+    to clear, one clay look by construction, and a new thing is a JSON file. A glTF
+    `shape: "mesh"` can be added to the same recipe format the day something needs it.
+  - **The GI-tags page**, 36 registered products with figurines, journal years from the
+    registry's list, drafted and awaiting review.
+  Learned: the marker's height for picking comes from the built geometry, not the recipe;
+  the shadow disc must share the instance buffers or it drifts from what it shadows; and a
+  scaled-down screenshot catches tokens mid pop-in and shows their shadows alone, which
+  looked like a rendering bug and was not. Not yet looked at on the reference phone.
 
 ### What exists
 
