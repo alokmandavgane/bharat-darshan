@@ -39,7 +39,6 @@
   "facts.pending": "Details will appear here once they have been reviewed.",
   "menu.open": "Menu",
   "menu.language": "Language",
-  "menu.relief": "Relief",
   "menu.layers": "Layers",
   "chip.graticule": "Graticule",
   "chip.graticule.hint": "Parallels and meridians, every 5°. They curve because the projection does.",
@@ -100,5 +99,18 @@
   "atlas.section.transport": "Transport",
   "atlas.section.people": "People",
   "atlas.section.culture": "Culture",
-  "atlas.section.history": "History"
+  "atlas.section.history": "History",
+  "menu.view": "View",
+  "legend.heading": "Key",
+  "legend.show": "Show the key",
+  "legend.hide": "Hide the key",
+  "layer.show": "Show {name}",
+  "layer.hide": "Hide {name}",
+  "layer.regional": "Read in each state's card",
+  "layer.labels": "Names set into the map",
+  "layer.count": "{n} layers",
+  "layer.count.one": "1 layer",
+  "sheet.page.layers": "On this page",
+  "sheet.units": "All states and union territories",
+  "list.none": "Nothing found"
 }

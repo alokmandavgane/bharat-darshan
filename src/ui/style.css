@@ -210,104 +210,102 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .menu-button[aria-expanded="true"] .menu-icon::before { transform: translateY(6px) rotate(45deg); }
 .menu-button[aria-expanded="true"] .menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
 
-/* --- the menu panel --- */
+/* --- the menu panel: the view as one strip, then every layer as a row --- */
 .menu {
   position: absolute;
   top: calc(var(--safe-top) + 72px);
   right: calc(var(--safe-right) + 14px);
-  width: min(320px, calc(100vw - 28px));
-  padding: 4px 18px 16px;
+  width: min(340px, calc(100vw - 28px));
+  max-height: calc(100dvh - var(--safe-top) - 88px);
   border-radius: 20px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
 }
-.menu-section { padding: 12px 0 4px; }
+.menu-scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 14px 12px;
+  border-radius: inherit;
+}
+.menu-section { padding: 10px 0 6px; }
 .menu-section + .menu-section { border-top: 1px solid var(--line); }
 .menu-section h3 {
   margin: 0 0 8px;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--gold);
 }
 .menu-section h3:lang(en) { letter-spacing: 0.12em; text-transform: uppercase; }
+.menu-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.menu-head h3 { margin: 0; }
 .segmented {
   display: inline-flex;
-  padding: 3px;
+  padding: 2px;
   border-radius: 999px;
   background: rgba(120, 80, 40, 0.08);
   border: 1px solid var(--line);
 }
 .segmented button {
   font: inherit;
+  font-size: 0.82rem;
   font-weight: 600;
   border: 0;
   border-radius: 999px;
-  padding: 8px 16px;
-  min-height: 38px;
+  padding: 3px 12px;
+  min-height: 28px;
   background: transparent;
   color: var(--ink);
   cursor: pointer;
 }
-.segmented button[aria-pressed="true"] {
+.segmented button[aria-pressed="true"], .toggle[aria-pressed="true"] {
   background: linear-gradient(180deg, #d1683c, var(--accent-deep));
   color: var(--accent-ink);
+  border-color: transparent;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
 }
-.segmented button:focus-visible, .menu-button:focus-visible, .chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.segmented button:focus-visible, .menu-button:focus-visible, .chip:focus-visible, .toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.layer-group + .layer-group { margin-top: 14px; }
-.layer-group h4 {
-  margin: 0 0 7px;
-  font-size: 11px;
+/* The view: three small switches with a picture each, and the relief's own slider. */
+.view-toggles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.toggle {
+  font: inherit;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--ink) 55%, transparent);
-}
-.layer-group h4:lang(hi) { letter-spacing: 0.03em; text-transform: none; font-size: 12px; }
-.legend {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
+  line-height: 1.2;
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px 14px;
-  font-size: 12px;
-  color: color-mix(in srgb, var(--ink) 72%, transparent);
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px 7px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #fff9ee, #f1e3cb);
+  color: var(--muted);
+  cursor: pointer;
+  box-shadow: 0 1px 0 #fff inset, 0 1px 3px rgba(84, 56, 28, 0.1);
 }
-.legend li { display: flex; align-items: center; gap: 6px; }
-.legend-swatch { background: var(--c); flex: none; }
-.legend[data-kind="points"] .legend-swatch { width: 10px; height: 10px; border-radius: 50%; }
-.legend[data-kind="lines"] .legend-swatch { width: 16px; height: 3px; border-radius: 2px; }
-/* A symbols layer's size key: each circle at the diameter the map would draw it at. */
-/* A prisms layer's key: a column at the height the map would raise the ground to. */
-.legend-heights { align-items: flex-end; gap: 6px 14px; }
-.legend-heights li { align-items: flex-end; }
-.legend-bar {
-  width: 9px;
-  height: var(--h);
-  flex: none;
-  border-radius: 2px 2px 0 0;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--ink) 34%, transparent), color-mix(in srgb, var(--ink) 18%, transparent));
+.toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.toggle span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.relief {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
 }
-.legend-sizes { align-items: flex-end; gap: 6px 14px; }
-.legend-sizes li { align-items: center; }
-.legend-size {
-  width: var(--d);
-  height: var(--d);
-  flex: none;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--ink) 26%, transparent);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 32%, transparent);
-}
+.relief label { font-weight: 600; font-size: 0.82rem; color: var(--muted); }
+.relief-slider { flex: 1; accent-color: var(--accent); min-height: 28px; margin: 0; }
+.relief-value { min-width: 3ch; text-align: right; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+/* The scrubber's switches: the one kind of chip left. */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   font: inherit;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 8px 16px;
-  min-height: 40px;
+  padding: 4px 10px;
   background: linear-gradient(180deg, #fff9ee, #f1e3cb);
   color: var(--ink);
   box-shadow: 0 1px 0 #fff inset, 0 2px 4px rgba(84, 56, 28, 0.12);
@@ -320,28 +318,140 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   border-color: transparent;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
 }
-/* A switch is a small thing you flick, not a call to action: the layer chips are
-   compact and carry the layer's own glyph. Declared after .chip so it wins on order. */
-.chip-layer {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.78rem;
-  padding: 4px 10px 4px 7px;
-  min-height: 28px;
+
+/* --- layer rows: a mark, a name, the key in miniature, a switch ---
+   The mark is a miniature of how the layer draws (src/ui/legend.js), in the layer's own
+   colours; --c is its first colour and tints the tile. The same row serves the menu and
+   an open page. */
+.layer-group + .layer-group { margin-top: 10px; }
+.layer-group h4 {
+  margin: 6px 0 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
 }
-.chip-icon { display: flex; opacity: 0.75; }
-.chip-icon svg { width: 14px; height: 14px; }
-.chip-layer[aria-pressed="true"] .chip-icon { opacity: 1; }
-.relief {
+.layer-group h4:lang(hi) { letter-spacing: 0.03em; text-transform: none; font-size: 12px; }
+.layer-row {
+  --c: var(--accent);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px 4px 4px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  font: inherit;
+  color: var(--ink);
+  text-align: start;
+  cursor: pointer;
+}
+.layer-row:hover { background: rgba(120, 80, 40, 0.07); }
+.layer-row:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; }
+.layer-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--c) 12%, #fffaf0);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 28%, transparent);
+  transition: background 160ms, box-shadow 160ms;
+}
+.layer-mark svg { width: 34px; height: 34px; display: block; font-family: var(--font); }
+.layer-row[aria-checked="true"] .layer-mark {
+  background: color-mix(in srgb, var(--c) 24%, #fffaf0);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 55%, transparent), 0 2px 5px rgba(84, 56, 28, 0.14);
+}
+.layer-row[aria-checked="false"] .layer-mark svg { opacity: 0.7; filter: saturate(0.55); }
+.layer-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.layer-name { font-weight: 600; font-size: 0.9rem; line-height: 1.25; }
+.layer-key {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, #000 88%, transparent);
+}
+.layer-key .legend { flex-wrap: nowrap; margin: 0; gap: 0 9px; font-size: 11px; color: inherit; }
+.layer-key .legend li { flex: none; gap: 5px; }
+.layer-key .legend-heights { align-items: flex-end; }
+.switch {
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  background: rgba(120, 80, 40, 0.18);
+  box-shadow: inset 0 1px 2px rgba(60, 40, 20, 0.2);
+  position: relative;
+  flex: none;
+  transition: background 160ms;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fffaf0;
+  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.3);
+  transition: transform 160ms cubic-bezier(.2,.8,.2,1);
+}
+.layer-row[aria-checked="true"] .switch { background: linear-gradient(180deg, #d1683c, var(--accent-deep)); }
+.layer-row[aria-checked="true"] .switch::after { transform: translateX(14px); }
+
+/* --- the key's samples: a dot for points, a stroke for lines, a square for a fill --- */
+.legend {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 3px 12px;
+  font-size: 12px;
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
 }
-.relief label { font-weight: 600; font-size: 0.95rem; }
-.relief-slider { flex: 1; accent-color: var(--accent); min-height: 32px; margin: 0; }
-.relief-value { min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend-swatch { background: var(--c); flex: none; }
+.legend[data-kind="points"] .legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.legend[data-kind="lines"] .legend-swatch { width: 16px; height: 3px; border-radius: 2px; }
+.legend[data-kind="fill"] .legend-swatch { width: 12px; height: 12px; border-radius: 3px; }
+/* A choropleth's one-line form: the stripe and its ends. */
+.legend-compact { display: inline-flex; align-items: center; gap: 6px; }
+.legend-ramp { display: inline-flex; height: 8px; width: 60px; border-radius: 3px; overflow: hidden; flex: none; }
+.legend-ramp span { flex: 1; background: var(--c); }
+/* A prisms layer's key: a column at the height the map would raise the ground to. */
+.legend-heights { align-items: flex-end; gap: 6px 14px; }
+.legend-heights li { align-items: flex-end; }
+.legend-bar {
+  width: 9px;
+  height: var(--h);
+  flex: none;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ink) 34%, transparent), color-mix(in srgb, var(--ink) 18%, transparent));
+}
+/* A symbols layer's size key: each circle at the diameter the map would draw it at. */
+.legend-sizes { align-items: flex-end; gap: 6px 14px; }
+.legend-sizes li { align-items: center; }
+.legend-size {
+  width: var(--d);
+  height: var(--d);
+  flex: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ink) 26%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 32%, transparent);
+}
 
 /* --- bottom sheet --- */
 .sheet {
@@ -399,6 +509,8 @@ body[data-level="state"] .sheet-head { cursor: default; }
   color: var(--accent-deep);
 }
 .sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
+.sheet[data-view="page"] .sheet-subtitle, .sheet[data-view="item"] .sheet-subtitle { color: var(--gold); font-weight: 600; font-size: 0.8rem; }
+.sheet[data-view="page"] .sheet-subtitle:lang(en) { letter-spacing: 0.08em; text-transform: uppercase; }
 /* The separator belongs to the name before it, not the line after it: hung on the
    subtitle it wrapped to the start of the next line whenever the names were long. */
 .sheet-alt:not([hidden]):has(+ .sheet-subtitle:not(:empty))::after { content: " ·"; }
@@ -422,11 +534,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
 /* The scrubber: the whole year and each month, as small switches. */
-.chip-month {
-  padding: 4px 9px;
-  font-size: 0.78rem;
-  min-height: 0;
-}
 .scrubber-row { gap: 4px; }
 .month-panel { margin-bottom: 4px; }
 .month-panel .facts-heading { margin-top: 0; }
@@ -462,7 +569,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
 
 /* A choropleth's legend: the bands in a row, then the unit and any caveat. */
 .legend[data-kind="choropleth"] { gap: 2px 10px; }
-.legend[data-kind="choropleth"] .legend-swatch { border-radius: 2px; }
+.legend[data-kind="choropleth"] .legend-swatch { width: 12px; height: 12px; border-radius: 3px; }
 .legend-unit, .legend-note {
   margin: 2px 0 0;
   font-size: 0.72rem;
@@ -563,48 +670,103 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .facts-blurb { margin-top: 14px; }
 .facts-sources, .facts-pending { color: var(--muted); font-size: 0.85rem; }
 
-/* --- list of every unit --- */
+/* --- finding things: the field, what it finds, and every unit behind a fold --- */
+.finder { margin: 10px 0 4px; }
+.search-wrap { position: relative; }
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
 .search {
   font: inherit;
   width: 100%;
-  margin: 12px 0 8px;
-  padding: 10px 14px;
+  margin: 0;
+  padding: 9px 14px 9px 36px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.55);
   color: var(--ink);
 }
 .search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-.unit-list { list-style: none; margin: 0 0 8px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px; }
-.unit-list button {
+/* While something is typed the results are the whole sheet. */
+body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none !important; }
+.unit-list, .unit-grid {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px;
+}
+.unit-list button, .unit-grid button {
   font: inherit;
   text-align: left;
   width: 100%;
   border: 0;
   background: transparent;
   border-radius: 10px;
-  padding: 8px 10px;
+  padding: 7px 10px;
   color: var(--ink);
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
-.unit-list button:hover { background: rgba(120, 80, 40, 0.07); }
-.unit-list button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.unit-list button:hover, .unit-grid button:hover { background: rgba(120, 80, 40, 0.07); }
+.unit-list button:focus-visible, .unit-grid button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 .unit-list-name { font-weight: 600; }
 .unit-list-alt { color: var(--muted); font-size: 0.85rem; }
+.unit-list-none { padding: 8px 10px; color: var(--muted); font-size: 0.9rem; }
+.units { margin: 14px 0 4px; border-top: 1px solid var(--line); }
+.units-summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 4px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.units-summary:lang(hi) { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }
+.units-summary::-webkit-details-marker { display: none; }
+.units-summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-inline-start: auto;
+  margin-inline-end: 4px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 160ms;
+}
+.units[open] .units-summary::after { transform: rotate(45deg); }
+.units-count { font-weight: 400; }
+.units-summary:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; border-radius: 8px; }
+.unit-grid { margin: 0 0 8px; }
 
-/* --- corner controls: play the tour; reset the view (a compass needle that turns with the map) --- */
+/* --- the plate's furniture, bottom-left: the controls, then the key with the scale
+   bar as its foot, the way an atlas prints them --- */
 .corner {
   position: absolute;
   left: calc(var(--safe-left) + 12px);
   bottom: calc(var(--sheet-peek, 88px) + 12px);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;           /* the buttons are round; the scale bar is not */
+  align-items: flex-end;
   gap: 8px;
+  max-width: calc(100vw - 24px);
   isolation: isolate;               /* an open sheet covers the buttons, icons included */
 }
+.corner-buttons { display: flex; flex-direction: column; gap: 8px; flex: none; }
 .corner-button {
   width: 36px;
   height: 36px;
@@ -625,17 +787,96 @@ body[data-level="state"] .sheet-head { cursor: default; }
 }
 .tour-button .icon-pause, .tour-button[aria-pressed="true"] .icon-play { display: none; }
 .tour-button[aria-pressed="true"] .icon-pause { display: block; }
-/* --- the scale bar: drawn on the table, not on a card, the way an atlas prints it --- */
-.scale { pointer-events: none; color: var(--muted); }
+
+/* The key: one row per layer drawn, its samples under it, an eye to hide it. A page's
+   own layer stays listed when hidden so the eye can bring it back. */
+.key {
+  width: min(300px, calc(100vw - 80px));
+  max-height: min(38dvh, 400px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.key > * { min-height: 0; }
+.key[data-empty="1"] { width: auto; }
+.key-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px 6px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  cursor: pointer;
+  text-align: start;
+  flex: none;
+}
+.key-head:lang(en) .key-heading { letter-spacing: 0.12em; text-transform: uppercase; }
+.key-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; border-radius: 10px; }
+.key-marks { display: none; gap: 2px; flex: 1; min-width: 0; overflow: hidden; }
+.key-marks span { display: block; width: 18px; height: 18px; flex: none; }
+.key-marks svg { width: 18px; height: 18px; display: block; }
+.key-chevron { width: 16px; height: 16px; margin-inline-start: auto; color: var(--muted); transition: transform 180ms; flex: none; }
+.key:not([data-open="1"]) .key-rows { display: none; }
+.key:not([data-open="1"]) .key-marks { display: flex; }
+.key:not([data-open="1"]) .key-chevron { transform: rotate(180deg); }
+.key-rows { overflow-y: auto; overscroll-behavior: contain; padding: 0 12px 2px; }
+.key-layer + .key-layer { border-top: 1px solid var(--line); }
+.key-layer-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: start;
+}
+.key-layer-head:hover .key-eye { opacity: 1; }
+.key-layer-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; border-radius: 8px; }
+.key-layer-mark { flex: none; }
+.key-layer-mark svg { width: 22px; height: 22px; display: block; font-family: var(--font); }
+.key-layer-name { flex: 1; min-width: 0; }
+.key-eye { margin-inline-start: auto; color: var(--muted); opacity: 0.55; flex: none; position: relative; }
+.key-eye svg { width: 16px; height: 16px; display: block; }
+.key-layer[data-off="1"] .key-layer-head { color: var(--muted); }
+.key-layer[data-off="1"] .key-layer-mark { opacity: 0.45; filter: saturate(0.3); }
+.key-layer[data-off="1"] .key-eye::after {           /* the eye, struck through */
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 7px;
+  width: 15px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-35deg);
+  border-radius: 1px;
+}
+.key-layer-body { padding: 0 0 8px 30px; }
+.key .legend { margin: 0; gap: 2px 10px; font-size: 11.5px; }
+.key .legend-note { font-size: 0.7rem; }
+.key .legend-sources { margin-top: 4px; }
+/* The scale bar: a bracket opening upwards, with a tick at the halfway mark to read halves off. */
+.scale { flex: none; padding: 6px 12px 10px; border-top: 1px solid var(--line); color: var(--muted); }
+.key[data-empty="1"] .scale { border-top: 0; padding: 8px 12px 9px; }
 .scale-label {
   display: block;
   margin-bottom: 2px;
   font-size: 11px;
   font-weight: 700;
-  text-shadow: 0 1px 0 var(--paper), 0 -1px 0 var(--paper), 1px 0 0 var(--paper), -1px 0 0 var(--paper);
 }
 .scale-label:lang(en) { letter-spacing: 0.04em; }
-/* A bracket opening upwards, with a tick at the halfway mark to read halves off. */
 .scale-bar {
   position: relative;
   width: var(--w, 100px);
@@ -665,10 +906,11 @@ body[data-level="state"] .sheet-head { cursor: default; }
 }
 .reset-button[data-turned="yes"] .needle-s { fill-opacity: 0.6; }
 
-/* --- the contents: the atlas's own pages, and the open page's words --- */
-.contents { padding: 2px 0 8px; }
+/* --- the contents: the atlas's own pages, each with a tile that previews its map;
+   and the open page's words and its layers --- */
+.contents { padding: 2px 0 4px; }
 .contents-section {
-  margin: 14px 0 6px;
+  margin: 14px 0 4px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -679,39 +921,53 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .contents-list { list-style: none; margin: 0; padding: 0; }
 .contents-item {
   width: 100%;
-  display: block;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
   text-align: start;
   font: inherit;
   border: 0;
   border-radius: 12px;
-  padding: 9px 10px;
+  padding: 7px 8px;
   background: transparent;
   color: inherit;
   cursor: pointer;
 }
 .contents-item:hover, .contents-item:focus-visible { background: rgba(120, 80, 40, 0.09); }
 .contents-item:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-.contents-item-name { display: block; font-weight: 600; }
+.contents-item:hover .plate-mark { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(84, 56, 28, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+/* The tile: the first layer's mark on the page's base -- banded clay for a physical
+   page, one warm clay for a thematic one. */
+.plate-mark {
+  --c: var(--accent);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #eadcc2, #d4bf9b);
+  box-shadow: 0 2px 5px rgba(84, 56, 28, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 160ms, box-shadow 160ms;
+}
+.plate-mark[data-base="physical"] { background: linear-gradient(160deg, #cfd5a6 0%, #bcae7e 55%, #a08d6c 100%); }
+.plate-mark svg { width: 36px; height: 36px; display: block; font-family: var(--font); filter: drop-shadow(0 1px 1px rgba(60, 40, 20, 0.22)); }
+.contents-item-text { min-width: 0; }
+.contents-item-name { display: block; font-weight: 600; line-height: 1.3; }
 .contents-item-blurb {
-  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   margin-top: 2px;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   line-height: 1.45;
   color: var(--muted);
 }
-.contents-back {
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 0;
-  background: transparent;
-  color: var(--accent-deep);
-  padding: 2px 0 6px;
-  cursor: pointer;
-}
-.contents-back::before { content: "\2190\00a0"; }
-.contents-title { margin: 0 0 4px; font-family: var(--display); font-weight: 400; font-size: 1.05rem; color: var(--accent-deep); }
-.contents-blurb { margin: 0 0 6px; font-size: 0.92rem; line-height: 1.5; color: var(--muted); }
+.contents-blurb { margin: 8px 0 6px; font-size: 0.95rem; line-height: 1.55; }
+.contents .legend-sources { font-size: 0.74rem; }
+.page-layers { margin: 2px 0 4px; }
+.page-layers .layer-row { padding-left: 2px; }
 
 /* --- markers of point layers: clay tokens standing on the terrain ---
    The button is a zero-size anchor moved with transform: translate(); the token is a
@@ -919,6 +1175,8 @@ body[data-level="state"] .sheet-head { cursor: default; }
   .sheet-grip { display: none; }
   .sheet-body { flex: 1 1 auto; min-height: 0; height: auto !important; overflow-y: auto !important; }
   .corner { left: 20px; bottom: 20px; }
+  .key { width: 320px; max-height: min(52dvh, 560px); }
+  .menu { width: 360px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

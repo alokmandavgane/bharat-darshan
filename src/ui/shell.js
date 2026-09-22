@@ -1,14 +1,16 @@
 // @ts-check
-// Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
+// Header, menu, the key on the map, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
 import { DEFAULT_CAMERA, kmPerPixel, wrapYaw } from '../engine/camera-math.js';
-import { CATEGORICAL, FILL_TYPES } from '../engine/choropleth.js';
-import { symbolSizer } from '../engine/points.js';
+import { FILL_TYPES } from '../engine/choropleth.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { DEFAULT_RELIEF } from '../state/url.js';
-import { glyphSvg } from '../glyphs.js';
 import { citeLabel, creditList, hostOf, sourceList } from './credits.js';
+import { firstColour, kindOf, layerKey, layerMark } from './legend.js';
 import { scaleBar } from './scale.js';
+
+// Static icons for the rows the shell builds; the layer marks come from legend.js.
+const EYE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 
 /**
  * @param {Document} root
@@ -37,12 +39,15 @@ export function createShell(root, store) {
   const stepPrev = $('.card-prev');
   const stepNext = $('.card-next');
   const stepCount = $('.card-count');
-  const listWrap = $('.unit-list-wrap');
-  const contents = $('.contents');
-  const monthPanel = $('.month-panel');
+  const finder = $('.finder');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
-  const chips = $('.layer-chips');
+  const units = /** @type {HTMLDetailsElement} */ ($('.units'));
+  const unitsCount = $('.units-count');
+  const unitGrid = $('.unit-grid');
+  const contents = $('.contents');
+  const monthPanel = $('.month-panel');
+  const layerList = $('.layer-list');
   const scrubber = $('.scrubber');
   const scrubberRow = $('.scrubber-row');
   const sheet = $('.sheet');
@@ -55,6 +60,11 @@ export function createShell(root, store) {
   const cartouche = $('.cartouche');
   const cartoucheSection = $('.cartouche-section');
   const cartoucheTitle = $('.cartouche-title');
+  const corner = $('.corner');
+  const key = $('.key');
+  const keyHead = $('.key-head');
+  const keyMarks = $('.key-marks');
+  const keyRows = $('.key-rows');
   const scale = $('.scale');
   const scaleBarEl = $('.scale-bar');
   const scaleLabel = $('.scale-label');
@@ -67,8 +77,17 @@ export function createShell(root, store) {
   const canvas = $('canvas.map');
   const topbar = $('.topbar');
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  // On wide pointer screens the sheet is a side panel and the key has room to stay open;
+  // on a phone the key starts folded and opens itself when a page is turned to.
+  const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
 
-  // --- the menu: language, relief and layers live behind one button
+  /** The plate on show, as the file describes it, or null. */
+  const openPlate = () => {
+    const id = store.get('plate');
+    return id ? (store.get('plates')?.plates || []).find((p) => p.id === id) || null : null;
+  };
+
+  // --- the menu: the view and every layer, behind one button
   function setMenu(open) {
     menu.hidden = !open;
     menuBtn.setAttribute('aria-expanded', String(open));
@@ -102,41 +121,92 @@ export function createShell(root, store) {
   closeBtn.addEventListener('click', () => {
     if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
-    else store.set('selection', null);
+    else if (store.get('selection')) store.set('selection', null);
+    else if (store.get('plate')) closePlate();
   });
   scrubberRow.addEventListener('click', (e) => {
     const b = /** @type {HTMLElement} */ (e.target).closest('button[data-month]');
     if (!b) return;
     store.set('month', b.dataset.month ? Number(b.dataset.month) : null);
   });
-  chips.addEventListener('click', (e) => {
-    const chip = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
-    if (!chip) return;
-    const id = chip.dataset.layer;
+
+  /**
+   * Switch a layer on or off. Two fills at once would fight over the same clay, so
+   * switching one on switches the others off. A choropleth and an `areas` layer are both
+   * fills -- one tints by the state under a pixel, the other by its own raster -- and
+   * either way it is the type that says so, never a layer's name.
+   */
+  function toggleLayer(id) {
     const catalog = store.get('catalog') || [];
     const active = new Set(store.get('layers')?.active || []);
     if (active.has(id)) active.delete(id);
     else {
-      // Two fills at once would fight over the same clay, so switching one on switches
-      // the others off. A choropleth and an `areas` layer are both fills -- one tints by
-      // the state under a pixel, the other by its own raster -- and either way it is the
-      // type that says so, never a layer's name.
       if (FILL_TYPES.includes(catalog.find((l) => l.id === id)?.type)) {
         for (const l of catalog) if (FILL_TYPES.includes(l.type) && l.id !== id) active.delete(l.id);
       }
       active.add(id);
     }
     store.set('layers', { active: [...active] });
-  });
+  }
+  /** A row's switch, a page's row and a key's eye all say the same thing to the store. */
+  const onLayerClick = (e) => {
+    const b = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]:not([data-item])');
+    if (b) toggleLayer(b.dataset.layer);
+  };
+  layerList.addEventListener('click', onLayerClick);
+  keyRows.addEventListener('click', onLayerClick);
+
+  /** What a layer with no key of its own still has to say about itself. */
+  function keyHint(layer) {
+    const kind = kindOf(layer);
+    if (kind === 'regional') return t('layer.regional');
+    if (kind === 'label') return t('layer.labels');
+    return '';
+  }
 
   /**
-   * The layer switches, grouped as the catalogue groups them and each carrying its
-   * legend while it is on. Everything here is data: the group is a field on the layer,
-   * its heading a string keyed by that field, and the swatches are the layer's own
-   * categories. No layer id appears in this file.
+   * One layer as a row: its mark, its name, its key in miniature, and a switch. The
+   * same row serves the menu and an open page, and everything on it is read off the
+   * layer's declared type and colours (PLAN.md D5).
    */
-  function renderChips() {
-    chips.replaceChildren();
+  function layerRow(layer, on) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'layer-row';
+    b.dataset.layer = layer.id;
+    b.setAttribute('role', 'switch');
+    b.setAttribute('aria-checked', String(on));
+    b.style.setProperty('--c', firstColour(layer));
+    const mark = document.createElement('span');
+    mark.className = 'layer-mark';
+    mark.dataset.kind = kindOf(layer);
+    mark.innerHTML = layerMark(layer);          // static markup from the layer's type and checked colours
+    const text = document.createElement('span');
+    text.className = 'layer-text';
+    const name = document.createElement('span');
+    name.className = 'layer-name';
+    name.textContent = pick(layer.title);
+    text.appendChild(name);
+    const k = layerKey(layer, { compact: true });
+    const hint = k ? '' : keyHint(layer);
+    if (k || hint) {
+      const keyEl = document.createElement('span');
+      keyEl.className = 'layer-key';
+      if (k) keyEl.appendChild(k); else keyEl.textContent = hint;
+      text.appendChild(keyEl);
+    }
+    const sw = document.createElement('span');
+    sw.className = 'switch';
+    b.append(mark, text, sw);
+    return b;
+  }
+
+  /**
+   * The menu's layer list, grouped as the catalogue groups them: the group is a field
+   * on the layer and its heading a string keyed by that field. No layer id appears here.
+   */
+  function renderLayerList() {
+    layerList.replaceChildren();
     const active = new Set(store.get('layers')?.active || []);
     const byGroup = new Map();
     for (const layer of store.get('catalog') || []) {
@@ -144,7 +214,7 @@ export function createShell(root, store) {
       if (!byGroup.has(g)) byGroup.set(g, []);
       byGroup.get(g).push(layer);
     }
-    for (const [group, list] of byGroup) {
+    for (const [group, layers] of byGroup) {
       const section = document.createElement('div');
       section.className = 'layer-group';
       if (byGroup.size > 1) {
@@ -152,33 +222,8 @@ export function createShell(root, store) {
         h.textContent = t(`layer.group.${group}`, {}, group);
         section.appendChild(h);
       }
-      const row = document.createElement('div');
-      row.className = 'chips';
-      for (const layer of list) {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'chip chip-layer';
-        b.dataset.layer = layer.id;
-        b.setAttribute('aria-pressed', String(active.has(layer.id)));
-        const ic = document.createElement('span');
-        ic.className = 'chip-icon';
-        ic.innerHTML = glyphSvg(layer.icon);         // static markup from the glyph set only
-        const label = document.createElement('span');
-        label.textContent = pick(layer.title);
-        b.append(ic, label);
-        row.appendChild(b);
-      }
-      section.appendChild(row);
-      for (const layer of list) {
-        if (!active.has(layer.id)) continue;
-        // A layer with no key still owes the reader its source, so the line goes on
-        // whatever is drawn -- a legend is a nicety, a citation is not (PLAN.md 5).
-        const legend = layer.marker === 'label' ? null : layerLegend(layer);
-        if (legend) section.appendChild(legend);
-        const src = sourceNote(layer.sources, LEGEND_SOURCES);
-        if (src) section.appendChild(src);
-      }
-      chips.appendChild(section);
+      for (const layer of layers) section.appendChild(layerRow(layer, active.has(layer.id)));
+      layerList.appendChild(section);
     }
   }
 
@@ -209,6 +254,88 @@ export function createShell(root, store) {
     });
     if (max && (cites || []).length > found.length) p.append(' …');
     return p;
+  }
+
+  // --- the key on the map: what is drawn, layer by layer, with the scale bar as its foot
+  //
+  // Rows are the open page's layers and whatever else is on, in catalogue order; a page's
+  // own layer stays listed when hidden so its eye can bring it back. The key is where a
+  // reader looks up a colour, so it stays on the map rather than behind the menu.
+
+  function setKey(open) {
+    const was = key.dataset.open;
+    key.dataset.open = open ? '1' : '';
+    keyHead.setAttribute('aria-expanded', String(open));
+    const label = t(open ? 'legend.hide' : 'legend.show');
+    keyHead.setAttribute('aria-label', label);
+    keyHead.title = label;
+    if (was !== key.dataset.open) updatePadding(true);
+  }
+  keyHead.addEventListener('click', () => setKey(key.dataset.open !== '1'));
+  setKey(wide.matches);
+  store.subscribe('plate', (id, prev) => { if (id && id !== prev) setKey(true); });
+
+  function renderKey() {
+    const catalog = store.get('catalog') || [];
+    const active = new Set(store.get('layers')?.active || []);
+    const own = new Set(openPlate()?.layers || []);
+    const rows = catalog.filter((l) => active.has(l.id) || own.has(l.id));
+    keyRows.replaceChildren();
+    keyMarks.replaceChildren();
+    keyHead.hidden = !rows.length;
+    const wasEmpty = key.dataset.empty;
+    key.dataset.empty = rows.length ? '' : '1';
+    setKey(key.dataset.open === '1');
+    if (wasEmpty !== key.dataset.empty) updatePadding(true);
+    for (const layer of rows) {
+      const on = active.has(layer.id);
+      const row = document.createElement('div');
+      row.className = 'key-layer';
+      row.dataset.off = on ? '' : '1';
+      const head = document.createElement('button');
+      head.type = 'button';
+      head.className = 'key-layer-head';
+      head.dataset.layer = layer.id;
+      head.setAttribute('aria-pressed', String(on));
+      const label = t(on ? 'layer.hide' : 'layer.show', { name: pick(layer.title) });
+      head.setAttribute('aria-label', label);
+      head.title = label;
+      const mark = document.createElement('span');
+      mark.className = 'key-layer-mark';
+      mark.innerHTML = layerMark(layer);
+      const name = document.createElement('span');
+      name.className = 'key-layer-name';
+      name.textContent = pick(layer.title);
+      const eye = document.createElement('span');
+      eye.className = 'key-eye';
+      eye.innerHTML = EYE;
+      head.append(mark, name, eye);
+      row.appendChild(head);
+      if (on) {
+        const body = document.createElement('div');
+        body.className = 'key-layer-body';
+        const k = layerKey(layer);
+        if (k) body.appendChild(k);
+        else {
+          const hint = keyHint(layer);
+          if (hint) {
+            const p = document.createElement('p');
+            p.className = 'legend-note';
+            p.textContent = hint;
+            body.appendChild(p);
+          }
+        }
+        // A layer with no key still owes the reader its source, so the line goes on
+        // whatever is drawn -- a legend is a nicety, a citation is not (PLAN.md 5).
+        const src = sourceNote(layer.sources, LEGEND_SOURCES);
+        if (src) body.appendChild(src);
+        if (body.hasChildNodes()) row.appendChild(body);
+        const m = document.createElement('span');
+        m.innerHTML = layerMark(layer);
+        keyMarks.appendChild(m);
+      }
+      keyRows.appendChild(row);
+    }
   }
 
   /**
@@ -253,7 +380,6 @@ export function createShell(root, store) {
     }
   }
 
-  /** A swatch and a name per category: a dot for points, a stroke for lines. */
   /**
    * The scrubber (PLAN.md section 9, "India through the year"): thirteen switches, the
    * whole year and each month. It appears only when something on show has months to
@@ -288,131 +414,6 @@ export function createShell(root, store) {
       ...Array.from({ length: 12 }, (_, i) => make(i + 1, t(`month.short.${i + 1}`), t(`month.${i + 1}`))),
     );
   }
-
-  /** A choropleth's own legend: its bands, their ranges, the unit, and any caveat. */
-  function scaleLegend(layer) {
-    const scale = layer.scale || [];
-    if (scale.length < 2) return null;
-    const out = document.createDocumentFragment();
-    const ul = document.createElement('ul');
-    ul.className = 'legend';
-    ul.dataset.kind = 'choropleth';
-    scale.forEach((band, i) => {
-      const li = document.createElement('li');
-      const sw = document.createElement('span');
-      sw.className = 'legend-swatch';
-      sw.style.setProperty('--c', band.color);
-      const next = scale[i + 1];
-      const label = next
-        ? `${formatNumber(band.from)}\u2013${formatNumber(next.from)}`
-        : `${formatNumber(band.from)}+`;
-      li.append(sw, document.createTextNode(label));
-      ul.appendChild(li);
-    });
-    out.appendChild(ul);
-    // "{n} per km²" with nothing in place of the number is the unit on its own.
-    const unit = pick(layer.unit || {}).replace('{n}', '').trim();
-    if (unit) {
-      const p = document.createElement('p');
-      p.className = 'legend-unit';
-      p.textContent = unit;
-      out.appendChild(p);
-    }
-    if (layer.note) {
-      const p = document.createElement('p');
-      p.className = 'legend-note';
-      p.textContent = pick(layer.note);
-      out.appendChild(p);
-    }
-    return out;
-  }
-
-  /**
-   * A `prisms` layer's key: what the columns' heights mean. Each bar is drawn at the
-   * fraction of the range its value sits at, which is the same linear map the vertex
-   * shader raises the ground by.
-   */
-  function heightLegend(layer) {
-    if (layer.type !== 'prisms' || !layer.height?.legend?.length) return null;
-    const [lo, hi] = layer.height.domain || [0, 1];
-    const out = document.createDocumentFragment();
-    const ul = document.createElement('ul');
-    ul.className = 'legend legend-heights';
-    for (const v of layer.height.legend) {
-      const li = document.createElement('li');
-      const bar = document.createElement('span');
-      bar.className = 'legend-bar';
-      bar.style.setProperty('--h', `${(Math.min(1, Math.max(0, (v - lo) / ((hi - lo) || 1))) * 34 + 2).toFixed(1)}px`);
-      const unit = pick(layer.unit || {});
-      li.append(bar, document.createTextNode(unit ? unit.replace('{n}', formatNumber(v)) : formatNumber(v)));
-      ul.appendChild(li);
-    }
-    out.append(ul);
-    if (layer.note) {
-      const p = document.createElement('p');
-      p.className = 'legend-note';
-      p.textContent = pick(layer.note);
-      out.append(p);
-    }
-    return out;
-  }
-
-  function layerLegend(layer) {
-    const heights = heightLegend(layer);
-    if (heights) return heights;
-    // A choropleth coloured by a numeric scale reads as ranges of a unit; one coloured by
-    // category reads as its categories, like any other layer, and only the caveat differs.
-    const categorical = layer.scale === CATEGORICAL;
-    if (layer.type === 'choropleth' && !categorical) return scaleLegend(layer);
-    const cats = layer.categories || [];
-    if (cats.length < 2) return null;
-    const ul = document.createElement('ul');
-    ul.className = 'legend';
-    ul.dataset.kind = categorical ? 'choropleth' : layer.type;
-    for (const c of cats) {
-      const li = document.createElement('li');
-      const sw = document.createElement('span');
-      sw.className = 'legend-swatch';
-      sw.style.setProperty('--c', c.color || 'var(--ink)');
-      li.append(sw, document.createTextNode(pick(c.title)));
-      ul.appendChild(li);
-    }
-    const size = sizeLegend(layer);
-    if (!layer.note && !size) return ul;
-    const out = document.createDocumentFragment();
-    out.append(ul);
-    if (size) out.append(size);
-    if (layer.note) {
-      const p = document.createElement('p');
-      p.className = 'legend-note';
-      p.textContent = pick(layer.note);
-      out.append(p);
-    }
-    return out;
-  }
-
-  /**
-   * A `symbols` layer's other key: what the circles' sizes mean. The values it shows are
-   * the layer's own (`size.legend`), and the circle beside each is drawn at exactly the
-   * diameter the map would draw it at, by the same sizer the engine uses.
-   */
-  function sizeLegend(layer) {
-    if (layer.marker !== 'symbol' || !layer.size?.legend?.length) return null;
-    const sizer = symbolSizer(layer.size);
-    const ul = document.createElement('ul');
-    ul.className = 'legend legend-sizes';
-    for (const v of layer.size.legend) {
-      const li = document.createElement('li');
-      const sw = document.createElement('span');
-      sw.className = 'legend-size';
-      sw.style.setProperty('--d', `${sizer({ [layer.size.field]: v }).toFixed(1)}px`);
-      const unit = pick((layer.fields || {})[layer.size.field]?.unit || {});
-      li.append(sw, document.createTextNode(unit ? unit.replace('{n}', formatNumber(v)) : formatNumber(v)));
-      ul.appendChild(li);
-    }
-    return ul;
-  }
-
 
   // --- the info button: about the map, how to use it, credits; and a card's review status
   function setAbout(open) {
@@ -470,27 +471,36 @@ export function createShell(root, store) {
     // the cards read best with the sheet half open; the map is framed above it
     if (tr?.playing && !prev?.playing) { setAbout(false); store.set('sheetSnap', { name: 'half', t: performance.now() }); }
   }, { immediate: true });
+
+  // --- finding and picking: the search results, the unit grid, the lists on a card
   search.addEventListener('input', () => renderList());
-  facts.addEventListener('click', (e) => {
-    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
-    if (!btn) return;
-    store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
+  search.addEventListener('focus', () => {
+    if (store.get('sheet')?.snap === 'peek') store.set('sheetSnap', { name: 'half', t: performance.now() });
   });
-  list.addEventListener('click', (e) => {
-    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id], button[data-layer]');
-    if (!btn) return;
-    if (btn.dataset.layer) {
-      // A found item is opened by name alone; the engine fills it in and flies to it.
-      store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
+  const openItem = (btn) => store.set('item', { layer: btn.dataset.layer, id: btn.dataset.item, data: null, categories: null, fields: null });
+  for (const el of [facts, monthPanel]) {
+    el.addEventListener('click', (e) => {
+      const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-layer][data-item]');
+      if (btn) openItem(btn);
+    });
+  }
+  for (const el of [list, unitGrid]) {
+    el.addEventListener('click', (e) => {
+      const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-id], button[data-item]');
+      if (!btn) return;
+      if (btn.dataset.item) {
+        // A found item is opened by name alone; the engine fills it in and flies to it.
+        openItem(btn);
+        store.set('sheetSnap', { name: 'peek', t: performance.now() });
+        return;
+      }
+      const id = Number(btn.dataset.id);
+      store.set('selection', id);
+      // Picking from the list goes as deep as tapping the map does.
+      if (store.get('level')?.id !== id) store.set('level', { name: 'state', id }, { source: 'ui' });
       store.set('sheetSnap', { name: 'peek', t: performance.now() });
-      return;
-    }
-    const id = Number(btn.dataset.id);
-    store.set('selection', id);
-    // Picking from the list goes as deep as tapping the map does.
-    if (store.get('level')?.id !== id) store.set('level', { name: 'state', id }, { source: 'ui' });
-    store.set('sheetSnap', { name: 'peek', t: performance.now() });
-  });
+    });
+  }
 
   function renderRelief(r) {
     reliefChip.setAttribute('aria-pressed', String(r.on));
@@ -508,7 +518,7 @@ export function createShell(root, store) {
 
   const SEARCH_HITS = 40;      // enough to find anything, few enough to stay light on a phone
 
-  /** One row of the list: a button with its name and a quieter second line. */
+  /** One row of a list: a button with its name and a quieter second line. */
   function listRow(name, alt, data) {
     const li = document.createElement('li');
     const b = document.createElement('button');
@@ -525,27 +535,41 @@ export function createShell(root, store) {
     return li;
   }
 
+  const sortedUnits = (r) => [...r.units].sort((a, b) => pick(a.name).localeCompare(pick(b.name), currentLanguage()));
+
   /**
-   * Every unit, so each one is reachable without hitting it, and -- once something is
-   * typed -- whatever the layers on show can also answer with. The engine publishes that
-   * index, so this searches exactly what is drawn: a state view finds that state's places.
+   * What the search field finds: the units whose names match, and -- since the engine
+   * publishes an index of what is drawn -- whatever the layers on show can answer with,
+   * so a state view finds that state's places. Nothing typed, nothing listed.
    */
   function renderList() {
     const r = store.get('regions');
-    if (!r) return;
-    const lang = currentLanguage();
     const q = search.value.trim().toLowerCase();
+    list.hidden = !q;
+    root.body.dataset.searching = q ? '1' : '';
+    if (!q || !r) { list.replaceChildren(); return; }
     const hit = (name) => Object.values(name || {}).some((n) => n && String(n).toLowerCase().includes(q));
-    const units = r.units.filter((u) => !q || hit(u.name)).sort((a, b) => pick(a.name).localeCompare(pick(b.name), lang));
-    const rows = units.map((u) => listRow(pick(u.name), otherNames(u), { id: String(u.id) }));
-    if (q) {
-      const catalog = store.get('catalog') || [];
-      for (const x of (store.get('index') || []).filter((i) => hit(i.name)).slice(0, SEARCH_HITS)) {
-        const layer = catalog.find((l) => l.id === x.layer);
-        rows.push(listRow(pick(x.name), layer ? pick(layer.title) : '', { layer: x.layer, item: x.id }));
-      }
+    const rows = sortedUnits(r).filter((u) => hit(u.name)).map((u) => listRow(pick(u.name), otherNames(u), { id: String(u.id) }));
+    const catalog = store.get('catalog') || [];
+    for (const x of (store.get('index') || []).filter((i) => hit(i.name)).slice(0, SEARCH_HITS)) {
+      const layer = catalog.find((l) => l.id === x.layer);
+      rows.push(listRow(pick(x.name), layer ? pick(layer.title) : '', { layer: x.layer, item: x.id }));
+    }
+    if (!rows.length) {
+      const li = document.createElement('li');
+      li.className = 'unit-list-none';
+      li.textContent = t('list.none');
+      rows.push(li);
     }
     list.replaceChildren(...rows);
+  }
+
+  /** Every unit, behind its fold, so each one is reachable without hitting it. */
+  function renderUnits() {
+    const r = store.get('regions');
+    if (!r) return;
+    unitsCount.textContent = formatNumber(r.units.length);
+    unitGrid.replaceChildren(...sortedUnits(r).map((u) => listRow(pick(u.name), otherNames(u), { id: String(u.id) })));
   }
 
   // --- the atlas: plates are pages, and the contents page is how you turn to one
@@ -556,7 +580,7 @@ export function createShell(root, store) {
   // it the screen-reader and no-WebGL view of the atlas.
 
   /** Turn to a page: its layers, its relief, and the country framed again. */
-  function openPlate(id) {
+  function openPlateById(id) {
     const plate = (store.get('plates')?.plates || []).find((p) => p.id === id);
     if (!plate) return;
     store.set('plate', id);
@@ -576,49 +600,30 @@ export function createShell(root, store) {
     store.set('layers', { active: (store.get('catalog') || []).filter((l) => l.default_on).map((l) => l.id) });
     store.set('base', 'physical');
     store.set('relief', { on: true, amount: DEFAULT_RELIEF }, { animate: true });
-    renderContents();
   }
 
   /**
-   * The contents when no page is open, and the open page's own words when one is. The
-   * unit list stands down while the contents is up: they are two answers to the same
-   * question and the sheet should only ever ask it once.
+   * A page's tile in the contents: the mark of the first layer it draws, on its base.
+   * The tile previews the map the way the layer rows preview a layer, from data alone.
    */
-  function renderContents() {
-    const data = store.get('plates');
-    const open = store.get('plate');
-    const inState = store.get('level')?.name === 'state';
-    contents.replaceChildren();
-    // Inside a state, the sheet belongs to the state: its card and its own lists.
-    if (!data || inState) {
-      contents.hidden = true;
-      listWrap.hidden = false;
-      return;
+  function plateMark(plate) {
+    const catalog = store.get('catalog') || [];
+    const layers = (plate.layers || []).map((id) => catalog.find((l) => l.id === id)).filter(Boolean);
+    // The first layer that draws a thing: a page of names or of card-only items has
+    // nothing to preview, and one of its other layers will.
+    const first = layers.find((l) => !['label', 'regional'].includes(kindOf(l))) || layers[0];
+    const el = document.createElement('span');
+    el.className = 'plate-mark';
+    el.dataset.base = plate.base || 'physical';
+    if (first) {
+      el.style.setProperty('--c', firstColour(first));
+      el.innerHTML = layerMark(first);
     }
-    contents.hidden = false;
-    if (open) {
-      const plate = data.plates.find((p) => p.id === open);
-      listWrap.hidden = false;
-      if (!plate) { contents.hidden = true; return; }
-      const back = document.createElement('button');
-      back.type = 'button';
-      back.className = 'contents-back';
-      back.textContent = t('atlas.back');
-      back.addEventListener('click', closePlate);
-      const h = document.createElement('h3');
-      h.className = 'contents-title';
-      h.textContent = pick(plate.title);
-      const p = document.createElement('p');
-      p.className = 'contents-blurb';
-      p.textContent = pick(plate.blurb);
-      contents.append(back, h, p);
-      // A page cannot show a map without saying whose it is: the build unions its layers'
-      // sources into the plate, so this line is never the page's own promise (PLAN.md D11).
-      const src = sourceNote(plate.sources);
-      if (src) contents.appendChild(src);
-      return;
-    }
-    listWrap.hidden = true;
+    return el;
+  }
+
+  /** The contents when no page is open: its sections, and a tile and a line for each page. */
+  function renderContentsList(data) {
     const bySection = new Map();
     for (const plate of data.plates) {
       if (!store.get('drafts') && plate.status !== 'reviewed') continue;
@@ -626,26 +631,29 @@ export function createShell(root, store) {
       bySection.get(plate.section).push(plate);
     }
     for (const section of data.sections) {
-      const list = bySection.get(section);
-      if (!list) continue;
+      const plates = bySection.get(section);
+      if (!plates) continue;
       const h = document.createElement('h4');
       h.className = 'contents-section';
       h.textContent = t(`atlas.section.${section}`);
       const ul = document.createElement('ul');
       ul.className = 'contents-list';
-      for (const plate of list) {
+      for (const plate of plates) {
         const li = document.createElement('li');
         const b = document.createElement('button');
         b.type = 'button';
         b.className = 'contents-item';
         b.dataset.plate = plate.id;
+        const text = document.createElement('span');
+        text.className = 'contents-item-text';
         const name = document.createElement('span');
         name.className = 'contents-item-name';
         name.textContent = pick(plate.title);
         const blurb = document.createElement('span');
         blurb.className = 'contents-item-blurb';
         blurb.textContent = pick(plate.blurb);
-        b.append(name, blurb);
+        text.append(name, blurb);
+        b.append(plateMark(plate), text);
         li.appendChild(b);
         ul.appendChild(li);
       }
@@ -653,9 +661,34 @@ export function createShell(root, store) {
     }
   }
 
+  /** The open page's own words, its sources, and its layers as rows with switches. */
+  function renderPage(plate) {
+    const p = document.createElement('p');
+    p.className = 'contents-blurb';
+    p.textContent = pick(plate.blurb);
+    contents.appendChild(p);
+    // A page cannot show a map without saying whose it is: the build unions its layers'
+    // sources into the plate, so this line is never the page's own promise (PLAN.md D11).
+    const src = sourceNote(plate.sources);
+    if (src) contents.appendChild(src);
+    const catalog = store.get('catalog') || [];
+    const active = new Set(store.get('layers')?.active || []);
+    const layers = (plate.layers || []).map((id) => catalog.find((l) => l.id === id)).filter(Boolean);
+    if (!layers.length) return;
+    const h = document.createElement('h4');
+    h.className = 'contents-section';
+    h.textContent = t('sheet.page.layers');
+    const rows = document.createElement('div');
+    rows.className = 'layer-list page-layers';
+    for (const layer of layers) rows.appendChild(layerRow(layer, active.has(layer.id)));
+    contents.append(h, rows);
+  }
+
   contents.addEventListener('click', (e) => {
-    const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-plate]');
-    if (btn) openPlate(btn.dataset.plate || '');
+    const el = /** @type {HTMLElement} */ (e.target);
+    const page = el.closest('button[data-plate]');
+    if (page) { openPlateById(page.dataset.plate || ''); return; }
+    onLayerClick(e);
   });
 
   // --- atlas furniture: the page's title on the map, and how big the map is
@@ -665,7 +698,7 @@ export function createShell(root, store) {
   // itself; the scale bar says what the model's size means.
 
   function renderCartouche() {
-    const plate = (store.get('plates')?.plates || []).find((p) => p.id === store.get('plate'));
+    const plate = openPlate();
     // Inside a state the sheet belongs to that state, and the page's title would be
     // claiming more than it covers.
     const show = !!plate && store.get('level')?.name !== 'state';
@@ -683,7 +716,7 @@ export function createShell(root, store) {
   });
 
   // Wide enough to read a round number off, narrow enough to stay out of the way. A
-  // declaration, not a const: the camera subscriber below runs before this line does.
+  // declaration, not a const: the camera subscriber above runs before this line does.
   function scaleSpan(w) { return Math.max(90, Math.min(150, w * 0.3)); }
 
   function renderScale(cam) {
@@ -704,7 +737,7 @@ export function createShell(root, store) {
    */
   function renderPoster() {
     if (!store.get('poster')) return;
-    const plate = (store.get('plates')?.plates || []).find((p) => p.id === store.get('plate'));
+    const plate = openPlate();
     kicker.hidden = !plate;
     root.body.dataset.posterPage = plate ? '1' : '';
     if (!plate) return;
@@ -727,7 +760,6 @@ export function createShell(root, store) {
     }
   }
 
-  /** The fact card for a unit: structured, sourced, shown only once reviewed (or with drafts on). */
   /** One label/value row as its own definition list, for cards with a single fact. */
   function factRow(label, value) {
     const dl = document.createElement('dl');
@@ -741,6 +773,7 @@ export function createShell(root, store) {
     return dl;
   }
 
+  /** The fact card for a unit: structured, sourced, shown only once reviewed (or with drafts on). */
   function renderFacts(u) {
     facts.replaceChildren();
     const f = u.facts;
@@ -917,96 +950,140 @@ export function createShell(root, store) {
     stepCount.textContent = t('card.count', { n: formatNumber(at + 1), total: formatNumber(stops.length) });
   }
 
-  /** The sheet head and body: an item, the selected unit (peek card or state view), or the country with its list. */
-  function renderSelection() {
+  /** The item card: name, kind and place in the head; its fields, blurb and sources below. */
+  function renderItem(sel, r) {
+    const it = sel.data;
+    const layer = (store.get('catalog') || []).find((l) => l.id === sel.layer);
+    const cat = (sel.categories || []).find((c) => c.id === it.category);
+    document.body.dataset.selection = it.id;
+    title.textContent = pick(it.name);
+    const others = otherNames({ name: it.name });
+    alt.textContent = others;
+    alt.hidden = !others;
+    // A point belongs to one region; a regional item to the several that keep it.
+    const where = it.regions
+      ? it.regions.map((x) => r.byId[x]).filter(Boolean)
+      : [r.byId[it.region]].filter(Boolean);
+    const places = where.length > 3
+      ? t('facts.regions', { n: formatNumber(where.length) })
+      : where.map((x) => pick(x.name)).join(', ');
+    subtitle.textContent = [cat ? pick(cat.title) : pick(layer?.title), places].filter(Boolean).join(' · ');
+    facts.replaceChildren();
+    // A line item knows how far it runs inside India; a point has no such number.
+    if (typeof it.km === 'number') {
+      facts.appendChild(factRow(t('facts.length'), t('facts.km', { n: formatNumber(Math.round(it.km)) })));
+    }
+    // Columns the layer declared for itself (PLAN.md section 5): label and unit are data.
+    for (const [name, spec] of Object.entries(sel.fields || {})) {
+      const v = it[name];
+      if (v === undefined || v === null) continue;
+      // A year is a number but not a quantity: 1866, not 1,866. A month names itself.
+      const shown = spec.type === 'month' ? t(`month.${v}`)
+        : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
+      facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
+    }
+    const p = document.createElement('p');
+    p.className = 'facts-blurb';
+    p.textContent = pick(it.blurb);
+    facts.appendChild(p);
+    if (it.sources?.length) {
+      const ps = document.createElement('p');
+      ps.className = 'facts-sources';
+      ps.append(t('facts.sources') + ': ');
+      it.sources.forEach((src, i) => {
+        const a = document.createElement('a');
+        a.href = src; a.target = '_blank'; a.rel = 'noopener'; a.textContent = hostOf(src);
+        if (i) ps.append(', ');
+        ps.appendChild(a);
+      });
+      facts.appendChild(ps);
+    }
+    setDraft(it.status !== 'reviewed');
+  }
+
+  /**
+   * The sheet is the subject: an item's card, the selected unit (peek card or state
+   * view), the open page, or the atlas's contents. One place decides what the head says
+   * and which blocks of the body show, so the body is never two answers at once.
+   */
+  let subject = '';
+  function renderSheet() {
     const r = store.get('regions');
     const sel = store.get('item');
-    // The month panel answers for the whole country; a card of its own is on top of it.
-    monthPanel.hidden = true;
-    if (sel?.data && r) {
-      const it = sel.data;
-      const layer = (store.get('catalog') || []).find((l) => l.id === sel.layer);
-      const cat = (sel.categories || []).find((c) => c.id === it.category);
-      document.body.dataset.selection = it.id;
-      closeBtn.hidden = false;
-      closeBtn.setAttribute('aria-label', t('sheet.close'));
-      closeBtn.textContent = '×';
-      listWrap.hidden = true;
-      title.textContent = pick(it.name);
-      const others = otherNames({ name: it.name });
-      alt.textContent = others;
-      alt.hidden = !others;
-      // A point belongs to one region; a regional item to the several that keep it.
-      const where = it.regions
-        ? it.regions.map((x) => r.byId[x]).filter(Boolean)
-        : [r.byId[it.region]].filter(Boolean);
-      const places = where.length > 3
-        ? t('facts.regions', { n: formatNumber(where.length) })
-        : where.map((x) => pick(x.name)).join(', ');
-      subtitle.textContent = [cat ? pick(cat.title) : pick(layer?.title), places].filter(Boolean).join(' · ');
-      facts.hidden = false;
-      facts.replaceChildren();
-      // A line item knows how far it runs inside India; a point has no such number.
-      if (typeof it.km === 'number') {
-        facts.appendChild(factRow(t('facts.length'), t('facts.km', { n: formatNumber(Math.round(it.km)) })));
-      }
-      // Columns the layer declared for itself (PLAN.md section 5): label and unit are data.
-      for (const [name, spec] of Object.entries(sel.fields || {})) {
-        const v = it[name];
-        if (v === undefined || v === null) continue;
-        // A year is a number but not a quantity: 1866, not 1,866. A month names itself.
-        const shown = spec.type === 'month' ? t(`month.${v}`)
-          : typeof v === 'number' && spec.type !== 'year' ? formatNumber(v) : String(v);
-        facts.appendChild(factRow(pick(spec.label), spec.unit ? pick(spec.unit).replace('{n}', shown) : shown));
-      }
-      const p = document.createElement('p');
-      p.className = 'facts-blurb';
-      p.textContent = pick(it.blurb);
-      facts.appendChild(p);
-      if (it.sources?.length) {
-        const ps = document.createElement('p');
-        ps.className = 'facts-sources';
-        ps.append(t('facts.sources') + ': ');
-        it.sources.forEach((src, i) => {
-          const a = document.createElement('a');
-          a.href = src; a.target = '_blank'; a.rel = 'noopener'; a.textContent = hostOf(src);
-          if (i) ps.append(', ');
-          ps.appendChild(a);
-        });
-        facts.appendChild(ps);
-      }
-      setDraft(it.status !== 'reviewed');
-      return;
-    }
     const id = store.get('selection');
     const u = id && r ? r.byId[id] : null;
     const inState = store.get('level')?.name === 'state';
-    document.body.dataset.selection = u ? u.slug : '';
+    const plate = openPlate();
+    // A new subject starts with a clear field: results typed for the last one would
+    // otherwise stand in front of this one's card.
+    const now = [sel?.id || '', id || '', plate?.id || '', inState].join('|');
+    if (now !== subject && search.value) { search.value = ''; renderList(); }
+    subject = now;
     document.body.dataset.level = inState ? 'state' : 'country';
-    closeBtn.hidden = !u && !inState;
-    closeBtn.setAttribute('aria-label', t(inState ? 'sheet.back' : 'sheet.close'));
-    closeBtn.textContent = inState ? '←' : '×';
-    facts.hidden = !u;
-    listWrap.hidden = !!u;
-    if (!u) {
-      renderList();
-      renderMonth();
-      setDraft(false);
-      title.textContent = t('sheet.title');
-      alt.hidden = true;
-      if (r) {
-        const states = r.units.filter((x) => x.type === 'state').length;
-        subtitle.textContent = t('sheet.subtitle', { states: formatNumber(states), uts: formatNumber(r.units.length - states) });
-      }
+    sheet.dataset.view = sel?.data ? 'item' : u ? 'unit' : plate ? 'page' : 'contents';
+    const show = (el, on) => { el.hidden = !on; };
+
+    if (sel?.data && r) {
+      renderItem(sel, r);
+      closeBtn.hidden = false;
+      closeBtn.setAttribute('aria-label', t('sheet.close'));
+      closeBtn.textContent = '×';
+      show(facts, true);
+      show(finder, false);
+      show(monthPanel, false);
+      show(contents, false);
+      show(units, false);
       return;
     }
-    title.textContent = pick(u.name);
-    const others = otherNames(u);
-    alt.textContent = others;
-    alt.hidden = !others;
-    subtitle.textContent = t(u.type === 'ut' ? 'unit.ut' : 'unit.state');
-    if (!u.facts) setDraft(false);
-    renderFacts(u);
+
+    document.body.dataset.selection = u ? u.slug : '';
+    show(facts, !!u);
+    show(finder, true);
+    show(contents, false);
+    show(monthPanel, false);
+    show(units, !u);
+    if (u) {
+      title.textContent = pick(u.name);
+      const others = otherNames(u);
+      alt.textContent = others;
+      alt.hidden = !others;
+      subtitle.textContent = t(u.type === 'ut' ? 'unit.ut' : 'unit.state');
+      closeBtn.hidden = false;
+      closeBtn.setAttribute('aria-label', t(inState ? 'sheet.back' : 'sheet.close'));
+      closeBtn.textContent = inState ? '←' : '×';
+      if (!u.facts) setDraft(false);
+      renderFacts(u);
+      return;
+    }
+
+    setDraft(false);
+    renderMonth();
+    contents.replaceChildren();
+    const data = store.get('plates');
+    alt.hidden = true;
+    if (plate && !inState) {
+      // The head is the page's: its title, where it sits, and the way back to the contents.
+      title.textContent = pick(plate.title);
+      const n = (plate.layers || []).length;
+      subtitle.textContent = [t(`atlas.section.${plate.section}`, {}, plate.section),
+        n === 1 ? t('layer.count.one') : t('layer.count', { n: formatNumber(n) })].join(' · ');
+      closeBtn.hidden = false;
+      closeBtn.setAttribute('aria-label', t('atlas.back'));
+      closeBtn.textContent = '←';
+      renderPage(plate);
+      show(contents, true);
+      return;
+    }
+    title.textContent = t('sheet.title');
+    closeBtn.hidden = true;
+    if (r) {
+      const states = r.units.filter((x) => x.type === 'state').length;
+      subtitle.textContent = t('sheet.subtitle', { states: formatNumber(states), uts: formatNumber(r.units.length - states) });
+    }
+    if (data && !inState) {
+      renderContentsList(data);
+      show(contents, true);
+    }
   }
 
   /** Hover: a pointer cursor over a state or a line and, on fine pointers, its name. */
@@ -1033,41 +1110,45 @@ export function createShell(root, store) {
     retry.hidden = s !== 'error';
   }
 
+  /** Everything that reads the layers on show: the menu, the key, and an open page's rows. */
+  function renderLayers() {
+    renderLayerList();
+    renderKey();
+    renderScrubber();
+    if (sheet.dataset.view === 'page') renderSheet();
+  }
+
   store.subscribe('relief', renderRelief, { immediate: true });
-  store.subscribe('regions', renderSelection, { immediate: true });
-  store.subscribe('selection', renderSelection);
-  store.subscribe('level', renderSelection);
-  store.subscribe('drafts', renderSelection);
-  store.subscribe('item', () => { renderSelection(); renderSteps(); });
+  store.subscribe('regions', () => { renderUnits(); renderSheet(); renderList(); }, { immediate: true });
+  for (const k of ['selection', 'level', 'drafts', 'plates', 'plate', 'regional', 'month']) store.subscribe(k, renderSheet);
+  store.subscribe('item', () => { renderSheet(); renderSteps(); });
   store.subscribe('index', renderList);
-  store.subscribe('plates', renderContents);
-  store.subscribe('plate', renderContents);
-  store.subscribe('level', renderContents);
-  store.subscribe('lang', renderContents);
+  store.subscribe('plate', renderKey);
   // The atlas's own pages, fetched once. They are small and they are the way in.
   fetch('/data/plates.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (!d) return;
     store.set('plates', d);
     const wanted = store.get('plate');
-    if (wanted && d.plates.some((p) => p.id === wanted)) openPlate(wanted);
+    // A link to a page arrives with the page already set, so the key opens here, not
+    // from the subscription that catches a page being turned to.
+    if (wanted && d.plates.some((p) => p.id === wanted)) { openPlateById(wanted); setKey(true); }
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
-  store.subscribe('plates', () => { renderPoster(); renderCartouche(); });
+  store.subscribe('plates', () => { renderPoster(); renderCartouche(); renderKey(); });
   store.subscribe('plate', () => { renderPoster(); renderCartouche(); });
   store.subscribe('level', renderCartouche);
   store.subscribe('viewport', () => renderScale(store.get('camera')));
-  store.subscribe('sources', () => { renderChips(); renderContents(); renderCredits(); });
+  store.subscribe('sources', () => { renderLayers(); renderSheet(); renderCredits(); });
   // The source registry: every dataset once, which the legends, the pages and the credits
   // all resolve their ids through (PLAN.md section 5, "Source registry").
   fetch('/data/sources.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (d) store.set('sources', d);
   }).catch(() => {});
-  store.subscribe('regional', () => { renderSelection(); renderScrubber(); });
-  store.subscribe('month', () => { renderScrubber(); renderSelection(); });
+  store.subscribe('month', renderScrubber);
   store.subscribe('tour', renderSteps);
-  for (const key of ['selection', 'level', 'item']) store.subscribe(key, () => setAbout(false));
-  store.subscribe('catalog', () => { renderChips(); renderScrubber(); }, { immediate: true });
-  store.subscribe('layers', () => { renderChips(); renderScrubber(); });
+  for (const k of ['selection', 'level', 'item']) store.subscribe(k, () => setAbout(false));
+  store.subscribe('catalog', renderLayers, { immediate: true });
+  store.subscribe('layers', renderLayers);
   store.subscribe('hover', renderHover);
   store.subscribe('hoverLine', renderHover);
   store.subscribe('pointer', renderHover);
@@ -1076,8 +1157,10 @@ export function createShell(root, store) {
   store.subscribe('lang', () => {
     renderLang();
     renderRelief(store.get('relief'));
-    renderChips();
-    renderSelection();
+    renderLayers();
+    renderUnits();
+    renderList();
+    renderSheet();
     renderHover();
     renderStatus(store.get('status'));
     renderTour();
@@ -1087,15 +1170,17 @@ export function createShell(root, store) {
   });
 
   // Camera padding: header on top; on phones the sheet peek at the bottom; on wide
-  // pointer screens the sheet is a side panel (see style.css).
-  const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
+  // pointer screens the sheet is a side panel and the key, while open, a column on the
+  // left (see style.css): India is portrait-shaped, and the panels take the dead space
+  // either side of it rather than covering it (PLAN.md section 3, "Layout").
   function updatePadding(animate = false) {
     if (root.body.dataset.poster) return;          // the share-image render sets its own framing
     const s = store.get('sheet') || {};
     // The sheet's visible height, up to half: an open sheet keeps the map framed above it.
     const covered = Math.min(s.visible || s.peek || 0, s.half || Infinity);
+    const keyOpen = key.dataset.open === '1' && key.dataset.empty !== '1';
     store.set('padding', wide.matches
-      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: 24 }
+      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: keyOpen ? corner.offsetWidth + 40 : 24 }
       : { top: topbar.offsetHeight + 8, right: 8, bottom: covered + 12, left: 8 }, { animate });
   }
   wide.addEventListener('change', () => updatePadding());
