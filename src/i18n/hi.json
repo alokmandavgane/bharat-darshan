@@ -83,6 +83,8 @@
   "month.short.12": "दिस",
   "scrubber.none": "{month} में दिखाए गए में कुछ नहीं पड़ता।",
   "sheet.month.heading": "{month} में",
+  "scale.km": "{n} किमी",
+  "cartouche.aria": "खुला पृष्ठ: {name}। सभी पृष्ठ देखें।",
   "atlas.contents": "अनुक्रम",
   "atlas.back": "सभी पृष्ठ",
   "atlas.section.political": "राजनीतिक",

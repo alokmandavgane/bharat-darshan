@@ -33,6 +33,7 @@
     <div class="markers"></div>
 
     <header class="topbar">
+      <div class="topbar-left">
       <div class="wordmark paper">
         <!-- The atlas's name above a page's own title, on that page's share card only. -->
         <span class="kicker" hidden></span>
@@ -40,6 +41,13 @@
         <span class="title-other" data-i18n="app.title.other">भारत दर्शन</span>
         <span class="tagline" data-i18n="app.tagline">A 3D map of India</span>
         <span class="site">darshan.alokm.com</span>
+      </div>
+      <!-- The cartouche: the open page's name on the map, the way an atlas plate carries
+           its title. Tapping it goes back to the contents. -->
+      <button class="cartouche paper" type="button" hidden>
+        <span class="cartouche-section"></span>
+        <span class="cartouche-title"></span>
+      </button>
       </div>
       <button class="menu-button paper" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria-label="menu.open">
         <span class="menu-icon" aria-hidden="true"></span>
@@ -88,6 +96,12 @@
           <path class="needle-s" d="M12 20.8 9 12h6z"/>
         </svg>
       </button>
+      <!-- How big the model is, in kilometres. Exact along the screen's horizontal at any
+           yaw or tilt, because the camera is orthographic (src/ui/scale.js). -->
+      <div class="scale" aria-hidden="true" hidden>
+        <span class="scale-label"></span>
+        <div class="scale-bar"></div>
+      </div>
     </div>
 
     <section class="sheet paper" data-snap="peek" aria-label="Details">

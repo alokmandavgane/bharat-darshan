@@ -1,13 +1,14 @@
 // @ts-check
 // Header, layer chips, relief slider, status toast and the sheet's content. Plain DOM,
 // bound to the store; every string comes from i18n.
-import { DEFAULT_CAMERA, wrapYaw } from '../engine/camera-math.js';
+import { DEFAULT_CAMERA, kmPerPixel, wrapYaw } from '../engine/camera-math.js';
 import { CATEGORICAL, FILL_TYPES } from '../engine/choropleth.js';
 import { symbolSizer } from '../engine/points.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { DEFAULT_RELIEF } from '../state/url.js';
 import { glyphSvg } from '../glyphs.js';
 import { citeLabel, creditList, hostOf, sourceList } from './credits.js';
+import { scaleBar } from './scale.js';
 
 /**
  * @param {Document} root
@@ -50,6 +51,12 @@ export function createShell(root, store) {
   const aboutDraft = $('.about-draft');
   const credits = $('.credits');
   const kicker = $('.wordmark .kicker');
+  const cartouche = $('.cartouche');
+  const cartoucheSection = $('.cartouche-section');
+  const cartoucheTitle = $('.cartouche-title');
+  const scale = $('.scale');
+  const scaleBarEl = $('.scale-bar');
+  const scaleLabel = $('.scale-label');
   const posterTitle = $('.wordmark .title');
   const posterOther = $('.wordmark .title-other');
   const posterTagline = $('.wordmark .tagline');
@@ -436,6 +443,7 @@ export function createShell(root, store) {
   // compass is the only way back to north from a turned view, so it says so when the
   // view is turned rather than sitting there looking like decoration (F3).
   store.subscribe('camera', (c) => {
+    renderScale(c);
     resetBtn.style.setProperty('--yaw', `${c.yaw.toFixed(1)}deg`);
     const turned = Math.abs(wrapYaw(c.yaw - DEFAULT_CAMERA.yaw)) > 8;
     resetBtn.dataset.turned = turned ? 'yes' : '';
@@ -644,6 +652,44 @@ export function createShell(root, store) {
     const btn = /** @type {HTMLElement} */ (e.target).closest('button[data-plate]');
     if (btn) openPlate(btn.dataset.plate || '');
   });
+
+  // --- atlas furniture: the page's title on the map, and how big the map is
+  //
+  // Both are what a printed plate carries in its corners. The cartouche says which page
+  // is open when the sheet is down, and is the way back to the contents from the map
+  // itself; the scale bar says what the model's size means.
+
+  function renderCartouche() {
+    const plate = (store.get('plates')?.plates || []).find((p) => p.id === store.get('plate'));
+    // Inside a state the sheet belongs to that state, and the page's title would be
+    // claiming more than it covers.
+    const show = !!plate && store.get('level')?.name !== 'state';
+    cartouche.hidden = !show;
+    if (!show) return;
+    cartoucheSection.textContent = t(`atlas.section.${plate.section}`, {}, plate.section);
+    cartoucheTitle.textContent = pick(plate.title);
+    const label = t('cartouche.aria', { name: pick(plate.title) });
+    cartouche.setAttribute('aria-label', label);
+    cartouche.title = label;
+  }
+  cartouche.addEventListener('click', () => {
+    closePlate();
+    store.set('sheetSnap', { name: 'half', t: performance.now() });
+  });
+
+  // Wide enough to read a round number off, narrow enough to stay out of the way. A
+  // declaration, not a const: the camera subscriber below runs before this line does.
+  function scaleSpan(w) { return Math.max(90, Math.min(150, w * 0.3)); }
+
+  function renderScale(cam) {
+    const vp = store.get('viewport');
+    if (!cam || !vp?.w) return;
+    const { km, px } = scaleBar(kmPerPixel(cam, vp), scaleSpan(vp.w));
+    scale.hidden = !km;
+    if (!km) return;
+    scaleBarEl.style.setProperty('--w', `${px.toFixed(1)}px`);
+    scaleLabel.textContent = t('scale.km', { n: formatNumber(km) });
+  }
 
   /**
    * The share card of a page (`?poster=1`, rendered by tools/share-image.mjs). The wordmark
@@ -1001,8 +1047,10 @@ export function createShell(root, store) {
     if (wanted && d.plates.some((p) => p.id === wanted)) openPlate(wanted);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
-  store.subscribe('plates', renderPoster);
-  store.subscribe('plate', renderPoster);
+  store.subscribe('plates', () => { renderPoster(); renderCartouche(); });
+  store.subscribe('plate', () => { renderPoster(); renderCartouche(); });
+  store.subscribe('level', renderCartouche);
+  store.subscribe('viewport', () => renderScale(store.get('camera')));
   store.subscribe('sources', () => { renderChips(); renderContents(); renderCredits(); });
   // The source registry: every dataset once, which the legends, the pages and the credits
   // all resolve their ids through (PLAN.md section 5, "Source registry").
@@ -1029,6 +1077,8 @@ export function createShell(root, store) {
     renderStatus(store.get('status'));
     renderTour();
     renderCredits();
+    renderCartouche();
+    renderScale(store.get('camera'));
   });
 
   // Camera padding: header on top; on phones the sheet peek at the bottom; on wide

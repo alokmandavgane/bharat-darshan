@@ -150,6 +150,41 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   background: linear-gradient(90deg, var(--gold), rgba(201, 154, 60, 0));
 }
 
+.topbar-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* --- the cartouche: the open page's title, on the map (PLAN.md D11) --- */
+.cartouche {
+  font: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-width: min(62vw, 300px);
+  padding: 6px 14px 8px;
+  border-radius: 14px;
+  border-left: 3px solid var(--gold);
+  cursor: pointer;
+}
+.cartouche-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.cartouche-section:lang(en) { letter-spacing: 0.12em; text-transform: uppercase; }
+.cartouche-title {
+  font-family: var(--display);
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--accent-deep);
+}
+.cartouche:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
 .menu-button {
   width: 48px;
   height: 48px;
@@ -566,6 +601,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
   bottom: calc(var(--sheet-peek, 88px) + 12px);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;           /* the buttons are round; the scale bar is not */
   gap: 8px;
   isolation: isolate;               /* an open sheet covers the buttons, icons included */
 }
@@ -589,6 +625,35 @@ body[data-level="state"] .sheet-head { cursor: default; }
 }
 .tour-button .icon-pause, .tour-button[aria-pressed="true"] .icon-play { display: none; }
 .tour-button[aria-pressed="true"] .icon-pause { display: block; }
+/* --- the scale bar: drawn on the table, not on a card, the way an atlas prints it --- */
+.scale { pointer-events: none; color: var(--muted); }
+.scale-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 var(--paper), 0 -1px 0 var(--paper), 1px 0 0 var(--paper), -1px 0 0 var(--paper);
+}
+.scale-label:lang(en) { letter-spacing: 0.04em; }
+/* A bracket opening upwards, with a tick at the halfway mark to read halves off. */
+.scale-bar {
+  position: relative;
+  width: var(--w, 100px);
+  height: 5px;
+  border: 1.5px solid currentColor;
+  border-top: 0;
+  border-radius: 0 0 1px 1px;
+}
+.scale-bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1.5px;
+  height: 3px;
+  background: currentColor;
+}
+
 .compass { transform: rotate(var(--yaw, 0deg)); transition: transform 120ms linear; }
 .needle-n { fill: var(--accent); }
 .needle-s { fill: currentColor; fill-opacity: 0.4; }
@@ -862,7 +927,8 @@ body[data-level="state"] .sheet-head { cursor: default; }
 
 /* --- poster mode: the share-image render (tools/share-image.mjs, ?poster=1) --- */
 body[data-poster="1"] .menu-button, body[data-poster="1"] .sheet, body[data-poster="1"] .status,
-body[data-poster="1"] .labels, body[data-poster="1"] .tooltip, body[data-poster="1"] .corner { display: none !important; }
+body[data-poster="1"] .labels, body[data-poster="1"] .tooltip, body[data-poster="1"] .corner,
+body[data-poster="1"] .cartouche { display: none !important; }
 body[data-poster="1"] .topbar { top: 0; bottom: 0; padding: 0; align-items: center; }
 body[data-poster="1"] .wordmark {
   position: absolute;

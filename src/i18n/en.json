@@ -83,6 +83,8 @@
   "month.short.12": "Dec",
   "scrubber.none": "Nothing on show falls in {month}.",
   "sheet.month.heading": "In {month}",
+  "scale.km": "{n} km",
+  "cartouche.aria": "Open page: {name}. Go to all pages.",
   "atlas.contents": "Contents",
   "atlas.back": "All pages",
   "atlas.section.political": "Political",
