@@ -508,6 +508,27 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
 .sheet[data-view="page"] .sheet-subtitle, .sheet[data-view="item"] .sheet-subtitle { color: var(--gold); font-weight: 600; font-size: 0.8rem; }
 .sheet[data-view="page"] .sheet-subtitle:lang(en) { letter-spacing: 0.08em; text-transform: uppercase; }
+/* The hint: a line in the accent, with a chevron while the sheet is down, so the head
+   says what is under it. Once the sheet is up the contents are right there, and the
+   line stays as their heading, without the chevron. */
+.sheet-hint {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sheet-hint[hidden] { display: none; }
+.sheet[data-snap="peek"] .sheet-hint::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: translateY(2px) rotate(45deg);
+}
 /* The separator belongs to the name before it, not the line after it: hung on the
    subtitle it wrapped to the start of the next line whenever the names were long. */
 .sheet-alt:not([hidden]):has(+ .sheet-subtitle:not(:empty))::after { content: " ·"; }
@@ -1164,6 +1185,7 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
   }
   .sheet-grip { display: none; }
   .sheet-head { padding-top: 16px; }         /* the grip gave the phone this room */
+  .sheet-hint { display: none; }             /* the contents are in view: nothing to hint at */
   .sheet-body { flex: 1 1 auto; min-height: 0; height: auto !important; overflow-y: auto !important; }
   .corner { left: 20px; bottom: 20px; }
   .key { width: 320px; max-height: min(52dvh, 560px); }

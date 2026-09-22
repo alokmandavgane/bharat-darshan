@@ -31,6 +31,7 @@ export function createShell(root, store) {
   const statusText = $('.status-text');
   const retry = $('.status-retry');
   const subtitle = $('.sheet-subtitle');
+  const hint = $('.sheet-hint');
   const title = $('.sheet-title');
   const alt = $('.sheet-alt');
   const closeBtn = $('.sheet-close');
@@ -315,8 +316,10 @@ export function createShell(root, store) {
     if (was !== key.dataset.open) updatePadding(true);
   }
   keyHead.addEventListener('click', () => setKey(key.dataset.open !== '1'));
+  // Open where there is room for it. On a phone it covered half the map every time a page
+  // was turned to; folded, its head still carries every layer's mark, and a tap opens it.
   setKey(wide.matches);
-  store.subscribe('plate', (id, prev) => { if (id && id !== prev) setKey(true); });
+  store.subscribe('plate', (id, prev) => { if (id && id !== prev) setKey(wide.matches); });
 
   function renderKey() {
     const catalog = store.get('catalog') || [];
@@ -1001,6 +1004,7 @@ export function createShell(root, store) {
     show(finder, true);
     show(contents, false);
     show(units, !u);
+    hint.hidden = true;
     if (u) {
       title.textContent = pick(u.name);
       const others = otherNames(u);
@@ -1041,6 +1045,9 @@ export function createShell(root, store) {
     if (data && !inState) {
       renderContentsList(data);
       show(contents, true);
+      const pages = data.plates.filter((p) => store.get('drafts') || p.status === 'reviewed').length;
+      hint.textContent = `${t('atlas.contents')} · ${t('atlas.pages', { n: formatNumber(pages) })}`;
+      hint.hidden = !pages;
     }
   }
 
@@ -1088,7 +1095,7 @@ export function createShell(root, store) {
     const wanted = store.get('plate');
     // A link to a page arrives with the page already set, so the key opens here, not
     // from the subscription that catches a page being turned to.
-    if (wanted && d.plates.some((p) => p.id === wanted)) { openPlateById(wanted); setKey(true); }
+    if (wanted && d.plates.some((p) => p.id === wanted)) { openPlateById(wanted); setKey(wide.matches); }
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
   store.subscribe('plates', () => { renderPoster(); renderCartouche(); renderKey(); });
