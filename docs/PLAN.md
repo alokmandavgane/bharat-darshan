@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-22 (thirty-eighth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-22 (thirty-ninth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2406,10 +2406,29 @@ docs/DEPLOY.md).
     `areas` layers, so a basin or a physical division opened by link, search or carousel
     showed an empty card; it fills now, and frames the area from its raster (a tap keeps
     the view, since a basin is half a subcontinent).
-  - **Left**: the 99 WRIS sub-basins are in the same archive and would make a detail tier or
-    a page of their own; they want names in Hindi and a blurb each, which is the work.
-    `physiography` is the last layer on Natural Earth, and nothing better has turned up
-    for it yet.
+  - **Left**: `physiography` is the last layer on Natural Earth, and nothing better has
+    turned up for it yet. (The sub-basins followed in the next round.)
+
+- 2026-09-22, thirty-ninth round: the 99 sub-basins, a page after the basins.
+  - **India-WRIS's sub-basin layer**, the division the Central Water Commission works to,
+    in the basins' colours so the legend carries over, with the rivers drawn over them.
+    The Ganga alone is nineteen of them; a big peninsular river is its upper, middle and
+    lower reaches. 98 cards for 99 polygons: WRIS files Aksai Chin and the Shaksgam
+    valley under one name, and they are one card.
+  - **Every card matches WRIS's own name**, checked by the build (a name WRIS does not
+    use fails it). WRIS's names are sometimes administrative ("Above Ramganga
+    Confluence") and sometimes its own spellings ("Weinganga", "Kynchiang", "Varrar");
+    the card uses the usual name and the blurb says what WRIS calls it where that is not
+    obvious. One trap worth knowing: WRIS's "Pamba and others" is in Tamil Nadu -- the
+    Vaigai's country -- not Kerala's Pamba.
+  - **The parent basin is a `name` field**, so the card says "Ganga basin" in both
+    languages. Area checked, not shown: 97 of 98 draw within 0.6-1.6x of the area WRIS
+    records (in a projection it does not name, so not a figure for the card);
+    Lakshadweep is the exception, enlarged by the raster.
+  - **Left**: at the whole-country view the sub-basin page looks much like the basin page,
+    since the lines between sub-basins are a pixel wide and the colours are shared. It
+    comes into its own from about 1,500 km of view height in; whether it wants to open
+    closer than the home view is a look question for the owner.
 
 ### What exists
 
