@@ -182,6 +182,130 @@
    "path": "layers/languages.json"
   },
   {
+   "id": "minerals",
+   "type": "points",
+   "title": {
+    "en": "Minerals and mining",
+    "hi": "खनिज और खनन"
+   },
+   "icon": "gem",
+   "group": "resources",
+   "default_on": false,
+   "count": 22,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "coal",
+     "icon": "gem",
+     "color": "#3f3a36",
+     "title": {
+      "en": "Coal",
+      "hi": "कोयला"
+     }
+    },
+    {
+     "id": "iron",
+     "icon": "gem",
+     "color": "#8e3f33",
+     "title": {
+      "en": "Iron ore",
+      "hi": "लौह अयस्क"
+     }
+    },
+    {
+     "id": "bauxite",
+     "icon": "gem",
+     "color": "#c98a3c",
+     "title": {
+      "en": "Bauxite",
+      "hi": "बॉक्साइट"
+     }
+    },
+    {
+     "id": "manganese",
+     "icon": "gem",
+     "color": "#6e6a7c",
+     "title": {
+      "en": "Manganese",
+      "hi": "मैंगनीज़"
+     }
+    },
+    {
+     "id": "copper",
+     "icon": "gem",
+     "color": "#b5623a",
+     "title": {
+      "en": "Copper",
+      "hi": "ताँबा"
+     }
+    },
+    {
+     "id": "zinc",
+     "icon": "gem",
+     "color": "#7f95a3",
+     "title": {
+      "en": "Zinc and lead",
+      "hi": "जस्ता और सीसा"
+     }
+    },
+    {
+     "id": "gold",
+     "icon": "gem",
+     "color": "#c9a227",
+     "title": {
+      "en": "Gold",
+      "hi": "सोना"
+     }
+    },
+    {
+     "id": "diamond",
+     "icon": "gem",
+     "color": "#8fb6d1",
+     "title": {
+      "en": "Diamonds",
+      "hi": "हीरे"
+     }
+    },
+    {
+     "id": "mica",
+     "icon": "gem",
+     "color": "#a89a6a",
+     "title": {
+      "en": "Mica",
+      "hi": "अभ्रक"
+     }
+    },
+    {
+     "id": "uranium",
+     "icon": "gem",
+     "color": "#5f9464",
+     "title": {
+      "en": "Uranium",
+      "hi": "यूरेनियम"
+     }
+    },
+    {
+     "id": "petroleum",
+     "icon": "gem",
+     "color": "#2f3f4a",
+     "title": {
+      "en": "Oil and gas",
+      "hi": "तेल और गैस"
+     }
+    }
+   ],
+   "note": {
+    "en": "A marker is a field, a belt or a mining district rather than a single shaft, placed at the town the workings are known by. Where the mineral is is geology; whether it is dug depends on grade, rail and price, and changes.",
+    "hi": "प्रत्येक चिह्न किसी एक खदान का नहीं, बल्कि एक क्षेत्र, पट्टी या खनन ज़िले का है, और उस नगर पर रखा है जिससे वह जाना जाता है। खनिज कहाँ है यह भूविज्ञान तय करता है; वह निकाला जाएगा या नहीं, यह श्रेणी, रेल और दाम पर निर्भर है और बदलता रहता है।"
+   },
+   "sources": [
+    "ibm",
+    "gsi",
+    "wikipedia"
+   ],
+   "path": "layers/minerals.json"
+  },
+  {
    "id": "monsoon",
    "type": "lines",
    "title": {
@@ -947,12 +1071,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 6677,
-   "sha256": "b3ecf4679388"
+   "size": 7535,
+   "sha256": "16013440fac3"
   },
   "sources.json": {
-   "size": 16192,
-   "sha256": "40cb7b33d62a"
+   "size": 16896,
+   "sha256": "016863ae59c4"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1137,6 +1261,10 @@
   "layers/languages.json": {
    "size": 21934,
    "sha256": "22465772db1c"
+  },
+  "layers/minerals.json": {
+   "size": 20541,
+   "sha256": "bee347325032"
   },
   "layers/monsoon.json": {
    "size": 8520,
