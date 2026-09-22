@@ -114,10 +114,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const active = new Set(store.get('layers')?.active || []);
     // The GPU markers decide what shows before the frame is drawn; the HTML ones after,
     // since they are placed on it. Both thin by the same zoom bands and shrink together.
-    // The share-image render shows the model alone: the CSS hides the HTML markers, and
-    // the GPU ones are given nothing to draw.
+    // The share-image render shows the model without its names: the CSS hides the HTML
+    // markers. The clay pieces are part of the model and draw as they would for a visitor,
+    // so a page's card carries what the page is about (a figurine per product, a bead per
+    // town); when the markers were flat stickers they were left off the cards.
     const now = performance.now();
-    const until = marks?.setView({ active: store.get('poster') ? new Set() : active, level, drafts: !!store.get('drafts'), month: store.get('month'),
+    const until = marks?.setView({ active, level, drafts: !!store.get('drafts'), month: store.get('month'),
       maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom), now }) || 0;
     draw();
     if (until > now) invalidate();      // pieces are still springing up
