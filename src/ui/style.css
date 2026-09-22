@@ -878,3 +878,16 @@ body[data-poster="1"] .wordmark .title-other { font-size: 1.7rem; margin-top: 8p
 body[data-poster="1"] .wordmark .title-other::after { width: 96px; height: 3px; margin-top: 14px; }
 body[data-poster="1"] .wordmark .tagline { display: block; margin-top: 16px; font-size: 1.1rem; line-height: 1.45; color: var(--muted); }
 body[data-poster="1"] .wordmark .site { display: block; margin-top: 18px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-deep); }
+/* A page's own card: the atlas's name shrinks to a kicker so the page's title can be the
+   title, and the title gives up some size because a page name is longer than a book's. */
+body[data-poster="1"] .wordmark .kicker {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+body[data-poster="1"] .wordmark .kicker :lang(en) { letter-spacing: 0.08em; text-transform: uppercase; }
+body[data-poster-page="1"] .wordmark .title { font-size: 2.5rem; }
+body[data-poster-page="1"] .wordmark .title-other { font-size: 1.35rem; }
+body[data-poster-page="1"] .wordmark .tagline { font-size: 1.02rem; }

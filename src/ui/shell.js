@@ -49,6 +49,10 @@ export function createShell(root, store) {
   const about = $('.about');
   const aboutDraft = $('.about-draft');
   const credits = $('.credits');
+  const kicker = $('.wordmark .kicker');
+  const posterTitle = $('.wordmark .title');
+  const posterOther = $('.wordmark .title-other');
+  const posterTagline = $('.wordmark .tagline');
   const tourBtn = $('.tour-button');
   const resetBtn = $('.reset-button');
   const tooltip = $('.tooltip');
@@ -641,6 +645,37 @@ export function createShell(root, store) {
     if (btn) openPlate(btn.dataset.plate || '');
   });
 
+  /**
+   * The share card of a page (`?poster=1`, rendered by tools/share-image.mjs). The wordmark
+   * becomes the page's own -- its title, the same title in the other language, its blurb --
+   * with the atlas's name shrunk to a kicker above. A card pasted into a chat has to say
+   * which page it is, and the page already carries the words to say it with (PLAN.md D11).
+   */
+  function renderPoster() {
+    if (!store.get('poster')) return;
+    const plate = (store.get('plates')?.plates || []).find((p) => p.id === store.get('plate'));
+    kicker.hidden = !plate;
+    root.body.dataset.posterPage = plate ? '1' : '';
+    if (!plate) return;
+    const other = currentLanguage() === 'hi' ? 'en' : 'hi';
+    // Two spans, not one string: the Latin name takes the small-caps kicker treatment and
+    // the Devanagari one must not (it is never letter-spaced or uppercased).
+    const name = (lang, text) => {
+      const el = document.createElement('span');
+      el.lang = lang;
+      el.textContent = text;
+      return el;
+    };
+    kicker.replaceChildren(name('en', 'Bharat Darshan'), ' · ', name('hi', 'भारत दर्शन'));
+    // These carry the app's own strings by default; the page's words are not translations
+    // of them, so the binding goes with the text (i18n's apply() would put it back).
+    for (const [el, text] of [[posterTitle, pick(plate.title)], [posterOther, plate.title[other] || ''],
+      [posterTagline, pick(plate.blurb)]]) {
+      el.removeAttribute('data-i18n');
+      el.textContent = text;
+    }
+  }
+
   /** The fact card for a unit: structured, sourced, shown only once reviewed (or with drafts on). */
   /** One label/value row as its own definition list, for cards with a single fact. */
   function factRow(label, value) {
@@ -966,6 +1001,8 @@ export function createShell(root, store) {
     if (wanted && d.plates.some((p) => p.id === wanted)) openPlate(wanted);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
+  store.subscribe('plates', renderPoster);
+  store.subscribe('plate', renderPoster);
   store.subscribe('sources', () => { renderChips(); renderContents(); renderCredits(); });
   // The source registry: every dataset once, which the legends, the pages and the credits
   // all resolve their ids through (PLAN.md section 5, "Source registry").
