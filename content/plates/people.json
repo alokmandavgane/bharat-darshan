@@ -10,6 +10,7 @@
     "en": "Two things at once: each state rises by how many people live in it and is coloured by how tightly they live. Uttar Pradesh is highest; Delhi is darkest.",
     "hi": "एक साथ दो बातें: हर राज्य अपनी जनसंख्या के अनुपात में उठता है और घनत्व के अनुसार रंगा है। उत्तर प्रदेश सबसे ऊँचा; दिल्ली सबसे गहरी।"
   },
+  "base": "plain",
   "layers": [
     "population",
     "population-density"

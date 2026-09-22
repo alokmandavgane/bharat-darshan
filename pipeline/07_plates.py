@@ -24,6 +24,10 @@ BLURB_MAX = 240
 # one of these; the strings themselves live in src/i18n, keyed by the id.
 SECTIONS = ('political', 'physical', 'climate', 'resources', 'agriculture',
             'industry', 'transport', 'people', 'culture', 'history')
+# The base styles the engine can draw (PLAN.md section 5, "Base styles"). `political`
+# -- categorical state fills over gentle relief -- is specified there and not built, so a
+# page may not ask for it yet: a page that asked would quietly come out physical.
+BASES = ('physical', 'plain')
 
 
 def bilingual(v):
@@ -68,6 +72,8 @@ def validate(plate, name, layer_ids):
             p.append(f"names layers that do not exist: {', '.join(missing)}")
     if not isinstance(plate.get('order'), int):
         p.append('order must be an integer: it sorts the plates inside a section')
+    if plate.get('base') is not None and plate['base'] not in BASES:
+        p.append(f"base must be one of {BASES} ('political' is specified in PLAN.md but not built)")
     relief = plate.get('relief')
     if relief is not None and not (isinstance(relief, (int, float)) and 0 <= relief <= 30):
         p.append('relief must be between 0 and 30')
@@ -106,7 +112,7 @@ def main():
             problems.append((name, ['none of its layers cites a source, so the page could not say where it came from']))
             continue
         plates.append({k: plate[k] for k in ('id', 'section', 'order', 'title', 'blurb',
-                                             'layers', 'relief', 'status') if k in plate}
+                                             'layers', 'relief', 'base', 'status') if k in plate}
                       | {'sources': cites})
 
     for name, p in problems:
