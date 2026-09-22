@@ -8,6 +8,7 @@
   },
   "icon": "pin",
   "default_on": false,
+  "float": true,
   "source": {
     "join": "generated",
     "simplify_km": 0.4
@@ -16,18 +17,27 @@
     {
       "id": "parallel",
       "color": "#a85f45",
-      "title": { "en": "Parallel", "hi": "अक्षांश रेखा" }
+      "title": {
+        "en": "Parallel",
+        "hi": "अक्षांश रेखा"
+      }
     },
     {
       "id": "meridian",
       "color": "#4a6e8c",
-      "title": { "en": "Meridian", "hi": "देशांतर रेखा" }
+      "title": {
+        "en": "Meridian",
+        "hi": "देशांतर रेखा"
+      }
     }
   ],
   "fields": {
     "degrees": {
       "type": "text",
-      "label": { "en": "Position", "hi": "स्थिति" }
+      "label": {
+        "en": "Position",
+        "hi": "स्थिति"
+      }
     }
   },
   "sources": [
@@ -35,5 +45,6 @@
     "npl-india"
   ],
   "attribution": "Reference lines are defined, not surveyed: the build walks each one across the projection and clips it to the country, so what is drawn is the projection's own curve.",
-  "_source": "\"join\": \"generated\" means no file is fetched: each item describes its own line, and the engine reads the layer type, never this layer's name."
+  "_source": "\"join\": \"generated\" means no file is fetched: each item describes its own line, and the engine reads the layer type, never this layer's name.",
+  "_float": "A reference line is a wire stretched above the model, at the height of a 1,500 m hill, draped only where the land stands higher: drawn on the surface it was cut by every hill it crossed."
 }
