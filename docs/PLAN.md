@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-21 (nineteenth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-22 (thirty-fifth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -610,13 +610,14 @@ map is a folder and a source, whatever it shows.
 | `terrain` | the clay relief | physical | built | -- |
 | `choropleth`, banded | a number per region, in bands | density, literacy, sex ratio, rainfall by state, crop output | built (states) | population density (done) |
 | `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | built (`"scale": "categorical"`) | zonal councils (done) |
-| `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | blocked on a boundary source (open question 10) | Census 2011 literacy |
+| `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | **unblocked**: open question 10 is answered and the 785 polygons are in the build (see "District boundaries"). The raster itself is not built; the district map ships as lines and labels for now | Census 2011 literacy |
 | `lines` | named courses, width by rank, colour by category, optional flow | rivers, roads, rail, waterways, pipelines, transmission | built | done |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
+| `lines`, network | one item that is the *whole* of a source, drawn fine and unnamed under the routes that are named | the road and rail mesh, canals, transmission, pipelines | built (`"network": true` on an item; `"format": "districts"` for the district mesh) | roads and rail (done); district boundaries (done) |
 | `points`, token / label | a marker or a name at a spot | places, summits, ranges, ports, airports, plants | built | done |
 | `points`, dot | a clay bead the size of a pinhead, sized by a value, drawn by the GPU with only the names in HTML | every town, ports, stations, mines | built (`"marker": "dot"`) | every state's ten biggest towns, generated from GeoNames (done) |
 | `points`, model | a figurine built from a recipe (`content/models/`), standing on the relief, instanced by the GPU | GI products, crops, crafts, animals, monuments | built (`"marker": "model"`) | GI tags (done) |
-| `points`, generated | items made by the build from a source and merged with the curated ones | towns, stations, airports, plants by the hundred | built (`"source": { "format": "geonames" }`) | cities (done) |
+| `points`, generated | items made by the build from a source and merged with the curated ones | towns, stations, airports, plants by the hundred | built (`"source": { "format": "geonames" }`, `"districts"`) | cities (1,021 towns, done); district names (785, done) |
 | `symbols` | a counter **sized by a value**, coloured by category, lying on the relief and drawn by the GPU | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions, filled and draped on the relief, their edges reconstructed from the raster to sub-texel accuracy | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
@@ -888,7 +889,14 @@ values only, never its shapes (D6).
 | Culture | Places; festivals; food; GI products; crafts; classical arts | points, regional | built; GI Registry; UNESCO; Wikidata |
 | History | Later, and carefully: extents of empires are contested and need sources per boundary | areas + time | -- |
 
-### District boundaries (open question 10, surveyed 2026-09-21)
+### District boundaries (open question 10: surveyed 2026-09-21, **taken 2026-09-22**)
+
+**Decided.** `LGD_Districts` it is, read as the TopoJSON the catalogue publishes at
+`docs/maps/data/districts.topo.json` (785 polygons, 2,622 shared arcs, 1 MB of plain
+JSON, no parquet or pmtiles reader needed). The eight probes below were re-run against
+it and all eight pass. What shipped is lines and labels, not a raster; the uint16
+raster and district choropleths are still ahead. The licence caveat below is unchanged
+and is recorded in `content/sources.json` in both languages, so a reader sees it.
 
 Every candidate was downloaded and tested: point-in-polygon on eight disputed-territory
 probes, and 1,500 random vertices against the project's own `india-soi.geojson` mask.
@@ -2201,16 +2209,93 @@ docs/DEPLOY.md).
   - The showcase video (`tools/`-less: a Playwright script in the scratchpad) was
     recorded by driving the real app with real clicks; `recordVideo` + ffmpeg to MP4.
 
+- 2026-09-22, thirty-fifth round: the atlas got thicker. Four asks, all of them "more":
+  four times the towns, the GI register brought up to date, roads and rail as a real
+  network, and districts.
+  - **Towns: 249 to 1,021.** The knobs were already data, so this was 10 per state to 50,
+    a floor of 15,000 people, and the cities5000 dump in place of cities15000 -- which
+    turns out to have no town at all in Lakshadweep, so Kavaratti (11,473 people, a union
+    territory capital) is curated by hand and every one of the 36 units now has a bead.
+    What it cost: at 4,500 ids the Wikidata query service starts refusing. A URL long
+    enough to carry 300 ids is a 431; a batch of 150 times out after three minutes and
+    loses the hour. `pipeline/lib/wikidata.py` posts, retries with a widening pause, and
+    caches **one batch at a time under the ids that batch asked about**, so an
+    interrupted run resumes. That is the reusable lesson: cache the question, not the
+    answer set.
+  - **Roads and rail: a network, not a list.** Natural Earth holds 53,850 km of road and
+    39,746 km of railway inside India and the map was drawing 14,009 and 5,427 of it. An
+    item may now say `network: true` instead of naming geometry, and the build hands it
+    the whole source: one card, rank 3, fine and unnamed, under the routes that are
+    named. Picking already broke ties by rank, so a tap still gets NH 44 and not the
+    tracery beneath it. Named routes went from 8 and 5 to 35 and 21.
+    **The routes were checked, not trusted, and that is the round's real finding.** The
+    build already prints how far each waypoint sat from the network; on top of that,
+    every drawn route's extent was read back in degrees and compared against its
+    published termini. That caught NH 5: the gazetteer resolved "Rampur" to Rampur in
+    Uttar Pradesh, and the Hindustan-Tibet road came out running down from Shimla into
+    the plains and 200 km east. A name gazetteer picks the biggest match, which is right
+    for Nagpur and wrong for every small town that shares a name. **Read back what was
+    drawn; do not trust what was asked for.**
+  - **GI tags: 36 to 169**, and the map now reaches every state and union territory that
+    has a GI at all -- Chandigarh, Lakshadweep and Dadra and Nagar Haveli and Daman and
+    Diu have none, which the note says rather than leaving three blanks. 25 of the new
+    ones are from 2020 on, 16 from 2023-24, which was the ask.
+    Everything is checked against the Registry's published list of registered
+    indications: a product whose registered name is not on that list does not ship. That
+    refused eight items that had never been registered, and corrected a dozen spellings.
+    Anchors are resolved from the gazetteer rather than typed, and the layer's existing
+    "does the anchor fall in the state it claims" check caught the two that went to the
+    wrong Pratapgarh and the wrong Jeypore.
+    **What was not done, and why.** The register holds 647. Generating the rest was
+    tried and abandoned: matching a product name to a place gets 30% (Mysore is Mysuru,
+    Alleppey is Alappuzha, Allahabad is Prayagraj), and resolving the products' own
+    Wikipedia pages through Wikidata got 184 of 610, with a Hindi label on 36 and a
+    coordinate on 6. The binding constraint is not geometry, it is that **a name in Hindi
+    has to be written by somebody**. That is the gate on the remaining 478.
+  - **Districts, at last** (open question 10, answered). PLAN.md's own survey recommended
+    the LGD layer a round ago and the recommendation held up: all eight disputed-territory
+    probes fall where Survey of India puts them. It is published as TopoJSON, which is
+    better than it sounds -- every boundary is stored once as a shared arc, so the mesh
+    draws without inking an internal line twice, and an arc whose two sides fall in
+    different states is dropped, because that line is the state border and the terrain
+    draws it already.
+    Two layers, because a boundary is a line and a name is a label: `district-lines` (the
+    mesh, one item per state) and `districts` (785 labels, each at the pixel deepest
+    inside its own shape). Both rank and priority 3, so they arrive as the camera comes
+    in and the whole-country political page keeps the state's name on the paper -- which
+    is exactly what was asked for, and needed no engine change to get.
+    The join is a **code** match, not a name match: the source carries LGD and PC11
+    codes, Wikidata files Indian districts under the same LGD code (P12746), and 779 of
+    785 meet their item exactly. The 29 too new for a Hindi label are named by hand. Each
+    district's state comes from the project's own ID raster, not from the state named in
+    the source, so the two can never disagree; all 785 land, none disagrees.
+    Left open on purpose: the uint16 district raster, and therefore district choropleths.
+    The primitives table says so. And the licence is still the aggregator's assertion
+    over data of LGD and Survey of India lineage -- the registry entry says that in both
+    languages, and the map is dated (August 2024) rather than current.
+  - **A `name` field type**, because a headquarters is a proper name and exists in both
+    languages, which `text` could not carry. One line in `shell.js`, one in the pipeline.
+  - **A reproducibility wobble worth knowing about**, not caused by this round: rerunning
+    the DEM step on this machine changes `shade-1024` in 3 pixels of 491,520, each by 1,
+    and `shade-2048` likewise. Rounding, almost certainly a numpy version, invisible on
+    screen -- but "reproducible byte for byte" is no longer quite true, and the two files
+    were reverted rather than committed so the shipped bytes stay as they were.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
   grid (`lib/grid.py`: 3341 x 3507 km, 1 unit = 1 km, rows north to south), a small
   shapefile reader, a gzip raster container (`lib/pack.py`), `01_boundaries.py`,
-  `02_dem.py`, `05_manifest.py` and `build.py`. `npm run data` rebuilds everything in
-  about 40 s and is reproducible byte for byte; raw downloads are cached in
-  `pipeline/raw/`, previews land in `pipeline/tmp/`.
+  `02_dem.py`, `05_manifest.py` and `build.py`, plus a TopoJSON reader (`lib/topo.py`),
+  the district source (`lib/districts.py`) and a batched, cached, retrying Wikidata
+  client (`lib/wikidata.py`). `npm run data` rebuilds everything in about 40 s; it was
+  reproducible byte for byte and is now reproducible everywhere but three pixels of the
+  two `shade` rasters, which drift by one between numpy versions (see the thirty-fifth
+  round). Raw downloads are cached in `pipeline/raw/`, previews land in `pipeline/tmp/`.
 - `public/data/`: committed outputs for two tiers, 960x1024 (first view, 1.15 MB) and
-  1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`.
+  1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`. 24 layers and 14
+  plates; the first-view tier is 1,271 KB of the 1.5 MB budget and every layer past the
+  default set is lazily loaded.
 - `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
   names (Hindi spellings pending review), native-script names where they differ.
 - `src/engine/`: pack decoder, textures, camera maths, picking, tweens, quality
@@ -2308,15 +2393,18 @@ docs/DEPLOY.md).
    not done blind.
 1. Phase 3 leftovers: food as content, drafted the way the festivals and languages were, and
    probably regional for the same reason -- a dish belongs to a region, and two states
-   hold GI tags on the same sweet. Districts still need a district boundary source that
-   meets the boundary rule in CLAUDE.md, which is a sourcing decision before it is code.
+   hold GI tags on the same sweet. Districts have their source now and are drawn as lines
+   and labels; what is left there is the uint16 raster, which is what district
+   choropleths need.
    The scrubber has no map expression yet -- it changes what the sheet says, not what the
    model shows -- which is worth a look once there is more dated content than festivals.
-2. Roads and rail ship as drafts: read the eight highway and five railway cards and
-   flip their `status` when they are right. The courses are the source's, so check the
-   two Ladakh roads and NH 66 in particular, which run short where it is coarse or has
-   a gap. Konkan, Kalka-Shimla and the Nilgiri Mountain Railway wait for a source with
-   names in it.
+2. Roads and rail ship as drafts: 35 highway and 21 railway cards to read, plus the two
+   network items. The courses are the source's, so check the two Ladakh roads and NH 66
+   in particular, which run short where it is coarse or has a gap, and NH 75, which stops
+   at Kolar because Natural Earth has no road on to Vellore. Konkan, Kalka-Shimla, the
+   Nilgiri Mountain Railway, NH 50, NH 63 and NH 43 are all absent from the source
+   altogether and wait for a better one -- which is now the main thing holding the
+   transport page back, not the content.
 3. Owner: `npm install && npm run dev`, open it on the reference phone (the dev server
    listens on the LAN), judge fps and the look. Knobs: `PALETTE` and `CURVE` in
    `src/engine/terrain.js`, the default camera and relief in `src/main.js`, the light
