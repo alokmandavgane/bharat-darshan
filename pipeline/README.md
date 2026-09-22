@@ -20,6 +20,7 @@ are git-ignored. The generated files are committed while they are only a few MB
 | `02_dem.py` | `terrain/heights-{H}.bin.gz`, `terrain/shade-{H}.bin.gz`, `regions/states-borders-{H}.bin.gz` | AWS Terrain Tiles (Terrarium), zoom 7 by default |
 | `04_layers.py` | `layers/<id>.json` | `content/layers/<id>/`; a `lines` layer also fetches the source named in its `layer.json` (rivers: Natural Earth 10m physical vectors, public domain) |
 | `07_plates.py` | `plates.json` | `content/plates/<id>.json`, checked against the layers that exist |
+| `08_graticule.py` | `graticule.json` | the projection itself: parallels and meridians every 5°, pre-projected and clipped to the board |
 | `05_manifest.py` | `manifest.json`, `sources.json` | hashes of the above; the cited slice of `content/sources.json` |
 
 Names, ISO codes and the raster id of every state live in `content/states/states.json`;

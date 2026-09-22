@@ -100,6 +100,7 @@ def main():
         # Who to credit is no longer prose in this file: sources.json holds the registry,
         # each layer cites it by id, and the credits screen is generated from both.
         'sources': 'sources.json',
+        'graticule': 'graticule.json' if os.path.exists(os.path.join(out, 'graticule.json')) else None,
         'files': files,
     }
     with open(os.path.join(out, 'manifest.json'), 'w', encoding='utf-8') as f:

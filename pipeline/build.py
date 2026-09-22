@@ -11,7 +11,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STEPS = ['01_boundaries.py', '02_dem.py', '03_world.py', '04_layers.py', '06_states.py',
-         '07_plates.py', '05_manifest.py']
+         '07_plates.py', '08_graticule.py', '05_manifest.py']
 
 
 def main():
