@@ -2413,11 +2413,10 @@ docs/DEPLOY.md).
 ### Next
 
 0. **Phase 6, continued.** Plates, the contents page, the source registry and the share
-   shells are in. What is left: **the 18 card images need a Playwright run** --
-   `npm run preview`, then `node tools/share-image.mjs` from the repo root (`DRY=1` first
-   to see the list); this machine has no Playwright and it is a tool, not a dependency, so
-   it was not installed to get them -- there are 20 of them now, the tenth page having
-   brought two more. Everything else in Phase 6 is built and its exit is met: ten pages
+   shells are in. The share cards are rendered: 14 of 14 pages have their own, made with
+   `node tools/share-image.mjs` against a running server (Playwright is a tool here, not a
+   dependency; `PLAYWRIGHT_MODULE` points at an npx copy). Re-run it with `ONLY=<page>
+   FORCE=1` whenever a page's map changes. Everything else in Phase 6 is built and its exit is met: ten pages
    across eight sections, each of them a JSON file. `political` as a base style is
    specified in section 5 and deliberately unbuilt until a page needs it.
    **Phase 7 is the work now.** Cities and iron-and-steel landed on 2026-09-22; the 66
@@ -2480,8 +2479,7 @@ docs/DEPLOY.md).
 4. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
-   question 1: they are about 1 MB each, 36 MB in all, too much for git), districts in
-   the state view, the poster image (needs open question 6), context-loss test on iOS,
+   question 1: they are about 1 MB each, 36 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
 5. Settle open questions 6-7.
