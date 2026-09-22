@@ -2106,6 +2106,45 @@ docs/DEPLOY.md).
   - **Nothing said how to get back to the contents.** Turning to a page left only an
     arrow in the sheet's head, which does not say where it goes. The page's block opens
     with "All pages" in words again, as the first design had it.
+- 2026-09-22, the pre-publish pass: the owner is about to put it up, review to follow.
+  - **The phone's whole-country view named two states.** Odisha and Assam, at 375 px,
+    on a map whose whole point is India's states; a narrow desktop window was little
+    better. Three rules, each written for a wide screen and a few place pegs. The fit
+    rule measured a state by the smaller of its width and 0.8 of its height, and a name
+    runs across, so only the width matters; it asked the name to fit inside 85% of that,
+    when a name overhanging a large state by a quarter still reads as that state's (0.75
+    now, and the overlap test keeps names apart regardless). A two-word name now stands
+    on two lines when one line will not fit, broken at the space nearest the middle,
+    which is the only way "Madhya Pradesh" gets onto a phone. And the towns' names
+    claimed their strips before the state names, so Delhi hid Uttar Pradesh and Mumbai
+    hid Maharashtra: big cities sit in big states, and this got worse the moment the
+    cities became the default layer. `points.js` now holds one order -- things that stand
+    up, then the state names, then names laid flat (a range's), then the towns' -- except
+    on a page, whose own names go before the states' because they are the point of it
+    (the engine reads whether a page is open, never which). A name laid flat is only
+    text, so it no longer takes the famous-place exemption that let "Aravalli" print
+    through "Madhya Pradesh". Phone, home view: nine state names in English, sixteen in
+    Hindi, none overlapping; the relief page still names its ranges and peaks first.
+  - **Cities are the default layer, not places** (owner's call). The transport page
+    carries them too: roads and rails join towns.
+  - **A `main.js:87` "null addEventListener" error in the console was a ghost**: it was
+    in the tab's buffer from an HMR reload mid-edit, and a fresh load with an error hook
+    installed does not reproduce it. Worth knowing: the browser pane keeps console
+    history across navigations in a tab, so check errors in a fresh tab.
+  - **Left for the owner, in order of how visible each is.** (1) The share cards
+    `public/share/og-{en,hi}.jpg` date from the morning of the 21st: sticker markers, the
+    old menu, no pages; and no per-page card exists, so every page's link preview shows
+    the stale language card. This is the first thing anyone sees when a link is pasted.
+    Rendering them needs Playwright's Chromium, which is not on this machine (`npx
+    playwright install chromium`, `npm run preview`, `FORCE=1 node
+    tools/share-image.mjs`). (2) The backdrop join: at a phone's wide fit the sea and the
+    neighbours end in a soft-edged rectangle, plainly visible above and left of the
+    country. (3) On a phone the key opens itself on every page and covers half the map
+    (the relief page: two layers, half the screen). (4) At peek the sheet shows "India ·
+    28 states · 8 union territories" and nothing says thirteen pages are one drag away.
+    (5) `drafts` is hard-coded on, so every card's info button is terracotta with "Draft,
+    not yet reviewed"; fine for a soft launch, but it is what a visitor will see.
+    (6) `fallback.webgl` promises "a text version of the content is on its way".
 
 ### What exists
 
