@@ -618,9 +618,9 @@ map is a folder and a source, whatever it shows.
 | `points`, model | a figurine built from a recipe (`content/models/`), standing on the relief, instanced by the GPU | GI products, crops, crafts, animals, monuments | built (`"marker": "model"`) | GI tags (done) |
 | `points`, generated | items made by the build from a source and merged with the curated ones | towns, stations, airports, plants by the hundred | built (`"source": { "format": "geonames" }`) | cities (done) |
 | `symbols` | a counter **sized by a value**, coloured by category, lying on the relief and drawn by the GPU | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
-| `areas` | named polygons that are not regions, filled and draped on the relief | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
+| `areas` | named polygons that are not regions, filled and draped on the relief, their edges reconstructed from the raster to sub-texel accuracy | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
-| `flows` | curved arrows between places, animated along their length | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` on a `lines` layer) | the monsoon's advance (done) |
+| `flows` | curved arrows between places, animated along their length, drawn over the model rather than on it | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` and `"float": true` on a `lines` layer) | the monsoon's advance (done) |
 | `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
 | `regional` | listed on a state's card; drawn as a token at its anchor when it has one (the place it is most seen at) | festivals, languages, food | built | done; festivals anchored 2026-09-22 |
 
@@ -2042,6 +2042,32 @@ docs/DEPLOY.md).
   Also, a scaled-down screenshot loses small markers entirely: two rounds running, a
   0.6-scale capture showed two counters where a full-resolution one showed all
   twenty-four. Check the marker work at full size.
+
+- 2026-09-22, two overlays that were being cut up by the relief.
+  - **The `areas` fill was a staircase.** The layer ships one area id per texel and the
+    shader read it NEAREST, so past the raster's own pitch -- 3.4 km, which a 700 km view
+    crosses in four pixels -- every edge stepped along the texel grid. It is now
+    reconstructed: bilinear weights over the four texels around the pixel give each
+    candidate area a coverage, the contour where a coverage passes a half is a smooth
+    curve through the grid rather than along its steps, and `fwidth` holds that crossing
+    to about a screen pixel so the edge stays crisp instead of softening as the texels
+    grow. It is the trick a distance-field glyph is drawn with, on a field the build
+    already ships, so it costs no bytes and no rebuild. Checked down to a 200 km view,
+    where a texel is twelve pixels and the edge is still a clean curve. The branch is on
+    a uniform, not a ternary, so a page without an `areas` layer does not pay for the
+    four samples. A choropleth keeps the old single lookup: its edges are the state
+    borders, which the shader already draws as crisp lines from their distance fields.
+  - **`float` on a lines layer now means "the model never hides it".** The first cut
+    raised a floating line to the height of a 1,500 m hill, which was enough for the
+    Tropic of Cancer and nothing else: the monsoon's arrows cross the Western Ghats and
+    the north-eastern hills, and at a 1,400 km view they were sawn into fragments. The
+    height trick cannot hold -- something taller always comes along -- so a floating line
+    keeps following the relief, which is what keeps it over the ground it marks on a
+    tilted view, and simply turns its depth test off. The monsoon's arrows float now, and
+    so the two reference lines are drawn under the same rule rather than a raised one.
+  Also checked, since both changes touch what a tap lands on: an `areas` layer still
+  picks by its own raster, and the reconstruction moves a drawn edge by less than half a
+  texel from the one picking uses.
 
 ### What exists
 
