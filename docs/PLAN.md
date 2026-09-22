@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-22 (thirty-seventh round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-22 (thirty-eighth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2380,6 +2380,36 @@ docs/DEPLOY.md).
   - **Left**: the physical divisions are the last layer still on Natural Earth. The
     catalogue's WRIS basins and sub-basins (also tile archives, now readable) are the
     obvious replacement, and a basin map is one the atlas lacks anyway.
+
+- 2026-09-22, thirty-eighth round: river basins, a map the atlas did not have.
+  - **The Central Water Commission's 25 basins**, from India-WRIS by way of the same
+    catalogue as the rivers, on a new physical page with the rivers over them. Coloured
+    by where the water goes, in seven groups (the fill has eight colours): the Bay from the
+    Himalaya or across the peninsula, the Arabian Sea from the Himalaya or the west of the
+    peninsula, nowhere (Rajasthan's inland drainage, and the corner of Ladakh that drains
+    towards the Tarim), out to Myanmar and Bangladesh, and the islands. In the peninsula
+    the green-ochre line is the Western Ghats divide, which is what the page is for.
+  - **Joined on the basin code**, because three polygons have no name. 21, 22 and 23 are
+    North Ladakh, the Andamans and Lakshadweep -- confirmed against the sub-basin file and
+    the polygons' coordinates, not the order first guessed, which was wrong.
+  - **Checked by area.** Each basin's drawn area against WRIS's published figure: 21 of 23
+    within 12%. The exception explained itself: Kutch-Saurashtra-Luni draws at 185,573 km²
+    against 321,851, and adding Rajasthan's inland drainage (143,814, unpublished) makes
+    329,387 -- the Commission counts the two as one. That card omits the figure; the
+    inland basin's blurb says why.
+  - **Polygons from tile archives.** `pmtiles-polygon` is now a source an `areas` layer can
+    name. Winding needed no correction: a vector tile's outer ring, flipped into latitude,
+    is already clockwise -- the shapefile convention. Reversing it made every basin a hole.
+  - **Two changes to the `areas` primitive**, both general. A pixel-wide line where two
+    areas meet, so neighbours of one colour (Godavari and Krishna; two plateaus) no longer
+    merge -- the physical divisions have outlines now too. And `fillItem` never looked in
+    `areas` layers, so a basin or a physical division opened by link, search or carousel
+    showed an empty card; it fills now, and frames the area from its raster (a tap keeps
+    the view, since a basin is half a subcontinent).
+  - **Left**: the 99 WRIS sub-basins are in the same archive and would make a detail tier or
+    a page of their own; they want names in Hindi and a blurb each, which is the work.
+    `physiography` is the last layer on Natural Earth, and nothing better has turned up
+    for it yet.
 
 ### What exists
 
