@@ -2261,9 +2261,15 @@ docs/DEPLOY.md).
     draws it already.
     Two layers, because a boundary is a line and a name is a label: `district-lines` (the
     mesh, one item per state) and `districts` (785 labels, each at the pixel deepest
-    inside its own shape). Both rank and priority 3, so they arrive as the camera comes
-    in and the whole-country political page keeps the state's name on the paper -- which
-    is exactly what was asked for, and needed no engine change to get.
+    inside its own shape). Both started at rank and priority 3 -- hold them back until
+    the camera is inside a state -- and that was wrong: the districts page then opened on
+    a country with no districts on it, and its share card was a picture of an empty map.
+    They are rank and priority 2 now. At the home view the mesh reads as a fine political
+    plate rather than a smudge, because the label thinning drops nearly every district
+    name there; the names fill in as the camera comes down. The states page is untouched
+    -- it names `zones` and nothing else -- so "not on the political page" is kept by
+    composition rather than by weight, which is the better way to keep it. No engine
+    change either way.
     The join is a **code** match, not a name match: the source carries LGD and PC11
     codes, Wikidata files Indian districts under the same LGD code (P12746), and 779 of
     785 meet their item exactly. The 29 too new for a Hindi label are named by hand. Each
