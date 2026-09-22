@@ -364,7 +364,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           publishIndex();
         });
       } else if (entry.type === 'lines' && lines && !lines.has(id)) {
-        done((data) => { lines.setLayer(data); lines.setActive(store.get('layers')?.active || []); publishIndex(); });
+        done((data) => {
+          lines.setLayer(data);
+          lines.setActive(store.get('layers')?.active || []);
+          loadDetail();          // the layer has only now said whether it has a finer copy
+          publishIndex();
+        });
       } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
         done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
       } else if (entry.type === 'areas' && !choroFiles.has(id)) {
@@ -408,6 +413,40 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   store.subscribe('drafts', publishIndex);
   store.subscribe('level', publishIndex);
   store.subscribe('month', publishIndex);
+
+  // --- a layer's finer copy of one state (PLAN.md D3: a state package is denser networks)
+  //
+  // A `lines` layer may ship one file per state at a resolution the whole country could
+  // not afford. It is fetched when that state is entered and given to the lifted block,
+  // which is the only place it would be seen; the country's own tier never changes.
+  const detailLoading = new Set();
+
+  /** Fetch what the layers on show have of the state now lifted, and drop what they do not. */
+  function loadDetail() {
+    const lv = store.get('level');
+    const slug = lv?.name === 'state' ? store.get('regions')?.byId?.[lv.id]?.slug : null;
+    for (const id of store.get('layers')?.active || []) {
+      if (!lines?.has(id)) continue;
+      const path = slug && lines.detailPath(id, slug);
+      if (!path) { lines.setDetail(id, null); continue; }
+      const key = `${id}:${slug}`;
+      if (detailLoading.has(key)) continue;
+      detailLoading.add(key);
+      loadJson(path)
+        .then((data) => {
+          // The visitor may have left the state while this was in the air.
+          const now = store.get('level');
+          if (now?.name === 'state' && store.get('regions')?.byId?.[now.id]?.slug === slug) {
+            lines.setDetail(id, data);
+            invalidate();
+          }
+        })
+        .catch((err) => console.warn(`detail ${key} skipped:`, err))
+        .finally(() => detailLoading.delete(key));
+    }
+  }
+  store.subscribe('level', loadDetail);
+  store.subscribe('layers', loadDetail);
 
   /** Fly to a place: closer at country level, a pan inside a state; returns the flight time. */
   function flyToItem(item, { ms = 800, yaw = undefined } = {}) {

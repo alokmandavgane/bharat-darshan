@@ -176,16 +176,22 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       m.uniforms.uLiftedId.value = liftedId;
     });
     for (const [id, l] of layers) {
-      const idx = selected && selected.layer === id ? l.records.find((r) => r.item.id === selected.id)?.idx ?? -1 : -1;
-      l.plate.material.uniforms.uSelectedIdx.value = idx;
-      if (l.block) l.block.material.uniforms.uSelectedIdx.value = idx;
+      const pick = (recs) => (selected && selected.layer === id
+        ? recs.find((r) => r.item.id === selected.id)?.idx ?? -1 : -1);
+      l.plate.material.uniforms.uSelectedIdx.value = pick(l.records);
+      // The detail copy numbers its own items, so the block is told its own index.
+      if (l.block) l.block.material.uniforms.uSelectedIdx.value = pick(l.detail?.records || l.records);
     }
   }
 
   function setBlockMesh(entry) {
     if (entry.block) { scene.remove(entry.block); entry.block.material.dispose(); entry.block = null; }
     if (!blockUniforms) return;
-    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
+    // A layer may ship a finer copy of itself per state (PLAN.md D3). The plate keeps the
+    // country's own weight; the lifted block, which is where a coarse line shows, draws
+    // that state's sharper geometry instead as soon as it has arrived.
+    const mesh = new Mesh(entry.detail?.geometry || entry.geometry,
+                          lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -203,13 +209,29 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null };
+      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null, detail: null, detailPaths: data.detail || null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
       applyView();
     },
     has(id) { return layers.has(id); },
+    /** Where a layer's finer geometry for one state lives, if it has any. */
+    detailPath(id, slug) { return layers.get(id)?.detailPaths?.[slug] || null; },
+    /**
+     * Give a layer the finer geometry of the state now lifted, or `null` to drop it.
+     * Only the block's copy changes: the plate is the whole country and keeps its own.
+     */
+    setDetail(id, data) {
+      const l = layers.get(id);
+      if (!l) return;
+      if (l.detail) l.detail.geometry.dispose();
+      // The detail file carries geometry and nothing else: the colours are the layer's,
+      // and a copy without them would draw the whole state in the fallback blue.
+      l.detail = data ? linesGeometry({ ...data, categories: l.categories }) : null;
+      setBlockMesh(l);
+      applyView();
+    },
     /** Which layers the visitor has switched on. */
     setActive(ids) {
       active = new Set(ids);

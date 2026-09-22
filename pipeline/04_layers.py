@@ -909,45 +909,36 @@ def build_district_points(layer, curated, cats, fields, ids, by_id, out_items):
     return out_items, []
 
 
-def build_district_lines(layer, cats, fields, ids, by_id):
+def build_district_lines(layer, cats, fields, ids, by_id, out):
     """
-    The district mesh, one item per state: the lines *inside* a state, never its own edge.
+    The district mesh, one item per state, at two resolutions.
 
-    A shared arc is the point of the TopoJSON. Every boundary is stored once, so the line
-    between two districts is drawn once however many districts meet along it. An arc is
-    kept only when it has a district on each side and both are in the same state: an arc
-    with one side is the coast or the international border, and one whose sides fall in
-    two states is the state border. The model draws both of those itself, and inking them
-    again only thickens them.
+    The page draws the country tier; the finer one is written per state and fetched only
+    when that state is opened, which is where the coarse lines showed. Both come from the
+    survey's own polygons: a segment two districts share is a boundary between them, a
+    segment only one has is the state's own edge, and the model draws that itself.
     """
-    recs, arcs = district_records(ids)
-    owners = {}
-    for n, rec in enumerate(recs):
-        for a in rec['arcs']:
-            owners.setdefault(a, []).append(n)
-    inside = {}
-    for a, sides in owners.items():
-        if len(sides) != 2:
-            continue
-        regions = {recs[n]['region'] for n in sides}
-        if len(regions) == 1 and 0 not in regions:
-            inside.setdefault(next(iter(regions)), []).append(arcs[a])
+    recs, _arcs = district_records(ids)
+    inside = districts_lib.outlines(ids)
     counts = {}
     for rec in recs:
         counts[rec['region']] = counts.get(rec['region'], 0) + 1
     category = 'border' if 'border' in cats else sorted(cats)[0]
-    simplify = float((layer.get('source') or {}).get('simplify_km', 1.5))
-    out, drawn = [], 0
+    src = layer.get('source') or {}
+    simplify = float(src.get('simplify_km', 1.5))
+    detail = src.get('detail') or {}
+    fine = float(detail.get('simplify_km', 0.2)) if detail else None
+    out_items, drawn, detailed = [], 0, {}
     for region, parts in sorted(inside.items()):
         unit = by_id.get(region)
         if not unit:
             continue
-        runs = lines.project(parts, ids, simplify)
+        runs = lines.project(parts, ids, simplify, min_km=src.get('min_km'))
         if not runs:
             continue
         drawn += sum(len(r) for r in runs)
         n = counts.get(region, 0)
-        out.append({
+        item = {
             'id': f"{unit['slug']}-districts", 'name': {
                 'en': f"Districts of {unit['name']['en']}", 'hi': f"{unit['name']['hi']} के ज़िले"},
             'category': category, 'rank': 2,
@@ -958,13 +949,31 @@ def build_district_lines(layer, cats, fields, ids, by_id):
                       f"between them; the state's own edge is drawn by the model itself.",
                 'hi': f"{unit['name']['hi']} {n} ज़िलों में बँटा है। ये रेखाएँ उनके बीच की सीमाएँ हैं; "
                       f"राज्य की अपनी सीमा मॉडल स्वयं खींचता है।"},
-            'sources': [districts_lib.CATALOGUE_URL],
+            'sources': [districts_lib.POLYGON_SOURCE],
             'status': 'draft',
-        })
+        }
         if 'districts' in fields:
-            out[-1]['districts'] = n
-    print(f'    districts: {len(out)} states, {len(inside)} arc groups, {drawn} points inside state lines')
-    return out, []
+            item['districts'] = n
+        out_items.append(item)
+        if fine:
+            sharp = lines.project(parts, ids, fine, min_km=detail.get('min_km', 0.05))
+            if sharp:
+                detailed[unit['slug']] = {**item, 'lines': [[round(float(v), 2) for v in r.reshape(-1)] for r in sharp]}
+    paths = {}
+    if detailed:
+        folder = os.path.join(out, 'layers', layer['id'])
+        os.makedirs(folder, exist_ok=True)
+        total = 0
+        for slug, item in detailed.items():
+            rel = f"layers/{layer['id']}/{slug}.json"
+            with open(os.path.join(out, rel), 'w', encoding='utf-8') as f:
+                json.dump({'id': layer['id'], 'items': [item]}, f, ensure_ascii=False, separators=(',', ':'))
+            total += os.path.getsize(os.path.join(out, rel))
+            paths[slug] = rel
+        print(f'    detail: {len(detailed)} states at {fine} km -> {total // 1024} KB in all, '
+              f'{max(os.path.getsize(os.path.join(out, p)) for p in paths.values()) // 1024} KB at worst')
+    print(f'    districts: {len(out_items)} states, {drawn} points inside state lines')
+    return out_items, [], paths
 
 
 def validate_item(it, cats, by_iso, ids, width, height, fields):
@@ -1053,9 +1062,11 @@ def build_layer(folder, states, ids, heights, out, registry, models):
                       extra={'raster': f'layers/{layer["id"]}-areas.bin.gz'})
     if layer.get('type') == 'lines' and not problems:
         if (layer.get('source') or {}).get('format') == DISTRICTS:
-            out_items, line_problems = build_district_lines(layer, cats, fields, ids, by_id)
-        else:
-            out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
+            out_items, line_problems, detail = build_district_lines(layer, cats, fields, ids, by_id, out)
+            problems += line_problems
+            return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']),
+                          extra={'detail': detail} if detail else None)
+        out_items, line_problems = build_lines(layer, folder, items, cats, fields, ids, heights)
         problems += line_problems
         return finish(layer, out_items, out, problems, order=lambda i: (i['rank'], i['id']))
     generated = (layer.get('source') or {}).get('format') == DISTRICTS
@@ -1117,6 +1128,8 @@ def finish(layer, out_items, out, problems, order, extra=None):
     if extra:
         data.update(extra)
         data['count'] = len(extra.get('values', out_items))
+        if 'detail' in extra:
+            data['count'] = len(out_items)
     os.makedirs(os.path.join(out, 'layers'), exist_ok=True)
     path = os.path.join(out, 'layers', f"{layer['id']}.json")
     with open(path, 'w', encoding='utf-8') as f:

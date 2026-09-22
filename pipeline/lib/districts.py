@@ -15,13 +15,14 @@ The TopoJSON matters beyond the licence. It stores every boundary once, as an ar
 by the two districts it separates, so the district mesh can be drawn without inking any
 internal line twice -- which is the difference between a map and a smudge at this density.
 """
+import collections
 import hashlib
 import json
 import os
 
 import numpy as np
 
-from . import fetch, grid, raster, topo, wikidata
+from . import fetch, grid, lines as lines_lib, raster, topo, wikidata
 
 # Wikidata labels an Indian district "Adilabad district" and "अदिलाबाद जिला": the word
 # is the class, not the name, and the layer already says what these are.
@@ -38,6 +39,14 @@ def _bare(label, suffixes):
 TOPOJSON_URL = ('https://raw.githubusercontent.com/yashveeeeeeer/india-geodata/main/'
                 'docs/maps/data/districts.topo.json')
 CATALOGUE_URL = 'https://github.com/yashveeeeeeer/india-geodata'   # what a card links to
+# The shapes the map draws when a state is opened. The TopoJSON above is a web-map
+# simplification -- its vertices are 1.7 km apart, which is fine over the whole country
+# and coarse the moment a state fills the screen -- and it stays the layer's identity: the
+# codes, and through them the names. These are the survey's own polygons, eighteen times
+# as many points, and geometry is all they are asked for.
+POLYGON_URL = ('https://raw.githubusercontent.com/datta07/INDIAN-SHAPEFILES/master/'
+               'INDIA/INDIA_DISTRICTS.geojson')
+POLYGON_SOURCE = 'https://github.com/datta07/INDIAN-SHAPEFILES'
 DISTRICT_CLASS = 'wd:Q1149652'      # district of India, and everything that specialises it
 LGD_CODE = 'wdt:P12746'             # the code the two sources meet on
 
@@ -119,7 +128,7 @@ def _place(units, ids, width, height):
         region = int(counts[n].argmax()) if counts[n].any() else 0
         # The mask is cut to the district's own box, which is what keeps 785 poles cheap.
         mask = drawn[y0:y1, x0:x1] == n
-        deep = raster.pole_of_inaccessibility(mask)
+        deep = raster.pole_of_inaccessibility(mask, max_side=96)
         anchor = None
         if deep is not None:
             row, col = deep[0] + y0, deep[1] + x0
@@ -165,3 +174,59 @@ def load(ids, raw=None):
             'rings': rings,
         })
     return out, arcs
+
+
+def outlines(ids, raw=None):
+    """
+    The survey's district polygons, grouped by the state they stand in, as the lines
+    *between* districts -- the state's own edge left out, because the model draws it.
+
+    The survey draws each district as a closed ring, so the line between two of them is
+    drawn twice, once by each, and the line around a whole state once. Counting segments
+    tells the two apart exactly, and the kept ones are chained back into long runs.
+
+    Returns {region id: [lon/lat polylines]}.
+    """
+    raw = raw or os.path.join(fetch.RAW, 'districts')
+    path = os.path.join(raw, 'districts.geojson')
+    fetch.download(POLYGON_URL, path, quiet=True)
+    height, width = ids.shape
+    by_region = {}
+    for props, rings in lines_lib.read_geojson(path):
+        if not rings:
+            continue
+        # Which state, from the project's own raster rather than the source's name, so a
+        # district and its state always agree with what the map draws.
+        big = max(rings, key=len)
+        col, row = grid.lonlat_to_pixel(big[:, 0], big[:, 1], width, height)
+        c = np.clip(np.round(col.mean()).astype(int), 0, width - 1)
+        r = np.clip(np.round(row.mean()).astype(int), 0, height - 1)
+        region = int(ids[r, c])
+        if not region:                       # a centre in the sea: ask the ring itself
+            cc = np.clip(col.astype(int), 0, width - 1)
+            rr = np.clip(row.astype(int), 0, height - 1)
+            seen = ids[rr, cc]
+            seen = seen[seen > 0]
+            if not len(seen):
+                continue
+            region = int(np.bincount(seen).argmax())
+        by_region.setdefault(region, []).extend(rings)
+    return {region: shared_edges(rings) for region, rings in by_region.items()}
+
+
+def shared_edges(rings):
+    """
+    The lines inside a group of districts: every segment two of them share, chained.
+
+    A segment seen twice is a boundary between two districts; a segment seen once is the
+    group's own outer edge, which is the state border and the coast, and the model draws
+    both of those for itself.
+    """
+    seen = collections.Counter()
+    for ring in rings:
+        q = np.round(ring, 7)
+        for a, b in zip(q, q[1:]):
+            ka, kb = (float(a[0]), float(a[1])), (float(b[0]), float(b[1]))
+            seen[(ka, kb) if ka <= kb else (kb, ka)] += 1
+    inner = [np.array(k, dtype=np.float64) for k, n in seen.items() if n > 1]
+    return lines_lib.stitch(inner, tol=1e-7)
