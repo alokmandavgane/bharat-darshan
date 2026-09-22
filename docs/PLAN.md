@@ -1854,6 +1854,21 @@ docs/DEPLOY.md).
   Also: the layer groups gained `resources` ("Rocks and mining"), which is a string and no
   code, and is the first of the headings the sections were meant to settle.
 
+- 2026-09-22, thirty-third round: Phase 7's first page, and the one the atlas was most
+  obviously missing: cities. The thirty largest municipal corporations at the 2011 census,
+  each circle's area carrying its population, coloured by whether the place is a capital --
+  which is the fact the sizes cannot tell you, and it turns out ten of the thirty are.
+  The data came from Wikipedia's tabulation of the census, fetched rather than remembered,
+  and all thirty anchors passed the ID-raster check first time. Two corrections while
+  drafting: the page's blurb had said Mumbai's circle was four times Patna's, which was
+  wrong twice over (the ratio is about seven, and it is the area that carries it, not the
+  width); and each item had cited two Wikipedia pages, which the card renders by host, so
+  it read as one source twice -- the second citation is now the census itself.
+  I looked at the two empty sections before choosing this one, and Next records why both
+  are harder than they look. The short version: a crop map's values would be claims rather
+  than published numbers, and a history layer would restate 20-odd places the `places`
+  layer already holds. Cities restates nothing.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -1921,13 +1936,23 @@ docs/DEPLOY.md).
    brought two more. Everything else in Phase 6 is built and its exit is met: ten pages
    across eight sections, each of them a JSON file. `political` as a base style is
    specified in section 5 and deliberately unbuilt until a page needs it.
-   **Phase 7 is now the work**, and the two empty sections say where to start: agriculture
-   wants a crop map, which would be the first choropleth whose values are claims rather
-   than published numbers -- a leading crop per state needs a source table, not memory,
-   and a choropleth has no per-item review gate to catch a wrong one; history wants either
-   a `places`-like layer of sites by period or the empires as `areas`, which is the harder
-   and the better map. The 22 mineral items are drafts and want reading. Two smaller
-   things the registry left behind: `content/layers/<id>/layer.json` still carries an
+   **Phase 7 is the work now.** Cities landed on 2026-09-22 as its first page; the 52
+   items of minerals and cities are drafts and want reading. The two still-empty sections
+   were looked at and both are harder than they sound:
+   - **Agriculture** wants a crop map, which would be the first choropleth whose values
+     are claims rather than published numbers. A leading crop per state needs a source
+     table, and a choropleth has no per-item review gate to catch a wrong row. The
+     tables that exist (Ministry of Agriculture, via Wikipedia) are per-crop and of
+     2014-15 vintage, so it wants deliberate sourcing rather than a quick page.
+   - **History** cannot be a layer of sites: `places` already holds 139, among them most
+     of what a history page would name (Ajanta, Sanchi, Nalanda, Hampi, Khajuraho,
+     Konark, Fatehpur Sikri, the Qutb Minar, Lothal, the Cellular Jail). Two layers
+     describing the same places with different blurbs is the sprawl the source registry
+     was built to stop. What history wants instead is either a `period` on the places
+     that have one -- which needs a way to colour points by a field and not only by
+     category -- or the empires as `areas`, which is the better map and is blocked on
+     polygons nobody publishes under a licence this project can use.
+   Two smaller things the registry left behind: `content/layers/<id>/layer.json` still carries an
    `attribution` line that the build no longer ships (it says what the build did with the
    source, which is worth keeping for whoever edits the layer, but it is prose in a place
    nothing reads); and items still cite plain URLs, which is by design, but the busier
