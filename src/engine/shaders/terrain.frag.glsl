@@ -269,15 +269,23 @@ void main() {
   vec2 b = texture(uBorders, luv(vUv)).rg;
   float dInt = (1.0 - b.r) * uBorderRangeKm;
   float dExt = (1.0 - b.g) * uBorderRangeKm;
-  float aa = aaKm;
+  // And the other end: the field reaches uBorderRangeKm from a border and saturates
+  // there, so a line asking for more than that (plus its anti-aliasing) finds every
+  // pixel on the plate "on a border" and the whole country goes dark -- which is what
+  // happened at the zoom ceiling, where a 1.6 px line is 19 km against a 14 km field.
+  // The width is capped at half the range, and the line fades out once that cap is
+  // under a pixel on screen, since a line that thin is only a darkening of the fill.
+  float cap = 0.5 * uBorderRangeKm;
+  float aa = min(aaKm, 0.25 * uBorderRangeKm);
   float grain = 0.75 * uBorderTexelKm;
   float askInt = 1.1 * uKmPerPx, askExt = 1.6 * uKmPerPx;
   float held = 1.0 - smoothstep(2.0, 6.0, grain / max(askInt, 1e-6));
-  float wInt = max(askInt, grain), wExt = max(askExt, grain);
+  float wInt = clamp(askInt, grain, cap), wExt = clamp(askExt, grain, cap);
+  float reach = smoothstep(0.3, 0.8, cap / uKmPerPx);
   // Only the plate scores borders: a block has one state in it, and its rasters are
   // its own, so the country field would be read through the wrong rect.
-  float lineInt = plate * held * (1.0 - smoothstep(wInt - aa, wInt + aa, dInt));
-  float lineExt = plate * held * (1.0 - smoothstep(wExt - aa, wExt + aa, dExt));
+  float lineInt = plate * held * reach * (1.0 - smoothstep(wInt - aa, wInt + aa, dInt));
+  float lineExt = plate * held * reach * (1.0 - smoothstep(wExt - aa, wExt + aa, dExt));
   col = mix(col, col * 0.70, lineInt * 0.85 * land);
   col = mix(col, vec3(0.075, 0.058, 0.050), lineExt * 0.85 * land);
 
