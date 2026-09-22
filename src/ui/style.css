@@ -1121,12 +1121,13 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
   text-shadow: 0 0 3px var(--paper), 0 0 6px var(--paper), 0 1px 0 var(--paper);
   will-change: transform;
 }
-.label:lang(en) { letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
-.label-l:lang(en) { font-size: 13px; }
-.label-s:lang(en) { font-size: 10px; letter-spacing: 0.04em; }
-.label:lang(hi) { font-size: 13px; }
-.label-l:lang(hi) { font-size: 15px; }
-.label-s:lang(hi) { font-size: 12px; }
+/* --lscale is the zoom's shrink, set on the container by the engine (labels.js). */
+.label:lang(en) { letter-spacing: 0.06em; text-transform: uppercase; font-size: calc(11px * var(--lscale, 1)); }
+.label-l:lang(en) { font-size: calc(13px * var(--lscale, 1)); }
+.label-s:lang(en) { font-size: calc(10px * var(--lscale, 1)); letter-spacing: 0.04em; }
+.label:lang(hi) { font-size: calc(13px * var(--lscale, 1)); }
+.label-l:lang(hi) { font-size: calc(15px * var(--lscale, 1)); }
+.label-s:lang(hi) { font-size: calc(12px * var(--lscale, 1)); }
 .label-stack { white-space: pre; text-align: center; line-height: 1.08; }
 .label-active { color: var(--accent-deep); }
 
