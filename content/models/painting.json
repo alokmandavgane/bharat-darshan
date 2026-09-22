@@ -1,0 +1,74 @@
+{
+ "id": "painting",
+ "footprint": 10,
+ "parts": [
+  {
+   "shape": "box",
+   "w": 20,
+   "h": 16,
+   "d": 1.4,
+   "at": [
+    0,
+    8,
+    0
+   ],
+   "rot": [
+    -12,
+    0,
+    0
+   ],
+   "color": "#7a5230"
+  },
+  {
+   "shape": "box",
+   "w": 17,
+   "h": 13,
+   "d": 0.8,
+   "at": [
+    0,
+    8.2,
+    0.9
+   ],
+   "rot": [
+    -12,
+    0,
+    0
+   ],
+   "color": "#f1e6cf"
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "at": [
+    -3.5,
+    9.5,
+    1.6
+   ],
+   "color": "#c9452f",
+   "tint": true,
+   "segments": 10
+  },
+  {
+   "shape": "sphere",
+   "r": 1.8,
+   "at": [
+    3.5,
+    7,
+    2.1
+   ],
+   "color": "#3a6fa0",
+   "segments": 10
+  },
+  {
+   "shape": "sphere",
+   "r": 1.4,
+   "at": [
+    1,
+    11,
+    1.4
+   ],
+   "color": "#e8b04a",
+   "segments": 10
+  }
+ ]
+}

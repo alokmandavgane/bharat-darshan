@@ -7,6 +7,10 @@
       "hi": "दिवाली"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 26.7922,
+      "lon": 82.1998
+    },
     "priority": 1,
     "regions": [
       "*"
@@ -28,6 +32,10 @@
       "hi": "होली"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 27.4924,
+      "lon": 77.6737
+    },
     "priority": 1,
     "regions": [
       "IN-UP",
@@ -63,6 +71,10 @@
       "hi": "दुर्गा पूजा"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 22.5726,
+      "lon": 88.3639
+    },
     "priority": 1,
     "regions": [
       "IN-WB",
@@ -90,6 +102,10 @@
       "hi": "ओणम"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 10.5276,
+      "lon": 76.2144
+    },
     "priority": 1,
     "regions": [
       "IN-KL"
@@ -111,6 +127,10 @@
       "hi": "पोंगल"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 9.9252,
+      "lon": 78.1198
+    },
     "priority": 1,
     "regions": [
       "IN-TN",
@@ -133,6 +153,10 @@
       "hi": "बोहाग बिहू"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 26.1445,
+      "lon": 91.7362
+    },
     "priority": 1,
     "regions": [
       "IN-AS"
@@ -154,6 +178,10 @@
       "hi": "गणेश चतुर्थी"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 19.076,
+      "lon": 72.8777
+    },
     "priority": 1,
     "regions": [
       "IN-MH",
@@ -180,6 +208,10 @@
       "hi": "नवरात्रि और गरबा"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 23.0225,
+      "lon": 72.5714
+    },
     "priority": 1,
     "regions": [
       "IN-GJ",
@@ -205,6 +237,10 @@
       "hi": "छठ पूजा"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 25.5941,
+      "lon": 85.1376
+    },
     "priority": 1,
     "regions": [
       "IN-BR",
@@ -229,6 +265,10 @@
       "hi": "बैसाखी"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 31.634,
+      "lon": 74.8723
+    },
     "priority": 2,
     "regions": [
       "IN-PB",
@@ -253,6 +293,10 @@
       "hi": "मकर संक्रांति"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 23.0225,
+      "lon": 72.5714
+    },
     "priority": 2,
     "regions": [
       "IN-GJ",
@@ -283,6 +327,10 @@
       "hi": "लोहड़ी"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 30.901,
+      "lon": 75.8573
+    },
     "priority": 2,
     "regions": [
       "IN-PB",
@@ -308,6 +356,10 @@
       "hi": "उगादि और गुड़ी पाड़वा"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 18.5204,
+      "lon": 73.8567
+    },
     "priority": 2,
     "regions": [
       "IN-KA",
@@ -334,6 +386,10 @@
       "hi": "विषु"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 10.8505,
+      "lon": 76.2711
+    },
     "priority": 2,
     "regions": [
       "IN-KL"
@@ -355,6 +411,10 @@
       "hi": "पोइला बोइशाख"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 22.5726,
+      "lon": 88.3639
+    },
     "priority": 2,
     "regions": [
       "IN-WB",
@@ -377,6 +437,10 @@
       "hi": "रथ यात्रा"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 19.8135,
+      "lon": 85.8312
+    },
     "priority": 1,
     "regions": [
       "IN-OD"
@@ -398,6 +462,10 @@
       "hi": "त्रिशूर पूरम"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 10.5276,
+      "lon": 76.2144
+    },
     "priority": 2,
     "regions": [
       "IN-KL"
@@ -419,6 +487,10 @@
       "hi": "बोनालु"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 17.385,
+      "lon": 78.4867
+    },
     "priority": 3,
     "regions": [
       "IN-TS"
@@ -440,6 +512,10 @@
       "hi": "बतुकम्मा"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 17.385,
+      "lon": 78.4867
+    },
     "priority": 3,
     "regions": [
       "IN-TS"
@@ -461,6 +537,10 @@
       "hi": "तीज"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 26.9124,
+      "lon": 75.7873
+    },
     "priority": 3,
     "regions": [
       "IN-RJ",
@@ -486,6 +566,10 @@
       "hi": "पुष्कर मेला"
     },
     "category": "fair",
+    "anchor": {
+      "lat": 26.4897,
+      "lon": 74.5511
+    },
     "priority": 2,
     "regions": [
       "IN-RJ"
@@ -507,6 +591,10 @@
       "hi": "हॉर्नबिल महोत्सव"
     },
     "category": "fair",
+    "anchor": {
+      "lat": 25.6167,
+      "lon": 94.1
+    },
     "priority": 2,
     "regions": [
       "IN-NL"
@@ -528,6 +616,10 @@
       "hi": "रण उत्सव"
     },
     "category": "fair",
+    "anchor": {
+      "lat": 23.7337,
+      "lon": 69.8597
+    },
     "priority": 3,
     "regions": [
       "IN-GJ"
@@ -549,6 +641,10 @@
       "hi": "गोवा कार्निवल"
     },
     "category": "fair",
+    "anchor": {
+      "lat": 15.4989,
+      "lon": 73.8278
+    },
     "priority": 3,
     "regions": [
       "IN-GA"
@@ -570,6 +666,10 @@
       "hi": "हेमिस त्सेचु"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 33.97,
+      "lon": 77.66
+    },
     "priority": 3,
     "regions": [
       "IN-LA"
@@ -591,6 +691,10 @@
       "hi": "लोसर"
     },
     "category": "seasonal",
+    "anchor": {
+      "lat": 34.1526,
+      "lon": 77.5771
+    },
     "priority": 3,
     "regions": [
       "IN-LA",
@@ -615,6 +719,10 @@
       "hi": "वांगला"
     },
     "category": "harvest",
+    "anchor": {
+      "lat": 25.5138,
+      "lon": 90.2022
+    },
     "priority": 3,
     "regions": [
       "IN-ML"
@@ -636,6 +744,10 @@
       "hi": "संगाई महोत्सव"
     },
     "category": "fair",
+    "anchor": {
+      "lat": 24.817,
+      "lon": 93.9368
+    },
     "priority": 3,
     "regions": [
       "IN-MN"
@@ -657,6 +769,10 @@
       "hi": "ईद-उल-फ़ितर"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 28.6507,
+      "lon": 77.2334
+    },
     "priority": 1,
     "regions": [
       "*"
@@ -677,6 +793,10 @@
       "hi": "क्रिसमस"
     },
     "category": "devotional",
+    "anchor": {
+      "lat": 15.5009,
+      "lon": 73.9116
+    },
     "priority": 2,
     "regions": [
       "*"

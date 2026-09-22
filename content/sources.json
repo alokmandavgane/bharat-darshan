@@ -1,27 +1,38 @@
 {
   "_about": "Every dataset the atlas uses, declared once (PLAN.md section 5, 'Source registry'). Layers and plates cite an id from `sources`; a plain URL stays legal for a one-off fact on a single item. `use` says what we do with it and the build enforces it: `data` ships files or rasters derived from it, so its licence must permit redistribution; `software` ships as code or a font; `facts` means figures and statements checked against it, which needs a URL anyone can follow but no redistribution right; `blocked` is a source we looked at and may not use, and citing one fails the build with its note. Anything without a licence we could read is checked before it is used, not after.",
-
   "licences": {
     "public-domain": {
-      "title": { "en": "Public domain", "hi": "सार्वजनिक डोमेन" },
+      "title": {
+        "en": "Public domain",
+        "hi": "सार्वजनिक डोमेन"
+      },
       "url": "https://www.naturalearthdata.com/about/terms-of-use/",
       "attribution": false,
       "redistribute": true
     },
     "cc-by-4.0": {
-      "title": { "en": "CC BY 4.0", "hi": "सीसी बाय 4.0" },
+      "title": {
+        "en": "CC BY 4.0",
+        "hi": "सीसी बाय 4.0"
+      },
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "attribution": true,
       "redistribute": true
     },
     "cc-by-sa-4.0": {
-      "title": { "en": "CC BY-SA 4.0", "hi": "सीसी बाय-एसए 4.0" },
+      "title": {
+        "en": "CC BY-SA 4.0",
+        "hi": "सीसी बाय-एसए 4.0"
+      },
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "attribution": true,
       "redistribute": true
     },
     "terrain-tiles": {
-      "title": { "en": "Open data, attribution required", "hi": "खुले आँकड़े, श्रेय आवश्यक" },
+      "title": {
+        "en": "Open data, attribution required",
+        "hi": "खुले आँकड़े, श्रेय आवश्यक"
+      },
       "url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
       "attribution": true,
       "redistribute": true,
@@ -31,38 +42,70 @@
       }
     },
     "mit": {
-      "title": { "en": "MIT Licence", "hi": "एमआईटी लाइसेंस" },
+      "title": {
+        "en": "MIT Licence",
+        "hi": "एमआईटी लाइसेंस"
+      },
       "url": "https://opensource.org/license/mit",
       "attribution": true,
       "redistribute": true
     },
     "ofl-1.1": {
-      "title": { "en": "SIL Open Font License 1.1", "hi": "एसआईएल ओपन फ़ॉन्ट लाइसेंस 1.1" },
+      "title": {
+        "en": "SIL Open Font License 1.1",
+        "hi": "एसआईएल ओपन फ़ॉन्ट लाइसेंस 1.1"
+      },
       "url": "https://openfontlicense.org/",
       "attribution": true,
       "redistribute": true
     },
     "no-redistribution": {
-      "title": { "en": "Redistribution not permitted", "hi": "पुनर्वितरण की अनुमति नहीं" },
+      "title": {
+        "en": "Redistribution not permitted",
+        "hi": "पुनर्वितरण की अनुमति नहीं"
+      },
       "url": "",
       "attribution": true,
       "redistribute": false
     },
     "unstated": {
-      "title": { "en": "No licence stated", "hi": "अनुज्ञप्ति घोषित नहीं" },
+      "title": {
+        "en": "No licence stated",
+        "hi": "अनुज्ञप्ति घोषित नहीं"
+      },
       "url": "",
       "attribution": true,
       "redistribute": false
+    },
+    "cc0-1.0": {
+      "title": {
+        "en": "CC0 1.0",
+        "hi": "सीसी0 1.0"
+      },
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "redistribute": true
     }
   },
-
   "_base": "Credited on every page, because they make the model itself rather than one layer of it.",
-  "base": ["datameet-maps", "survey-of-india", "aws-terrain-tiles", "natural-earth", "threejs", "yatra-one"],
-
+  "base": [
+    "datameet-maps",
+    "survey-of-india",
+    "aws-terrain-tiles",
+    "natural-earth",
+    "threejs",
+    "yatra-one"
+  ],
   "sources": {
     "datameet-maps": {
-      "title": { "en": "DataMeet India community maps", "hi": "डेटामीट भारत सामुदायिक मानचित्र" },
-      "publisher": { "en": "DataMeet", "hi": "डेटामीट" },
+      "title": {
+        "en": "DataMeet India community maps",
+        "hi": "डेटामीट भारत सामुदायिक मानचित्र"
+      },
+      "publisher": {
+        "en": "DataMeet",
+        "hi": "डेटामीट"
+      },
       "url": "https://github.com/datameet/maps",
       "use": "data",
       "licence": "cc-by-4.0",
@@ -73,8 +116,14 @@
       }
     },
     "survey-of-india": {
-      "title": { "en": "Survey of India", "hi": "भारतीय सर्वेक्षण विभाग" },
-      "publisher": { "en": "Survey of India", "hi": "भारतीय सर्वेक्षण विभाग" },
+      "title": {
+        "en": "Survey of India",
+        "hi": "भारतीय सर्वेक्षण विभाग"
+      },
+      "publisher": {
+        "en": "Survey of India",
+        "hi": "भारतीय सर्वेक्षण विभाग"
+      },
       "url": "https://onlinemaps.surveyofindia.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -84,8 +133,14 @@
       }
     },
     "aws-terrain-tiles": {
-      "title": { "en": "AWS Terrain Tiles", "hi": "एडब्ल्यूएस टेरेन टाइल्स" },
-      "publisher": { "en": "Amazon Web Services Open Data, from SRTM, GMTED2010 and ETOPO1", "hi": "अमेज़न वेब सर्विसेज़ ओपन डेटा; एसआरटीएम, जीएमटीईडी2010 और ईटोपो1 से" },
+      "title": {
+        "en": "AWS Terrain Tiles",
+        "hi": "एडब्ल्यूएस टेरेन टाइल्स"
+      },
+      "publisher": {
+        "en": "Amazon Web Services Open Data, from SRTM, GMTED2010 and ETOPO1",
+        "hi": "अमेज़न वेब सर्विसेज़ ओपन डेटा; एसआरटीएम, जीएमटीईडी2010 और ईटोपो1 से"
+      },
       "url": "https://registry.opendata.aws/terrain-tiles/",
       "use": "data",
       "licence": "terrain-tiles",
@@ -96,8 +151,14 @@
       }
     },
     "natural-earth": {
-      "title": { "en": "Natural Earth", "hi": "नैचुरल अर्थ" },
-      "publisher": { "en": "Natural Earth", "hi": "नैचुरल अर्थ" },
+      "title": {
+        "en": "Natural Earth",
+        "hi": "नैचुरल अर्थ"
+      },
+      "publisher": {
+        "en": "Natural Earth",
+        "hi": "नैचुरल अर्थ"
+      },
       "url": "https://www.naturalearthdata.com/downloads/",
       "use": "data",
       "licence": "public-domain",
@@ -108,8 +169,14 @@
       }
     },
     "census-2011": {
-      "title": { "en": "Census of India 2011", "hi": "भारत की जनगणना 2011" },
-      "publisher": { "en": "Office of the Registrar General and Census Commissioner, India", "hi": "महापंजीयक एवं जनगणना आयुक्त कार्यालय, भारत" },
+      "title": {
+        "en": "Census of India 2011",
+        "hi": "भारत की जनगणना 2011"
+      },
+      "publisher": {
+        "en": "Office of the Registrar General and Census Commissioner, India",
+        "hi": "महापंजीयक एवं जनगणना आयुक्त कार्यालय, भारत"
+      },
       "url": "https://censusindia.gov.in/census.website/data/census-tables",
       "use": "facts",
       "vintage": "2011",
@@ -120,8 +187,14 @@
       }
     },
     "cea-installed-capacity": {
-      "title": { "en": "CEA installed capacity report", "hi": "सीईए स्थापित क्षमता रिपोर्ट" },
-      "publisher": { "en": "Central Electricity Authority, Ministry of Power", "hi": "केंद्रीय विद्युत प्राधिकरण, विद्युत मंत्रालय" },
+      "title": {
+        "en": "CEA installed capacity report",
+        "hi": "सीईए स्थापित क्षमता रिपोर्ट"
+      },
+      "publisher": {
+        "en": "Central Electricity Authority, Ministry of Power",
+        "hi": "केंद्रीय विद्युत प्राधिकरण, विद्युत मंत्रालय"
+      },
       "url": "https://cea.nic.in/installed-capacity-report/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -131,8 +204,14 @@
       }
     },
     "imd": {
-      "title": { "en": "India Meteorological Department", "hi": "भारत मौसम विज्ञान विभाग" },
-      "publisher": { "en": "India Meteorological Department, Ministry of Earth Sciences", "hi": "भारत मौसम विज्ञान विभाग, पृथ्वी विज्ञान मंत्रालय" },
+      "title": {
+        "en": "India Meteorological Department",
+        "hi": "भारत मौसम विज्ञान विभाग"
+      },
+      "publisher": {
+        "en": "India Meteorological Department, Ministry of Earth Sciences",
+        "hi": "भारत मौसम विज्ञान विभाग, पृथ्वी विज्ञान मंत्रालय"
+      },
       "url": "https://mausam.imd.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -142,8 +221,14 @@
       }
     },
     "india-wris": {
-      "title": { "en": "India-WRIS", "hi": "भारत-WRIS" },
-      "publisher": { "en": "National Water Informatics Centre, Ministry of Jal Shakti", "hi": "राष्ट्रीय जल सूचना विज्ञान केंद्र, जल शक्ति मंत्रालय" },
+      "title": {
+        "en": "India-WRIS",
+        "hi": "भारत-WRIS"
+      },
+      "publisher": {
+        "en": "National Water Informatics Centre, Ministry of Jal Shakti",
+        "hi": "राष्ट्रीय जल सूचना विज्ञान केंद्र, जल शक्ति मंत्रालय"
+      },
       "url": "https://indiawris.gov.in/wris/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -153,8 +238,14 @@
       }
     },
     "ibm": {
-      "title": { "en": "Indian Minerals Yearbook", "hi": "भारतीय खनिज वार्षिकी" },
-      "publisher": { "en": "Indian Bureau of Mines, Ministry of Mines", "hi": "भारतीय खान ब्यूरो, खान मंत्रालय" },
+      "title": {
+        "en": "Indian Minerals Yearbook",
+        "hi": "भारतीय खनिज वार्षिकी"
+      },
+      "publisher": {
+        "en": "Indian Bureau of Mines, Ministry of Mines",
+        "hi": "भारतीय खान ब्यूरो, खान मंत्रालय"
+      },
       "url": "https://ibm.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -164,8 +255,14 @@
       }
     },
     "gsi": {
-      "title": { "en": "Geological Survey of India", "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण" },
-      "publisher": { "en": "Geological Survey of India, Ministry of Mines", "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण, खान मंत्रालय" },
+      "title": {
+        "en": "Geological Survey of India",
+        "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण"
+      },
+      "publisher": {
+        "en": "Geological Survey of India, Ministry of Mines",
+        "hi": "भारतीय भूवैज्ञानिक सर्वेक्षण, खान मंत्रालय"
+      },
       "url": "https://www.gsi.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -175,8 +272,14 @@
       }
     },
     "ministry-of-steel": {
-      "title": { "en": "Ministry of Steel", "hi": "इस्पात मंत्रालय" },
-      "publisher": { "en": "Ministry of Steel, Government of India", "hi": "इस्पात मंत्रालय, भारत सरकार" },
+      "title": {
+        "en": "Ministry of Steel",
+        "hi": "इस्पात मंत्रालय"
+      },
+      "publisher": {
+        "en": "Ministry of Steel, Government of India",
+        "hi": "इस्पात मंत्रालय, भारत सरकार"
+      },
       "url": "https://steel.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -186,8 +289,14 @@
       }
     },
     "morth": {
-      "title": { "en": "Ministry of Road Transport and Highways", "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय" },
-      "publisher": { "en": "Ministry of Road Transport and Highways", "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय" },
+      "title": {
+        "en": "Ministry of Road Transport and Highways",
+        "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय"
+      },
+      "publisher": {
+        "en": "Ministry of Road Transport and Highways",
+        "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय"
+      },
       "url": "https://morth.nic.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -197,8 +306,14 @@
       }
     },
     "indian-railways": {
-      "title": { "en": "Indian Railways zonal publications", "hi": "भारतीय रेल के क्षेत्रीय प्रकाशन" },
-      "publisher": { "en": "Indian Railways, Ministry of Railways", "hi": "भारतीय रेल, रेल मंत्रालय" },
+      "title": {
+        "en": "Indian Railways zonal publications",
+        "hi": "भारतीय रेल के क्षेत्रीय प्रकाशन"
+      },
+      "publisher": {
+        "en": "Indian Railways, Ministry of Railways",
+        "hi": "भारतीय रेल, रेल मंत्रालय"
+      },
       "url": "https://indianrailways.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -208,8 +323,14 @@
       }
     },
     "mha-inter-state-council": {
-      "title": { "en": "Inter-State Council Secretariat", "hi": "अंतर-राज्य परिषद सचिवालय" },
-      "publisher": { "en": "Ministry of Home Affairs", "hi": "गृह मंत्रालय" },
+      "title": {
+        "en": "Inter-State Council Secretariat",
+        "hi": "अंतर-राज्य परिषद सचिवालय"
+      },
+      "publisher": {
+        "en": "Ministry of Home Affairs",
+        "hi": "गृह मंत्रालय"
+      },
       "url": "https://www.mha.gov.in/en/divisionofmha/inter-state-council-division",
       "use": "facts",
       "retrieved": "2026-09",
@@ -219,8 +340,14 @@
       }
     },
     "north-eastern-council": {
-      "title": { "en": "North Eastern Council", "hi": "उत्तर पूर्वी परिषद" },
-      "publisher": { "en": "North Eastern Council, Ministry of Development of North Eastern Region", "hi": "उत्तर पूर्वी परिषद, उत्तर पूर्वी क्षेत्र विकास मंत्रालय" },
+      "title": {
+        "en": "North Eastern Council",
+        "hi": "उत्तर पूर्वी परिषद"
+      },
+      "publisher": {
+        "en": "North Eastern Council, Ministry of Development of North Eastern Region",
+        "hi": "उत्तर पूर्वी परिषद, उत्तर पूर्वी क्षेत्र विकास मंत्रालय"
+      },
       "url": "https://necouncil.gov.in/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -230,8 +357,14 @@
       }
     },
     "unesco-world-heritage": {
-      "title": { "en": "UNESCO World Heritage List", "hi": "यूनेस्को विश्व विरासत सूची" },
-      "publisher": { "en": "UNESCO World Heritage Centre", "hi": "यूनेस्को विश्व विरासत केंद्र" },
+      "title": {
+        "en": "UNESCO World Heritage List",
+        "hi": "यूनेस्को विश्व विरासत सूची"
+      },
+      "publisher": {
+        "en": "UNESCO World Heritage Centre",
+        "hi": "यूनेस्को विश्व विरासत केंद्र"
+      },
       "url": "https://whc.unesco.org/en/statesparties/in",
       "use": "facts",
       "retrieved": "2026-09",
@@ -241,8 +374,14 @@
       }
     },
     "unesco-ich": {
-      "title": { "en": "UNESCO Intangible Cultural Heritage lists", "hi": "यूनेस्को अमूर्त सांस्कृतिक विरासत सूचियाँ" },
-      "publisher": { "en": "UNESCO", "hi": "यूनेस्को" },
+      "title": {
+        "en": "UNESCO Intangible Cultural Heritage lists",
+        "hi": "यूनेस्को अमूर्त सांस्कृतिक विरासत सूचियाँ"
+      },
+      "publisher": {
+        "en": "UNESCO",
+        "hi": "यूनेस्को"
+      },
       "url": "https://ich.unesco.org/en/state/india-IN",
       "use": "facts",
       "retrieved": "2026-09",
@@ -252,8 +391,14 @@
       }
     },
     "iers-conventions": {
-      "title": { "en": "IERS Conventions (2010)", "hi": "आईईआरएस परिपाटियाँ (2010)" },
-      "publisher": { "en": "International Earth Rotation and Reference Systems Service", "hi": "अंतर्राष्ट्रीय पृथ्वी घूर्णन एवं संदर्भ प्रणाली सेवा" },
+      "title": {
+        "en": "IERS Conventions (2010)",
+        "hi": "आईईआरएस परिपाटियाँ (2010)"
+      },
+      "publisher": {
+        "en": "International Earth Rotation and Reference Systems Service",
+        "hi": "अंतर्राष्ट्रीय पृथ्वी घूर्णन एवं संदर्भ प्रणाली सेवा"
+      },
       "url": "https://www.iers.org/IERS/EN/Publications/TechnicalNotes/tn36.html",
       "use": "facts",
       "retrieved": "2026-09",
@@ -263,8 +408,14 @@
       }
     },
     "npl-india": {
-      "title": { "en": "Indian Standard Time", "hi": "भारतीय मानक समय" },
-      "publisher": { "en": "CSIR-National Physical Laboratory, India", "hi": "सीएसआईआर-राष्ट्रीय भौतिक प्रयोगशाला, भारत" },
+      "title": {
+        "en": "Indian Standard Time",
+        "hi": "भारतीय मानक समय"
+      },
+      "publisher": {
+        "en": "CSIR-National Physical Laboratory, India",
+        "hi": "सीएसआईआर-राष्ट्रीय भौतिक प्रयोगशाला, भारत"
+      },
       "url": "https://www.nplindia.org/index.php/indian-standard-time/",
       "use": "facts",
       "retrieved": "2026-09",
@@ -274,8 +425,14 @@
       }
     },
     "wikipedia": {
-      "title": { "en": "Wikipedia", "hi": "विकिपीडिया" },
-      "publisher": { "en": "Wikimedia Foundation and contributors", "hi": "विकिमीडिया फ़ाउंडेशन और योगदानकर्ता" },
+      "title": {
+        "en": "Wikipedia",
+        "hi": "विकिपीडिया"
+      },
+      "publisher": {
+        "en": "Wikimedia Foundation and contributors",
+        "hi": "विकिमीडिया फ़ाउंडेशन और योगदानकर्ता"
+      },
       "url": "https://en.wikipedia.org/",
       "use": "facts",
       "licence": "cc-by-sa-4.0",
@@ -286,8 +443,14 @@
       }
     },
     "threejs": {
-      "title": { "en": "three.js", "hi": "three.js" },
-      "publisher": { "en": "three.js contributors", "hi": "three.js योगदानकर्ता" },
+      "title": {
+        "en": "three.js",
+        "hi": "three.js"
+      },
+      "publisher": {
+        "en": "three.js contributors",
+        "hi": "three.js योगदानकर्ता"
+      },
       "url": "https://threejs.org/",
       "use": "software",
       "licence": "mit",
@@ -298,8 +461,14 @@
       }
     },
     "yatra-one": {
-      "title": { "en": "Yatra One", "hi": "यात्रा वन" },
-      "publisher": { "en": "Catherine Leigh Schmidt", "hi": "कैथरीन ली श्मिट" },
+      "title": {
+        "en": "Yatra One",
+        "hi": "यात्रा वन"
+      },
+      "publisher": {
+        "en": "Catherine Leigh Schmidt",
+        "hi": "कैथरीन ली श्मिट"
+      },
       "url": "https://fonts.google.com/specimen/Yatra+One",
       "use": "software",
       "licence": "ofl-1.1",
@@ -309,11 +478,16 @@
         "hi": "शीर्षक का अक्षरांकन, जो देवनागरी और रोमन को एक ही हाथ से लिखता है।"
       }
     },
-
     "_blocked": "Looked at, and not usable. These exist so the next person reaches for them and the build says why not (PLAN.md open question 13).",
     "worldclim": {
-      "title": { "en": "WorldClim 2.1 climate normals", "hi": "वर्ल्डक्लिम 2.1 जलवायु सामान्य" },
-      "publisher": { "en": "WorldClim", "hi": "वर्ल्डक्लिम" },
+      "title": {
+        "en": "WorldClim 2.1 climate normals",
+        "hi": "वर्ल्डक्लिम 2.1 जलवायु सामान्य"
+      },
+      "publisher": {
+        "en": "WorldClim",
+        "hi": "वर्ल्डक्लिम"
+      },
       "url": "https://www.worldclim.org/data/worldclim21.html",
       "use": "blocked",
       "licence": "no-redistribution",
@@ -324,8 +498,14 @@
       }
     },
     "chirps": {
-      "title": { "en": "CHIRPS rainfall estimates", "hi": "चर्प्स वर्षा आकलन" },
-      "publisher": { "en": "Climate Hazards Center, University of California, Santa Barbara", "hi": "क्लाइमेट हैज़र्ड्स सेंटर, कैलिफ़ोर्निया विश्वविद्यालय, सांता बारबरा" },
+      "title": {
+        "en": "CHIRPS rainfall estimates",
+        "hi": "चर्प्स वर्षा आकलन"
+      },
+      "publisher": {
+        "en": "Climate Hazards Center, University of California, Santa Barbara",
+        "hi": "क्लाइमेट हैज़र्ड्स सेंटर, कैलिफ़ोर्निया विश्वविद्यालय, सांता बारबरा"
+      },
       "url": "https://www.chc.ucsb.edu/data/chirps",
       "use": "blocked",
       "licence": "unstated",
@@ -333,6 +513,59 @@
       "note": {
         "en": "Widely treated as open and very likely is, but the distribution carries a citation request and no licence statement we could read. Find the primary statement before using it.",
         "hi": "व्यापक रूप से मुक्त माना जाता है और बहुत संभव है कि हो, पर वितरण के साथ संदर्भ का अनुरोध है और कोई पठनीय अनुज्ञप्ति कथन नहीं। उपयोग से पहले मूल कथन खोजें।"
+      }
+    },
+    "geonames": {
+      "title": {
+        "en": "GeoNames",
+        "hi": "जियोनेम्स"
+      },
+      "publisher": {
+        "en": "GeoNames",
+        "hi": "जियोनेम्स"
+      },
+      "url": "https://www.geonames.org/",
+      "use": "data",
+      "licence": "cc-by-4.0",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Every town of 15,000 people or more, with its position and population; the population figures for India are mostly the 2011 census's. The biggest towns of each state come from here, checked one by one against Wikidata.",
+        "hi": "15,000 या अधिक जनसंख्या वाला हर नगर, उसकी स्थिति और जनसंख्या सहित; भारत के आँकड़े अधिकतर 2011 की जनगणना के हैं। हर राज्य के सबसे बड़े नगर यहीं से हैं, एक-एक कर विकिडेटा से जाँचे हुए।"
+      }
+    },
+    "wikidata": {
+      "title": {
+        "en": "Wikidata",
+        "hi": "विकिडेटा"
+      },
+      "publisher": {
+        "en": "Wikimedia Foundation",
+        "hi": "विकिमीडिया फ़ाउंडेशन"
+      },
+      "url": "https://www.wikidata.org/",
+      "use": "data",
+      "licence": "cc0-1.0",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Hindi names and, where it has them, populations of the towns GeoNames lists; and the check that a row filed under a town's name is a town at all.",
+        "hi": "जियोनेम्स के नगरों के हिंदी नाम और, जहाँ हों, जनसंख्या; और यह जाँच कि किसी नगर के नाम पर दर्ज पंक्ति सचमुच नगर है।"
+      }
+    },
+    "gi-registry": {
+      "title": {
+        "en": "Geographical Indications Registry",
+        "hi": "भौगोलिक संकेतक रजिस्ट्री"
+      },
+      "publisher": {
+        "en": "Intellectual Property India, Chennai",
+        "hi": "बौद्धिक संपदा भारत, चेन्नई"
+      },
+      "url": "https://search.ipindia.gov.in/GIRPublic/",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The register of every geographical indication granted in India: what is protected, for whom, and the journal year it was registered in.",
+        "hi": "भारत में दिए गए हर भौगोलिक संकेतक का रजिस्टर: क्या संरक्षित है, किसके लिए, और किस पत्रिका-वर्ष में पंजीकृत हुआ।"
       }
     }
   }

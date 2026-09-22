@@ -1,0 +1,30 @@
+{
+ "id": "laddu",
+ "footprint": 10,
+ "parts": [
+  {
+   "shape": "cylinder",
+   "rt": 10,
+   "rb": 10,
+   "h": 0.8,
+   "at": [
+    0,
+    0.4,
+    0
+   ],
+   "color": "#6f8a4a",
+   "segments": 16
+  },
+  {
+   "shape": "sphere",
+   "r": 7,
+   "at": [
+    0,
+    7.6,
+    0
+   ],
+   "color": "#e0912f",
+   "segments": 8
+  }
+ ]
+}

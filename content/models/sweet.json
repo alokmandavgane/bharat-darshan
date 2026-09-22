@@ -1,0 +1,66 @@
+{
+ "id": "sweet",
+ "footprint": 10,
+ "parts": [
+  {
+   "shape": "lathe",
+   "profile": [
+    [
+     0,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     8.5,
+     3
+    ],
+    [
+     9.5,
+     6
+    ],
+    [
+     9.5,
+     7
+    ]
+   ],
+   "color": "#b96b3a",
+   "segments": 14
+  },
+  {
+   "shape": "sphere",
+   "r": 3.2,
+   "at": [
+    -3.2,
+    8.5,
+    1.5
+   ],
+   "color": "#f6efe2",
+   "segments": 10
+  },
+  {
+   "shape": "sphere",
+   "r": 3.2,
+   "at": [
+    3.2,
+    8.5,
+    1.5
+   ],
+   "color": "#f6efe2",
+   "segments": 10
+  },
+  {
+   "shape": "sphere",
+   "r": 3.2,
+   "at": [
+    0,
+    8.8,
+    -2.8
+   ],
+   "color": "#f6efe2",
+   "segments": 10
+  }
+ ]
+}

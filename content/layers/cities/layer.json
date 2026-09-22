@@ -1,7 +1,7 @@
 {
   "id": "cities",
   "type": "points",
-  "marker": "symbol",
+  "marker": "dot",
   "group": "culture",
   "title": {
     "en": "Cities",
@@ -10,31 +10,75 @@
   "icon": "city",
   "default_on": false,
   "categories": [
-    { "id": "national", "icon": "city", "color": "#b5432f", "title": { "en": "National capital",       "hi": "राष्ट्रीय राजधानी" } },
-    { "id": "capital",  "icon": "city", "color": "#c98a3c", "title": { "en": "State or UT capital",    "hi": "राज्य या केंद्रशासित प्रदेश की राजधानी" } },
-    { "id": "city",     "icon": "city", "color": "#6e7f8c", "title": { "en": "City",                   "hi": "नगर" } }
+    {
+      "id": "national",
+      "icon": "city",
+      "color": "#b5432f",
+      "title": {
+        "en": "National capital",
+        "hi": "राष्ट्रीय राजधानी"
+      }
+    },
+    {
+      "id": "capital",
+      "icon": "city",
+      "color": "#c98a3c",
+      "title": {
+        "en": "State or UT capital",
+        "hi": "राज्य या केंद्रशासित प्रदेश की राजधानी"
+      }
+    },
+    {
+      "id": "city",
+      "icon": "city",
+      "color": "#6e7f8c",
+      "title": {
+        "en": "City",
+        "hi": "नगर"
+      }
+    }
   ],
   "fields": {
-    "population_2011": {
+    "population": {
       "type": "int",
       "required": true,
-      "label": { "en": "Population (2011 Census)", "hi": "जनसंख्या (2011 जनगणना)" }
+      "label": {
+        "en": "Population",
+        "hi": "जनसंख्या"
+      }
     }
   },
   "size": {
-    "field": "population_2011",
-    "domain": [1100000, 12500000],
-    "range": [10, 40],
-    "legend": [1500000, 5000000, 12000000]
+    "field": "population",
+    "domain": [
+      40000,
+      12500000
+    ],
+    "range": [
+      1.6,
+      6.5
+    ],
+    "legend": [
+      100000,
+      1000000,
+      10000000
+    ]
   },
   "note": {
-    "en": "The thirty largest municipal corporations at the 2011 census, which is the last one taken. A corporation is not a metropolis: Mumbai's built-up area holds far more people than its own city limits, and Delhi, Thane and Vasai-Virar are all parts of larger conurbations.",
-    "hi": "2011 की जनगणना — अंतिम हुई जनगणना — के अनुसार तीस सबसे बड़ी नगर निगम सीमाएँ। निगम महानगर नहीं होता: मुंबई के बसे क्षेत्र में उसकी नगर सीमा से कहीं अधिक लोग रहते हैं, और दिल्ली, ठाणे तथा वसई-विरार सब बड़े नगरपुंजों के हिस्से हैं।"
+    "en": "Every state's ten biggest towns, a bead the size of a pinhead each, its area carrying the population. The thirty largest have their own cards; the rest come from GeoNames, checked against Wikidata, with figures that are mostly the 2011 census's. A town is its municipal limits, not its conurbation.",
+    "hi": "हर राज्य के दस सबसे बड़े नगर, हर एक पिन-सिरे जितना मनका, जिसका क्षेत्रफल जनसंख्या दर्शाता है। तीस सबसे बड़ों के अपने कार्ड हैं; बाक़ी जियोनेम्स से, विकिडेटा से जाँचे हुए, आँकड़े अधिकतर 2011 की जनगणना के। नगर उसकी निगम-सीमा है, नगरपुंज नहीं।"
   },
   "sources": [
     "census-2011",
+    "geonames",
+    "wikidata",
     "wikipedia"
   ],
-  "attribution": "Municipal-corporation populations from the 2011 Census of India, as tabulated on Wikipedia's list of Indian cities by population; capitals and descriptions checked against each city's own article.",
-  "_size": "A circle's area carries the population, so the sizer takes the square root of the value: twice the circle for four times the people. The engine reads size.field and this layer's own domain, never its name."
+  "attribution": "The thirty largest municipal corporations at the 2011 census are curated by hand; every state's ten biggest towns are generated from GeoNames cities15000, placed by the ID raster, and kept only when Wikidata has the town with a Hindi name and confirms it is a town rather than a district filed under one.",
+  "source": {
+    "format": "geonames",
+    "top_per_region": 10,
+    "min_population": 30000
+  },
+  "_source": "top_per_region and min_population are the generator's knobs; a curated item with the same name in the same state replaces the generated row. The engine reads marker and size, never this layer's name."
 }

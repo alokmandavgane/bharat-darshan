@@ -1,0 +1,19 @@
+{
+  "id": "gi-tags",
+  "section": "culture",
+  "order": 2,
+  "title": {
+    "en": "Made here",
+    "hi": "यहीं की पहचान"
+  },
+  "blurb": {
+    "en": "What a place is known for making: a figurine stands where each registered product comes from. Tea on the Darjeeling hills, silk at Kanchipuram, saffron at Pampore; the first GI India granted, and thirty-odd of the several hundred since.",
+    "hi": "कोई जगह क्या बनाने के लिए जानी जाती है: हर पंजीकृत उत्पाद के मूल स्थान पर एक मूर्ति खड़ी है। दार्जिलिंग की पहाड़ियों पर चाय, कांचीपुरम और सुआलकुची में रेशम, पंपोर में केसर; पहला दिया गया जीआई और तब से कई सौ में से तीस-एक।"
+  },
+  "base": "plain",
+  "layers": [
+    "gi-tags"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

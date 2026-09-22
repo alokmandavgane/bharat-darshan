@@ -1,0 +1,133 @@
+{
+ "id": "cardamom",
+ "footprint": 6,
+ "parts": [
+  {
+   "shape": "cylinder",
+   "rt": 0.6,
+   "rb": 0.9,
+   "h": 14,
+   "at": [
+    0,
+    7,
+    0
+   ],
+   "rot": [
+    0,
+    0,
+    -10
+   ],
+   "color": "#8a7a4a"
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "scale": [
+    1,
+    1.5,
+    1
+   ],
+   "at": [
+    2,
+    13,
+    0
+   ],
+   "rot": [
+    0,
+    0,
+    20
+   ],
+   "color": "#4a3428",
+   "tint": true,
+   "segments": 8
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "scale": [
+    1,
+    1.5,
+    1
+   ],
+   "at": [
+    -1.5,
+    11,
+    2
+   ],
+   "rot": [
+    0,
+    0,
+    20
+   ],
+   "color": "#4a3428",
+   "tint": true,
+   "segments": 8
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "scale": [
+    1,
+    1.5,
+    1
+   ],
+   "at": [
+    3,
+    9,
+    -2
+   ],
+   "rot": [
+    0,
+    0,
+    20
+   ],
+   "color": "#4a3428",
+   "tint": true,
+   "segments": 8
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "scale": [
+    1,
+    1.5,
+    1
+   ],
+   "at": [
+    -2.5,
+    7,
+    -1
+   ],
+   "rot": [
+    0,
+    0,
+    20
+   ],
+   "color": "#4a3428",
+   "tint": true,
+   "segments": 8
+  },
+  {
+   "shape": "sphere",
+   "r": 2.6,
+   "scale": [
+    1,
+    1.5,
+    1
+   ],
+   "at": [
+    1.5,
+    5,
+    2.5
+   ],
+   "rot": [
+    0,
+    0,
+    20
+   ],
+   "color": "#4a3428",
+   "tint": true,
+   "segments": 8
+  }
+ ]
+}

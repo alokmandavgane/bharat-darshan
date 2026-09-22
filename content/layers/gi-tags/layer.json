@@ -1,0 +1,69 @@
+{
+  "id": "gi-tags",
+  "type": "points",
+  "marker": "model",
+  "group": "culture",
+  "title": {
+    "en": "Made here: GI tags",
+    "hi": "यहीं की पहचान: जीआई टैग"
+  },
+  "icon": "tag",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "produce",
+      "icon": "leaf",
+      "color": "#6f8f4a",
+      "title": {
+        "en": "Grown here",
+        "hi": "यहाँ उगाया"
+      }
+    },
+    {
+      "id": "textile",
+      "icon": "tag",
+      "color": "#a83259",
+      "title": {
+        "en": "Woven here",
+        "hi": "यहाँ बुना"
+      }
+    },
+    {
+      "id": "craft",
+      "icon": "gem",
+      "color": "#3b6fa8",
+      "title": {
+        "en": "Made here",
+        "hi": "यहाँ गढ़ा"
+      }
+    },
+    {
+      "id": "food",
+      "icon": "tag",
+      "color": "#c98a3c",
+      "title": {
+        "en": "Cooked here",
+        "hi": "यहाँ पकाया"
+      }
+    }
+  ],
+  "fields": {
+    "registered": {
+      "type": "text",
+      "label": {
+        "en": "Registered (GI journal year)",
+        "hi": "पंजीकृत (जीआई पत्रिका-वर्ष)"
+      }
+    }
+  },
+  "note": {
+    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. Each figurine stands where the registered product comes from; India has granted several hundred, and these are a first few.",
+    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। हर मूर्ति वहीं खड़ी है जहाँ से पंजीकृत उत्पाद आता है; भारत ने कई सौ दिए हैं, ये पहले कुछ हैं।"
+  },
+  "sources": [
+    "gi-registry",
+    "wikipedia"
+  ],
+  "attribution": "Products, places and journal years drafted from the GI Registry's public search and each product's Wikipedia article; every item awaits review. The figurines are recipes under content/models, one per kind of thing, tinted per item.",
+  "_model": "Each item names a recipe from content/models (or inherits its category's); `color` tints the parts the recipe marks tintable, so one saree serves four silks."
+}

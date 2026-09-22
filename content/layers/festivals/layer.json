@@ -2,19 +2,53 @@
   "id": "festivals",
   "type": "regional",
   "group": "culture",
-  "title": { "en": "Festivals", "hi": "त्योहार" },
+  "title": {
+    "en": "Festivals",
+    "hi": "त्योहार"
+  },
   "icon": "temple",
   "default_on": false,
   "categories": [
-    { "id": "harvest", "title": { "en": "Harvest", "hi": "फ़सल" }, "color": "#b9893f" },
-    { "id": "devotional", "title": { "en": "Devotional", "hi": "धार्मिक" }, "color": "#a8503a" },
-    { "id": "seasonal", "title": { "en": "New year and season", "hi": "नववर्ष और ऋतु" }, "color": "#5f8a5a" },
-    { "id": "fair", "title": { "en": "Fair and gathering", "hi": "मेला" }, "color": "#4d7f97" }
+    {
+      "id": "harvest",
+      "title": {
+        "en": "Harvest",
+        "hi": "फ़सल"
+      },
+      "color": "#b9893f"
+    },
+    {
+      "id": "devotional",
+      "title": {
+        "en": "Devotional",
+        "hi": "धार्मिक"
+      },
+      "color": "#a8503a"
+    },
+    {
+      "id": "seasonal",
+      "title": {
+        "en": "New year and season",
+        "hi": "नववर्ष और ऋतु"
+      },
+      "color": "#5f8a5a"
+    },
+    {
+      "id": "fair",
+      "title": {
+        "en": "Fair and gathering",
+        "hi": "मेला"
+      },
+      "color": "#4d7f97"
+    }
   ],
   "fields": {
     "month": {
       "type": "month",
-      "label": { "en": "Usually in", "hi": "प्रायः" }
+      "label": {
+        "en": "Usually in",
+        "hi": "प्रायः"
+      }
     }
   },
   "sources": [
@@ -22,5 +56,6 @@
     "unesco-ich"
   ],
   "attribution": "Festival dates follow the lunar and solar calendars and move from year to year; the month given is the one each usually falls in. Every item is drafted from the sources it lists and awaits review.",
-  "_regions": "The states and union territories that keep it, or \"*\" for one kept the country over."
+  "_regions": "The states and union territories that keep it, or \"*\" for one kept the country over.",
+  "_anchor": "The one place a festival is most seen at -- Onam at Thrissur, the Hornbill at Kisama -- so the map has somewhere to draw it. It must fall in one of the item's regions, or anywhere in India for one kept the country over."
 }
