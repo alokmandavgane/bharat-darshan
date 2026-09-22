@@ -12,6 +12,7 @@ uniform vec3 uRankPx;        // half-width in pixels for rank 1, 2, 3
 uniform vec3 uRankZoom;      // view height (km) below which each rank appears
 uniform float uZoom;
 uniform float uSelectedIdx;  // index of the highlighted item, or -1
+uniform vec2 uGrid;          // quads across and down in the mesh this copy is drawn on
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
@@ -41,8 +42,23 @@ float byRank(vec3 v) {
 
 void main() {
   vUv = vec2(position.x / uSizeKm.x + 0.5, position.z / uSizeKm.y + 0.5);
+  // On the surface the mesh *draws*, not the raster it samples. The mesh lifts its own
+  // vertices and the rasteriser interpolates between them, so in a valley -- which is
+  // where a river is, and where a road follows it -- the drawn ground sits above the
+  // height at the point itself. At the low tier's 256 grid that buries half of every
+  // river; at the high tier's 1024 the grid is the raster and this is a no-op. The
+  // marker shader does the same thing for the same reason.
+  vec2 g = luv(vUv) * uGrid;
+  vec2 i0 = floor(g);
+  vec2 f = g - i0;
+  vec2 a = i0 / uGrid, b = (i0 + 1.0) / uGrid;
+  float h00 = lift(texture(uHeight, a).r);
+  float h10 = lift(texture(uHeight, vec2(b.x, a.y)).r);
+  float h01 = lift(texture(uHeight, vec2(a.x, b.y)).r);
+  float h11 = lift(texture(uHeight, b).r);
+  float ground = mix(mix(h00, h10, f.x), mix(h01, h11, f.x), f.y);
   // A hair above the surface: enough to beat z-fighting, far below anything the eye reads.
-  float y = lift(texture(uHeight, luv(vUv)).r) + uLift + 0.15;
+  float y = ground + uLift + 0.15;
   vec4 clip = projectionMatrix * modelViewMatrix * vec4(position.x, y, position.z, 1.0);
   vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y, position.z + dir.y, 1.0);
 

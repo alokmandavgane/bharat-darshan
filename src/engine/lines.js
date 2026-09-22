@@ -127,7 +127,7 @@ function segDist2(x, z, ax, az, bx, bz) {
  *   instead was the first try and does not hold: something taller always comes along,
  *   and the arrows over the Western Ghats were sawn into fragments.
  */
-function lineMaterial(surface, onBlock, flow, float_ = false) {
+function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 1024, rows: 1024 }) {
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
     transparent: true, depthWrite: false, depthTest: !float_, side: DoubleSide, premultipliedAlpha: true,
@@ -140,6 +140,7 @@ function lineMaterial(surface, onBlock, flow, float_ = false) {
       uRankPx: { value: new Vector3(...RANK_PX) },
       uRankZoom: { value: new Vector3(...RANK_ZOOM) },
       uZoom: { value: 3000 },
+      uGrid: { value: new Vector2(grid.cols, grid.rows) },
       uSelectedIdx: { value: -1 },
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
@@ -154,11 +155,12 @@ function lineMaterial(surface, onBlock, flow, float_ = false) {
  * and once more on the lifted block when there is one, so each surface shows the part of
  * a run that belongs to it.
  */
-export function createLines(scene, terrainUniforms) {
+export function createLines(scene, terrainUniforms, terrainGrid) {
   /** @type {Map<string, { geometry: any, records: any[], plate: any, block: any }>} */
   const layers = new Map();
   let active = new Set();
   let blockUniforms = null;
+  let blockGrid = null;
   let liftedId = -1;
   let selected = null;
   const view = { w: 1, h: 1, zoom: 3000 };
@@ -183,7 +185,7 @@ export function createLines(scene, terrainUniforms) {
   function setBlockMesh(entry) {
     if (entry.block) { scene.remove(entry.block); entry.block.material.dispose(); entry.block = null; }
     if (!blockUniforms) return;
-    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float));
+    const mesh = new Mesh(entry.geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -197,7 +199,7 @@ export function createLines(scene, terrainUniforms) {
       this.remove(data.id);
       const { geometry, records } = linesGeometry(data);
       const flow = !!data.flow;
-      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float));
+      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float, terrainGrid));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
@@ -217,7 +219,8 @@ export function createLines(scene, terrainUniforms) {
       }
     },
     /** The lifted block's surface, or null back at country level. */
-    setBlock(uniforms, id) {
+    setBlock(uniforms, id, grid = null) {
+      blockGrid = grid;
       blockUniforms = uniforms;
       liftedId = uniforms ? id : -1;
       for (const entry of layers.values()) setBlockMesh(entry);

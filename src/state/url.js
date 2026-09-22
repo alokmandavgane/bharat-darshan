@@ -48,6 +48,8 @@ export function readUrl(loc = location) {
   };
 }
 
+const PASS_THROUGH = ['quality', 'poster'];
+
 export function buildUrl({ lang, view = null, plate = null, state = null, layers = null, item = null,
                            month = null, relief, cam = null, drafts = false }) {
   // A state view is a page inside a plate, so a link can carry both: /en/atlas/rivers
@@ -62,6 +64,15 @@ export function buildUrl({ lang, view = null, plate = null, state = null, layers
   if (relief !== undefined && relief !== DEFAULT_RELIEF) q.set('relief', String(relief));
   if (cam) q.set('cam', [cam.x.toFixed(0), cam.z.toFixed(0), cam.zoom.toFixed(0), cam.yaw.toFixed(1), cam.pitch.toFixed(1)].join(','));
   if (drafts) q.set('drafts', '1');
+  // The knobs that are not view state and are not ours to throw away: a forced quality
+  // tier is how the model is tested on a device (CLAUDE.md), and the poster flag is how
+  // the share images are rendered. Both are read straight from location.search by code
+  // that runs after the first write of this URL, so dropping them here switched them off
+  // the moment anything moved.
+  for (const key of PASS_THROUGH) {
+    const v = new URLSearchParams(location.search).get(key);
+    if (v !== null) q.set(key, v);
+  }
   // Commas and colons are legal in a query and read far better in a link people paste to
   // each other than %2C and %3A do; they come back through URLSearchParams unchanged.
   const s = q.toString().replace(/%2C/g, ',').replace(/%3A/g, ':');

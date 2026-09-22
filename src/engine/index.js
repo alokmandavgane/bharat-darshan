@@ -653,7 +653,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const idsH = fine ? fine.height : terrain.uniforms.uIds.value.image.height;
     block = createBlock({ unit, material: terrain.siblingMaterial(), sizeKm, idsTexture: fine?.texture, idsTexel: [1 / idsW, 1 / idsH] });
     scene.add(block.group);
-    lines?.setBlock(block.material.uniforms, unit.id);
+    lines?.setBlock(block.material.uniforms, unit.id, block.grid);
     raised = { id: unit.id, km: 0 };
     terrain.uniforms.uHole.value = unit.id;
     localKmPerPx = 0;
@@ -926,7 +926,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     tierIds = first;
     publishBounds();                      // the mask needs the raster, which only exists now
     scene.add(terrain.mesh);
-    lines = createLines(scene, terrain.uniforms);
+    lines = createLines(scene, terrain.uniforms, terrain.grid);
     marks = createMarks(scene, terrain.uniforms, { grid: terrain.grid, loadRecipe: (name) => loadJson(`models/${name}.json`) });
     // The default layers are small and usually land before the first tier does, so they
     // were handed to points.js with no GPU to draw them yet: hand them over now.
