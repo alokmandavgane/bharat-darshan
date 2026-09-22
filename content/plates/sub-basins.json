@@ -1,0 +1,20 @@
+{
+  "id": "sub-basins",
+  "section": "physical",
+  "order": 5,
+  "title": {
+    "en": "River sub-basins",
+    "hi": "नदी उप-बेसिन"
+  },
+  "blurb": {
+    "en": "The 25 basins cut into the 99 parts the country's water is managed by. The Ganga alone is nineteen of them: the Yamuna in three, the Chambal in two, the Son, the Kosi, the Gomti, the Damodar and the rest.",
+    "hi": "25 बेसिन उन 99 भागों में बँटे जिनसे देश के पानी का प्रबंधन होता है। अकेली गंगा उनमें उन्नीस है: यमुना तीन में, चंबल दो में, सोन, कोसी, गोमती, दामोदर और बाक़ी।"
+  },
+  "base": "plain",
+  "layers": [
+    "sub-basins",
+    "rivers"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

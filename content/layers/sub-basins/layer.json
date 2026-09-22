@@ -1,0 +1,95 @@
+{
+  "id": "sub-basins",
+  "type": "areas",
+  "group": "physical",
+  "title": {
+    "en": "River sub-basins",
+    "hi": "नदी उप-बेसिन"
+  },
+  "icon": "wave",
+  "default_on": false,
+  "source": {
+    "format": "pmtiles-polygon",
+    "files": {
+      "wris_subbasin.pmtiles": "https://github.com/ramSeraph/indian_water_features/releases/download/hydro-boundaries/WRIS_SubBasin.pmtiles"
+    },
+    "zoom": 8,
+    "match": "sub_basin"
+  },
+  "categories": [
+    {
+      "id": "himalayan-bay",
+      "color": "#5f8fb0",
+      "title": {
+        "en": "To the Bay of Bengal, from the Himalaya",
+        "hi": "हिमालय से बंगाल की खाड़ी तक"
+      }
+    },
+    {
+      "id": "peninsular-bay",
+      "color": "#8db39a",
+      "title": {
+        "en": "To the Bay of Bengal, across the peninsula",
+        "hi": "प्रायद्वीप पार कर बंगाल की खाड़ी तक"
+      }
+    },
+    {
+      "id": "himalayan-arabian",
+      "color": "#b98f5e",
+      "title": {
+        "en": "To the Arabian Sea, from the Himalaya",
+        "hi": "हिमालय से अरब सागर तक"
+      }
+    },
+    {
+      "id": "peninsular-arabian",
+      "color": "#d0a86e",
+      "title": {
+        "en": "To the Arabian Sea, from the west of the peninsula",
+        "hi": "प्रायद्वीप के पश्चिम से अरब सागर तक"
+      }
+    },
+    {
+      "id": "inland",
+      "color": "#d9c793",
+      "title": {
+        "en": "Never reaches the sea",
+        "hi": "समुद्र तक कभी नहीं पहुँचता"
+      }
+    },
+    {
+      "id": "abroad",
+      "color": "#9d90b6",
+      "title": {
+        "en": "Leaves India for Myanmar and Bangladesh",
+        "hi": "भारत से म्यांमार और बांग्लादेश जाता है"
+      }
+    },
+    {
+      "id": "islands",
+      "color": "#7fa6a2",
+      "title": {
+        "en": "Island drainage",
+        "hi": "द्वीपों का अपवाह"
+      }
+    }
+  ],
+  "fields": {
+    "basin": {
+      "type": "name",
+      "label": {
+        "en": "Basin",
+        "hi": "बेसिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The basins cut into the 99 parts the Central Water Commission manages them by: the Ganga into the Yamuna, the Chambal, the Son, the Kosi and fifteen more; a big river into its upper, middle and lower reaches. The colours are the basins' own, so a sub-basin shows where its water ends up.",
+    "hi": "बेसिन उन 99 भागों में बँटे जिनसे केंद्रीय जल आयोग उनका प्रबंधन करता है: गंगा यमुना, चंबल, सोन, कोसी और पंद्रह अन्य में; बड़ी नदी अपने ऊपरी, मध्य और निचले भागों में। रंग बेसिनों के ही हैं, इसलिए उप-बेसिन बताता है कि उसका पानी कहाँ पहुँचता है।"
+  },
+  "sources": [
+    "indian-water-features",
+    "india-wris"
+  ],
+  "attribution": "Sub-basin polygons: India-WRIS's sub-basin layer, republished as PMTiles by indian_water_features and read at zoom 8, matched on WRIS's own sub-basin name. Where WRIS names a part by an administrative phrase ('Above Ramganga Confluence') or a spelling of its own, the card gives the river's usual name and the blurb says what WRIS calls it. Colours are the parent basin's group."
+}

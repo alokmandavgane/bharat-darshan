@@ -1,0 +1,2354 @@
+[
+  {
+    "id": "beas",
+    "status": "draft",
+    "name": {
+      "en": "Beas",
+      "hi": "ब्यास"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Beas"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Beas from the Rohtang pass through Kullu, Mandi and the Kangra valley to its meeting with the Satluj at Harike in Punjab.",
+      "hi": "ब्यास, रोहतांग दर्रे से कुल्लू, मंडी और काँगड़ा घाटी होते हुए पंजाब में हरिके पर सतलुज से संगम तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "chenab",
+    "status": "draft",
+    "name": {
+      "en": "Chenab",
+      "hi": "चिनाब"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Chenab"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Chandra and the Bhaga, which meet at Tandi in Lahaul to become the Chenab, and the river's course through Kishtwar and Jammu into Pakistan.",
+      "hi": "चंद्रा और भागा, जो लाहौल में तांडी पर मिलकर चिनाब बनती हैं, और किश्तवाड़ तथा जम्मू होते हुए पाकिस्तान तक नदी का मार्ग।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ghaggar",
+    "status": "draft",
+    "name": {
+      "en": "Ghaggar and others",
+      "hi": "घग्गर एवं अन्य"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Ghaghar and others"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Ghaggar, a monsoon river rising in the Shivaliks near Kalka that fades out in the Thar, with the streams of the plain around it in Haryana, Punjab and Rajasthan.",
+      "hi": "घग्गर, कालका के पास शिवालिक से निकलने वाली बरसाती नदी जो थार में विलीन हो जाती है, और हरियाणा, पंजाब तथा राजस्थान में उसके आसपास के मैदान की धाराएँ।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "gilgit",
+    "status": "draft",
+    "name": {
+      "en": "Gilgit",
+      "hi": "गिलगित"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Gilgit"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Gilgit and Hunza rivers of Gilgit-Baltistan, part of Jammu and Kashmir as India defines it and under Pakistani administration since 1947; they join the Indus below Gilgit.",
+      "hi": "गिलगित-बाल्टिस्तान की गिलगित और हुंज़ा नदियाँ, भारत की परिभाषा में जम्मू और कश्मीर का भाग और 1947 से पाकिस्तानी प्रशासन में; ये गिलगित के नीचे सिंधु से मिलती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "jhelum",
+    "status": "draft",
+    "name": {
+      "en": "Jhelum",
+      "hi": "झेलम"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Jhelum"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Jhelum rises at Verinag, winds through the Kashmir valley and Wular lake past Srinagar, and leaves the valley through Baramulla and Uri.",
+      "hi": "झेलम वेरीनाग से निकलकर कश्मीर घाटी और वुलर झील से होते हुए श्रीनगर के पास से बहती है, और बारामूला तथा उरी होकर घाटी से निकलती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "lower-indus",
+    "status": "draft",
+    "name": {
+      "en": "Lower Indus",
+      "hi": "निचली सिंधु"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Lower Indus"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Indus below its meeting with the Shyok, through Baltistan to where it leaves India's boundary; under Pakistani administration.",
+      "hi": "श्योक से संगम के नीचे की सिंधु, बाल्टिस्तान होते हुए वहाँ तक जहाँ वह भारत की सीमा छोड़ती है; पाकिस्तानी प्रशासन में।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ravi",
+    "status": "draft",
+    "name": {
+      "en": "Ravi",
+      "hi": "रावी"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Ravi"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Ravi from Bara Bhangal and the Chamba valley in Himachal down to the plains near Pathankot, then along the border before it crosses into Pakistan above Lahore.",
+      "hi": "रावी, हिमाचल में बड़ा भंगाल और चंबा घाटी से पठानकोट के पास मैदानों तक, फिर सीमा के साथ, और लाहौर के ऊपर पाकिस्तान में प्रवेश।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "shyok",
+    "status": "draft",
+    "name": {
+      "en": "Shyok",
+      "hi": "श्योक"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Shyok"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Shyok and its tributary the Nubra, fed by the Siachen and other Karakoram glaciers, flowing north-west to meet the Indus in Baltistan.",
+      "hi": "श्योक और उसकी सहायक नुब्रा, सियाचिन और काराकोरम के अन्य हिमनदों से पोषित, उत्तर-पश्चिम बहती हुई बाल्टिस्तान में सिंधु से मिलती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "sutlej-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Satluj",
+      "hi": "निचला सतलुज"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Sutlaj Lower"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Satluj out of the hills at Bhakra, across the Punjab plain past Ropar to Harike, where the Beas joins it, and on to the border at Ferozepur.",
+      "hi": "भाखड़ा पर पहाड़ों से निकलकर सतलुज, रोपड़ होते हुए पंजाब का मैदान पार कर हरिके तक, जहाँ ब्यास मिलती है, और आगे फ़िरोज़पुर पर सीमा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "sutlej-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Satluj",
+      "hi": "ऊपरी सतलुज"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Sutlaj Upper"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Satluj from Shipki La, where it enters India from Tibet, through Kinnaur and the gorges above Rampur to the Bhakra dam.",
+      "hi": "शिपकी ला से, जहाँ वह तिब्बत से भारत में आती है, किन्नौर और रामपुर के ऊपर की घाटियों से होकर भाखड़ा बाँध तक सतलुज।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "upper-indus",
+    "status": "draft",
+    "name": {
+      "en": "Upper Indus",
+      "hi": "ऊपरी सिंधु"
+    },
+    "category": "himalayan-arabian",
+    "rank": 2,
+    "source_names": [
+      "Upper Indus"
+    ],
+    "basin": {
+      "en": "Indus basin",
+      "hi": "सिंधु बेसिन"
+    },
+    "blurb": {
+      "en": "The Indus from where it enters Ladakh near Demchok, past Leh and the Zanskar confluence, on towards Baltistan.",
+      "hi": "सिंधु, जहाँ से वह देमचोक के पास लद्दाख में आती है, लेह और ज़ांस्कर संगम के पास से होकर बाल्टिस्तान की ओर।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "godavari-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Godavari",
+      "hi": "निचली गोदावरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Godavari Lower"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Godavari below its meeting with the Pranhita and the Indravati, through the Papi hills gorge in the Eastern Ghats to the delta at Rajahmundry.",
+      "hi": "प्राणहिता और इंद्रावती से संगम के नीचे की गोदावरी, पूर्वी घाट में पापी पहाड़ियों की घाटी से होकर राजमुंदरी के डेल्टा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "godavari-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Godavari",
+      "hi": "मध्य गोदावरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Godavari Middle"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Godavari across Marathwada, past Parbhani and Nanded, and into Telangana towards the Pranhita.",
+      "hi": "मराठवाड़ा के आर-पार गोदावरी, परभणी और नांदेड़ के पास से होकर तेलंगाना में प्राणहिता की ओर।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "godavari-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Godavari",
+      "hi": "ऊपरी गोदावरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Godavari Upper"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "From the river's source at Trimbak near Nashik, eighty km from the Arabian Sea, across the Deccan to Paithan and the Jayakwadi reservoir.",
+      "hi": "नासिक के पास त्र्यंबक में, अरब सागर से अस्सी किमी दूर, नदी के उद्गम से दक्कन पार कर पैठण और जायकवाड़ी जलाशय तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "indravati",
+    "status": "draft",
+    "name": {
+      "en": "Indravati",
+      "hi": "इंद्रावती"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Indravati"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Indravati from the Kalahandi hills of Odisha across Bastar and over the Chitrakote falls to the Godavari.",
+      "hi": "ओडिशा की कालाहांडी पहाड़ियों से बस्तर पार कर चित्रकोट प्रपात पर से होते हुए गोदावरी तक इंद्रावती।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "manjira",
+    "status": "draft",
+    "name": {
+      "en": "Manjira",
+      "hi": "मंजीरा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Manjra"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Manjira from the Balaghat range of Maharashtra through Karnataka into Telangana, filling the Singur and Nizam Sagar reservoirs, to the Godavari.",
+      "hi": "महाराष्ट्र की बालाघाट श्रेणी से कर्नाटक होते हुए तेलंगाना में मंजीरा, सिंगूर और निज़ाम सागर जलाशयों को भरती हुई गोदावरी तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "pranhita",
+    "status": "draft",
+    "name": {
+      "en": "Pranhita and others",
+      "hi": "प्राणहिता एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Pranhita and others"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Pranhita, the name the Wardha and the Wainganga take together after they meet, along the Maharashtra-Telangana border to the Godavari.",
+      "hi": "प्राणहिता, वह नाम जो वर्धा और वैनगंगा मिलने के बाद साथ लेती हैं, महाराष्ट्र-तेलंगाना सीमा के साथ गोदावरी तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "wardha",
+    "status": "draft",
+    "name": {
+      "en": "Wardha",
+      "hi": "वर्धा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Wardha"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Wardha with the Penganga and the Wunna, draining the cotton country of Vidarbha south and west of Nagpur.",
+      "hi": "पैनगंगा और वुन्ना सहित वर्धा, जो नागपुर के दक्षिण और पश्चिम में विदर्भ के कपास-देश का पानी बहाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "wainganga",
+    "status": "draft",
+    "name": {
+      "en": "Wainganga",
+      "hi": "वैनगंगा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Weinganga"
+    ],
+    "basin": {
+      "en": "Godavari basin",
+      "hi": "गोदावरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Wainganga from the Satpura near Seoni south through Balaghat, Bhandara and Gadchiroli, with the Pench and the Kanhan.",
+      "hi": "सिवनी के पास सतपुड़ा से दक्षिण में बालाघाट, भंडारा और गढ़चिरौली होते हुए वैनगंगा, पेंच और कन्हान सहित।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "bhima-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Bhima",
+      "hi": "निचली भीमा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Bhima Lower"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Bhima across the dry plateau of north Karnataka from below Solapur to its meeting with the Krishna near Raichur.",
+      "hi": "सोलापुर के नीचे से उत्तर कर्नाटक के शुष्क पठार के आर-पार रायचूर के पास कृष्णा से संगम तक भीमा।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "bhima-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Bhima",
+      "hi": "ऊपरी भीमा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Bhima Upper"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Bhima from Bhimashankar in the Western Ghats, with Pune's Mula and Mutha, the Nira and the Sina, past Pandharpur.",
+      "hi": "पश्चिमी घाट में भीमाशंकर से भीमा, पुणे की मुला और मुठा, नीरा और सीना सहित, पंढरपुर के पास से।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "krishna-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Krishna",
+      "hi": "निचली कृष्णा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Krishna Lower"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Krishna below Srisailam, through the Nagarjuna Sagar dam to Vijayawada and its delta on the Bay.",
+      "hi": "श्रीशैलम के नीचे की कृष्णा, नागार्जुन सागर बाँध से होकर विजयवाड़ा और खाड़ी पर उसके डेल्टा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "krishna-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Krishna",
+      "hi": "मध्य कृष्णा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Krishna Middle"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Krishna across the plateau from the Bhima's confluence past the Tungabhadra's to the Srisailam reservoir.",
+      "hi": "भीमा के संगम से तुंगभद्रा के संगम के पास से होकर श्रीशैलम जलाशय तक पठार के आर-पार कृष्णा।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "krishna-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Krishna",
+      "hi": "ऊपरी कृष्णा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Krishna Upper"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Krishna from Mahabaleshwar through Satara and Sangli, with the Koyna, and across north Karnataka past the Almatti dam.",
+      "hi": "महाबलेश्वर से सतारा और सांगली होते हुए कृष्णा, कोयना सहित, और उत्तर कर्नाटक पार कर अलमट्टी बाँध के पास से।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tungabhadra-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Tungabhadra",
+      "hi": "निचली तुंगभद्रा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Tungabhadra Lower"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Tungabhadra past Hampi and the dam at Hosapete, then along the Karnataka-Andhra border to the Krishna near Kurnool.",
+      "hi": "हम्पी और होसपेटे के बाँध के पास से तुंगभद्रा, फिर कर्नाटक-आंध्र सीमा के साथ कर्नूल के पास कृष्णा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tungabhadra-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Tungabhadra",
+      "hi": "ऊपरी तुंगभद्रा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Tungabhadra Upper"
+    ],
+    "basin": {
+      "en": "Krishna basin",
+      "hi": "कृष्णा बेसिन"
+    },
+    "blurb": {
+      "en": "The Tunga and the Bhadra, rising at Gangamoola in the Western Ghats and meeting at Koodli near Shivamogga to become the Tungabhadra.",
+      "hi": "तुंगा और भद्रा, जो पश्चिमी घाट में गंगामूला से निकलकर शिवमोग्गा के पास कूडली पर मिलकर तुंगभद्रा बनती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "cauvery-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Kaveri",
+      "hi": "निचली कावेरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Cauvery Lower"
+    ],
+    "basin": {
+      "en": "Cauvery basin",
+      "hi": "कावेरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Kaveri below the Grand Anicut, spreading into the channels of the Thanjavur delta, the rice bowl of Tamil Nadu.",
+      "hi": "कल्लनई के नीचे की कावेरी, जो तमिलनाडु के धान-कटोरे तंजावुर डेल्टा की नहरों में फैल जाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "cauvery-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Kaveri",
+      "hi": "मध्य कावेरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Cauvery Middle"
+    ],
+    "basin": {
+      "en": "Cauvery basin",
+      "hi": "कावेरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Kaveri off the Mysore plateau past Hogenakkal and the Mettur dam into Tamil Nadu, with the Bhavani and the Noyyal.",
+      "hi": "मैसूर पठार से उतरकर होगेनक्कल और मेट्टूर बाँध के पास से तमिलनाडु में कावेरी, भवानी और नोय्यल सहित।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "cauvery-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Kaveri",
+      "hi": "ऊपरी कावेरी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Cauvery Upper"
+    ],
+    "basin": {
+      "en": "Cauvery basin",
+      "hi": "कावेरी बेसिन"
+    },
+    "blurb": {
+      "en": "The Kaveri from Talakaveri in Kodagu, with the Harangi and the Hemavati, down to the Krishna Raja Sagar dam above Mysuru.",
+      "hi": "कोडगु में तलकावेरी से कावेरी, हारंगी और हेमावती सहित, मैसूरु के ऊपर कृष्णराज सागर बाँध तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "subarnarekha-sb",
+    "status": "draft",
+    "name": {
+      "en": "Subarnarekha",
+      "hi": "सुवर्णरेखा"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Subernarekha"
+    ],
+    "basin": {
+      "en": "Subarnarekha basin",
+      "hi": "सुवर्णरेखा बेसिन"
+    },
+    "blurb": {
+      "en": "The whole Subarnarekha basin in one: from the plateau near Ranchi past Jamshedpur to the sea on the border of Odisha and West Bengal.",
+      "hi": "पूरा सुवर्णरेखा बेसिन एक ही में: राँची के पास पठार से जमशेदपुर होते हुए ओडिशा और पश्चिम बंगाल की सीमा पर समुद्र तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "baitarani",
+    "status": "draft",
+    "name": {
+      "en": "Baitarani",
+      "hi": "बैतरणी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Baitarni"
+    ],
+    "basin": {
+      "en": "Brahmani and Baitarani",
+      "hi": "ब्राह्मणी और बैतरणी"
+    },
+    "blurb": {
+      "en": "The Baitarani from the Keonjhar hills, a sacred river of Odisha, running to the sea beside the Brahmani through the Bhitarkanika delta.",
+      "hi": "क्योंझर की पहाड़ियों से बैतरणी, ओडिशा की पवित्र नदी, जो भितरकनिका डेल्टा होते हुए ब्राह्मणी के साथ समुद्र तक जाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "brahmani-sb",
+    "status": "draft",
+    "name": {
+      "en": "Brahmani",
+      "hi": "ब्राह्मणी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Brahmani"
+    ],
+    "basin": {
+      "en": "Brahmani and Baitarani",
+      "hi": "ब्राह्मणी और बैतरणी"
+    },
+    "blurb": {
+      "en": "The Sankh and the South Koel, which meet at Rourkela to form the Brahmani, and its course past the Talcher coalfields to the delta.",
+      "hi": "शंख और दक्षिण कोयल, जो राउरकेला पर मिलकर ब्राह्मणी बनती हैं, और तालचेर के कोयला क्षेत्रों के पास से डेल्टा तक उसका मार्ग।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "mahanadi-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Mahanadi",
+      "hi": "निचली महानदी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Mahanadi Lower"
+    ],
+    "basin": {
+      "en": "Mahanadi basin",
+      "hi": "महानदी बेसिन"
+    },
+    "blurb": {
+      "en": "The Mahanadi below the Hirakud dam, through the Satkosia gorge to the delta at Cuttack.",
+      "hi": "हीराकुड बाँध के नीचे की महानदी, सतकोसिया घाटी से होकर कटक के डेल्टा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "mahanadi-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Mahanadi",
+      "hi": "मध्य महानदी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Mahanadi Middle"
+    ],
+    "basin": {
+      "en": "Mahanadi basin",
+      "hi": "महानदी बेसिन"
+    },
+    "blurb": {
+      "en": "The Hasdeo and the Mand from the coal country of north Chhattisgarh, and the Mahanadi itself on its way to the Hirakud reservoir.",
+      "hi": "उत्तर छत्तीसगढ़ के कोयला-देश से हसदेव और मांड, और हीराकुड जलाशय की ओर जाती स्वयं महानदी।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "mahanadi-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Mahanadi",
+      "hi": "ऊपरी महानदी"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Mahanadi Upper"
+    ],
+    "basin": {
+      "en": "Mahanadi basin",
+      "hi": "महानदी बेसिन"
+    },
+    "blurb": {
+      "en": "The Mahanadi from its source near Sihawa in the Dhamtari hills, with the Seonath, across the Chhattisgarh plain around Raipur.",
+      "hi": "धमतरी की पहाड़ियों में सिहावा के पास उद्गम से महानदी, शिवनाथ सहित, रायपुर के आसपास छत्तीसगढ़ के मैदान के आर-पार।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "pennar-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Pennar",
+      "hi": "निचली पेन्नार"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Pennar Lower"
+    ],
+    "basin": {
+      "en": "Pennar basin",
+      "hi": "पेन्नार बेसिन"
+    },
+    "blurb": {
+      "en": "The Pennar below the Somasila dam, across the coastal plain to the sea near Nellore.",
+      "hi": "सोमशिला बाँध के नीचे की पेन्नार, तटीय मैदान के आर-पार नेल्लोर के पास समुद्र तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "pennar-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Pennar",
+      "hi": "ऊपरी पेन्नार"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Pennar Upper"
+    ],
+    "basin": {
+      "en": "Pennar basin",
+      "hi": "पेन्नार बेसिन"
+    },
+    "blurb": {
+      "en": "The Pennar from the Nandi hills in Karnataka across the dry Rayalaseema country of Anantapur and Kadapa.",
+      "hi": "कर्नाटक में नंदी पहाड़ियों से अनंतपुर और कडप्पा के शुष्क रायलसीमा देश के आर-पार पेन्नार।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "mahi-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Mahi",
+      "hi": "निचली माही"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Mahi Lower"
+    ],
+    "basin": {
+      "en": "Mahi basin",
+      "hi": "माही बेसिन"
+    },
+    "blurb": {
+      "en": "The Mahi on the Gujarat plain below the Kadana dam, past Vadodara to the Gulf of Khambhat.",
+      "hi": "कडाना बाँध के नीचे गुजरात के मैदान पर माही, वडोदरा के पास से खंभात की खाड़ी तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "mahi-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Mahi",
+      "hi": "ऊपरी माही"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Mahi Upper"
+    ],
+    "basin": {
+      "en": "Mahi basin",
+      "hi": "माही बेसिन"
+    },
+    "blurb": {
+      "en": "The Mahi from the Vindhya of Madhya Pradesh through Banswara in Rajasthan, where it loops round before turning south-west to Gujarat.",
+      "hi": "मध्य प्रदेश के विंध्य से राजस्थान में बांसवाड़ा होते हुए माही, जहाँ वह घूमकर दक्षिण-पश्चिम में गुजरात की ओर मुड़ती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "sabarmati-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Sabarmati",
+      "hi": "निचली साबरमती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Sabarmati Lower"
+    ],
+    "basin": {
+      "en": "Sabarmati basin",
+      "hi": "साबरमती बेसिन"
+    },
+    "blurb": {
+      "en": "The Sabarmati through Gandhinagar and Ahmedabad and across the plain to the Gulf of Khambhat.",
+      "hi": "गांधीनगर और अहमदाबाद होते हुए मैदान के आर-पार खंभात की खाड़ी तक साबरमती।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "sabarmati-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Sabarmati",
+      "hi": "ऊपरी साबरमती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Sabarmati Upper"
+    ],
+    "basin": {
+      "en": "Sabarmati basin",
+      "hi": "साबरमती बेसिन"
+    },
+    "blurb": {
+      "en": "The Sabarmati and its tributaries from the Aravalli hills of Rajasthan down to the Dharoi dam in north Gujarat.",
+      "hi": "राजस्थान की अरावली पहाड़ियों से उत्तर गुजरात में धरोई बाँध तक साबरमती और उसकी सहायक नदियाँ।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "narmada-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Narmada",
+      "hi": "निचली नर्मदा"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Narmada Lower"
+    ],
+    "basin": {
+      "en": "Narmada basin",
+      "hi": "नर्मदा बेसिन"
+    },
+    "blurb": {
+      "en": "The Narmada below the Sardar Sarovar dam, past Bharuch to the Gulf of Khambhat.",
+      "hi": "सरदार सरोवर बाँध के नीचे की नर्मदा, भरूच के पास से खंभात की खाड़ी तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "narmada-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Narmada",
+      "hi": "मध्य नर्मदा"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Narmada Middle"
+    ],
+    "basin": {
+      "en": "Narmada basin",
+      "hi": "नर्मदा बेसिन"
+    },
+    "blurb": {
+      "en": "The Narmada through the Nimar plain past Omkareshwar and Maheshwar, between the Vindhya and the Satpura.",
+      "hi": "विंध्य और सतपुड़ा के बीच, ओंकारेश्वर और महेश्वर के पास से निमाड़ के मैदान से होकर नर्मदा।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "narmada-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Narmada",
+      "hi": "ऊपरी नर्मदा"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Narmada Upper"
+    ],
+    "basin": {
+      "en": "Narmada basin",
+      "hi": "नर्मदा बेसिन"
+    },
+    "blurb": {
+      "en": "The Narmada from Amarkantak, over the marble gorge at Bhedaghat near Jabalpur, and down the Hoshangabad valley.",
+      "hi": "अमरकंटक से नर्मदा, जबलपुर के पास भेड़ाघाट की संगमरमरी घाटी से होकर, और होशंगाबाद घाटी के नीचे।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tapi-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Tapi",
+      "hi": "निचली ताप्ती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Tapi Lower"
+    ],
+    "basin": {
+      "en": "Tapi basin",
+      "hi": "ताप्ती बेसिन"
+    },
+    "blurb": {
+      "en": "The last stretch of the Tapi, below the Ukai dam and through Surat to the sea.",
+      "hi": "ताप्ती का अंतिम खंड, उकाई बाँध के नीचे और सूरत होते हुए समुद्र तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tapi-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Tapi",
+      "hi": "मध्य ताप्ती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Tapi Middle"
+    ],
+    "basin": {
+      "en": "Tapi basin",
+      "hi": "ताप्ती बेसिन"
+    },
+    "blurb": {
+      "en": "The Tapi through Khandesh, where the Girna and the Panjhra join it, past Jalgaon and Dhule.",
+      "hi": "खानदेश से होकर ताप्ती, जहाँ गिरना और पांझरा उससे मिलती हैं, जलगाँव और धुले के पास से।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tapi-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Tapi",
+      "hi": "ऊपरी ताप्ती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Tapi Upper"
+    ],
+    "basin": {
+      "en": "Tapi basin",
+      "hi": "ताप्ती बेसिन"
+    },
+    "blurb": {
+      "en": "The Tapi from Multai in Betul, with the Purna, through Burhanpur and the Melghat hills.",
+      "hi": "बैतूल में मुलताई से ताप्ती, पूर्णा सहित, बुरहानपुर और मेलघाट की पहाड़ियों से होकर।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "north-konkan",
+    "status": "draft",
+    "name": {
+      "en": "North Konkan rivers",
+      "hi": "उत्तर कोंकण की नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Bhatsol and others"
+    ],
+    "basin": {
+      "en": "West-flowing rivers, Tapi to Tadri",
+      "hi": "ताप्ती से तदड़ी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The short rivers of the northern Konkan -- the Vaitarna, the Ulhas and the Bhatsa among them -- which fill the lakes that supply most of Mumbai's water.",
+      "hi": "उत्तर कोंकण की छोटी नदियाँ — वैतरणा, उल्हास और भातसा इनमें — जो उन झीलों को भरती हैं जिनसे मुंबई का अधिकांश पानी आता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "south-konkan",
+    "status": "draft",
+    "name": {
+      "en": "South Konkan and Goa rivers",
+      "hi": "दक्षिण कोंकण और गोवा की नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Vasishti and others"
+    ],
+    "basin": {
+      "en": "West-flowing rivers, Tapi to Tadri",
+      "hi": "ताप्ती से तदड़ी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The rivers of the southern Konkan and Goa -- the Vashishti, the Mandovi, the Zuari -- short and fierce off the Western Ghats.",
+      "hi": "दक्षिण कोंकण और गोवा की नदियाँ — वाशिष्ठी, मांडवी, जुआरी — पश्चिमी घाट से उतरती छोटी और प्रचंड।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "coastal-karnataka",
+    "status": "draft",
+    "name": {
+      "en": "Coastal Karnataka rivers",
+      "hi": "तटीय कर्नाटक की नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Netravati and others"
+    ],
+    "basin": {
+      "en": "West-flowing rivers, Tadri to Kanyakumari",
+      "hi": "तदड़ी से कन्याकुमारी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The rivers of coastal Karnataka south of Tadri: the Sharavathi, which falls at Jog, the Netravati past Mangaluru, and the others between them.",
+      "hi": "तदड़ी के दक्षिण तटीय कर्नाटक की नदियाँ: जोग पर गिरने वाली शरावती, मंगलूरु के पास से नेत्रावती, और उनके बीच की अन्य।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "south-kerala",
+    "status": "draft",
+    "name": {
+      "en": "Central and south Kerala rivers",
+      "hi": "मध्य और दक्षिण केरल की नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Periyar and others"
+    ],
+    "basin": {
+      "en": "West-flowing rivers, Tadri to Kanyakumari",
+      "hi": "तदड़ी से कन्याकुमारी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Periyar, the Pamba, the Achankovil and the other rivers of central and southern Kerala, and the backwaters around Vembanad that they feed.",
+      "hi": "पेरियार, पंपा, अच्चनकोविल और मध्य व दक्षिण केरल की अन्य नदियाँ, और वेम्बनाड के आसपास का वह पश्चजल जिसे वे भरती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "north-kerala",
+    "status": "draft",
+    "name": {
+      "en": "North Kerala rivers",
+      "hi": "उत्तर केरल की नदियाँ"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Varrar and others"
+    ],
+    "basin": {
+      "en": "West-flowing rivers, Tadri to Kanyakumari",
+      "hi": "तदड़ी से कन्याकुमारी तक पश्चिमवाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The rivers of northern Kerala from the Bharathapuzha north to the Karnataka border, the Chaliyar among them; WRIS files them as the Varrar and others.",
+      "hi": "भारतपुझा से उत्तर में कर्नाटक सीमा तक उत्तर केरल की नदियाँ, चालियार इनमें; डब्ल्यूआरआईएस इन्हें 'वार्रार एवं अन्य' के नाम से दर्ज करता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "between-godavari-krishna",
+    "status": "draft",
+    "name": {
+      "en": "Between the Godavari and the Krishna",
+      "hi": "गोदावरी और कृष्णा के बीच"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "East flowing rivers between Godavari and krishna"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Mahanadi to Pennar",
+      "hi": "महानदी से पेन्नार तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The small rivers of the coastal strip between the two great deltas, and the Kolleru lake that lies between them.",
+      "hi": "दोनों बड़े डेल्टाओं के बीच की तटीय पट्टी की छोटी नदियाँ, और उनके बीच स्थित कोल्लेरु झील।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "between-krishna-pennar",
+    "status": "draft",
+    "name": {
+      "en": "Between the Krishna and the Pennar",
+      "hi": "कृष्णा और पेन्नार के बीच"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "East flowing rivers between krishna and Pennar"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Mahanadi to Pennar",
+      "hi": "महानदी से पेन्नार तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Gundlakamma and the other short rivers of coastal Andhra between the Krishna delta and the Pennar.",
+      "hi": "गुंडलकम्मा और कृष्णा डेल्टा तथा पेन्नार के बीच तटीय आंध्र की अन्य छोटी नदियाँ।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "nagavali",
+    "status": "draft",
+    "name": {
+      "en": "Nagavali and others",
+      "hi": "नागावली एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Nagvati and other"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Mahanadi to Pennar",
+      "hi": "महानदी से पेन्नार तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Nagavali from the Kalahandi hills to the sea near Srikakulam, with the short rivers of coastal north Andhra around Visakhapatnam.",
+      "hi": "कालाहांडी की पहाड़ियों से श्रीकाकुलम के पास समुद्र तक नागावली, और विशाखापत्तनम के आसपास उत्तर तटीय आंध्र की छोटी नदियाँ।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "vamsadhara",
+    "status": "draft",
+    "name": {
+      "en": "Vamsadhara and others",
+      "hi": "वंशधारा एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Vamsadhara and other"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Mahanadi to Pennar",
+      "hi": "महानदी से पेन्नार तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Vamsadhara and the Rushikulya of southern Odisha, flowing from the Eastern Ghats to the Bay.",
+      "hi": "दक्षिणी ओडिशा की वंशधारा और ऋषिकुल्या, जो पूर्वी घाट से खाड़ी की ओर बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "palar",
+    "status": "draft",
+    "name": {
+      "en": "Palar and others",
+      "hi": "पालार एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Palar and other"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Pennar to Kanyakumari",
+      "hi": "पेन्नार से कन्याकुमारी तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Palar from the Nandi hills past Vellore and Kanchipuram to the sea south of Chennai, with Chennai's own short rivers.",
+      "hi": "नंदी पहाड़ियों से वेल्लोर और कांचीपुरम के पास से चेन्नई के दक्षिण समुद्र तक पालार, और चेन्नई की अपनी छोटी नदियाँ।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "vaigai",
+    "status": "draft",
+    "name": {
+      "en": "Vaigai and others",
+      "hi": "वैगई एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Pamba and others"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Pennar to Kanyakumari",
+      "hi": "पेन्नार से कन्याकुमारी तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Vaigai, which runs through Madurai, and the rivers around it flowing east from the Western Ghats to the Palk Bay; WRIS files them as the Pamba and others.",
+      "hi": "मदुरै से होकर बहने वाली वैगई और उसके आसपास की नदियाँ जो पश्चिमी घाट से पूर्व में पाक खाड़ी तक बहती हैं; डब्ल्यूआरआईएस इन्हें 'पंबा एवं अन्य' में दर्ज करता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ponnaiyar",
+    "status": "draft",
+    "name": {
+      "en": "Ponnaiyar and others",
+      "hi": "पोन्नैयार एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Ponnaiyar and other"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Pennar to Kanyakumari",
+      "hi": "पेन्नार से कन्याकुमारी तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The Thenpennai, or Ponnaiyar, from the Nandi hills across Krishnagiri and Villupuram to the sea at Cuddalore, with the Vellar.",
+      "hi": "तेनपेन्नई, या पोन्नैयार, नंदी पहाड़ियों से कृष्णगिरि और विल्लुपुरम पार कर कडलूर पर समुद्र तक, वेल्लार सहित।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "vaippar",
+    "status": "draft",
+    "name": {
+      "en": "Vaippar and others",
+      "hi": "वैप्पार एवं अन्य"
+    },
+    "category": "peninsular-bay",
+    "rank": 2,
+    "source_names": [
+      "Vaippar and others"
+    ],
+    "basin": {
+      "en": "East-flowing rivers, Pennar to Kanyakumari",
+      "hi": "पेन्नार से कन्याकुमारी तक पूर्ववाहिनी नदियाँ"
+    },
+    "blurb": {
+      "en": "The far south of Tamil Nadu: the Vaippar and the Thamirabarani of Tirunelveli, flowing to the Gulf of Mannar.",
+      "hi": "तमिलनाडु का सुदूर दक्षिण: वैप्पार और तिरुनेलवेली की ताम्रपर्णी, जो मन्नार की खाड़ी तक बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "bhadar",
+    "status": "draft",
+    "name": {
+      "en": "Bhadar and others",
+      "hi": "भादर एवं अन्य"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Bhadar and other west flowing rivers"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "Saurashtra's west-flowing rivers, the Bhadar the largest of them, running off the peninsula's central uplands to the Arabian Sea.",
+      "hi": "सौराष्ट्र की पश्चिमवाहिनी नदियाँ, जिनमें भादर सबसे बड़ी, जो प्रायद्वीप के मध्य उच्चभाग से अरब सागर तक बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "rann",
+    "status": "draft",
+    "name": {
+      "en": "Drainage of the Rann",
+      "hi": "रण का अपवाह"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Drainage of Rann"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "Kutch, and the rivers that run into the Great and the Little Rann rather than the sea, drying into salt flats each summer.",
+      "hi": "कच्छ, और वे नदियाँ जो समुद्र के बजाय बड़े और छोटे रण में जाती हैं, और हर गर्मी नमक के मैदानों में सूख जाती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "luni-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Luni",
+      "hi": "निचली लूणी"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Luni Lower"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "The Luni's last reach through Barmer and Jalore into the Rann of Kutch, where it spreads out and dries.",
+      "hi": "बाड़मेर और जालोर होते हुए कच्छ के रण में लूणी का अंतिम खंड, जहाँ वह फैलकर सूख जाती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "luni-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Luni",
+      "hi": "ऊपरी लूणी"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Luni Upper"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "The Luni from the Aravalli near Ajmer across Marwar, with the Jojri past Jodhpur; its name means salt, which its water turns as it goes.",
+      "hi": "अजमेर के पास अरावली से मारवाड़ के आर-पार लूणी, जोधपुर के पास से जोजरी सहित; इसके नाम का अर्थ नमक है, जो इसका पानी बहते-बहते हो जाता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "saraswati-gujarat",
+    "status": "draft",
+    "name": {
+      "en": "Saraswati of Gujarat",
+      "hi": "गुजरात की सरस्वती"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Saraswati"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "The Saraswati and the other rivers of north Gujarat that flow south-west from the Aravalli past Siddhpur and Patan into the Little Rann.",
+      "hi": "सरस्वती और उत्तर गुजरात की अन्य नदियाँ, जो अरावली से दक्षिण-पश्चिम में सिद्धपुर और पाटण के पास से छोटे रण तक बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "shetrunji",
+    "status": "draft",
+    "name": {
+      "en": "Shetrunji and others",
+      "hi": "शेत्रुंजी एवं अन्य"
+    },
+    "category": "peninsular-arabian",
+    "rank": 2,
+    "source_names": [
+      "Shetranjuli and other east flowing rivers"
+    ],
+    "basin": {
+      "en": "Kutch, Saurashtra and the Luni",
+      "hi": "कच्छ, सौराष्ट्र और लूणी"
+    },
+    "blurb": {
+      "en": "Saurashtra's east-flowing rivers, the Shetrunji chief among them, running past Palitana into the Gulf of Khambhat.",
+      "hi": "सौराष्ट्र की पूर्ववाहिनी नदियाँ, जिनमें शेत्रुंजी प्रमुख, पालीताणा के पास से खंभात की खाड़ी तक बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "rajasthan-inland-sb",
+    "status": "draft",
+    "name": {
+      "en": "Inland drainage of Rajasthan",
+      "hi": "राजस्थान का अंतःस्थलीय अपवाह"
+    },
+    "category": "inland",
+    "rank": 2,
+    "source_names": [
+      "Area of Inland drainage in Rajasthan"
+    ],
+    "basin": {
+      "en": "Inland drainage of Rajasthan",
+      "hi": "राजस्थान का अंतःस्थलीय अपवाह"
+    },
+    "blurb": {
+      "en": "The whole of Rajasthan's inland drainage is one sub-basin: the Thar and Shekhawati streams that end in salt lakes such as Sambhar, or in the sand.",
+      "hi": "राजस्थान का पूरा अंतःस्थलीय अपवाह एक ही उप-बेसिन है: थार और शेखावाटी की धाराएँ जो सांभर जैसी खारी झीलों में, या रेत में समाप्त होती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "kaladan",
+    "status": "draft",
+    "name": {
+      "en": "Chhimtuipui and others",
+      "hi": "छिमतुईपुई एवं अन्य"
+    },
+    "category": "abroad",
+    "rank": 2,
+    "source_names": [
+      "Chhimtuipui & Others"
+    ],
+    "basin": {
+      "en": "Rivers draining to Myanmar and Bangladesh",
+      "hi": "म्यांमार और बांग्लादेश जाने वाली नदियाँ"
+    },
+    "blurb": {
+      "en": "The Chhimtuipui, or Kaladan, of south Mizoram, which flows into Myanmar and reaches the sea at Sittwe.",
+      "hi": "दक्षिण मिज़ोरम की छिमतुईपुई, या कलादान, जो म्यांमार में बहकर सित्त्वे पर समुद्र तक पहुँचती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "imphal",
+    "status": "draft",
+    "name": {
+      "en": "Imphal and others",
+      "hi": "इंफाल एवं अन्य"
+    },
+    "category": "abroad",
+    "rank": 2,
+    "source_names": [
+      "Imphal and others"
+    ],
+    "basin": {
+      "en": "Rivers draining to Myanmar and Bangladesh",
+      "hi": "म्यांमार और बांग्लादेश जाने वाली नदियाँ"
+    },
+    "blurb": {
+      "en": "The rivers of the Imphal valley and Loktak lake, draining south into Myanmar and the Chindwin rather than into the Brahmaputra.",
+      "hi": "इंफाल घाटी और लोकटक झील की नदियाँ, जो ब्रह्मपुत्र के बजाय दक्षिण में म्यांमार और चिंदविन की ओर बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "karnaphuli",
+    "status": "draft",
+    "name": {
+      "en": "Khawthlangtuipui and others",
+      "hi": "खावथलांगतुईपुई एवं अन्य"
+    },
+    "category": "abroad",
+    "rank": 2,
+    "source_names": [
+      "Khawthlangtuipui & Others"
+    ],
+    "basin": {
+      "en": "Rivers draining to Myanmar and Bangladesh",
+      "hi": "म्यांमार और बांग्लादेश जाने वाली नदियाँ"
+    },
+    "blurb": {
+      "en": "The Khawthlangtuipui, or Karnaphuli, of west Mizoram, which flows into Bangladesh and reaches the sea at Chattogram.",
+      "hi": "पश्चिम मिज़ोरम की खावथलांगतुईपुई, या कर्णफुली, जो बांग्लादेश में बहकर चट्टोग्राम पर समुद्र तक पहुँचती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "muhuri",
+    "status": "draft",
+    "name": {
+      "en": "Muhuri and others",
+      "hi": "मुहुरी एवं अन्य"
+    },
+    "category": "abroad",
+    "rank": 2,
+    "source_names": [
+      "Muhury and Others"
+    ],
+    "basin": {
+      "en": "Rivers draining to Myanmar and Bangladesh",
+      "hi": "म्यांमार और बांग्लादेश जाने वाली नदियाँ"
+    },
+    "blurb": {
+      "en": "The Muhuri and the other small rivers of south Tripura that flow west into Bangladesh.",
+      "hi": "मुहुरी और दक्षिण त्रिपुरा की अन्य छोटी नदियाँ, जो पश्चिम में बांग्लादेश की ओर बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "north-ladakh-sb",
+    "status": "draft",
+    "name": {
+      "en": "North Ladakh",
+      "hi": "उत्तर लद्दाख"
+    },
+    "category": "inland",
+    "rank": 2,
+    "source_names": [
+      "Area of North Ladakh not draining into Indus Basin"
+    ],
+    "basin": {
+      "en": "North Ladakh, not draining into the Indus",
+      "hi": "सिंधु में न गिरने वाला उत्तर लद्दाख"
+    },
+    "blurb": {
+      "en": "The Shaksgam valley and Aksai Chin, part of Ladakh as India defines it and held by China, whose water drains away from the Indus to the Tarim and the Tibetan lakes.",
+      "hi": "शक्सगाम घाटी और अक्साई चिन, भारत की परिभाषा में लद्दाख का भाग और चीन के कब्ज़े में, जिनका पानी सिंधु से दूर तारिम और तिब्बती झीलों की ओर जाता है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "andaman-sb",
+    "status": "draft",
+    "name": {
+      "en": "Andaman and Nicobar Islands",
+      "hi": "अंडमान और निकोबार द्वीपसमूह"
+    },
+    "category": "islands",
+    "rank": 2,
+    "source_names": [
+      "Drainage area of Andaman & Nicobar Islands"
+    ],
+    "basin": {
+      "en": "Andaman and Nicobar Islands",
+      "hi": "अंडमान और निकोबार द्वीपसमूह"
+    },
+    "blurb": {
+      "en": "The islands' own short streams, each running off its hills straight to the sea; no island is big enough for a river of any length.",
+      "hi": "द्वीपों की अपनी छोटी धाराएँ, हर एक अपनी पहाड़ियों से सीधे समुद्र तक; कोई द्वीप इतना बड़ा नहीं कि उस पर कोई लंबी नदी हो।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "lakshadweep-sb",
+    "status": "draft",
+    "name": {
+      "en": "Lakshadweep",
+      "hi": "लक्षद्वीप"
+    },
+    "category": "islands",
+    "rank": 2,
+    "source_names": [
+      "Drainage area of Lakshadweep Islands"
+    ],
+    "basin": {
+      "en": "Lakshadweep",
+      "hi": "लक्षद्वीप"
+    },
+    "blurb": {
+      "en": "Coral atolls with no rivers at all: rain soaks into the sand and floats as a lens of fresh water on the sea water beneath.",
+      "hi": "प्रवाल द्वीप, जिन पर कोई नदी नहीं: वर्षा रेत में समा जाती है और नीचे के खारे पानी पर मीठे पानी के एक लेंस की तरह तैरती है।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "upper-ganga",
+    "status": "draft",
+    "name": {
+      "en": "Upper Ganga",
+      "hi": "ऊपरी गंगा"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Above Ramganga Confluence"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ganga from Gangotri and the Alaknanda through Rishikesh and Haridwar, down the plain as far as the Ramganga's confluence.",
+      "hi": "गंगोत्री और अलकनंदा से ऋषिकेश और हरिद्वार होते हुए गंगा, मैदान में रामगंगा के संगम तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "banas",
+    "status": "draft",
+    "name": {
+      "en": "Banas",
+      "hi": "बनास"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Banas"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Banas of Rajasthan, from the Aravalli near Kumbhalgarh across Mewar and the Bisalpur dam to the Chambal.",
+      "hi": "राजस्थान की बनास, कुंभलगढ़ के पास अरावली से मेवाड़ और बीसलपुर बाँध पार कर चंबल तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "lower-ganga",
+    "status": "draft",
+    "name": {
+      "en": "Lower Ganga and the Bhagirathi",
+      "hi": "निचली गंगा और भागीरथी"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Bhagirathi and others (Ganga Lower)"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ganga as it enters its delta: the Bhagirathi-Hooghly past Murshidabad and Kolkata to the sea, and the land between it and Bangladesh.",
+      "hi": "डेल्टा में प्रवेश करती गंगा: मुर्शिदाबाद और कोलकाता के पास से समुद्र तक भागीरथी-हुगली, और उसके तथा बांग्लादेश के बीच की भूमि।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "chambal-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Chambal",
+      "hi": "निचली चंबल"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Chambal Lower"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Chambal's ravines below Kota, along the Rajasthan-Madhya Pradesh border to the Yamuna near Etawah; a sanctuary for gharials and river dolphins.",
+      "hi": "कोटा के नीचे चंबल के बीहड़, राजस्थान-मध्य प्रदेश सीमा के साथ इटावा के पास यमुना तक; घड़ियालों और नदी डॉल्फ़िनों का अभयारण्य।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "chambal-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Chambal",
+      "hi": "ऊपरी चंबल"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Chambal Upper"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Chambal from its source near Mhow in the Vindhya through the Gandhi Sagar and Rana Pratap Sagar dams to Kota.",
+      "hi": "विंध्य में महू के पास उद्गम से गांधी सागर और राणा प्रताप सागर बाँधों से होकर कोटा तक चंबल।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "damodar",
+    "status": "draft",
+    "name": {
+      "en": "Damodar",
+      "hi": "दामोदर"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Damodar"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Damodar and the Barakar from the Chhotanagpur plateau through Jharkhand's coalfields and Durgapur to the Hooghly; once called the sorrow of Bengal.",
+      "hi": "छोटानागपुर पठार से झारखंड के कोयला क्षेत्रों और दुर्गापुर होते हुए हुगली तक दामोदर और बराकर; कभी बंगाल का शोक कहलाती थी।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "gandak",
+    "status": "draft",
+    "name": {
+      "en": "Gandak and others",
+      "hi": "गंडक एवं अन्य"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Gandak and others"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Gandak from Nepal, with the Burhi Gandak and the Bagmati of north Bihar, across the plain to the Ganga opposite Patna.",
+      "hi": "नेपाल से गंडक, उत्तर बिहार की बूढ़ी गंडक और बागमती सहित, मैदान के आर-पार पटना के सामने गंगा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ghaghara-sb",
+    "status": "draft",
+    "name": {
+      "en": "Ghaghara",
+      "hi": "घाघरा"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Ghaghara"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ghaghara, the Karnali of Nepal, with the Sharda and the Rapti, crossing the Awadh plain of Uttar Pradesh.",
+      "hi": "नेपाल की करनाली, घाघरा, शारदा और राप्ती सहित, उत्तर प्रदेश के अवध मैदान के आर-पार।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ganga-gomti-ghaghara",
+    "status": "draft",
+    "name": {
+      "en": "Ganga between the Gomti and the Ghaghara",
+      "hi": "गोमती और घाघरा के बीच गंगा"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Ghaghara Confluence to Gomti confluence"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ganga's own catchment between the Gomti's confluence below Varanasi and the Ghaghara's near Chhapra.",
+      "hi": "वाराणसी के नीचे गोमती के संगम और छपरा के पास घाघरा के संगम के बीच गंगा का अपना जलग्रहण क्षेत्र।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "gomti",
+    "status": "draft",
+    "name": {
+      "en": "Gomti",
+      "hi": "गोमती"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Gomti"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Gomti, a spring-fed river of the plain rising near Pilibhit, through Lucknow and Jaunpur to the Ganga.",
+      "hi": "गोमती, पीलीभीत के पास निकलने वाली मैदान की झरना-पोषित नदी, लखनऊ और जौनपुर होते हुए गंगा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "kali-sindh",
+    "status": "draft",
+    "name": {
+      "en": "Kali Sindh, Parbati and others",
+      "hi": "काली सिंध, पार्वती एवं अन्य"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Kali Sindh and others up to Confluence with Parbati"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Kali Sindh, the Parbati and the other rivers of the Malwa plateau flowing north through Hadoti to the Chambal.",
+      "hi": "काली सिंध, पार्वती और मालवा पठार की अन्य नदियाँ, जो हाड़ौती होते हुए उत्तर में चंबल तक बहती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "kosi",
+    "status": "draft",
+    "name": {
+      "en": "Kosi",
+      "hi": "कोसी"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Kosi"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Kosi from the Everest country of Nepal, spreading over north Bihar in a fan it has shifted westward over centuries; the sorrow of Bihar.",
+      "hi": "नेपाल के एवरेस्ट क्षेत्र से कोसी, उत्तर बिहार पर एक पंखे में फैलती जिसे वह सदियों से पश्चिम की ओर खिसकाती आई है; बिहार का शोक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "ramganga",
+    "status": "draft",
+    "name": {
+      "en": "Ramganga",
+      "hi": "रामगंगा"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Ramganga"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ramganga from the Kumaon hills through the Corbett reserve and past Moradabad and Bareilly to the Ganga near Kannauj.",
+      "hi": "कुमाऊँ की पहाड़ियों से कॉर्बेट अभयारण्य होते हुए, मुरादाबाद और बरेली के पास से कन्नौज के पास गंगा तक रामगंगा।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "son",
+    "status": "draft",
+    "name": {
+      "en": "Son",
+      "hi": "सोन"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Sone"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Son from near Amarkantak north through the Bansagar dam and past the Kaimur hills to the Ganga above Patna.",
+      "hi": "अमरकंटक के पास से सोन, उत्तर में बाणसागर बाँध से होकर कैमूर पहाड़ियों के पास से पटना के ऊपर गंगा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tons",
+    "status": "draft",
+    "name": {
+      "en": "Tons (Tamsa)",
+      "hi": "टोंस (तमसा)"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Tons"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Tons of Madhya Pradesh -- the Tamsa, not the Himalayan Tons -- from the Kaimur scarp near Rewa to the Ganga below Prayagraj.",
+      "hi": "मध्य प्रदेश की टोंस — तमसा, हिमालय वाली टोंस नहीं — रीवा के पास कैमूर कगार से प्रयागराज के नीचे गंगा तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "middle-ganga",
+    "status": "draft",
+    "name": {
+      "en": "Middle Ganga",
+      "hi": "मध्य गंगा"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Upstream of Gomti confluece to Muzaffarnagar"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Ganga's own plain from below the Ramganga past Kanpur and Prayagraj to the Gomti's confluence.",
+      "hi": "रामगंगा के नीचे से कानपुर और प्रयागराज होते हुए गोमती के संगम तक गंगा का अपना मैदान।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "yamuna-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Yamuna",
+      "hi": "निचली यमुना"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Yamuna Lower"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Yamuna below Agra to Prayagraj, and the long rivers that join it from Bundelkhand and the south -- the Betwa, the Ken, the Sindh.",
+      "hi": "आगरा के नीचे प्रयागराज तक यमुना, और बुंदेलखंड तथा दक्षिण से आकर मिलने वाली लंबी नदियाँ — बेतवा, केन, सिंध।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "yamuna-middle",
+    "status": "draft",
+    "name": {
+      "en": "Middle Yamuna",
+      "hi": "मध्य यमुना"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Yamuna Middle"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Yamuna below Delhi past Mathura and Agra, the river the Taj was built beside.",
+      "hi": "दिल्ली के नीचे मथुरा और आगरा के पास से यमुना, वह नदी जिसके किनारे ताज बना।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "yamuna-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Yamuna",
+      "hi": "ऊपरी यमुना"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Yamuna Upper"
+    ],
+    "basin": {
+      "en": "Ganga basin",
+      "hi": "गंगा बेसिन"
+    },
+    "blurb": {
+      "en": "The Yamuna from Yamunotri, with the Tons of Uttarakhand, out of the hills and down the plain to Delhi.",
+      "hi": "यमुनोत्री से यमुना, उत्तराखंड की टोंस सहित, पहाड़ों से निकलकर मैदान में दिल्ली तक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "brahmaputra-lower",
+    "status": "draft",
+    "name": {
+      "en": "Lower Brahmaputra",
+      "hi": "निचली ब्रह्मपुत्र"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Brahmaputra Lower"
+    ],
+    "basin": {
+      "en": "Brahmaputra basin",
+      "hi": "ब्रह्मपुत्र बेसिन"
+    },
+    "blurb": {
+      "en": "The Brahmaputra through western Assam to Bangladesh, with the rivers that come down to it from Bhutan and Sikkim -- the Manas, the Sankosh, the Teesta.",
+      "hi": "पश्चिमी असम होते हुए बांग्लादेश तक ब्रह्मपुत्र, भूटान और सिक्किम से उतरने वाली नदियों सहित — मानस, संकोश, तीस्ता।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "brahmaputra-upper",
+    "status": "draft",
+    "name": {
+      "en": "Upper Brahmaputra",
+      "hi": "ऊपरी ब्रह्मपुत्र"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Brahmaputra Upper"
+    ],
+    "basin": {
+      "en": "Brahmaputra basin",
+      "hi": "ब्रह्मपुत्र बेसिन"
+    },
+    "blurb": {
+      "en": "The Siang from Tibet, the Dibang and the Lohit meeting in Arunachal to form the Brahmaputra, and its course through upper Assam past Dibrugarh and Majuli.",
+      "hi": "तिब्बत से सियांग, दिबांग और लोहित, जो अरुणाचल में मिलकर ब्रह्मपुत्र बनती हैं, और डिब्रूगढ़ तथा माजुली के पास से ऊपरी असम में उसका मार्ग।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "barak-sb",
+    "status": "draft",
+    "name": {
+      "en": "Barak",
+      "hi": "बराक"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Barak"
+    ],
+    "basin": {
+      "en": "Barak and others",
+      "hi": "बराक एवं अन्य"
+    },
+    "blurb": {
+      "en": "The Barak from the hills of Manipur through the Cachar plain of Assam, past Silchar, into Bangladesh.",
+      "hi": "मणिपुर की पहाड़ियों से असम के कछार मैदान होते हुए, सिलचर के पास से बांग्लादेश तक बराक।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "meghalaya-south",
+    "status": "draft",
+    "name": {
+      "en": "Kynshi and others",
+      "hi": "किन्शी एवं अन्य"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Kynchiang and other south flowing rivers"
+    ],
+    "basin": {
+      "en": "Barak and others",
+      "hi": "बराक एवं अन्य"
+    },
+    "blurb": {
+      "en": "The rivers of the Khasi and Jaintia hills that fall south into Bangladesh, off the wettest slopes on earth around Cherrapunji and Mawsynram.",
+      "hi": "खासी और जयंतिया पहाड़ियों की नदियाँ जो दक्षिण में बांग्लादेश की ओर गिरती हैं, चेरापूँजी और मॉसिनराम के आसपास पृथ्वी की सबसे आर्द्र ढलानों से।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  },
+  {
+    "id": "tripura-north",
+    "status": "draft",
+    "name": {
+      "en": "Rivers of north and central Tripura",
+      "hi": "उत्तर और मध्य त्रिपुरा की नदियाँ"
+    },
+    "category": "himalayan-bay",
+    "rank": 2,
+    "source_names": [
+      "Naoch chara and others"
+    ],
+    "basin": {
+      "en": "Barak and others",
+      "hi": "बराक एवं अन्य"
+    },
+    "blurb": {
+      "en": "The Manu, the Dhalai, the Gumti and the other rivers of northern and central Tripura, which cross into Bangladesh to reach the Meghna.",
+      "hi": "मनु, धलाई, गोमती और उत्तर व मध्य त्रिपुरा की अन्य नदियाँ, जो बांग्लादेश में जाकर मेघना तक पहुँचती हैं।"
+    },
+    "sources": [
+      "https://indiawris.gov.in/wris/"
+    ]
+  }
+]
