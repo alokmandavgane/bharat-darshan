@@ -13,6 +13,7 @@ export const GLYPHS = {
   city: '<path d="M3 21h18M5 21V9h5v12M10 21V4h6v17M16 21v-8h4v8M7 12h1M7 15h1M12 8h2M12 12h2M12 16h2"/>',
   pin: '<path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>',
   gem: '<path d="M7.5 4h9l4.5 6-9 11-9-11z"/><path d="M3 10h18M10 4 8.5 10l3.5 11M14 4l1.5 6-3.5 11"/>',
+  works: '<path d="M3 21h18M4 21V11l5 3V11l5 3V9h6v12M17 9V4.5h2V9M7 17.5h2M12 17.5h2"/>',
   road: '<path d="M8 21L10 3M16 21L14 3M12 7v3M12 13v3"/>',
   rail: '<path d="M9 21L7 3M17 21L15 3M5 8h13M4 14h13"/>',
 };

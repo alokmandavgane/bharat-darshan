@@ -51,6 +51,7 @@
   "tour.pause": "Pause the tour",
   "layer.group.physical": "Land and water",
   "layer.group.culture": "People and places",
+  "layer.group.industry": "Works and power",
   "layer.group.resources": "Rocks and mining",
   "layer.group.network": "Roads and rail",
   "card.steps": "Step through the places on show",

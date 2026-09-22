@@ -174,6 +174,17 @@
         "hi": "पर्वत श्रेणियाँ किससे बनी हैं और कहाँ तक जाती हैं।"
       }
     },
+    "ministry-of-steel": {
+      "title": { "en": "Ministry of Steel", "hi": "इस्पात मंत्रालय" },
+      "publisher": { "en": "Ministry of Steel, Government of India", "hi": "इस्पात मंत्रालय, भारत सरकार" },
+      "url": "https://steel.gov.in/",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Which plants exist, who runs them and what they make: the ministry's own account of the industry it oversees.",
+        "hi": "कौन-से संयंत्र हैं, उन्हें कौन चलाता है और वे क्या बनाते हैं: जिस उद्योग की देखरेख मंत्रालय करता है, उसका उसका अपना लेखा।"
+      }
+    },
     "morth": {
       "title": { "en": "Ministry of Road Transport and Highways", "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय" },
       "publisher": { "en": "Ministry of Road Transport and Highways", "hi": "सड़क परिवहन एवं राजमार्ग मंत्रालय" },

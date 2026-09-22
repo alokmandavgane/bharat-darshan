@@ -2,7 +2,7 @@
   "id": "power",
   "type": "points",
   "marker": "symbol",
-  "group": "network",
+  "group": "industry",
   "title": {
     "en": "Power stations",
     "hi": "विद्युत संयंत्र"
