@@ -37,7 +37,9 @@ export function kindOf(layer) {
     case 'choropleth': return Array.isArray(layer.scale) ? 'ramp' : 'mosaic';
     case 'areas': return 'mosaic';
     case 'prisms': return 'prisms';
-    case 'regional': return 'regional';
+    // A regional layer that names where its items are most seen draws them as pegs, so
+    // it reads as a token layer; one that does not is read in the state cards alone.
+    case 'regional': return layer.anchored ? 'token' : 'regional';
     default: return 'token';
   }
 }

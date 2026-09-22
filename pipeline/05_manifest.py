@@ -84,7 +84,7 @@ def main():
             # categories and marker ride along so the menu can draw a legend before the
             # layer itself is fetched; the item bodies stay in the layer file.
             layers.append({k: L[k] for k in ('id', 'type', 'marker', 'size', 'title', 'icon', 'group',
-                                             'default_on', 'count', 'reviewed', 'categories',
+                                             'default_on', 'count', 'reviewed', 'categories', 'anchored',
                                              'fields', 'scale', 'height', 'unit', 'note', 'sources') if k in L}
                           | {'path': f'layers/{n}'})
     world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')

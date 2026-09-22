@@ -862,7 +862,13 @@ def build_layer(folder, states, ids, heights, out, registry, models):
     if layer.get('type') == 'regional' and not problems:
         out_items, region_problems = build_regional(items, cats, by_iso, by_id, fields, ids, width, height)
         problems += region_problems
-        return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']))
+        # Whether it has anywhere to be drawn. A regional layer whose items name the place
+        # they are most seen at is drawn there as tokens; one whose items do not is read in
+        # the state cards alone, and its colours appear nowhere on the map -- which is what
+        # the key needs to know before it offers a reader a row of swatches.
+        anchored = any('x' in i for i in out_items)
+        return finish(layer, out_items, out, problems, order=lambda i: (i['priority'], i['id']),
+                      extra={'anchored': anchored})
     if layer.get('type') == 'prisms' and not problems:
         values, prism_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += prism_problems

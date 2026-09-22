@@ -17,6 +17,7 @@ export const GLYPHS = {
   road: '<path d="M8 21L10 3M16 21L14 3M12 7v3M12 13v3"/>',
   rail: '<path d="M9 21L7 3M17 21L15 3M5 8h13M4 14h13"/>',
   tag: '<path d="M3 12l9-9h9v9l-9 9z"/><circle cx="16" cy="8" r="1.6"/>',
+  speech: '<path d="M4 5.5h16v11h-9l-5.5 4.5V16.5H4z"/><path d="M8 9.5h8M8 13h5"/>',
 };
 
 export function glyphSvg(name) {

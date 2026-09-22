@@ -198,6 +198,15 @@ export function createShell(root, store) {
   }
 
   /**
+   * A layer's key, or -- for one whose colours appear nowhere on the map -- what it is
+   * instead. A `regional` layer with no anchors draws nothing, so a row of swatches
+   * would be offering the reader colours to look for that are not there.
+   */
+  function keyFor(layer, opts) {
+    return kindOf(layer) === 'regional' ? null : layerKey(layer, opts);
+  }
+
+  /**
    * One layer as a row: its mark, its name, its key in miniature, and a switch. The
    * same row serves the menu and an open page, and everything on it is read off the
    * layer's declared type and colours (PLAN.md D5).
@@ -220,7 +229,7 @@ export function createShell(root, store) {
     name.className = 'layer-name';
     name.textContent = pick(layer.title);
     text.appendChild(name);
-    const k = layerKey(layer, { compact: true });
+    const k = keyFor(layer, { compact: true });
     const hint = k ? '' : keyHint(layer);
     if (k || hint) {
       const keyEl = document.createElement('span');
@@ -348,7 +357,7 @@ export function createShell(root, store) {
       if (on) {
         const body = document.createElement('div');
         body.className = 'key-layer-body';
-        const k = layerKey(layer);
+        const k = keyFor(layer, {});
         if (k) body.appendChild(k);
         else {
           const hint = keyHint(layer);
@@ -660,6 +669,15 @@ export function createShell(root, store) {
 
   /** The open page's own words, its sources, and its layers as rows with switches. */
   function renderPage(plate) {
+    // The way back, said in words above the page's own. The arrow in the head does the
+    // same thing, but an arrow on its own does not say where it goes, and a reader who
+    // has turned to a page should not have to guess how to get back to the contents.
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'contents-back';
+    back.textContent = t('atlas.back');
+    back.addEventListener('click', () => { closePlate(); sheetBody.scrollTop = 0; });
+    contents.appendChild(back);
     const p = document.createElement('p');
     p.className = 'contents-blurb';
     p.textContent = pick(plate.blurb);
