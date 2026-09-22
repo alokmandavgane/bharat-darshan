@@ -711,7 +711,7 @@
     "hi": "विद्युत संयंत्र"
    },
    "icon": "city",
-   "group": "network",
+   "group": "industry",
    "default_on": false,
    "count": 24,
    "reviewed": 0,
@@ -1016,6 +1016,48 @@
    "path": "layers/roads.json"
   },
   {
+   "id": "steel",
+   "type": "points",
+   "title": {
+    "en": "Iron and steel",
+    "hi": "लोहा और इस्पात"
+   },
+   "icon": "works",
+   "group": "industry",
+   "default_on": false,
+   "count": 14,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "inland",
+     "icon": "works",
+     "color": "#8e3f33",
+     "title": {
+      "en": "Inland, near the mines",
+      "hi": "थलीय, खदानों के निकट"
+     }
+    },
+    {
+     "id": "coastal",
+     "icon": "works",
+     "color": "#3f8a84",
+     "title": {
+      "en": "Coastal, near a port",
+      "hi": "तटीय, बंदरगाह के निकट"
+     }
+    }
+   ],
+   "note": {
+    "en": "Steel is made where coal and iron ore can meet cheaply, which is why most of these plants stand on the eastern belt and take the same rust colour as the ore on the minerals page. The coastal ones invert the logic: they bring the raw material in by sea.",
+    "hi": "इस्पात वहाँ बनता है जहाँ कोयला और लौह अयस्क सस्ते में मिल सकें, इसीलिए इनमें से अधिकांश संयंत्र पूर्वी पट्टी पर हैं और खनिज पृष्ठ के अयस्क वाला ही जंग-रंग लेते हैं। तटीय संयंत्र यह तर्क उलट देते हैं: वे कच्चा माल समुद्र से लाते हैं।"
+   },
+   "sources": [
+    "ministry-of-steel",
+    "wikipedia"
+   ],
+   "path": "layers/steel.json"
+  },
+  {
    "id": "summits",
    "type": "points",
    "title": {
@@ -1149,12 +1191,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 8494,
-   "sha256": "7651b34e79cd"
+   "size": 9466,
+   "sha256": "3f427221aa24"
   },
   "sources.json": {
-   "size": 16896,
-   "sha256": "016863ae59c4"
+   "size": 17656,
+   "sha256": "39191c0284df"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1373,8 +1415,8 @@
    "sha256": "a9f908c04dcc"
   },
   "layers/power.json": {
-   "size": 20743,
-   "sha256": "ec9e45bc1d3a"
+   "size": 20744,
+   "sha256": "f4569c2dd039"
   },
   "layers/rail.json": {
    "size": 8621,
@@ -1395,6 +1437,10 @@
   "layers/roads.json": {
    "size": 18522,
    "sha256": "40c031d60dec"
+  },
+  "layers/steel.json": {
+   "size": 11380,
+   "sha256": "52d54fb443c0"
   },
   "layers/summits.json": {
    "size": 19314,
