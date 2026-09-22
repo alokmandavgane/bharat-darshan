@@ -128,7 +128,16 @@ vec4 areaFill(vec2 uv) {
   float aa = max(fwidth(edge), 1e-4);
   float t = smoothstep(0.5 - aa, 0.5 + aa, edge);
   vec4 a = areaColour(firstId), b = areaColour(secondId);
-  return mix(b, a, t);
+  vec4 fill = mix(b, a, t);
+  // A fine line where two areas meet. The colours say which kind an area is, and two of
+  // a kind side by side -- the Godavari and Krishna basins, two plateaus -- are one colour
+  // and would read as one area without it. `edge` passes a half on the contour and
+  // fwidth measures it in pixels, so the line is a pixel wide at any zoom; it is drawn
+  // only between two areas, never against "no area", where the fill already fades out.
+  float px = abs(edge - 0.5) / aa;
+  float line = (1.0 - smoothstep(0.7, 1.6, px)) * a.a * b.a * step(0.5, abs(firstId - secondId));
+  fill.rgb *= 1.0 - 0.38 * line;
+  return fill;
 }
 
 void main() {
