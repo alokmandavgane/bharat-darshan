@@ -57,13 +57,13 @@
     }
   },
   "note": {
-    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. Each figurine stands where the registered product comes from; India has granted several hundred, and these are a first few.",
-    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। हर मूर्ति वहीं खड़ी है जहाँ से पंजीकृत उत्पाद आता है; भारत ने कई सौ दिए हैं, ये पहले कुछ हैं।"
+    "en": "A geographical indication says a thing is what it is because of where it is from: Darjeeling tea from those hills, Banarasi silk from those looms. India's register held 647 of them when this was drawn, and 169 stand here, one figurine each, on the spot the registered product comes from. Every state and union territory that has one is represented; Chandigarh, Lakshadweep and Dadra and Nagar Haveli and Daman and Diu have none.",
+    "hi": "भौगोलिक संकेतक कहता है कि कोई चीज़ जो है, वह अपने स्थान के कारण है: उन पहाड़ों की दार्जिलिंग चाय, उन करघों का बनारसी रेशम। यह मानचित्र बनते समय भारत की पंजी में 647 थे, और यहाँ 169 खड़े हैं, हर एक की अपनी मूर्ति, ठीक उसी स्थान पर जहाँ से पंजीकृत उत्पाद आता है। जिस भी राज्य या केंद्रशासित प्रदेश के पास एक भी है, वह यहाँ है; चंडीगढ़, लक्षद्वीप और दादरा तथा नगर हवेली और दमन तथा दीव के पास कोई नहीं।"
   },
   "sources": [
     "gi-registry",
     "wikipedia"
   ],
-  "attribution": "Products, places and journal years drafted from the GI Registry's public search and each product's Wikipedia article; every item awaits review. The figurines are recipes under content/models, one per kind of thing, tinted per item.",
+  "attribution": "Products, places and journal years drafted against the GI Registry's published list of registered indications, and each product's Wikipedia article; a product whose registered name is not on that list does not ship. Every item awaits review. The figurines are recipes under content/models, one per kind of thing, tinted per item.",
   "_model": "Each item names a recipe from content/models (or inherits its category's); `color` tints the parts the recipe marks tintable, so one saree serves four silks."
 }

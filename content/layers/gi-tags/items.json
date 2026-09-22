@@ -1000,5 +1000,3596 @@
       "https://en.wikipedia.org/wiki/Mizo_chilli",
       "https://search.ipindia.gov.in/GIRPublic/"
     ]
+  },
+  {
+    "id": "bidriware",
+    "status": "draft",
+    "name": {
+      "en": "Bidriware",
+      "hi": "बिदरीवेयर"
+    },
+    "anchor": {
+      "lat": 17.908,
+      "lon": 77.515
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Blackened zinc and copper alloy inlaid with silver wire, then darkened with soil from the Bidar fort that no other earth will do for. A Bahmani court craft, still worked in one town.",
+      "hi": "जस्ते और ताँबे की काली मिश्रधातु, जिसमें चाँदी की तार जड़ी जाती है और फिर बीदर क़िले की मिट्टी से काली की जाती है — कोई और मिट्टी काम नहीं आती। बहमनी दरबार का शिल्प, आज भी एक ही नगर में।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bidriware",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mysore-sandalwood-oil",
+    "status": "draft",
+    "name": {
+      "en": "Mysore sandalwood oil",
+      "hi": "मैसूर चंदन तेल"
+    },
+    "anchor": {
+      "lat": 12.298,
+      "lon": 76.639
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "craft",
+    "model": "bottle",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Oil steam-distilled from the heartwood of Santalum album, a state monopoly since Tipu Sultan's time and the reason Mysore's name is on soap all over the world.",
+      "hi": "संतालम एल्बम की अंतःकाष्ठ से भाप-आसवित तेल, टीपू सुल्तान के समय से राज्य का एकाधिकार, और यही कारण है कि मैसूर का नाम दुनिया भर के साबुन पर है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mysore_Sandalwood_Oil",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "ilkal-saree",
+    "status": "draft",
+    "name": {
+      "en": "Ilkal saree",
+      "hi": "इल्कल साड़ी"
+    },
+    "anchor": {
+      "lat": 15.959,
+      "lon": 76.114
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Woven at Ilkal for eight centuries: a cotton body joined to a silk pallu by the tope teni knot, in the red the Kasuti embroiderers of the same country favour.",
+      "hi": "आठ सौ वर्षों से इल्कल में बुनी: सूती देह, जिससे रेशमी पल्लू तोपे तेनी गाँठ से जुड़ता है, उसी लाल में जो इसी देश की कसूती कढ़ाई वालों को प्रिय है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ilkal_sari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "byadgi-chilli",
+    "status": "draft",
+    "name": {
+      "en": "Byadgi chilli",
+      "hi": "ब्याडगी मिर्च"
+    },
+    "anchor": {
+      "lat": 14.673,
+      "lon": 75.487
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "The wrinkled red chilli that colours south Indian food without burning it. Most of India's paprika-grade colour extract comes from this one variety.",
+      "hi": "झुर्रीदार लाल मिर्च जो दक्षिण भारतीय भोजन को रंग देती है, जलन नहीं। भारत का अधिकांश पपरिका-श्रेणी रंग-सत्त्व इसी एक क़िस्म से आता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Byadagi_chilli",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nanjanagud-banana",
+    "status": "draft",
+    "name": {
+      "en": "Nanjanagud banana",
+      "hi": "नंजनगूड केला"
+    },
+    "anchor": {
+      "lat": 12.118,
+      "lon": 76.684
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "produce",
+    "model": "banana",
+    "priority": 2,
+    "registered": "2006–07",
+    "blurb": {
+      "en": "A short, thin-skinned banana grown on the Kabini's banks near the Nanjundeshwara temple, sweeter and more fragrant than the trade varieties and hard to carry far.",
+      "hi": "नंजुंडेश्वर मंदिर के पास कबिनी के किनारे उगा छोटा, पतले छिलके वाला केला, व्यापारिक क़िस्मों से अधिक मीठा और सुगंधित, और दूर ले जाना कठिन।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nanjanagud_Banana",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mysore-agarbathi",
+    "status": "draft",
+    "name": {
+      "en": "Mysore agarbathi",
+      "hi": "मैसूर अगरबत्ती"
+    },
+    "anchor": {
+      "lat": 12.298,
+      "lon": 76.639
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "craft",
+    "model": "bottle",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Incense sticks rolled by hand around bamboo slivers with charcoal, sandal dust and resins. Mysore has made them for the temples of the south since the nineteenth century.",
+      "hi": "बाँस की सींकों पर कोयले, चंदन-चूर्ण और गोंद के साथ हाथ से लपेटी अगरबत्तियाँ। मैसूर उन्नीसवीं सदी से दक्षिण के मंदिरों के लिए इन्हें बनाता आया है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mysore_Agarbathi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "coorg-orange",
+    "status": "draft",
+    "name": {
+      "en": "Coorg orange",
+      "hi": "कुर्ग संतरा"
+    },
+    "anchor": {
+      "lat": 12.426,
+      "lon": 75.738
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "produce",
+    "model": "orange",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "A mandarin grown in the shade of Kodagu's coffee estates, thin-skinned and sharp; the fruit the hill planters sent down to the plains before coffee took the land.",
+      "hi": "कोडगु के कॉफ़ी बागानों की छाँव में उगा संतरा, पतले छिलके वाला और खट्टा; वही फल जो पहाड़ी बागान वाले कॉफ़ी के ज़मीन लेने से पहले मैदानों को भेजते थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Coorg_orange",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "udupi-mattu-gulla",
+    "status": "draft",
+    "name": {
+      "en": "Udupi Mattu Gulla brinjal",
+      "hi": "उडुपी मट्टू गुल्ला बैंगन"
+    },
+    "anchor": {
+      "lat": 13.335,
+      "lon": 74.746
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "A pale green, nearly seedless brinjal grown only in the fields of Mattu village, blessed at the Udupi math and cooked in the temple's own kitchen.",
+      "hi": "हल्का हरा, लगभग बीजरहित बैंगन जो केवल मट्टू गाँव के खेतों में उगता है, उडुपी मठ में आशीषित और मंदिर की अपनी रसोई में पकाया जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Udupi_Mattu_Gulla_Brinjal",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dharwad-pedha",
+    "status": "draft",
+    "name": {
+      "en": "Dharwad pedha",
+      "hi": "धारवाड़ पेड़ा"
+    },
+    "anchor": {
+      "lat": 15.348,
+      "lon": 75.134
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "food",
+    "model": "sweet",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "A grainy brown milk sweet made in Dharwad since a family of confectioners came south from Unnao in the 1850s, carrying the recipe away from a cholera epidemic.",
+      "hi": "दानेदार भूरा दुग्ध-मिष्ठान्न, जो 1850 के दशक में उन्नाव से दक्षिण आए हलवाइयों के एक परिवार के बाद से धारवाड़ में बनता है, जो हैजे की महामारी से यह नुस्ख़ा लेकर भागे थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dharwad_Pedha",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "etikoppaka-toys",
+    "status": "draft",
+    "name": {
+      "en": "Etikoppaka toys",
+      "hi": "एतिकोप्पाका खिलौने"
+    },
+    "anchor": {
+      "lat": 17.691,
+      "lon": 83.004
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2017–18",
+    "blurb": {
+      "en": "Lacquered wooden toys turned on a lathe from soft ankudu wood and coloured with vegetable dyes — seed, bark, root and leaf — so a child may safely put them in the mouth.",
+      "hi": "नरम अंकुडु लकड़ी से खराद पर बने लाख-रंगे काष्ठ-खिलौने, जिन्हें बीज, छाल, जड़ और पत्ती के वानस्पतिक रंगों से रंगा जाता है, ताकि बच्चा मुँह में ले तो हानि न हो।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Etikoppaka_Toys",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kondapalli-bommallu",
+    "status": "draft",
+    "name": {
+      "en": "Kondapalli toys",
+      "hi": "कोंडापल्ली खिलौने"
+    },
+    "anchor": {
+      "lat": 16.507,
+      "lon": 80.647
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Figures carved from light tella poniki wood and joined with tamarind paste: bullock carts, village scenes and the ten avatars, made by the Aryakshatriya families of one village.",
+      "hi": "हल्की तेल्ला पोनिकी लकड़ी से तराशी और इमली की लेई से जोड़ी मूर्तियाँ: बैलगाड़ियाँ, गाँव के दृश्य और दशावतार, जो एक ही गाँव के आर्यक्षत्रिय परिवार बनाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kondapalli_toys",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "machilipatnam-kalamkari",
+    "status": "draft",
+    "name": {
+      "en": "Machilipatnam kalamkari",
+      "hi": "मछलीपट्टनम कलमकारी"
+    },
+    "anchor": {
+      "lat": 16.187,
+      "lon": 81.139
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "textile",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Cotton block-printed and hand-painted with a bamboo kalam in dyes fixed with buffalo milk and myrobalan; the Coromandel trade sent these chintzes to Persia and Europe.",
+      "hi": "सूती कपड़ा, जो ठप्पे से छपा और बाँस की क़लम से हाथ से रंगा जाता है; रंग भैंस के दूध और हरड़ से पक्के होते हैं। कोरोमंडल व्यापार ने यही छींट ईरान और यूरोप भेजी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Machilipatnam_Kalamkari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "srikalahasti-kalamkari",
+    "status": "draft",
+    "name": {
+      "en": "Srikalahasti kalamkari",
+      "hi": "श्रीकालहस्ती कलमकारी"
+    },
+    "anchor": {
+      "lat": 13.755,
+      "lon": 79.701
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Temple cloth drawn entirely freehand with the kalam, no block at all: episodes of the Ramayana and the Mahabharata told in panels for hanging behind a shrine.",
+      "hi": "मंदिर-वस्त्र, जो पूरी तरह क़लम से मुक्तहस्त बनाया जाता है, कोई ठप्पा नहीं: रामायण और महाभारत के प्रसंग, जो गर्भगृह के पीछे टाँगने के लिए खंडों में कहे जाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Srikalahasthi_Kalamkari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "banaganapalle-mango",
+    "status": "draft",
+    "name": {
+      "en": "Banaganapalle mango",
+      "hi": "बंगनपल्ली आम"
+    },
+    "anchor": {
+      "lat": 15.318,
+      "lon": 78.227
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2017–18",
+    "blurb": {
+      "en": "The big golden mango of Rayalaseema, firm and hardly fibrous, named for the small town whose nawab is said to have first grown it. India's most widely planted table mango.",
+      "hi": "रायलसीमा का बड़ा सुनहरा आम, कसा हुआ और लगभग बिना रेशे का, उस छोटे क़स्बे के नाम पर जिसके नवाब ने इसे पहले उगाया कहा जाता है। भारत का सबसे अधिक लगाया जाने वाला मेज़ी आम।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Banaganapalle_Mangoes",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "guntur-sannam-chilli",
+    "status": "draft",
+    "name": {
+      "en": "Guntur Sannam chilli",
+      "hi": "गुंटूर सन्नम मिर्च"
+    },
+    "anchor": {
+      "lat": 16.3,
+      "lon": 80.457
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "The hot red chilli of the Krishna delta, and the reason Guntur has Asia's largest chilli market. Most of what India exports as chilli is this variety.",
+      "hi": "कृष्णा डेल्टा की तीखी लाल मिर्च, और यही कारण है कि गुंटूर में एशिया का सबसे बड़ा मिर्च बाज़ार है। भारत जो मिर्च निर्यात करता है, उसका अधिकांश यही क़िस्म है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Guntur_Sannam_Chilli",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dharmavaram-saree",
+    "status": "draft",
+    "name": {
+      "en": "Dharmavaram saree",
+      "hi": "धर्मावरम साड़ी"
+    },
+    "anchor": {
+      "lat": 14.414,
+      "lon": 77.72
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Heavy mulberry silk with broad interlocked-weft borders in a contrasting colour, woven at Dharmavaram for weddings across the Telugu country.",
+      "hi": "भारी शहतूती रेशम, जिसकी चौड़ी किनारी विपरीत रंग में अंतर्ग्रथित बाने से बुनी जाती है; धर्मावरम में तेलुगु देश भर के विवाहों के लिए बुनी जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dharmavaram_handloom_pattu_sarees_and_paavadas",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "thanjavur-doll",
+    "status": "draft",
+    "name": {
+      "en": "Thanjavur dancing doll",
+      "hi": "तंजावुर नर्तकी गुड़िया"
+    },
+    "anchor": {
+      "lat": 10.785,
+      "lon": 79.139
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "The bobble-headed clay doll of the Maratha court at Thanjavur, weighted so that it rocks without falling over — a toy that is also a small lesson in the centre of gravity.",
+      "hi": "तंजावुर के मराठा दरबार की डोलती-सिर वाली मिट्टी की गुड़िया, जो इस तरह भारित है कि हिलती है पर गिरती नहीं — एक खिलौना जो गुरुत्व-केंद्र का छोटा पाठ भी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Thanjavur_Doll",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "madurai-malli",
+    "status": "draft",
+    "name": {
+      "en": "Madurai malli",
+      "hi": "मदुरै मल्ली"
+    },
+    "anchor": {
+      "lat": 9.919,
+      "lon": 78.12
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "produce",
+    "model": "saffron",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "The jasmine of Madurai, picked in bud before dawn and sold by weight at the flower market: thicker-petalled and longer-scented than jasmine grown anywhere else in the south.",
+      "hi": "मदुरै की चमेली, भोर से पहले कली में तोड़ी और फूल-बाज़ार में तौलकर बेची जाती है: दक्षिण में कहीं और उगी चमेली से अधिक मोटी पंखुड़ी और अधिक देर तक महकने वाली।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Madurai_Malli",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bhavani-jamakkalam",
+    "status": "draft",
+    "name": {
+      "en": "Bhavani Jamakkalam",
+      "hi": "भवानी जमक्कालम"
+    },
+    "anchor": {
+      "lat": 11.446,
+      "lon": 77.682
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "A thick cotton carpet-blanket woven at Bhavani where the Bhavani meets the Kaveri, in broad bands of colour; the floor covering of south Indian houses and wedding halls.",
+      "hi": "मोटा सूती क़ालीन-कंबल, जो भवानी में बुना जाता है जहाँ भवानी कावेरी से मिलती है, रंगों की चौड़ी पट्टियों में; दक्षिण भारतीय घरों और विवाह-मंडपों का फ़र्श।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhavani_Jamakkalam",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kovai-kora-cotton",
+    "status": "draft",
+    "name": {
+      "en": "Kovai Kora cotton saree",
+      "hi": "कोवै कोरा सूती साड़ी"
+    },
+    "anchor": {
+      "lat": 11.006,
+      "lon": 76.966
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Cotton woven with a kora silk weft at Coimbatore, so the saree drapes like silk and wears like cotton — the compromise the Tamil summer asks for.",
+      "hi": "कोयंबत्तूर में कोरा रेशम के बाने के साथ बुना सूत, जिससे साड़ी रेशम-सी गिरती है और सूत-सी पहनी जाती है — वही समझौता जो तमिल गर्मी माँगती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kovai_Cora_cotton",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nilgiri-tea",
+    "status": "draft",
+    "name": {
+      "en": "Nilgiri Orthodox tea",
+      "hi": "नीलगिरि ऑर्थोडॉक्स चाय"
+    },
+    "anchor": {
+      "lat": 11.35,
+      "lon": 76.794
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "produce",
+    "model": "tea",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Tea from the Blue Mountains, picked all year because the Nilgiris have no dormant season; brisk and fragrant, and the base of most of the world's iced tea.",
+      "hi": "नीलगिरि की चाय, जो पूरे वर्ष तोड़ी जाती है क्योंकि इन पहाड़ों में सुप्त ऋतु नहीं होती; तेज़ और सुगंधित, और विश्व की अधिकांश शीतल चाय का आधार।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nilgiri_tea",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "temple-jewellery-nagercoil",
+    "status": "draft",
+    "name": {
+      "en": "Nagercoil temple jewellery",
+      "hi": "नागरकोइल मंदिर आभूषण"
+    },
+    "anchor": {
+      "lat": 8.179,
+      "lon": 77.432
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Gold-covered jewellery made for temple images and for Bharatanatyam dancers: heavy, stone-set, and shaped to the iconography rather than to fashion.",
+      "hi": "मंदिर की प्रतिमाओं और भरतनाट्यम नर्तकियों के लिए बने स्वर्ण-मढ़े आभूषण: भारी, नगजड़े, और फ़ैशन नहीं, प्रतिमा-विधान के अनुसार गढ़े।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Temple_Jewellery_of_Nagercoil",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "salem-silk",
+    "status": "draft",
+    "name": {
+      "en": "Salem silk",
+      "hi": "सेलम रेशम"
+    },
+    "anchor": {
+      "lat": 11.654,
+      "lon": 78.155
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "The undyed white silk of Salem, woven plain and sold by weight for temple use and for dyeing elsewhere; the town has spun and woven silk since the eighteenth century.",
+      "hi": "सेलम का बिना रंगा सफ़ेद रेशम, सादा बुना और तौलकर बेचा जाता है — मंदिर के काम और अन्यत्र रँगाई के लिए; यह नगर अठारहवीं सदी से रेशम कातता और बुनता आया है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Salem_silk",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "marayoor-jaggery",
+    "status": "draft",
+    "name": {
+      "en": "Marayoor jaggery",
+      "hi": "मरयूर गुड़"
+    },
+    "anchor": {
+      "lat": 10.088,
+      "lon": 77.062
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "food",
+    "model": "jaggery",
+    "priority": 2,
+    "registered": "2018–19",
+    "blurb": {
+      "en": "Cane jaggery boiled in the one valley of Idukki where sugarcane has been grown for centuries; dark, soft and low in sodium, and sold in round lumps wrapped in cane leaf.",
+      "hi": "इडुक्की की उसी एक घाटी का गन्ने का गुड़ जहाँ सदियों से गन्ना होता आया है; गहरा, नरम और कम सोडियम वाला, गोल भेलियों में गन्ने के पत्ते में लपेटकर बिकता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Marayoor_jaggery",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "wayanad-jeerakasala",
+    "status": "draft",
+    "name": {
+      "en": "Wayanad Jeerakasala rice",
+      "hi": "वायनाड जीरकसाला चावल"
+    },
+    "anchor": {
+      "lat": 11.609,
+      "lon": 76.083
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "A short, fine-grained aromatic rice grown by Kurichiya and Kuruma families on the Wayanad plateau, cooked for feasts and for the Nercha offering at the local mosques.",
+      "hi": "वायनाड के पठार पर कुरिचिय और कुरुमा परिवारों की उगाई छोटे, महीन दाने वाली सुगंधित धान, जो भोजों के लिए और स्थानीय मस्जिदों के नेरचा चढ़ावे के लिए पकाई जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jeerakasala",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "vazhakulam-pineapple",
+    "status": "draft",
+    "name": {
+      "en": "Vazhakulam pineapple",
+      "hi": "वाझाकुलम अनानास"
+    },
+    "anchor": {
+      "lat": 9.98,
+      "lon": 76.574
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "pineapple",
+    "priority": 2,
+    "registered": "2009–10",
+    "blurb": {
+      "en": "The Mauritius variety grown on the laterite slopes around Vazhakulam, picked less acidic and more golden than pineapple from anywhere else in India.",
+      "hi": "वाझाकुलम के गिर्द लैटेराइट ढलानों पर उगी मॉरीशस क़िस्म, जो भारत में कहीं और के अनानास से कम खट्टी और अधिक सुनहरी तोड़ी जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vazhakulam_pineapple",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "alleppey-green-cardamom",
+    "status": "draft",
+    "name": {
+      "en": "Alleppey green cardamom",
+      "hi": "एलेप्पी हरी इलायची"
+    },
+    "anchor": {
+      "lat": 9.49,
+      "lon": 76.326
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "cardamom",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Cardamom from the Idukki hills, sun-dried to keep it green and shipped through Alleppey, which is why the spice trade knows it by a port it does not grow near.",
+      "hi": "इडुक्की की पहाड़ियों की इलायची, धूप में सुखाकर हरी रखी जाती है और एलेप्पी से भेजी जाती है — इसीलिए मसाला-व्यापार इसे उस बंदरगाह के नाम से जानता है जिसके पास वह उगती नहीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Alleppey_Green_Cardamom",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kasaragod-saree",
+    "status": "draft",
+    "name": {
+      "en": "Kasaragod saree",
+      "hi": "कासरगोड साड़ी"
+    },
+    "anchor": {
+      "lat": 12.498,
+      "lon": 74.99
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Cotton sarees woven on pit looms at Kasaragod in bold checks and stripes, the Malabar coast's own weave and quite unlike the kasavu of the south.",
+      "hi": "कासरगोड में गड्ढा-करघों पर बुनी सूती साड़ियाँ, बड़े चौख़ाने और धारियों में — मालाबार तट की अपनी बुनाई, दक्षिण के कसवु से बिलकुल अलग।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kasaragod_saree",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "palakkadan-matta",
+    "status": "draft",
+    "name": {
+      "en": "Palakkadan Matta rice",
+      "hi": "पालक्काडन मट्टा चावल"
+    },
+    "anchor": {
+      "lat": 10.773,
+      "lon": 76.654
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "The red parboiled rice of the Palakkad gap, coarse-grained and earthy; eaten across Kerala with its bran left on, which is where its iron and its colour are.",
+      "hi": "पालक्काड दर्रे का लाल उसना चावल, मोटे दाने वाला और मिट्टी-सा; पूरे केरल में चोकर सहित खाया जाता है, और उसी में उसका लोहा और उसका रंग है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Palakkadan_Matta_rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kaipad-rice",
+    "status": "draft",
+    "name": {
+      "en": "Kaipad rice",
+      "hi": "कैपाड चावल"
+    },
+    "anchor": {
+      "lat": 11.868,
+      "lon": 75.358
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Rice grown organically in the brackish tidal fields of Kannur, where the sea comes in with the tide and prawns are farmed in the same water between crops.",
+      "hi": "कन्नूर के खारे ज्वारीय खेतों में जैविक रूप से उगा चावल, जहाँ ज्वार के साथ समुद्र भीतर आता है और दो फ़सलों के बीच उसी पानी में झींगा पाला जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kaipad_Rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "paithani-saree",
+    "status": "draft",
+    "name": {
+      "en": "Paithani saree",
+      "hi": "पैठणी साड़ी"
+    },
+    "anchor": {
+      "lat": 19.475,
+      "lon": 75.386
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Silk woven at Paithan on the Godavari with a pure gold or silver zari pallu, the peacock and lotus motifs made by tapestry weave; two thousand years old and still made by hand.",
+      "hi": "गोदावरी तट पर पैठण में बुना रेशम, जिसका पल्लू शुद्ध सोने या चाँदी की ज़री का होता है और मोर तथा कमल के बूटे तापीसरी बुनाई से बनते हैं; दो हज़ार वर्ष पुराना और आज भी हाथ का।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Paithani",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mahabaleshwar-strawberry",
+    "status": "draft",
+    "name": {
+      "en": "Mahabaleshwar strawberry",
+      "hi": "महाबलेश्वर स्ट्रॉबेरी"
+    },
+    "anchor": {
+      "lat": 17.56,
+      "lon": 73.4
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Strawberries grown on the Mahabaleshwar plateau, which accounts for most of India's crop; the plants came from Australia and America and took to the laterite and the mist.",
+      "hi": "महाबलेश्वर के पठार पर उगी स्ट्रॉबेरी, जहाँ से भारत की अधिकांश फ़सल आती है; पौधे ऑस्ट्रेलिया और अमेरिका से आए और यहाँ की लैटेराइट मिट्टी तथा कुहरे में रम गए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mahabaleshwar_Strawberry",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nashik-grapes",
+    "status": "draft",
+    "name": {
+      "en": "Nashik grapes",
+      "hi": "नासिक अंगूर"
+    },
+    "anchor": {
+      "lat": 19.997,
+      "lon": 73.791
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "produce",
+    "model": "grape",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Table and wine grapes from the Nashik valley, which grows most of India's grapes and nearly all of its wine; two crops a year on trellises over the black Deccan soil.",
+      "hi": "नासिक घाटी के मेज़ी और मदिरा अंगूर, जहाँ भारत के अधिकांश अंगूर और लगभग सारी मदिरा होती है; काली दक्कनी मिट्टी पर मंडपों में वर्ष में दो फ़सलें।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nashik_Grapes",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "solapur-chaddar",
+    "status": "draft",
+    "name": {
+      "en": "Solapuri chaddar",
+      "hi": "सोलापुरी चादर"
+    },
+    "anchor": {
+      "lat": 17.672,
+      "lon": 75.91
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "A heavy cotton bedsheet woven at Solapur on jacquard looms by the Padmashali weavers, in the dark checks that have covered Indian beds for a century.",
+      "hi": "सोलापुर में जैकार्ड करघों पर पद्मशाली बुनकरों की बुनी भारी सूती चादर, उन्हीं गहरे चौख़ानों में जो एक सदी से भारतीय बिस्तरों पर बिछती आई हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Solapuri_chaddar",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "warli-painting",
+    "status": "draft",
+    "name": {
+      "en": "Warli painting",
+      "hi": "वारली चित्रकला"
+    },
+    "anchor": {
+      "lat": 19.968,
+      "lon": 72.713
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "The white rice-paste figures the Warli people paint on the mud walls of their houses for a wedding: circles, triangles and lines, and nothing that is not needed.",
+      "hi": "वारली लोग विवाह पर अपने घरों की मिट्टी की दीवारों पर चावल की लेई से जो सफ़ेद आकृतियाँ बनाते हैं: वृत्त, त्रिभुज और रेखाएँ, और कुछ भी अनावश्यक नहीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Warli_Painting",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kolhapur-jaggery",
+    "status": "draft",
+    "name": {
+      "en": "Kolhapur jaggery",
+      "hi": "कोल्हापुर गुड़"
+    },
+    "anchor": {
+      "lat": 16.696,
+      "lon": 74.232
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "food",
+    "model": "jaggery",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Golden cane jaggery boiled in open pans around Kolhapur, harder and lighter than most; the Kolhapur market sets the jaggery price for western India.",
+      "hi": "कोल्हापुर के गिर्द खुले कड़ाहों में पकाया सुनहरा गन्ने का गुड़, अधिकांश से कड़ा और हल्का; कोल्हापुर का बाज़ार पश्चिमी भारत का गुड़-भाव तय करता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kolhapur_jaggery",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "goa-cashew",
+    "status": "draft",
+    "name": {
+      "en": "Goan cashew",
+      "hi": "गोवा काजू"
+    },
+    "anchor": {
+      "lat": 15.496,
+      "lon": 73.826
+    },
+    "regions": [
+      "IN-GA"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "The cashew the Portuguese brought from Brazil in the sixteenth century and Goa made its own; the nut is the export, the fruit is distilled into feni.",
+      "hi": "वही काजू जो पुर्तगाली सोलहवीं सदी में ब्राज़ील से लाए और गोवा ने अपना बना लिया; गिरी निर्यात होती है, फल से फेनी चुआई जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Goa_Cashew_(Kaju_or_Caju)",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "khola-chilli",
+    "status": "draft",
+    "name": {
+      "en": "Khola chilli",
+      "hi": "खोला मिर्च"
+    },
+    "anchor": {
+      "lat": 15.027,
+      "lon": 74.046
+    },
+    "regions": [
+      "IN-GA"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "A deep red chilli grown on the Canacona hill slopes of southern Goa, mild and used as much for its colour as its heat in Goan fish curry.",
+      "hi": "दक्षिण गोवा की काणकोण पहाड़ियों की ढलानों पर उगी गहरी लाल मिर्च, हल्की तीखी और गोवा की मछली-करी में तीखेपन जितनी ही रंग के लिए डाली जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Khola_Chilli",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "patan-patola",
+    "status": "draft",
+    "name": {
+      "en": "Patan Patola",
+      "hi": "पाटण पटोला"
+    },
+    "anchor": {
+      "lat": 23.851,
+      "lon": 72.13
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Double ikat silk: warp and weft each tied and dyed to the design before a thread is woven, so the pattern is identical on both faces. Three families in Patan still make it.",
+      "hi": "दोहरी इकत रेशम: ताना और बाना दोनों बुनने से पहले नमूने के अनुसार बाँधकर रँगे जाते हैं, इसलिए नमूना दोनों ओर एक-सा होता है। पाटण में तीन परिवार अब भी इसे बनाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Patola_sari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bandhani",
+    "status": "draft",
+    "name": {
+      "en": "Kutch bandhani",
+      "hi": "कच्छ बंधनी"
+    },
+    "anchor": {
+      "lat": 23.254,
+      "lon": 69.669
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Tie-dye at its finest: a cloth pinched into thousands of points with a fingernail, tied, and dipped, so the dye leaves a dotted field where the knots were.",
+      "hi": "बाँधनी अपने सूक्ष्मतम रूप में: कपड़े को नाखून से हज़ारों बिंदुओं में चिटककर बाँधा और डुबोया जाता है, जिससे रंग वहाँ नहीं चढ़ता जहाँ गाँठें थीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kutch_Bandhani",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "gir-kesar-mango",
+    "status": "draft",
+    "name": {
+      "en": "Gir Kesar mango",
+      "hi": "गिर केसर आम"
+    },
+    "anchor": {
+      "lat": 21.52,
+      "lon": 70.46
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "The saffron-fleshed mango grown at the foot of the Girnar hills beside the Gir forest, picked in May and known for keeping its perfume through the pulp trade.",
+      "hi": "गिर जंगल के पास गिरनार की तलहटी में उगा केसरिया गूदे वाला आम, मई में तोड़ा जाता है और गूदा-व्यापार से गुज़रकर भी अपनी सुगंध बनाए रखने के लिए जाना जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gir_Kesar_Mango",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bhalia-wheat",
+    "status": "draft",
+    "name": {
+      "en": "Bhalia wheat",
+      "hi": "भालिया गेहूँ"
+    },
+    "anchor": {
+      "lat": 22.382,
+      "lon": 71.987
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Durum wheat grown on the Bhal plain south of Ahmedabad with no irrigation at all, on the moisture the black soil holds after the monsoon. High in protein and carotene.",
+      "hi": "अहमदाबाद के दक्षिण भाल के मैदान में बिना किसी सिंचाई के उगा दुरुम गेहूँ, केवल उस नमी पर जो काली मिट्टी वर्षा के बाद रोक रखती है। प्रोटीन और कैरोटीन में उच्च।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhalia_Wheat",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "tangaliya-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Tangaliya shawl",
+      "hi": "तंगालिया शॉल"
+    },
+    "anchor": {
+      "lat": 22.727,
+      "lon": 71.649
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2009–10",
+    "blurb": {
+      "en": "Woven by the Dangasia of Saurashtra for seven hundred years: extra threads twisted into the warp as it is woven, raising beads of contrasting colour on the cloth itself.",
+      "hi": "सौराष्ट्र के डांगसिया सात सौ वर्षों से बुनते आए हैं: बुनते समय ताने में अतिरिक्त धागे मरोड़ दिए जाते हैं, जिससे कपड़े पर ही विपरीत रंग के दाने उभर आते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tangaliya_Shawl",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "agates-cambay",
+    "status": "draft",
+    "name": {
+      "en": "Cambay agate",
+      "hi": "खंभात अक़ीक़"
+    },
+    "anchor": {
+      "lat": 22.317,
+      "lon": 72.619
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Banded agate from the Rajpipla hills cut and polished at Khambhat, a trade four thousand years old: Lothal's beads went to Mesopotamia from these same workshops.",
+      "hi": "राजपीपला की पहाड़ियों का धारीदार अक़ीक़, जो खंभात में काटा और चमकाया जाता है — चार हज़ार वर्ष पुराना व्यापार: लोथल के मनके इन्हीं कारख़ानों से मेसोपोटामिया गए थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Agates_of_Cambay",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kota-doria",
+    "status": "draft",
+    "name": {
+      "en": "Kota Doria",
+      "hi": "कोटा डोरिया"
+    },
+    "anchor": {
+      "lat": 25.183,
+      "lon": 75.839
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "A gauze of cotton and silk woven in tiny squares called khat, so light a whole saree passes through a ring; woven at Kaithun near Kota since the Mughal armies brought the weavers.",
+      "hi": "सूत और रेशम का झीना कपड़ा, जो खात कहलाने वाले नन्हे चौख़ानों में बुना जाता है, इतना हल्का कि पूरी साड़ी अँगूठी से निकल जाए; कोटा के पास कैथून में तबसे बुना जाता है जब मुग़ल सेनाएँ बुनकरों को लाईं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kota_Doria",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bagru-hand-block-print",
+    "status": "draft",
+    "name": {
+      "en": "Bagru hand block print",
+      "hi": "बगरू हाथ-ठप्पा छपाई"
+    },
+    "anchor": {
+      "lat": 26.811,
+      "lon": 75.547
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "textile",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Printed with wooden blocks at Bagru in dyes made from madder, pomegranate rind and iron filings steeped in jaggery; the mud-resist dabu work is the village's own.",
+      "hi": "बगरू में लकड़ी के ठप्पों से छपाई, जिसके रंग मजीठ, अनार के छिलके और गुड़ में सड़ाए लोहे के बुरादे से बनते हैं; कीचड़-रोध दाबू का काम इसी गाँव का अपना है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bagru_print",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "molela-terracotta",
+    "status": "draft",
+    "name": {
+      "en": "Molela clay plaques",
+      "hi": "मोलेला मृण्मूर्ति"
+    },
+    "anchor": {
+      "lat": 24.938,
+      "lon": 73.824
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Hollow terracotta plaques of local deities, made in one village near Nathdwara and carried away by Bhil and Garasia pilgrims to be the shrine of a whole hamlet.",
+      "hi": "स्थानीय देवताओं की पोली मिट्टी की पट्टिकाएँ, जो नाथद्वारा के पास एक ही गाँव में बनती हैं और भील तथा गरासिया तीर्थयात्री उन्हें ले जाकर पूरे गाँव का देवस्थान बनाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Molela_Clay_Work",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "makrana-marble",
+    "status": "draft",
+    "name": {
+      "en": "Makrana marble",
+      "hi": "मकराना संगमरमर"
+    },
+    "anchor": {
+      "lat": 27.044,
+      "lon": 74.724
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "The white calcite marble the Taj Mahal is faced with, quarried at Makrana in Nagaur since the twelfth century and still cut from the same ridges.",
+      "hi": "वही सफ़ेद कैल्साइट संगमरमर जिससे ताजमहल मढ़ा है, नागौर के मकराना में बारहवीं सदी से खोदा जाता है और आज भी उन्हीं कगारों से काटा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Makrana_Marble",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "thewa-art",
+    "status": "draft",
+    "name": {
+      "en": "Thewa art",
+      "hi": "थेवा कला"
+    },
+    "anchor": {
+      "lat": 24.622,
+      "lon": 74.68
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Openwork gold sheet fused onto coloured glass, a craft one family of Pratapgarh has kept to itself for nine generations and taught to no one outside it.",
+      "hi": "रंगीन काँच पर जड़ी सोने की जालीदार पत्ती, एक शिल्प जिसे प्रतापगढ़ का एक ही परिवार नौ पीढ़ियों से अपने तक रखे है और बाहर किसी को नहीं सिखाया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Thewa",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "maheshwar-saree",
+    "status": "draft",
+    "name": {
+      "en": "Maheshwari saree",
+      "hi": "महेश्वरी साड़ी"
+    },
+    "anchor": {
+      "lat": 22.176,
+      "lon": 75.587
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "Cotton-silk woven at Maheshwar on the Narmada, the borders taking their stripes and their reversible pallu from the fort walls Ahilyabai Holkar built above the river.",
+      "hi": "नर्मदा तट पर महेश्वर में बुना सूत-रेशम, जिसकी किनारियाँ अपनी धारियाँ और दोनों ओर से पहना जाने वाला पल्लू उन्हीं क़िले की दीवारों से लेती हैं जो अहिल्याबाई होलकर ने नदी के ऊपर बनवाईं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Maheshwari_Saree",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bagh-print",
+    "status": "draft",
+    "name": {
+      "en": "Bagh print",
+      "hi": "बाघ छपाई"
+    },
+    "anchor": {
+      "lat": 22.359,
+      "lon": 74.791
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "textile",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Block-printed cotton washed in the Baghini river, whose water is said to fix the red of alizarin and the black of iron as no other water will.",
+      "hi": "ठप्पे से छपा सूती कपड़ा, जो बाघिनी नदी में धोया जाता है, जिसके पानी के बारे में कहा जाता है कि वह अलीज़ारिन का लाल और लोहे का काला वैसे पक्का करता है जैसा और कोई पानी नहीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bagh_Prints_of_Madhya_Pradesh",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "gond-painting",
+    "status": "draft",
+    "name": {
+      "en": "Gond painting",
+      "hi": "गोंड चित्रकला"
+    },
+    "anchor": {
+      "lat": 22.941,
+      "lon": 81.08
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2022–23",
+    "blurb": {
+      "en": "The Pardhan Gond way of drawing: an animal or a tree filled with dots and dashes in a single pattern, brought from house walls onto paper within living memory.",
+      "hi": "प्रधान गोंड की चित्र-पद्धति: कोई पशु या वृक्ष एक ही नमूने के बिंदुओं और रेखाओं से भरा हुआ, जो जीवित स्मृति के भीतर ही घर की दीवारों से काग़ज़ पर आया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gond_Painting_of_Madhya_Pradesh",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bastar-iron-craft",
+    "status": "draft",
+    "name": {
+      "en": "Bastar iron craft",
+      "hi": "बस्तर लौह शिल्प"
+    },
+    "anchor": {
+      "lat": 19.081,
+      "lon": 82.021
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "craft",
+    "model": "bell",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Figures beaten from wrought iron by the Lohar smiths of Bastar: birds, lamps and tribal deities made from scrap at a charcoal forge, all line and no mass.",
+      "hi": "बस्तर के लोहार पिटवाँ लोहे से जो आकृतियाँ गढ़ते हैं: पक्षी, दीपक और आदिवासी देवता, कोयले की भट्ठी पर कबाड़ से बने, सब रेखा और कोई घनत्व नहीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bastar_Iron_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "champa-silk",
+    "status": "draft",
+    "name": {
+      "en": "Champa silk saree",
+      "hi": "चांपा रेशम साड़ी"
+    },
+    "anchor": {
+      "lat": 22.035,
+      "lon": 82.642
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Tussar silk reeled and woven at Champa in Janjgir from cocoons gathered in the Chhattisgarh forests; coarse, golden and cooler to wear than mulberry silk.",
+      "hi": "जांजगीर के चांपा में छत्तीसगढ़ के जंगलों से बटोरे कोयों से काता और बुना तसर रेशम; मोटा, सुनहरा और शहतूती रेशम से पहनने में ठंडा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Champa_silk_saree_and_fabrics",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "jeeraphool-rice",
+    "status": "draft",
+    "name": {
+      "en": "Jeeraphool rice",
+      "hi": "जीराफूल चावल"
+    },
+    "anchor": {
+      "lat": 21.898,
+      "lon": 83.397
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2018–19",
+    "blurb": {
+      "en": "A short aromatic rice of the Chhattisgarh plain, the grain no longer than a cumin seed, which is what its name says; grown for festivals rather than for the market.",
+      "hi": "छत्तीसगढ़ के मैदान का छोटा सुगंधित चावल, जिसका दाना जीरे से बड़ा नहीं — नाम यही कहता है; बाज़ार के लिए नहीं, त्योहारों के लिए उगाया जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jeeraphool_rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dongria-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Dongria Kondh shawl",
+      "hi": "डोंगरिया कोंध शॉल"
+    },
+    "anchor": {
+      "lat": 19.171,
+      "lon": 83.414
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Embroidered by Dongria Kondh women of the Niyamgiri hills on coarse cotton, in triangles of green, yellow and red that stand for the mountains they hold sacred.",
+      "hi": "नियमगिरि की पहाड़ियों की डोंगरिया कोंध स्त्रियाँ मोटे सूत पर जो कढ़ाई करती हैं, हरे, पीले और लाल त्रिभुजों में, जो उन्हीं पहाड़ों के प्रतीक हैं जिन्हें वे पवित्र मानती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kapadaganda:_Dungaria_Kondh_Embroidery_Shawl",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "sambalpuri-bandha",
+    "status": "draft",
+    "name": {
+      "en": "Sambalpuri bandha saree",
+      "hi": "संबलपुरी बंधा साड़ी"
+    },
+    "anchor": {
+      "lat": 21.465,
+      "lon": 83.976
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Western Odisha's tie-dyed ikat, the thread bound and dyed before weaving so the shankha, chakra and phula motifs come out soft-edged, as if breathed onto the cloth.",
+      "hi": "पश्चिमी ओडिशा की बँधेज इकत, जिसमें धागा बुनने से पहले बाँधकर रँगा जाता है, जिससे शंख, चक्र और फूल के बूटे नरम किनारों के साथ उभरते हैं, मानो कपड़े पर फूँके गए हों।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Orissa_Ikat",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "pattachitra-odisha",
+    "status": "draft",
+    "name": {
+      "en": "Odisha Pattachitra",
+      "hi": "ओडिशा पट्टचित्र"
+    },
+    "anchor": {
+      "lat": 19.798,
+      "lon": 85.825
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Painted on cloth stiffened with tamarind paste at Raghurajpur near Puri: Jagannath, the Krishna story and the temple's own rituals, in five earth colours and lamp black.",
+      "hi": "पुरी के पास रघुराजपुर में इमली की लेई से कड़े किए कपड़े पर चित्रित: जगन्नाथ, कृष्ण-कथा और मंदिर के अपने अनुष्ठान, पाँच मिट्टी के रंगों और काजल में।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pattachitra",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "konark-stone-carving",
+    "status": "draft",
+    "name": {
+      "en": "Konark stone carving",
+      "hi": "कोणार्क पाषाण शिल्प"
+    },
+    "anchor": {
+      "lat": 19.89,
+      "lon": 86.098
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "The chlorite and khondalite carving of the Puri coast, practised by families descended from the builders of the sun temple and still cutting the same wheels and dancers.",
+      "hi": "पुरी तट की क्लोराइट और खोंडालाइट की नक़्क़ाशी, जो सूर्य मंदिर बनाने वालों के वंशजों के परिवार करते हैं और आज भी वही पहिए और नर्तक तराशते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Konark_stone_carving",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kandhamal-haladi",
+    "status": "draft",
+    "name": {
+      "en": "Kandhamal turmeric",
+      "hi": "कंधमाल हल्दी"
+    },
+    "anchor": {
+      "lat": 20.481,
+      "lon": 84.231
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "produce",
+    "model": "saffron",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "Turmeric grown without fertiliser by Kondh families on the Kandhamal hill slopes, small-fingered and high in curcumin; used as medicine and as offering before it is a spice.",
+      "hi": "कंधमाल की पहाड़ी ढलानों पर कोंध परिवारों द्वारा बिना खाद उगाई हल्दी, छोटी गाँठों वाली और करक्यूमिन में उच्च; मसाला होने से पहले वह औषधि और चढ़ावा है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kandhamal_Haladi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kalanamak-rice",
+    "status": "draft",
+    "name": {
+      "en": "Kala Namak rice",
+      "hi": "काला नमक चावल"
+    },
+    "anchor": {
+      "lat": 26.788,
+      "lon": 82.716
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "A black-husked scented rice of the Buddhist tarai, said to have been given by the Buddha himself at Kapilavastu; grown around Siddharthnagar and cooked for festivals.",
+      "hi": "बौद्ध तराई का काली भूसी वाला सुगंधित चावल, जिसके बारे में कहा जाता है कि स्वयं बुद्ध ने कपिलवस्तु में दिया; सिद्धार्थनगर के गिर्द उगता है और त्योहारों पर पकता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kalanamak_Rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "lucknow-chikankari",
+    "status": "draft",
+    "name": {
+      "en": "Lucknow chikan",
+      "hi": "लखनऊ चिकनकारी"
+    },
+    "anchor": {
+      "lat": 26.839,
+      "lon": 80.923
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "White thread shadow-worked on white muslin in thirty-two named stitches, the finest of them sewn from the back so the pattern shows as a haze through the cloth.",
+      "hi": "सफ़ेद मलमल पर सफ़ेद धागे की छाया-कढ़ाई, बत्तीस नामधारी टाँकों में, जिनमें सबसे बारीक पीछे से सिले जाते हैं ताकि नमूना कपड़े के आर-पार धुँध-सा दिखे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lucknow_Chikan_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "firozabad-glass",
+    "status": "draft",
+    "name": {
+      "en": "Firozabad glass",
+      "hi": "फ़िरोज़ाबाद काँच"
+    },
+    "anchor": {
+      "lat": 27.151,
+      "lon": 78.398
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "craft",
+    "model": "bottle",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Bangles and blown glass from the furnaces of Firozabad, which have burned since the eighteenth century and make most of the glass bangles worn in India.",
+      "hi": "फ़िरोज़ाबाद की भट्टियों की चूड़ियाँ और फूँका हुआ काँच; ये भट्टियाँ अठारहवीं सदी से जल रही हैं और भारत में पहनी जाने वाली अधिकांश काँच की चूड़ियाँ यहीं बनती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Firozabad_Glass",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "moradabad-metal-craft",
+    "status": "draft",
+    "name": {
+      "en": "Moradabad metal craft",
+      "hi": "मुरादाबाद धातु शिल्प"
+    },
+    "anchor": {
+      "lat": 28.839,
+      "lon": 78.777
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "Engraved and enamelled brass from the town the trade calls Peetal Nagri, the brass city: hand-beaten, chased and exported by the container from a single district.",
+      "hi": "जिस नगर को व्यापार पीतल नगरी कहता है, उसका उत्कीर्ण और मीनाकारी किया पीतल: हाथ से पीटा, खोदा और एक ही ज़िले से कंटेनरों में निर्यात होता।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Moradabad_Metal_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mathura-sanjhi",
+    "status": "draft",
+    "name": {
+      "en": "Mathura Sanjhi craft",
+      "hi": "मथुरा सांझी शिल्प"
+    },
+    "anchor": {
+      "lat": 27.503,
+      "lon": 77.672
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Stencils cut from paper with scissors so fine the sheet becomes lace, used to lay coloured powder into rangoli on the Yamuna's ghats during Pitru Paksha.",
+      "hi": "काग़ज़ से कैंची से इतने महीन काटे जाने वाले साँचे कि चादर जाली बन जाए; पितृ पक्ष में यमुना के घाटों पर रंगोली में रंग भरने के लिए इनका प्रयोग होता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mathura_Sanjhi_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bhagalpuri-silk",
+    "status": "draft",
+    "name": {
+      "en": "Bhagalpur silk",
+      "hi": "भागलपुरी रेशम"
+    },
+    "anchor": {
+      "lat": 25.244,
+      "lon": 86.972
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "Tussar reeled and woven at Bhagalpur on the Ganga, coarse and golden and known in the trade simply as Bhagalpuri; the town has been called Silk City for two centuries.",
+      "hi": "गंगा तट पर भागलपुर में काता और बुना तसर, मोटा और सुनहरा, व्यापार में केवल भागलपुरी कहलाता है; यह नगर दो सदियों से रेशम नगरी कहा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bhagalpur_sari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "shahi-litchi",
+    "status": "draft",
+    "name": {
+      "en": "Shahi litchi",
+      "hi": "शाही लीची"
+    },
+    "anchor": {
+      "lat": 26.123,
+      "lon": 85.391
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2018–19",
+    "blurb": {
+      "en": "The lychee of the Muzaffarpur belt, thin-skinned and small-stoned, ripening in a three-week window in June that the whole of north Bihar works to.",
+      "hi": "मुज़फ़्फ़रपुर पट्टी की लीची, पतले छिलके और छोटी गुठली वाली, जून में तीन सप्ताह की उस खिड़की में पकती है जिसके लिए समूचा उत्तर बिहार काम करता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shahi_Litchi_of_Bihar",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "silao-khaja",
+    "status": "draft",
+    "name": {
+      "en": "Silao Khaja",
+      "hi": "सिलाव ख़ाजा"
+    },
+    "anchor": {
+      "lat": 25.084,
+      "lon": 85.428
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "food",
+    "model": "sweet",
+    "priority": 2,
+    "registered": "2018–19",
+    "blurb": {
+      "en": "A layered pastry of flour and ghee, fried and soaked in syrup, made at Silao on the road to Nalanda and said to have been carried away by the university's students.",
+      "hi": "मैदे और घी की परतदार मिठाई, तली और चाशनी में डुबोई; नालंदा के रास्ते पर सिलाव में बनती है और कहा जाता है कि विश्वविद्यालय के छात्र इसे साथ ले जाते थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Silao_Khaja",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "sikki-grass",
+    "status": "draft",
+    "name": {
+      "en": "Sikki grass craft",
+      "hi": "सिक्की घास शिल्प"
+    },
+    "anchor": {
+      "lat": 26.354,
+      "lon": 86.072
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Golden marsh grass coiled and stitched into boxes and figures by Mithila women, a dowry craft made from what grows free in the flooded fields.",
+      "hi": "सुनहरी दलदली घास, जिसे मिथिला की स्त्रियाँ कुंडलित कर डिब्बों और मूर्तियों में सीती हैं — दहेज का शिल्प, उसी से बना जो भरे खेतों में मुफ़्त उगता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sikki_grass_craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "gobindobhog-rice",
+    "status": "draft",
+    "name": {
+      "en": "Gobindobhog rice",
+      "hi": "गोबिंदभोग चावल"
+    },
+    "anchor": {
+      "lat": 23.256,
+      "lon": 87.857
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2017–18",
+    "blurb": {
+      "en": "A short, sticky, buttery-scented rice of Bardhaman, grown for the offering its name means: the food of Govinda. It is what Bengali payesh is properly made with.",
+      "hi": "बर्दवान का छोटा, चिपचिपा, घी-सी गंध वाला चावल, उसी भोग के लिए उगाया जिसका नाम कहता है: गोविंद का भोग। बंगाली पायेस ठीक-ठीक इसी से बनता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gobindobhog",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "santiniketan-leather",
+    "status": "draft",
+    "name": {
+      "en": "Santiniketan leather goods",
+      "hi": "शांतिनिकेतन चर्म वस्तुएँ"
+    },
+    "anchor": {
+      "lat": 23.663,
+      "lon": 87.697
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "craft",
+    "model": "sandal",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Vegetable-tanned leather tooled with batik patterns at Santiniketan, a craft begun in Tagore's school at Sriniketan to give the villages around it a trade.",
+      "hi": "शांतिनिकेतन में वानस्पतिक रूप से पकाए चमड़े पर बाटिक नमूनों की गढ़ाई; यह शिल्प टैगोर के श्रीनिकेतन विद्यालय में आसपास के गाँवों को एक धंधा देने के लिए शुरू हुआ।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Santiniketan_Leather_Goods",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nakshi-kantha",
+    "status": "draft",
+    "name": {
+      "en": "Nakshi kantha",
+      "hi": "नक्शी कंथा"
+    },
+    "anchor": {
+      "lat": 23.663,
+      "lon": 87.697
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Old saris layered and quilted with a running stitch that becomes the picture: birds, trees and village life sewn by Bengali women out of cloth too soft to throw away.",
+      "hi": "पुरानी साड़ियाँ परतों में रखकर दौड़ते टाँके से रजाई की जाती हैं, और वही टाँका चित्र बन जाता है: पक्षी, पेड़ और गाँव का जीवन, बंगाली स्त्रियों ने उस कपड़े से सिए जो फेंकने लायक़ नहीं रहा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nakshi_Kantha",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "baluchari-saree",
+    "status": "draft",
+    "name": {
+      "en": "Baluchari saree",
+      "hi": "बालूचरी साड़ी"
+    },
+    "anchor": {
+      "lat": 23.074,
+      "lon": 87.32
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Silk woven at Bishnupur whose pallu tells a story in figures — scenes from the epics, or a nawab at his hookah — brocaded panel by panel like a terracotta temple wall.",
+      "hi": "बिष्णुपुर में बुना रेशम, जिसका पल्लू आकृतियों में कथा कहता है — महाकाव्यों के दृश्य, या हुक़्क़ा पीता कोई नवाब — पट्टी-दर-पट्टी बुना, किसी मृण्मंदिर की दीवार की तरह।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Baluchari_Saree",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dhokra-bankura",
+    "status": "draft",
+    "name": {
+      "en": "Bankura horse",
+      "hi": "बाँकुड़ा घोड़ा"
+    },
+    "anchor": {
+      "lat": 23.232,
+      "lon": 87.072
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2017–18",
+    "blurb": {
+      "en": "The long-necked terracotta horse of Panchmura, made as a votive offering to village deities and now the emblem of Indian handicraft everywhere.",
+      "hi": "पँचमुड़ा का लंबी गर्दन वाला मिट्टी का घोड़ा, गाँव के देवताओं को मनौती के रूप में चढ़ाने को बनाया जाता था और अब हर जगह भारतीय हस्तशिल्प का प्रतीक है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bankura_horse",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kangra-tea",
+    "status": "draft",
+    "name": {
+      "en": "Kangra tea",
+      "hi": "काँगड़ा चाय"
+    },
+    "anchor": {
+      "lat": 32.115,
+      "lon": 76.557
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "produce",
+    "model": "tea",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Tea from the Dhauladhar foothills, planted by the British in the 1850s and almost lost to the 1905 earthquake; light-bodied, with a sweetness the high valley gives it.",
+      "hi": "धौलाधार की तलहटी की चाय, जो अंग्रेज़ों ने 1850 के दशक में लगाई और 1905 के भूकंप में लगभग नष्ट हो गई; हल्की, जिसमें ऊँची घाटी की दी हुई मिठास है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kangra_Tea",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "chamba-rumal",
+    "status": "draft",
+    "name": {
+      "en": "Chamba rumal",
+      "hi": "चंबा रुमाल"
+    },
+    "anchor": {
+      "lat": 32.555,
+      "lon": 76.126
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "A square of muslin embroidered in untwisted silk with a double satin stitch, so the picture is the same on both faces — a Pahari miniature worked with a needle.",
+      "hi": "मलमल का एक चौकोर टुकड़ा, बिना बटे रेशम से दोहरे साटन टाँके में कढ़ा, जिससे चित्र दोनों ओर एक-सा होता है — सुई से बनाया गया पहाड़ी लघुचित्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chamba_Rumal",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kinnauri-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Kinnauri shawl",
+      "hi": "किन्नौरी शॉल"
+    },
+    "anchor": {
+      "lat": 31.51,
+      "lon": 77.794
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Woven in the upper Sutlej valley in local sheep and yak wool, with geometric end-panels in five colours that stand for the five elements.",
+      "hi": "ऊपरी सतलुज घाटी में स्थानीय भेड़ और याक की ऊन से बुनी, जिसके ज्यामितीय छोर-पल्ले पाँच रंगों में हैं और पाँच तत्वों के प्रतीक हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kinnauri_Shawl",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "himachali-chulli-oil",
+    "status": "draft",
+    "name": {
+      "en": "Himachali chulli oil",
+      "hi": "हिमाचली चुल्ली तेल"
+    },
+    "anchor": {
+      "lat": 31.51,
+      "lon": 77.794
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "produce",
+    "model": "bottle",
+    "priority": 2,
+    "registered": "2018–19",
+    "blurb": {
+      "en": "Oil pressed from the kernels of wild apricots in Kinnaur and Lahaul, used on the skin and in cooking; the tree grows where nothing else will fruit.",
+      "hi": "किन्नौर और लाहौल में जंगली खुबानी की गुठलियों से पेरा तेल, जो त्वचा पर और रसोई में काम आता है; यह पेड़ वहाँ उगता है जहाँ और कुछ नहीं फलता।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Himachali_Chulli_Oil",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "tejpat-uttarakhand",
+    "status": "draft",
+    "name": {
+      "en": "Uttarakhand tejpat",
+      "hi": "उत्तराखंड तेजपात"
+    },
+    "anchor": {
+      "lat": 29.597,
+      "lon": 79.659
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "produce",
+    "model": "pepper",
+    "priority": 2,
+    "registered": "2016–17",
+    "blurb": {
+      "en": "The Indian bay leaf, stripped from cinnamon-family trees on the Kumaon hillsides and dried in the shade; three veins running its length tell it from the Mediterranean leaf.",
+      "hi": "भारतीय तेजपत्ता, कुमाऊँ की ढलानों पर दालचीनी-कुल के पेड़ों से उतारा और छाँव में सुखाया; लंबाई में चलती तीन शिराएँ इसे भूमध्यसागरीय पत्ते से अलग करती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Uttarakhand_Tejpat",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "munsiyari-rajma",
+    "status": "draft",
+    "name": {
+      "en": "Munsiyari rajma",
+      "hi": "मुनस्यारी राजमा"
+    },
+    "anchor": {
+      "lat": 29.583,
+      "lon": 80.209
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2021–22",
+    "blurb": {
+      "en": "Kidney beans grown at two thousand metres in the Johar valley under the Panchachuli peaks; small, thin-skinned and cooked without soaking.",
+      "hi": "पंचाचूली की चोटियों के नीचे जोहार घाटी में दो हज़ार मीटर पर उगा राजमा; छोटा, पतले छिलके वाला और बिना भिगोए पकने वाला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Munsyari_Razma",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kashmir-walnut-wood",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir walnut wood carving",
+      "hi": "कश्मीरी अख़रोट काष्ठ नक़्क़ाशी"
+    },
+    "anchor": {
+      "lat": 34.086,
+      "lon": 74.806
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Carved from the close-grained walnut that grows only above sixteen hundred metres in the valley; the deep undercut khokardar work is done without any joint or nail.",
+      "hi": "उस सघन-रेशा अख़रोट से तराशा जो घाटी में केवल सोलह सौ मीटर से ऊपर उगता है; गहरी खुदाई वाला खोकरदार काम बिना किसी जोड़ या कील के होता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kashmir_Walnut_Wood_Carving",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kani-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Kani shawl",
+      "hi": "कनी शॉल"
+    },
+    "anchor": {
+      "lat": 34.086,
+      "lon": 74.806
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Woven in the Kanihama village on a twill tapestry loom with small wooden sticks instead of a shuttle, a few lines a day; one shawl can take three years.",
+      "hi": "कनिहामा गाँव में कपड़े के करघे पर ढरकी के बजाय छोटी लकड़ी की तीलियों से बुनी जाती है, दिन में कुछ ही पंक्तियाँ; एक शॉल में तीन वर्ष तक लग सकते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kani_Shawl",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kashmir-papier-mache",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir papier mâché",
+      "hi": "कश्मीरी काग़ज़ी गूदा शिल्प"
+    },
+    "anchor": {
+      "lat": 34.086,
+      "lon": 74.806
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Pulped paper moulded, smoothed and then painted in gold and lapis with a squirrel-hair brush; brought to the valley from Persia in the fifteenth century.",
+      "hi": "गली हुई काग़ज़ की लुगदी को ढालकर, चिकना कर, फिर गिलहरी के बालों की क़लम से सोने और लाजवर्द में चित्रित किया जाता है; पंद्रहवीं सदी में ईरान से घाटी में आया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kashmir_papier-mâché",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "ladakh-raktsey-karpo",
+    "status": "draft",
+    "name": {
+      "en": "Raktsey Karpo apricot",
+      "hi": "रक्तसे कारपो खुबानी"
+    },
+    "anchor": {
+      "lat": 34.165,
+      "lon": 77.584
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "produce",
+    "model": "apricot",
+    "priority": 2,
+    "registered": "2022–23",
+    "blurb": {
+      "en": "Ladakh's own apricot, its name meaning white-stoned: the kernel is sweet and eaten like an almond. Dried on flat roofs, it is what the high valleys keep for winter.",
+      "hi": "लद्दाख की अपनी खुबानी, जिसका नाम कहता है सफ़ेद गुठली वाली: गुठली मीठी होती है और बादाम की तरह खाई जाती है। सपाट छतों पर सुखाकर ऊँची घाटियाँ इसे जाड़े के लिए रखती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ladakh_Raktsey_Karpo_Apricot",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "ladakh-pashmina",
+    "status": "draft",
+    "name": {
+      "en": "Ladakh pashmina wool",
+      "hi": "लद्दाख पश्मीना ऊन"
+    },
+    "anchor": {
+      "lat": 34.165,
+      "lon": 77.584
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2022–23",
+    "blurb": {
+      "en": "The undercoat combed from Changthangi goats on the Changthang plateau at four thousand metres, where the cold makes the fibre fine enough to be called pashm.",
+      "hi": "चांगथांग के पठार पर चार हज़ार मीटर की ऊँचाई पर चांगथांगी बकरियों से कंघी कर उतारी भीतरी ऊन, जहाँ की सर्दी रेशे को इतना महीन कर देती है कि वह पश्म कहलाए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pashmina_Wool_of_Ladakh",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "assam-orthodox-tea",
+    "status": "draft",
+    "name": {
+      "en": "Assam Orthodox tea",
+      "hi": "असम ऑर्थोडॉक्स चाय"
+    },
+    "anchor": {
+      "lat": 26.758,
+      "lon": 94.203
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "produce",
+    "model": "tea",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Tea from the Brahmaputra valley, the only place outside China where the plant was found growing wild. Malty and strong; more tea is grown here than anywhere else on earth.",
+      "hi": "ब्रह्मपुत्र घाटी की चाय — चीन के बाहर एकमात्र स्थान जहाँ यह पौधा जंगली मिला। माल्ट जैसी और तेज़; पृथ्वी पर और कहीं इतनी चाय नहीं उगती।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Assam_tea",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "joha-rice",
+    "status": "draft",
+    "name": {
+      "en": "Joha rice",
+      "hi": "जोहा चावल"
+    },
+    "anchor": {
+      "lat": 26.35,
+      "lon": 92.667
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2016–17",
+    "blurb": {
+      "en": "The scented winter rice of Assam, small-grained and cooked for the Bihu feasts; it keeps its perfume best when it is a year old rather than new.",
+      "hi": "असम का सुगंधित जाड़े का चावल, छोटे दाने वाला और बिहू के भोज में पकता है; उसकी महक नए से अधिक एक वर्ष पुराने में बनी रहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Joha_rice_of_Assam",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "tezpur-litchi",
+    "status": "draft",
+    "name": {
+      "en": "Tezpur litchi",
+      "hi": "तेज़पुर लीची"
+    },
+    "anchor": {
+      "lat": 26.633,
+      "lon": 92.8
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "Lychee grown on the north bank of the Brahmaputra at Tezpur, ripening a fortnight before Bihar's and reaching the market when nothing else does.",
+      "hi": "तेज़पुर में ब्रह्मपुत्र के उत्तरी तट पर उगी लीची, जो बिहार की लीची से पंद्रह दिन पहले पकती है और तब बाज़ार पहुँचती है जब और कुछ नहीं पहुँचता।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tezpur_Litchi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "assam-karbi-anglong-ginger",
+    "status": "draft",
+    "name": {
+      "en": "Karbi Anglong ginger",
+      "hi": "कार्बी आंगलोंग अदरक"
+    },
+    "anchor": {
+      "lat": 25.843,
+      "lon": 93.431
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "produce",
+    "model": "pepper",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "Ginger grown on the Karbi hills without fertiliser, low in fibre and high in oil; sold dried as well as green, and one of the few cash crops these slopes carry.",
+      "hi": "कार्बी पहाड़ियों पर बिना खाद उगी अदरक, कम रेशे और अधिक तेल वाली; हरी और सूखी दोनों बिकती है, और इन ढलानों की गिनी-चुनी नक़दी फ़सलों में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Assam_Karbi_Anglong_Ginger",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "arunachal-orange",
+    "status": "draft",
+    "name": {
+      "en": "Arunachal orange",
+      "hi": "अरुणाचल संतरा"
+    },
+    "anchor": {
+      "lat": 27.913,
+      "lon": 96.129
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "produce",
+    "model": "orange",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "The mandarin of the Lohit and Tirap valleys, grown on steep slopes without spraying and picked in December; sweeter and looser-skinned than the plains varieties.",
+      "hi": "लोहित और तिरप घाटियों का संतरा, खड़ी ढलानों पर बिना छिड़काव उगता है और दिसंबर में तोड़ा जाता है; मैदानी क़िस्मों से मीठा और ढीले छिलके वाला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Orange",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "adi-kekir",
+    "status": "draft",
+    "name": {
+      "en": "Adi Kekir ginger",
+      "hi": "आदि केकिर अदरक"
+    },
+    "anchor": {
+      "lat": 28.066,
+      "lon": 95.327
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "produce",
+    "model": "pepper",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "The ginger the Adi people of the Siang valley have grown for generations: big-fingered, fibrous and pungent, raised in jhum clearings with no input but ash.",
+      "hi": "सियांग घाटी के आदि लोग पीढ़ियों से जो अदरक उगाते आए हैं: बड़ी गाँठों वाली, रेशेदार और तीखी, झूम की साफ़ की गई भूमि पर केवल राख के सहारे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Pradesh_Adi_Kekir",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "idu-mishmi-textile",
+    "status": "draft",
+    "name": {
+      "en": "Idu Mishmi textile",
+      "hi": "इदु मिश्मी वस्त्र"
+    },
+    "anchor": {
+      "lat": 28.143,
+      "lon": 95.845
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "Woven on a loin loom by Idu Mishmi women of the Dibang valley, in narrow bands whose patterns name the wearer's clan and are never written down.",
+      "hi": "दिबांग घाटी की इदु मिश्मी स्त्रियाँ कमर-करघे पर बुनती हैं, सँकरी पट्टियों में जिनके नमूने पहनने वाले के कुल का नाम बताते हैं और कभी लिखे नहीं जाते।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Idu_Mishmi_Textiles",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kachai-lemon",
+    "status": "draft",
+    "name": {
+      "en": "Kachai lemon",
+      "hi": "काचाई नींबू"
+    },
+    "anchor": {
+      "lat": 25.12,
+      "lon": 94.364
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "category": "produce",
+    "model": "orange",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "A thick-rinded, intensely sour lemon grown only around Kachai village in the Ukhrul hills, with more vitamin C than any other lemon measured in India.",
+      "hi": "उखरुल की पहाड़ियों में केवल काचाई गाँव के गिर्द उगा मोटे छिलके वाला अत्यंत खट्टा नींबू, जिसमें भारत में मापे गए किसी भी नींबू से अधिक विटामिन सी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kachai_Lemon",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "moirang-phee",
+    "status": "draft",
+    "name": {
+      "en": "Moirang Phee",
+      "hi": "मोइरांग फी"
+    },
+    "anchor": {
+      "lat": 24.497,
+      "lon": 93.778
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2013–14",
+    "blurb": {
+      "en": "A Manipuri cloth bordered with the moirangphijin, a temple-spire motif whose zigzag is said to be the mark of the python god Pakhangba.",
+      "hi": "मणिपुरी कपड़ा जिसकी किनारी पर मोइरांगफिजिन होता है — मंदिर-शिखर का बूटा, जिसकी टेढ़ी रेखा अजगर देव पाखंगबा का चिह्न कही जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Moirang_Phee",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "meghalaya-lakadong-turmeric",
+    "status": "draft",
+    "name": {
+      "en": "Lakadong turmeric",
+      "hi": "लकाडोंग हल्दी"
+    },
+    "anchor": {
+      "lat": 25.436,
+      "lon": 92.191
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "category": "produce",
+    "model": "saffron",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Turmeric from the Jaintia hills with about seven per cent curcumin, among the highest measured anywhere; grown on terraced slopes and cured over a wood fire.",
+      "hi": "जयंतिया पहाड़ियों की हल्दी, जिसमें लगभग सात प्रतिशत करक्यूमिन है — कहीं भी मापे गए सबसे अधिक में से; सीढ़ीदार ढलानों पर उगती और लकड़ी की आँच पर पकाई जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lakadong_turmeric",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "garo-dakmanda",
+    "status": "draft",
+    "name": {
+      "en": "Garo Dakmanda",
+      "hi": "गारो दकमंदा"
+    },
+    "anchor": {
+      "lat": 25.514,
+      "lon": 90.202
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "The wrapped skirt of Garo women, woven waist to ankle with a broad patterned band called daksari along its lower edge.",
+      "hi": "गारो स्त्रियों का लपेटा जाने वाला वस्त्र, कमर से टख़ने तक बुना, जिसके निचले किनारे पर दकसारी नामक चौड़ी नमूनेदार पट्टी होती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Meghalaya_Garo_Textile",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mizo-puanchei",
+    "status": "draft",
+    "name": {
+      "en": "Mizo Puanchei",
+      "hi": "मिज़ो पुआनचेइ"
+    },
+    "anchor": {
+      "lat": 23.729,
+      "lon": 92.718
+    },
+    "regions": [
+      "IN-MZ"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "The most colourful of Mizo cloths, woven for the Cheraw bamboo dance and for a bride; no Mizo festival is danced without it.",
+      "hi": "मिज़ो वस्त्रों में सबसे रंगीन, चेराव बाँस-नृत्य के लिए और वधू के लिए बुना जाता है; कोई मिज़ो त्योहार इसके बिना नहीं नाचा जाता।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mizo_Puanchei",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nagaland-tree-tomato",
+    "status": "draft",
+    "name": {
+      "en": "Naga tree tomato",
+      "hi": "नगा वृक्ष-टमाटर"
+    },
+    "anchor": {
+      "lat": 25.675,
+      "lon": 94.111
+    },
+    "regions": [
+      "IN-NL"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2014–15",
+    "blurb": {
+      "en": "The tamarillo, grown on Nagaland's hillsides and eaten as a chutney with fish and pork; it hangs from a small tree rather than a vine, which is what its name says.",
+      "hi": "तमारिलो, जो नगालैंड की पहाड़ियों पर उगता है और मछली तथा सूअर के साथ चटनी के रूप में खाया जाता है; यह बेल पर नहीं, छोटे पेड़ पर लगता है — नाम यही कहता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Naga_Tree_Tomato",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "chakhesang-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Chakhesang shawl",
+      "hi": "चाखेसंग शॉल"
+    },
+    "anchor": {
+      "lat": 25.667,
+      "lon": 94.5
+    },
+    "regions": [
+      "IN-NL"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2017–18",
+    "blurb": {
+      "en": "Woven on a loin loom in the Phek hills; the pattern says who may wear it, and some of them only a man who has given a feast of merit may put on.",
+      "hi": "फेक की पहाड़ियों में कमर-करघे पर बुनी; नमूना बताता है कि कौन इसे पहन सकता है, और कुछ को केवल वही पुरुष ओढ़ सकता है जिसने पुण्य-भोज दिया हो।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chakshesang_Shawl",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dalle-khursani",
+    "status": "draft",
+    "name": {
+      "en": "Dalle Khursani",
+      "hi": "डल्ले खुर्सानी"
+    },
+    "anchor": {
+      "lat": 27.326,
+      "lon": 88.612
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "category": "produce",
+    "model": "chilli",
+    "priority": 2,
+    "registered": "2021–22",
+    "blurb": {
+      "en": "The round red cherry chilli of the eastern Himalaya, pickled whole in mustard oil; among the hottest chillies grown in India and eaten with almost every meal here.",
+      "hi": "पूर्वी हिमालय की गोल लाल चेरी मिर्च, सरसों के तेल में साबुत अचारी जाती है; भारत में उगाई जाने वाली सबसे तीखी मिर्चों में, और यहाँ लगभग हर भोजन के साथ खाई जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dalle_Khursani",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "risa-tripura",
+    "status": "draft",
+    "name": {
+      "en": "Tripura Risa textile",
+      "hi": "त्रिपुरा रिसा वस्त्र"
+    },
+    "anchor": {
+      "lat": 23.836,
+      "lon": 91.279
+    },
+    "regions": [
+      "IN-TR"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "A narrow woven cloth the Tripuri wear as a breast-band, a turban or an offering; a girl is given her first risa at twelve in a ceremony of its own.",
+      "hi": "सँकरा बुना वस्त्र जिसे त्रिपुरी वक्ष-पट्टी, पगड़ी या चढ़ावे के रूप में पहनते हैं; बालिका को उसका पहला रिसा बारह वर्ष की आयु में एक अलग संस्कार में दिया जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tripura_Risa_Textile",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "andaman-karen-musley",
+    "status": "draft",
+    "name": {
+      "en": "Karen Musley rice",
+      "hi": "करेन मुस्ले चावल"
+    },
+    "anchor": {
+      "lat": 11.666,
+      "lon": 92.746
+    },
+    "regions": [
+      "IN-AN"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Rice grown by the Karen community of Middle Andaman, brought from Burma a century ago and sown on land cleared from the island forest; salt-tolerant and grown without chemicals.",
+      "hi": "मध्य अंडमान के करेन समुदाय की उगाई धान, जो एक सदी पहले बर्मा से आई और द्वीप के जंगल से साफ़ की गई भूमि पर बोई जाती है; खारापन सहने वाली और बिना रसायन उगाई।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Andaman_Karen_Musley_rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "villianur-terracotta",
+    "status": "draft",
+    "name": {
+      "en": "Villianur terracotta",
+      "hi": "विलियानूर मृण्शिल्प"
+    },
+    "anchor": {
+      "lat": 11.934,
+      "lon": 79.83
+    },
+    "regions": [
+      "IN-PY"
+    ],
+    "category": "craft",
+    "model": "pot",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Village guardian figures — horses, Aiyanar, elephants — thrown and built in sections at Villianur and fired for the shrines at the edge of Puducherry's fields.",
+      "hi": "गाँव के रक्षक-रूप — घोड़े, अय्यनार, हाथी — विलियानूर में खंडों में गढ़े और पकाए जाते हैं, पुदुचेरी के खेतों के छोर पर बने देवस्थानों के लिए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Villianur_Terracotta_Works",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kanyakumari-clove",
+    "status": "draft",
+    "name": {
+      "en": "Kanyakumari clove",
+      "hi": "कन्याकुमारी लौंग"
+    },
+    "anchor": {
+      "lat": 8.179,
+      "lon": 77.432
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "produce",
+    "model": "pepper",
+    "priority": 2,
+    "registered": "2021–22",
+    "blurb": {
+      "en": "Cloves grown in the Western Ghats above Kanyakumari, dried to a deep brown and higher in oil than the imported bud; almost all of India's clove comes from this one district.",
+      "hi": "कन्याकुमारी के ऊपर पश्चिमी घाट में उगी लौंग, गहरे भूरे रंग तक सुखाई जाती है और आयातित कली से अधिक तैलयुक्त; भारत की लगभग सारी लौंग इसी एक ज़िले से आती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kanniyakumari_Clove",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "nirmal-toys",
+    "status": "draft",
+    "name": {
+      "en": "Nirmal toys",
+      "hi": "निर्मल खिलौने"
+    },
+    "anchor": {
+      "lat": 19.097,
+      "lon": 78.344
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Toys and panels turned from soft poniki wood at Nirmal and finished in a golden lacquer made from herbal gum, a court craft of the Nizams' northern districts.",
+      "hi": "निर्मल में नरम पोनिकी लकड़ी से बने खिलौने और पट्टिकाएँ, जिन पर जड़ी-बूटी की गोंद से बनी सुनहरी लाख चढ़ती है — निज़ामों के उत्तरी ज़िलों का दरबारी शिल्प।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nirmal_toys",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "pembarthi-brass",
+    "status": "draft",
+    "name": {
+      "en": "Pembarthi brass craft",
+      "hi": "पेंबर्थी पीतल शिल्प"
+    },
+    "anchor": {
+      "lat": 18.0,
+      "lon": 79.583
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "craft",
+    "model": "bell",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Sheet brass beaten into relief at Pembarthi: temple chariots, lamps and door plates, a craft the Kakatiya kings' temples first called for.",
+      "hi": "पेंबर्थी में पीतल की चादर पीटकर उभार में ढाली जाती है: मंदिर के रथ, दीपक और द्वार-पट्टिकाएँ — यह शिल्प सबसे पहले काकतीय राजाओं के मंदिरों ने माँगा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pembarthi_Metal_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "gadwal-saree",
+    "status": "draft",
+    "name": {
+      "en": "Gadwal saree",
+      "hi": "गडवाल साड़ी"
+    },
+    "anchor": {
+      "lat": 16.235,
+      "lon": 77.796
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "A cotton body joined to a silk border and pallu by the kupadam interlock, so light that a whole saree folds into a matchbox — as Gadwal's weavers like to show.",
+      "hi": "सूती देह, जिससे रेशमी किनारी और पल्लू कुपदम अंतर्ग्रथन से जुड़ते हैं; इतनी हल्की कि पूरी साड़ी माचिस की डिबिया में समा जाए — गडवाल के बुनकर यही दिखाना पसंद करते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gadwal_sarees",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "narayanpet-saree",
+    "status": "draft",
+    "name": {
+      "en": "Narayanpet saree",
+      "hi": "नारायणपेट साड़ी"
+    },
+    "anchor": {
+      "lat": 16.748,
+      "lon": 77.495
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "Woven in a Maratha style left behind when Shivaji's camp passed this way: a plain body, a chequered border and the temple triangles along the edge.",
+      "hi": "मराठा शैली में बुनी, जो शिवाजी की छावनी के इधर से गुज़रने पर पीछे छूट गई: सादा देह, चौख़ानेदार किनारी और छोर पर मंदिर-त्रिभुज।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Narayanpet_handloom_sarees",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "karimnagar-filigree",
+    "status": "draft",
+    "name": {
+      "en": "Karimnagar silver filigree",
+      "hi": "करीमनगर चाँदी जाली"
+    },
+    "anchor": {
+      "lat": 18.439,
+      "lon": 79.129
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "craft",
+    "model": "mirror",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Silver drawn to a wire thinner than a hair, coiled into a lattice and soldered without any backing, so what is made is almost all air.",
+      "hi": "चाँदी को बाल से महीन तार में खींचा, जाली में लपेटा और बिना किसी आधार के टाँका जाता है, जिससे जो बनता है वह लगभग पूरा हवा ही होता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Silver_Filigree_of_Karimnagar",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "dindigul-lock",
+    "status": "draft",
+    "name": {
+      "en": "Dindigul lock",
+      "hi": "दिंडीगुल ताला"
+    },
+    "anchor": {
+      "lat": 10.369,
+      "lon": 77.98
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "craft",
+    "model": "bell",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "Hand-made iron locks from Dindigul, whose levers are filed one by one so that no two are alike; the town has made locks since the eighteenth century.",
+      "hi": "दिंडीगुल के हाथ से बने लोहे के ताले, जिनकी लीवरें एक-एक कर रेती जाती हैं ताकि कोई दो एक जैसे न हों; यह नगर अठारहवीं सदी से ताले बनाता आया है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dindigul_Locks",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kandangi-saree",
+    "status": "draft",
+    "name": {
+      "en": "Kandangi saree",
+      "hi": "कंडांगी साड़ी"
+    },
+    "anchor": {
+      "lat": 10.066,
+      "lon": 78.768
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2019–20",
+    "blurb": {
+      "en": "Broad-checked cotton woven in Chettinad, worn wide-bordered by the Chettiar women and dyed in the ochres and maroons of the region's mansions.",
+      "hi": "चेट्टिनाड में बुना चौड़े चौख़ानों वाला सूत, जिसे चेट्टियार स्त्रियाँ चौड़ी किनारी के साथ पहनती हैं, और जो इस क्षेत्र की हवेलियों के गेरू और मैरून में रँगा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kandangi_saree",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "thanjavur-veena",
+    "status": "draft",
+    "name": {
+      "en": "Thanjavur veena",
+      "hi": "तंजावुर वीणा"
+    },
+    "anchor": {
+      "lat": 10.785,
+      "lon": 79.139
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "craft",
+    "model": "bottle",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "The Saraswati veena, carved with its bowl, neck and yali head from a single block of jackfruit wood — a whole instrument from one tree, made only here.",
+      "hi": "सरस्वती वीणा, जिसका कुंड, दंड और याली-मुख कटहल की लकड़ी के एक ही खंड से तराशे जाते हैं — एक ही पेड़ से पूरा वाद्य, जो केवल यहीं बनता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Thanjavur_Veenai",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kuthampully-saree",
+    "status": "draft",
+    "name": {
+      "en": "Kuthampully saree",
+      "hi": "कुथमपुल्ली साड़ी"
+    },
+    "anchor": {
+      "lat": 10.517,
+      "lon": 76.217
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "The cream cotton and gold kasavu of Kerala, woven at Kuthampully by weavers the Kochi royal family brought from Karnataka three hundred years ago.",
+      "hi": "केरल का क्रीम सूत और सुनहरा कसवु, कुथमपुल्ली में उन बुनकरों द्वारा बुना जाता है जिन्हें कोच्चि राजपरिवार तीन सौ वर्ष पहले कर्नाटक से लाया था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kuthampully_saree",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "pokkali-rice",
+    "status": "draft",
+    "name": {
+      "en": "Pokkali rice",
+      "hi": "पोक्काली चावल"
+    },
+    "anchor": {
+      "lat": 9.94,
+      "lon": 76.26
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "produce",
+    "model": "rice",
+    "priority": 2,
+    "registered": "2008–09",
+    "blurb": {
+      "en": "Salt-tolerant rice grown in the Vembanad backwaters in the monsoon, when the water turns fresh; prawns are farmed in the same fields for the rest of the year.",
+      "hi": "वेम्बनाड की पश्चजल भूमि में वर्षा ऋतु में उगा खारापन सहने वाला चावल, जब पानी मीठा हो जाता है; शेष वर्ष उन्हीं खेतों में झींगा पाला जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pokkali_Rice",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "navalgund-durrie",
+    "status": "draft",
+    "name": {
+      "en": "Navalgund durrie",
+      "hi": "नवलगुंद दरी"
+    },
+    "anchor": {
+      "lat": 15.559,
+      "lon": 75.353
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "craft",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2007–08",
+    "blurb": {
+      "en": "Flat-woven cotton rugs made by the women of a few Navalgund households, in peacock and parrot designs brought from Bijapur when the Adil Shahi court fell.",
+      "hi": "नवलगुंद के कुछ ही घरों की स्त्रियों द्वारा बुनी सपाट सूती दरियाँ, मोर और तोते के नमूनों में, जो आदिलशाही दरबार के पतन पर बीजापुर से यहाँ आए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Navalgund_Durries",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "mysore-rosewood-inlay",
+    "status": "draft",
+    "name": {
+      "en": "Mysore rosewood inlay",
+      "hi": "मैसूर शीशम जड़ाई"
+    },
+    "anchor": {
+      "lat": 12.298,
+      "lon": 76.639
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Panels of rosewood cut away and filled with other woods, ivory once and now shell and plastic, to make elephants and temple scenes; a Wadiyar court workshop craft.",
+      "hi": "शीशम की पट्टियों को काटकर उनमें अन्य लकड़ियाँ भरी जाती हैं — पहले हाथीदाँत, अब सीप और प्लास्टिक — जिनसे हाथी और मंदिर-दृश्य बनते हैं; वाडियार दरबार की कार्यशाला का शिल्प।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mysore_Rosewood_Inlay",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "sandur-lambani",
+    "status": "draft",
+    "name": {
+      "en": "Sandur Lambani embroidery",
+      "hi": "संदूर लंबानी कढ़ाई"
+    },
+    "anchor": {
+      "lat": 15.086,
+      "lon": 76.547
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Mirror, shell and coin sewn onto patched cloth by Lambani women of Sandur, whose ancestors carried salt and grain for the armies of the Deccan.",
+      "hi": "संदूर की लंबानी स्त्रियाँ पैबंद लगे कपड़े पर शीशे, सीपियाँ और सिक्के टाँकती हैं; उनके पूर्वज दक्कन की सेनाओं के लिए नमक और अनाज ढोते थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sandur_Lambani_Embroidery",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "arunachal-yak-churpi",
+    "status": "draft",
+    "name": {
+      "en": "Yak churpi",
+      "hi": "याक छुरपी"
+    },
+    "anchor": {
+      "lat": 27.574,
+      "lon": 91.795
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "food",
+    "model": "sweet",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Hard cheese made by the Brokpa herders of Tawang and West Kameng from the milk of the Arunachali yak, pressed, smoked and dried until it will keep a winter.",
+      "hi": "तवांग और पश्चिम कामेंग के ब्रोकपा चरवाहे अरुणाचली याक के दूध से जो कड़ा पनीर बनाते हैं, दबाया, धुँआया और तब तक सुखाया जाता है कि पूरा जाड़ा चल जाए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Pradesh_Yak_Churpi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "arunachal-monpa-paper",
+    "status": "draft",
+    "name": {
+      "en": "Monpa handmade paper",
+      "hi": "मोनपा हस्तनिर्मित काग़ज़"
+    },
+    "anchor": {
+      "lat": 27.574,
+      "lon": 91.795
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "craft",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Paper beaten from the bark of the shugu sheng shrub at Tawang, on which Buddhist scriptures were written for a thousand years; the craft had nearly died before the tag.",
+      "hi": "तवांग में शुगु शेंग झाड़ी की छाल से कूटकर बना काग़ज़, जिस पर एक हज़ार वर्षों तक बौद्ध ग्रंथ लिखे गए; जीआई से पहले यह शिल्प लगभग समाप्त हो चुका था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Pradesh_Monpa_Handmade_Paper",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "arunachal-apatani-textile",
+    "status": "draft",
+    "name": {
+      "en": "Apatani textile",
+      "hi": "अपातानी वस्त्र"
+    },
+    "anchor": {
+      "lat": 27.595,
+      "lon": 93.839
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Woven on a loin loom in the Ziro valley in black, white and yellow stripes with no curve anywhere; the Apatani weave only angles, and dye with local plants.",
+      "hi": "ज़ीरो घाटी में कमर-करघे पर काली, सफ़ेद और पीली धारियों में बुनी, जिसमें कहीं कोई वक्र नहीं; अपातानी केवल कोण बुनते हैं और स्थानीय पौधों से रँगते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Pradesh_Apatani_Textile",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "arunachal-wancho-wood",
+    "status": "draft",
+    "name": {
+      "en": "Wancho wooden craft",
+      "hi": "वांचो काष्ठ शिल्प"
+    },
+    "anchor": {
+      "lat": 27.017,
+      "lon": 95.567
+    },
+    "regions": [
+      "IN-AR"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Carved by the Wancho of Longding: pipes, mugs and human figures cut from a single block, a memory of the headhunting culture their grandfathers kept.",
+      "hi": "लोंगडिंग के वांचो की नक़्क़ाशी: पाइप, प्याले और मानव आकृतियाँ, सब एक ही खंड से काटे — उस सिर-शिकार संस्कृति की स्मृति जो उनके दादाओं ने निभाई थी।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arunachal_Pradesh_Wancho_Wooden_Craft",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "ladakh-seabuckthorn",
+    "status": "draft",
+    "name": {
+      "en": "Ladakh seabuckthorn",
+      "hi": "लद्दाख लेह बेरी"
+    },
+    "anchor": {
+      "lat": 34.165,
+      "lon": 77.584
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "produce",
+    "model": "apricot",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "The orange berry of a thorn bush that holds the banks of the Indus together in Ladakh; picked for juice and oil, and one of the few fruits the cold desert yields.",
+      "hi": "एक काँटेदार झाड़ी की नारंगी बेरी, जो लद्दाख में सिंधु के किनारों को बाँधे रखती है; रस और तेल के लिए तोड़ी जाती है, और उन गिने-चुने फलों में है जो यह शीत मरुस्थल देता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ladakh_Seabuckthorn",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "ladakh-shingskos",
+    "status": "draft",
+    "name": {
+      "en": "Ladakh Shingskos wood carving",
+      "hi": "लद्दाख शिंगस्कोस काष्ठ नक़्क़ाशी"
+    },
+    "anchor": {
+      "lat": 34.165,
+      "lon": 77.584
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "craft",
+    "model": "toy",
+    "priority": 2,
+    "registered": "2022–23",
+    "blurb": {
+      "en": "The painted wood carving of Ladakhi monasteries and houses: lintels, pillars and low choktse tables cut in apricot and willow, the only woods that grow here.",
+      "hi": "लद्दाख के मठों और घरों की रंगी हुई काष्ठ नक़्क़ाशी: सरदल, खंभे और नीची चोकत्से मेज़ें, खुबानी और विलो में तराशी — यहाँ केवल यही लकड़ियाँ उगती हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ladakh_Shingskos",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "barabanki-handloom",
+    "status": "draft",
+    "name": {
+      "en": "Barabanki handloom",
+      "hi": "बाराबंकी हथकरघा"
+    },
+    "anchor": {
+      "lat": 26.931,
+      "lon": 81.198
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Stoles, scarves and yardage woven on pit looms across the villages of Barabanki, one of the largest handloom clusters left in northern India.",
+      "hi": "बाराबंकी के गाँवों में गड्ढा-करघों पर बुने दुपट्टे, स्कार्फ़ और थान — उत्तर भारत में बचे सबसे बड़े हथकरघा समूहों में एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Barabanki_Handloom_Product",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "lucknow-zardozi",
+    "status": "draft",
+    "name": {
+      "en": "Lucknow zardozi",
+      "hi": "लखनऊ ज़रदोज़ी"
+    },
+    "anchor": {
+      "lat": 26.839,
+      "lon": 80.923
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2012–13",
+    "blurb": {
+      "en": "Gold and silver wire couched onto velvet and silk with a hooked needle, a court embroidery the Awadh nawabs kept whole workshops for.",
+      "hi": "मख़मल और रेशम पर अंकुशी सुई से टाँकी गई सोने-चाँदी की तार — दरबारी कढ़ाई, जिसके लिए अवध के नवाब पूरी कारख़ानाएँ रखते थे।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lucknow_Zardozi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "bikaneri-bhujia",
+    "status": "draft",
+    "name": {
+      "en": "Bikaneri bhujia",
+      "hi": "बीकानेरी भुजिया"
+    },
+    "anchor": {
+      "lat": 28.018,
+      "lon": 73.315
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "food",
+    "model": "laddu",
+    "priority": 2,
+    "registered": "2010–11",
+    "blurb": {
+      "en": "Moth-bean flour pressed through a sieve into hot ghee, first made in the Bikaner palace kitchen in 1877 and now the snack a whole town lives by.",
+      "hi": "मोठ के आटे को छलनी से गरम घी में दबाकर बनाई जाती है; पहली बार 1877 में बीकानेर के राजमहल की रसोई में बनी और अब पूरा नगर इसी पर चलता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bikaneri_Bhujia",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "madurai-sungudi",
+    "status": "draft",
+    "name": {
+      "en": "Madurai Sungudi",
+      "hi": "मदुरै सुंगुडी"
+    },
+    "anchor": {
+      "lat": 9.919,
+      "lon": 78.12
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Cotton tie-dyed in small dots by Saurashtrian weavers who came to Madurai with the Nayaks; the dots are tied with the fingers alone, never with a frame.",
+      "hi": "नायकों के साथ मदुरै आए सौराष्ट्री बुनकरों द्वारा छोटे बिंदुओं में बाँधकर रँगा सूत; बिंदु केवल उँगलियों से बाँधे जाते हैं, किसी ढाँचे से नहीं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Madurai_Sungudi",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kachchh-shawl",
+    "status": "draft",
+    "name": {
+      "en": "Kachchh shawl",
+      "hi": "कच्छ शॉल"
+    },
+    "anchor": {
+      "lat": 23.254,
+      "lon": 69.669
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "textile",
+    "model": "shawl",
+    "priority": 2,
+    "registered": "2011–12",
+    "blurb": {
+      "en": "Woven by Marwada and Meghwal weavers from the wool of local Bharwad sheep, with extra-weft bands the herding communities order by name.",
+      "hi": "स्थानीय भरवाड़ भेड़ों की ऊन से मारवाड़ा और मेघवाल बुनकरों की बुनी, जिनमें अतिरिक्त बाने की पट्टियाँ होती हैं, जिन्हें चरवाहा समुदाय नाम लेकर मँगवाते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kachchh_Shawls",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "sanganeri-print",
+    "status": "draft",
+    "name": {
+      "en": "Sanganeri hand block print",
+      "hi": "सांगानेरी हाथ-ठप्पा छपाई"
+    },
+    "anchor": {
+      "lat": 26.605,
+      "lon": 75.948
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "textile",
+    "model": "painting",
+    "priority": 2,
+    "registered": "2009–10",
+    "blurb": {
+      "en": "Fine floral blocks printed on white ground at Sanganer near Jaipur, the buta small and the ground left clear — the opposite of Bagru's dark mud-resist work.",
+      "hi": "जयपुर के पास सांगानेर में सफ़ेद ज़मीन पर छपे बारीक फूलदार ठप्पे, बूटा छोटा और ज़मीन खुली — बगरू के गहरे कीचड़-रोध काम के ठीक उलट।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Block_printing_in_India",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "balaramapuram-saree",
+    "status": "draft",
+    "name": {
+      "en": "Balaramapuram saree",
+      "hi": "बलरामपुरम साड़ी"
+    },
+    "anchor": {
+      "lat": 8.486,
+      "lon": 76.949
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2009–10",
+    "blurb": {
+      "en": "The unbleached cotton and gold-bordered kasavu woven at Balaramapuram for the Travancore court, in counts so fine the cloth is almost transparent.",
+      "hi": "त्रावणकोर दरबार के लिए बलरामपुरम में बुना बिना ब्लीच किया सूत और सुनहरी किनारी वाला कसवु, इतने महीन अंक में कि कपड़ा लगभग पारदर्शी हो।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Balaramapuram_sarees_and_fine_cotton_fabrics",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "kotpad-handloom",
+    "status": "draft",
+    "name": {
+      "en": "Kotpad handloom",
+      "hi": "कोटपाड़ हथकरघा"
+    },
+    "anchor": {
+      "lat": 18.812,
+      "lon": 82.71
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2004–05",
+    "blurb": {
+      "en": "Dyed by Mirgan weavers of Koraput with the root of the aal tree alone, which gives every shade from deep maroon to brown; the first GI Odisha was granted.",
+      "hi": "कोरापुट के मिरगान बुनकर केवल आल वृक्ष की जड़ से रँगते हैं, जो गहरे मैरून से भूरे तक हर छाया देती है; ओडिशा को मिला पहला जीआई।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kotpad_Handloom_fabrics",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "santipore-saree",
+    "status": "draft",
+    "name": {
+      "en": "Santipore saree",
+      "hi": "शांतिपुर साड़ी"
+    },
+    "anchor": {
+      "lat": 23.247,
+      "lon": 88.433
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "textile",
+    "model": "saree",
+    "priority": 2,
+    "registered": "2009–10",
+    "blurb": {
+      "en": "Fine cotton woven at Santipur on the Hooghly since the fifteenth century, in counts up to 100s; the weave Bengali households mean when they say tant.",
+      "hi": "हुगली तट पर शांतिपुर में पंद्रहवीं सदी से बुना महीन सूत, सौ अंक तक; बंगाली घर जब तांत कहते हैं तो यही बुनाई समझते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shantipuri_sari",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
+  },
+  {
+    "id": "goa-mankurad",
+    "status": "draft",
+    "name": {
+      "en": "Mankurad mango",
+      "hi": "मानकुराद आम"
+    },
+    "anchor": {
+      "lat": 15.496,
+      "lon": 73.826
+    },
+    "regions": [
+      "IN-GA"
+    ],
+    "category": "produce",
+    "model": "mango",
+    "priority": 2,
+    "registered": "2023–24",
+    "blurb": {
+      "en": "Goa's own mango, small and fibreless with a thin skin that bruises if it is looked at; the Portuguese called it malcorada, the badly coloured one, and Goans kept the name.",
+      "hi": "गोवा का अपना आम, छोटा और बिना रेशे का, पतले छिलके वाला जो देखने भर से दब जाए; पुर्तगालियों ने इसे मालकोराडा कहा — बुरे रंग वाला — और गोवावासियों ने नाम रख लिया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Goa_Mankurad_Mango",
+      "https://search.ipindia.gov.in/GIRPublic/"
+    ]
   }
 ]
