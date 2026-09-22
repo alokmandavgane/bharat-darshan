@@ -5,7 +5,8 @@
 // (PLAN.md D11: a page pasted into a chat should show that page).
 //
 // Run against a server:  npm run preview   then   node tools/share-image.mjs
-// Needs Playwright with Chromium (global install, or `npx playwright`); it is a tool,
+// Needs Playwright with Chromium (global install, or `npx playwright install chromium`
+// and then PLAYWRIGHT_MODULE=~/.npm/_npx/<hash>/node_modules/playwright); it is a tool,
 // not a project dependency. Set BASE to point at another server, SWIFTSHADER=1 on a
 // machine without a GPU, FORCE=1 to redo cards that already exist, ONLY=<id> (or
 // ONLY=langs) to do one page, LANGS=en to do one language.
@@ -51,7 +52,9 @@ if (process.env.DRY === '1') {
 const require = createRequire(import.meta.url);
 let chromium;
 try { ({ chromium } = require('playwright')); } catch { ({ chromium } = require(process.env.PLAYWRIGHT_MODULE || '/opt/node22/lib/node_modules/playwright')); }
-const browser = await chromium.launch({ args });
+// The new headless mode (`channel: 'chromium'`) renders on the machine's GPU where there is
+// one; the headless shell falls back to SwiftShader, which draws the clay a shade off.
+const browser = await chromium.launch({ args, channel: process.env.SWIFTSHADER ? undefined : 'chromium' });
 await mkdir('public/share', { recursive: true });
 let made = 0, skipped = 0;
 for (const card of todo) {
@@ -67,6 +70,12 @@ for (const card of todo) {
       && window.bd?.store.get('plate') === id, card.id, { timeout: 30000 });
   }
   await page.waitForTimeout(3000);           // finer tier, walls and tokens settle; the pop-in ends
+  // Headless Chromium idles requestAnimationFrame once nothing is animating, and the
+  // backdrop -- the sea and the neighbours -- is fetched after the first frame and asks
+  // for a redraw that never comes. A pointer move is activity, which forces the frame.
+  await page.mouse.move(4, 4);
+  await page.mouse.move(6, 6);
+  await page.waitForTimeout(800);
   await page.screenshot({ path, type: 'jpeg', quality: 86, timeout: 120000 });
   console.log(`wrote ${path}`);
   made += 1;
