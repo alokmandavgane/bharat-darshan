@@ -24,6 +24,19 @@
     }
   },
   {
+    "lgd": 104,
+    "id": "jalore",
+    "name": {
+      "en": "Jalore",
+      "hi": "जालौर"
+    },
+    "headquarters": {
+      "en": "Jalore",
+      "hi": "जालौर"
+    },
+    "_note": "Wikidata's English label and headquarters on this item were vandalised to 'kishangarh sub division.Ajmer' and 'Ajmer'."
+  },
+  {
     "lgd": 749,
     "id": "ntr",
     "name": {

@@ -1017,7 +1017,9 @@ def build_district_points(layer, curated, cats, fields, ids, by_id, out_items):
         }
         if (hand or {}).get('blurb'):
             entry['blurb'] = hand['blurb']
-        if rec['hq_en'] and rec['hq_hi'] and 'headquarters' in fields:
+        if (hand or {}).get('headquarters') and 'headquarters' in fields:
+            entry['headquarters'] = hand['headquarters']
+        elif rec['hq_en'] and rec['hq_hi'] and 'headquarters' in fields:
             entry['headquarters'] = {'en': rec['hq_en'], 'hi': rec['hq_hi']}
         for key, field in (('population', 'population'), ('area_km2', 'area_km2'), ('lgd', 'lgd')):
             if field in fields and rec[key]:
