@@ -33,134 +33,65 @@
     <div class="markers"></div>
 
     <header class="topbar">
-      <div class="topbar-left">
-      <div class="wordmark paper">
+      <!-- The wordmark, set into the paper rather than on a card (PLAN.md D14); the
+           language toggle beside it. In poster mode it grows into the share card. -->
+      <div class="wordmark">
         <!-- The atlas's name above a page's own title, on that page's share card only. -->
         <span class="kicker" hidden></span>
         <span class="title" data-i18n="app.title">Bharat Darshan</span>
         <span class="title-other" data-i18n="app.title.other">भारत दर्शन</span>
         <span class="tagline" data-i18n="app.tagline">A 3D map of India</span>
         <span class="site">darshan.alokm.com</span>
+        <button class="lang-toggle" type="button" data-i18n="lang.switch" data-i18n-aria-label="lang.switch.aria">हिन्दी</button>
       </div>
-      <!-- The cartouche: the open page's name on the map, the way an atlas plate carries
-           its title. Tapping it goes back to the contents. -->
-      <button class="cartouche paper" type="button" hidden>
-        <span class="cartouche-section"></span>
-        <span class="cartouche-title"></span>
-      </button>
-      </div>
-      <button class="menu-button paper" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria-label="menu.open">
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
     </header>
 
-    <!-- The menu: the view (language, relief, surroundings, graticule) as one compact
-         strip, then every layer as a row -- a mark drawn from its own type and colours,
-         its name, its key in miniature, and a switch (PLAN.md section 3, "Layout"). -->
-    <div class="menu paper" id="menu" hidden>
-      <div class="menu-scroll">
-        <!-- Finding a layer or a setting by name: the list is long enough to want it. -->
-        <div class="menu-find">
-          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input class="menu-search" type="search" autocomplete="off" data-i18n-placeholder="menu.find" data-i18n-aria-label="menu.find">
-          <p class="menu-none" hidden data-i18n="list.none">Nothing found</p>
-        </div>
-        <section class="menu-section menu-view">
-          <div class="menu-head">
-            <h3 data-i18n="menu.view">View</h3>
-            <div class="segmented" role="group" data-i18n-aria-label="menu.language">
-              <button type="button" class="lang-option" data-lang="en" aria-pressed="true" lang="en">English</button>
-              <button type="button" class="lang-option" data-lang="hi" aria-pressed="false" lang="hi">हिन्दी</button>
-            </div>
-          </div>
-          <div class="view-toggles" role="group">
-            <button class="toggle chip-relief" type="button" aria-pressed="true">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6-11 4 6 3-4 5 9zM9 9l1.5 2.5L12 9"/></svg>
-              <span data-i18n="chip.relief">Relief</span>
-            </button>
-            <button class="toggle chip-surroundings" type="button" aria-pressed="false">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 21c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M7 13V7l5-3 5 3v6"/></svg>
-              <span data-i18n="chip.surroundings">Surroundings</span>
-            </button>
-            <button class="toggle chip-graticule" type="button" aria-pressed="false" data-i18n-title="chip.graticule.hint">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16M8 4v16M16 4v16"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
-              <span data-i18n="chip.graticule">Graticule</span>
-            </button>
-          </div>
-          <div class="relief" hidden>
-            <label for="relief-slider" data-i18n="relief.label">Relief</label>
-            <input id="relief-slider" class="relief-slider" type="range" min="0" max="30" step="1" value="12" data-i18n-aria-label="relief.aria">
-            <span class="relief-value" aria-live="off">12×</span>
-          </div>
-        </section>
-        <section class="menu-section">
-          <h3 data-i18n="menu.layers">Layers</h3>
-          <div class="layer-list" role="group"></div>
-        </section>
-      </div>
-    </div>
+    <!-- The one control on the map: the compass, which is also the way home. -->
+    <button class="reset-button paper" type="button" data-i18n-aria-label="view.reset" data-i18n-title="view.reset">
+      <svg class="compass" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5"/>
+        <path class="needle-n" d="M12 3.2 15 12H9z"/>
+        <path class="needle-s" d="M12 20.8 9 12h6z"/>
+      </svg>
+    </button>
 
-    <!-- The plate's furniture, bottom-left the way an atlas prints it: the controls,
-         then the key -- one row per layer drawn, each with its samples and an eye to
-         hide it -- with the scale bar as its foot. -->
-    <div class="corner">
-      <div class="corner-buttons">
-        <button class="corner-button tour-button paper" type="button" hidden aria-pressed="false" data-i18n-aria-label="tour.play" data-i18n-title="tour.play">
-          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
-          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5h3.5v13H7zM13.5 5.5H17v13h-3.5z"/></svg>
-        </button>
-        <button class="corner-button reset-button paper" type="button" data-i18n-aria-label="view.reset" data-i18n-title="view.reset">
-          <svg class="compass" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5"/>
-            <path class="needle-n" d="M12 3.2 15 12H9z"/>
-            <path class="needle-s" d="M12 20.8 9 12h6z"/>
-          </svg>
-        </button>
-      </div>
-      <aside class="key paper" data-open="1">
-        <button class="key-head" type="button" hidden aria-expanded="true">
-          <span class="key-heading" data-i18n="legend.heading">Key</span>
-          <span class="key-marks" aria-hidden="true"></span>
-          <svg class="key-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="key-rows"></div>
-        <!-- How big the model is, in kilometres. Exact along the screen's horizontal at any
-             yaw or tilt, because the camera is orthographic (src/ui/scale.js). -->
-        <div class="scale" aria-hidden="true" hidden>
-          <span class="scale-label"></span>
-          <div class="scale-bar"></div>
-        </div>
-      </aside>
-    </div>
-
+    <!-- The sheet: the one card, holding one stack -- contents, page, state, item, and
+         the catalogue of layers on top of any of them (PLAN.md D14). The head names the
+         level; the strip under it is the key: one mark per layer drawn, and the scale
+         bar; a tapped mark unfolds its legend right there. -->
     <section class="sheet paper" data-snap="peek" aria-label="Details">
       <div class="sheet-grip" role="button" tabindex="0" data-i18n-aria-label="sheet.grip"></div>
       <div class="sheet-head">
-        <div class="sheet-titles">
-          <h1 class="sheet-title" aria-live="polite">India</h1>
-          <p class="sheet-meta">
-            <span class="sheet-alt" hidden></span>
-            <span class="sheet-subtitle"></span>
-          </p>
-          <!-- What a drag up reveals, said in words: at peek the head is all a phone
-               shows, and nothing else says the atlas has pages. A tap on the head opens it. -->
-          <p class="sheet-hint" hidden></p>
+        <div class="sheet-headline">
+          <div class="sheet-titles">
+            <p class="sheet-crumb" hidden></p>
+            <h1 class="sheet-title" aria-live="polite">India</h1>
+            <p class="sheet-meta">
+              <span class="sheet-alt" hidden></span>
+              <span class="sheet-subtitle"></span>
+              <span class="sheet-draft" hidden data-i18n="facts.draft.short" data-i18n-title="facts.draft.long"></span>
+            </p>
+            <!-- What a drag up reveals, said in words: at peek the head is all a phone
+                 shows, and nothing else says the atlas has pages. A tap on the head opens it. -->
+            <p class="sheet-hint" hidden></p>
+          </div>
+          <button class="sheet-close" type="button" hidden data-i18n-aria-label="sheet.close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
-        <button class="sheet-info" type="button" aria-expanded="false" aria-controls="about" data-i18n-aria-label="sheet.about.heading" data-i18n-title="sheet.about.heading">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.5" r="1.6" fill="currentColor"/><path d="M9.5 10.5H13V18M9.5 18h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="sheet-close" type="button" hidden data-i18n-aria-label="sheet.close">×</button>
+        <div class="strip" hidden>
+          <div class="strip-marks" role="group" data-i18n-aria-label="legend.heading"></div>
+          <button class="strip-add" type="button" data-i18n="strip.add" data-i18n-aria-label="strip.add.aria">+ layer</button>
+          <!-- How big the model is, in kilometres. Exact along the screen's horizontal at any
+               yaw or tilt, because the camera is orthographic (src/ui/scale.js). -->
+          <div class="scale" aria-hidden="true" hidden>
+            <span class="scale-label"></span>
+            <div class="scale-bar"></div>
+          </div>
+        </div>
+        <div class="strip-legend" hidden></div>
       </div>
       <div class="sheet-body">
-        <div class="about" id="about" hidden>
-          <p class="about-draft" hidden data-i18n="facts.draft.long"></p>
-          <p data-i18n="sheet.about.body"></p>
-          <p data-i18n="sheet.next"></p>
-          <h2 data-i18n="sheet.credits.heading">Data and credits</h2>
-          <!-- Generated from content/sources.json by the shell, so it credits exactly what
-               the atlas cites and nothing it does not (PLAN.md section 5). -->
-          <ul class="credits" hidden></ul>
-        </div>
         <nav class="card-steps" hidden data-i18n-aria-label="card.steps">
           <button class="card-prev" type="button" data-i18n-aria-label="card.prev">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -168,6 +99,10 @@
           <span class="card-count" aria-live="polite"></span>
           <button class="card-next" type="button" data-i18n-aria-label="card.next">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="card-tour" type="button" aria-pressed="false" data-i18n-aria-label="tour.play" data-i18n-title="tour.play">
+            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5h3.5v13H7zM13.5 5.5H17v13h-3.5z"/></svg>
           </button>
         </nav>
         <div class="facts" hidden></div>
@@ -183,12 +118,38 @@
         <!-- The atlas's pages when none is open; the open page's own words and its layers
              when one is (PLAN.md D11). -->
         <div class="contents" hidden></div>
+        <!-- The catalogue: every layer as a row, the base (relief, surroundings, graticule)
+             first, behind "+ layer" on the strip. A level of the sheet, not a menu. -->
+        <div class="catalogue" hidden>
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input class="catalogue-search" type="search" autocomplete="off" data-i18n-placeholder="menu.find" data-i18n-aria-label="menu.find">
+          </div>
+          <p class="catalogue-none" hidden data-i18n="list.none">Nothing found</p>
+          <div class="layer-list" role="group"></div>
+        </div>
         <!-- Every unit, behind a fold: reachable without hitting it, without being the
              first thing on every page. -->
         <details class="units" hidden>
           <summary class="units-summary"><span data-i18n="sheet.units">All states and union territories</span><span class="units-count"></span></summary>
           <ul class="unit-grid"></ul>
         </details>
+        <!-- The foot of the contents: the tour, and about this map with its credits. -->
+        <div class="foot" hidden>
+          <button class="tour-row" type="button" hidden aria-pressed="false">
+            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg>
+            <span data-i18n="tour.play">Play a tour of the places</span>
+          </button>
+          <details class="about" id="about">
+            <summary class="about-summary" data-i18n="sheet.about.summary">About this map, and credits</summary>
+            <p data-i18n="sheet.about.body"></p>
+            <p data-i18n="sheet.next"></p>
+            <h2 data-i18n="sheet.credits.heading">Data and credits</h2>
+            <!-- Generated from content/sources.json by the shell, so it credits exactly what
+                 the atlas cites and nothing it does not (PLAN.md section 5). -->
+            <ul class="credits" hidden></ul>
+          </details>
+        </div>
       </div>
     </section>
 

@@ -117,20 +117,19 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .topbar > * { pointer-events: auto; }
 .wordmark {
   display: flex;
-  flex-direction: column;
-  padding: 8px 16px 10px;
-  border-radius: 16px;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 4px;
+  /* set into the paper: a halo instead of a card, so the text reads over the map */
+  text-shadow: 0 0 6px var(--card-top), 0 0 12px var(--card-top), 0 1px 0 var(--card-top);
 }
 .wordmark .title {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   line-height: 1.15;
   letter-spacing: 0.01em;
-  background: linear-gradient(90deg, var(--accent-deep) 0%, var(--accent) 55%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 .wordmark .title-other {
   font-family: var(--display);
@@ -139,154 +138,23 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   line-height: 1.4;
   margin-top: 1px;
 }
-.wordmark .tagline, .wordmark .site { display: none; }
-.wordmark .title-other::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 52px;
-  margin-top: 6px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--gold), rgba(201, 154, 60, 0));
-}
-
-.topbar-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  min-width: 0;
-}
-
-/* --- the cartouche: the open page's title, on the map (PLAN.md D11) --- */
-.cartouche {
+.wordmark .title-other, .wordmark .tagline, .wordmark .site { display: none; }
+.lang-toggle {
   font: inherit;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  max-width: min(62vw, 300px);
-  padding: 6px 14px 8px;
-  border-radius: 14px;
-  border-left: 3px solid var(--gold);
-  cursor: pointer;
-}
-.cartouche-section {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--gold);
-}
-.cartouche-section:lang(en) { letter-spacing: 0.12em; text-transform: uppercase; }
-.cartouche-title {
-  font-family: var(--display);
-  font-size: 1rem;
-  line-height: 1.2;
-  color: var(--accent-deep);
-}
-.cartouche:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-
-.menu-button {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  padding: 0;
-}
-.menu-icon, .menu-icon::before, .menu-icon::after {
-  display: block;
-  width: 20px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--accent-deep);
-  transition: transform 180ms, opacity 180ms;
-}
-.menu-icon { position: relative; }
-.menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; }
-.menu-icon::before { top: -6px; }
-.menu-icon::after { top: 6px; }
-.menu-button[aria-expanded="true"] .menu-icon { background: transparent; }
-.menu-button[aria-expanded="true"] .menu-icon::before { transform: translateY(6px) rotate(45deg); }
-.menu-button[aria-expanded="true"] .menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
-
-/* --- the menu panel: the view as one strip, then every layer as a row --- */
-.menu {
-  position: absolute;
-  top: calc(var(--safe-top) + 72px);
-  right: calc(var(--safe-right) + 14px);
-  width: min(340px, calc(100vw - 28px));
-  max-height: calc(100dvh - var(--safe-top) - 88px);
-  border-radius: 20px;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-}
-.menu-scroll {
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 4px 14px 12px;
-  border-radius: inherit;
-}
-.menu-section { padding: 10px 0 6px; }
-.menu-section + .menu-section { border-top: 1px solid var(--line); }
-.menu-section h3 {
-  margin: 0 0 8px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--gold);
-}
-.menu-section h3:lang(en) { letter-spacing: 0.12em; text-transform: uppercase; }
-.menu-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
-.menu-head h3 { margin: 0; }
-.segmented {
-  display: inline-flex;
-  padding: 2px;
-  border-radius: 999px;
-  background: rgba(120, 80, 40, 0.08);
-  border: 1px solid var(--line);
-}
-.segmented button {
-  font: inherit;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  padding: 4px 8px;
+  margin: -4px 0;
   border: 0;
-  border-radius: 999px;
-  padding: 3px 12px;
-  min-height: 28px;
+  border-radius: 8px;
   background: transparent;
-  color: var(--ink);
+  color: var(--accent-deep);
   cursor: pointer;
+  text-shadow: inherit;
 }
-.segmented button[aria-pressed="true"], .toggle[aria-pressed="true"] {
-  background: linear-gradient(180deg, #d1683c, var(--accent-deep));
-  color: var(--accent-ink);
-  border-color: transparent;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
-}
-.segmented button:focus-visible, .menu-button:focus-visible, .toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.lang-toggle:hover { background: rgba(255, 251, 243, 0.6); }
+.lang-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
 
-/* The view: three small switches with a picture each, and the relief's own slider. */
-.view-toggles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
-.toggle {
-  font: inherit;
-  font-size: 0.74rem;
-  font-weight: 600;
-  line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 8px 4px 7px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, #fff9ee, #f1e3cb);
-  color: var(--muted);
-  cursor: pointer;
-  box-shadow: 0 1px 0 #fff inset, 0 1px 3px rgba(84, 56, 28, 0.1);
-}
-.toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.toggle span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .relief {
   display: flex;
   align-items: center;
@@ -297,29 +165,10 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 .relief-slider { flex: 1; accent-color: var(--accent); min-height: 28px; margin: 0; }
 .relief-value { min-width: 3ch; text-align: right; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--muted); }
 
-/* The menu's own search: the list is long enough to want one. */
-.menu-find { position: relative; margin: 10px 0 0; }
-.menu-find .search-icon { left: 11px; }
-.menu-search {
-  font: inherit;
-  font-size: 0.9rem;
-  width: 100%;
-  margin: 0;
-  padding: 7px 12px 7px 32px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.55);
-  color: var(--ink);
-}
-.menu-search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-.menu-none { margin: 10px 4px 2px; font-size: 0.9rem; color: var(--muted); }
-.menu[data-finding="1"] .menu-view[data-empty="1"], .menu[data-finding="1"] .relief, .menu[data-finding="1"] .menu-head { display: none; }
-.menu[data-finding="1"] .menu-view { border-top: 0; }
-
 /* --- layer rows: a mark, a name, the key in miniature, a switch ---
    The mark is a miniature of how the layer draws (src/ui/legend.js), in the layer's own
-   colours; --c is its first colour and tints the tile. The same row serves the menu and
-   an open page. */
+   colours; --c is its first colour and tints the tile. The rows are the catalogue's, a
+   level of the sheet behind "+ layer" on the strip (PLAN.md D14). */
 .layer-group + .layer-group { margin-top: 10px; }
 .layer-group h4 {
   margin: 6px 0 2px;
@@ -486,13 +335,13 @@ canvas.map[data-hover="1"] { cursor: pointer; }
 }
 .sheet-grip:focus-visible { outline: none; }
 .sheet-grip:focus-visible::before { box-shadow: 0 0 0 3px var(--accent); }
-.sheet-head {
+.sheet-head { display: flex; flex-direction: column; cursor: pointer; }
+.sheet-headline {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto auto;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
   gap: 4px 10px;
-  padding: 2px 16px 12px 20px;
-  cursor: pointer;
+  padding: 2px 16px 0 20px;
 }
 body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-titles { min-width: 0; }
@@ -505,9 +354,30 @@ body[data-level="state"] .sheet-head { cursor: default; }
   overflow-wrap: anywhere;
   color: var(--accent-deep);
 }
-.sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0 6px; }
-.sheet[data-view="page"] .sheet-subtitle, .sheet[data-view="item"] .sheet-subtitle { color: var(--gold); font-weight: 600; font-size: 0.8rem; }
+.sheet-meta { color: var(--muted); margin: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; }
+.sheet[data-view="page"] .sheet-subtitle, .sheet[data-view="item"] .sheet-subtitle, .sheet[data-view="layers"] .sheet-subtitle { color: var(--gold); font-weight: 600; font-size: 0.8rem; }
 .sheet[data-view="page"] .sheet-subtitle:lang(en) { letter-spacing: 0.08em; text-transform: uppercase; }
+/* The crumb: where this level sits in the stack, above its title. */
+.sheet-crumb {
+  margin: 0 0 1px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* A draft card says so in the meta line, terracotta and dashed. */
+.sheet-draft {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  border: 1px dashed var(--accent);
+  border-radius: 6px;
+  padding: 0 5px;
+  line-height: 1.5;
+}
+.sheet-draft:lang(en) { letter-spacing: 0.06em; text-transform: uppercase; }
 /* The hint: a line in the accent, with a chevron while the sheet is down, so the head
    says what is under it. Once the sheet is up the contents are right there, and the
    line stays as their heading, without the chevron. */
@@ -532,26 +402,6 @@ body[data-level="state"] .sheet-head { cursor: default; }
 /* The separator belongs to the name before it, not the line after it: hung on the
    subtitle it wrapped to the start of the next line whenever the names were long. */
 .sheet-alt:not([hidden]):has(+ .sheet-subtitle:not(:empty))::after { content: " ·"; }
-/* the info button: about the map, and the review status of a card (drafts turn it terracotta) */
-.sheet-info {
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1.5px solid var(--gold-soft);
-  background: transparent;
-  color: var(--muted);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  position: relative;
-}
-.sheet-info::before { content: ""; position: absolute; inset: -8px; }   /* a 44 px touch target */
-.sheet-info svg { width: 16px; height: 16px; }
-.sheet-info:hover, .sheet-info[aria-expanded="true"] { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
-.sheet-info:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.sheet[data-draft="1"] .sheet-info { color: var(--accent); border-color: var(--accent); border-style: dashed; }
-
 /* What a regional layer has for the state on show: read here, not drawn on the map. */
 .facts-heading {
   margin: 14px 0 6px;
@@ -624,6 +474,11 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .card-steps button svg { width: 16px; height: 16px; }
 .card-steps button:hover { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
 .card-steps button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.card-tour { margin-inline-start: auto; }
+.card-tour .icon-pause, .card-tour[aria-pressed="true"] .icon-play { display: none; }
+.card-tour[aria-pressed="true"] .icon-pause { display: block; }
+.card-tour[aria-pressed="true"] { background: linear-gradient(180deg, #d1683c, var(--accent-deep)); color: var(--accent-ink); border-color: transparent; }
+.card-steps button svg { fill: currentColor; }
 .card-count {
   font-size: 0.82rem;
   color: var(--muted);
@@ -632,17 +487,18 @@ body[data-level="state"] .sheet-head { cursor: default; }
   text-align: center;
 }
 .sheet-close {
-  font: inherit;
-  font-size: 1.3rem;
-  line-height: 1;
   width: 38px;
   height: 38px;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(120, 80, 40, 0.07);
   color: var(--ink);
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
+.sheet-close svg { width: 20px; height: 20px; }
 .sheet-close:hover { background: rgba(120, 80, 40, 0.14); }
 .sheet-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .sheet-body {
@@ -658,19 +514,55 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-body ul { margin: 0; padding-left: 18px; }
 .sheet-body li { margin-bottom: 6px; color: var(--muted); font-size: 0.95rem; }
 .sheet-body a { color: var(--accent); }
-.about {
-  margin: 12px 0 4px;
-  padding: 12px 14px 10px;
-  border-radius: 14px;
-  background: rgba(120, 80, 40, 0.06);
-  border: 1px solid var(--line);
-  font-size: 0.92rem;
+.foot { margin: 14px 0 4px; border-top: 1px solid var(--line); padding-top: 6px; }
+.tour-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 6px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-align: start;
+  cursor: pointer;
 }
-.about p { margin: 0 0 8px; }
-.about h2 { margin: 12px 0 6px; }
-.about ul { padding-left: 16px; }
+.tour-row:hover { background: rgba(120, 80, 40, 0.08); }
+.tour-row:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; }
+.tour-row svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.tour-row[aria-pressed="true"] { color: var(--accent); }
+.about { font-size: 0.92rem; }
+.about-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-summary:hover { background: rgba(120, 80, 40, 0.08); }
+.about-summary:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; }
+.about-summary::-webkit-details-marker { display: none; }
+.about-summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform 160ms;
+}
+.about[open] .about-summary::after { transform: rotate(45deg); }
+.about[open] { padding-bottom: 6px; }
+.about p { margin: 8px 6px; }
+.about h2 { margin: 12px 6px 6px; }
+.about ul { padding-left: 22px; }
 .about li { font-size: 0.85rem; margin-bottom: 4px; }
-.about-draft { color: var(--accent); font-weight: 600; }
 /* The credits, one line per source: title and year, publisher, licence, then what this
    atlas took from it on its own line, small. */
 .credits li { margin-bottom: 8px; }
@@ -697,7 +589,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
   color: var(--muted);
   pointer-events: none;
 }
-.search {
+.search, .catalogue-search {
   font: inherit;
   width: 100%;
   margin: 0;
@@ -707,7 +599,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
   background: rgba(255, 255, 255, 0.55);
   color: var(--ink);
 }
-.search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+.search:focus-visible, .catalogue-search:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
 /* While something is typed the results are the whole sheet. */
 body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none !important; }
 .unit-list, .unit-grid {
@@ -768,122 +660,100 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 .units-summary:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; border-radius: 8px; }
 .unit-grid { margin: 0 0 8px; }
 
-/* --- the plate's furniture, bottom-left: the controls, then the key with the scale
-   bar as its foot, the way an atlas prints them --- */
-.corner {
+/* --- the compass: the one control on the map, above the sheet on a phone --- */
+.reset-button {
   position: absolute;
-  left: calc(var(--safe-left) + 12px);
+  right: calc(var(--safe-right) + 12px);
   bottom: calc(var(--sheet-peek, 88px) + 12px);
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  max-width: calc(100vw - 24px);
-  isolation: isolate;               /* an open sheet covers the buttons, icons included */
-}
-.corner-buttons { display: flex; flex-direction: column; gap: 8px; flex: none; }
-.corner-button {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   padding: 0;
   border-radius: 50%;
   display: grid;
   place-items: center;
   cursor: pointer;
   color: var(--accent-deep);
+  isolation: isolate;               /* an open sheet covers it, needle included */
 }
-.corner-button svg { width: 20px; height: 20px; fill: currentColor; }
-.corner-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.tour-button[aria-pressed="true"] {
-  background: linear-gradient(180deg, #d1683c, var(--accent-deep));
-  color: var(--accent-ink);
-  border-color: transparent;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 3px 8px rgba(154, 61, 26, 0.35);
-}
-.tour-button .icon-pause, .tour-button[aria-pressed="true"] .icon-play { display: none; }
-.tour-button[aria-pressed="true"] .icon-pause { display: block; }
+.reset-button svg { width: 22px; height: 22px; fill: currentColor; }
+.reset-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
-/* The key: one row per layer drawn, its samples under it, an eye to hide it. A page's
-   own layer stays listed when hidden so the eye can bring it back. */
-.key {
-  width: min(300px, calc(100vw - 80px));
-  max-height: min(38dvh, 400px);
-  display: flex;
-  flex-direction: column;
-  border-radius: 14px;
-  overflow: hidden;
-}
-.key > * { min-height: 0; }
-.key[data-empty="1"] { width: auto; }
-.key-head {
+/* --- the strip: the key as the second line of the head (PLAN.md D14). One mark per
+   layer drawn, "+ layer", and the scale bar at the end; a tapped mark unfolds its
+   legend underneath. --- */
+.strip {
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 8px 12px 6px;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--gold);
+  gap: 6px;
+  padding: 8px 16px 10px 20px;
+}
+.strip-marks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-width: 0; }
+.strip-mark {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.8);
   cursor: pointer;
-  text-align: start;
-  flex: none;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
-.key-head:lang(en) .key-heading { letter-spacing: 0.12em; text-transform: uppercase; }
-.key-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; border-radius: 10px; }
-.key-marks { display: none; gap: 2px; flex: 1; min-width: 0; overflow: hidden; }
-.key-marks span { display: block; width: 18px; height: 18px; flex: none; }
-.key-marks svg { width: 18px; height: 18px; display: block; }
-.key-chevron { width: 16px; height: 16px; margin-inline-start: auto; color: var(--muted); transition: transform 180ms; flex: none; }
-.key:not([data-open="1"]) .key-rows { display: none; }
-.key:not([data-open="1"]) .key-marks { display: flex; }
-.key:not([data-open="1"]) .key-chevron { transform: rotate(180deg); }
-.key-rows { overflow-y: auto; overscroll-behavior: contain; padding: 0 12px 2px; }
-.key-layer + .key-layer { border-top: 1px solid var(--line); }
-.key-layer-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 6px 0;
-  border: 0;
+.strip-mark::before { content: ""; position: absolute; inset: -5px; }   /* a 44 px touch target */
+.strip-mark svg { width: 26px; height: 26px; display: block; font-family: var(--font); }
+.strip-mark:hover { border-color: var(--gold); }
+.strip-mark[aria-expanded="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(194, 85, 43, 0.25); background: var(--card-top); }
+.strip-mark[data-off="1"] svg { opacity: 0.4; filter: saturate(0.3); }
+.strip-mark:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.strip-add {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 9px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
   background: transparent;
+  color: var(--accent-deep);
   font: inherit;
   font-size: 0.82rem;
   font-weight: 600;
-  line-height: 1.3;
-  color: var(--ink);
+  white-space: nowrap;
   cursor: pointer;
+  flex: none;
+}
+.strip-add:hover { background: rgba(194, 85, 43, 0.08); }
+.strip-add:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* The unfolded legend: name and switch, then the samples, the caveat and the sources. */
+.strip-legend {
+  margin: -2px 16px 10px 20px;
+  padding: 8px 12px 10px;
+  border-radius: 12px;
+  background: rgba(255, 253, 248, 0.75);
+  border: 1px solid var(--line);
+  cursor: default;
+}
+.strip-legend-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 4px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
   text-align: start;
+  cursor: pointer;
 }
-.key-layer-head:hover .key-eye { opacity: 1; }
-.key-layer-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; border-radius: 8px; }
-.key-layer-mark { flex: none; }
-.key-layer-mark svg { width: 22px; height: 22px; display: block; font-family: var(--font); }
-.key-layer-name { flex: 1; min-width: 0; }
-.key-eye { margin-inline-start: auto; color: var(--muted); opacity: 0.55; flex: none; position: relative; }
-.key-eye svg { width: 16px; height: 16px; display: block; }
-.key-layer[data-off="1"] .key-layer-head { color: var(--muted); }
-.key-layer[data-off="1"] .key-layer-mark { opacity: 0.45; filter: saturate(0.3); }
-.key-layer[data-off="1"] .key-eye::after {           /* the eye, struck through */
-  content: "";
-  position: absolute;
-  left: 1px;
-  top: 7px;
-  width: 15px;
-  height: 2px;
-  background: currentColor;
-  transform: rotate(-35deg);
-  border-radius: 1px;
-}
-.key-layer-body { padding: 0 0 8px 30px; }
-.key .legend { margin: 0; gap: 2px 10px; font-size: 11.5px; }
-.key .legend-note { font-size: 0.7rem; }
-.key .legend-sources { margin-top: 4px; }
-/* The scale bar: a bracket opening upwards, with a tick at the halfway mark to read halves off. */
-.scale { flex: none; padding: 6px 12px 10px; border-top: 1px solid var(--line); color: var(--muted); }
-.key[data-empty="1"] .scale { border-top: 0; padding: 8px 12px 9px; }
+.strip-legend-head .switch { margin-inline-start: auto; }
+.strip-legend-head[aria-checked="true"] .switch { background: linear-gradient(180deg, #d1683c, var(--accent-deep)); }
+.strip-legend-head[aria-checked="true"] .switch::after { transform: translateX(14px); }
+.strip-legend-head:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.strip-legend .legend { margin: 2px 0 0; gap: 3px 12px; font-size: 12px; }
+.strip-legend .legend-note { font-size: 0.75rem; }
+.strip-legend .legend-sources { margin-top: 6px; }
+/* The scale bar at the strip's end: a bracket opening upwards, with a tick at the halfway mark. */
+.scale { margin-inline-start: auto; flex: none; color: var(--muted); display: flex; flex-direction: column; align-items: flex-end; padding-left: 6px; }
 .scale-label {
   display: block;
   margin-bottom: 2px;
@@ -978,30 +848,16 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
   line-height: 1.45;
   color: var(--muted);
 }
-/* The way back to the contents, in words: an arrow alone does not say where it goes. */
-.contents-back {
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--accent-deep);
-  padding: 3px 8px 3px 4px;
-  margin: 2px 0 0 -4px;
-  cursor: pointer;
-}
-.contents-back::before { content: "\2190"; font-size: 1.05em; }
-.contents-back:hover { background: rgba(120, 80, 40, 0.09); }
-.contents-back:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-
 .contents-blurb { margin: 8px 0 6px; font-size: 0.95rem; line-height: 1.55; }
 .contents .legend-sources { font-size: 0.74rem; }
-.page-layers { margin: 2px 0 4px; }
-.page-layers .layer-row { padding-left: 2px; }
+/* The catalogue: the sheet's search, then the groups. The base's marks are line art. */
+.catalogue { padding: 10px 0 4px; }
+.catalogue-none { margin: 10px 4px 2px; font-size: 0.9rem; color: var(--muted); }
+.catalogue .layer-list { margin-top: 6px; }
+.catalogue .layer-row { padding-left: 2px; }
+.layer-mark[data-kind="base"] svg { fill: none; stroke: var(--accent-deep); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; padding: 5px; }
+.layer-row[aria-checked="false"] .layer-mark[data-kind="base"] svg { stroke: var(--muted); }
+.relief { padding: 0 8px 6px 58px; margin-top: 0; }
 
 /* --- markers of point layers: clay tokens standing on the terrain ---
    The button is a zero-size anchor moved with transform: translate(); the token is a
@@ -1185,12 +1041,11 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
     transform: none !important;
   }
   .sheet-grip { display: none; }
-  .sheet-head { padding-top: 16px; }         /* the grip gave the phone this room */
+  .sheet-headline { padding-top: 16px; }     /* the grip gave the phone this room */
   .sheet-hint { display: none; }             /* the contents are in view: nothing to hint at */
   .sheet-body { flex: 1 1 auto; min-height: 0; height: auto !important; overflow-y: auto !important; }
-  .corner { left: 20px; bottom: 20px; }
-  .key { width: 320px; max-height: min(52dvh, 560px); }
-  .menu { width: 360px; }
+  .reset-button { right: auto; left: 20px; bottom: 20px; }
+  .sheet-head { cursor: default; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1198,11 +1053,18 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 }
 
 /* --- poster mode: the share-image render (tools/share-image.mjs, ?poster=1) --- */
-body[data-poster="1"] .menu-button, body[data-poster="1"] .sheet, body[data-poster="1"] .status,
-body[data-poster="1"] .labels, body[data-poster="1"] .tooltip, body[data-poster="1"] .corner,
-body[data-poster="1"] .cartouche { display: none !important; }
+body[data-poster="1"] .sheet, body[data-poster="1"] .status, body[data-poster="1"] .labels,
+body[data-poster="1"] .tooltip, body[data-poster="1"] .reset-button, body[data-poster="1"] .lang-toggle { display: none !important; }
 body[data-poster="1"] .topbar { top: 0; bottom: 0; padding: 0; align-items: center; }
 body[data-poster="1"] .wordmark {
+  /* on the share card the wordmark is a card again: the paper material, and its parts stacked */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--card-top) 0%, var(--card-bottom) 100%);
+  border: 1px solid var(--gold-soft);
+  box-shadow: var(--shadow), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
   position: absolute;
   left: 60px;
   top: 50%;
@@ -1211,7 +1073,22 @@ body[data-poster="1"] .wordmark {
   padding: 34px 36px 32px;
   border-radius: 28px;
 }
-body[data-poster="1"] .wordmark .title { font-size: 3.4rem; line-height: 1.05; }
+body[data-poster="1"] .wordmark .title {
+  font-size: 3.4rem;
+  line-height: 1.05;
+  background: linear-gradient(90deg, var(--accent-deep) 0%, var(--accent) 55%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+body[data-poster="1"] .wordmark .title-other { display: block; }
+body[data-poster="1"] .wordmark .title-other::after {
+  content: "";
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), rgba(201, 154, 60, 0));
+}
 body[data-poster="1"] .wordmark .title-other { font-size: 1.7rem; margin-top: 8px; }
 body[data-poster="1"] .wordmark .title-other::after { width: 96px; height: 3px; margin-top: 14px; }
 body[data-poster="1"] .wordmark .tagline { display: block; margin-top: 16px; font-size: 1.1rem; line-height: 1.45; color: var(--muted); }

@@ -1,6 +1,7 @@
 // @ts-check
-// Header, menu, the key on the map, status toast and the sheet's content. Plain DOM,
-// bound to the store; every string comes from i18n.
+// The chrome: the wordmark, the compass, the status toast, and the sheet -- the one card,
+// holding one stack (PLAN.md D14). Plain DOM, bound to the store; every string comes
+// from i18n.
 import { DEFAULT_CAMERA, kmPerPixel, wrapYaw } from '../engine/camera-math.js';
 import { FILL_TYPES } from '../engine/choropleth.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
@@ -9,8 +10,13 @@ import { citeLabel, creditList, hostOf, sourceList } from './credits.js';
 import { firstColour, kindOf, layerKey, layerMark } from './legend.js';
 import { scaleBar } from './scale.js';
 
-// Static icons for the rows the shell builds; the layer marks come from legend.js.
-const EYE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+// The base's own marks: relief, the surroundings and the graticule are not layers in the
+// catalogue's sense, so their tiles are drawn here rather than read off a layer.json.
+const BASE_MARKS = {
+  relief: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6-11 4 6 3-4 5 9zM9 9l1.5 2.5L12 9"/></svg>',
+  surroundings: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 21c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M7 13V7l5-3 5 3v6"/></svg>',
+  graticule: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16M8 4v16M16 4v16"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>',
+};
 
 /**
  * @param {Document} root
@@ -18,28 +24,30 @@ const EYE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6.
  */
 export function createShell(root, store) {
   const $ = (sel) => /** @type {HTMLElement} */ (root.querySelector(sel));
-  const menuBtn = $('.menu-button');
-  const menu = $('.menu');
-  const langOptions = [...root.querySelectorAll('.lang-option')];
-  const reliefChip = $('.chip-relief');
-  const surroundingsChip = $('.chip-surroundings');
-  const graticuleChip = $('.chip-graticule');
-  const reliefRow = $('.relief');
-  const slider = /** @type {HTMLInputElement} */ ($('.relief-slider'));
-  const sliderValue = $('.relief-value');
+  const langToggle = $('.lang-toggle');
   const status = $('.status');
   const statusText = $('.status-text');
   const retry = $('.status-retry');
+  const crumb = $('.sheet-crumb');
   const subtitle = $('.sheet-subtitle');
+  const draftTag = $('.sheet-draft');
   const hint = $('.sheet-hint');
   const title = $('.sheet-title');
   const alt = $('.sheet-alt');
   const closeBtn = $('.sheet-close');
+  const strip = $('.strip');
+  const stripMarks = $('.strip-marks');
+  const stripAdd = $('.strip-add');
+  const stripLegend = $('.strip-legend');
+  const scale = $('.scale');
+  const scaleBarEl = $('.scale-bar');
+  const scaleLabel = $('.scale-label');
   const facts = $('.facts');
   const steps = $('.card-steps');
   const stepPrev = $('.card-prev');
   const stepNext = $('.card-next');
   const stepCount = $('.card-count');
+  const tourStep = $('.card-tour');
   const finder = $('.finder');
   const list = $('.unit-list');
   const search = /** @type {HTMLInputElement} */ ($('.search'));
@@ -47,38 +55,26 @@ export function createShell(root, store) {
   const unitsCount = $('.units-count');
   const unitGrid = $('.unit-grid');
   const contents = $('.contents');
+  const catalogue = $('.catalogue');
+  const catalogueSearch = /** @type {HTMLInputElement} */ ($('.catalogue-search'));
+  const catalogueNone = $('.catalogue-none');
   const layerList = $('.layer-list');
-  const menuSearch = /** @type {HTMLInputElement} */ ($('.menu-search'));
-  const menuNone = $('.menu-none');
+  const foot = $('.foot');
+  const tourRow = $('.tour-row');
+  const about = /** @type {HTMLDetailsElement} */ ($('.about'));
+  const credits = $('.credits');
   const sheet = $('.sheet');
   const sheetBody = $('.sheet-body');
-  const infoBtn = $('.sheet-info');
-  const about = $('.about');
-  const aboutDraft = $('.about-draft');
-  const credits = $('.credits');
   const kicker = $('.wordmark .kicker');
-  const cartouche = $('.cartouche');
-  const cartoucheSection = $('.cartouche-section');
-  const cartoucheTitle = $('.cartouche-title');
-  const corner = $('.corner');
-  const key = $('.key');
-  const keyHead = $('.key-head');
-  const keyMarks = $('.key-marks');
-  const keyRows = $('.key-rows');
-  const scale = $('.scale');
-  const scaleBarEl = $('.scale-bar');
-  const scaleLabel = $('.scale-label');
   const posterTitle = $('.wordmark .title');
   const posterOther = $('.wordmark .title-other');
   const posterTagline = $('.wordmark .tagline');
-  const tourBtn = $('.tour-button');
   const resetBtn = $('.reset-button');
   const tooltip = $('.tooltip');
   const canvas = $('canvas.map');
   const topbar = $('.topbar');
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
-  // On wide pointer screens the sheet is a side panel and the key has room to stay open;
-  // on a phone the key starts folded and opens itself when a page is turned to.
+  // On wide pointer screens the sheet is a side panel beside the country.
   const wide = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)');
 
   /** The plate on show, as the file describes it, or null. */
@@ -87,81 +83,30 @@ export function createShell(root, store) {
     return id ? (store.get('plates')?.plates || []).find((p) => p.id === id) || null : null;
   };
 
-  // --- the menu: the view and every layer, behind one button
-  function setMenu(open) {
-    menu.hidden = !open;
-    menuBtn.setAttribute('aria-expanded', String(open));
-    root.body.dataset.menu = open ? 'open' : '';
-  }
-  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
-  root.addEventListener('pointerdown', (e) => {
-    if (menu.hidden) return;
-    const t = /** @type {Node} */ (e.target);
-    if (!menu.contains(t) && !menuBtn.contains(t)) setMenu(false);
-  });
-  root.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !menu.hidden) { setMenu(false); e.stopImmediatePropagation(); }
-  }, true);
-
-  /**
-   * The menu's own search: typing narrows the layers and the view's switches to those
-   * whose names, keys or group headings match, in whichever language is showing.
-   */
-  function filterMenu() {
-    const q = menuSearch.value.trim().toLowerCase();
-    menu.dataset.finding = q ? '1' : '';
-    let shown = 0;
-    for (const group of menu.querySelectorAll('.layer-group')) {
-      const heading = group.querySelector('h4')?.textContent?.toLowerCase() || '';
-      let any = false;
-      for (const row of group.querySelectorAll('.layer-row')) {
-        const hit = !q || heading.includes(q) || (row.textContent || '').toLowerCase().includes(q);
-        /** @type {HTMLElement} */ (row).hidden = !hit;
-        any = any || hit;
-      }
-      /** @type {HTMLElement} */ (group).hidden = !any;
-      if (any) shown++;
-    }
-    let toggles = 0;
-    for (const b of menu.querySelectorAll('.toggle')) {
-      const hit = !q || (b.textContent || '').toLowerCase().includes(q);
-      /** @type {HTMLElement} */ (b).hidden = !hit;
-      if (hit) toggles++;
-    }
-    const view = /** @type {HTMLElement} */ (menu.querySelector('.menu-view'));
-    view.dataset.empty = toggles ? '' : '1';
-    menuNone.hidden = !q || !!(shown + toggles);
-  }
-  menuSearch.addEventListener('input', filterMenu);
-  menuSearch.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menuSearch.value) { menuSearch.value = ''; filterMenu(); e.stopPropagation(); }
-  });
-  menuBtn.addEventListener('click', () => {
-    // A field that takes focus on a phone brings the keyboard up over the list; on a
-    // fine pointer it is where the hand goes next.
-    if (!menu.hidden && fine.matches) menuSearch.focus({ preventScroll: true });
-  });
-  langOptions.forEach((b) => b.addEventListener('click', () => store.set('lang', b.dataset.lang)));
+  // --- the language toggle beside the wordmark
+  langToggle.addEventListener('click', () => store.set('lang', store.get('lang') === 'hi' ? 'en' : 'hi'));
   function renderLang() {
-    const lang = store.get('lang');
-    langOptions.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    // The button names the other language, so it is set in that language's script.
+    langToggle.lang = store.get('lang') === 'hi' ? 'en' : 'hi';
   }
-  reliefChip.addEventListener('click', () => store.set('relief', { on: !store.get('relief').on }, { animate: true }));
-  surroundingsChip.addEventListener('click', () => store.set('surroundings', !store.get('surroundings')));
-  store.subscribe('surroundings', (on) => surroundingsChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
-  graticuleChip.addEventListener('click', () => store.set('graticule', !store.get('graticule')));
-  store.subscribe('graticule', (on) => graticuleChip.setAttribute('aria-pressed', String(!!on)), { immediate: true });
-  slider.addEventListener('input', () => store.set('relief', { amount: Number(slider.value), on: true }));
+
   retry.addEventListener('click', () => location.reload());
+  // The app is one fixed, overflow-hidden box, and a focus() or scrollIntoView() on a
+  // control in the sheet's head can still scroll it and leave the map half off screen.
+  const app = $('#app');
+  app.addEventListener('scroll', () => { app.scrollTop = 0; app.scrollLeft = 0; });
   // The card's own steps walk the tour's route by hand: a card is opened by name alone
   // and the engine fills in the rest, the same way a link does.
   stepPrev.addEventListener('click', () => step(-1));
   stepNext.addEventListener('click', () => step(1));
+  /** Back pops one level of the stack: catalogue, item, state, selection, page. */
   closeBtn.addEventListener('click', () => {
-    if (store.get('item')) store.set('item', null);
+    if (store.get('catalogue')) store.set('catalogue', false);
+    else if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     else if (store.get('selection')) store.set('selection', null);
     else if (store.get('plate')) closePlate();
+    sheetBody.scrollTop = 0;
   });
 
   /**
@@ -182,13 +127,20 @@ export function createShell(root, store) {
     }
     store.set('layers', { active: [...active] });
   }
-  /** A row's switch, a page's row and a key's eye all say the same thing to the store. */
+  /** A row's switch in the catalogue and the switch in an unfolded legend say the same thing to the store. */
   const onLayerClick = (e) => {
     const b = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]:not([data-item])');
     if (b) toggleLayer(b.dataset.layer);
   };
-  layerList.addEventListener('click', onLayerClick);
-  keyRows.addEventListener('click', onLayerClick);
+  layerList.addEventListener('click', (e) => {
+    const b = /** @type {HTMLElement} */ (e.target).closest('button[data-base]');
+    if (!b) { onLayerClick(e); return; }
+    const kind = b.dataset.base;
+    if (kind === 'relief') store.set('relief', { on: !store.get('relief').on }, { animate: true });
+    else if (kind === 'surroundings') store.set('surroundings', !store.get('surroundings'));
+    else if (kind === 'graticule') store.set('graticule', !store.get('graticule'));
+  });
+  stripLegend.addEventListener('click', onLayerClick);
 
   /** What a layer with no key of its own still has to say about itself. */
   function keyHint(layer) {
@@ -209,8 +161,8 @@ export function createShell(root, store) {
 
   /**
    * One layer as a row: its mark, its name, its key in miniature, and a switch. The
-   * same row serves the menu and an open page, and everything on it is read off the
-   * layer's declared type and colours (PLAN.md D5).
+   * row is the catalogue's, and everything on it is read off the layer's declared type
+   * and colours (PLAN.md D5).
    */
   function layerRow(layer, on) {
     const b = document.createElement('button');
@@ -245,12 +197,79 @@ export function createShell(root, store) {
   }
 
   /**
-   * The menu's layer list, grouped as the catalogue groups them: the group is a field
-   * on the layer and its heading a string keyed by that field. No layer id appears here.
+   * A row of the base: relief, the surroundings or the graticule. The same shape as a
+   * layer's row, so the catalogue reads as one list, with the switch at the same place.
+   */
+  function baseRow(kind, on, hintText) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'layer-row';
+    b.dataset.base = kind;
+    b.setAttribute('role', 'switch');
+    b.setAttribute('aria-checked', String(on));
+    const mark = document.createElement('span');
+    mark.className = 'layer-mark';
+    mark.dataset.kind = 'base';
+    mark.innerHTML = BASE_MARKS[kind];
+    const text = document.createElement('span');
+    text.className = 'layer-text';
+    const name = document.createElement('span');
+    name.className = 'layer-name';
+    name.textContent = t(`chip.${kind}`);
+    text.appendChild(name);
+    if (hintText) {
+      const k = document.createElement('span');
+      k.className = 'layer-key';
+      k.textContent = hintText;
+      text.appendChild(k);
+    }
+    const sw = document.createElement('span');
+    sw.className = 'switch';
+    b.append(mark, text, sw);
+    return b;
+  }
+
+  /**
+   * The catalogue: the base first, then every layer, grouped as the catalogue groups
+   * them -- the group is a field on the layer and its heading a string keyed by that
+   * field. No layer id appears here.
    */
   function renderLayerList() {
     layerList.replaceChildren();
     const active = new Set(store.get('layers')?.active || []);
+    const relief = store.get('relief') || {};
+    const base = document.createElement('div');
+    base.className = 'layer-group';
+    const bh = document.createElement('h4');
+    bh.textContent = t('layer.group.base');
+    base.appendChild(bh);
+    base.appendChild(baseRow('relief', !!relief.on, relief.on ? t('relief.hint', { n: formatNumber(relief.amount || DEFAULT_RELIEF) }) : ''));
+    // The slider under its row: how much the relief is exaggerated by, while it is on.
+    const row = document.createElement('div');
+    row.className = 'relief';
+    row.hidden = !relief.on;
+    const label = document.createElement('label');
+    label.htmlFor = 'relief-slider';
+    label.textContent = t('relief.label');
+    const slider = document.createElement('input');
+    slider.id = 'relief-slider';
+    slider.className = 'relief-slider';
+    slider.type = 'range';
+    slider.min = '0'; slider.max = '30'; slider.step = '1';
+    slider.value = String(relief.amount || DEFAULT_RELIEF);
+    slider.setAttribute('aria-label', t('relief.aria'));
+    const value = document.createElement('span');
+    value.className = 'relief-value';
+    value.textContent = t('relief.value', { n: formatNumber(relief.amount || DEFAULT_RELIEF) });
+    slider.addEventListener('input', () => {
+      value.textContent = t('relief.value', { n: formatNumber(Number(slider.value)) });
+      store.set('relief', { amount: Number(slider.value), on: true });
+    });
+    row.append(label, slider, value);
+    base.appendChild(row);
+    base.appendChild(baseRow('surroundings', !!store.get('surroundings'), t('chip.surroundings.hint')));
+    base.appendChild(baseRow('graticule', !!store.get('graticule'), t('chip.graticule.hint')));
+    layerList.appendChild(base);
     const byGroup = new Map();
     for (const layer of store.get('catalog') || []) {
       const g = layer.group || 'other';
@@ -260,16 +279,38 @@ export function createShell(root, store) {
     for (const [group, layers] of byGroup) {
       const section = document.createElement('div');
       section.className = 'layer-group';
-      if (byGroup.size > 1) {
-        const h = document.createElement('h4');
-        h.textContent = t(`layer.group.${group}`, {}, group);
-        section.appendChild(h);
-      }
+      const h = document.createElement('h4');
+      h.textContent = t(`layer.group.${group}`, {}, group);
+      section.appendChild(h);
       for (const layer of layers) section.appendChild(layerRow(layer, active.has(layer.id)));
       layerList.appendChild(section);
     }
-    if (menuSearch.value) filterMenu();
+    if (catalogueSearch.value) filterCatalogue();
   }
+
+  /** The catalogue's own search: typing narrows the rows to those whose names, keys or group headings match. */
+  function filterCatalogue() {
+    const q = catalogueSearch.value.trim().toLowerCase();
+    let shown = 0;
+    for (const group of layerList.querySelectorAll('.layer-group')) {
+      const heading = group.querySelector('h4')?.textContent?.toLowerCase() || '';
+      let any = false;
+      for (const row of group.querySelectorAll('.layer-row')) {
+        const hit = !q || heading.includes(q) || (row.textContent || '').toLowerCase().includes(q);
+        /** @type {HTMLElement} */ (row).hidden = !hit;
+        any = any || hit;
+      }
+      const relief = /** @type {HTMLElement | null} */ (group.querySelector('.relief'));
+      if (relief) relief.hidden = !!q || !store.get('relief')?.on;
+      /** @type {HTMLElement} */ (group).hidden = !any;
+      if (any) shown++;
+    }
+    catalogueNone.hidden = !q || !!shown;
+  }
+  catalogueSearch.addEventListener('input', filterCatalogue);
+  catalogueSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && catalogueSearch.value) { catalogueSearch.value = ''; filterCatalogue(); e.stopPropagation(); }
+  });
 
   const LEGEND_SOURCES = 3;   // a legend says where it came from; it is not the credits screen
 
@@ -300,88 +341,93 @@ export function createShell(root, store) {
     return p;
   }
 
-  // --- the key on the map: what is drawn, layer by layer, with the scale bar as its foot
+  // --- the strip: the key, as the second line of the sheet's head (PLAN.md D14)
   //
-  // Rows are the open page's layers and whatever else is on, in catalogue order; a page's
-  // own layer stays listed when hidden so its eye can bring it back. The key is where a
-  // reader looks up a colour, so it stays on the map rather than behind the menu.
+  // One mark per layer drawn, in catalogue order; a page's own layer stays listed when
+  // hidden, greyed, so a tap can bring it back. A tapped mark unfolds that layer's legend
+  // under the strip: its samples, its caveat, its sources, and a switch. The strip is in
+  // the head, so it is on every level of the stack and a reader inside a state card can
+  // still look a colour up.
 
-  function setKey(open) {
-    const was = key.dataset.open;
-    key.dataset.open = open ? '1' : '';
-    keyHead.setAttribute('aria-expanded', String(open));
-    const label = t(open ? 'legend.hide' : 'legend.show');
-    keyHead.setAttribute('aria-label', label);
-    keyHead.title = label;
-    if (was !== key.dataset.open) updatePadding(true);
-  }
-  keyHead.addEventListener('click', () => setKey(key.dataset.open !== '1'));
-  // Open where there is room for it. On a phone it covered half the map every time a page
-  // was turned to; folded, its head still carries every layer's mark, and a tap opens it.
-  setKey(wide.matches);
-  store.subscribe('plate', (id, prev) => { if (id && id !== prev) setKey(wide.matches); });
+  /** The layer whose legend is unfolded, or null. */
+  let openKey = null;
 
-  function renderKey() {
+  stripMarks.addEventListener('click', (e) => {
+    const b = /** @type {HTMLElement} */ (e.target).closest('button[data-layer]');
+    if (!b) return;
+    openKey = openKey === b.dataset.layer ? null : b.dataset.layer;
+    renderStrip();
+  });
+  stripAdd.addEventListener('click', () => {
+    store.set('catalogue', true);
+    if (store.get('sheet')?.snap === 'peek') store.set('sheetSnap', { name: 'half', t: performance.now() });
+  });
+  // A new page comes with its own layers; the legend that was open belongs to the last.
+  store.subscribe('plate', (id, prev) => { if (id !== prev) { openKey = null; store.set('catalogue', false); } });
+
+  function renderStrip() {
     const catalog = store.get('catalog') || [];
     const active = new Set(store.get('layers')?.active || []);
     const own = new Set(openPlate()?.layers || []);
     const rows = catalog.filter((l) => active.has(l.id) || own.has(l.id));
-    keyRows.replaceChildren();
-    keyMarks.replaceChildren();
-    keyHead.hidden = !rows.length;
-    const wasEmpty = key.dataset.empty;
-    key.dataset.empty = rows.length ? '' : '1';
-    setKey(key.dataset.open === '1');
-    if (wasEmpty !== key.dataset.empty) updatePadding(true);
+    // The catalogue is the strip, spelled out: the strip steps aside while it is open.
+    strip.hidden = !rows.length || !!store.get('catalogue');
+    if (!rows.some((l) => l.id === openKey)) openKey = null;
+    stripMarks.replaceChildren();
     for (const layer of rows) {
       const on = active.has(layer.id);
-      const row = document.createElement('div');
-      row.className = 'key-layer';
-      row.dataset.off = on ? '' : '1';
-      const head = document.createElement('button');
-      head.type = 'button';
-      head.className = 'key-layer-head';
-      head.dataset.layer = layer.id;
-      head.setAttribute('aria-pressed', String(on));
-      const label = t(on ? 'layer.hide' : 'layer.show', { name: pick(layer.title) });
-      head.setAttribute('aria-label', label);
-      head.title = label;
-      const mark = document.createElement('span');
-      mark.className = 'key-layer-mark';
-      mark.innerHTML = layerMark(layer);
-      const name = document.createElement('span');
-      name.className = 'key-layer-name';
-      name.textContent = pick(layer.title);
-      const eye = document.createElement('span');
-      eye.className = 'key-eye';
-      eye.innerHTML = EYE;
-      head.append(mark, name, eye);
-      row.appendChild(head);
-      if (on) {
-        const body = document.createElement('div');
-        body.className = 'key-layer-body';
-        const k = keyFor(layer, {});
-        if (k) body.appendChild(k);
-        else {
-          const hint = keyHint(layer);
-          if (hint) {
-            const p = document.createElement('p');
-            p.className = 'legend-note';
-            p.textContent = hint;
-            body.appendChild(p);
-          }
-        }
-        // A layer with no key still owes the reader its source, so the line goes on
-        // whatever is drawn -- a legend is a nicety, a citation is not (PLAN.md 5).
-        const src = sourceNote(layer.sources, LEGEND_SOURCES);
-        if (src) body.appendChild(src);
-        if (body.hasChildNodes()) row.appendChild(body);
-        const m = document.createElement('span');
-        m.innerHTML = layerMark(layer);
-        keyMarks.appendChild(m);
-      }
-      keyRows.appendChild(row);
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'strip-mark';
+      b.dataset.layer = layer.id;
+      b.dataset.off = on ? '' : '1';
+      b.setAttribute('aria-expanded', String(openKey === layer.id));
+      const label = t('strip.read', { name: pick(layer.title) });
+      b.setAttribute('aria-label', label);
+      b.title = label;
+      b.innerHTML = layerMark(layer);          // static markup from the layer's type and checked colours
+      stripMarks.appendChild(b);
     }
+    renderStripLegend(rows.find((l) => l.id === openKey), active);
+  }
+
+  /** The unfolded legend of one layer: name and switch, then its key, caveat and sources. */
+  function renderStripLegend(layer, active) {
+    stripLegend.replaceChildren();
+    stripLegend.hidden = !layer || strip.hidden;
+    if (stripLegend.hidden) return;
+    const on = active.has(layer.id);
+    const head = document.createElement('button');
+    head.type = 'button';
+    head.className = 'strip-legend-head';
+    head.dataset.layer = layer.id;
+    head.setAttribute('role', 'switch');
+    head.setAttribute('aria-checked', String(on));
+    const label = t(on ? 'layer.hide' : 'layer.show', { name: pick(layer.title) });
+    head.setAttribute('aria-label', label);
+    head.title = label;
+    const name = document.createElement('span');
+    name.className = 'strip-legend-name';
+    name.textContent = pick(layer.title);
+    const sw = document.createElement('span');
+    sw.className = 'switch';
+    head.append(name, sw);
+    stripLegend.appendChild(head);
+    const k = keyFor(layer, {});
+    if (k) stripLegend.appendChild(k);
+    else {
+      const hintText = keyHint(layer);
+      if (hintText) {
+        const p = document.createElement('p');
+        p.className = 'legend-note';
+        p.textContent = hintText;
+        stripLegend.appendChild(p);
+      }
+    }
+    // A layer with no key still owes the reader its source, so the line goes on whatever
+    // is drawn -- a legend is a nicety, a citation is not (PLAN.md 5).
+    const src = sourceNote(layer.sources, LEGEND_SOURCES);
+    if (src) stripLegend.appendChild(src);
   }
 
   /**
@@ -426,32 +472,21 @@ export function createShell(root, store) {
     }
   }
 
-  // --- the info button: about the map, how to use it, credits; and a card's review status
-  function setAbout(open) {
-    about.hidden = !open;
-    infoBtn.setAttribute('aria-expanded', String(open));
-    if (!open) return;
-    sheetBody.scrollTop = 0;
-    if (store.get('sheet')?.snap === 'peek') store.set('sheetSnap', { name: 'half', t: performance.now() });
-  }
-  infoBtn.addEventListener('click', () => setAbout(about.hidden));
-  /** Drafts turn the info button terracotta; its tooltip says so, and the about text leads with it. */
+  /** Drafts are said so in the head's meta line; the about text leads with it too. */
   function setDraft(isDraft) {
     sheet.dataset.draft = isDraft ? '1' : '';
-    aboutDraft.hidden = !isDraft;
-    const label = isDraft ? t('facts.draft') : t('sheet.about.heading');
-    infoBtn.setAttribute('aria-label', label);
-    infoBtn.title = label;
+    draftTag.hidden = !isDraft;
   }
 
-  // --- corner controls: the tour and the compass (home)
+  // --- the compass: home, and the way back to north
   resetBtn.addEventListener('click', () => store.set('home', { t: performance.now() }));
   store.subscribe('home', (req) => {
     if (!req) return;
+    if (store.get('catalogue')) store.set('catalogue', false);
     if (store.get('item')) store.set('item', null);
     if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'home' });
     if (store.get('selection')) store.set('selection', null);
-    setAbout(false);
+    about.open = false;
     store.set('sheetSnap', { name: 'peek', t: performance.now() });
   });
   // The needle turns with the map. Now that the model goes the whole way round, the
@@ -466,21 +501,28 @@ export function createShell(root, store) {
     resetBtn.setAttribute('aria-label', label);
     resetBtn.title = label;
   }, { immediate: true });
-  tourBtn.addEventListener('click', () => store.set('tour', { playing: !store.get('tour')?.playing }));
+
+  // --- the tour: a row at the foot of the contents starts it; the card's steps carry it
+  const toggleTour = () => store.set('tour', { playing: !store.get('tour')?.playing });
+  tourRow.addEventListener('click', toggleTour);
+  tourStep.addEventListener('click', toggleTour);
   function renderTour() {
     const tr = store.get('tour') || {};
     const playing = !!tr.playing;
-    tourBtn.hidden = !playing && !tr.total;
-    tourBtn.setAttribute('aria-pressed', String(playing));
+    tourRow.hidden = !playing && !tr.total;
     const label = t(playing ? 'tour.pause' : 'tour.play');
-    tourBtn.setAttribute('aria-label', label);
-    tourBtn.title = label;
+    for (const b of [tourRow, tourStep]) {
+      b.setAttribute('aria-pressed', String(playing));
+      b.setAttribute('aria-label', label);
+      b.title = label;
+    }
+    /** @type {HTMLElement} */ (tourRow.querySelector('span')).textContent = label;
     root.body.dataset.tour = playing ? 'playing' : '';
   }
   store.subscribe('tour', (tr, prev) => {
     renderTour();
     // the cards read best with the sheet half open; the map is framed above it
-    if (tr?.playing && !prev?.playing) { setAbout(false); store.set('sheetSnap', { name: 'half', t: performance.now() }); }
+    if (tr?.playing && !prev?.playing) store.set('sheetSnap', { name: 'half', t: performance.now() });
   }, { immediate: true });
 
   // --- finding and picking: the search results, the unit grid, the lists on a card
@@ -509,13 +551,6 @@ export function createShell(root, store) {
       if (store.get('level')?.id !== id) store.set('level', { name: 'state', id }, { source: 'ui' });
       store.set('sheetSnap', { name: 'peek', t: performance.now() });
     });
-  }
-
-  function renderRelief(r) {
-    reliefChip.setAttribute('aria-pressed', String(r.on));
-    reliefRow.hidden = !r.on;
-    slider.value = String(r.amount);
-    sliderValue.textContent = t('relief.value', { n: formatNumber(r.amount) });
   }
 
   /** Names other than the one shown as the title: the other UI language, then the native script. */
@@ -670,17 +705,8 @@ export function createShell(root, store) {
     }
   }
 
-  /** The open page's own words, its sources, and its layers as rows with switches. */
+  /** The open page's own words and its sources. Its layers are the strip above. */
   function renderPage(plate) {
-    // The way back, said in words above the page's own. The arrow in the head does the
-    // same thing, but an arrow on its own does not say where it goes, and a reader who
-    // has turned to a page should not have to guess how to get back to the contents.
-    const back = document.createElement('button');
-    back.type = 'button';
-    back.className = 'contents-back';
-    back.textContent = t('atlas.back');
-    back.addEventListener('click', () => { closePlate(); sheetBody.scrollTop = 0; });
-    contents.appendChild(back);
     const p = document.createElement('p');
     p.className = 'contents-blurb';
     p.textContent = pick(plate.blurb);
@@ -689,48 +715,11 @@ export function createShell(root, store) {
     // sources into the plate, so this line is never the page's own promise (PLAN.md D11).
     const src = sourceNote(plate.sources);
     if (src) contents.appendChild(src);
-    const catalog = store.get('catalog') || [];
-    const active = new Set(store.get('layers')?.active || []);
-    const layers = (plate.layers || []).map((id) => catalog.find((l) => l.id === id)).filter(Boolean);
-    if (!layers.length) return;
-    const h = document.createElement('h4');
-    h.className = 'contents-section';
-    h.textContent = t('sheet.page.layers');
-    const rows = document.createElement('div');
-    rows.className = 'layer-list page-layers';
-    for (const layer of layers) rows.appendChild(layerRow(layer, active.has(layer.id)));
-    contents.append(h, rows);
   }
 
   contents.addEventListener('click', (e) => {
-    const el = /** @type {HTMLElement} */ (e.target);
-    const page = el.closest('button[data-plate]');
-    if (page) { openPlateById(page.dataset.plate || ''); return; }
-    onLayerClick(e);
-  });
-
-  // --- atlas furniture: the page's title on the map, and how big the map is
-  //
-  // Both are what a printed plate carries in its corners. The cartouche says which page
-  // is open when the sheet is down, and is the way back to the contents from the map
-  // itself; the scale bar says what the model's size means.
-
-  function renderCartouche() {
-    const plate = openPlate();
-    // Inside a state the sheet belongs to that state, and the page's title would be
-    // claiming more than it covers.
-    const show = !!plate && store.get('level')?.name !== 'state';
-    cartouche.hidden = !show;
-    if (!show) return;
-    cartoucheSection.textContent = t(`atlas.section.${plate.section}`, {}, plate.section);
-    cartoucheTitle.textContent = pick(plate.title);
-    const label = t('cartouche.aria', { name: pick(plate.title) });
-    cartouche.setAttribute('aria-label', label);
-    cartouche.title = label;
-  }
-  cartouche.addEventListener('click', () => {
-    closePlate();
-    store.set('sheetSnap', { name: 'half', t: performance.now() });
+    const page = /** @type {HTMLElement} */ (e.target).closest('button[data-plate]');
+    if (page) { openPlateById(page.dataset.plate || ''); sheetBody.scrollTop = 0; }
   });
 
   // Wide enough to read a round number off, narrow enough to stay out of the way. A
@@ -903,11 +892,11 @@ export function createShell(root, store) {
     store.set('item', { layer: stops[next].layer, id: stops[next].id, data: null, categories: null, fields: null });
   }
 
-  /** The prev / next row, shown only while the open card is one of several stops. */
+  /** The prev / next row, with the tour's play/pause, shown while the open card is one of several stops. */
   function renderSteps() {
     const stops = store.get('tour')?.stops || [];
     const at = stepIndex();
-    steps.hidden = at < 0 || stops.length < 2 || !!store.get('tour')?.playing;
+    steps.hidden = at < 0 || stops.length < 2;
     if (steps.hidden) return;
     stepCount.textContent = t('card.count', { n: formatNumber(at + 1), total: formatNumber(stops.length) });
   }
@@ -968,9 +957,11 @@ export function createShell(root, store) {
   }
 
   /**
-   * The sheet is the subject: an item's card, the selected unit (peek card or state
-   * view), the open page, or the atlas's contents. One place decides what the head says
-   * and which blocks of the body show, so the body is never two answers at once.
+   * The sheet is the subject: the catalogue, an item's card, the selected unit (peek
+   * card or state view), the open page, or the atlas's contents. One place decides what
+   * the head says and which blocks of the body show, so the body is never two answers
+   * at once. The head names the level -- a kicker for a page, a crumb for anything
+   * inside one -- and Back pops one level (PLAN.md D14).
    */
   let subject = '';
   function renderSheet() {
@@ -980,42 +971,61 @@ export function createShell(root, store) {
     const u = id && r ? r.byId[id] : null;
     const inState = store.get('level')?.name === 'state';
     const plate = openPlate();
+    const inCatalogue = !!store.get('catalogue');
     // A new subject starts with a clear field: results typed for the last one would
     // otherwise stand in front of this one's card.
-    const now = [sel?.id || '', id || '', plate?.id || '', inState].join('|');
+    const now = [sel?.id || '', id || '', plate?.id || '', inState, inCatalogue].join('|');
     if (now !== subject && search.value) { search.value = ''; renderList(); }
     subject = now;
     document.body.dataset.level = inState ? 'state' : 'country';
-    sheet.dataset.view = sel?.data ? 'item' : u ? 'unit' : plate ? 'page' : 'contents';
+    const view = inCatalogue ? 'layers' : sel?.data ? 'item' : u ? 'unit' : plate ? 'page' : 'contents';
+    sheet.dataset.view = view;
     const show = (el, on) => { el.hidden = !on; };
+    const section = plate ? t(`atlas.section.${plate.section}`, {}, plate.section) : '';
+    const setCrumb = (text) => { crumb.textContent = text; crumb.hidden = !text; };
+    const setBack = (label) => {
+      closeBtn.hidden = !label;
+      if (label) { closeBtn.setAttribute('aria-label', label); closeBtn.title = label; }
+    };
+    show(finder, view !== 'item' && view !== 'layers');
+    show(facts, view === 'item' || view === 'unit');
+    show(contents, view === 'page' || view === 'contents');
+    show(catalogue, view === 'layers');
+    show(units, view === 'contents' || view === 'page');
+    show(foot, view === 'contents');
+    hint.hidden = true;
+    alt.hidden = true;
+    renderStrip();
+
+    if (view === 'layers') {
+      // Under the catalogue's title, where it was opened from.
+      const from = sel?.data ? pick(sel.data.name) : u ? pick(u.name) : plate ? pick(plate.title) : t('sheet.title');
+      setCrumb(from);
+      title.textContent = t('menu.layers');
+      const n = (store.get('layers')?.active || []).length;
+      subtitle.textContent = t('layer.count.drawn', { n: formatNumber(n) });
+      setBack(t('sheet.back.to', { name: from }));
+      setDraft(false);
+      if (fine.matches) catalogueSearch.focus({ preventScroll: true });
+      return;
+    }
 
     if (sel?.data && r) {
+      setCrumb(plate ? `${section} › ${pick(plate.title)}` : '');
       renderItem(sel, r);
-      closeBtn.hidden = false;
-      closeBtn.setAttribute('aria-label', t('sheet.close'));
-      closeBtn.textContent = '×';
-      show(facts, true);
-      show(finder, false);
-      show(contents, false);
-      show(units, false);
+      setBack(t('sheet.close'));
       return;
     }
 
     document.body.dataset.selection = u ? u.slug : '';
-    show(facts, !!u);
-    show(finder, true);
-    show(contents, false);
-    show(units, !u);
-    hint.hidden = true;
     if (u) {
+      setCrumb(plate ? `${section} › ${pick(plate.title)}` : '');
       title.textContent = pick(u.name);
       const others = otherNames(u);
       alt.textContent = others;
       alt.hidden = !others;
       subtitle.textContent = t(u.type === 'ut' ? 'unit.ut' : 'unit.state');
-      closeBtn.hidden = false;
-      closeBtn.setAttribute('aria-label', t(inState ? 'sheet.back' : 'sheet.close'));
-      closeBtn.textContent = inState ? '←' : '×';
+      setBack(inState ? t('sheet.back.to', { name: plate ? pick(plate.title) : t('sheet.title') }) : t('sheet.close'));
       if (!u.facts) setDraft(false);
       renderFacts(u);
       return;
@@ -1024,29 +1034,25 @@ export function createShell(root, store) {
     setDraft(false);
     contents.replaceChildren();
     const data = store.get('plates');
-    alt.hidden = true;
     if (plate && !inState) {
       // The head is the page's: its title, where it sits, and the way back to the contents.
+      setCrumb('');
       title.textContent = pick(plate.title);
       const n = (plate.layers || []).length;
-      subtitle.textContent = [t(`atlas.section.${plate.section}`, {}, plate.section),
-        n === 1 ? t('layer.count.one') : t('layer.count', { n: formatNumber(n) })].join(' · ');
-      closeBtn.hidden = false;
-      closeBtn.setAttribute('aria-label', t('atlas.back'));
-      closeBtn.textContent = '←';
+      subtitle.textContent = [section, n === 1 ? t('layer.count.one') : t('layer.count', { n: formatNumber(n) })].join(' · ');
+      setBack(t('atlas.back'));
       renderPage(plate);
-      show(contents, true);
       return;
     }
+    setCrumb('');
     title.textContent = t('sheet.title');
-    closeBtn.hidden = true;
+    setBack('');
     if (r) {
       const states = r.units.filter((x) => x.type === 'state').length;
       subtitle.textContent = t('sheet.subtitle', { states: formatNumber(states), uts: formatNumber(r.units.length - states) });
     }
     if (data && !inState) {
       renderContentsList(data);
-      show(contents, true);
       const pages = data.plates.filter((p) => store.get('drafts') || p.status === 'reviewed').length;
       hint.textContent = `${t('atlas.contents')} · ${t('atlas.pages', { n: formatNumber(pages) })}`;
       hint.hidden = !pages;
@@ -1077,32 +1083,29 @@ export function createShell(root, store) {
     retry.hidden = s !== 'error';
   }
 
-  /** Everything that reads the layers on show: the menu, the key, and an open page's rows. */
+  /** Everything that reads the layers on show: the catalogue and the strip. */
   function renderLayers() {
     renderLayerList();
-    renderKey();
-    if (sheet.dataset.view === 'page') renderSheet();
+    renderStrip();
   }
 
-  store.subscribe('relief', renderRelief, { immediate: true });
+  store.subscribe('relief', renderLayerList);
+  store.subscribe('surroundings', renderLayerList);
+  store.subscribe('graticule', renderLayerList);
   store.subscribe('regions', () => { renderUnits(); renderSheet(); renderList(); }, { immediate: true });
-  for (const k of ['selection', 'level', 'drafts', 'plates', 'plate', 'regional', 'month']) store.subscribe(k, renderSheet);
+  for (const k of ['selection', 'level', 'drafts', 'plates', 'plate', 'regional', 'month', 'catalogue']) store.subscribe(k, renderSheet);
   store.subscribe('item', () => { renderSheet(); renderSteps(); });
   store.subscribe('index', renderList);
-  store.subscribe('plate', renderKey);
   // The atlas's own pages, fetched once. They are small and they are the way in.
   fetch('/data/plates.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (!d) return;
     store.set('plates', d);
     const wanted = store.get('plate');
-    // A link to a page arrives with the page already set, so the key opens here, not
-    // from the subscription that catches a page being turned to.
-    if (wanted && d.plates.some((p) => p.id === wanted)) { openPlateById(wanted); setKey(wide.matches); }
+    if (wanted && d.plates.some((p) => p.id === wanted)) openPlateById(wanted);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
-  store.subscribe('plates', () => { renderPoster(); renderCartouche(); renderKey(); });
-  store.subscribe('plate', () => { renderPoster(); renderCartouche(); });
-  store.subscribe('level', renderCartouche);
+  store.subscribe('plates', () => { renderPoster(); renderStrip(); });
+  store.subscribe('plate', renderPoster);
   store.subscribe('viewport', () => renderScale(store.get('camera')));
   store.subscribe('sources', () => { renderLayers(); renderSheet(); renderCredits(); });
   // The source registry: every dataset once, which the legends, the pages and the credits
@@ -1111,7 +1114,6 @@ export function createShell(root, store) {
     if (d) store.set('sources', d);
   }).catch(() => {});
   store.subscribe('tour', renderSteps);
-  for (const k of ['selection', 'level', 'item']) store.subscribe(k, () => setAbout(false));
   store.subscribe('catalog', renderLayers, { immediate: true });
   store.subscribe('layers', renderLayers);
   store.subscribe('hover', renderHover);
@@ -1121,7 +1123,6 @@ export function createShell(root, store) {
   renderLang();
   store.subscribe('lang', () => {
     renderLang();
-    renderRelief(store.get('relief'));
     renderLayers();
     renderUnits();
     renderList();
@@ -1130,22 +1131,20 @@ export function createShell(root, store) {
     renderStatus(store.get('status'));
     renderTour();
     renderCredits();
-    renderCartouche();
     renderScale(store.get('camera'));
   });
 
-  // Camera padding: header on top; on phones the sheet peek at the bottom; on wide
-  // pointer screens the sheet is a side panel and the key, while open, a column on the
-  // left (see style.css): India is portrait-shaped, and the panels take the dead space
-  // either side of it rather than covering it (PLAN.md section 3, "Layout").
+  // Camera padding: the wordmark on top; on phones the sheet at the bottom, up to half;
+  // on wide pointer screens the sheet is a panel on the right (see style.css): India is
+  // portrait-shaped, and the panel takes the dead space beside it rather than covering
+  // it (PLAN.md section 3, "Layout").
   function updatePadding(animate = false) {
     if (root.body.dataset.poster) return;          // the share-image render sets its own framing
     const s = store.get('sheet') || {};
     // The sheet's visible height, up to half: an open sheet keeps the map framed above it.
     const covered = Math.min(s.visible || s.peek || 0, s.half || Infinity);
-    const keyOpen = key.dataset.open === '1' && key.dataset.empty !== '1';
     store.set('padding', wide.matches
-      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: keyOpen ? corner.offsetWidth + 40 : 24 }
+      ? { top: topbar.offsetHeight + 16, right: sheet.offsetWidth + 40, bottom: 36, left: 24 }
       : { top: topbar.offsetHeight + 8, right: 8, bottom: covered + 12, left: 8 }, { animate });
   }
   wide.addEventListener('change', () => updatePadding());

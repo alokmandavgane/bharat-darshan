@@ -52,6 +52,8 @@ const store = createStore({
   level: { name: 'country', id: null },
   // The atlas page on show, by id, or null for the map on its own (PLAN.md D11).
   plate: url.plate,
+  // The catalogue of layers, open on top of whatever level the sheet is at (PLAN.md D14).
+  catalogue: false,
   // What the clay looks like under everything else (PLAN.md section 5, "Base styles"):
   // `physical` hypsometric bands, or `plain` one warm clay for a thematic page. The open
   // page chooses it; no layer ever does.
@@ -127,6 +129,7 @@ if (!supported) {
   window.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
     if (store.get('tour')?.playing) store.set('tour', { playing: false });
+    else if (store.get('catalogue')) store.set('catalogue', false);
     else if (store.get('item')) store.set('item', null);
     else if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     else store.set('selection', null);
