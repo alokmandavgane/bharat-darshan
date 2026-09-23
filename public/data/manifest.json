@@ -2603,8 +2603,8 @@
    "sha256": "f4569c2dd039"
   },
   "layers/rail.json": {
-   "size": 509490,
-   "sha256": "6592d7cb0a15"
+   "size": 509505,
+   "sha256": "6b4f926e2030"
   },
   "layers/ranges.json": {
    "size": 13461,
@@ -2615,12 +2615,12 @@
    "sha256": "8af61f4706aa"
   },
   "layers/rivers.json": {
-   "size": 201734,
-   "sha256": "74b402d72399"
+   "size": 201749,
+   "sha256": "0ee0b8d5a11e"
   },
   "layers/roads.json": {
-   "size": 441330,
-   "sha256": "f88419d1e14c"
+   "size": 441345,
+   "sha256": "e0691be257a8"
   },
   "layers/steel.json": {
    "size": 11380,
