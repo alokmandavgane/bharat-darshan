@@ -1,0 +1,85 @@
+{
+  "id": "district-scheduled-castes",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Scheduled Castes by district",
+    "hi": "ज़िलेवार अनुसूचित जातियाँ"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "P_SC"
+    ],
+    "denominator": [
+      "TOT_P"
+    ],
+    "per": 100,
+    "digits": 1
+  },
+  "unit": {
+    "en": "{n}% of the people",
+    "hi": "जनसंख्या का {n}%"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#ece2d0"
+    },
+    {
+      "from": 5,
+      "color": "#dccbc8"
+    },
+    {
+      "from": 10,
+      "color": "#c6aab5"
+    },
+    {
+      "from": 15,
+      "color": "#a98aa3"
+    },
+    {
+      "from": 20,
+      "color": "#8a6b8e"
+    },
+    {
+      "from": 25,
+      "color": "#6c4f78"
+    },
+    {
+      "from": 30,
+      "color": "#4f3861"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Scheduled Castes",
+        "hi": "अनुसूचित जातियाँ"
+      },
+      "unit": {
+        "en": "{n}% of the people",
+        "hi": "जनसंख्या का {n}%"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "The share of each district's people who belong to a Scheduled Caste, the communities the Constitution lists for protection against the disabilities of caste. Arunachal Pradesh, Nagaland, Lakshadweep and the Andaman and Nicobar Islands list none. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर ज़िले की जनसंख्या में अनुसूचित जातियों का अनुपात, वे समुदाय जिन्हें संविधान जातिगत निर्योग्यताओं से संरक्षण के लिए सूचीबद्ध करता है। अरुणाचल प्रदेश, नागालैंड, लक्षद्वीप और अंडमान तथा निकोबार द्वीपसमूह में कोई सूचीबद्ध नहीं है। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}

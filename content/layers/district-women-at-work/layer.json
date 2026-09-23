@@ -1,0 +1,81 @@
+{
+  "id": "district-women-at-work",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Women at work by district",
+    "hi": "ज़िलेवार कामकाजी महिलाएँ"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "TOT_WORK_F"
+    ],
+    "denominator": [
+      "TOT_F"
+    ],
+    "per": 100,
+    "digits": 1
+  },
+  "unit": {
+    "en": "{n}% of women",
+    "hi": "{n}% महिलाएँ"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#efe4c6"
+    },
+    {
+      "from": 15,
+      "color": "#e6d09a"
+    },
+    {
+      "from": 20,
+      "color": "#d9b56c"
+    },
+    {
+      "from": 30,
+      "color": "#c7934a"
+    },
+    {
+      "from": 40,
+      "color": "#a87134"
+    },
+    {
+      "from": 50,
+      "color": "#7f5226"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Women at work",
+        "hi": "कामकाजी महिलाएँ"
+      },
+      "unit": {
+        "en": "{n}% of women",
+        "hi": "{n}% महिलाएँ"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "The share of women and girls who did paid or productive work at some time in the year, as main or marginal workers. The census does not count work in one's own home as work. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "उन महिलाओं और लड़कियों का अनुपात जिन्होंने वर्ष में किसी समय वेतन वाला या उत्पादक काम किया, मुख्य या सीमांत कामगार के रूप में। जनगणना अपने घर के काम को काम नहीं गिनती। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "district-sex-ratio",
+  "section": "people",
+  "order": 11,
+  "title": {
+    "en": "Women and men",
+    "hi": "महिलाएँ और पुरुष"
+  },
+  "blurb": {
+    "en": "Women per thousand men, all ages, in 2011. Where men leave for work it rises, over 1,100 in parts of Kerala, Almora and Ratnagiri; where they arrive it falls, to 534 in industrial Daman.",
+    "hi": "2011 में प्रति हज़ार पुरुषों पर महिलाएँ, सभी आयु। जहाँ से पुरुष काम के लिए जाते हैं वहाँ यह बढ़ता है, केरल के कुछ भाग, अल्मोड़ा और रत्नागिरि में 1,100 से ऊपर; जहाँ वे आते हैं वहाँ घटता है, औद्योगिक दमन में 534 तक।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-sex-ratio"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

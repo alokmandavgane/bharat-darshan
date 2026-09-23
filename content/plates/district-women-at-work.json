@@ -1,0 +1,19 @@
+{
+  "id": "district-women-at-work",
+  "section": "people",
+  "order": 8,
+  "title": {
+    "en": "Women at work",
+    "hi": "काम पर महिलाएँ"
+  },
+  "blurb": {
+    "en": "How many women worked, by district in 2011. Most in Nagaland, Himachal and the tribal centre, where women farm, over half in places; fewest across western Uttar Pradesh, Haryana and Delhi, under one in ten.",
+    "hi": "2011 में ज़िलेवार कितनी महिलाएँ काम करती थीं। सबसे अधिक नागालैंड, हिमाचल और जनजातीय मध्य भारत में, जहाँ महिलाएँ खेती करती हैं, कहीं-कहीं आधे से ऊपर; सबसे कम पश्चिमी उत्तर प्रदेश, हरियाणा और दिल्ली में, दस में एक से कम।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-women-at-work"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "district-urban",
+  "section": "people",
+  "order": 7,
+  "title": {
+    "en": "Town and country",
+    "hi": "नगर और गाँव"
+  },
+  "blurb": {
+    "en": "How much of each district lived in towns in 2011. Mumbai, Kolkata, Chennai, Hyderabad and most of Delhi are wholly urban; north Bihar and the hills are almost all village, and Kinnaur and Lahaul and Spiti had no town at all.",
+    "hi": "2011 में हर ज़िले का कितना भाग नगरों में रहता था। मुंबई, कोलकाता, चेन्नई, हैदराबाद और अधिकांश दिल्ली पूरी तरह नगरीय हैं; उत्तर बिहार और पहाड़ लगभग पूरे गाँव हैं, और किन्नौर तथा लाहौल और स्पीति में कोई नगर था ही नहीं।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-urban"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

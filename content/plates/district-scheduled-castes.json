@@ -1,0 +1,19 @@
+{
+  "id": "district-scheduled-castes",
+  "section": "people",
+  "order": 6,
+  "title": {
+    "en": "Scheduled Castes",
+    "hi": "अनुसूचित जातियाँ"
+  },
+  "blurb": {
+    "en": "How much of each district belongs to a Scheduled Caste, in 2011. Punjab is highest across a whole state, near a third; Koch Bihar tops them all at half. The northeastern hills and the islands list almost none.",
+    "hi": "2011 में हर ज़िले का कितना भाग अनुसूचित जातियों का है। पूरे राज्य में पंजाब सबसे ऊपर है, लगभग एक तिहाई; कूचबिहार आधे के साथ सबसे आगे है। पूर्वोत्तर की पहाड़ियों और द्वीपों में लगभग कोई नहीं।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-scheduled-castes"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

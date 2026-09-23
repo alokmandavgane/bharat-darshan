@@ -1,0 +1,19 @@
+{
+  "id": "district-farm-work",
+  "section": "people",
+  "order": 9,
+  "title": {
+    "en": "Living off the land",
+    "hi": "खेती के सहारे"
+  },
+  "blurb": {
+    "en": "Of everyone at work in 2011, how many farmed, their own land or someone else's. Nine in ten in the tribal districts of central India, most of the country over half; in the big cities almost no one.",
+    "hi": "2011 में सभी कामगारों में से कितने खेती करते थे, अपनी ज़मीन पर या किसी और की। मध्य भारत के जनजातीय ज़िलों में दस में नौ, देश के अधिकांश भाग में आधे से ऊपर; बड़े नगरों में लगभग कोई नहीं।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-farm-work"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

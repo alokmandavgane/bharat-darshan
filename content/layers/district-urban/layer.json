@@ -1,0 +1,81 @@
+{
+  "id": "district-urban",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Town dwellers by district",
+    "hi": "ज़िलेवार नगरवासी"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "U_TOT_P"
+    ],
+    "denominator": [
+      "TOT_P"
+    ],
+    "per": 100,
+    "digits": 1
+  },
+  "unit": {
+    "en": "{n}% in towns",
+    "hi": "{n}% नगरों में"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#ece3cc"
+    },
+    {
+      "from": 10,
+      "color": "#d7d0c0"
+    },
+    {
+      "from": 20,
+      "color": "#b9b6b0"
+    },
+    {
+      "from": 30,
+      "color": "#98979f"
+    },
+    {
+      "from": 50,
+      "color": "#76778b"
+    },
+    {
+      "from": 75,
+      "color": "#565a74"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Living in towns",
+        "hi": "नगरों में रहने वाले"
+      },
+      "unit": {
+        "en": "{n}% in towns",
+        "hi": "{n}% नगरों में"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "The share of each district's people who live in a town: a place with a municipality, or a census town of at least 5,000 people, 400 to the km², where three in four working men do not farm. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर ज़िले की जनसंख्या का वह भाग जो नगर में रहता है: नगरपालिका वाली जगह, या कम से कम 5,000 लोगों, 400 प्रति वर्ग किमी का जनगणना नगर, जहाँ चार में से तीन कामकाजी पुरुष खेती नहीं करते। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}

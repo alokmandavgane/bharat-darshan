@@ -1,0 +1,19 @@
+{
+  "id": "district-young-children",
+  "section": "people",
+  "order": 10,
+  "title": {
+    "en": "Where the children are",
+    "hi": "बच्चे कहाँ हैं"
+  },
+  "blurb": {
+    "en": "Children under seven as a share of everyone, in 2011, a trace of how many are being born. Over one in five in Meghalaya, Mewat, Kashmir and north Bihar; under one in ten in much of Kerala and Tamil Nadu, and Kolkata.",
+    "hi": "2011 में सात वर्ष से छोटे बच्चे, सबके अनुपात में: कितने बच्चे जन्म ले रहे हैं, इसका संकेत। मेघालय, मेवात, कश्मीर और उत्तर बिहार में पाँच में एक से अधिक; केरल और तमिलनाडु के बड़े भाग तथा कोलकाता में दस में एक से कम।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-young-children"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

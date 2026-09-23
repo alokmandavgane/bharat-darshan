@@ -1,0 +1,81 @@
+{
+  "id": "district-young-children",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Children under seven by district",
+    "hi": "ज़िलेवार सात वर्ष से छोटे बच्चे"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "P_06"
+    ],
+    "denominator": [
+      "TOT_P"
+    ],
+    "per": 100,
+    "digits": 1
+  },
+  "unit": {
+    "en": "{n}% of the people",
+    "hi": "जनसंख्या का {n}%"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#f0e3cf"
+    },
+    {
+      "from": 10,
+      "color": "#ecccb6"
+    },
+    {
+      "from": 12,
+      "color": "#e0ab94"
+    },
+    {
+      "from": 14,
+      "color": "#cf8870"
+    },
+    {
+      "from": 16,
+      "color": "#b5664f"
+    },
+    {
+      "from": 18,
+      "color": "#8e4735"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Under seven",
+        "hi": "सात वर्ष से छोटे"
+      },
+      "unit": {
+        "en": "{n}% of the people",
+        "hi": "जनसंख्या का {n}%"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "Children aged six and under as a share of all the people: a trace of how many children families were having in the years before the count. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "छह वर्ष तक के बच्चे, पूरी जनसंख्या के अनुपात में: गिनती से पहले के वर्षों में परिवारों में कितने बच्चे हो रहे थे, इसका संकेत। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}
