@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-22 (thirty-ninth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-23 (fortieth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -610,7 +610,7 @@ map is a folder and a source, whatever it shows.
 | `terrain` | the clay relief | physical | built | -- |
 | `choropleth`, banded | a number per region, in bands | density, literacy, sex ratio, rainfall by state, crop output | built (states) | population density (done) |
 | `choropleth`, categorical | a category per region, a colour each | **the political map**, language families, climate zones by state, ruling-era maps | built (`"scale": "categorical"`) | zonal councils (done) |
-| `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | **unblocked**: open question 10 is answered and the 785 polygons are in the build (see "District boundaries"). The raster itself is not built; the district map ships as lines and labels for now | Census 2011 literacy |
+| `choropleth`, districts | either of the above on the 16-bit district raster | anything the census publishes | built (`"regions": "districts-2011"`, numeric scales; the 2011 districts, see the fortieth round) | Census 2011 literacy (done) |
 | `lines` | named courses, width by rank, colour by category, optional flow; joined to a source by `name`, by `route` (walking its graph) or by `corridor` (what runs along the way); optionally a finer copy per state, fetched when that state is lifted (`detail`) | rivers, roads, rail, waterways, pipelines, transmission | built | done; districts at two resolutions |
 | `lines`, generated | geometry made by the build, not fetched | graticule, Tropic of Cancer, Standard Meridian, isohyets / isotherms from a raster | built (`"join": "generated"`) | reference lines (done) |
 | `lines`, network | one item that is the *whole* of a source, drawn fine and unnamed under the routes that are named | the road and rail mesh, canals, transmission, pipelines | built (`"network": true` on an item; `"format": "districts"` for the district mesh) | roads and rail (done); district boundaries (done) |
@@ -2430,6 +2430,31 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-23, fortieth round: district choropleths, three census maps in People.
+  - **Drawn on the 2011 districts, not today's.** The 785 LGD polygons cannot carry
+    2011 figures: 145 are newer than the census, and a split district's surviving polygon
+    is the remnant, not what was counted. So a choropleth may say `"regions":
+    "districts-2011"` and is drawn on DataMeet's `Census_2011` districts (already in the
+    registry as `datameet-maps`), rasterised once to a uint16 raster
+    (`layers/districts-2011.bin.gz`, 1920 x 2048, 77 KB, fetched only when a census map
+    is on), cut to the SoI outline. PoK and Shaksgam are one uncounted polygon and stay
+    clay; Aksai Chin is inside Leh, as the census counted it.
+  - **Values from the Registrar General's own table**, the Primary Census Abstract for
+    India, states and districts (`lib/census.py` reads the .xlsx with the stdlib). Its
+    censusindia.gov.in address is dead; it comes from the Internet Archive's copy of that
+    address. The layer declares its formula (`census: { numerator, denominator, per,
+    digits }`, a `-COL` subtracts), so a new census map is a folder. Codes join all 640
+    with none over. Cards use today's names in both languages from the district layer.
+  - **Engine**: a fill with its own raster may carry two-byte ids (low, high); the
+    lookup grows to 1,024 texels. `areas` is unchanged and state choropleths too.
+  - Pages: literacy ("Who can read"), child sex ratio ("Missing girls"), Scheduled
+    Tribes. Cards rendered. Also fixed: Jalore was lettered "kishangarh sub
+    division.Ajmer" from a vandalised Wikidata label; a curated district may now give
+    its headquarters.
+  - **Next along this line**: the PCA has workers, SC share and households too, and the
+    same mechanism takes any census table keyed by district code (religion, language,
+    the Houselisting tables). Density needs areas, which the PCA does not carry.
+
 ### What exists
 
 - `pipeline/` (Python, numpy + pillow only): EPSG:7755 LCC (`lib/lcc.py`), the project
@@ -2543,7 +2568,7 @@ docs/DEPLOY.md).
    probably regional for the same reason -- a dish belongs to a region, and two states
    hold GI tags on the same sweet. Districts have their source now and are drawn as lines
    and labels, coarse over the country and sharp inside a state; what is left there is
-   the uint16 raster, which is what district choropleths need. Rivers have their state
+   district choropleths are built now, on the 2011 districts (fortieth round). Rivers have their state
    tier too; roads and rail could take one the same way when a closer look wants it.
    The scrubber has no map expression yet -- it changes what the sheet says, not what the
    model shows -- which is worth a look once there is more dated content than festivals.
