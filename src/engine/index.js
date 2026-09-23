@@ -3,7 +3,7 @@
 // canvas, and talks to the UI only through the store (PLAN.md section 4).
 import { Color, OrthographicCamera, Scene, WebGLRenderer } from 'three';
 import { blockDimensions, createBlock, createCountryWalls } from './block.js';
-import { asChoropleth, choroplethLookup, FILL_TYPES, prismLookup } from './choropleth.js';
+import { FILL_TYPES, fillLookup, prismLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createGraticule } from './graticule.js';
 import { createWorld } from './world.js';
@@ -305,7 +305,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       choroLook?.dispose();
       const file = id ? choroFiles.get(id) : null;
       const area = file?.raster ? file : null;
-      choroLook = file ? choroplethLookup(area ? asChoropleth(file) : file) : null;
+      choroLook = file ? fillLookup(file) : null;
       terrain.setChoropleth(choroLook);
       terrain.setChoroIds(area?.texture || null);
       areaFill = area;

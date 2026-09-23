@@ -129,6 +129,8 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     uChoroIds: { value: zeroTexture() },
     uChoroOwnIds: { value: 0 },
     uChoroColors: { value: Array.from({ length: 8 }, () => new Color('#000000')) },
+    // 1 when the lookup holds each area's own sRGB colour rather than a band index.
+    uChoroDirect: { value: 0 },
     uChoroMix: { value: 0 },
     uTable: { value: new Color(PALETTE.table) },
     uClay: { value: new Color(PALETTE.clay) },
@@ -223,6 +225,7 @@ export function createTerrain({ tierData, grid, sizeKm }) {
     setChoropleth(look) {
       broadcast((u) => {
         u.uChoroLut.value = look ? look.texture : blank;
+        u.uChoroDirect.value = look?.direct ? 1 : 0;
         if (look) look.colors.forEach((c, i) => u.uChoroColors.value[i].copy(c));
       });
     },

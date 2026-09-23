@@ -41,6 +41,7 @@ uniform sampler2D uChoroLut;   // r: band index, g: 255 where a region has a val
 uniform sampler2D uChoroIds;   // a fill's own id raster, when it has one: an `areas` layer, the census districts (NEAREST)
 uniform float uChoroOwnIds;    // 1 when the fill is indexed by that raster and not by the states
 uniform vec3 uChoroColors[8];  // the scale's band colours
+uniform float uChoroDirect;    // 1 when the lookup holds each area's own sRGB colour instead
 uniform float uChoroMix;       // 0..1: how far the choropleth has faded in
 uniform vec3 uTable;           // colour the model sits on
 uniform vec3 uOcean;
@@ -80,9 +81,16 @@ vec3 bandColour(float h) {
   return c;
 }
 
+/** An 8-bit sRGB colour back to the linear light the shading works in. */
+vec3 srgbToLinear(vec3 c) {
+  return mix(c / 12.92, pow((c + 0.055) / 1.055, vec3(2.4)), step(0.04045, c));
+}
+
 /** One area id resolved through the layer's lookup: its colour, and 0 alpha for "none". */
 vec4 areaColour(float aid) {
-  vec2 lut = texture(uChoroLut, vec2((aid + 0.5) / float(textureSize(uChoroLut, 0).x), 0.5)).rg;
+  vec4 texel = texture(uChoroLut, vec2((aid + 0.5) / float(textureSize(uChoroLut, 0).x), 0.5));
+  if (uChoroDirect > 0.5) return vec4(srgbToLinear(texel.rgb), step(0.5, texel.a));
+  vec2 lut = texel.rg;
   int band = clamp(int(lut.r * 255.0 + 0.5), 0, 7);
   return vec4(uChoroColors[band], step(0.5, lut.g));
 }

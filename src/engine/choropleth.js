@@ -7,7 +7,7 @@
 // The lookup stores a band *index*, not a colour: the band colours travel as ordinary
 // Color uniforms, which three.js converts from sRGB to linear for us, and an 8-bit
 // texture of linear colour would have thrown away the darks.
-import { Color, DataTexture, NearestFilter, RGFormat, UnsignedByteType } from 'three';
+import { Color, DataTexture, NearestFilter, RGBAFormat, RGFormat, UnsignedByteType } from 'three';
 
 export const MAX_BANDS = 8;          // the shader declares this many; the scale may use fewer
 export const CATEGORICAL = 'categorical';
@@ -36,6 +36,43 @@ export function asChoropleth(file) {
     scale: CATEGORICAL,
     values: Object.fromEntries((file.items || []).map((i) => [i.area_id, i.category])),
   };
+}
+
+/**
+ * Whatever a fill layer needs drawn: the band lookup a choropleth or an `areas` layer
+ * colours by, or -- when an `areas` layer's build shaded every area a colour of its own
+ * (`shades` in layer.json) -- a lookup of those colours.
+ */
+export function fillLookup(file) {
+  if (!file.raster) return choroplethLookup(file);
+  const items = file.items || [];
+  if (file.type === 'areas' && items.length && items.every((i) => i.color)) return colourLookup(items);
+  return choroplethLookup(asChoropleth(file));
+}
+
+/**
+ * Each area's own colour, by id: rgba, with a for "this area has one". The colour stays
+ * sRGB in the texture, where eight bits keep the darks, and the shader decodes it.
+ */
+function colourLookup(items) {
+  const data = new Uint8Array(256 * 4);
+  for (const it of items) {
+    const i = it.area_id;
+    if (!Number.isInteger(i) || i < 1 || i > 255) continue;
+    const hex = parseInt(String(it.color).slice(1), 16);
+    data[i * 4] = (hex >> 16) & 255;
+    data[i * 4 + 1] = (hex >> 8) & 255;
+    data[i * 4 + 2] = hex & 255;
+    data[i * 4 + 3] = 255;
+  }
+  const texture = new DataTexture(data, 256, 1, RGBAFormat, UnsignedByteType);
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
+  texture.generateMipmaps = false;
+  texture.flipY = false;
+  texture.needsUpdate = true;
+  const colors = Array.from({ length: MAX_BANDS }, () => new Color('#000000'));
+  return { texture, colors, count: 0, direct: true, dispose: () => texture.dispose() };
 }
 
 /**
