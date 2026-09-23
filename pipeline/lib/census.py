@@ -52,21 +52,32 @@ def _sheet_rows(path):
 
 def pca_districts():
     """
-    The abstract's district rows, totals only: {2011 district code: {column: int}}, with
-    `Name` and `State` (the state's 2011 code) kept as they are.
+    The abstract's district rows: {2011 district code: {column: int}}, with `Name` and
+    `State` (the state's 2011 code) kept as they are. The table gives each district
+    three rows -- total, rural, urban -- and they are folded into one: `TOT_P` is the
+    total, `U_TOT_P` the urban part and `R_TOT_P` the rural, so a formula can ask what
+    share of a district lives in towns.
     """
     path = os.path.join(RAW, 'DDW_PCA0000_2011_Indiastatedist.xlsx')
     fetch.download(PCA_URL, path, quiet=True)
     rows = _sheet_rows(path)
     head = next(rows)
     out = {}
+    prefix = {'Total': '', 'Rural': 'R_', 'Urban': 'U_'}
     for r in rows:
         rec = {head[k]: v for k, v in r.items() if k in head}
-        if rec.get('Level') != 'DISTRICT' or rec.get('TRU') != 'Total':
+        if rec.get('Level') != 'DISTRICT' or rec.get('TRU') not in prefix:
             continue
-        code = int(rec['District'])
-        out[code] = {k: (v if k in ('Name', 'Level', 'TRU') else int(float(v))) for k, v in rec.items()}
-        out[code]['State'] = int(rec['State'])
+        row = out.setdefault(int(rec['District']), {})
+        pre = prefix[rec['TRU']]
+        for k, v in rec.items():
+            if k in ('Name', 'Level', 'TRU', 'State', 'District', 'Subdistt', 'Town/Village', 'Ward', 'EB'):
+                if not pre:
+                    row[k] = v
+            else:
+                row[pre + k] = int(float(v))
+        if not pre:
+            row['State'] = int(rec['State'])
     return out
 
 
