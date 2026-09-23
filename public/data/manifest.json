@@ -1264,7 +1264,7 @@
    "icon": "gem",
    "group": "resources",
    "default_on": false,
-   "count": 22,
+   "count": 43,
    "reviewed": 0,
    "categories": [
     {
@@ -1364,6 +1364,15 @@
      "title": {
       "en": "Oil and gas",
       "hi": "तेल और गैस"
+     }
+    },
+    {
+     "id": "chromite",
+     "icon": "gem",
+     "color": "#4f7a5a",
+     "title": {
+      "en": "Chromite",
+      "hi": "क्रोमाइट"
      }
     }
    ],
@@ -1708,7 +1717,7 @@
    "icon": "city",
    "group": "industry",
    "default_on": false,
-   "count": 24,
+   "count": 62,
    "reviewed": 0,
    "categories": [
     {
@@ -2056,7 +2065,7 @@
    "icon": "works",
    "group": "industry",
    "default_on": false,
-   "count": 14,
+   "count": 18,
    "reviewed": 0,
    "categories": [
     {
@@ -2311,8 +2320,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 22801,
-   "sha256": "0530075670ae"
+   "size": 22802,
+   "sha256": "aeb2fea56fb8"
   },
   "sources.json": {
    "size": 29018,
@@ -2571,8 +2580,8 @@
    "sha256": "a2e7bc340827"
   },
   "layers/minerals.json": {
-   "size": 20541,
-   "sha256": "bee347325032"
+   "size": 38276,
+   "sha256": "aa49f864b3fb"
   },
   "layers/monsoon.json": {
    "size": 8533,
@@ -2599,8 +2608,8 @@
    "sha256": "a9f908c04dcc"
   },
   "layers/power.json": {
-   "size": 20744,
-   "sha256": "f4569c2dd039"
+   "size": 54290,
+   "sha256": "ce327c1c1317"
   },
   "layers/rail.json": {
    "size": 509505,
@@ -2623,8 +2632,8 @@
    "sha256": "e0691be257a8"
   },
   "layers/steel.json": {
-   "size": 11380,
-   "sha256": "52d54fb443c0"
+   "size": 15080,
+   "sha256": "9d46f6840afc"
   },
   "layers/sub-basins-areas.bin.gz": {
    "size": 16226,
