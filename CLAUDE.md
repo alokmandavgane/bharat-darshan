@@ -18,6 +18,10 @@ current status.
 - Two semantic levels (country, state) with lazily loaded state packages. No
   street-level detail.
 - Tap + bottom sheet is the core interaction; hover is a desktop enhancement.
+- One card, one stack (D14): the sheet is the only surface. It holds contents › page ›
+  state › item, with the layer catalogue on top of any of them, and Back pops one level.
+  The key is the sheet's strip (a mark per layer drawn, tap to unfold its legend); the
+  wordmark and the compass are the only other things on the map. No menus, no second card.
 - Layers are data: a layer is a folder under `content/layers/<id>/` (a `layer.json`
   plus `items.json`). The engine knows layer types (terrain, choropleth, lines,
   points, regional, and the rest of PLAN.md section 5's "Primitives" table) and marker

@@ -50,6 +50,7 @@ and from there on the work is sourcing and reviewing data, plate by plate.
 | D11 | It is an atlas: plates over layers | A printed atlas is a sequence of pages, each one map with a title, a legend and a source line. Here a **plate** is a JSON file naming a base style, the layers that are on, a camera and a few words; the contents page lists plates by section. A plate is the same shape as a story snapshot and a shared URL, so it needs no engine work, and it is the answer to layer sprawl: nobody faces a list of eighty switches, they open "Minerals". Layers remain the unit of data and stay individually switchable for anyone who wants to combine them. Adding a plate must not touch `src/`, the same rule as D5. |
 | D12 | Primitives first, then data | With many sources coming, the engine work that matters is the closed set of ways to draw: finish it once, each primitive proven against one real dataset, each with the full contract (legend, picking, card, search, URL, both languages). After that a new map is sourcing and review, never rendering. The catalogue is in section 5. |
 | D13 | One camera rule: the point you grab is the point that stays | Every turn, tilt and zoom pivots on the surface point under the pointer (or between the fingers) at the moment the gesture began, in 3D, and that point does not move on screen for the rest of the gesture. Yaw is free through 360°; the target is kept on the model; the key light belongs to the viewer's room, not to the model, so it stays upper-left of the screen as the model turns. Reasoning and the faults this replaces are in section 3, "Camera handling". |
+| D14 | One card, one stack: the sheet is the only surface, and the key is its strip | Decided 2026-09-23, replacing the three-things-three-places layout of 2026-09-22. That layout had three paper cards (menu, key, sheet) carrying three kinds of thing in the same material, a layer drawn three ways in three places with two different on/off controls, and a page's name in three places; on a phone with a page open there were seven screen elements, and the key stacked on the sheet read as one card with a broken header. Now: the atlas is a book, the map is the plate and the sheet is the margin. The sheet holds one stack, Contents › Page › State › Item, mirroring the URL (`/en/atlas/rivers/state/maharashtra`); the head shows the crumb and Back pops one level. The key is the sheet's *strip*, a second line of the head: one mark per layer drawn, a hidden layer greyed, the scale bar, and `+ layer`; tapping a mark unfolds that layer's legend, caveat and sources inside the head, so it stays visible on the state and item levels too. `+ layer` pushes the catalogue onto the same stack (relief, surroundings and graticule are its first group, Base). One control for on/off, a switch; the eye is gone. The chrome left on the map: the wordmark as text with the language toggle beside it, and the compass. The tour, about and credits are rows at the foot of the contents. Nothing else is a card. |
 
 ## 3. Experience design
 
@@ -256,27 +257,30 @@ and looked at on the reference phone.
 
 ### Layout
 
-*Reworked 2026-09-22: the key moved onto the map, the layer chips became rows, and the
-sheet became the subject. What follows is what is built.*
+*Reworked 2026-09-23 (D14): one card, one stack. The menu, the key card, the cartouche
+and the corner buttons are gone; the sheet is the only surface. What follows is what is
+built.*
 
 Phone, portrait:
 
 ```
 +------------------------+
-| Bharat Darshan  [menu] |  floating header; the cartouche names the open page
+| Bharat Darshan · हिन्दी  |  text on the map, not a card; the toggle beside it
 |                        |
 |       3D canvas        |  full bleed, 100dvh, safe-area insets
 |  (camera padded so the |
 |  selection is centred  |
 |   above the sheet)     |
-| [>] +----------------+ |  the key, bottom-left the way an atlas prints it:
-| [N] | KEY  o ~ #   v | |  one row per layer drawn, its samples, an eye to
-|     | 500 km |____|  | |  hide it, the scale bar as its foot; folds to a strip
-+-----+----------------+-+  of marks (folded by default on a phone)
-|          ----          |  bottom sheet: peek / half / full
-| Rivers            [<]  |  the subject: the page, a state, or an item
-| PHYSICAL - 2 LAYERS    |
-| [find...] blurb ...    |  then "On this page" rows, and the states behind a fold
+|                    [N] |  the compass, the one control left on the map
++------------------------+
+|          ----          |  the sheet: peek / half / full
+| PHYSICAL · PAGE 4      |  the head: kicker or crumb, title, back
+| Rivers            [<]  |
+| [~][=][ABC][o] +layer  |  the strip: one mark per layer drawn, greyed when
+|      2 layers · 500 km |  hidden, "+ layer", the scale bar as its foot
+|------------------------|
+| blurb · sources ·      |  the body: the level's own words and rows
+| rows ...               |
 +------------------------+
 ```
 
@@ -284,38 +288,42 @@ Desktop / tablet landscape:
 
 ```
 +------------------------------------------------------------------+
-| Bharat Darshan                                          [menu]   |  the menu drops from here:
-| PHYSICAL / Rivers                                                |  the view strip, then every
-|                     3D canvas                  +-------------+   |  layer as a row
-|               (padded between the key          | Rivers   [<]|   |
-|                and the panel)                  | PHYSICAL    |   |
-| +-------------+                                | [find...]   |   |
-| | KEY       v |                                | blurb       |   |
-| | ~ Rivers  o |                                | ON THIS PAGE|   |
-| |  - Snow-fed |                                |  rows       |   |
-| | 500 km |__| |                                | All states >|   |
-| +-------------+                                +-------------+   |
+| Bharat Darshan · हिन्दी                                            |
+|                                                +-------------+   |
+|                     3D canvas                  | Rivers › Phy |   |
+|               (padded between the              | Maharashtra |   |
+|                compass and the panel)          | [~][=] +lyr |   |
+|                                                |  Rivers     |   |  a tapped mark:
+|                                                |  - Snow-fed |   |  its legend unfolds
+| [N]                                            | facts ...   |   |  under the strip
+|                                                +-------------+   |
 +------------------------------------------------------------------+
 ```
 
-- India is portrait-shaped, so wide screens have natural dead space either side of
-  it. Panels float there; the same camera-padding mechanism that handles the phone's
-  bottom sheet keeps the country centred between them: the panel on the right and, while
-  it is open, the key on the left. On a phone the key overlaps the map instead (framing
-  above it would leave no map), which is why it starts folded there and opens itself when
-  a page is turned to.
-- **Three things, three places.** The *key* is where a reader looks up a colour, so it is
-  on the map and not behind the menu: one row per layer drawn, with the layer's mark, its
-  samples (a dot, a stroke, a square, the bands of a choropleth, the columns of a prisms
-  layer, the circles of a symbols layer at the size the map draws them), its caveat, its
-  sources, and an eye. A page's own layer stays listed when hidden so the eye can bring it
-  back. The *menu* is for mixing your own: the view (language, relief, surroundings,
-  graticule) as one compact strip, then every layer as a row -- mark, name, key in
-  miniature, switch -- grouped as the catalogue groups them, with a search field at the
-  top that narrows them by name. The *sheet* is the subject:
-  the contents when nothing is open (a tile and a line per page), the open page's words,
-  sources and "On this page" rows, a state's card, or an item's card. One search field in
-  every view but a card; the 36 units behind a fold rather than under everything.
+- **One stack.** The sheet's levels are the URL's: Contents (`/en`), Page
+  (`/en/atlas/rivers`), State (`.../state/maharashtra`), Item (`?item=`), plus Layers,
+  the catalogue, which `+ layer` pushes on top of whatever is open and which has no URL
+  of its own. The head names the level (a kicker for a page, a crumb for anything inside
+  one) and Back pops one level, never two.
+- **The strip is the key.** One mark per layer drawn, in catalogue order, the page's own
+  layers listed even when hidden (greyed) so they can be brought back; a tap on a mark
+  opens that layer's legend under the strip -- its categories, bands, sizes or heights,
+  its caveat, its sources and their year, and a switch -- and a second tap closes it. The
+  scale bar sits at the strip's end. The strip belongs to the head, so it is on every
+  level, and a reader inside a state card can still look a colour up.
+- **The catalogue is a level.** Every layer as a row (mark, name, key in miniature,
+  switch), grouped as the catalogue groups them, with a search field at the top; the
+  first group, Base, holds relief (with its slider), surroundings and graticule, which are
+  layers in all but name. Two fills fight over the clay, so switching one on switches the
+  other off, by type (`FILL_TYPES`), never by id.
+- **One control for on/off.** A switch, everywhere.
+- **The rest of the chrome is text.** The wordmark is set into the paper top-left with
+  the language toggle beside it. The compass is the only button on the map; it
+  brightens when the view is turned. The tour, about-this-map and credits are rows at
+  the foot of the contents. The share card (`?poster=1`) still dresses the wordmark up.
+- India is portrait-shaped, so wide screens have natural dead space either side of it:
+  the sheet becomes a panel on the right and the camera padding keeps the country centred
+  between the compass and the panel. On a phone the sheet's peek height is the padding.
 - **A layer's mark** is a miniature of how it draws, made from its declared type and its
   own colours (`src/ui/legend.js`): a clay token with its glyph and the other categories'
   dots for points, three strokes for lines, a mosaic for a categorical fill, a ramp for a
@@ -2430,6 +2438,30 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-23, forty-third round: one card, one stack (D14). The owner found the chrome
+  confusing -- a menu for layers, a key card on the map, a sheet that was the contents,
+  a page, a state and an item in turn, all in the same paper -- and asked for a
+  consistent model with fewer screen elements. The mockup (six artboards over
+  screenshots of the real map) was agreed and built in the same session.
+  What went: the wordmark card, the page cartouche, the menu button and its panel, the
+  key card, the corner buttons for the tour and the info screen, and the "On this page"
+  rows that repeated the key. What is left on the map: the wordmark as text with the
+  language toggle beside it, and the compass. The sheet holds one stack -- contents,
+  page, state, item, and the catalogue of layers on top of any of them -- with a crumb
+  above the title inside a page and Back popping one level. The key is the sheet's
+  strip: one mark per layer drawn, greyed when hidden, "+ layer", and the scale bar; a
+  tapped mark unfolds that layer's legend, caveat, sources and switch under the strip,
+  and the strip is in the head, so the peek grows to fit it and a reader inside a state
+  card can still look a colour up. Relief (with its slider), the surroundings and the
+  graticule are the catalogue's first group, Base. The tour is a row at the foot of the
+  contents and a play/pause on the card's step row; about-this-map and the credits are
+  a fold at the same foot; a draft card says "Draft" in its meta line.
+  Camera padding lost its left column, since nothing sits there but the compass.
+  Two things found on the way: a button given focus inside the sheet's head could
+  scroll the fixed, overflow-hidden app box and leave the map half off screen (the shell
+  now pins that box's scroll to zero), and the browser-tool's ref clicks do exactly that,
+  so a phone-sized check should click by coordinate. The share card still dresses the
+  wordmark up as a card, so the poster CSS carries the paper material the wordmark lost.
 - 2026-09-23, forty-second round: the sub-basins shaded apart within their basin.
   - An `areas` layer may say `"shades": {"by": <field>}`. The build keeps each area's
     category colour, turns a family (here, a basin) a few degrees round the wheel from
