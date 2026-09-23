@@ -1,7 +1,7 @@
 {
   "id": "district-young-children",
-  "section": "people",
-  "order": 10,
+  "section": "census",
+  "order": 7,
   "title": {
     "en": "Where the children are",
     "hi": "बच्चे कहाँ हैं"

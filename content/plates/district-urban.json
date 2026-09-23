@@ -1,7 +1,7 @@
 {
   "id": "district-urban",
-  "section": "people",
-  "order": 7,
+  "section": "census",
+  "order": 4,
   "title": {
     "en": "Town and country",
     "hi": "नगर और गाँव"

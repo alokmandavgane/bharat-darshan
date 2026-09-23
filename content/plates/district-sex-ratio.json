@@ -1,7 +1,7 @@
 {
   "id": "district-sex-ratio",
-  "section": "people",
-  "order": 11,
+  "section": "census",
+  "order": 9,
   "title": {
     "en": "Women and men",
     "hi": "महिलाएँ और पुरुष"

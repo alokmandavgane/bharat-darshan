@@ -1,7 +1,7 @@
 {
   "id": "district-literacy",
-  "section": "people",
-  "order": 3,
+  "section": "census",
+  "order": 1,
   "title": {
     "en": "Who can read",
     "hi": "कौन पढ़ सकता है"

@@ -1,7 +1,7 @@
 {
   "id": "district-child-sex-ratio",
-  "section": "people",
-  "order": 4,
+  "section": "census",
+  "order": 8,
   "title": {
     "en": "Missing girls",
     "hi": "गुम होती बेटियाँ"

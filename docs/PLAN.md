@@ -703,7 +703,7 @@ content/plates/minerals.json
   atlas rather than as that state.
 - Sections (the contents page's headings, strings keyed by id like layer groups):
   political, physical, climate, resources, agriculture, industry and energy, transport,
-  people, culture, history.
+  people, census by district, culture, history.
 - The legend, the source line and the data's vintage come from the plate's layers, so a
   plate cannot show a map without saying where it came from and when.
 - The build validates a plate the way it validates a layer: every layer it names exists,
@@ -2439,9 +2439,9 @@ docs/DEPLOY.md).
   - Every blurb's claim was checked against the numbers (the district extremes and the
     states named). The two sex-ratio maps share one red-to-green palette so the same
     colour means the same thing on both.
-  - **Left for the owner**: People now has eleven pages, nine of them district maps. If
-    that reads as too many, the contents page could group them under one heading; the
-    plates have no sub-sections today, so that would be a small shell change.
+  - The nine district maps have their own contents heading, "Census 2011 by district"
+    (a `census` section after People), rather than crowding People; a section is a
+    list entry in `07_plates.py` and two strings, so no shell change was needed.
 
 - 2026-09-23, fortieth round: district choropleths, three census maps in People.
   - **Drawn on the 2011 districts, not today's.** The 785 LGD polygons cannot carry

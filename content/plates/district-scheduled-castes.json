@@ -1,7 +1,7 @@
 {
   "id": "district-scheduled-castes",
-  "section": "people",
-  "order": 6,
+  "section": "census",
+  "order": 2,
   "title": {
     "en": "Scheduled Castes",
     "hi": "अनुसूचित जातियाँ"

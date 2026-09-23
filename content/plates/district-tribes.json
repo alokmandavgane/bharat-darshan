@@ -1,7 +1,7 @@
 {
   "id": "district-tribes",
-  "section": "people",
-  "order": 5,
+  "section": "census",
+  "order": 3,
   "title": {
     "en": "Scheduled Tribes",
     "hi": "अनुसूचित जनजातियाँ"

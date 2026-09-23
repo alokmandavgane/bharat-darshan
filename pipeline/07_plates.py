@@ -23,7 +23,7 @@ BLURB_MAX = 240
 # The contents page's headings, in the order an atlas reads. A plate's section must be
 # one of these; the strings themselves live in src/i18n, keyed by the id.
 SECTIONS = ('political', 'physical', 'climate', 'resources', 'agriculture',
-            'industry', 'transport', 'people', 'culture', 'history')
+            'industry', 'transport', 'people', 'census', 'culture', 'history')
 # The base styles the engine can draw (PLAN.md section 5, "Base styles"). `political`
 # -- categorical state fills over gentle relief -- is specified there and not built, so a
 # page may not ask for it yet: a page that asked would quietly come out physical.
