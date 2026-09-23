@@ -250,14 +250,16 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     },
     /**
      * The item nearest a point on the ground, within `maxKm`, across the layers on show.
-     * Ranks break ties, so a great river wins over the tributary beside it.
+     * Ranks break ties, so a great river wins over the tributary beside it. `named`
+     * leaves out a network item, the unnamed mesh under the named courses.
      */
-    nearest(x, z, maxKm) {
+    nearest(x, z, maxKm, { named = false } = {}) {
       let best = null;
       const max2 = maxKm * maxKm;
       for (const [id, l] of layers) {
         if (!active.has(id)) continue;
         for (const rec of l.records) {
+          if (named && rec.item.network) continue;
           const [x0, z0, x1, z1] = rec.bbox;
           if (x < x0 - maxKm || x > x1 + maxKm || z < z0 - maxKm || z > z1 + maxKm) continue;
           for (const flat of rec.runs) {

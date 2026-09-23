@@ -767,6 +767,8 @@ def build_lines(layer, folder, items, cats, fields, ids, heights):
         }
         if widths:
             entry['widths'] = widths
+        if it.get('network'):
+            entry['network'] = True             # the unnamed mesh: drawn, never the thing picked on an area page
         for name in fields:                      # the columns the layer declared for itself
             if it.get(name) is not None:
                 entry[name] = it[name]

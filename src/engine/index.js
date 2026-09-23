@@ -897,7 +897,12 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   function lineAt(sx, sy, px = 9) {
     if (!lines || !field) return null;
     const p = pick(sx, sy);
-    return p ? lines.nearest(p.x, p.z, px * (store.get('camera').zoom / viewport.h)) : null;
+    // Over an `areas` fill the areas are what the page is about, and the lines drawn on
+    // them are context: the river mesh on the basins page runs within a few pixels of
+    // nearly every point. So there a line takes the pointer only when it is a named one
+    // and the pointer is right on it, and everywhere else the area answers.
+    const reach = areaFill ? Math.min(px, 4) : px;
+    return p ? lines.nearest(p.x, p.z, reach * (store.get('camera').zoom / viewport.h), { named: !!areaFill }) : null;
   }
 
   // A gesture is starting: answer with the surface point it has hold of, so it can turn
@@ -969,11 +974,14 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       hoverRaf = 0;
       const p = store.get('pointer');
       const hit = p ? (markAt(p.x, p.y, 8) || lineAt(p.x, p.y)) : null;
+      // An area of the fill on show names itself under the pointer the way a line does,
+      // and then the state beneath it is not what is being pointed at.
+      const area = p && !hit && areaFill ? pickArea(p.x, p.y) : null;
+      const under = hit ? { layer: hit.layer, id: hit.item.id, name: hit.item.name }
+        : area ? { layer: areaFill.id, id: area.id, name: area.name } : null;
       const was = store.get('hoverLine');
-      if (hit?.item.id !== was?.id || hit?.layer !== was?.layer) {
-        store.set('hoverLine', hit ? { layer: hit.layer, id: hit.item.id, name: hit.item.name } : null);
-      }
-      store.set('hover', p && field && !hit ? pick(p.x, p.y).id || null : null);
+      if (under?.id !== was?.id || under?.layer !== was?.layer) store.set('hoverLine', under);
+      store.set('hover', p && field && !under ? pick(p.x, p.y).id || null : null);
     });
   });
 
