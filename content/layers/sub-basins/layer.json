@@ -83,6 +83,9 @@
       }
     }
   },
+  "shades": {
+    "by": "basin"
+  },
   "note": {
     "en": "The basins cut into the 99 parts the Central Water Commission manages them by: the Ganga into the Yamuna, the Chambal, the Son, the Kosi and fifteen more; a big river into its upper, middle and lower reaches. The colours are the basins' own, so a sub-basin shows where its water ends up.",
     "hi": "बेसिन उन 99 भागों में बँटे जिनसे केंद्रीय जल आयोग उनका प्रबंधन करता है: गंगा यमुना, चंबल, सोन, कोसी और पंद्रह अन्य में; बड़ी नदी अपने ऊपरी, मध्य और निचले भागों में। रंग बेसिनों के ही हैं, इसलिए उप-बेसिन बताता है कि उसका पानी कहाँ पहुँचता है।"
@@ -91,5 +94,6 @@
     "indian-water-features",
     "india-wris"
   ],
-  "attribution": "Sub-basin polygons: India-WRIS's sub-basin layer, republished as PMTiles by indian_water_features and read at zoom 8, matched on WRIS's own sub-basin name. Where WRIS names a part by an administrative phrase ('Above Ramganga Confluence') or a spelling of its own, the card gives the river's usual name and the blurb says what WRIS calls it. Colours are the parent basin's group."
+  "attribution": "Sub-basin polygons: India-WRIS's sub-basin layer, republished as PMTiles by indian_water_features and read at zoom 8, matched on WRIS's own sub-basin name. Where WRIS names a part by an administrative phrase ('Above Ramganga Confluence') or a spelling of its own, the card gives the river's usual name and the blurb says what WRIS calls it. Colours are the parent basin's group, each basin turned a little from the basins of its group it touches and each sub-basin a lighter or darker shade than the sub-basins of its basin beside it.",
+  "_shades": "Sub-basins of one basin share a colour family; the build shades them apart (04_layers.shade_areas)."
 }

@@ -32,6 +32,7 @@ generated from a source (`source.format: "geonames"`) and merged with its curate
 The engine knows types and markers, never layer ids.
 """
 import argparse
+import colorsys
 import csv
 import hashlib
 import io
@@ -197,6 +198,12 @@ def validate_layer(layer, folder, registry):
         if not bilingual(spec.get('label')):
             p.append(f'field {name}: label needs en and hi')
     p += validate_size(layer)
+    shades = layer.get('shades')
+    if shades is not None:
+        if layer.get('type') != 'areas':
+            p.append('only an areas layer takes shades')
+        elif not isinstance(shades, dict) or shades.get('by') not in (layer.get('fields') or {}):
+            p.append('shades.by must name one of the layer\'s own fields: the family an area shades within')
     return p
 
 
@@ -356,6 +363,9 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
     # the border -- the Ganges Plain into Bangladesh, the Thar into Pakistan.
     inside = np.array(Image.fromarray(ids.astype(np.uint8)).resize((width, height), Image.NEAREST)) > 0
     grid_ids = np.where(inside, grid_ids, 0).astype(np.uint8)
+    if layer.get('shades'):
+        shade_areas(out_items, grid_ids, {c['id']: c['color'] for c in layer.get('categories', [])},
+                    layer['shades']['by'])
     rel = f'layers/{layer["id"]}-areas.bin.gz'
     size = pack.write(os.path.join(out, rel), grid_ids, 'uint8', predictor='none')
     covered = {int(v) for v in np.unique(grid_ids) if v}
@@ -368,6 +378,64 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
         problems.append(f"nothing of these falls inside India: {', '.join(missing)}")
     print(f'    raster {width}x{height} -> {rel} ({size // 1024} KB)')
     return out_items, problems
+
+
+# How an areas layer with `shades` varies its colours. A family -- the sub-basins of one
+# basin -- keeps its category's colour and is turned a little round the wheel from any
+# family of the same category it touches; inside a family each area takes a lightness
+# step no neighbour in the family has, largest area first, so it keeps the plain colour.
+FAMILY_HUES = (0, 14, -14, 26, -26, 7, -7)            # degrees
+MEMBER_STEPS = (0, 0.08, -0.08, 0.15, -0.15, 0.04, -0.04, 0.11, -0.11)
+
+
+def neighbours(grid_ids):
+    """{id: set of ids} for every pair of areas that share a pixel edge in the raster."""
+    out = {}
+    for a, b in ((grid_ids[:, :-1], grid_ids[:, 1:]), (grid_ids[:-1, :], grid_ids[1:, :])):
+        touch = (a != b) & (a > 0) & (b > 0)
+        for x, y in set(zip(a[touch].tolist(), b[touch].tolist())):
+            out.setdefault(x, set()).add(y)
+            out.setdefault(y, set()).add(x)
+    return out
+
+
+def shade_areas(items, grid_ids, colors, by):
+    """
+    Give every area its own colour: its category's, shaded by family and member so that
+    a family reads as one colour and its members can still be told apart (PLAN.md
+    section 5, `areas`). Sets `color` on each item.
+    """
+    touch = neighbours(grid_ids)
+    pixels = np.bincount(grid_ids.ravel(), minlength=len(items) + 1)
+    key = lambda it: (it['category'], fold(pick_en(it.get(by))))   # noqa: E731
+    family = {it['area_id']: key(it) for it in items}
+    fam_touch = {}
+    for a, near in touch.items():
+        for b in near:
+            if a in family and b in family and family[a] != family[b] and family[a][0] == family[b][0]:
+                fam_touch.setdefault(family[a], set()).add(family[b])
+    size = {}
+    for it in items:
+        size[family[it['area_id']]] = size.get(family[it['area_id']], 0) + int(pixels[it['area_id']])
+    hue = {}
+    for fam in sorted(size, key=lambda f: (-size[f], f)):
+        used = {hue[f] for f in fam_touch.get(fam, ()) if f in hue}
+        hue[fam] = next((h for h in FAMILY_HUES if h not in used), 0)
+    step = {}
+    for it in sorted(items, key=lambda i: (-int(pixels[i['area_id']]), i['id'])):
+        a = it['area_id']
+        used = {step[b] for b in touch.get(a, ()) if b in step and family.get(b) == family[a]}
+        step[a] = next((s for s in MEMBER_STEPS if s not in used), 0)
+    for it in items:
+        r, g, b = (int(colors[it['category']][i:i + 2], 16) / 255 for i in (1, 3, 5))
+        h, light, sat = colorsys.rgb_to_hls(r, g, b)
+        h = (h + hue[family[it['area_id']]] / 360) % 1
+        light = min(0.86, max(0.24, light + step[it['area_id']]))
+        it['color'] = '#' + ''.join(f'{round(c * 255):02x}' for c in colorsys.hls_to_rgb(h, light, sat))
+
+
+def pick_en(v):
+    return v.get('en', '') if isinstance(v, dict) else str(v or '')
 
 
 def validate_height(h):
