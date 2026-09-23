@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-23 (fortieth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-23 (forty-first round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2429,6 +2429,19 @@ docs/DEPLOY.md).
     since the lines between sub-basins are a pixel wide and the colours are shared. It
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
+
+- 2026-09-23, forty-first round: six more district census maps, nine in all.
+  - Scheduled Castes, the urban share ("Town and country"), women at work, work on the
+    land ("Living off the land"), children under seven ("Where the children are") and
+    women per 1,000 men, all ages ("Women and men"). Each is a folder and a page; no
+    code beyond letting the census reader fold each district's rural and urban rows
+    into its total one (`U_TOT_P`, `R_...`), which the urban share needed.
+  - Every blurb's claim was checked against the numbers (the district extremes and the
+    states named). The two sex-ratio maps share one red-to-green palette so the same
+    colour means the same thing on both.
+  - **Left for the owner**: People now has eleven pages, nine of them district maps. If
+    that reads as too many, the contents page could group them under one heading; the
+    plates have no sub-sections today, so that would be a small shell change.
 
 - 2026-09-23, fortieth round: district choropleths, three census maps in People.
   - **Drawn on the 2011 districts, not today's.** The 785 LGD polygons cannot carry
