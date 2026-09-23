@@ -202,8 +202,9 @@ def validate_layer(layer, folder, registry):
     if shades is not None:
         if layer.get('type') != 'areas':
             p.append('only an areas layer takes shades')
-        elif not isinstance(shades, dict) or shades.get('by') not in (layer.get('fields') or {}):
-            p.append('shades.by must name one of the layer\'s own fields: the family an area shades within')
+        elif not isinstance(shades, dict) or shades.get('by') not in {'id', *(layer.get('fields') or {})}:
+            p.append('shades.by must name one of the layer\'s own fields, the family an area shades '
+                     'within, or "id" for every area a family of its own')
     return p
 
 
@@ -407,7 +408,10 @@ def shade_areas(items, grid_ids, colors, by):
     """
     touch = neighbours(grid_ids)
     pixels = np.bincount(grid_ids.ravel(), minlength=len(items) + 1)
-    key = lambda it: (it['category'], fold(pick_en(it.get(by))))   # noqa: E731
+    # `by: "id"` makes every area a family of its own. A turn of hue alone is too faint on
+    # the soft colours an atlas uses, so then the whole category is one family and its
+    # areas are told apart by lightness, as members are.
+    key = (lambda it: (it['category'],)) if by == 'id' else (lambda it: (it['category'], fold(pick_en(it.get(by)))))
     family = {it['area_id']: key(it) for it in items}
     fam_touch = {}
     for a, near in touch.items():

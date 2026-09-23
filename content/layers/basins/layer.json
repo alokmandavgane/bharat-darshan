@@ -87,6 +87,9 @@
       }
     }
   },
+  "shades": {
+    "by": "id"
+  },
   "note": {
     "en": "Every drop of rain in India ends up in one of these. The colour says where: the Bay of Bengal, the Arabian Sea, or nowhere at all. In the peninsula the line between the greens and the ochres is the great divide, and it runs down the Western Ghats, only fifty to a hundred km from the west coast.",
     "hi": "भारत में गिरने वाली हर बूँद इनमें से किसी एक में पहुँचती है। रंग बताता है कहाँ: बंगाल की खाड़ी, अरब सागर, या कहीं नहीं। प्रायद्वीप में हरे और गेरुए रंगों के बीच की रेखा महान जल-विभाजक है, और वह पश्चिमी घाट के साथ चलती है, पश्चिमी तट से केवल पचास से सौ किमी दूर।"
@@ -95,5 +98,5 @@
     "indian-water-features",
     "india-wris"
   ],
-  "attribution": "Basin polygons: India-WRIS's basin layer (Central Water Commission's 25-basin division), republished as PMTiles by indian_water_features and read at zoom 7, matched on the basin code. Areas are WRIS's own figures; the grouping by where the water ends up is ours."
+  "attribution": "Basin polygons: India-WRIS's basin layer (Central Water Commission's 25-basin division), republished as PMTiles by indian_water_features and read at zoom 7, matched on the basin code. Areas are WRIS's own figures; the grouping by where the water ends up is ours. Each basin is a lighter or darker shade of its group's colour than any basin of the group it touches, so two neighbours of one group can be told apart."
 }

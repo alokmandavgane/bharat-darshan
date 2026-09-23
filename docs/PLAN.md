@@ -2441,8 +2441,10 @@ docs/DEPLOY.md).
     hover named the state beneath. With an area fill on, the area now answers hover and
     click; a line wins only if it is a named course within 4 px. District census maps
     name the district on hover the same way.
-  - The basins page could take the same family turn (`"by"` its own id) if Godavari and
-    Krishna should differ there too; left as it is for now.
+  - The basins page shades too, with `"by": "id"`: every basin its own family. A hue
+    turn alone was invisible on the soft greens (#8db39a against #8db3a3), so with `id`
+    the whole category is one family and neighbours differ in lightness instead. The
+    Godavari, Krishna, Mahanadi and Cauvery now read as four greens.
 
 - 2026-09-23, forty-first round: six more district census maps, nine in all.
   - Scheduled Castes, the urban share ("Town and country"), women at work, work on the
