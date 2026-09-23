@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-23 (forty-first round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-23 (forty-second round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2429,6 +2429,16 @@ docs/DEPLOY.md).
     since the lines between sub-basins are a pixel wide and the colours are shared. It
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
+
+- 2026-09-23, forty-second round: the sub-basins shaded apart within their basin.
+  - An `areas` layer may say `"shades": {"by": <field>}`. The build keeps each area's
+    category colour, turns a family (here, a basin) a few degrees round the wheel from
+    any family of its category it touches, and gives each member a lightness step that
+    no neighbour in the family has, largest first so the biggest keeps the plain colour.
+    Items then carry `color`, and the engine draws per-area colours from an RGBA lookup
+    (sRGB in the texture, decoded in the shader). The legend still shows the categories.
+  - The basins page could take the same family turn (`"by"` its own id) if Godavari and
+    Krishna should differ there too; left as it is for now.
 
 - 2026-09-23, forty-first round: six more district census maps, nine in all.
   - Scheduled Castes, the urban share ("Town and country"), women at work, work on the
