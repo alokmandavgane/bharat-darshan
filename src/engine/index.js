@@ -174,7 +174,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // raster, but a link, a search result or the carousel names it by id, and without
     // this it opened an empty card.
     const fill = choroFiles.get(sel.layer);
-    const area = fill?.type === 'areas' ? fill.items?.find((i) => i.id === sel.id) : null;
+    const area = fill?.raster ? fill.items?.find((i) => i.id === sel.id) : null;
     if (area) {
       store.set('item', { layer: sel.layer, id: sel.id, data: area, categories: fill.categories, fields: fill.fields },
                 { source });
@@ -247,7 +247,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   const choroFiles = new Map();      // layer id -> its file, once fetched
   let choroId = null;                // the one on show
   let choroLook = null;
-  let areaFill = null;        // the `areas` layer on show, for picking an area by its raster
+  let areaFill = null;        // the fill on show that has its own id raster, for picking by it
   const prismFiles = new Map();
   let prismLook = null;
   let prismKm = 0;           // how far the top of the prisms layer's range stands up
@@ -304,7 +304,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const put = () => {
       choroLook?.dispose();
       const file = id ? choroFiles.get(id) : null;
-      const area = file?.type === 'areas' ? file : null;
+      const area = file?.raster ? file : null;
       choroLook = file ? choroplethLookup(area ? asChoropleth(file) : file) : null;
       terrain.setChoropleth(choroLook);
       terrain.setChoroIds(area?.texture || null);
@@ -380,15 +380,19 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           loadDetail();          // the layer has only now said whether it has a finer copy
           publishIndex();
         });
-      } else if (entry.type === 'choropleth' && !choroFiles.has(id)) {
-        done((data) => { choroFiles.set(id, data); showChoropleth(activeChoro()); });
-      } else if (entry.type === 'areas' && !choroFiles.has(id)) {
-        // Two fetches: the items, and the id raster they are drawn from.
+      } else if (FILL_TYPES.includes(entry.type) && !choroFiles.has(id)) {
+        // A fill that brings its own id raster -- an `areas` layer, or a choropleth on the
+        // census's districts -- takes two fetches: the items, and the raster they are
+        // drawn from. A state choropleth is one, and colours the state ids already here.
         loading.add(id);
         loadJson(entry.path)
           .then(async (data) => {
-            const raster = await loadPack(DATA_BASE + data.raster);
-            choroFiles.set(id, { ...data, raster, texture: byteTexture(raster, { nearest: true }) });
+            if (!data.raster) {
+              choroFiles.set(id, data);
+            } else {
+              const pack = await loadPack(DATA_BASE + data.raster);
+              choroFiles.set(id, { ...data, raster: areaIds(pack), texture: byteTexture(pack, { nearest: true }) });
+            }
             showChoropleth(activeChoro());
             // As for the other layer types: a link may have named an area before it arrived.
             const sel = store.get('item');
@@ -491,12 +495,24 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (line) return fitBox(line.bbox, ms);
     // An area is framed by the texels its raster gives it, as a line is by its runs.
     const fill = choroFiles.get(sel.layer);
-    const area = fill?.type === 'areas' && fill.raster ? fill.items?.find((i) => i.id === sel.id) : null;
+    const area = fill?.raster ? fill.items?.find((i) => i.id === sel.id) : null;
     if (area && meta.source !== 'tap') {
       const box = areaBox(fill.raster, area.area_id);
       if (box) fitBox(box, ms);
     }
   });
+
+  /**
+   * A fill's id raster as one id per pixel. An `areas` layer has at most 255 areas and
+   * ships a byte each; the census's 640 districts do not fit a byte, so theirs ships two,
+   * low then high, and is put back together here once, for picking and framing.
+   */
+  function areaIds(pack) {
+    if (pack.channels === 1) return pack;
+    const n = pack.width * pack.height, data = new Uint16Array(n);
+    for (let i = 0; i < n; i++) data[i] = pack.data[i * 2] | (pack.data[i * 2 + 1] << 8);
+    return { width: pack.width, height: pack.height, data };
+  }
 
   /** An area id's extent in scene km, from its layer's raster. */
   function areaBox({ width, height, data }, id) {

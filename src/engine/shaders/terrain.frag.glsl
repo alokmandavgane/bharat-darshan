@@ -37,8 +37,8 @@ uniform float uHole;           // state id drawn as a flat dark socket, or -1
 uniform float uDim;            // 0..1: quieten every other state (state view)
 uniform float uOnlyIndia;      // 1: draw India alone as a cut-out on the page, no sea or neighbours
 uniform float uPool;           // 1 on the backdrop: end as a round pool, not at the rect
-uniform sampler2D uChoroLut;   // r: band index, g: 255 where a region has a value (NEAREST)
-uniform sampler2D uChoroIds;   // an `areas` layer's own id raster, when one is the fill (NEAREST)
+uniform sampler2D uChoroLut;   // r: band index, g: 255 where a region has a value (NEAREST; 256 or more wide)
+uniform sampler2D uChoroIds;   // a fill's own id raster, when it has one: an `areas` layer, the census districts (NEAREST)
 uniform float uChoroOwnIds;    // 1 when the fill is indexed by that raster and not by the states
 uniform vec3 uChoroColors[8];  // the scale's band colours
 uniform float uChoroMix;       // 0..1: how far the choropleth has faded in
@@ -82,7 +82,7 @@ vec3 bandColour(float h) {
 
 /** One area id resolved through the layer's lookup: its colour, and 0 alpha for "none". */
 vec4 areaColour(float aid) {
-  vec2 lut = texture(uChoroLut, vec2((aid + 0.5) / 256.0, 0.5)).rg;
+  vec2 lut = texture(uChoroLut, vec2((aid + 0.5) / float(textureSize(uChoroLut, 0).x), 0.5)).rg;
   int band = clamp(int(lut.r * 255.0 + 0.5), 0, 7);
   return vec4(uChoroColors[band], step(0.5, lut.g));
 }
@@ -111,7 +111,12 @@ vec4 areaFill(vec2 uv) {
                         (1.0 - f.x) * f.y, f.x * f.y);
   vec2 off[4] = vec2[4](vec2(0.5, 0.5), vec2(1.5, 0.5), vec2(0.5, 1.5), vec2(1.5, 1.5));
   float ids[4];
-  for (int k = 0; k < 4; k++) ids[k] = floor(texture(uChoroIds, (i0 + off[k]) / ts).r * 255.0 + 0.5);
+  // An id is a byte, or two -- low then high -- for the census's 640 districts; a
+  // one-channel raster reads 0 in g, so the same sum serves both.
+  for (int k = 0; k < 4; k++) {
+    vec2 b = floor(texture(uChoroIds, (i0 + off[k]) / ts).rg * 255.0 + 0.5);
+    ids[k] = b.x + 256.0 * b.y;
+  }
   // The two best-covered candidates: the pixel is somewhere on the edge between them.
   float firstId = 0.0, secondId = 0.0, firstCov = -1.0, secondCov = -1.0;
   for (int k = 0; k < 4; k++) {

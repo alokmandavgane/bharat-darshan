@@ -1,7 +1,8 @@
 // @ts-check
 // The `choropleth` layer type (PLAN.md section 5): one value per region, coloured by the
-// layer's own scale. The whole layer reaches the shader as a 256-texel lookup indexed by
-// raster id, so the terrain needs one texture read and knows nothing about the layer.
+// layer's own scale. The whole layer reaches the shader as a lookup indexed by raster id
+// -- 256 texels for the states, 1,024 for the census's districts -- so the terrain needs
+// one texture read and knows nothing about the layer.
 //
 // The lookup stores a band *index*, not a colour: the band colours travel as ordinary
 // Color uniforms, which three.js converts from sRGB to linear for us, and an 8-bit
@@ -25,11 +26,28 @@ export const FILL_TYPES = ['choropleth', 'areas'];
  * That is also why only one of them shows at a time: they are one channel.
  */
 export function asChoropleth(file) {
+  // A choropleth on the census's districts is the same thing the other way round: a
+  // numeric scale whose regions are districts, each an item with its value.
+  if (file.type === 'choropleth') {
+    return { ...file, values: Object.fromEntries((file.items || []).map((i) => [i.area_id, i.value])) };
+  }
   return {
     ...file,
     scale: CATEGORICAL,
     values: Object.fromEntries((file.items || []).map((i) => [i.area_id, i.category])),
   };
+}
+
+/**
+ * How many texels a lookup needs: 256 for the states and for an `areas` layer, whose ids
+ * are a byte; the next power of two past the highest id for the census's districts.
+ */
+function lookupSize(values) {
+  let top = 255;
+  for (const id of Object.keys(values || {})) top = Math.max(top, Number(id) || 0);
+  let n = 256;
+  while (n <= top) n *= 2;
+  return n;
 }
 
 /**
@@ -88,10 +106,11 @@ export function choroplethLookup(layer) {
   const index = categorical ? new Map(bands.map((c, i) => [c.id, i])) : null;
   // r: band index, g: 255 when this region has a value at all. Region 0 is "not a state",
   // so it stays 0 and the sea, the neighbours and the backdrop are left alone.
-  const data = new Uint8Array(256 * 2);
+  const size = lookupSize(layer.values);
+  const data = new Uint8Array(size * 2);
   for (const [id, value] of Object.entries(layer.values || {})) {
     const i = Number(id);
-    if (!Number.isInteger(i) || i < 1 || i > 255) continue;
+    if (!Number.isInteger(i) || i < 1 || i >= size) continue;
     let band;
     if (categorical) {
       band = index.get(value);
@@ -103,7 +122,7 @@ export function choroplethLookup(layer) {
     data[i * 2] = band;
     data[i * 2 + 1] = 255;
   }
-  const texture = new DataTexture(data, 256, 1, RGFormat, UnsignedByteType);
+  const texture = new DataTexture(data, size, 1, RGFormat, UnsignedByteType);
   texture.magFilter = NearestFilter;
   texture.minFilter = NearestFilter;
   texture.generateMipmaps = false;
