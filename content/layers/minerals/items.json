@@ -549,5 +549,531 @@
       "https://en.wikipedia.org/wiki/Ankleshwar",
       "https://ibm.gov.in/"
     ]
+  },
+  {
+    "id": "singareni",
+    "status": "draft",
+    "name": {
+      "en": "Godavari valley coalfield",
+      "hi": "गोदावरी घाटी कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 17.55,
+      "lon": 80.62
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "blurb": {
+      "en": "The south's only coal, along the Godavari from Kothagudem to Ramagundam, worked by the Singareni company since 1889 and the fuel for Telangana's power stations.",
+      "hi": "दक्षिण का एकमात्र कोयला, कोठागुडेम से रामागुंडम तक गोदावरी के किनारे, 1889 से सिंगरेनी कंपनी द्वारा खनित और तेलंगाना के विद्युत संयंत्रों का ईंधन।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Singareni_Collieries_Company",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "ib-valley",
+    "status": "draft",
+    "name": {
+      "en": "Ib valley coalfield",
+      "hi": "इब घाटी कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 21.83,
+      "lon": 83.92
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "blurb": {
+      "en": "Odisha's second field after Talcher, around Jharsuguda and Brajrajnagar, dug in vast open-cast pits and feeding the aluminium smelters and power plants nearby.",
+      "hi": "तालचेर के बाद ओडिशा का दूसरा क्षेत्र, झारसुगुड़ा और ब्रजराजनगर के आसपास, विशाल खुली खदानों में खनित और पास के एल्युमिनियम प्रगालकों तथा विद्युत संयंत्रों का ईंधन।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ib_Valley_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "neyveli-lignite",
+    "status": "draft",
+    "name": {
+      "en": "Neyveli lignite",
+      "hi": "नेवेली लिग्नाइट"
+    },
+    "anchor": {
+      "lat": 11.6,
+      "lon": 79.49
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "blurb": {
+      "en": "Brown coal under the Cuddalore plain, younger and softer than the eastern coals, stripped from three open-cast mines since 1957 and burnt on the spot.",
+      "hi": "कुड्डालोर मैदान के नीचे भूरा कोयला, पूर्वी कोयलों से नया और नरम, 1957 से तीन खुली खदानों से निकाला और वहीं जलाया जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Neyveli",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "north-karanpura",
+    "status": "draft",
+    "name": {
+      "en": "North Karanpura coalfield",
+      "hi": "उत्तरी करणपुरा कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 23.78,
+      "lon": 85.1
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "blurb": {
+      "en": "The largest of the Damodar valley fields by reserve, across Hazaribagh and Chatra, opened late because it lay under forest and villages rather than beside a railway.",
+      "hi": "भंडार से दामोदर घाटी का सबसे बड़ा क्षेत्र, हज़ारीबाग और चतरा में फैला, देर से खुला क्योंकि यह रेलवे के पास नहीं बल्कि जंगल और गाँवों के नीचे था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/North_Karanpura_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "wardha-valley",
+    "status": "draft",
+    "name": {
+      "en": "Wardha valley coalfield",
+      "hi": "वर्धा घाटी कोयला क्षेत्र"
+    },
+    "anchor": {
+      "lat": 19.95,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "blurb": {
+      "en": "Maharashtra's coal, along the Wardha river around Chandrapur and Ballarpur, which is why the state's biggest power stations stand there.",
+      "hi": "महाराष्ट्र का कोयला, चंद्रपुर और बल्लारपुर के आसपास वर्धा नदी के किनारे, इसीलिए राज्य के सबसे बड़े विद्युत संयंत्र वहीं खड़े हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Wardha_Valley_Coalfield",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "dalli-rajhara",
+    "status": "draft",
+    "name": {
+      "en": "Dalli-Rajhara",
+      "hi": "दल्ली-राजहरा"
+    },
+    "anchor": {
+      "lat": 20.58,
+      "lon": 81.08
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "iron",
+    "priority": 2,
+    "blurb": {
+      "en": "The hills that feed Bhilai, ninety kilometres south of the works by a railway built for the ore alone; the mines are the steel plant's own.",
+      "hi": "वे पहाड़ियाँ जो भिलाई को अयस्क देती हैं, केवल अयस्क के लिए बनी रेल से कारखाने के नब्बे किलोमीटर दक्षिण; खदानें इस्पात संयंत्र की अपनी हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dalli_Rajhara",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "chiria",
+    "status": "draft",
+    "name": {
+      "en": "Chiria",
+      "hi": "चिरिया"
+    },
+    "anchor": {
+      "lat": 22.3,
+      "lon": 85.3
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "iron",
+    "priority": 2,
+    "blurb": {
+      "en": "The largest single iron-ore deposit in Asia, in the Saranda forest of West Singhbhum, held by SAIL and mined together with Gua next to it.",
+      "hi": "एशिया का सबसे बड़ा एकल लौह अयस्क भंडार, पश्चिमी सिंहभूम के सारंडा जंगल में, सेल के पास और बग़ल के गुआ के साथ खनित।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chiria",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "goa-iron",
+    "status": "draft",
+    "name": {
+      "en": "Goa iron belt",
+      "hi": "गोवा लौह पट्टी"
+    },
+    "anchor": {
+      "lat": 15.59,
+      "lon": 73.95
+    },
+    "regions": [
+      "IN-GA"
+    ],
+    "category": "iron",
+    "priority": 3,
+    "blurb": {
+      "en": "Low-grade ore from the Bicholim hills, barged down the Mandovi and Zuari to Mormugao and shipped to Japan and China for decades, until the courts stopped mining in 2018.",
+      "hi": "बिचोलिम पहाड़ियों का निम्न-श्रेणी अयस्क, मांडवी और जुआरी से नाव द्वारा मुरगाँव तक और दशकों तक जापान-चीन को निर्यात, जब तक अदालतों ने 2018 में खनन नहीं रोका।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mining_in_Goa",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "kudremukh",
+    "status": "draft",
+    "name": {
+      "en": "Kudremukh",
+      "hi": "कुद्रेमुख"
+    },
+    "anchor": {
+      "lat": 13.22,
+      "lon": 75.27
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "iron",
+    "priority": 3,
+    "blurb": {
+      "en": "A magnetite mountain in the Western Ghats, mined from 1980 and piped as slurry to Mangaluru for export, closed in 2005 to protect the national park around it.",
+      "hi": "पश्चिमी घाट में मैग्नेटाइट का पहाड़, 1980 से खनित और निर्यात के लिए स्लरी पाइप से मंगलुरु भेजा गया, 2005 में चारों ओर के राष्ट्रीय उद्यान की रक्षा के लिए बंद।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kudremukh",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "sukinda",
+    "status": "draft",
+    "name": {
+      "en": "Sukinda",
+      "hi": "सुकिंडा"
+    },
+    "anchor": {
+      "lat": 21.02,
+      "lon": 85.8
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "chromite",
+    "priority": 1,
+    "blurb": {
+      "en": "Almost all of India's chromite, the ore of chromium for stainless steel, in one valley of Jajpur district; the open pits and their waste made it one of the most polluted places in the world.",
+      "hi": "भारत का लगभग समूचा क्रोमाइट, स्टेनलेस इस्पात के लिए क्रोमियम का अयस्क, जाजपुर ज़िले की एक घाटी में; खुली खदानों और उनके कचरे ने इसे दुनिया के सबसे प्रदूषित स्थानों में गिना दिया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sukinda",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "lohardaga",
+    "status": "draft",
+    "name": {
+      "en": "Lohardaga",
+      "hi": "लोहरदगा"
+    },
+    "anchor": {
+      "lat": 23.43,
+      "lon": 84.68
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "bauxite",
+    "priority": 3,
+    "blurb": {
+      "en": "Bauxite capping the flat-topped hills of the Ranchi plateau, mined since the 1930s and railed to the Muri alumina refinery.",
+      "hi": "राँची पठार की सपाट चोटियों पर बॉक्साइट की परत, 1930 के दशक से खनित और रेल से मुरी एल्युमिना रिफ़ाइनरी को भेजी जाती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lohardaga",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "amarkantak",
+    "status": "draft",
+    "name": {
+      "en": "Amarkantak plateau",
+      "hi": "अमरकंटक पठार"
+    },
+    "anchor": {
+      "lat": 22.68,
+      "lon": 81.76
+    },
+    "regions": [
+      "IN-MP",
+      "IN-CG"
+    ],
+    "category": "bauxite",
+    "priority": 3,
+    "blurb": {
+      "en": "Bauxite on the laterite plateaus where the Narmada and the Son rise, straddling Madhya Pradesh and Chhattisgarh, feeding the Korba aluminium smelter.",
+      "hi": "लैटेराइट पठारों पर बॉक्साइट, जहाँ नर्मदा और सोन निकलती हैं, मध्य प्रदेश और छत्तीसगढ़ के बीच, कोरबा एल्युमिनियम प्रगालक को अयस्क देता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Amarkantak",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "kolhapur-bauxite",
+    "status": "draft",
+    "name": {
+      "en": "Kolhapur bauxite",
+      "hi": "कोल्हापुर बॉक्साइट"
+    },
+    "anchor": {
+      "lat": 16.41,
+      "lon": 73.99
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "bauxite",
+    "priority": 3,
+    "blurb": {
+      "en": "The Western Ghats' laterite plateaus above Radhanagari, the west coast's bauxite, sent down to the Belagavi refinery.",
+      "hi": "राधानगरी के ऊपर पश्चिमी घाट के लैटेराइट पठार, पश्चिमी तट का बॉक्साइट, बेलगावी रिफ़ाइनरी को भेजा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Radhanagari",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "nagpur-bhandara",
+    "status": "draft",
+    "name": {
+      "en": "Nagpur-Bhandara manganese",
+      "hi": "नागपुर-भंडारा मैंगनीज़"
+    },
+    "anchor": {
+      "lat": 21.45,
+      "lon": 79.55
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "manganese",
+    "priority": 2,
+    "blurb": {
+      "en": "The belt that continues Balaghat's across the state line, worked by MOIL at Dongri Buzurg, Gumgaon and Kandri; together they are most of India's manganese.",
+      "hi": "वह पट्टी जो राज्य सीमा पार बालाघाट की पट्टी को आगे बढ़ाती है, डोंगरी बुज़ुर्ग, गुमगाँव और कांद्री में मॉयल द्वारा खनित; मिलकर ये भारत का अधिकांश मैंगनीज़ हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/MOIL",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "ghatsila",
+    "status": "draft",
+    "name": {
+      "en": "Ghatsila copper belt",
+      "hi": "घाटशिला ताँबा पट्टी"
+    },
+    "anchor": {
+      "lat": 22.52,
+      "lon": 86.45
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "category": "copper",
+    "priority": 2,
+    "blurb": {
+      "en": "The Singhbhum copper belt, mined at Mosabani and Rakha for a century, with the smelter at Ghatsila that was Hindustan Copper's first.",
+      "hi": "सिंहभूम ताँबा पट्टी, मोसाबनी और राखा में सौ वर्ष से खनित, घाटशिला के प्रगालक सहित जो हिंदुस्तान कॉपर का पहला था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ghatsila",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "nellore-mica",
+    "status": "draft",
+    "name": {
+      "en": "Nellore mica belt",
+      "hi": "नेल्लोर अभ्रक पट्टी"
+    },
+    "anchor": {
+      "lat": 14.25,
+      "lon": 79.75
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "mica",
+    "priority": 3,
+    "blurb": {
+      "en": "Green mica from the pegmatites around Gudur, the south's counterpart to Koderma, once exported for electrical insulation and now largely idle.",
+      "hi": "गुडूर के आसपास के पेग्मेटाइट से हरा अभ्रक, कोडरमा का दक्षिणी जोड़, कभी बिजली के रोधन के लिए निर्यात होता था और अब प्रायः बंद।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gudur",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "tummalapalle",
+    "status": "draft",
+    "name": {
+      "en": "Tummalapalle",
+      "hi": "तुम्मलपल्ले"
+    },
+    "anchor": {
+      "lat": 14.32,
+      "lon": 78.27
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "uranium",
+    "priority": 3,
+    "blurb": {
+      "en": "A uranium deposit in Kadapa district found to be among the largest in the world in 2011, mined underground since 2012 for the country's reactors.",
+      "hi": "कडप्पा ज़िले का यूरेनियम भंडार, 2011 में दुनिया के सबसे बड़ों में पाया गया, देश के रिएक्टरों के लिए 2012 से भूमिगत खनित।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tummalapalle_uranium_mine",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "bombay-high",
+    "status": "draft",
+    "name": {
+      "en": "Bombay High",
+      "hi": "बॉम्बे हाई"
+    },
+    "anchor": {
+      "lat": 18.87,
+      "lon": 72.95
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "petroleum",
+    "priority": 1,
+    "blurb": {
+      "en": "India's largest oilfield, 160 km out to sea west of Mumbai, found in 1974; its oil and gas come ashore at Uran, where this marker stands, and it still gives a third of the country's crude.",
+      "hi": "भारत का सबसे बड़ा तेल क्षेत्र, मुंबई के पश्चिम में समुद्र में 160 किमी दूर, 1974 में मिला; इसका तेल और गैस उरण में तट पर आते हैं, जहाँ यह चिह्न है, और यह अब भी देश के कच्चे तेल का एक तिहाई देता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mumbai_High_Field",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "kg-basin",
+    "status": "draft",
+    "name": {
+      "en": "Krishna-Godavari basin",
+      "hi": "कृष्णा-गोदावरी बेसिन"
+    },
+    "anchor": {
+      "lat": 16.96,
+      "lon": 82.25
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "petroleum",
+    "priority": 2,
+    "blurb": {
+      "en": "Gas under the delta and the deep water beyond it, landed at Kakinada; the KG-D6 field of 2009 was the largest gas find in the country, and its output fell far short of what was promised.",
+      "hi": "डेल्टा और उसके आगे गहरे पानी के नीचे गैस, काकीनाडा में तट पर लाई जाती है; 2009 का केजी-डी6 क्षेत्र देश की सबसे बड़ी गैस खोज था, और इसका उत्पादन वादे से बहुत कम रहा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Krishna_Godavari_Basin",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "barmer",
+    "status": "draft",
+    "name": {
+      "en": "Barmer",
+      "hi": "बाड़मेर"
+    },
+    "anchor": {
+      "lat": 25.75,
+      "lon": 71.39
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "petroleum",
+    "priority": 2,
+    "blurb": {
+      "en": "The Mangala field in the Thar desert, found in 2004 and the biggest onshore discovery in decades; its waxy crude is kept warm in a heated pipeline all the way to the Gujarat coast.",
+      "hi": "थार रेगिस्तान में मंगला क्षेत्र, 2004 में मिला और दशकों में सबसे बड़ी थलीय खोज; इसका मोमी कच्चा तेल गुजरात तट तक गर्म पाइपलाइन में गर्म रखा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mangala_Area",
+      "https://ibm.gov.in/"
+    ]
+  },
+  {
+    "id": "naharkatia",
+    "status": "draft",
+    "name": {
+      "en": "Naharkatia-Moran",
+      "hi": "नहरकटिया-मोरान"
+    },
+    "anchor": {
+      "lat": 27.37,
+      "lon": 95.32
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "petroleum",
+    "priority": 3,
+    "blurb": {
+      "en": "The Upper Assam fields opened in the 1950s beyond old Digboi, worked from Duliajan; their crude runs by pipeline to the refineries at Numaligarh, Guwahati and Barauni.",
+      "hi": "पुराने डिगबोई से आगे 1950 के दशक में खुले ऊपरी असम के क्षेत्र, दुलियाजान से संचालित; इनका कच्चा तेल पाइपलाइन से नुमालीगढ़, गुवाहाटी और बरौनी की रिफ़ाइनरियों तक जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Duliajan",
+      "https://ibm.gov.in/"
+    ]
   }
 ]

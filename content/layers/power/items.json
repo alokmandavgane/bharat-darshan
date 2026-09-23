@@ -622,5 +622,1031 @@
     "regions": [
       "IN-GJ"
     ]
+  },
+  {
+    "id": "sasan",
+    "status": "draft",
+    "name": {
+      "en": "Sasan Ultra Mega",
+      "hi": "सासन अल्ट्रा मेगा"
+    },
+    "anchor": {
+      "lat": 23.97,
+      "lon": 82.6
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "coal",
+    "priority": 1,
+    "capacity_mw": 3960,
+    "commissioned": 2013,
+    "blurb": {
+      "en": "One of the ultra mega projects of the 2000s, on the Singrauli field beside Vindhyachal, with its own captive mines. Six units of 660 MW, the first supercritical ones built in India at that scale.",
+      "hi": "2000 के दशक की अल्ट्रा मेगा परियोजनाओं में से एक, विंध्याचल के पास सिंगरौली क्षेत्र पर, अपनी खदानों सहित। 660 मेगावाट की छह इकाइयाँ, भारत में इस पैमाने पर बनी पहली सुपरक्रिटिकल इकाइयाँ।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sasan_Ultra_Mega_Power_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "tiroda",
+    "status": "draft",
+    "name": {
+      "en": "Tiroda",
+      "hi": "तिरोड़ा"
+    },
+    "anchor": {
+      "lat": 21.42,
+      "lon": 79.97
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 3300,
+    "commissioned": 2011,
+    "blurb": {
+      "en": "Maharashtra's largest station, in Gondia district on the Wardha-Wainganga coal country, built by Adani to sell to the state's distribution companies.",
+      "hi": "गोंदिया ज़िले में, वर्धा-वैनगंगा कोयला क्षेत्र पर महाराष्ट्र का सबसे बड़ा संयंत्र, अदाणी ने राज्य की वितरण कंपनियों को बेचने के लिए बनाया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tiroda_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "chandrapur",
+    "status": "draft",
+    "name": {
+      "en": "Chandrapur Super Thermal",
+      "hi": "चंद्रपुर सुपर थर्मल"
+    },
+    "anchor": {
+      "lat": 19.99,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 2920,
+    "commissioned": 1983,
+    "blurb": {
+      "en": "The state generator's biggest plant, on the Wardha valley coalfield, and the reason Chandrapur is counted among India's most polluted towns.",
+      "hi": "वर्धा घाटी कोयला क्षेत्र पर राज्य विद्युत कंपनी का सबसे बड़ा संयंत्र, और वह कारण जिससे चंद्रपुर भारत के सबसे प्रदूषित नगरों में गिना जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chandrapur_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kahalgaon",
+    "status": "draft",
+    "name": {
+      "en": "Kahalgaon",
+      "hi": "कहलगाँव"
+    },
+    "anchor": {
+      "lat": 25.24,
+      "lon": 87.26
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2340,
+    "commissioned": 1992,
+    "blurb": {
+      "en": "NTPC's station on the Ganga east of Bhagalpur, Bihar's largest, burning Rajmahal coal from across the river in Jharkhand.",
+      "hi": "भागलपुर के पूर्व में गंगा पर एनटीपीसी का संयंत्र, बिहार का सबसे बड़ा, नदी पार झारखंड के राजमहल का कोयला जलाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kahalgaon_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "farakka",
+    "status": "draft",
+    "name": {
+      "en": "Farakka",
+      "hi": "फरक्का"
+    },
+    "anchor": {
+      "lat": 24.77,
+      "lon": 87.9
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2100,
+    "commissioned": 1986,
+    "blurb": {
+      "en": "Beside the Farakka barrage on the Ganga, taking its coal by rail from the Rajmahal mines and its water from the feeder canal.",
+      "hi": "गंगा पर फरक्का बैराज के पास, राजमहल खदानों से रेल द्वारा कोयला और फीडर नहर से पानी लेता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Farakka_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "anpara",
+    "status": "draft",
+    "name": {
+      "en": "Anpara",
+      "hi": "अनपरा"
+    },
+    "anchor": {
+      "lat": 24.2,
+      "lon": 82.79
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 3830,
+    "commissioned": 1986,
+    "blurb": {
+      "en": "Uttar Pradesh's own station on the Rihand reservoir, grown in four stages since 1986; with Rihand, Vindhyachal and Sasan around the same water it makes Singrauli India's power capital.",
+      "hi": "रिहंद जलाशय पर उत्तर प्रदेश का अपना संयंत्र, 1986 से चार चरणों में बढ़ा; इसी पानी के चारों ओर रिहंद, विंध्याचल और सासन के साथ यह सिंगरौली को भारत की ऊर्जा राजधानी बनाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anpara_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "simhadri",
+    "status": "draft",
+    "name": {
+      "en": "Simhadri",
+      "hi": "सिंहाद्रि"
+    },
+    "anchor": {
+      "lat": 17.59,
+      "lon": 83.09
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2000,
+    "commissioned": 2002,
+    "blurb": {
+      "en": "NTPC's coastal station south of Visakhapatnam, cooled with sea water and fed from Talcher by a dedicated rail link.",
+      "hi": "विशाखापत्तनम के दक्षिण में एनटीपीसी का तटीय संयंत्र, समुद्री जल से ठंडा और तालचेर से एक समर्पित रेल मार्ग से पोषित।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Simhadri_Super_Thermal_Power_Plant",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "neyveli",
+    "status": "draft",
+    "name": {
+      "en": "Neyveli",
+      "hi": "नेवेली"
+    },
+    "anchor": {
+      "lat": 11.6,
+      "lon": 79.49
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "coal",
+    "priority": 2,
+    "capacity_mw": 2900,
+    "commissioned": 1962,
+    "blurb": {
+      "en": "Tamil Nadu's lignite town: open-cast mines since 1957 and a cluster of stations built on them, the oldest of which ran from 1962 until its retirement in 2020.",
+      "hi": "तमिलनाडु का लिग्नाइट नगर: 1957 से खुली खदानें और उन पर बने संयंत्रों का समूह, जिनमें सबसे पुराना 1962 से 2020 में बंद होने तक चला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Neyveli_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kudgi",
+    "status": "draft",
+    "name": {
+      "en": "Kudgi",
+      "hi": "कुडगी"
+    },
+    "anchor": {
+      "lat": 16.55,
+      "lon": 75.97
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2400,
+    "commissioned": 2016,
+    "blurb": {
+      "en": "NTPC's newest station in the south, on the Krishna in Vijayapura district, burning coal railed nearly a thousand kilometres from the Mahanadi fields.",
+      "hi": "विजयपुरा ज़िले में कृष्णा पर, दक्षिण में एनटीपीसी का सबसे नया संयंत्र, महानदी क्षेत्रों से लगभग हज़ार किलोमीटर रेल से लाया कोयला जलाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kudgi_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "mauda",
+    "status": "draft",
+    "name": {
+      "en": "Mauda",
+      "hi": "मौदा"
+    },
+    "anchor": {
+      "lat": 21.09,
+      "lon": 79.36
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2320,
+    "commissioned": 2013,
+    "blurb": {
+      "en": "East of Nagpur on the Vidarbha coalfields, NTPC's first plant in Maharashtra; its two stages were built within five years of each other.",
+      "hi": "नागपुर के पूर्व में विदर्भ के कोयला क्षेत्रों पर, महाराष्ट्र में एनटीपीसी का पहला संयंत्र; इसके दो चरण पाँच वर्ष के भीतर बने।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mauda_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "dadri",
+    "status": "draft",
+    "name": {
+      "en": "Dadri",
+      "hi": "दादरी"
+    },
+    "anchor": {
+      "lat": 28.59,
+      "lon": 77.61
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2650,
+    "commissioned": 1991,
+    "blurb": {
+      "en": "Delhi's power plant, forty kilometres out in Uttar Pradesh: coal units and a gas station on one site, with much of its output contracted to the capital.",
+      "hi": "दिल्ली का बिजली संयंत्र, उत्तर प्रदेश में चालीस किलोमीटर दूर: एक ही स्थल पर कोयला इकाइयाँ और एक गैस संयंत्र, जिसका बड़ा हिस्सा राजधानी को अनुबंधित है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/National_Capital_Thermal_Power_Plant",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "suratgarh",
+    "status": "draft",
+    "name": {
+      "en": "Suratgarh",
+      "hi": "सूरतगढ़"
+    },
+    "anchor": {
+      "lat": 29.32,
+      "lon": 73.88
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2320,
+    "commissioned": 1998,
+    "blurb": {
+      "en": "Rajasthan's first big coal station, in the desert near the Punjab border, watered by the Indira Gandhi canal and fed by coal from the far east of the country.",
+      "hi": "पंजाब सीमा के पास रेगिस्तान में राजस्थान का पहला बड़ा कोयला संयंत्र, इंदिरा गांधी नहर से पानी और देश के सुदूर पूर्व से कोयला पाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Suratgarh_Super_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "krishnapatnam",
+    "status": "draft",
+    "name": {
+      "en": "Krishnapatnam",
+      "hi": "कृष्णपट्टनम"
+    },
+    "anchor": {
+      "lat": 14.28,
+      "lon": 80.05
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2640,
+    "commissioned": 2015,
+    "blurb": {
+      "en": "Sembcorp's station beside Krishnapatnam port on the Nellore coast, burning imported coal, next door to the state's own 1,600 MW Sri Damodaram Sanjeevaiah plant.",
+      "hi": "नेल्लोर तट पर कृष्णपट्टनम बंदरगाह के पास सेम्बकॉर्प का संयंत्र, आयातित कोयला जलाता है, राज्य के अपने 1,600 मेगावाट श्री दामोदरम संजीवैया संयंत्र के बग़ल में।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Krishnapatnam_Port",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "nabinagar",
+    "status": "draft",
+    "name": {
+      "en": "Nabinagar",
+      "hi": "नबीनगर"
+    },
+    "anchor": {
+      "lat": 24.6,
+      "lon": 84.12
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 1980,
+    "commissioned": 2019,
+    "blurb": {
+      "en": "NTPC's plant in Aurangabad district on the Son, the newest of Bihar's stations, with a second 1,000 MW plant built alongside it with the railways.",
+      "hi": "सोन पर औरंगाबाद ज़िले में एनटीपीसी का संयंत्र, बिहार का सबसे नया, जिसके साथ रेलवे के संग बना 1,000 मेगावाट का दूसरा संयंत्र भी है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nabinagar_Super_Thermal_Power_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "mejia",
+    "status": "draft",
+    "name": {
+      "en": "Mejia",
+      "hi": "मेजिया"
+    },
+    "anchor": {
+      "lat": 23.47,
+      "lon": 87.13
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2340,
+    "commissioned": 1996,
+    "blurb": {
+      "en": "The Damodar Valley Corporation's largest station, in Bankura district on the Raniganj coal, one of the chain of plants the valley authority built on the model of the Tennessee Valley.",
+      "hi": "बाँकुड़ा ज़िले में रानीगंज कोयले पर दामोदर घाटी निगम का सबसे बड़ा संयंत्र, टेनेसी घाटी के नमूने पर घाटी प्राधिकरण द्वारा बनाए संयंत्रों की शृंखला में से एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mejia_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "wanakbori",
+    "status": "draft",
+    "name": {
+      "en": "Wanakbori",
+      "hi": "वणाकबोरी"
+    },
+    "anchor": {
+      "lat": 22.88,
+      "lon": 73.35
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "coal",
+    "priority": 3,
+    "capacity_mw": 2270,
+    "commissioned": 1982,
+    "blurb": {
+      "en": "Gujarat's state station on the Mahi river near Kheda, eight units built since 1982, the state's largest until the Mundra plants on the coast.",
+      "hi": "खेड़ा के पास माही नदी पर गुजरात का राज्य संयंत्र, 1982 से आठ इकाइयाँ, तट पर मुंद्रा संयंत्रों के बनने तक राज्य का सबसे बड़ा।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Wanakbori_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "idukki",
+    "status": "draft",
+    "name": {
+      "en": "Idukki",
+      "hi": "इडुक्की"
+    },
+    "anchor": {
+      "lat": 9.84,
+      "lon": 76.97
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 780,
+    "commissioned": 1976,
+    "blurb": {
+      "en": "Kerala's biggest station, an underground powerhouse fed from the arch dam across the Periyar; the reservoir is held by three dams between the Western Ghats' ridges.",
+      "hi": "केरल का सबसे बड़ा संयंत्र, पेरियार पर बने मेहराबी बाँध से पोषित भूमिगत विद्युत गृह; जलाशय पश्चिमी घाट की चोटियों के बीच तीन बाँधों से थमा है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Idukki_Dam",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "sharavathi",
+    "status": "draft",
+    "name": {
+      "en": "Sharavathi",
+      "hi": "शरावती"
+    },
+    "anchor": {
+      "lat": 14.2,
+      "lon": 74.78
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 1035,
+    "commissioned": 1964,
+    "blurb": {
+      "en": "Where the Sharavathi drops off the Ghats at Jog Falls, the Linganamakki reservoir feeds a powerhouse that was the largest in India when it opened, and still carries much of Karnataka's load.",
+      "hi": "जहाँ शरावती जोग जलप्रपात पर घाट से गिरती है, लिंगनमक्की जलाशय उस विद्युत गृह को पानी देता है जो खुलने पर भारत का सबसे बड़ा था और अब भी कर्नाटक का बड़ा भार उठाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sharavathi_Hydroelectric_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "nagarjuna-sagar",
+    "status": "draft",
+    "name": {
+      "en": "Nagarjuna Sagar",
+      "hi": "नागार्जुन सागर"
+    },
+    "anchor": {
+      "lat": 16.6,
+      "lon": 79.29
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "category": "hydro",
+    "priority": 2,
+    "capacity_mw": 816,
+    "commissioned": 1978,
+    "blurb": {
+      "en": "The masonry dam across the Krishna that irrigates the Nalgonda and Guntur plains, with a powerhouse on the Telangana bank; the reservoir drowned the Buddhist site of Nagarjunakonda, moved to an island.",
+      "hi": "कृष्णा पर पत्थर का बाँध जो नलगोंडा और गुंटूर के मैदान सींचता है, तेलंगाना तट पर विद्युत गृह सहित; जलाशय ने बौद्ध स्थल नागार्जुनकोंडा को डुबो दिया, जिसे एक द्वीप पर ले जाया गया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nagarjuna_Sagar_Dam",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "baglihar",
+    "status": "draft",
+    "name": {
+      "en": "Baglihar",
+      "hi": "बगलिहार"
+    },
+    "anchor": {
+      "lat": 33.15,
+      "lon": 75.73
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 900,
+    "commissioned": 2008,
+    "blurb": {
+      "en": "A run-of-river station on the Chenab in Ramban, and the subject of the Indus Waters Treaty dispute settled by a neutral expert in 2007.",
+      "hi": "रामबन में चिनाब पर नदी-प्रवाह संयंत्र, और सिंधु जल संधि के उस विवाद का विषय जिसे 2007 में एक तटस्थ विशेषज्ञ ने सुलझाया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Baglihar_Dam",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "karcham-wangtoo",
+    "status": "draft",
+    "name": {
+      "en": "Karcham Wangtoo",
+      "hi": "करछम वांगतू"
+    },
+    "anchor": {
+      "lat": 31.53,
+      "lon": 78.05
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 1091,
+    "commissioned": 2011,
+    "blurb": {
+      "en": "The largest private hydro station in the country, on the Sutlej in Kinnaur just upstream of Nathpa Jhakri, the two together taking most of the river's fall through the gorge.",
+      "hi": "देश का सबसे बड़ा निजी जल-विद्युत संयंत्र, किन्नौर में सतलुज पर नाथपा झाकड़ी से ठीक ऊपर, दोनों मिलकर घाटी में नदी का अधिकांश ढलान उपयोग करते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Karcham_Wangtoo_Hydroelectric_Plant",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "indira-sagar",
+    "status": "draft",
+    "name": {
+      "en": "Indira Sagar",
+      "hi": "इंदिरा सागर"
+    },
+    "anchor": {
+      "lat": 22.28,
+      "lon": 76.47
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 1000,
+    "commissioned": 2004,
+    "blurb": {
+      "en": "The biggest reservoir in India by volume, on the Narmada at Punasa, with Omkareshwar's dam a little downstream; the two were built together as one scheme.",
+      "hi": "आयतन से भारत का सबसे बड़ा जलाशय, पुनासा में नर्मदा पर, थोड़ा नीचे ओंकारेश्वर के बाँध सहित; दोनों एक ही योजना के रूप में साथ बने।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Indira_Sagar_Dam",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "teesta-iii",
+    "status": "draft",
+    "name": {
+      "en": "Teesta III",
+      "hi": "तीस्ता III"
+    },
+    "anchor": {
+      "lat": 27.6,
+      "lon": 88.64
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 1200,
+    "commissioned": 2017,
+    "blurb": {
+      "en": "Sikkim's largest station, at Chungthang, out of action since October 2023 when a glacial lake burst upstream and washed its dam away.",
+      "hi": "सिक्किम का सबसे बड़ा संयंत्र, चुंगथांग में, अक्टूबर 2023 से बंद, जब ऊपर एक हिमनद झील फटी और उसका बाँध बहा ले गई।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Teesta_III_Hydroelectric_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "hirakud",
+    "status": "draft",
+    "name": {
+      "en": "Hirakud",
+      "hi": "हीराकुद"
+    },
+    "anchor": {
+      "lat": 21.52,
+      "lon": 83.87
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 347,
+    "commissioned": 1956,
+    "blurb": {
+      "en": "The first big multipurpose dam of independent India, across the Mahanadi above Sambalpur; its earthen wall is among the longest in the world, and its two powerhouses are small beside its irrigation.",
+      "hi": "स्वतंत्र भारत का पहला बड़ा बहुउद्देशीय बाँध, संबलपुर के ऊपर महानदी पर; इसकी मिट्टी की दीवार दुनिया की सबसे लंबी में है, और इसके दो विद्युत गृह इसकी सिंचाई के आगे छोटे हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Hirakud_Dam",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kalinadi",
+    "status": "draft",
+    "name": {
+      "en": "Kalinadi",
+      "hi": "कालीनदी"
+    },
+    "anchor": {
+      "lat": 15.2,
+      "lon": 74.55
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 955,
+    "commissioned": 1985,
+    "blurb": {
+      "en": "A staircase of dams on the Kali in Uttara Kannada: Supa holds the water, Nagjhari's underground powerhouse takes the drop, and Kadra and Kodasalli use what is left.",
+      "hi": "उत्तर कन्नड़ में काली नदी पर बाँधों की सीढ़ी: सूपा पानी रोकता है, नागझरी का भूमिगत विद्युत गृह ढलान लेता है, और कद्रा तथा कोडसल्ली बचा हुआ उपयोग करते हैं।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kali_River_(Karnataka)",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "purulia",
+    "status": "draft",
+    "name": {
+      "en": "Purulia pumped storage",
+      "hi": "पुरुलिया पंप भंडारण"
+    },
+    "anchor": {
+      "lat": 23.29,
+      "lon": 86.61
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "hydro",
+    "priority": 3,
+    "capacity_mw": 900,
+    "commissioned": 2008,
+    "blurb": {
+      "en": "Two reservoirs on the Ayodhya hills, one above the other: water is pumped up at night with spare power and let down through the turbines at the evening peak.",
+      "hi": "अयोध्या पहाड़ियों पर एक के ऊपर एक दो जलाशय: रात में बची बिजली से पानी ऊपर चढ़ाया जाता है और शाम की चोटी पर टरबाइनों से नीचे उतारा जाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Purulia_Pumped_Storage_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kaiga",
+    "status": "draft",
+    "name": {
+      "en": "Kaiga",
+      "hi": "कैगा"
+    },
+    "anchor": {
+      "lat": 14.87,
+      "lon": 74.44
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "nuclear",
+    "priority": 3,
+    "capacity_mw": 880,
+    "commissioned": 2000,
+    "blurb": {
+      "en": "Four heavy-water reactors in the forests of Uttara Kannada on the Kali river, with two more of 700 MW under construction.",
+      "hi": "उत्तर कन्नड़ के जंगलों में काली नदी पर चार भारी-जल रिएक्टर, 700 मेगावाट के दो और निर्माणाधीन।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kaiga_Atomic_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kakrapar",
+    "status": "draft",
+    "name": {
+      "en": "Kakrapar",
+      "hi": "काकरापार"
+    },
+    "anchor": {
+      "lat": 21.24,
+      "lon": 73.35
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "nuclear",
+    "priority": 3,
+    "capacity_mw": 1440,
+    "commissioned": 1993,
+    "blurb": {
+      "en": "On the Tapi in south Gujarat: two older 220 MW reactors, and the first two of the indigenous 700 MW design, which began generating in 2021 and 2024.",
+      "hi": "दक्षिण गुजरात में तापी पर: दो पुराने 220 मेगावाट रिएक्टर, और स्वदेशी 700 मेगावाट डिज़ाइन के पहले दो, जिन्होंने 2021 और 2024 में उत्पादन शुरू किया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kakrapar_Atomic_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "narora",
+    "status": "draft",
+    "name": {
+      "en": "Narora",
+      "hi": "नरोरा"
+    },
+    "anchor": {
+      "lat": 28.16,
+      "lon": 78.41
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "nuclear",
+    "priority": 3,
+    "capacity_mw": 440,
+    "commissioned": 1991,
+    "blurb": {
+      "en": "The northern plain's only nuclear station, on the Ganga in Bulandshahr, remembered for a 1993 turbine fire the operators brought under control without a release.",
+      "hi": "उत्तरी मैदान का एकमात्र परमाणु संयंत्र, बुलंदशहर में गंगा पर, 1993 की टरबाइन आग के लिए याद किया जाता है जिसे संचालकों ने बिना रिसाव काबू किया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Narora_Atomic_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kalpakkam",
+    "status": "draft",
+    "name": {
+      "en": "Kalpakkam",
+      "hi": "कलपक्कम"
+    },
+    "anchor": {
+      "lat": 12.56,
+      "lon": 80.17
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "nuclear",
+    "priority": 2,
+    "capacity_mw": 440,
+    "commissioned": 1984,
+    "blurb": {
+      "en": "The Madras station south of Chennai, the first built wholly by Indian engineers, and next to it the research centre and the 500 MW fast breeder reactor meant to close the thorium fuel cycle.",
+      "hi": "चेन्नई के दक्षिण में मद्रास संयंत्र, पूरी तरह भारतीय इंजीनियरों द्वारा बना पहला, और उसके पास अनुसंधान केंद्र तथा 500 मेगावाट का फास्ट ब्रीडर रिएक्टर जो थोरियम ईंधन चक्र पूरा करने के लिए है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Madras_Atomic_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "rewa",
+    "status": "draft",
+    "name": {
+      "en": "Rewa Ultra Mega Solar",
+      "hi": "रीवा अल्ट्रा मेगा सौर"
+    },
+    "anchor": {
+      "lat": 24.53,
+      "lon": 81.55
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "solar",
+    "priority": 3,
+    "capacity_mw": 750,
+    "commissioned": 2018,
+    "blurb": {
+      "en": "The park that first sold solar power below the price of coal in India, and the first to supply a buyer outside its state: a share of its output runs the Delhi Metro.",
+      "hi": "वह पार्क जिसने भारत में पहली बार कोयले से सस्ती सौर बिजली बेची, और अपने राज्य के बाहर ख़रीदार को देने वाला पहला: इसके उत्पादन का एक हिस्सा दिल्ली मेट्रो चलाता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rewa_Ultra_Mega_Solar",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "charanka",
+    "status": "draft",
+    "name": {
+      "en": "Charanka",
+      "hi": "चरणका"
+    },
+    "anchor": {
+      "lat": 23.9,
+      "lon": 71.2
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "solar",
+    "priority": 3,
+    "capacity_mw": 730,
+    "commissioned": 2012,
+    "blurb": {
+      "en": "Gujarat's solar park on the edge of the Rann, the first of the big parks, where the state laid the roads and lines and let developers fill the plots.",
+      "hi": "रण के किनारे गुजरात का सौर पार्क, बड़े पार्कों में पहला, जहाँ राज्य ने सड़कें और लाइनें बिछाईं और डेवलपरों को भूखंड भरने दिए।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Charanka_Solar_Park",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "kamuthi",
+    "status": "draft",
+    "name": {
+      "en": "Kamuthi",
+      "hi": "कामुथी"
+    },
+    "anchor": {
+      "lat": 9.4,
+      "lon": 78.4
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "solar",
+    "priority": 3,
+    "capacity_mw": 648,
+    "commissioned": 2016,
+    "blurb": {
+      "en": "Adani's park in Ramanathapuram, briefly the world's largest single-site solar plant when it was finished in 2016, on the dry land south of Madurai.",
+      "hi": "रामनाथपुरम में अदाणी का पार्क, 2016 में पूरा होने पर कुछ समय के लिए दुनिया का सबसे बड़ा एकल-स्थल सौर संयंत्र, मदुरै के दक्षिण की सूखी भूमि पर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kamuthi_Solar_Power_Project",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "khavda",
+    "status": "draft",
+    "name": {
+      "en": "Khavda",
+      "hi": "खावड़ा"
+    },
+    "anchor": {
+      "lat": 23.85,
+      "lon": 69.7
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "solar",
+    "priority": 2,
+    "capacity_mw": 2000,
+    "commissioned": 2024,
+    "blurb": {
+      "en": "A renewable park on the Rann of Kutch near the Pakistan border meant to reach 30,000 MW of solar and wind, the largest anywhere; about 2,000 MW was running by 2024.",
+      "hi": "पाकिस्तान सीमा के पास कच्छ के रण पर नवीकरणीय पार्क, जिसे सौर और पवन के 30,000 मेगावाट तक पहुँचना है, कहीं भी सबसे बड़ा; 2024 तक लगभग 2,000 मेगावाट चालू था।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Khavda_Renewable_Energy_Park",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "brahmanvel",
+    "status": "draft",
+    "name": {
+      "en": "Brahmanvel",
+      "hi": "ब्रह्मणवेल"
+    },
+    "anchor": {
+      "lat": 21.0,
+      "lon": 74.4
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "wind",
+    "priority": 3,
+    "capacity_mw": 528,
+    "commissioned": 2008,
+    "blurb": {
+      "en": "Suzlon's wind farm on the Sahyadri ridges of Dhule district, for years the largest in the country, in the corridor where the monsoon wind funnels through the Ghats.",
+      "hi": "धुले ज़िले की सह्याद्रि चोटियों पर सुज़लॉन का पवन फ़ार्म, वर्षों तक देश का सबसे बड़ा, उस गलियारे में जहाँ मानसूनी हवा घाट से होकर बहती है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brahmanvel_Wind_Farm",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "bawana",
+    "status": "draft",
+    "name": {
+      "en": "Bawana",
+      "hi": "बवाना"
+    },
+    "anchor": {
+      "lat": 28.79,
+      "lon": 77.05
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "category": "gas",
+    "priority": 3,
+    "capacity_mw": 1500,
+    "commissioned": 2010,
+    "blurb": {
+      "en": "Delhi's own combined-cycle station in the north of the city, built for the 2010 Commonwealth Games and the largest gas plant in the country.",
+      "hi": "नगर के उत्तर में दिल्ली का अपना संयुक्त-चक्र संयंत्र, 2010 राष्ट्रमंडल खेलों के लिए बना और देश का सबसे बड़ा गैस संयंत्र।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pragati_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "uran",
+    "status": "draft",
+    "name": {
+      "en": "Uran",
+      "hi": "उरण"
+    },
+    "anchor": {
+      "lat": 18.88,
+      "lon": 72.94
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "gas",
+    "priority": 3,
+    "capacity_mw": 672,
+    "commissioned": 1983,
+    "blurb": {
+      "en": "Across the harbour from Mumbai, where the pipelines from Bombay High come ashore: the state's gas station burns what the offshore field sends.",
+      "hi": "मुंबई के बंदरगाह के उस पार, जहाँ बॉम्बे हाई की पाइपलाइनें तट पर आती हैं: राज्य का गैस संयंत्र वही जलाता है जो अपतटीय क्षेत्र भेजता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Uran_Gas_Turbine_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
+  },
+  {
+    "id": "gandhar",
+    "status": "draft",
+    "name": {
+      "en": "Gandhar",
+      "hi": "गंधार"
+    },
+    "anchor": {
+      "lat": 21.66,
+      "lon": 72.9
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "gas",
+    "priority": 3,
+    "capacity_mw": 657,
+    "commissioned": 1994,
+    "blurb": {
+      "en": "NTPC's combined-cycle plant near Bharuch on the Cambay basin's gas, one of the chain built along the HBJ pipeline in the 1990s.",
+      "hi": "खंभात बेसिन की गैस पर भरूच के पास एनटीपीसी का संयुक्त-चक्र संयंत्र, 1990 के दशक में एचबीजे पाइपलाइन के साथ बनी शृंखला में से एक।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Gandhar_Thermal_Power_Station",
+      "https://cea.nic.in/installed-capacity-report/"
+    ]
   }
 ]

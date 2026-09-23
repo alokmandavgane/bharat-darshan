@@ -2438,6 +2438,20 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-23, forty-fourth round: the industry layers filled out. The owner found the
+  minerals, power and steel pages thin. Added, all as drafts with a Wikipedia article and
+  the registry's publisher as sources: four steel plants (Angul, Meramandali, Sambalpur,
+  Nagarnar, so the page now says fifteen inland and three coastal); thirty-six power
+  stations (fifteen coal from Sasan and Tiroda down to Wanakbori, nine hydro from Idukki
+  and Sharavathi to Purulia's pumped storage, the four missing nuclear stations, Rewa,
+  Charanka, Kamuthi and Khavda for solar, Brahmanvel for wind, Bawana, Uran and Gandhar
+  for gas); and twenty-one mineral fields, with a `chromite` category for Sukinda, which
+  holds nearly all of India's. Offshore oil is anchored where it comes ashore -- Bombay
+  High at Uran, the KG basin at Kakinada -- and the blurb says so, because the ID raster
+  has no sea. Amarkantak sits on the MP-Chhattisgarh line and claims both.
+  Facts that want a reviewer's eye: Khavda's running capacity (about 2,000 MW of a
+  planned 30,000, 2024), Neyveli's combined figure after TPS-I retired, Anpara's four
+  stages summed, Teesta III listed at its rating though its dam went in October 2023.
 - 2026-09-23, forty-third round: one card, one stack (D14). The owner found the chrome
   confusing -- a menu for layers, a key card on the map, a sheet that was the contents,
   a page, a state and an item in turn, all in the same paper -- and asked for a

@@ -348,5 +348,105 @@
       "https://en.wikipedia.org/wiki/JSW_Steel",
       "https://steel.gov.in/"
     ]
+  },
+  {
+    "id": "angul",
+    "status": "draft",
+    "name": {
+      "en": "Angul",
+      "hi": "अंगुल"
+    },
+    "anchor": {
+      "lat": 20.84,
+      "lon": 85.1
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "inland",
+    "priority": 2,
+    "blurb": {
+      "en": "Jindal's plant on the Talcher coalfield, running since 2013, is the largest private works in the east. It makes iron from coal gas rather than coke, a route the field's non-coking coal allows.",
+      "hi": "तालचेर कोयला क्षेत्र पर जिंदल का संयंत्र, 2013 से चालू, पूर्व का सबसे बड़ा निजी कारखाना। यह कोक के बजाय कोयला-गैस से लोहा बनाता है, जो इस क्षेत्र के गैर-कोकिंग कोयले से संभव है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jindal_Steel_and_Power",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "meramandali",
+    "status": "draft",
+    "name": {
+      "en": "Meramandali",
+      "hi": "मेरामंडली"
+    },
+    "anchor": {
+      "lat": 20.9,
+      "lon": 85.35
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "inland",
+    "priority": 3,
+    "blurb": {
+      "en": "The old Bhushan Steel works near Dhenkanal, bought by Tata Steel out of insolvency in 2018 and run as its second Odisha plant, on the road between the Talcher coal and the Joda ore.",
+      "hi": "ढेंकानाल के पास पुराना भूषण स्टील कारखाना, जिसे टाटा स्टील ने 2018 में दिवालिया प्रक्रिया से खरीदा और अपने दूसरे ओडिशा संयंत्र के रूप में चलाता है, तालचेर के कोयले और जोड़ा के अयस्क के बीच की सड़क पर।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tata_Steel",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "sambalpur",
+    "status": "draft",
+    "name": {
+      "en": "Sambalpur",
+      "hi": "संबलपुर"
+    },
+    "anchor": {
+      "lat": 21.62,
+      "lon": 84.14
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "inland",
+    "priority": 3,
+    "blurb": {
+      "en": "Bhushan Power and Steel's plant at Rengali, taken over by JSW in 2021 after the insolvency courts, close to the Ib valley coalfield and the Hirakud reservoir that waters it.",
+      "hi": "रेंगाली में भूषण पावर एंड स्टील का संयंत्र, जिसे दिवालिया अदालतों के बाद 2021 में जेएसडब्ल्यू ने लिया, इब घाटी कोयला क्षेत्र और उसे पानी देने वाले हीराकुद जलाशय के पास।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/JSW_Steel",
+      "https://steel.gov.in/"
+    ]
+  },
+  {
+    "id": "nagarnar",
+    "status": "draft",
+    "name": {
+      "en": "Nagarnar",
+      "hi": "नगरनार"
+    },
+    "anchor": {
+      "lat": 19.13,
+      "lon": 82.09
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "inland",
+    "priority": 2,
+    "blurb": {
+      "en": "The iron-ore miner NMDC's own steel plant in Bastar, opened in 2023 after two decades of building, fed by slurry pipeline from its Bailadila mines eighty kilometres south.",
+      "hi": "लौह अयस्क खनिक एनएमडीसी का अपना इस्पात संयंत्र, बस्तर में, दो दशक के निर्माण के बाद 2023 में खुला, अस्सी किलोमीटर दक्षिण की अपनी बैलाडीला खदानों से स्लरी पाइपलाइन द्वारा पोषित।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/NMDC_Steel",
+      "https://steel.gov.in/"
+    ]
   }
 ]
