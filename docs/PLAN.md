@@ -2437,6 +2437,10 @@ docs/DEPLOY.md).
     no neighbour in the family has, largest first so the biggest keeps the plain colour.
     Items then carry `color`, and the engine draws per-area colours from an RGBA lookup
     (sRGB in the texture, decoded in the shader). The legend still shows the categories.
+  - Fixed: on the basin pages the river mesh took every click ("Other rivers") and a
+    hover named the state beneath. With an area fill on, the area now answers hover and
+    click; a line wins only if it is a named course within 4 px. District census maps
+    name the district on hover the same way.
   - The basins page could take the same family turn (`"by"` its own id) if Godavari and
     Krishna should differ there too; left as it is for now.
 
