@@ -111,8 +111,8 @@
       "licence": "cc-by-4.0",
       "retrieved": "2026-09",
       "note": {
-        "en": "State and union territory boundaries of Census of India lineage, and India's outline as per Survey of India. The set carries the 2019-20 reorganisations: Ladakh separate, and Dadra and Nagar Haveli and Daman and Diu merged.",
-        "hi": "भारत की जनगणना की वंशावली वाली राज्य और केंद्रशासित प्रदेश सीमाएँ, तथा भारतीय सर्वेक्षण विभाग के अनुसार भारत की रूपरेखा। इसमें 2019-20 के पुनर्गठन शामिल हैं: लद्दाख अलग, और दादरा तथा नगर हवेली और दमन तथा दीव विलीन।"
+        "en": "State and union territory boundaries of Census of India lineage, and India's outline as per Survey of India. The set carries the 2019-20 reorganisations: Ladakh separate, and Dadra and Nagar Haveli and Daman and Diu merged. Its Census 2011 district polygons are what the district census maps are drawn on: the 640 districts the census counted, keyed by the census's own district code.",
+        "hi": "भारत की जनगणना की वंशावली वाली राज्य और केंद्रशासित प्रदेश सीमाएँ, तथा भारतीय सर्वेक्षण विभाग के अनुसार भारत की रूपरेखा। इसमें 2019-20 के पुनर्गठन शामिल हैं: लद्दाख अलग, और दादरा तथा नगर हवेली और दमन तथा दीव विलीन। इसके जनगणना 2011 ज़िला बहुभुज वह आधार हैं जिन पर ज़िलेवार जनगणना मानचित्र बने हैं: वे 640 ज़िले जिनकी जनगणना ने गिनती की, जनगणना के अपने ज़िला कोड से जुड़े।"
       }
     },
     "survey-of-india": {
@@ -182,8 +182,8 @@
       "vintage": "2011",
       "retrieved": "2026-09",
       "note": {
-        "en": "India's last completed census. Every population and density figure in the atlas is from it, so the maps and the state cards cannot drift apart.",
-        "hi": "भारत की अंतिम पूर्ण जनगणना। एटलस का हर जनसंख्या और घनत्व आँकड़ा इसी से है, जिससे मानचित्र और राज्य कार्ड अलग नहीं हो सकते।"
+        "en": "India's last completed census. Every population and density figure in the atlas is from it, so the maps and the state cards cannot drift apart. District figures are worked out from its Primary Census Abstract, fetched from the Internet Archive's copy of the file's old address on censusindia.gov.in.",
+        "hi": "भारत की अंतिम पूर्ण जनगणना। एटलस का हर जनसंख्या और घनत्व आँकड़ा इसी से है, जिससे मानचित्र और राज्य कार्ड अलग नहीं हो सकते। ज़िलों के आँकड़े इसके प्राथमिक जनगणना सार से निकाले गए हैं, जो censusindia.gov.in पर फ़ाइल के पुराने पते की इंटरनेट आर्काइव प्रति से लिया गया।"
       }
     },
     "cea-installed-capacity": {

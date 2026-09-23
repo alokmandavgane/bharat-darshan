@@ -1,0 +1,82 @@
+{
+  "id": "district-child-sex-ratio",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Girls per 1,000 boys",
+    "hi": "प्रति 1,000 लड़कों पर लड़कियाँ"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "F_06"
+    ],
+    "denominator": [
+      "M_06"
+    ],
+    "per": 1000,
+    "digits": 0,
+    "_about": "The child sex ratio: girls aged 0-6 per thousand boys of the same age."
+  },
+  "unit": {
+    "en": "{n} girls per 1,000 boys",
+    "hi": "प्रति 1,000 लड़कों पर {n} लड़कियाँ"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#8a3a2c"
+    },
+    {
+      "from": 850,
+      "color": "#b8644a"
+    },
+    {
+      "from": 900,
+      "color": "#d89a74"
+    },
+    {
+      "from": 930,
+      "color": "#e8d6b6"
+    },
+    {
+      "from": 950,
+      "color": "#b7c3a4"
+    },
+    {
+      "from": 975,
+      "color": "#839f86"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Child sex ratio",
+        "hi": "शिशु लिंगानुपात"
+      },
+      "unit": {
+        "en": "{n} girls per 1,000 boys",
+        "hi": "प्रति 1,000 लड़कों पर {n} लड़कियाँ"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "Girls aged six and under for every thousand boys of the same age, the census's child sex ratio. Left alone, births run at about 950; well below it, girls are going missing before birth or after it. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "छह वर्ष तक की आयु की लड़कियाँ, उसी आयु के हर हज़ार लड़कों पर: जनगणना का शिशु लिंगानुपात। स्वाभाविक रूप से जन्म लगभग 950 पर होते हैं; इससे बहुत नीचे का अर्थ है कि लड़कियाँ जन्म से पहले या बाद में खो रही हैं। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}

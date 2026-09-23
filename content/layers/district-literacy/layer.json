@@ -1,0 +1,83 @@
+{
+  "id": "district-literacy",
+  "type": "choropleth",
+  "group": "culture",
+  "title": {
+    "en": "Literacy by district",
+    "hi": "ज़िलेवार साक्षरता"
+  },
+  "icon": "district",
+  "default_on": false,
+  "regions": "districts-2011",
+  "census": {
+    "numerator": [
+      "P_LIT"
+    ],
+    "denominator": [
+      "TOT_P",
+      "-P_06"
+    ],
+    "per": 100,
+    "digits": 1,
+    "_about": "The census's effective literacy rate: literates over everyone aged seven and over."
+  },
+  "unit": {
+    "en": "{n}%",
+    "hi": "{n}%"
+  },
+  "scale": [
+    {
+      "from": 0,
+      "color": "#eee2c4"
+    },
+    {
+      "from": 50,
+      "color": "#d6d8ae"
+    },
+    {
+      "from": 60,
+      "color": "#b1c99f"
+    },
+    {
+      "from": 70,
+      "color": "#82b297"
+    },
+    {
+      "from": 80,
+      "color": "#56938c"
+    },
+    {
+      "from": 90,
+      "color": "#336f7c"
+    }
+  ],
+  "fields": {
+    "value": {
+      "type": "number",
+      "label": {
+        "en": "Literacy",
+        "hi": "साक्षरता"
+      },
+      "unit": {
+        "en": "{n}%",
+        "hi": "{n}%"
+      }
+    },
+    "population": {
+      "type": "int",
+      "label": {
+        "en": "Population, 2011",
+        "hi": "जनसंख्या, 2011"
+      }
+    }
+  },
+  "note": {
+    "en": "The share of people aged seven and over who can read and write with understanding in any language, the census's effective literacy rate. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "सात वर्ष और उससे अधिक आयु के उन लोगों का अनुपात जो किसी भी भाषा में समझकर पढ़-लिख सकते हैं: जनगणना की प्रभावी साक्षरता दर। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+  },
+  "sources": [
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Worked out per district from the Primary Census Abstract (India, states and districts) and drawn on DataMeet's Census 2011 district polygons, joined on the census district code."
+}

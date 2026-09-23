@@ -15,7 +15,10 @@ Layer types known today:
            projected, clipped to India and simplified. With "flow": true every run is
            also pointed downstream, against the heightmap
   choropleth  a values.csv of region,value beside layer.json; the build turns the ISO
-           codes into raster ids and the runtime makes the id-to-colour lookup
+           codes into raster ids and the runtime makes the id-to-colour lookup. With
+           "regions": "districts-2011" the regions are the census's 640 districts
+           instead, drawn from a uint16 raster of their own, and the values are worked
+           out from the census table by the formula the layer declares
   areas    named polygons that are not regions -- coalfields, physiographic divisions --
            joined to the source by name like a river, then rasterised into one uint8 id
            raster for the layer and clipped to India
@@ -45,6 +48,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np  # noqa: E402
 from PIL import Image  # noqa: E402
 
+from pipeline.lib import census as census_lib  # noqa: E402
 from pipeline.lib import districts as districts_lib  # noqa: E402
 from pipeline.lib import fetch, grid, lines, pack, raster, shapefile, wikidata  # noqa: E402
 from pipeline.lib import sources as sources_lib  # noqa: E402
@@ -138,6 +142,10 @@ def validate_layer(layer, folder, registry):
             p += validate_scale(layer.get('scale'))
             if not bilingual(layer.get('unit')):
                 p.append('a choropleth needs a bilingual unit template, e.g. "{n} per km²"')
+        if layer.get('regions') not in (None, CENSUS_DISTRICTS):
+            p.append(f'a choropleth\'s regions are the states (the default) or {CENSUS_DISTRICTS!r}')
+        if layer.get('regions') == CENSUS_DISTRICTS:
+            p += validate_census(layer)
     elif layer.get('type') == 'prisms':
         # The drawing only a 3D atlas has: the ground of a region raised by a value.
         # It reads values.csv exactly as a choropleth does, and declares how far the top
@@ -190,6 +198,114 @@ def validate_layer(layer, folder, registry):
             p.append(f'field {name}: label needs en and hi')
     p += validate_size(layer)
     return p
+
+
+CENSUS_DISTRICTS = 'districts-2011'   # a choropleth drawn on the census's own districts
+CENSUS_RASTER = f'layers/{CENSUS_DISTRICTS}.bin.gz'
+CENSUS_CACHE = {}
+
+
+def validate_census(layer):
+    """
+    A district choropleth's formula: which census columns make its number. It is data,
+    like the scale, so a new census map is a folder and never a change to this file.
+    """
+    spec = layer.get('census')
+    if not isinstance(spec, dict):
+        return ['a district choropleth needs census: { numerator, denominator, per, digits }']
+    p = []
+    for key in ('numerator', 'denominator'):
+        cols = spec.get(key)
+        if not (isinstance(cols, list) and cols and all(isinstance(c, str) and c.lstrip('-') for c in cols)):
+            p.append(f'census.{key} must list census column names, e.g. ["P_LIT"] or ["TOT_P", "-P_06"]')
+    if layer.get('scale') == CATEGORICAL:
+        p.append('a district choropleth colours a number, so it takes a scale')
+    value = (layer.get('fields') or {}).get('value')
+    if not value or value.get('type') not in ('int', 'number'):
+        p.append('a district choropleth declares a number field `value`: what its card calls the figure')
+    return p
+
+
+def census_regions(ids, out):
+    """The 2011 districts' raster, written once however many layers colour it."""
+    if 'r' not in CENSUS_CACHE:
+        height, width = ids.shape
+        grid_ids, polys = census_lib.district_raster(width, height, ids > 0)
+        # Two bytes a pixel, low then high, which a browser uploads as an ordinary
+        # two-channel texture and the shader puts back together.
+        pairs = np.stack([grid_ids & 0xFF, grid_ids >> 8], axis=-1).astype(np.uint8)
+        size = pack.write(os.path.join(out, CENSUS_RASTER), pairs, 'uint8', predictor='none')
+        print(f'    2011 districts: {len(polys)} polygons, raster {width}x{height} -> {CENSUS_RASTER} ({size // 1024} KB)')
+        # Each district's state is the one most of its pixels fall in: a 2011 district
+        # is always inside one of today's states, and Telangana's are Telangana's now.
+        flat = grid_ids.ravel().astype(np.int64)
+        state = ids.ravel().astype(np.int64)
+        n = int(flat.max()) + 1
+        region, pixels = {}, np.bincount(flat, minlength=n)
+        pairs_seen = np.bincount(flat * 256 + state, minlength=n * 256).reshape(n, 256)
+        for code in np.nonzero(pixels)[0]:
+            if code:
+                region[int(code)] = int(pairs_seen[code, 1:].argmax() + 1)
+        CENSUS_CACHE['r'] = (region, census_lib.pca_districts())
+    return CENSUS_CACHE['r']
+
+
+def district_names(ids):
+    """
+    {2011 code: bilingual name}. A census map calls a district what the district layer
+    calls it -- today's name, in both languages, with the same hand-made corrections --
+    so that Gurgaon on one page is not Gurugram on the next. The 640 districts of 2011
+    each still have a polygon filed under their census code, which is how they meet.
+    """
+    recs, _arcs = district_records(ids)
+    path = os.path.join(ROOT, 'content', 'layers', DISTRICTS, 'items.json')
+    hand = {int(i['lgd']): i['name'] for i in json.load(open(path, encoding='utf-8')) if i.get('lgd')}
+    out = {}
+    for rec in recs:
+        code = int(rec['pc11'] or 0)
+        if not code or code > 640:
+            continue
+        name = hand.get(rec['lgd']) or {'en': rec['name_en'], 'hi': rec['name_hi']}
+        if bilingual(name):
+            out[code] = name
+    return out
+
+
+def build_census_choropleth(layer, ids, out):
+    """
+    A number per 2011 district, worked out from the census table by the layer's formula.
+    Returns (items, problems): one item per district, so a tap can open its card.
+    """
+    region, table = census_regions(ids, out)
+    names = district_names(ids)
+    spec = layer['census']
+    problems, items, seen = [], [], set()
+    for code, row in sorted(table.items()):
+        missing = [c.lstrip('-') for c in spec['numerator'] + spec['denominator'] if c.lstrip('-') not in row]
+        if missing:
+            return [], [f"census columns not in the table: {', '.join(sorted(set(missing)))}"]
+        if code not in region:
+            problems.append(f"{code} {row['Name'].strip()}: in the table but not drawn")
+            continue
+        if code not in names:
+            problems.append(f"{code} {row['Name'].strip()}: no name in both languages")
+            continue
+        value = census_lib.measure(row, spec)
+        if value is None:
+            continue
+        slug = slugify(names[code]['en'])
+        if slug in seen:
+            slug = f'{slug}-{code}'
+        seen.add(slug)
+        items.append({
+            'id': slug, 'area_id': code, 'name': names[code], 'region': region[code],
+            'value': value, 'population': row['TOT_P'],
+            'sources': [census_lib.PCA_URL], 'status': 'draft',
+        })
+    if items:
+        vals = sorted(i['value'] for i in items)
+        print(f"    {len(items)} districts, {vals[0]} .. {vals[-1]}, median {vals[len(vals) // 2]}")
+    return items, problems
 
 
 AREA_RASTER_HEIGHT = 1024     # areas are broad shapes; the first-view tier's pitch is plenty
@@ -1173,6 +1289,11 @@ def build_layer(folder, states, ids, heights, out, registry, models):
         values, prism_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += prism_problems
         return finish(layer, [], out, problems, order=lambda i: i['id'], extra={'values': values})
+    if layer.get('type') == 'choropleth' and layer.get('regions') == CENSUS_DISTRICTS and not problems:
+        out_items, census_problems = build_census_choropleth(layer, ids, out)
+        problems += census_problems
+        return finish(layer, out_items, out, problems, order=lambda i: i['area_id'],
+                      extra={'raster': CENSUS_RASTER, 'regions': CENSUS_DISTRICTS})
     if layer.get('type') == 'choropleth' and not problems:
         values, choro_problems = build_choropleth(layer, folder, by_iso, by_id)
         problems += choro_problems

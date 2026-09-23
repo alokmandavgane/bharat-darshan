@@ -1,0 +1,19 @@
+{
+  "id": "district-literacy",
+  "section": "people",
+  "order": 3,
+  "title": {
+    "en": "Who can read",
+    "hi": "कौन पढ़ सकता है"
+  },
+  "blurb": {
+    "en": "Literacy in the 640 districts of 2011. All of Kerala and central Mizoram read at nine in ten or better; the lowest are tribal districts, Alirajpur and Jhabua in western Madhya Pradesh and southern Bastar, near four in ten.",
+    "hi": "2011 के 640 ज़िलों में साक्षरता। पूरा केरल और मध्य मिज़ोरम दस में नौ या अधिक पढ़ते हैं; सबसे नीचे जनजातीय ज़िले हैं, पश्चिमी मध्य प्रदेश के अलीराजपुर और झाबुआ तथा दक्षिणी बस्तर, दस में लगभग चार।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-literacy"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

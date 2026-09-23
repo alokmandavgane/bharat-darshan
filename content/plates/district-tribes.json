@@ -1,0 +1,19 @@
+{
+  "id": "district-tribes",
+  "section": "people",
+  "order": 5,
+  "title": {
+    "en": "Scheduled Tribes",
+    "hi": "अनुसूचित जनजातियाँ"
+  },
+  "blurb": {
+    "en": "How much of each district's people belong to a Scheduled Tribe, in 2011. Two homelands show: the hills of the northeast, where most districts are nearly all tribal, and the forested belt across central India from Gujarat to Odisha.",
+    "hi": "2011 में हर ज़िले की जनसंख्या का कितना भाग अनुसूचित जनजातियों का है। दो घर दिखते हैं: पूर्वोत्तर की पहाड़ियाँ, जहाँ अधिकतर ज़िले लगभग पूरे जनजातीय हैं, और गुजरात से ओडिशा तक मध्य भारत की वन पट्टी।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-tribes"
+  ],
+  "relief": 8,
+  "status": "draft"
+}

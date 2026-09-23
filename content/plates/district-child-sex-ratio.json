@@ -1,0 +1,19 @@
+{
+  "id": "district-child-sex-ratio",
+  "section": "people",
+  "order": 4,
+  "title": {
+    "en": "Missing girls",
+    "hi": "गुम होती बेटियाँ"
+  },
+  "blurb": {
+    "en": "Girls under seven per thousand boys, by district in 2011. The deficit is deepest in Haryana, Punjab and around Jammu, down to 775 in Mahendragarh; the tribal districts of Bastar and the northeast stay near the natural 950 or above.",
+    "hi": "सात वर्ष से कम आयु की लड़कियाँ प्रति हज़ार लड़के, 2011 में ज़िलेवार। कमी सबसे गहरी हरियाणा, पंजाब और जम्मू के आसपास है, महेंद्रगढ़ में 775 तक; बस्तर और पूर्वोत्तर के जनजातीय ज़िले स्वाभाविक 950 के पास या ऊपर रहते हैं।"
+  },
+  "base": "plain",
+  "layers": [
+    "district-child-sex-ratio"
+  ],
+  "relief": 8,
+  "status": "draft"
+}
