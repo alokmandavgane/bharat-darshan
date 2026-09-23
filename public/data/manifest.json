@@ -293,6 +293,78 @@
    "path": "layers/district-child-sex-ratio.json"
   },
   {
+   "id": "district-farm-work",
+   "type": "choropleth",
+   "title": {
+    "en": "Work on the land by district",
+    "hi": "ज़िलेवार खेती का काम"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Working the land",
+      "hi": "खेती में लगे"
+     },
+     "unit": {
+      "en": "{n}% of workers",
+      "hi": "{n}% कामगार"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#ede6cf"
+    },
+    {
+     "from": 25,
+     "color": "#d9d9ad"
+    },
+    {
+     "from": 50,
+     "color": "#bcc58b"
+    },
+    {
+     "from": 60,
+     "color": "#98ab6b"
+    },
+    {
+     "from": 70,
+     "color": "#728d4e"
+    },
+    {
+     "from": 80,
+     "color": "#526c3a"
+    }
+   ],
+   "unit": {
+    "en": "{n}% of workers",
+    "hi": "{n}% कामगार"
+   },
+   "note": {
+    "en": "Of everyone at work, the share who are cultivators, farming their own or rented land, or agricultural labourers, working on others' land for wages. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "सभी कामगारों में से उनका अनुपात जो किसान हैं, अपनी या किराए की ज़मीन जोतते हैं, या खेतिहर मज़दूर हैं, दूसरों की ज़मीन पर मज़दूरी करते हैं। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-farm-work.json"
+  },
+  {
    "id": "district-lines",
    "type": "lines",
    "title": {
@@ -407,6 +479,154 @@
    "path": "layers/district-literacy.json"
   },
   {
+   "id": "district-scheduled-castes",
+   "type": "choropleth",
+   "title": {
+    "en": "Scheduled Castes by district",
+    "hi": "ज़िलेवार अनुसूचित जातियाँ"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Scheduled Castes",
+      "hi": "अनुसूचित जातियाँ"
+     },
+     "unit": {
+      "en": "{n}% of the people",
+      "hi": "जनसंख्या का {n}%"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#ece2d0"
+    },
+    {
+     "from": 5,
+     "color": "#dccbc8"
+    },
+    {
+     "from": 10,
+     "color": "#c6aab5"
+    },
+    {
+     "from": 15,
+     "color": "#a98aa3"
+    },
+    {
+     "from": 20,
+     "color": "#8a6b8e"
+    },
+    {
+     "from": 25,
+     "color": "#6c4f78"
+    },
+    {
+     "from": 30,
+     "color": "#4f3861"
+    }
+   ],
+   "unit": {
+    "en": "{n}% of the people",
+    "hi": "जनसंख्या का {n}%"
+   },
+   "note": {
+    "en": "The share of each district's people who belong to a Scheduled Caste, the communities the Constitution lists for protection against the disabilities of caste. Arunachal Pradesh, Nagaland, Lakshadweep and the Andaman and Nicobar Islands list none. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर ज़िले की जनसंख्या में अनुसूचित जातियों का अनुपात, वे समुदाय जिन्हें संविधान जातिगत निर्योग्यताओं से संरक्षण के लिए सूचीबद्ध करता है। अरुणाचल प्रदेश, नागालैंड, लक्षद्वीप और अंडमान तथा निकोबार द्वीपसमूह में कोई सूचीबद्ध नहीं है। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-scheduled-castes.json"
+  },
+  {
+   "id": "district-sex-ratio",
+   "type": "choropleth",
+   "title": {
+    "en": "Women per 1,000 men by district",
+    "hi": "ज़िलेवार प्रति 1,000 पुरुषों पर महिलाएँ"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Sex ratio",
+      "hi": "लिंगानुपात"
+     },
+     "unit": {
+      "en": "{n} women per 1,000 men",
+      "hi": "प्रति 1,000 पुरुषों पर {n} महिलाएँ"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#8a3a2c"
+    },
+    {
+     "from": 850,
+     "color": "#b8644a"
+    },
+    {
+     "from": 900,
+     "color": "#d89a74"
+    },
+    {
+     "from": 950,
+     "color": "#e8d6b6"
+    },
+    {
+     "from": 1000,
+     "color": "#b7c3a4"
+    },
+    {
+     "from": 1050,
+     "color": "#839f86"
+    }
+   ],
+   "unit": {
+    "en": "{n} women per 1,000 men",
+    "hi": "प्रति 1,000 पुरुषों पर {n} महिलाएँ"
+   },
+   "note": {
+    "en": "Women of all ages for every thousand men, the census's sex ratio. Besides what the child sex ratio shows, it moves with migration: it falls where men arrive for work and rises where they leave from. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर हज़ार पुरुषों पर सभी आयु की महिलाएँ: जनगणना का लिंगानुपात। शिशु लिंगानुपात जो दिखाता है उसके अलावा यह प्रवास के साथ बदलता है: जहाँ पुरुष काम के लिए आते हैं वहाँ घटता है, और जहाँ से जाते हैं वहाँ बढ़ता है। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-sex-ratio.json"
+  },
+  {
    "id": "district-tribes",
    "type": "choropleth",
    "title": {
@@ -477,6 +697,222 @@
     "datameet-maps"
    ],
    "path": "layers/district-tribes.json"
+  },
+  {
+   "id": "district-urban",
+   "type": "choropleth",
+   "title": {
+    "en": "Town dwellers by district",
+    "hi": "ज़िलेवार नगरवासी"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Living in towns",
+      "hi": "नगरों में रहने वाले"
+     },
+     "unit": {
+      "en": "{n}% in towns",
+      "hi": "{n}% नगरों में"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#ece3cc"
+    },
+    {
+     "from": 10,
+     "color": "#d7d0c0"
+    },
+    {
+     "from": 20,
+     "color": "#b9b6b0"
+    },
+    {
+     "from": 30,
+     "color": "#98979f"
+    },
+    {
+     "from": 50,
+     "color": "#76778b"
+    },
+    {
+     "from": 75,
+     "color": "#565a74"
+    }
+   ],
+   "unit": {
+    "en": "{n}% in towns",
+    "hi": "{n}% नगरों में"
+   },
+   "note": {
+    "en": "The share of each district's people who live in a town: a place with a municipality, or a census town of at least 5,000 people, 400 to the km², where three in four working men do not farm. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर ज़िले की जनसंख्या का वह भाग जो नगर में रहता है: नगरपालिका वाली जगह, या कम से कम 5,000 लोगों, 400 प्रति वर्ग किमी का जनगणना नगर, जहाँ चार में से तीन कामकाजी पुरुष खेती नहीं करते। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-urban.json"
+  },
+  {
+   "id": "district-women-at-work",
+   "type": "choropleth",
+   "title": {
+    "en": "Women at work by district",
+    "hi": "ज़िलेवार कामकाजी महिलाएँ"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Women at work",
+      "hi": "कामकाजी महिलाएँ"
+     },
+     "unit": {
+      "en": "{n}% of women",
+      "hi": "{n}% महिलाएँ"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#efe4c6"
+    },
+    {
+     "from": 15,
+     "color": "#e6d09a"
+    },
+    {
+     "from": 20,
+     "color": "#d9b56c"
+    },
+    {
+     "from": 30,
+     "color": "#c7934a"
+    },
+    {
+     "from": 40,
+     "color": "#a87134"
+    },
+    {
+     "from": 50,
+     "color": "#7f5226"
+    }
+   ],
+   "unit": {
+    "en": "{n}% of women",
+    "hi": "{n}% महिलाएँ"
+   },
+   "note": {
+    "en": "The share of women and girls who did paid or productive work at some time in the year, as main or marginal workers. The census does not count work in one's own home as work. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "उन महिलाओं और लड़कियों का अनुपात जिन्होंने वर्ष में किसी समय वेतन वाला या उत्पादक काम किया, मुख्य या सीमांत कामगार के रूप में। जनगणना अपने घर के काम को काम नहीं गिनती। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-women-at-work.json"
+  },
+  {
+   "id": "district-young-children",
+   "type": "choropleth",
+   "title": {
+    "en": "Children under seven by district",
+    "hi": "ज़िलेवार सात वर्ष से छोटे बच्चे"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Under seven",
+      "hi": "सात वर्ष से छोटे"
+     },
+     "unit": {
+      "en": "{n}% of the people",
+      "hi": "जनसंख्या का {n}%"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#f0e3cf"
+    },
+    {
+     "from": 10,
+     "color": "#ecccb6"
+    },
+    {
+     "from": 12,
+     "color": "#e0ab94"
+    },
+    {
+     "from": 14,
+     "color": "#cf8870"
+    },
+    {
+     "from": 16,
+     "color": "#b5664f"
+    },
+    {
+     "from": 18,
+     "color": "#8e4735"
+    }
+   ],
+   "unit": {
+    "en": "{n}% of the people",
+    "hi": "जनसंख्या का {n}%"
+   },
+   "note": {
+    "en": "Children aged six and under as a share of all the people: a trace of how many children families were having in the years before the count. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "छह वर्ष तक के बच्चे, पूरी जनसंख्या के अनुपात में: गिनती से पहले के वर्षों में परिवारों में कितने बच्चे हो रहे थे, इसका संकेत। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-young-children.json"
   },
   {
    "id": "districts",
@@ -1875,8 +2311,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 16739,
-   "sha256": "fdea9bc05dec"
+   "size": 22794,
+   "sha256": "0a8d458dae2a"
   },
   "sources.json": {
    "size": 29018,
@@ -2074,6 +2510,10 @@
    "size": 182736,
    "sha256": "f924da206710"
   },
+  "layers/district-farm-work.json": {
+   "size": 182975,
+   "sha256": "8b47d51be811"
+  },
   "layers/district-lines.json": {
    "size": 408657,
    "sha256": "94d699540189"
@@ -2082,9 +2522,29 @@
    "size": 182861,
    "sha256": "ad7b254d0749"
   },
+  "layers/district-scheduled-castes.json": {
+   "size": 183259,
+   "sha256": "ecf7aaa39545"
+  },
+  "layers/district-sex-ratio.json": {
+   "size": 182857,
+   "sha256": "e822d8b24075"
+  },
   "layers/district-tribes.json": {
    "size": 183041,
    "sha256": "cfbc8fed0674"
+  },
+  "layers/district-urban.json": {
+   "size": 183027,
+   "sha256": "ba01f8bddf8e"
+  },
+  "layers/district-women-at-work.json": {
+   "size": 183114,
+   "sha256": "f20726150eaf"
+  },
+  "layers/district-young-children.json": {
+   "size": 182989,
+   "sha256": "9fd540fa56d2"
   },
   "layers/districts-2011.bin.gz": {
    "size": 82791,
