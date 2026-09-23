@@ -221,6 +221,78 @@
    "path": "layers/cities.json"
   },
   {
+   "id": "district-child-sex-ratio",
+   "type": "choropleth",
+   "title": {
+    "en": "Girls per 1,000 boys",
+    "hi": "प्रति 1,000 लड़कों पर लड़कियाँ"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Child sex ratio",
+      "hi": "शिशु लिंगानुपात"
+     },
+     "unit": {
+      "en": "{n} girls per 1,000 boys",
+      "hi": "प्रति 1,000 लड़कों पर {n} लड़कियाँ"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#8a3a2c"
+    },
+    {
+     "from": 850,
+     "color": "#b8644a"
+    },
+    {
+     "from": 900,
+     "color": "#d89a74"
+    },
+    {
+     "from": 930,
+     "color": "#e8d6b6"
+    },
+    {
+     "from": 950,
+     "color": "#b7c3a4"
+    },
+    {
+     "from": 975,
+     "color": "#839f86"
+    }
+   ],
+   "unit": {
+    "en": "{n} girls per 1,000 boys",
+    "hi": "प्रति 1,000 लड़कों पर {n} लड़कियाँ"
+   },
+   "note": {
+    "en": "Girls aged six and under for every thousand boys of the same age, the census's child sex ratio. Left alone, births run at about 950; well below it, girls are going missing before birth or after it. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "छह वर्ष तक की आयु की लड़कियाँ, उसी आयु के हर हज़ार लड़कों पर: जनगणना का शिशु लिंगानुपात। स्वाभाविक रूप से जन्म लगभग 950 पर होते हैं; इससे बहुत नीचे का अर्थ है कि लड़कियाँ जन्म से पहले या बाद में खो रही हैं। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-child-sex-ratio.json"
+  },
+  {
    "id": "district-lines",
    "type": "lines",
    "title": {
@@ -261,6 +333,150 @@
     "lgd"
    ],
    "path": "layers/district-lines.json"
+  },
+  {
+   "id": "district-literacy",
+   "type": "choropleth",
+   "title": {
+    "en": "Literacy by district",
+    "hi": "ज़िलेवार साक्षरता"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Literacy",
+      "hi": "साक्षरता"
+     },
+     "unit": {
+      "en": "{n}%",
+      "hi": "{n}%"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#eee2c4"
+    },
+    {
+     "from": 50,
+     "color": "#d6d8ae"
+    },
+    {
+     "from": 60,
+     "color": "#b1c99f"
+    },
+    {
+     "from": 70,
+     "color": "#82b297"
+    },
+    {
+     "from": 80,
+     "color": "#56938c"
+    },
+    {
+     "from": 90,
+     "color": "#336f7c"
+    }
+   ],
+   "unit": {
+    "en": "{n}%",
+    "hi": "{n}%"
+   },
+   "note": {
+    "en": "The share of people aged seven and over who can read and write with understanding in any language, the census's effective literacy rate. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "सात वर्ष और उससे अधिक आयु के उन लोगों का अनुपात जो किसी भी भाषा में समझकर पढ़-लिख सकते हैं: जनगणना की प्रभावी साक्षरता दर। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-literacy.json"
+  },
+  {
+   "id": "district-tribes",
+   "type": "choropleth",
+   "title": {
+    "en": "Scheduled Tribes by district",
+    "hi": "ज़िलेवार अनुसूचित जनजातियाँ"
+   },
+   "icon": "district",
+   "group": "culture",
+   "default_on": false,
+   "count": 640,
+   "reviewed": 0,
+   "fields": {
+    "value": {
+     "type": "number",
+     "label": {
+      "en": "Scheduled Tribes",
+      "hi": "अनुसूचित जनजातियाँ"
+     },
+     "unit": {
+      "en": "{n}% of the people",
+      "hi": "जनसंख्या का {n}%"
+     }
+    },
+    "population": {
+     "type": "int",
+     "label": {
+      "en": "Population, 2011",
+      "hi": "जनसंख्या, 2011"
+     }
+    }
+   },
+   "scale": [
+    {
+     "from": 0,
+     "color": "#ece2c8"
+    },
+    {
+     "from": 1,
+     "color": "#dcd5ae"
+    },
+    {
+     "from": 10,
+     "color": "#c0c592"
+    },
+    {
+     "from": 25,
+     "color": "#98ad73"
+    },
+    {
+     "from": 50,
+     "color": "#6e8e55"
+    },
+    {
+     "from": 75,
+     "color": "#4b6a3c"
+    }
+   ],
+   "unit": {
+    "en": "{n}% of the people",
+    "hi": "जनसंख्या का {n}%"
+   },
+   "note": {
+    "en": "The share of each district's people who belong to a Scheduled Tribe, the communities the Constitution lists for protection. Punjab, Haryana, Delhi, Chandigarh and Puducherry list none, so their districts read zero by definition, not by count. Drawn on the 640 districts the 2011 census counted, the last one completed: a district formed since is coloured as part of the one it was carved from, and its card uses today's name. The land held by Pakistan, with the Shaksgam valley it ceded to China, could not be counted and is left uncoloured.",
+    "hi": "हर ज़िले की जनसंख्या में अनुसूचित जनजातियों का अनुपात, वे समुदाय जिन्हें संविधान संरक्षण के लिए सूचीबद्ध करता है। पंजाब, हरियाणा, दिल्ली, चंडीगढ़ और पुदुचेरी में कोई सूचीबद्ध नहीं है, इसलिए वहाँ के ज़िले परिभाषा से शून्य हैं, गिनती से नहीं। 2011 की जनगणना, जो अंतिम पूर्ण जनगणना है, के 640 ज़िलों पर बना: उसके बाद बना ज़िला उसी ज़िले के भाग के रूप में रंगा है जिससे वह निकला, और उसके कार्ड पर आज का नाम है। पाकिस्तान के कब्ज़े वाली भूमि, और उसके द्वारा चीन को सौंपी गई शक्सगाम घाटी, की गिनती नहीं हो सकी, इसलिए वह रंगहीन है।"
+   },
+   "sources": [
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/district-tribes.json"
   },
   {
    "id": "districts",
@@ -1659,12 +1875,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 13662,
-   "sha256": "1c3a876a0f54"
+   "size": 16739,
+   "sha256": "fdea9bc05dec"
   },
   "sources.json": {
-   "size": 27967,
-   "sha256": "2c51e5515d3c"
+   "size": 29018,
+   "sha256": "7294e9045e72"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -1854,13 +2070,29 @@
    "size": 308980,
    "sha256": "20a640864fb8"
   },
+  "layers/district-child-sex-ratio.json": {
+   "size": 182736,
+   "sha256": "f924da206710"
+  },
   "layers/district-lines.json": {
    "size": 408657,
    "sha256": "94d699540189"
   },
+  "layers/district-literacy.json": {
+   "size": 182861,
+   "sha256": "ad7b254d0749"
+  },
+  "layers/district-tribes.json": {
+   "size": 183041,
+   "sha256": "cfbc8fed0674"
+  },
+  "layers/districts-2011.bin.gz": {
+   "size": 82791,
+   "sha256": "5459a7d5b05c"
+  },
   "layers/districts.json": {
-   "size": 310433,
-   "sha256": "f3e39cd996fb"
+   "size": 310388,
+   "sha256": "8689c934a979"
   },
   "layers/festivals.json": {
    "size": 27590,
