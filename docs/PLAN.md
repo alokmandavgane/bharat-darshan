@@ -50,7 +50,7 @@ and from there on the work is sourcing and reviewing data, plate by plate.
 | D11 | It is an atlas: plates over layers | A printed atlas is a sequence of pages, each one map with a title, a legend and a source line. Here a **plate** is a JSON file naming a base style, the layers that are on, a camera and a few words; the contents page lists plates by section. A plate is the same shape as a story snapshot and a shared URL, so it needs no engine work, and it is the answer to layer sprawl: nobody faces a list of eighty switches, they open "Minerals". Layers remain the unit of data and stay individually switchable for anyone who wants to combine them. Adding a plate must not touch `src/`, the same rule as D5. |
 | D12 | Primitives first, then data | With many sources coming, the engine work that matters is the closed set of ways to draw: finish it once, each primitive proven against one real dataset, each with the full contract (legend, picking, card, search, URL, both languages). After that a new map is sourcing and review, never rendering. The catalogue is in section 5. |
 | D13 | One camera rule: the point you grab is the point that stays | Every turn, tilt and zoom pivots on the surface point under the pointer (or between the fingers) at the moment the gesture began, in 3D, and that point does not move on screen for the rest of the gesture. Yaw is free through 360°; the target is kept on the model; the key light belongs to the viewer's room, not to the model, so it stays upper-left of the screen as the model turns. Reasoning and the faults this replaces are in section 3, "Camera handling". |
-| D14 | One card, one stack: the sheet is the only surface, and the key is its strip | Decided 2026-09-23, replacing the three-things-three-places layout of 2026-09-22. That layout had three paper cards (menu, key, sheet) carrying three kinds of thing in the same material, a layer drawn three ways in three places with two different on/off controls, and a page's name in three places; on a phone with a page open there were seven screen elements, and the key stacked on the sheet read as one card with a broken header. Now: the atlas is a book, the map is the plate and the sheet is the margin. The sheet holds one stack, Contents › Page › State › Item, mirroring the URL (`/en/atlas/rivers/state/maharashtra`); the head shows the crumb and Back pops one level. The key is the sheet's *strip*, a second line of the head: one mark per layer drawn, a hidden layer greyed, the scale bar, and `+ layer`; tapping a mark unfolds that layer's legend, caveat and sources inside the head, so it stays visible on the state and item levels too. `+ layer` pushes the catalogue onto the same stack (relief, surroundings and graticule are its first group, Base). One control for on/off, a switch; the eye is gone. The chrome left on the map: the wordmark as text with the language toggle beside it, and the compass. The tour, about and credits are rows at the foot of the contents. Nothing else is a card. |
+| D14 | One card, one stack: the sheet is the only surface, and the key is its strip | Decided 2026-09-23, replacing the three-things-three-places layout of 2026-09-22. That layout had three paper cards (menu, key, sheet) carrying three kinds of thing in the same material, a layer drawn three ways in three places with two different on/off controls, and a page's name in three places; on a phone with a page open there were seven screen elements, and the key stacked on the sheet read as one card with a broken header. Now: the atlas is a book, the map is the plate and the sheet is the margin. The sheet holds one stack, Contents › Page › State › Item, mirroring the URL (`/en/atlas/rivers/state/maharashtra`); the head shows the crumb and Back pops one level. The key is the sheet's *strip*, a second line of the head: one mark per layer drawn, a hidden layer greyed, the scale bar, and `+ layer`; tapping a mark unfolds that layer's legend, caveat and sources inside the head, so it stays visible on the state and item levels too. `+ layer` pushes the catalogue onto the same stack (relief, surroundings and graticule are its first group, Base). One control for on/off, a switch; the eye is gone. The chrome left on the map: the wordmark as text, and the compass. The other language, the tour, about and credits are rows at the foot of the contents. Nothing else is a card. |
 
 ## 3. Experience design
 
@@ -265,7 +265,7 @@ Phone, portrait:
 
 ```
 +------------------------+
-| Bharat Darshan · हिन्दी  |  text on the map, not a card; the toggle beside it
+| Bharat Darshan         |  text on the map, not a card
 |                        |
 |       3D canvas        |  full bleed, 100dvh, safe-area insets
 |  (camera padded so the |
@@ -288,7 +288,7 @@ Desktop / tablet landscape:
 
 ```
 +------------------------------------------------------------------+
-| Bharat Darshan · हिन्दी                                            |
+| Bharat Darshan                                                   |
 |                                                +-------------+   |
 |                     3D canvas                  | Rivers › Phy |   |
 |               (padded between the              | Maharashtra |   |
@@ -317,8 +317,10 @@ Desktop / tablet landscape:
   layers in all but name. Two fills fight over the clay, so switching one on switches the
   other off, by type (`FILL_TYPES`), never by id.
 - **One control for on/off.** A switch, everywhere.
-- **The rest of the chrome is text.** The wordmark is set into the paper top-left with
-  the language toggle beside it. The compass is the only button on the map; it
+- **The rest of the chrome is text.** The wordmark is set into the paper top-left. The
+  other language is a row at the foot of the contents ("हिन्दी में देखें" / "Read in
+  English"): a first visit already arrives in the browser's language, and `/hi` links
+  carry it, so the switch need not sit on the map (owner's call, 2026-09-23). The compass is the only button on the map; it
   brightens when the view is turned. The tour, about-this-map and credits are rows at
   the foot of the contents. The share card (`?poster=1`) still dresses the wordmark up.
 - India is portrait-shaped, so wide screens have natural dead space either side of it:
@@ -2438,6 +2440,9 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-23, forty-fifth round: the language switch left the map. The owner found it too
+  big beside the wordmark; it is now the first row at the foot of the contents, named in
+  the other language with a globe, above the tour and the about fold.
 - 2026-09-23, forty-fourth round: the industry layers filled out. The owner found the
   minerals, power and steel pages thin. Added, all as drafts with a Wikipedia article and
   the registry's publisher as sources: four steel plants (Angul, Meramandali, Sambalpur,

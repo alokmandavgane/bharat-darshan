@@ -103,5 +103,6 @@
   "layer.group.base": "आधार",
   "relief.hint": "{n} बढ़ाया हुआ",
   "chip.surroundings.hint": "समुद्र और पड़ोसी",
-  "layer.count.drawn": "{n} बनी हैं · एटलस की हर परत"
+  "layer.count.drawn": "{n} बनी हैं · एटलस की हर परत",
+  "lang.row": "Read in English"
 }

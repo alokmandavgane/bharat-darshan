@@ -139,21 +139,6 @@ canvas.map[data-hover="1"] { cursor: pointer; }
   margin-top: 1px;
 }
 .wordmark .title-other, .wordmark .tagline, .wordmark .site { display: none; }
-.lang-toggle {
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 4px 8px;
-  margin: -4px 0;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--accent-deep);
-  cursor: pointer;
-  text-shadow: inherit;
-}
-.lang-toggle:hover { background: rgba(255, 251, 243, 0.6); }
-.lang-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
 
 .relief {
   display: flex;
@@ -515,7 +500,7 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .sheet-body li { margin-bottom: 6px; color: var(--muted); font-size: 0.95rem; }
 .sheet-body a { color: var(--accent); }
 .foot { margin: 14px 0 4px; border-top: 1px solid var(--line); padding-top: 6px; }
-.tour-row {
+.tour-row, .lang-row {
   width: 100%;
   display: flex;
   align-items: center;
@@ -530,8 +515,9 @@ body[data-level="state"] .sheet-head { cursor: default; }
   text-align: start;
   cursor: pointer;
 }
-.tour-row:hover { background: rgba(120, 80, 40, 0.08); }
-.tour-row:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; }
+.tour-row:hover, .lang-row:hover { background: rgba(120, 80, 40, 0.08); }
+.tour-row:focus-visible, .lang-row:focus-visible { outline: 3px solid var(--accent); outline-offset: -2px; }
+.lang-row svg { width: 22px; height: 22px; flex: none; }
 .tour-row svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
 .tour-row[aria-pressed="true"] { color: var(--accent); }
 .about { font-size: 0.92rem; }
@@ -1054,7 +1040,7 @@ body[data-searching="1"] .sheet-body > :not(.finder):not(.about) { display: none
 
 /* --- poster mode: the share-image render (tools/share-image.mjs, ?poster=1) --- */
 body[data-poster="1"] .sheet, body[data-poster="1"] .status, body[data-poster="1"] .labels,
-body[data-poster="1"] .tooltip, body[data-poster="1"] .reset-button, body[data-poster="1"] .lang-toggle { display: none !important; }
+body[data-poster="1"] .tooltip, body[data-poster="1"] .reset-button { display: none !important; }
 body[data-poster="1"] .topbar { top: 0; bottom: 0; padding: 0; align-items: center; }
 body[data-poster="1"] .wordmark {
   /* on the share card the wordmark is a card again: the paper material, and its parts stacked */

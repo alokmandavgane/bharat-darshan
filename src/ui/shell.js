@@ -24,7 +24,8 @@ const BASE_MARKS = {
  */
 export function createShell(root, store) {
   const $ = (sel) => /** @type {HTMLElement} */ (root.querySelector(sel));
-  const langToggle = $('.lang-toggle');
+  const langRow = $('.lang-row');
+  const langLabel = $('.lang-row-label');
   const status = $('.status');
   const statusText = $('.status-text');
   const retry = $('.status-retry');
@@ -83,11 +84,13 @@ export function createShell(root, store) {
     return id ? (store.get('plates')?.plates || []).find((p) => p.id === id) || null : null;
   };
 
-  // --- the language toggle beside the wordmark
-  langToggle.addEventListener('click', () => store.set('lang', store.get('lang') === 'hi' ? 'en' : 'hi'));
+  // --- the other language: a row at the foot of the contents. A first visit already
+  // arrives in the browser's language (detectLanguage), so this is for the reader who
+  // wants the other one, and it need not sit on the map.
+  langRow.addEventListener('click', () => store.set('lang', store.get('lang') === 'hi' ? 'en' : 'hi'));
   function renderLang() {
-    // The button names the other language, so it is set in that language's script.
-    langToggle.lang = store.get('lang') === 'hi' ? 'en' : 'hi';
+    // The row names the other language in that language, so it is set in its script.
+    langLabel.lang = store.get('lang') === 'hi' ? 'en' : 'hi';
   }
 
   retry.addEventListener('click', () => location.reload());

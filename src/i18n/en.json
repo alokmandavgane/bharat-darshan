@@ -103,5 +103,6 @@
   "layer.group.base": "Base",
   "relief.hint": "Exaggerated {n}",
   "chip.surroundings.hint": "The sea and the neighbours",
-  "layer.count.drawn": "{n} drawn · every layer the atlas has"
+  "layer.count.drawn": "{n} drawn · every layer the atlas has",
+  "lang.row": "हिन्दी में देखें"
 }
