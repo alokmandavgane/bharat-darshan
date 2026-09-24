@@ -2147,7 +2147,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 12,
+   "count": 14,
    "reviewed": 0,
    "categories": [
     {
@@ -2197,6 +2197,14 @@
       "hi": "दक्षिणी दल, महेन्द्र तक"
      },
      "color": "#d08a2c"
+    },
+    {
+     "id": "hanuman",
+     "title": {
+      "en": "Hanumān's leap and return",
+      "hi": "हनुमान की छलाँग और वापसी"
+     },
+     "color": "#2f8f8a"
     }
    ],
    "fields": {
@@ -2216,8 +2224,8 @@
     }
    },
    "note": {
-    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search — then Kiṣkindhā and the southern party's road to Mahendra. An arrow is a diagram of the stage, not the track.",
-    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज — फिर किष्किन्धा और महेन्द्र तक दक्षिणी दल का मार्ग। तीर चरण का चित्र है, रास्ता नहीं।"
+    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search — then Kiṣkindhā, the southern party's road to Mahendra, and Hanumān's leap to Laṅkā and back, the arrows stopping at sea where Laṅkā is not placed. An arrow is a diagram of the stage, not the track.",
+    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज — फिर किष्किन्धा, महेन्द्र तक दक्षिणी दल का मार्ग, और लंका तक हनुमान की छलाँग और वापसी; तीर समुद्र में रुकते हैं, क्योंकि लंका का स्थान तय नहीं। तीर चरण का चित्र है, रास्ता नहीं।"
    },
    "sources": [
     "sa-wikisource"
@@ -2290,6 +2298,15 @@
      },
      "color": "#d08a2c",
      "icon": "pin"
+    },
+    {
+     "id": "hanuman",
+     "title": {
+      "en": "Hanumān's leap and return",
+      "hi": "हनुमान की छलाँग और वापसी"
+     },
+     "color": "#2f8f8a",
+     "icon": "pin"
     }
    ],
    "fields": {
@@ -2323,8 +2340,8 @@
     }
    },
    "note": {
-    "en": "The Ayodhyā, Araṇya and Kiṣkindhā kāṇḍas tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī, the Pampā and Kiṣkindhā, and the monkeys' road on to Mahendra by the sea. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
-    "hi": "अयोध्या, अरण्य और किष्किन्धा काण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी, पम्पा और किष्किन्धा तक, और फिर समुद्र-तट के महेन्द्र तक वानरों का मार्ग। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
+    "en": "The Ayodhyā, Araṇya, Kiṣkindhā and Sundara kāṇḍas tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī, the Pampā and Kiṣkindhā, and the monkeys' road on to Mahendra by the sea. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
+    "hi": "अयोध्या, अरण्य, किष्किन्धा और सुन्दर काण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी, पम्पा और किष्किन्धा तक, और फिर समुद्र-तट के महेन्द्र तक वानरों का मार्ग। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource",
@@ -2950,8 +2967,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 26788,
-   "sha256": "8b6e78f288c7"
+   "size": 26803,
+   "sha256": "0dd08ac754f4"
   },
   "sources.json": {
    "size": 31205,
@@ -3258,12 +3275,12 @@
    "sha256": "6b4f926e2030"
   },
   "layers/rama-exile-route.json": {
-   "size": 16427,
-   "sha256": "2a67d403fe07"
+   "size": 19369,
+   "sha256": "cedbc5dd0d41"
   },
   "layers/rama-exile-stops.json": {
-   "size": 15155,
-   "sha256": "64e7372abb4d"
+   "size": 15348,
+   "sha256": "e2928f09bb0f"
   },
   "layers/ranges.json": {
    "size": 13461,
