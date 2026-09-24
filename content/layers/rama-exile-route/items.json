@@ -1,0 +1,167 @@
+[
+  {
+    "id": "out-of-ayodhya",
+    "status": "draft",
+    "name": {
+      "en": "Out of Ayodhyā, past the Tamasā",
+      "hi": "अयोध्या से बाहर, तमसा के पार"
+    },
+    "category": "exile",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 26.79909,
+        "lon": 82.2047
+      },
+      "to": {
+        "lat": 26.25788,
+        "lon": 82.07269
+      },
+      "bow": 0.12
+    },
+    "verse": "तमसातीरं",
+    "locus": {
+      "en": "Rāmāyaṇa 2.46.1",
+      "hi": "रामायण 2.46.1"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 46.1. The first night on the Tamasā's bank; the crossing at dawn leaves the citizens asleep. Then the Vedaśruti.",
+      "hi": "अयोध्याकाण्ड 46.1। पहली रात तमसा के तट पर; भोर में नदी पार कर नागरिकों को सोता छोड़ दिया। फिर वेदश्रुति।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_४६?oldid=350790"
+    ]
+  },
+  {
+    "id": "gomati-syandika",
+    "status": "draft",
+    "name": {
+      "en": "Across the Gomatī to the Syandikā",
+      "hi": "गोमती पार कर स्यन्दिका तक"
+    },
+    "category": "exile",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 26.25788,
+        "lon": 82.07269
+      },
+      "to": {
+        "lat": 25.92058,
+        "lon": 81.99629
+      },
+      "bow": 0.12
+    },
+    "verse": "गोमतीम् च अपि अतिक्रम्य",
+    "locus": {
+      "en": "Rāmāyaṇa 2.49.9-12",
+      "hi": "रामायण 2.49.9-12"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 49.9-12. Heading for 'the quarter where Agastya dwells', the south.",
+      "hi": "अयोध्याकाण्ड 49.9-12। 'जहाँ अगस्त्य रहते हैं उस दिशा' यानी दक्षिण की ओर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_४९?oldid=313407"
+    ]
+  },
+  {
+    "id": "to-the-ganga",
+    "status": "draft",
+    "name": {
+      "en": "Out of Kosala to the Gaṅgā",
+      "hi": "कोसल से बाहर गंगा तक"
+    },
+    "category": "exile",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.92058,
+        "lon": 81.99629
+      },
+      "to": {
+        "lat": 25.5873,
+        "lon": 81.6418
+      },
+      "bow": 0.12
+    },
+    "verse": "कोसलानत्यवर्तत",
+    "locus": {
+      "en": "Rāmāyaṇa 2.50.8-10",
+      "hi": "रामायण 2.50.8-10"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 50.8-10. Past the last of prosperous Kosala to Śṛṅgaverapura on the Gaṅgā.",
+      "hi": "अयोध्याकाण्ड 50.8-10। समृद्ध कोसल की सीमा पार कर गंगा किनारे शृंगवेरपुर तक।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५०?oldid=313413"
+    ]
+  },
+  {
+    "id": "over-the-ganga",
+    "status": "draft",
+    "name": {
+      "en": "By Guha's boat over the Gaṅgā, then to the confluence",
+      "hi": "गुह की नाव से गंगा पार, फिर संगम तक"
+    },
+    "category": "exile",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.5873,
+        "lon": 81.6418
+      },
+      "to": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "bow": 0.12
+    },
+    "verse": "आस्थाय नावम्",
+    "locus": {
+      "en": "Rāmāyaṇa 2.52.80-85",
+      "hi": "रामायण 2.52.80-85"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 52.80-85. Sītā's vow in mid-river fixes the fourteen years; the Vatsa country lies beyond.",
+      "hi": "अयोध्याकाण्ड 52.80-85। बीच धारा में सीता की मनौती चौदह वर्ष तय करती है; पार वत्स देश है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५२?oldid=313565"
+    ]
+  },
+  {
+    "id": "to-citrakuta",
+    "status": "draft",
+    "name": {
+      "en": "Up the Yamunā, a raft, the dark banyan, Citrakūṭa",
+      "hi": "यमुना के साथ, बेड़ा, श्याम वट, चित्रकूट"
+    },
+    "category": "exile",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "to": {
+        "lat": 25.21473,
+        "lon": 80.91645
+      },
+      "bow": 0.12
+    },
+    "verse": "स पन्थाश्चित्रकूटस्य गतः सुबहुशो मया",
+    "locus": {
+      "en": "Rāmāyaṇa 2.55.4-9",
+      "hi": "रामायण 2.55.4-9"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 55.4-9. Bharadvāja's directions, followed to the letter; the ford and the banyan are not placed.",
+      "hi": "अयोध्याकाण्ड 55.4-9। भरद्वाज के बताए मार्ग पर ठीक-ठीक; घाट और वट का स्थान तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५५?oldid=313568"
+    ]
+  }
+]

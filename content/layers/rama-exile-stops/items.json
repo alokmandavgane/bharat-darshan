@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ayodhya",
+    "status": "draft",
+    "name": {
+      "en": "Ayodhyā",
+      "hi": "अयोध्या"
+    },
+    "anchor": {
+      "lat": 26.79909,
+      "lon": 82.2047
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "अयोध्या नगरी",
+    "locus": {
+      "en": "Rāmāyaṇa 2.48.35",
+      "hi": "रामायण 2.48.35"
+    },
+    "modern": {
+      "en": "Ayodhya",
+      "hi": "अयोध्या"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 48.35. The city the exiles leave, 'like a sky whose stars are gone'.",
+      "hi": "अयोध्याकाण्ड 48.35। वह नगर जिसे वनवासी छोड़ते हैं, 'जैसे तारों से रहित आकाश'।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_४८?oldid=313406",
+      "https://www.geonames.org/1278094"
+    ]
+  },
+  {
+    "id": "gomati",
+    "status": "draft",
+    "name": {
+      "en": "Gomatī",
+      "hi": "गोमती"
+    },
+    "anchor": {
+      "lat": 26.25788,
+      "lon": 82.07269
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "गोमतीम् गोयुत अनूपाम्",
+    "locus": {
+      "en": "Rāmāyaṇa 2.49.9-12",
+      "hi": "रामायण 2.49.9-12"
+    },
+    "modern": {
+      "en": "the Gomti",
+      "hi": "गोमती"
+    },
+    "identified": {
+      "en": "likely, river standard, crossing placed by the compiler",
+      "hi": "संभावित, नदी मानक, पार का स्थान संकलक का"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 49.9-12. The river is the Gomti; the text does not place the crossing. Pinned at Sultanpur, on the Gomti between Ayodhyā and Śṛṅgaverapura.",
+      "hi": "अयोध्याकाण्ड 49.9-12। नदी गोमती है; पाठ पार करने का स्थान नहीं बताता। अयोध्या और शृंगवेरपुर के बीच गोमती किनारे सुल्तानपुर पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_४९?oldid=313407",
+      "https://www.geonames.org/1255491"
+    ]
+  },
+  {
+    "id": "syandika",
+    "status": "draft",
+    "name": {
+      "en": "Syandikā",
+      "hi": "स्यन्दिका"
+    },
+    "anchor": {
+      "lat": 25.92058,
+      "lon": 81.99629
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "स्यन्दिकाम् नदीम्",
+    "locus": {
+      "en": "Rāmāyaṇa 2.49.9-12",
+      "hi": "रामायण 2.49.9-12"
+    },
+    "modern": {
+      "en": "the Sai",
+      "hi": "सई"
+    },
+    "identified": {
+      "en": "likely, river standard, crossing placed by the compiler",
+      "hi": "संभावित, नदी मानक, पार का स्थान संकलक का"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 49.9-12. The Syandikā is taken for the Sai; pinned at Bela Pratapgarh, on the Sai.",
+      "hi": "अयोध्याकाण्ड 49.9-12। स्यन्दिका को सई माना जाता है; सई किनारे बेला प्रतापगढ़ पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_४९?oldid=313407",
+      "https://www.geonames.org/1276574"
+    ]
+  },
+  {
+    "id": "sringaverapura",
+    "status": "draft",
+    "name": {
+      "en": "Śṛṅgaverapura",
+      "hi": "शृङ्गवेरपुर"
+    },
+    "anchor": {
+      "lat": 25.5873,
+      "lon": 81.6418
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "शृङ्गिबेरपुरम् प्रति",
+    "locus": {
+      "en": "Rāmāyaṇa 2.50.25-28",
+      "hi": "रामायण 2.50.25-28"
+    },
+    "modern": {
+      "en": "Singraur (Shringverpur)",
+      "hi": "सिंगरौर (शृंगवेरपुर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 50.25-28. Guha, the Niṣāda king and Rāma's friend, holds the crossing; the exiles sleep under an iṅgudī tree.",
+      "hi": "अयोध्याकाण्ड 50.25-28। निषादराज गुह, राम के सखा, इस घाट के स्वामी हैं; वनवासी इंगुदी वृक्ष के नीचे सोते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५०?oldid=313413",
+      "https://en.wikipedia.org/wiki/Shringverpur"
+    ]
+  },
+  {
+    "id": "prayaga",
+    "status": "draft",
+    "name": {
+      "en": "Prayāga",
+      "hi": "प्रयाग"
+    },
+    "anchor": {
+      "lat": 25.44478,
+      "lon": 81.84322
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "प्रयागम् अभितः पश्य सौमित्रे धूमम् उन्नतम्",
+    "locus": {
+      "en": "Rāmāyaṇa 2.54.1-9",
+      "hi": "रामायण 2.54.1-9"
+    },
+    "modern": {
+      "en": "Prayagraj",
+      "hi": "प्रयागराज"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 54.1-9. Found by its smoke and by 'the sound of water striking water'; Bharadvāja's hermitage.",
+      "hi": "अयोध्याकाण्ड 54.1-9। धुएँ से और 'जल से टकराते जल के शब्द' से पहचाना गया; भरद्वाज का आश्रम।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५४?oldid=313567",
+      "https://www.geonames.org/1278994"
+    ]
+  },
+  {
+    "id": "citrakuta",
+    "status": "draft",
+    "name": {
+      "en": "Citrakūṭa",
+      "hi": "चित्रकूट"
+    },
+    "anchor": {
+      "lat": 25.21473,
+      "lon": 80.91645
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "verse": "आसाद्य तु चित्र कूटम्",
+    "locus": {
+      "en": "Rāmāyaṇa 2.56.38",
+      "hi": "रामायण 2.56.38"
+    },
+    "modern": {
+      "en": "Chitrakoot",
+      "hi": "चित्रकूट"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ayodhyā-kāṇḍa 56.38. Bharadvāja puts it ten krośas away; it is about 95 km. Vālmīki's hermitage is here, by the Mālyavatī.",
+      "hi": "अयोध्याकाण्ड 56.38। भरद्वाज इसे दस कोस दूर बताते हैं; यह लगभग 95 किमी है। यहाँ माल्यवती के किनारे वाल्मीकि का आश्रम है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५६?oldid=313569",
+      "https://www.geonames.org/1267629"
+    ]
+  }
+]
