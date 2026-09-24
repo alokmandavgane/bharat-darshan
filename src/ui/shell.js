@@ -266,7 +266,7 @@ export function createShell(root, store) {
     value.textContent = t('relief.value', { n: formatNumber(relief.amount || DEFAULT_RELIEF) });
     slider.addEventListener('input', () => {
       value.textContent = t('relief.value', { n: formatNumber(Number(slider.value)) });
-      store.set('relief', { amount: Number(slider.value), on: true });
+      store.set('relief', { amount: Number(slider.value), on: true }, { source: 'slider' });
     });
     row.append(label, slider, value);
     base.appendChild(row);
@@ -1092,7 +1092,13 @@ export function createShell(root, store) {
     renderStrip();
   }
 
-  store.subscribe('relief', renderLayerList);
+  // The slider changes only the numbers on its own row; rebuilding the list would also
+  // replace the slider under the finger on every step of the drag.
+  store.subscribe('relief', (relief, _, meta) => {
+    const key = layerList.querySelector('[data-base="relief"] .layer-key');
+    if (meta.source === 'slider' && key) key.textContent = t('relief.hint', { n: formatNumber(relief.amount) });
+    else renderLayerList();
+  });
   store.subscribe('surroundings', renderLayerList);
   store.subscribe('graticule', renderLayerList);
   store.subscribe('regions', () => { renderUnits(); renderSheet(); renderList(); }, { immediate: true });

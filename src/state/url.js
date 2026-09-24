@@ -160,7 +160,14 @@ export function syncUrl(store) {
   };
 
   store.subscribe('lang', () => write());
-  store.subscribe('relief', () => write());
+  // A drag of the relief slider is dozens of steps; write it once it stops, as with the
+  // camera, since browsers throttle history calls (Safari throws past ~100 in 30 s).
+  let reliefTimer = 0;
+  store.subscribe('relief', (_, __, meta) => {
+    clearTimeout(reliefTimer);
+    if (meta.source === 'slider') reliefTimer = setTimeout(() => write(), 300);
+    else write();
+  });
   store.subscribe('selection', () => write());
   // A layer switch and an open card are both "what is on show", not a page of their own,
   // so they replace the entry rather than pushing one: Back still leaves the state view.
