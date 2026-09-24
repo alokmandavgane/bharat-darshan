@@ -2459,6 +2459,12 @@ docs/DEPLOY.md).
     hills. The ends stay on their pins, which keeps them in place on a tilted view, and the depth
     test stays off.
   - The ribbon's screen direction takes the climb into account, so the width stays even up the arc.
+  - The shape is drawn in screen pixels too. The shipped profile made the head 260 km long (45% of a
+    short leg), so short legs swelled like wedges, and the tip landed under the pin it pointed at. An
+    arc now has an even shaft (1.7 × its rank's width) and a 15 px head, 3 × the shaft. The tip stops
+    11 px short of the destination pin and the shaft starts 6 px from the origin. `densifyEnds` adds
+    vertices at geometric distances from both ends, so the head has vertices to be shaped from at
+    every zoom.
   - Picking: an arc is not on the ground, so `lines.nearestArc` lifts each run the same way (`ARC`
     and `arcY` in lines.js) and measures on the screen. It answers before the ground lines.
   - On: sugriva-routes, rama-exile-route, mahabharata-route. The monsoon keeps following the land.

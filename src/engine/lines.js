@@ -86,7 +86,9 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
       // A flow carries a width profile with its geometry: 1 along the shaft, a swell and
       // then a point at the tip, which is what makes the arrowhead. Anything else is a
       // line of even weight.
-      const d = cutToGrid(flat, (item.widths || [])[r] || null, grid, sizeKm);
+      // An arc shapes its own head in the shader, so the shipped width profile is not used.
+      const d = data.arc ? cutToGrid(densifyEnds(flat), null, grid, sizeKm)
+        : cutToGrid(flat, (item.widths || [])[r] || null, grid, sizeKm);
       runs.push({ flat: d.flat, colour, rank: item.rank || 3, idx, widen: d.widths });
     });
     return { item, idx, runs: mine, bbox: box };
@@ -173,7 +175,35 @@ function reaches(rec, inside) {
  * lands at its last. The relief is exaggerated to tens of km, so the floor keeps a short
  * hop from being lost in the hills it crosses.
  */
-export const ARC = { rise: 0.1, minKm: 18 };
+export const ARC = { rise: 0.1, minKm: 18, shaft: 1.7, headPx: 15, headWiden: 3.0, gapEndPx: 11, gapStartPx: 6 };
+
+/**
+ * An arc's width is drawn by the shader in screen pixels (a head of `headPx`, stopping
+ * `gapEndPx` short of the pin it points at), so where along the run the head begins
+ * depends on the zoom. The run needs vertices there at every zoom: points are added at
+ * geometric distances from each end, a few metres apart at the tip and a few hundred km
+ * apart at the far end, 1.2 times further each step.
+ */
+export function densifyEnds(flat) {
+  const n = flat.length / 2;
+  if (n < 2) return flat;
+  const cum = [0];
+  for (let i = 1; i < n; i++) cum.push(cum[i - 1] + Math.hypot(flat[i * 2] - flat[i * 2 - 2], flat[i * 2 + 1] - flat[i * 2 - 1]));
+  const total = cum[n - 1];
+  if (total <= 0) return flat;
+  const at = new Set(cum);
+  for (let r = 0.25; r < total * 0.5; r *= 1.2) { at.add(total - r); at.add(r); }
+  const ds = [...at].filter((d) => d >= 0 && d <= total).sort((a, b) => a - b);
+  const out = [];
+  let j = 0;
+  for (const d of ds) {
+    while (j < n - 2 && cum[j + 1] < d) j++;
+    const seg = cum[j + 1] - cum[j];
+    const f = seg > 0 ? Math.min(1, Math.max(0, (d - cum[j]) / seg)) : 0;
+    out.push(flat[j * 2] + (flat[j * 2 + 2] - flat[j * 2]) * f, flat[j * 2 + 1] + (flat[j * 2 + 3] - flat[j * 2 + 1]) * f);
+  }
+  return out;
+}
 
 /** Height (scene km) of an arc at fraction t of a run `L` km long, between its ends' ground heights. */
 export function arcY(t, ga, gb, L) {
@@ -226,6 +256,8 @@ function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 102
       uTime: { value: 0 },
       uArc: { value: arc ? 1 : 0 },
       uArcRise: { value: new Vector2(ARC.rise, ARC.minKm) },
+      uArcHead: { value: new Vector4(ARC.headPx, ARC.headWiden, ARC.gapEndPx, ARC.gapStartPx) },
+      uArcShaft: { value: ARC.shaft },
     },
   });
 }
@@ -276,7 +308,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     // block gets a copy of its own, only the runs that reach it, cut to its finer grid.
     const rect = blockGrid?.rect || [0, 0, 1, 1];
     const bbox = [(rect[0] - 0.5) * sizeKm.x, (rect[1] - 0.5) * sizeKm.y, (rect[2] - 0.5) * sizeKm.x, (rect[3] - 0.5) * sizeKm.y];
-    const src = entry.detailData ? { ...entry.detailData, categories: entry.categories } : entry.data;
+    const src = entry.detailData ? { ...entry.detailData, categories: entry.categories, arc: entry.arc } : entry.data;
     const { geometry } = linesGeometry(src, { grid: blockGrid, sizeKm, bbox });
     const mesh = new Mesh(geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid, entry.arc));
     mesh.frustumCulled = false;

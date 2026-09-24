@@ -16,6 +16,8 @@ uniform vec2 uGrid;          // quads across and down in the mesh this copy is d
 uniform vec4 uGridRect;      // the country uv that mesh spans: u0, v0, u1, v1
 uniform float uArc;          // 1: this layer's runs are arcs in the air, not ribbons on the ground
 uniform vec2 uArcRise;       // an arc's crown: x of its own length, and at least y km
+uniform vec4 uArcHead;       // an arc's head in px: length, width against the shaft, gap before the pin, gap after the start
+uniform float uArcShaft;     // an arc's shaft against a line of the same rank
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
@@ -74,6 +76,7 @@ void main() {
   // A hair above the surface: enough to beat z-fighting, far below anything the eye reads.
   float y = ground + uLift + 0.15;
   float climb = 0.0;           // km up per km along, for the ribbon's screen direction
+  float w = widen;
   if (uArc > 0.5) {
     // An arc leaves the ground where the run starts, rises to a crown in proportion to its
     // length and comes down on the ground where it ends: a journey drawn over the country
@@ -87,6 +90,15 @@ void main() {
     y = mix(ga, gb, t) + rise * 4.0 * t * (1.0 - t) + uLift + 0.15;
     climb = ((gb - ga) + rise * 4.0 * (1.0 - 2.0 * t)) / L;
     slope = 0.0;
+    // The width is the shader's, in screen pixels, so the arrow reads the same at every
+    // zoom: an even shaft, then a head of fixed size whose tip stops short of the pin it
+    // points at (a pin drawn over the tip would hide it), and a small gap at the start.
+    float kmPx = uZoom / uResolution.y;
+    float rem = L - dist - uArcHead.z * kmPx;
+    float head = uArcHead.x * kmPx;
+    w = uArcShaft;
+    if (rem <= 0.0 || dist < uArcHead.w * kmPx) w = 0.0;
+    else if (rem < head) w = uArcShaft * uArcHead.y * (rem / head);
   }
   vec4 mv = modelViewMatrix * vec4(position.x, y, position.z, 1.0);
   vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y + climb, position.z + dir.y, 1.0);
@@ -97,7 +109,7 @@ void main() {
   vec2 n = vec2(-t.y, t.x);
   // A picked line thickens rather than changing colour: it is still the same river.
   vSel = uSelectedIdx >= 0.0 && abs(itemIdx - uSelectedIdx) < 0.5 ? 1.0 : 0.0;
-  float halfPx = byRank(uRankPx) * widen * (1.0 + 0.9 * vSel);
+  float halfPx = byRank(uRankPx) * w * (1.0 + 0.9 * vSel);
   // The ribbon is widened on screen, so its edges reach past the centreline the height
   // was taken at, and on a slope facing the camera the ground there stands in front of
   // them. Pull the ribbon toward the eye by what the slope under it can raise its edge,
