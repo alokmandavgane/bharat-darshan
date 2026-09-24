@@ -714,9 +714,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
    * country one at its own pitch, so the scene point is turned into its pixel rather
    * than the heightfield's.
    */
-  function pickArea(sx, sy) {
+  function pickArea(sx, sy, ground = () => pick(sx, sy)) {
     if (!areaFill?.raster || !field) return null;
-    const p = pick(sx, sy);
+    const p = ground();
     if (!p) return null;
     const { width, height, data } = areaFill.raster;
     const col = Math.floor((p.x / sizeKm.w + 0.5) * width);
@@ -904,9 +904,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   }
 
   /** A `lines` item under a screen point, within a few pixels of it. */
-  function lineAt(sx, sy, px = 9) {
+  function lineAt(sx, sy, px = 9, ground = () => pick(sx, sy)) {
     if (!lines || !field) return null;
-    const p = pick(sx, sy);
+    const p = ground();
     // Over an `areas` fill the areas are what the page is about, and the lines drawn on
     // them are context: the river mesh on the basins page runs within a few pixels of
     // nearly every point. So there a line takes the pointer only when it is a named one
@@ -929,6 +929,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     store.set('pivot', { point: [hit.x, hit.y, hit.z], sx: g.x, sy: g.y, onModel: !!hit.id });
   });
 
+  /**
+   * The terrain under a screen point, marched at most once however many of `lineAt`,
+   * `pickArea` and the hover ask for it: each march is a hundred-odd steps of height
+   * lookups, and a pointer move used to make three.
+   */
+  function groundOnce(sx, sy) {
+    let hit;
+    return () => (hit === undefined ? (hit = pick(sx, sy)) : hit);
+  }
+
   /** A bead or a figurine under a screen point: they have no element of their own to click. */
   function markAt(sx, sy, px) {
     return marks?.nearest(frameProjector(), sx, sy, px, new Set(store.get('layers')?.active || [])) || null;
@@ -947,7 +957,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // a cursor's, which is precise enough at any zoom).
     const zoom = store.get('camera').zoom;
     const linePx = !coarse ? 9 : zoom > 2500 ? 0 : 8;
-    const hit = markAt(tap.x, tap.y, coarse ? 16 : 10) || (linePx > 0 && lineAt(tap.x, tap.y, linePx));
+    const ground = groundOnce(tap.x, tap.y);
+    const hit = markAt(tap.x, tap.y, coarse ? 16 : 10) || (linePx > 0 && lineAt(tap.x, tap.y, linePx, ground));
     if (hit) {
       store.set('item', { layer: hit.layer, id: hit.item.id, data: hit.item, categories: hit.categories, fields: hit.fields });
       return;
@@ -956,7 +967,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // marker: the tap already knows the ground point, and the layer's own raster says
     // which area is under it. It answers before a state does -- the visitor switched a
     // layer on to read it, and entering a state would hide what they tapped.
-    const area = areaFill && pickArea(tap.x, tap.y);
+    const area = areaFill && pickArea(tap.x, tap.y, ground);
     if (area) {
       // Marked, so the card opens where the finger is: a basin is half a subcontinent,
       // and framing it would throw away the view that was being read.
@@ -966,7 +977,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     }
     store.set('item', null);
     const idAt = (sx, sy) => pick(sx, sy).id;
-    const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : idAt(tap.x, tap.y);
+    const id = tap.type === 'touch' || tap.type === 'pen' ? biasedPick(tap.x, tap.y, idAt, areaOf) : ground()?.id;
     // A tap on a state is the way in, and a tap on the one already lifted is the way
     // back out (PLAN.md D4). Leaving is a Back, so the URL restores the selection.
     if (id && level.name === 'state' && level.id === id) {
@@ -983,15 +994,16 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     hoverRaf = requestAnimationFrame(() => {
       hoverRaf = 0;
       const p = store.get('pointer');
-      const hit = p ? (markAt(p.x, p.y, 8) || lineAt(p.x, p.y)) : null;
+      const ground = p && groundOnce(p.x, p.y);
+      const hit = p ? (markAt(p.x, p.y, 8) || lineAt(p.x, p.y, 9, ground)) : null;
       // An area of the fill on show names itself under the pointer the way a line does,
       // and then the state beneath it is not what is being pointed at.
-      const area = p && !hit && areaFill ? pickArea(p.x, p.y) : null;
+      const area = p && !hit && areaFill ? pickArea(p.x, p.y, ground) : null;
       const under = hit ? { layer: hit.layer, id: hit.item.id, name: hit.item.name }
         : area ? { layer: areaFill.id, id: area.id, name: area.name } : null;
       const was = store.get('hoverLine');
       if (under?.id !== was?.id || under?.layer !== was?.layer) store.set('hoverLine', under);
-      store.set('hover', p && field && !under ? pick(p.x, p.y).id || null : null);
+      store.set('hover', p && field && !under ? ground()?.id || null : null);
     });
   });
 
