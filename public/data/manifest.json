@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 41,
+   "count": 59,
    "reviewed": 0,
    "categories": [
     {
@@ -1578,6 +1578,14 @@
       "hi": "बारह वर्ष वन में"
      },
      "color": "#4f8a3a"
+    },
+    {
+     "id": "pulastya",
+     "title": {
+      "en": "Pulastya's tīrtha circuit",
+      "hi": "पुलस्त्य की तीर्थ-परिक्रमा"
+     },
+     "color": "#7d8c2e"
     },
     {
      "id": "virata",
@@ -1637,8 +1645,8 @@
     }
    },
    "note": {
-    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's, the embassy, Girivraja) are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
-    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की, दूत-कर्म, गिरिव्रज) पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
+    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
+    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की, दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource"
@@ -1655,7 +1663,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 24,
+   "count": 37,
    "reviewed": 0,
    "categories": [
     {
@@ -1701,6 +1709,15 @@
       "hi": "बारह वर्ष वन में"
      },
      "color": "#4f8a3a",
+     "icon": "pin"
+    },
+    {
+     "id": "pulastya",
+     "title": {
+      "en": "Pulastya's tīrtha circuit",
+      "hi": "पुलस्त्य की तीर्थ-परिक्रमा"
+     },
+     "color": "#7d8c2e",
      "icon": "pin"
     },
     {
@@ -1794,8 +1811,8 @@
     }
    },
    "note": {
-    "en": "The Mahābhārata's story as a road, in order, from the boys' arrival at Hastināpura to the last journey over the Himavat. The dates are the southern text's own: a passage of the Ādiparvan (1.134) counts Yudhiṣṭhira's years, sixteen on arrival, twenty-nine at the lac house, fifty-nine at the dice, seventy-two at Kurukṣetra, a hundred and eight at the end. After the coronation comes the aśvamedha horse's year, from one Caitra full moon to the next, followed by Arjuna round the country. Places the story returns to, Hastināpura, Prabhāsa, Girivraja and Dvārakā, have one pin per visit. Śataśṛṅga, Ekacakrā, Dvaitavana, Upaplavya and Maṇalūra are not placed.",
-    "hi": "महाभारत की कथा एक मार्ग के रूप में, क्रम से: बालकों के हस्तिनापुर आगमन से हिमवान् के पार महाप्रस्थान तक। तिथियाँ दक्षिणी पाठ की अपनी हैं: आदिपर्व का एक अंश (1.134) युधिष्ठिर की आयु गिनता है — आगमन पर सोलह, लाक्षागृह में उनतीस, द्यूत में उनसठ, कुरुक्षेत्र में बहत्तर, अंत में एक सौ आठ। राज्याभिषेक के बाद अश्वमेध के अश्व का वर्ष आता है, एक चैत्र पूर्णिमा से अगली तक, जिसके पीछे अर्जुन देश भर घूमते हैं। जिन स्थानों पर कथा लौटती है — हस्तिनापुर, प्रभास, गिरिव्रज और द्वारका — वहाँ हर बार का अलग पिन है। शतशृंग, एकचक्रा, द्वैतवन, उपप्लव्य और मणलूर के स्थान तय नहीं।"
+    "en": "The Mahābhārata's story as a road, in order, from the boys' arrival at Hastināpura to the last journey over the Himavat. The dates are the southern text's own: a passage of the Ādiparvan (1.134) counts Yudhiṣṭhira's years, sixteen on arrival, twenty-nine at the lac house, fifty-nine at the dice, seventy-two at Kurukṣetra, a hundred and eight at the end. In the forest years Nārada recites Pulastya's circuit of the tīrthas, a rightwise round of the country from Puṣkara to Prayāga, drawn as thin arrows because no one in the story walks it. After the coronation comes the aśvamedha horse's year, from one Caitra full moon to the next, followed by Arjuna round the country. Places the story returns to, Hastināpura, Prabhāsa, Kurukṣetra, Gaṅgādvāra, Gokarṇa, Girivraja and Dvārakā, have one pin per visit. Śataśṛṅga, Ekacakrā, Dvaitavana, Upaplavya and Maṇalūra are not placed.",
+    "hi": "महाभारत की कथा एक मार्ग के रूप में, क्रम से: बालकों के हस्तिनापुर आगमन से हिमवान् के पार महाप्रस्थान तक। तिथियाँ दक्षिणी पाठ की अपनी हैं: आदिपर्व का एक अंश (1.134) युधिष्ठिर की आयु गिनता है — आगमन पर सोलह, लाक्षागृह में उनतीस, द्यूत में उनसठ, कुरुक्षेत्र में बहत्तर, अंत में एक सौ आठ। वनवास के वर्षों में नारद पुलस्त्य की तीर्थ-परिक्रमा सुनाते हैं, पुष्कर से प्रयाग तक देश का दक्षिणावर्त चक्कर, जिसे पतले तीरों से दिखाया गया है क्योंकि कथा में कोई इस पर चलता नहीं। राज्याभिषेक के बाद अश्वमेध के अश्व का वर्ष आता है, एक चैत्र पूर्णिमा से अगली तक, जिसके पीछे अर्जुन देश भर घूमते हैं। जिन स्थानों पर कथा लौटती है — हस्तिनापुर, प्रभास, कुरुक्षेत्र, गंगाद्वार, गोकर्ण, गिरिव्रज और द्वारका — वहाँ हर बार का अलग पिन है। शतशृंग, एकचक्रा, द्वैतवन, उपप्लव्य और मणलूर के स्थान तय नहीं।"
    },
    "sources": [
     "sa-wikisource",
@@ -3296,8 +3313,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 28319,
-   "sha256": "0615f50ba75a"
+   "size": 28487,
+   "sha256": "4abbee580ccd"
   },
   "sources.json": {
    "size": 31205,
@@ -3568,12 +3585,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 44339,
-   "sha256": "d3e76c242a1c"
+   "size": 60701,
+   "sha256": "b808c59dd3cd"
   },
   "layers/mahabharata-stops.json": {
-   "size": 36806,
-   "sha256": "36e05a254fd7"
+   "size": 55788,
+   "sha256": "51e1ea40eabd"
   },
   "layers/minerals.json": {
    "size": 38276,
