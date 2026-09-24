@@ -1671,7 +1671,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 47,
+   "count": 48,
    "reviewed": 0,
    "categories": [
     {
@@ -3330,8 +3330,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 28643,
-   "sha256": "de1909d4932e"
+   "size": 28667,
+   "sha256": "2e85916e9291"
   },
   "sources.json": {
    "size": 31205,
@@ -3606,8 +3606,8 @@
    "sha256": "0afa79f2abcd"
   },
   "layers/mahabharata-stops.json": {
-   "size": 71208,
-   "sha256": "03bbc01a9f8f"
+   "size": 72852,
+   "sha256": "6304ced46a80"
   },
   "layers/minerals.json": {
    "size": 38276,
