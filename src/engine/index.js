@@ -70,6 +70,10 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let countryMask = null;      // ...and that mask for the whole country, built once
   let stateIndex = null;       // the state-package index, once fetched
   let pkgLoad = null;          // AbortController for the package in flight
+  // The last state package decoded, kept after its block goes: in, out and back into
+  // the same state is the common path, and it would otherwise fetch, gunzip and undo
+  // the predictor again. One only (a big state is ~30 MB decoded), none on the low tier.
+  let pkgKept = null;          // { slug, pkg }
   let countryKmPerPx = 0;      // ground size of one height texel in the country tier on screen
   let localKmPerPx = 0;        // ...and in the state package, while one is bound
   let cancelLevel = null;
@@ -796,7 +800,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       if (!stateIndex) stateIndex = await loadStateIndex(manifest);
       const entry = stateIndex?.units?.[unit.slug];
       if (!entry) return;
-      const pkg = await loadStatePackage(manifest, entry, signal);
+      const pkg = pkgKept?.slug === unit.slug ? pkgKept.pkg : await loadStatePackage(manifest, entry, signal);
+      pkgKept = quality.name === 'low' ? null : { slug: unit.slug, pkg };
       if (signal.aborted || !block || block.unit.id !== unit.id) return;
       // The plate cuts its socket from the same field the block trims its rim with.
       const edge = block.setPackage(pkg, sizeKm);
