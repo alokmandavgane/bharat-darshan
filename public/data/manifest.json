@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 116,
+   "count": 131,
    "reviewed": 0,
    "categories": [
     {
@@ -1628,6 +1628,14 @@
      "color": "#e08a1e"
     },
     {
+     "id": "karna",
+     "title": {
+      "en": "Karṇa's conquest of the earth",
+      "hi": "कर्ण की दिग्विजय"
+     },
+     "color": "#9e1b32"
+    },
+    {
      "id": "virata",
      "title": {
       "en": "The thirteenth year",
@@ -1711,7 +1719,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 81,
+   "count": 92,
    "reviewed": 0,
    "categories": [
     {
@@ -1811,6 +1819,15 @@
       "hi": "लोमश के साथ तीर्थयात्रा"
      },
      "color": "#e08a1e",
+     "icon": "pin"
+    },
+    {
+     "id": "karna",
+     "title": {
+      "en": "Karṇa's conquest of the earth",
+      "hi": "कर्ण की दिग्विजय"
+     },
+     "color": "#9e1b32",
      "icon": "pin"
     },
     {
@@ -3415,8 +3432,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 29177,
-   "sha256": "08cb65a172fb"
+   "size": 29356,
+   "sha256": "b4cc0a1bfe36"
   },
   "sources.json": {
    "size": 31205,
@@ -3687,12 +3704,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 113044,
-   "sha256": "8217d6696c85"
+   "size": 125982,
+   "sha256": "913777264c50"
   },
   "layers/mahabharata-stops.json": {
-   "size": 120449,
-   "sha256": "af0096cf0f94"
+   "size": 135727,
+   "sha256": "8ec99bd1e531"
   },
   "layers/minerals.json": {
    "size": 38276,
