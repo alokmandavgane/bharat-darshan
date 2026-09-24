@@ -12,7 +12,10 @@
       "Ganga @ Ganga"
     ],
     "verse": "गङ्गां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Ganga",
       "hi": "गंगा"
@@ -42,7 +45,10 @@
       "Indus"
     ],
     "verse": "सिन्धुं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Indus",
       "hi": "सिंधु"
@@ -72,7 +78,10 @@
       "Godavari @ Godavari"
     ],
     "verse": "गोदावरीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Godavari",
       "hi": "गोदावरी"
@@ -102,7 +111,10 @@
       "Narmada"
     ],
     "verse": "नर्मदां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Narmada",
       "hi": "नर्मदा"
@@ -132,7 +144,10 @@
       "Satluj"
     ],
     "verse": "शतद्रूं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Sutlej",
       "hi": "सतलुज"
@@ -162,7 +177,10 @@
       "Chenab"
     ],
     "verse": "चन्द्रभागां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Chenab",
       "hi": "चिनाब"
@@ -192,7 +210,10 @@
       "Yamuna"
     ],
     "verse": "यमुनां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Yamuna",
       "hi": "यमुना"
@@ -222,7 +243,10 @@
       "Beas"
     ],
     "verse": "विपाशां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Beas",
       "hi": "ब्यास"
@@ -252,7 +276,10 @@
       "Ravi"
     ],
     "verse": "इरावतीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Ravi",
       "hi": "रावी"
@@ -282,7 +309,10 @@
       "Jhelum"
     ],
     "verse": "वितस्तां",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Jhelum",
       "hi": "झेलम"
@@ -312,7 +342,10 @@
       "Krishna @ Krishna"
     ],
     "verse": "कृष्णवेणीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Krishna",
       "hi": "कृष्णा"
@@ -342,7 +375,10 @@
       "Ghaghara @ Ganga"
     ],
     "verse": "सरयूं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Ghaghara",
       "hi": "घाघरा"
@@ -372,7 +408,10 @@
       "Chambal @ Ganga"
     ],
     "verse": "चर्मण्वतीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Chambal",
       "hi": "चंबल"
@@ -402,7 +441,10 @@
       "Betwa @ Ganga"
     ],
     "verse": "वेत्रवतीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Betwa",
       "hi": "बेतवा"
@@ -432,7 +474,10 @@
       "Bhima @ Krishna"
     ],
     "verse": "भीमरथीमपि",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Bhima",
       "hi": "भीमा"
@@ -462,7 +507,10 @@
       "Cauvery @ Cauvery"
     ],
     "verse": "कावेरीं",
-    "locus": "Mahābhārata 6.9.14-20",
+    "locus": {
+      "en": "Mahābhārata 6.9.14-20",
+      "hi": "महाभारत 6.9.14-20"
+    },
     "modern": {
       "en": "Kaveri",
       "hi": "कावेरी"
@@ -492,7 +540,10 @@
       "Gandak"
     ],
     "verse": "सदानीरामधृष्यां",
-    "locus": "Mahābhārata 6.9.21-38",
+    "locus": {
+      "en": "Mahābhārata 6.9.21-38",
+      "hi": "महाभारत 6.9.21-38"
+    },
     "modern": {
       "en": "Gandak",
       "hi": "गंडक"
@@ -522,7 +573,10 @@
       "Tungabhadra"
     ],
     "verse": "तुङ्गवेणां",
-    "locus": "Mahābhārata 6.9.21-38",
+    "locus": {
+      "en": "Mahābhārata 6.9.21-38",
+      "hi": "महाभारत 6.9.21-38"
+    },
     "modern": {
       "en": "Tungabhadra",
       "hi": "तुंगभद्रा"
@@ -552,7 +606,10 @@
       "Sone @ Ganga"
     ],
     "verse": "शोणा",
-    "locus": "Mahābhārata 6.9.21-38",
+    "locus": {
+      "en": "Mahābhārata 6.9.21-38",
+      "hi": "महाभारत 6.9.21-38"
+    },
     "modern": {
       "en": "Son",
       "hi": "सोन"
@@ -582,7 +639,10 @@
       "Brahmani @ Brahmani and Baitarni"
     ],
     "verse": "ब्राह्मणीं",
-    "locus": "Mahābhārata 6.9.21-38",
+    "locus": {
+      "en": "Mahābhārata 6.9.21-38",
+      "hi": "महाभारत 6.9.21-38"
+    },
     "modern": {
       "en": "Brahmani",
       "hi": "ब्राह्मणी"
@@ -612,7 +672,10 @@
       "Brahmaputra"
     ],
     "verse": "लोहित्यां",
-    "locus": "Mahābhārata 6.9.21-38",
+    "locus": {
+      "en": "Mahābhārata 6.9.21-38",
+      "hi": "महाभारत 6.9.21-38"
+    },
     "modern": {
       "en": "Brahmaputra",
       "hi": "ब्रह्मपुत्र"

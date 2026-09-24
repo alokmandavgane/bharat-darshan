@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (forty-eighth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (forty-ninth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -722,7 +722,14 @@ content/plates/minerals.json
 - The build validates a plate the way it validates a layer: every layer it names exists,
   both languages present, only `reviewed` plates ship. `grep -r minerals src/` stays
   empty.
-- Stories (Phase 4) become a plate with steps.
+- Stories (Phase 4) become a plate with steps. *Built 2026-09-24 (forty-ninth round), in its
+  smallest form:* a plate may carry `"tour": {"layer", "stops", "title"}` -- one of its own
+  points layers and the ids to visit, in order. The tour then visits exactly those stops in
+  that order instead of everything on show nearest-first, the card's prev/next walks the same
+  route, and the page shows its own play button under `title`. `07_plates.py` checks the layer
+  is the page's, is a points layer and has every stop. Captions are the stops' own cards; the
+  route is an ordinary arrows layer on the same page. Per-step camera, text or layer changes
+  are not built; nothing has needed them yet.
 
 ### Source registry
 
@@ -2443,6 +2450,29 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, forty-ninth round: the first story, Sugrīva's four quarters (`/en/atlas/sugriva`).
+  The owner asked for a Rāma tour from Rāmāyaṇa Kiṣkindhā 40-43. Those sargas are Sugrīva's
+  orders to the four search parties, not Rāma's own journey; the page follows them as written
+  and says so, and its southern leg is the road to the sea that Rāma's army later takes.
+  - **Stories, the primitive**: a plate's `tour` (PLAN.md section 5, "Plates") names stops in
+    order. Engine: `index.js` hands the tour the page's stops when it has them, `tour.js` keeps
+    a given order; shell: the page gets its own play button. The tour's card handover now
+    passes the layer's fields too (they were missing from every tour card before).
+  - **Two layers and the plate, all generated** by the kosha gazetteer's export:
+    `sugriva-search` (25 stops coloured by party, in Sugrīva's order) and `sugriva-routes` (11
+    arrows: one out of Kiṣkindhā per party, the southern road past Agastya to Mahendra and the
+    island, and the ways out over the sea or the snow). `content/plates/sugriva.json` is
+    written by the export too; edit the tour in the kosha, not here.
+  - Arrow items no longer carry `km`: the card printed "Length in India" for the monsoon's
+    arrows and these, a number that measures nothing on a diagram. The `locus` field on all
+    five History layers is now a bilingual name, so the Hindi card says रामायण, not Rāmāyaṇa.
+  - Not drawn: the island (named only as Rāvaṇa's country), Yavadvīpa, the Indus mouth and
+    Kailāsa; arrows point at them and stop. Checked in the browser in both languages: the tour
+    plays 25 stops in order, prev/next and pause work, every stop and leg card reads.
+  - **Next for History**: Rāma's own route needs the kosha to attest Ayodhyā 46-56 (to
+    Śṛṅgaverapura, Prayāga, Citrakūṭa), the Araṇyakāṇḍa (Pañcavaṭī) and Yuddha 4-22 (the march
+    and the setu), then it is one more `tours` entry. The Mahābhārata chronology would want
+    steps that change the layers or the date, which the primitive does not do yet.
 - 2026-09-24, forty-eighth round: the first History page, Bhāratavarṣa in the old texts
   (`/en/atlas/bharatavarsha`). The owner asked for the old names of places on the atlas,
   as a data layer off the front page, with tours of routes (Rāma's) and chronologies (the

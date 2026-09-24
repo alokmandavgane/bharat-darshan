@@ -16,7 +16,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "मत्स्य",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Viratnagar (Bairat)",
       "hi": "विराटनगर (बैराठ)"
@@ -51,7 +54,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "माध्यमिकाः",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Nagari, near Chittorgarh",
       "hi": "नगरी, चित्तौड़गढ़ के पास"
@@ -86,7 +92,10 @@
     "category": "madhya",
     "priority": 1,
     "verse": "माथुर",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Mathura",
       "hi": "मथुरा"
@@ -121,7 +130,10 @@
     "category": "madhya",
     "priority": 1,
     "verse": "पाञ्चालाः",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Kampil (Kāmpilya)",
       "hi": "कम्पिल (काम्पिल्य)"
@@ -156,7 +168,10 @@
     "category": "madhya",
     "priority": 1,
     "verse": "साकेत",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Ayodhya",
       "hi": "अयोध्या"
@@ -191,7 +206,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "कङ्ककुरुकालकोटि",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Kurukshetra (Thanesar)",
       "hi": "कुरुक्षेत्र (थानेसर)"
@@ -226,7 +244,10 @@
     "category": "madhya",
     "priority": 1,
     "verse": "गजाह्वया",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Hastinapur",
       "hi": "हस्तिनापुर"
@@ -261,7 +282,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "कापिष्ठल",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Kaithal",
       "hi": "कैथल"
@@ -296,7 +320,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "मरुवत्सघोष",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Kaushambi (Kosam)",
       "hi": "कौशाम्बी (कोसम)"
@@ -331,7 +358,10 @@
     "category": "madhya",
     "priority": 2,
     "verse": "औदुम्बर",
-    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
     "modern": {
       "en": "Pathankot",
       "hi": "पठानकोट"
@@ -366,7 +396,10 @@
     "category": "purva",
     "priority": 1,
     "verse": "मगध",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Patna (Pāṭaliputra)",
       "hi": "पटना (पाटलिपुत्र)"
@@ -401,7 +434,10 @@
     "category": "purva",
     "priority": 2,
     "verse": "मिथिल",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Madhubani (Mithila)",
       "hi": "मधुबनी (मिथिला)"
@@ -436,7 +472,10 @@
     "category": "purva",
     "priority": 2,
     "verse": "प्राग्ज्योतिष",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Guwahati",
       "hi": "गुवाहाटी"
@@ -471,7 +510,10 @@
     "category": "purva",
     "priority": 2,
     "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Odisha, placed at Jajpur",
       "hi": "ओडिशा, जाजपुर पर"
@@ -506,7 +548,10 @@
     "category": "purva",
     "priority": 1,
     "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Varanasi",
       "hi": "वाराणसी"
@@ -541,7 +586,10 @@
     "category": "purva",
     "priority": 2,
     "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Amarkantak, Maikal hills",
       "hi": "अमरकंटक, मैकल पहाड़ियाँ"
@@ -576,7 +624,10 @@
     "category": "purva",
     "priority": 1,
     "verse": "ताम्रलिप्तक",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Tamluk",
       "hi": "तमलुक"
@@ -611,7 +662,10 @@
     "category": "purva",
     "priority": 2,
     "verse": "वर्धमानाश्च",
-    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.5-7",
+      "hi": "बृहत्संहिता 14.5-7"
+    },
     "modern": {
       "en": "Bardhaman",
       "hi": "बर्धमान"
@@ -647,7 +701,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "कोशलकलिङ्गवङ्ग",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "South Kosala, near Sirpur",
       "hi": "दक्षिण कोसल, सिरपुर के पास"
@@ -682,7 +739,10 @@
     "category": "agneya",
     "priority": 1,
     "verse": "कोशलकलिङ्गवङ्ग",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Bhubaneswar (Tosalī)",
       "hi": "भुवनेश्वर (तोसली)"
@@ -717,7 +777,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "जठराङ्गाः",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Bhagalpur (Campā)",
       "hi": "भागलपुर (चम्पा)"
@@ -752,7 +815,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "विदर्भवत्सान्ध्रचेदिका",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Amravati (Kauṇḍinyapura)",
       "hi": "अमरावती (कौण्डिन्यपुर)"
@@ -787,7 +853,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "विदर्भवत्सान्ध्रचेदिका",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Amaravati (Dhānyakaṭaka)",
       "hi": "अमरावती (धान्यकटक)"
@@ -822,7 +891,10 @@
     "category": "agneya",
     "priority": 1,
     "verse": "त्रिपुरी",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Tewar, near Jabalpur",
       "hi": "तेवर, जबलपुर के पास"
@@ -857,7 +929,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "दाशार्णाः",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Vidisha",
       "hi": "विदिशा"
@@ -892,7 +967,10 @@
     "category": "agneya",
     "priority": 2,
     "verse": "किष्किन्ध",
-    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.8-10",
+      "hi": "बृहत्संहिता 14.8-10"
+    },
     "modern": {
       "en": "Hampi–Anegundi",
       "hi": "हम्पी–आनेगुंदी"
@@ -927,7 +1005,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "गिरिनगर",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Junagadh (Girnar)",
       "hi": "जूनागढ़ (गिरनार)"
@@ -962,7 +1043,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "भरुकच्छाः",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Bharuch",
       "hi": "भरूच"
@@ -997,7 +1081,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "वनवासि",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Banavasi",
       "hi": "बनवासी"
@@ -1032,7 +1119,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "दशपुर",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Mandsaur",
       "hi": "मंदसौर"
@@ -1067,7 +1157,10 @@
     "category": "dakshina",
     "priority": 2,
     "verse": "चित्रकूट",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Chitrakoot",
       "hi": "चित्रकूट"
@@ -1102,7 +1195,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "नासिक्य",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Nashik",
       "hi": "नाशिक"
@@ -1137,7 +1233,10 @@
     "category": "dakshina",
     "priority": 2,
     "verse": "चोलाः",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Uraiyur (Tiruchirappalli)",
       "hi": "उरैयूर (तिरुचिरापल्ली)"
@@ -1172,7 +1271,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "काञ्ची",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Kanchipuram",
       "hi": "कांचीपुरम"
@@ -1207,7 +1309,10 @@
     "category": "dakshina",
     "priority": 2,
     "verse": "मरुचीपट्टन",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Muziris, near Kodungallur",
       "hi": "मुज़िरिस, कोडुंगल्लूर के पास"
@@ -1243,7 +1348,10 @@
     "category": "dakshina",
     "priority": 2,
     "verse": "दण्डकावन",
-    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
     "modern": {
       "en": "Dandakaranya (Bastar)",
       "hi": "दंडकारण्य (बस्तर)"
@@ -1278,7 +1386,10 @@
     "category": "dakshina",
     "priority": 1,
     "verse": "आवन्तो",
-    "locus": "Bṛhat-saṃhitā 14.32-33",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.32-33",
+      "hi": "बृहत्संहिता 14.32-33"
+    },
     "modern": {
       "en": "Ujjain",
       "hi": "उज्जैन"
@@ -1313,7 +1424,10 @@
     "category": "nairrta",
     "priority": 1,
     "verse": "नारीमुखऽनर्ताः",
-    "locus": "Bṛhat-saṃhitā 14.17-19",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.17-19",
+      "hi": "बृहत्संहिता 14.17-19"
+    },
     "modern": {
       "en": "Vadnagar (Ānartapura)",
       "hi": "वडनगर (आनर्तपुर)"
@@ -1348,7 +1462,10 @@
     "category": "nairrta",
     "priority": 2,
     "verse": "रैवतकसुराष्ट्र",
-    "locus": "Bṛhat-saṃhitā 14.17-19",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.17-19",
+      "hi": "बृहत्संहिता 14.17-19"
+    },
     "modern": {
       "en": "Saurashtra",
       "hi": "सौराष्ट्र"
@@ -1383,7 +1500,10 @@
     "category": "pashcima",
     "priority": 1,
     "verse": "अपरान्तक",
-    "locus": "Bṛhat-saṃhitā 14.20-21",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.20-21",
+      "hi": "बृहत्संहिता 14.20-21"
+    },
     "modern": {
       "en": "Sopara, north Konkan",
       "hi": "सोपारा, उत्तर कोंकण"
@@ -1418,7 +1538,10 @@
     "category": "pashcima",
     "priority": 2,
     "verse": "हैहय",
-    "locus": "Bṛhat-saṃhitā 14.20-21",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.20-21",
+      "hi": "बृहत्संहिता 14.20-21"
+    },
     "modern": {
       "en": "Maheshwar (Māhiṣmatī)",
       "hi": "महेश्वर (माहिष्मती)"
@@ -1453,7 +1576,10 @@
     "category": "vayavya",
     "priority": 1,
     "verse": "अश्मककुलूत",
-    "locus": "Bṛhat-saṃhitā 14.22-23",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.22-23",
+      "hi": "बृहत्संहिता 14.22-23"
+    },
     "modern": {
       "en": "Kullu",
       "hi": "कुल्लू"
@@ -1488,7 +1614,10 @@
     "category": "uttara",
     "priority": 1,
     "verse": "त्रिगर्त",
-    "locus": "Bṛhat-saṃhitā 14.24-28",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.24-28",
+      "hi": "बृहत्संहिता 14.24-28"
+    },
     "modern": {
       "en": "Kangra",
       "hi": "कांगड़ा"
@@ -1523,7 +1652,10 @@
     "category": "uttara",
     "priority": 2,
     "verse": "यौधेय",
-    "locus": "Bṛhat-saṃhitā 14.24-28",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.24-28",
+      "hi": "बृहत्संहिता 14.24-28"
+    },
     "modern": {
       "en": "Rohtak",
       "hi": "रोहतक"
@@ -1558,7 +1690,10 @@
     "category": "aishana",
     "priority": 1,
     "verse": "कीरकाश्मीराः",
-    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.29-31",
+      "hi": "बृहत्संहिता 14.29-31"
+    },
     "modern": {
       "en": "Srinagar (Kashmir)",
       "hi": "श्रीनगर (कश्मीर)"
@@ -1593,7 +1728,10 @@
     "category": "aishana",
     "priority": 2,
     "verse": "अभिसारदरद",
-    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.29-31",
+      "hi": "बृहत्संहिता 14.29-31"
+    },
     "modern": {
       "en": "Poonch–Rajouri",
       "hi": "पुंछ–राजौरी"
@@ -1628,7 +1766,10 @@
     "category": "aishana",
     "priority": 2,
     "verse": "अभिसारदरद",
-    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.29-31",
+      "hi": "बृहत्संहिता 14.29-31"
+    },
     "modern": {
       "en": "Gilgit (Dardistan)",
       "hi": "गिलगित (दरदिस्तान)"
@@ -1644,6 +1785,120 @@
     "sources": [
       "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
       "https://www.geonames.org/1178338"
+    ]
+  },
+  {
+    "id": "tamraparni",
+    "status": "draft",
+    "name": {
+      "en": "Tāmraparṇī",
+      "hi": "ताम्रपर्णी"
+    },
+    "anchor": {
+      "lat": 8.72742,
+      "lon": 77.6838
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "dakshina",
+    "priority": 2,
+    "verse": "सताम्रपर्णी",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.11-16",
+      "hi": "बृहत्संहिता 14.11-16"
+    },
+    "modern": {
+      "en": "Thamirabarani",
+      "hi": "ताम्रपर्णी (तामिरबरणी)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. A point, not a line: the atlas's rivers do not include it. Placed at Tirunelveli, on its bank.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। रेखा नहीं, बिंदु: एटलस की नदियों में यह नहीं है। उसके किनारे तिरुनेलवेली पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1254361"
+    ]
+  },
+  {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "anchor": {
+      "lat": 27.5035,
+      "lon": 77.67215
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "शूरसेनाश्च",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.1-4",
+      "hi": "बृहत्संहिता 14.1-4"
+    },
+    "modern": {
+      "en": "Mathura",
+      "hi": "मथुरा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. The people of Mathurā; the pin stands at the city.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। मथुरा के लोग; पिन नगर पर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1263364"
+    ]
+  },
+  {
+    "id": "himavat",
+    "status": "draft",
+    "name": {
+      "en": "Himavat",
+      "hi": "हिमवत्"
+    },
+    "anchor": {
+      "lat": 30.35,
+      "lon": 79.55
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "uttara",
+    "priority": 2,
+    "verse": "कैलासो हिमवान्",
+    "locus": {
+      "en": "Bṛhat-saṃhitā 14.24-28",
+      "hi": "बृहत्संहिता 14.24-28"
+    },
+    "modern": {
+      "en": "the Himalaya",
+      "hi": "हिमालय"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के उत्तर भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://en.wikipedia.org/wiki/Himalayas"
     ]
   }
 ]

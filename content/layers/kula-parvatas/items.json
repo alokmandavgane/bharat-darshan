@@ -16,7 +16,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "Eastern Ghats (Mahendragiri)",
       "hi": "पूर्वी घाट (महेंद्रगिरि)"
@@ -51,7 +54,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "southern Western Ghats",
       "hi": "दक्षिणी पश्चिमी घाट"
@@ -86,7 +92,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "northern Western Ghats (Sahyadri)",
       "hi": "उत्तरी पश्चिमी घाट (सह्याद्रि)"
@@ -121,7 +130,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "eastern Vindhya and Satpura",
       "hi": "पूर्वी विंध्य और सतपुड़ा"
@@ -156,7 +168,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "विन्ध्यश्च पारियात्रश्च",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "Vindhya range",
       "hi": "विंध्य पर्वतमाला"
@@ -191,7 +206,10 @@
     "category": "kula-parvata",
     "priority": 1,
     "verse": "विन्ध्यश्च पारियात्रश्च",
-    "locus": "Mahābhārata 6.9.11",
+    "locus": {
+      "en": "Mahābhārata 6.9.11",
+      "hi": "महाभारत 6.9.11"
+    },
     "modern": {
       "en": "the Aravalli and western Vindhya",
       "hi": "अरावली और पश्चिमी विंध्य"

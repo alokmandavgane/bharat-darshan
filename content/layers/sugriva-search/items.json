@@ -1,0 +1,952 @@
+[
+  {
+    "id": "mithila",
+    "status": "draft",
+    "name": {
+      "en": "Mithilā",
+      "hi": "मिथिला"
+    },
+    "anchor": {
+      "lat": 26.35367,
+      "lon": 86.07169
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "east",
+    "priority": 1,
+    "verse": "विदेहांश्च",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "modern": {
+      "en": "Madhubani (Mithila)",
+      "hi": "मधुबनी (मिथिला)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter, Vinata's party. The east begins with the Videhas, Sītā's own country.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा, विनत का दल। पूर्व विदेहों से आरंभ होता है, जो सीता का अपना देश है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574",
+      "https://www.geonames.org/1264555"
+    ]
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "east",
+    "priority": 2,
+    "verse": "काशिकोसलान्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "modern": {
+      "en": "Varanasi",
+      "hi": "वाराणसी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter, Vinata's party. Placed in the east, not the centre: the sector is a bearing, not a surveyed box.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा, विनत का दल। मध्य में नहीं, पूर्व में गिनाया गया: भाग एक दिशा है, नापा हुआ खाना नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala",
+      "hi": "कोसल"
+    },
+    "anchor": {
+      "lat": 26.79909,
+      "lon": 82.2047
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "east",
+    "priority": 2,
+    "verse": "काशिकोसलान्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "modern": {
+      "en": "Ayodhya",
+      "hi": "अयोध्या"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter, Vinata's party. Rāma's own country, named among the places to search.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा, विनत का दल। राम का अपना देश, खोज के स्थानों में गिनाया गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574",
+      "https://www.geonames.org/1278094"
+    ]
+  },
+  {
+    "id": "magadha",
+    "status": "draft",
+    "name": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "anchor": {
+      "lat": 25.59408,
+      "lon": 85.13563
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "east",
+    "priority": 2,
+    "verse": "मागधांश्च महाग्रामान्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "modern": {
+      "en": "Patna (Pāṭaliputra)",
+      "hi": "पटना (पाटलिपुत्र)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter, Vinata's party. Its king stands for the east at 14.32.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा, विनत का दल। 14.32 में इसका राजा पूर्व भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574",
+      "https://www.geonames.org/1260086"
+    ]
+  },
+  {
+    "id": "anga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "anchor": {
+      "lat": 25.24446,
+      "lon": 86.97183
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "east",
+    "priority": 2,
+    "verse": "पुण्ड्रांस्त्वङ्गांस्तथैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "modern": {
+      "en": "Bhagalpur (Campā)",
+      "hi": "भागलपुर (चम्पा)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter, Vinata's party. The last people before the eastern sea and Yavadvīpa.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा, विनत का दल। पूर्वी समुद्र और यवद्वीप से पहले अंतिम जन।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574",
+      "https://www.geonames.org/1276300"
+    ]
+  },
+  {
+    "id": "vindhya",
+    "status": "draft",
+    "name": {
+      "en": "Vindhya",
+      "hi": "विन्ध्य"
+    },
+    "anchor": {
+      "lat": 23.3,
+      "lon": 78.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "south",
+    "priority": 1,
+    "verse": "सहस्रशिरसं विन्ध्यं",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Vindhya range",
+      "hi": "विंध्य पर्वतमाला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. The south begins at the Vindhya, far north of Kiṣkindhā: the list is of Bhāratavarṣa's south, not of what lies south of the speaker.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। दक्षिण विंध्य से आरंभ होता है, जो किष्किन्धा से बहुत उत्तर है: सूची भारतवर्ष के दक्षिण की है, वक्ता के दक्षिण की नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://en.wikipedia.org/wiki/Vindhya_Range"
+    ]
+  },
+  {
+    "id": "mekala",
+    "status": "draft",
+    "name": {
+      "en": "Mekala",
+      "hi": "मेकल"
+    },
+    "anchor": {
+      "lat": 22.67486,
+      "lon": 81.75908
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "मेखलानुत्कलांश्चैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Amarkantak, Maikal hills",
+      "hi": "अमरकंटक, मैकल पहाड़ियाँ"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1278905"
+    ]
+  },
+  {
+    "id": "utkala",
+    "status": "draft",
+    "name": {
+      "en": "Utkala",
+      "hi": "उत्कल"
+    },
+    "anchor": {
+      "lat": 20.84852,
+      "lon": 86.33729
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "मेखलानुत्कलांश्चैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Odisha, placed at Jajpur",
+      "hi": "ओडिशा, जाजपुर पर"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1269477"
+    ]
+  },
+  {
+    "id": "dasarna",
+    "status": "draft",
+    "name": {
+      "en": "Daśārṇa",
+      "hi": "दशार्ण"
+    },
+    "anchor": {
+      "lat": 23.52604,
+      "lon": 77.81092
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "दशार्णनगराण्यपि",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Vidisha",
+      "hi": "विदिशा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. The Dhasān river country, whose capital was Vidiśā.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। धसान नदी का देश, जिसकी राजधानी विदिशा थी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1253200"
+    ]
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti (Āvanta)",
+      "hi": "अवन्ति (आवन्त)"
+    },
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "आब्रवन्तीमवन्तीं",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Ujjain",
+      "hi": "उज्जैन"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. Named only in the kings' verse, where its king stands for the south.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। केवल राजाओं वाले श्लोक में नाम है, जहाँ इसका राजा दक्षिण भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1253914"
+    ]
+  },
+  {
+    "id": "vidarbha",
+    "status": "draft",
+    "name": {
+      "en": "Vidarbha",
+      "hi": "विदर्भ"
+    },
+    "anchor": {
+      "lat": 20.93333,
+      "lon": 77.75
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "विदर्भानृष्टिकांश्चैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Amravati (Kauṇḍinyapura)",
+      "hi": "अमरावती (कौण्डिन्यपुर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. Placed at Amravati, near Kauṇḍinyapura, Rukmiṇī's city in the epic.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। महाकाव्य में रुक्मिणी के नगर कौण्डिन्यपुर के पास अमरावती पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1278718"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिङ्ग"
+    },
+    "anchor": {
+      "lat": 20.27241,
+      "lon": 85.83385
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "वङ्गान् कलिङ्गांश्च",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Bhubaneswar (Tosalī)",
+      "hi": "भुवनेश्वर (तोसली)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. Placed at Bhubaneswar, beside Tosalī (Dhauli), Kaliṅga's capital under Aśoka. Its king stands for the south-east at 14.32.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। तोसली (धौली) के पास भुवनेश्वर पर रखा गया, जो अशोक के समय कलिंग की राजधानी थी। 14.32 में इसका राजा आग्नेय भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1275817"
+    ]
+  },
+  {
+    "id": "dandaka",
+    "status": "draft",
+    "name": {
+      "en": "Daṇḍakāvana",
+      "hi": "दण्डकावन"
+    },
+    "anchor": {
+      "lat": 19.08136,
+      "lon": 82.02131
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "दण्डकारण्यं",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Dandakaranya (Bastar)",
+      "hi": "दंडकारण्य (बस्तर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1269578"
+    ]
+  },
+  {
+    "id": "andhra",
+    "status": "draft",
+    "name": {
+      "en": "Āndhra",
+      "hi": "आन्ध्र"
+    },
+    "anchor": {
+      "lat": 16.573,
+      "lon": 80.358
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "तथैवान्ध्रांश्च",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Amaravati (Dhānyakaṭaka)",
+      "hi": "अमरावती (धान्यकटक)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. Placed at Amaravati on the Krishna, the Sātavāhana-era stūpa town.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। कृष्णा किनारे अमरावती पर रखा गया, सातवाहन काल का स्तूप-नगर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://en.wikipedia.org/wiki/Amaravati_Stupa"
+    ]
+  },
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Cola",
+      "hi": "चोल"
+    },
+    "anchor": {
+      "lat": 10.8155,
+      "lon": 78.69651
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "south",
+    "priority": 2,
+    "verse": "चोलान्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Uraiyur (Tiruchirappalli)",
+      "hi": "उरैयूर (तिरुचिरापल्ली)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. Placed at Uraiyūr, the early Cola capital, now part of Tiruchirappalli.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। आरंभिक चोल राजधानी उरैयूर पर रखा गया, जो अब तिरुचिरापल्ली का भाग है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1254388"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "anchor": {
+      "lat": 9.919,
+      "lon": 78.11953
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "south",
+    "priority": 1,
+    "verse": "पाण्ड्यांश्च",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "modern": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter, Aṅgada's party. The list ends with the Pāṇḍyas and Keralas; the road that follows starts here.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा, अंगद का दल। सूची पाण्ड्य और केरलों पर समाप्त होती है; आगे का मार्ग यहीं से आरंभ होता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1264521"
+    ]
+  },
+  {
+    "id": "agastya-malaya",
+    "status": "draft",
+    "name": {
+      "en": "Malaya, Agastya's seat",
+      "hi": "मलय, अगस्त्य का आसन"
+    },
+    "anchor": {
+      "lat": 8.71068,
+      "lon": 77.4519
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "south",
+    "priority": 1,
+    "verse": "मलयस्य महौजसम्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "modern": {
+      "en": "Agastyamalai",
+      "hi": "अगस्त्यमलै"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter, Aṅgada's party. Agastya sits on the Malaya's summit, and his leave is needed to go on. The Kāverī is named just before.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा, अंगद का दल। अगस्त्य मलय के शिखर पर बैठे हैं, और आगे जाने के लिए उनकी अनुमति चाहिए। ठीक पहले कावेरी का नाम आता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1278841"
+    ]
+  },
+  {
+    "id": "tamraparni",
+    "status": "draft",
+    "name": {
+      "en": "Tāmraparṇī",
+      "hi": "ताम्रपर्णी"
+    },
+    "anchor": {
+      "lat": 8.72742,
+      "lon": 77.6838
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "south",
+    "priority": 1,
+    "verse": "ताम्रपर्णीं ग्राहजुष्टां",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "modern": {
+      "en": "Thamirabarani",
+      "hi": "ताम्रपर्णी (तामिरबरणी)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter, Aṅgada's party. The crocodile-haunted river that goes into the sea 'as a young woman to her lover'. Placed at Tirunelveli.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा, अंगद का दल। मगरों वाली नदी जो समुद्र में 'जैसे युवती प्रिय के पास' जाती है। तिरुनेलवेली पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1254361"
+    ]
+  },
+  {
+    "id": "mahendra-south",
+    "status": "draft",
+    "name": {
+      "en": "Mahendra, in the southern sea",
+      "hi": "महेन्द्र, दक्षिणी समुद्र में"
+    },
+    "anchor": {
+      "lat": 8.09008,
+      "lon": 77.53841
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "south",
+    "priority": 1,
+    "verse": "महेन्द्रः पर्वतोत्तमः",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "modern": {
+      "en": "Mahendragiri hill, near Kanyakumari",
+      "hi": "महेंद्रगिरि पहाड़ी, कन्याकुमारी के पास"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter, Aṅgada's party. The text sets it in the sea; tradition puts Hanumān's leap on the Mahendragiri hill. Placed at Kanyakumari, about 30 km away.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा, अंगद का दल। पाठ इसे समुद्र में बताता है; परंपरा हनुमान की छलाँग महेंद्रगिरि पहाड़ी पर मानती है। लगभग 30 किमी दूर कन्याकुमारी पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584",
+      "https://www.geonames.org/1268008"
+    ]
+  },
+  {
+    "id": "surastra",
+    "status": "draft",
+    "name": {
+      "en": "Surāṣṭra",
+      "hi": "सुराष्ट्र"
+    },
+    "anchor": {
+      "lat": 22.29161,
+      "lon": 70.79322
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "west",
+    "priority": 1,
+    "verse": "सौराष्ट्रान् सहबाह्लीकांश्चन्द्रचित्रांस्तथैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.42.5-10",
+      "hi": "रामायण 4.42.5-10"
+    },
+    "modern": {
+      "en": "Saurashtra",
+      "hi": "सौराष्ट्र"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 42.5-10: the western quarter, Suṣeṇa's party. The west begins with Saurashtra, then westward-flowing rivers, the desert and the sea.",
+      "hi": "किष्किन्धाकाण्ड 42.5-10: पश्चिम दिशा, सुषेण का दल। पश्चिम सौराष्ट्र से आरंभ होता है, फिर पश्चिम की ओर बहती नदियाँ, मरुभूमि और समुद्र।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४२?oldid=353589",
+      "https://www.geonames.org/1258847"
+    ]
+  },
+  {
+    "id": "pariyatra",
+    "status": "draft",
+    "name": {
+      "en": "Pāriyātra",
+      "hi": "पारियात्र"
+    },
+    "anchor": {
+      "lat": 25.2,
+      "lon": 73.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "west",
+    "priority": 2,
+    "verse": "पारियात्रस्य",
+    "locus": {
+      "en": "Rāmāyaṇa 4.42.19-20",
+      "hi": "रामायण 4.42.19-20"
+    },
+    "modern": {
+      "en": "the Aravalli and western Vindhya",
+      "hi": "अरावली और पश्चिमी विंध्य"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 42.19-20: the western quarter, Suṣeṇa's party. The text gives Pāriyātra a golden peak by the western sea; the range of the other lists is the Aravalli, where it is placed.",
+      "hi": "किष्किन्धाकाण्ड 42.19-20: पश्चिम दिशा, सुषेण का दल। पाठ पारियात्र का सुनहरा शिखर पश्चिमी समुद्र के पास बताता है; अन्य सूचियों का यह पर्वत अरावली है, जहाँ इसे रखा गया है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४२?oldid=353589",
+      "https://en.wikipedia.org/wiki/Aravalli_Range"
+    ]
+  },
+  {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "anchor": {
+      "lat": 27.5035,
+      "lon": 77.67215
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "north",
+    "priority": 1,
+    "verse": "शूरसेनांस्तथैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.4-13",
+      "hi": "रामायण 4.43.4-13"
+    },
+    "modern": {
+      "en": "Mathura",
+      "hi": "मथुरा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.4-13: the northern quarter, Śatabali's party. The north begins in Mathurā's country and runs through the Kurus and Madras to the frontier peoples.",
+      "hi": "किष्किन्धाकाण्ड 43.4-13: उत्तर दिशा, शतबलि का दल। उत्तर मथुरा के देश से आरंभ होकर कुरु और मद्र से होते हुए सीमांत जनों तक जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590",
+      "https://www.geonames.org/1263364"
+    ]
+  },
+  {
+    "id": "kuru",
+    "status": "draft",
+    "name": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "north",
+    "priority": 2,
+    "verse": "कुरूंश्च सह मद्रकैः",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.4-13",
+      "hi": "रामायण 4.43.4-13"
+    },
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.4-13: the northern quarter, Śatabali's party. A people and their country, placed at Kurukṣetra.",
+      "hi": "किष्किन्धाकाण्ड 43.4-13: उत्तर दिशा, शतबलि का दल। एक जन और उसका देश, कुरुक्षेत्र पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "darada",
+    "status": "draft",
+    "name": {
+      "en": "Darada",
+      "hi": "दरद"
+    },
+    "anchor": {
+      "lat": 35.91869,
+      "lon": 74.31245
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "north",
+    "priority": 2,
+    "verse": "अन्वीक्ष्य दरदांश्चैव",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.4-13",
+      "hi": "रामायण 4.43.4-13"
+    },
+    "modern": {
+      "en": "Gilgit (Dardistan)",
+      "hi": "गिलगित (दरदिस्तान)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.4-13: the northern quarter, Śatabali's party. The Daradas of the upper Indus, the last people named before the Himavat.",
+      "hi": "किष्किन्धाकाण्ड 43.4-13: उत्तर दिशा, शतबलि का दल। ऊपरी सिंधु के दरद, हिमवान् से पहले गिनाए गए अंतिम जन।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590",
+      "https://www.geonames.org/1178338"
+    ]
+  },
+  {
+    "id": "himavat",
+    "status": "draft",
+    "name": {
+      "en": "Himavat",
+      "hi": "हिमवत्"
+    },
+    "anchor": {
+      "lat": 30.35,
+      "lon": 79.55
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "north",
+    "priority": 2,
+    "verse": "हिमवन्तं विचिन्वथ",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.4-13",
+      "hi": "रामायण 4.43.4-13"
+    },
+    "modern": {
+      "en": "the Himalaya",
+      "hi": "हिमालय"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.4-13: the northern quarter, Śatabali's party. The search goes into the deodar forests of the Himavat; beyond lie Kailāsa and the Uttarakurus.",
+      "hi": "किष्किन्धाकाण्ड 43.4-13: उत्तर दिशा, शतबलि का दल। खोज हिमवान् के देवदारु वनों में जाती है; उसके पार कैलास और उत्तरकुरु हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590",
+      "https://en.wikipedia.org/wiki/Himalayas"
+    ]
+  }
+]

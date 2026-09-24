@@ -115,7 +115,7 @@
       }
     },
     "locus": {
-      "type": "text",
+      "type": "name",
       "label": {
         "en": "Where",
         "hi": "स्थान"

@@ -1,0 +1,365 @@
+[
+  {
+    "id": "east-out",
+    "status": "draft",
+    "name": {
+      "en": "Vinata's party sets out east",
+      "hi": "विनत का दल पूर्व की ओर"
+    },
+    "category": "east",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 26.35367,
+        "lon": 86.07169
+      },
+      "bow": 0.12
+    },
+    "verse": "अधिगच्छ दिशं पूर्वां",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.19-24",
+      "hi": "रामायण 4.40.19-24"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.19-24: the eastern quarter. From Kiṣkindhā to the Videhas, where the eastern list begins.",
+      "hi": "किष्किन्धाकाण्ड 40.19-24: पूर्व दिशा। किष्किन्धा से विदेह तक, जहाँ पूर्व की सूची आरंभ होती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574"
+    ]
+  },
+  {
+    "id": "east-sea",
+    "status": "draft",
+    "name": {
+      "en": "Over the sea to Yavadvīpa",
+      "hi": "समुद्र पार यवद्वीप की ओर"
+    },
+    "category": "east",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.24446,
+        "lon": 86.97183
+      },
+      "to": {
+        "lat": 15.0,
+        "lon": 92.5
+      },
+      "bow": 0.12
+    },
+    "verse": "यवद्वीपं सप्तराजोपशोभितम्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.40.30-31",
+      "hi": "रामायण 4.40.30-31"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 40.30-31: the eastern quarter. Yavadvīpa of the seven kingdoms, usually taken as Java, lies far beyond the arrow's end.",
+      "hi": "किष्किन्धाकाण्ड 40.30-31: पूर्व दिशा। सात राज्यों वाला यवद्वीप, जिसे प्रायः जावा माना जाता है, तीर के सिरे से बहुत आगे है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४०?oldid=353574"
+    ]
+  },
+  {
+    "id": "south-out",
+    "status": "draft",
+    "name": {
+      "en": "Aṅgada's party sets out south",
+      "hi": "अंगद का दल दक्षिण की ओर"
+    },
+    "category": "south",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 23.3,
+        "lon": 78.4
+      },
+      "bow": 0.12
+    },
+    "verse": "दक्षिणां दिशम्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.6-12",
+      "hi": "रामायण 4.41.6-12"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.6-12: the southern quarter. The southern list begins at the Vindhya, which lies north of Kiṣkindhā.",
+      "hi": "किष्किन्धाकाण्ड 41.6-12: दक्षिण दिशा। दक्षिण की सूची विंध्य से आरंभ होती है, जो किष्किन्धा के उत्तर में है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584"
+    ]
+  },
+  {
+    "id": "south-road-1",
+    "status": "draft",
+    "name": {
+      "en": "On to Ayomukha and the Malaya",
+      "hi": "अयोमुख और मलय की ओर"
+    },
+    "category": "south",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 9.919,
+        "lon": 78.11953
+      },
+      "to": {
+        "lat": 8.71068,
+        "lon": 77.4519
+      },
+      "bow": 0.12
+    },
+    "verse": "अयोमुखश्च गन्तव्यः",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter. Here the list becomes a road: each stage opens with 'then'.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा। यहाँ सूची मार्ग बन जाती है: हर पड़ाव 'फिर' से आरंभ होता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584"
+    ]
+  },
+  {
+    "id": "south-road-2",
+    "status": "draft",
+    "name": {
+      "en": "With Agastya's leave, to the Tāmraparṇī",
+      "hi": "अगस्त्य की अनुमति से ताम्रपर्णी तक"
+    },
+    "category": "south",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.71068,
+        "lon": 77.4519
+      },
+      "to": {
+        "lat": 8.72742,
+        "lon": 77.6838
+      },
+      "bow": 0.12
+    },
+    "verse": "ततस्तेनाभ्यनुज्ञाताः प्रसन्नेन महात्मना",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584"
+    ]
+  },
+  {
+    "id": "south-road-3",
+    "status": "draft",
+    "name": {
+      "en": "Past the Pāṇḍya gate to the sea",
+      "hi": "पाण्ड्य द्वार से होकर समुद्र तक"
+    },
+    "category": "south",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.72742,
+        "lon": 77.6838
+      },
+      "to": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः समुद्रमासाद्य",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter. The golden gate of the Pāṇḍyas, then the ocean and Mahendra standing in it.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा। पाण्ड्यों का सुनहरा द्वार, फिर समुद्र और उसमें खड़ा महेन्द्र।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584"
+    ]
+  },
+  {
+    "id": "south-sea",
+    "status": "draft",
+    "name": {
+      "en": "To the island on the far shore",
+      "hi": "पार के द्वीप तक"
+    },
+    "category": "south",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "to": {
+        "lat": 8.25,
+        "lon": 79.55
+      },
+      "bow": 0.12
+    },
+    "verse": "द्वीपस्तस्यापरे पारे शतयोजनविस्तृतः",
+    "locus": {
+      "en": "Rāmāyaṇa 4.41.13-25",
+      "hi": "रामायण 4.41.13-25"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 41.13-25: the southern quarter. A hundred yojanas wide, Rāvaṇa's country; the text does not name it Laṅkā here.",
+      "hi": "किष्किन्धाकाण्ड 41.13-25: दक्षिण दिशा। सौ योजन चौड़ा, रावण का देश; पाठ यहाँ इसे लंका नहीं कहता।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४१?oldid=353584"
+    ]
+  },
+  {
+    "id": "west-out",
+    "status": "draft",
+    "name": {
+      "en": "Suṣeṇa's party sets out west",
+      "hi": "सुषेण का दल पश्चिम की ओर"
+    },
+    "category": "west",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 22.29161,
+        "lon": 70.79322
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रतीचीमादिशद् दिशम्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.42.5-10",
+      "hi": "रामायण 4.42.5-10"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 42.5-10: the western quarter.",
+      "hi": "किष्किन्धाकाण्ड 42.5-10: पश्चिम दिशा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४२?oldid=353589"
+    ]
+  },
+  {
+    "id": "west-sea",
+    "status": "draft",
+    "name": {
+      "en": "Along the shore to the Sindhu's mouth",
+      "hi": "तट के साथ सिन्धु के मुहाने तक"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.29161,
+        "lon": 70.79322
+      },
+      "to": {
+        "lat": 24.1,
+        "lon": 67.4
+      },
+      "bow": 0.12
+    },
+    "verse": "सिन्धुसागरयोश्चैव संगमे तत्र पर्वतः",
+    "locus": {
+      "en": "Rāmāyaṇa 4.42.13-15",
+      "hi": "रामायण 4.42.13-15"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 42.13-15: the western quarter. The Indus delta lies outside the Survey of India boundary, so the arrow ends there without a pin.",
+      "hi": "किष्किन्धाकाण्ड 42.13-15: पश्चिम दिशा। सिंधु डेल्टा भारतीय सर्वेक्षण की सीमा के बाहर है, इसलिए तीर वहाँ बिना पिन के रुकता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४२?oldid=353589"
+    ]
+  },
+  {
+    "id": "north-out",
+    "status": "draft",
+    "name": {
+      "en": "Śatabali's party sets out north",
+      "hi": "शतबलि का दल उत्तर की ओर"
+    },
+    "category": "north",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 27.5035,
+        "lon": 77.67215
+      },
+      "bow": 0.12
+    },
+    "verse": "दिशं ह्युदीचीं विक्रान्तां हिमशैलावतंसिकाम्",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.4-13",
+      "hi": "रामायण 4.43.4-13"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.4-13: the northern quarter.",
+      "hi": "किष्किन्धाकाण्ड 43.4-13: उत्तर दिशा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590"
+    ]
+  },
+  {
+    "id": "north-beyond",
+    "status": "draft",
+    "name": {
+      "en": "Across the waste to Kailāsa",
+      "hi": "मरुभूमि पार कैलास तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 30.35,
+        "lon": 79.55
+      },
+      "to": {
+        "lat": 31.07,
+        "lon": 81.31
+      },
+      "bow": 0.12
+    },
+    "verse": "कैलासं पाण्डुरं प्राप्य",
+    "locus": {
+      "en": "Rāmāyaṇa 4.43.19-21",
+      "hi": "रामायण 4.43.19-21"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā 43.19-21: the northern quarter. Kailāsa and Kubera's palace; Kailāsa lies in Tibet, outside the boundary.",
+      "hi": "किष्किन्धाकाण्ड 43.19-21: उत्तर दिशा। कैलास और कुबेर का भवन; कैलास तिब्बत में, सीमा के बाहर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_४३?oldid=353590"
+    ]
+  }
+]
