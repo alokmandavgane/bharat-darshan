@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixty-eighth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixty-ninth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,18 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixty-ninth round: divisions and kingdoms. Journeys paused at the owner's word; two new
+  history pages from the Jñānakośa's new gazetteer/regions.json. An `areas` layer can now be made of
+  whole 2011 census districts (`"source": {"format": "districts-2011"}`, each item listing its codes;
+  the build looks the census raster up to area ids), which is the unit every historical area will use:
+  honest to the nearest district, no invented polygon. "The old divisions of India": 63 traditional
+  regions over all 640 districts, coloured by the Matsya Purāṇa's seven divisions of the peoples and
+  shaded apart within each, with their names laid on the map. "Kingdoms and empires": its first era,
+  the sixteen mahājanapadas of the Aṅguttara Nikāya c. 500 BCE, 14 drawn (Gandhāra and Kamboja lie
+  outside), each card quoting Raychaudhuri 1923 for the extent, with 13 capitals and the names. An
+  areas layer with more than eight categories (one per kingdom) now carries each area's colour itself,
+  since the band lookup holds eight. The era stepper comes with the second era (Aśoka, c. 250 BCE).
+  Checked in the browser; 48 tests and the build pass.
 - 2026-09-24, sixty-eighth round: episodes, a story page one chapter at a time. With 92 stops and
   131 arrows the Mahābhārata page drawn whole was a tangle (the owner: "a mess"). A page whose tour
   visits every group its layers have now opens on its first group, with a stepper under the play

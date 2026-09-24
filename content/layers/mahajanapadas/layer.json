@@ -1,0 +1,194 @@
+{
+  "id": "mahajanapadas",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "The sixteen great countries, c. 500 BCE",
+    "hi": "सोलह महाजनपद, लगभग 500 ई.पू."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "anga",
+      "color": "#b5542f",
+      "title": {
+        "en": "Aṅga",
+        "hi": "अङ्ग"
+      }
+    },
+    {
+      "id": "magadha",
+      "color": "#c9892b",
+      "title": {
+        "en": "Magadha",
+        "hi": "मगध"
+      }
+    },
+    {
+      "id": "kasi",
+      "color": "#8f6bb3",
+      "title": {
+        "en": "Kāśi",
+        "hi": "काशि"
+      }
+    },
+    {
+      "id": "kosala",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Kosala",
+        "hi": "कोसल"
+      }
+    },
+    {
+      "id": "vajji",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Vajji",
+        "hi": "वज्जि"
+      }
+    },
+    {
+      "id": "malla",
+      "color": "#6fa8d6",
+      "title": {
+        "en": "Malla",
+        "hi": "मल्ल"
+      }
+    },
+    {
+      "id": "cedi",
+      "color": "#a0522d",
+      "title": {
+        "en": "Ceti (Cedi)",
+        "hi": "चेदि"
+      }
+    },
+    {
+      "id": "vatsa",
+      "color": "#d67aa0",
+      "title": {
+        "en": "Vatsa (Vaṁsa)",
+        "hi": "वत्स"
+      }
+    },
+    {
+      "id": "kuru",
+      "color": "#3d6fb0",
+      "title": {
+        "en": "Kuru",
+        "hi": "कुरु"
+      }
+    },
+    {
+      "id": "pancala",
+      "color": "#7d8c2e",
+      "title": {
+        "en": "Pañcāla",
+        "hi": "पञ्चाल"
+      }
+    },
+    {
+      "id": "matsya",
+      "color": "#b07a3a",
+      "title": {
+        "en": "Matsya",
+        "hi": "मत्स्य"
+      }
+    },
+    {
+      "id": "surasena",
+      "color": "#c95f84",
+      "title": {
+        "en": "Śūrasena",
+        "hi": "शूरसेन"
+      }
+    },
+    {
+      "id": "assaka",
+      "color": "#5d7fd6",
+      "title": {
+        "en": "Assaka (Aśmaka)",
+        "hi": "अश्मक"
+      }
+    },
+    {
+      "id": "avanti",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Avanti",
+        "hi": "अवन्ति"
+      }
+    }
+  ],
+  "fields": {
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "The extent, as Raychaudhuri gives it",
+        "hi": "विस्तार, रायचौधरी के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "The sixteen mahājanapadas the Aṅguttara Nikāya names (3.70), the kingdoms and clan-republics of the Gaṅgā country and beyond before Magadha absorbed its neighbours. The names are the text's. Each extent follows H. C. Raychaudhuri's Political History of Ancient India (1923), quoted on the card, and is drawn on today's districts to the nearest district: Oudh, Bundelkhand, 'the present Patna and Gaya districts'. Gandhāra and Kamboja lie beyond India's present boundary and are not drawn; Assaka's capital is not placed. The eighth name is read Vatsa, as the older editions have it; the edition quoted prints Vaṅga.",
+    "hi": "अंगुत्तर निकाय (3.70) के सोलह महाजनपद, मगध द्वारा पड़ोसियों को मिलाने से पहले गंगा देश और उसके पार के राज्य और गणराज्य। नाम पाठ के हैं। हर विस्तार हेमचंद्र रायचौधरी की पॉलिटिकल हिस्ट्री ऑफ़ एंशिएंट इंडिया (1923) के अनुसार है, जो कार्ड पर उद्धृत है, और आज के ज़िलों पर निकटतम ज़िले तक खींचा गया है। गान्धार और कम्बोज भारत की वर्तमान सीमा के पार हैं और नहीं खींचे गए; अश्मक की राजधानी नहीं रखी गई। आठवाँ नाम वत्स पढ़ा गया है, जैसा पुराने संस्करणों में है; उद्धृत संस्करण वंग छापता है।"
+  },
+  "sources": [
+    "suttacentral",
+    "raychaudhuri-1923",
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Names from the Aṅguttara Nikāya (SuttaCentral, public domain); extents after Raychaudhuri 1923 (public domain), drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

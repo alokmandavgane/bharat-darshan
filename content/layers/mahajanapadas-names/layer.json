@@ -1,0 +1,150 @@
+{
+  "id": "mahajanapadas-names",
+  "type": "points",
+  "marker": "label",
+  "group": "culture",
+  "title": {
+    "en": "Names of the sixteen great countries",
+    "hi": "महाजनपदों के नाम"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "anga",
+      "color": "#b5542f",
+      "title": {
+        "en": "Aṅga",
+        "hi": "अङ्ग"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "magadha",
+      "color": "#c9892b",
+      "title": {
+        "en": "Magadha",
+        "hi": "मगध"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kasi",
+      "color": "#8f6bb3",
+      "title": {
+        "en": "Kāśi",
+        "hi": "काशि"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kosala",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Kosala",
+        "hi": "कोसल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vajji",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Vajji",
+        "hi": "वज्जि"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "malla",
+      "color": "#6fa8d6",
+      "title": {
+        "en": "Malla",
+        "hi": "मल्ल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cedi",
+      "color": "#a0522d",
+      "title": {
+        "en": "Ceti (Cedi)",
+        "hi": "चेदि"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vatsa",
+      "color": "#d67aa0",
+      "title": {
+        "en": "Vatsa (Vaṁsa)",
+        "hi": "वत्स"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kuru",
+      "color": "#3d6fb0",
+      "title": {
+        "en": "Kuru",
+        "hi": "कुरु"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pancala",
+      "color": "#7d8c2e",
+      "title": {
+        "en": "Pañcāla",
+        "hi": "पञ्चाल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "matsya",
+      "color": "#b07a3a",
+      "title": {
+        "en": "Matsya",
+        "hi": "मत्स्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "surasena",
+      "color": "#c95f84",
+      "title": {
+        "en": "Śūrasena",
+        "hi": "शूरसेन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "assaka",
+      "color": "#5d7fd6",
+      "title": {
+        "en": "Assaka (Aśmaka)",
+        "hi": "अश्मक"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "avanti",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Avanti",
+        "hi": "अवन्ति"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The great countries' names, laid on the map.",
+    "hi": "महाजनपदों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "suttacentral",
+    "raychaudhuri-1923",
+    "census-2011",
+    "datameet-maps"
+  ]
+}

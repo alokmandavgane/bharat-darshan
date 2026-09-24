@@ -1,0 +1,86 @@
+{
+  "id": "divisions-names",
+  "type": "points",
+  "marker": "label",
+  "group": "culture",
+  "title": {
+    "en": "Names of the old divisions",
+    "hi": "प्राचीन विभागों के नाम"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "madhyadesa",
+      "color": "#c8964a",
+      "title": {
+        "en": "The Middle Country (Madhyadeśa)",
+        "hi": "मध्यदेश"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "udicya",
+      "color": "#6f8fb3",
+      "title": {
+        "en": "The North (Udīcya)",
+        "hi": "उदीच्य (उत्तर)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pracya",
+      "color": "#5e9a6e",
+      "title": {
+        "en": "The East (Prācya)",
+        "hi": "प्राच्य (पूर्व)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "daksinapatha",
+      "color": "#b8654a",
+      "title": {
+        "en": "The Southern Road (Dakṣiṇāpatha)",
+        "hi": "दक्षिणापथ"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "aparanta",
+      "color": "#a98bc2",
+      "title": {
+        "en": "The Western Borders (Aparānta)",
+        "hi": "अपरान्त (पश्चिम)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vindhyaprstha",
+      "color": "#8f9a4a",
+      "title": {
+        "en": "The Vindhya's Back (Vindhyapṛṣṭha)",
+        "hi": "विन्ध्यपृष्ठ"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "parvatasrayin",
+      "color": "#8a7f74",
+      "title": {
+        "en": "The Mountain Peoples (Parvatāśrayin)",
+        "hi": "पर्वताश्रयी"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The regions' names, laid on the map.",
+    "hi": "क्षेत्रों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps"
+  ]
+}

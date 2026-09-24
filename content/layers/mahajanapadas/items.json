@@ -1,0 +1,674 @@
+[
+  {
+    "id": "anga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "category": "anga",
+    "rank": 1,
+    "districts": [
+      211,
+      212,
+      223,
+      224,
+      225,
+      226
+    ],
+    "verse": "aṅgānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Annexed by Magadha under Bimbisāra.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। बिम्बिसार के समय मगध ने इसे मिला लिया।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Champa, the famous capital of Anga, stood on the river of the same name (Jataka 506 ; modern Chandan) and the Ganges",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 53",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 53"
+    },
+    "capital": {
+      "en": "Campā",
+      "hi": "चम्पा"
+    }
+  },
+  {
+    "id": "magadha",
+    "status": "draft",
+    "name": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "category": "magadha",
+    "rank": 1,
+    "districts": [
+      229,
+      230,
+      235,
+      236,
+      237,
+      239,
+      240
+    ],
+    "verse": "magadhānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. The Patna and Gaya districts of 1923, redrawn on today's districts.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। 1923 के पटना और गया ज़िले, आज के ज़िलों पर।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Magadha corresponds roughly to the present Patna and Gaya districts of Bihar.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 56",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 56"
+    },
+    "capital": {
+      "en": "Girivraja (Rājagṛha)",
+      "hi": "गिरिव्रज (राजगृह)"
+    }
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "category": "kasi",
+    "rank": 1,
+    "districts": [
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    "verse": "kāsīnaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Lost to Kosala before the sixth century BCE.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। छठी शताब्दी ई.पू. से पहले कोसल के अधीन हो गया।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Of the sixteen Mahajanapadas Kasi was probably at first the most powerful.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 46",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 46"
+    },
+    "capital": {
+      "en": "Vārāṇasī",
+      "hi": "वाराणसी"
+    }
+  },
+  {
+    "id": "kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala",
+      "hi": "कोसल"
+    },
+    "category": "kosala",
+    "rank": 1,
+    "districts": [
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      173,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183
+    ],
+    "verse": "kosalānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Oudh as it stood in 1923 (the Lucknow and Faizabad divisions), redrawn on today's districts.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। 1923 का अवध (लखनऊ और फ़ैज़ाबाद मंडल), आज के ज़िलों पर।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Roughly speaking, it corresponds to the modern Oudh.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 48",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 48"
+    },
+    "capital": {
+      "en": "Śrāvastī",
+      "hi": "श्रावस्ती"
+    }
+  },
+  {
+    "id": "vajji",
+    "status": "draft",
+    "name": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+    },
+    "category": "vajji",
+    "rank": 1,
+    "districts": [
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      213,
+      214,
+      215,
+      216,
+      219,
+      220,
+      221,
+      222
+    ],
+    "verse": "vajjīnaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a gaṇa, ruled by an assembly of clans. A confederacy of clans, the Licchavis and the Videhas among them: Mithilā's country with Vaiśālī's.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, गण, कुलों की सभा द्वारा शासित। कुलों का संघ, लिच्छवि और विदेह इनमें: मिथिला का देश और वैशाली का।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "The Lichchhavis had their capital at Vesali (Vaisali) which has been identified with Besarh (to the east of the Gandak), in the Muzaffarpur district of Bihar.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 59",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 59"
+    },
+    "capital": {
+      "en": "Vaiśālī",
+      "hi": "वैशाली"
+    }
+  },
+  {
+    "id": "malla",
+    "status": "draft",
+    "name": {
+      "en": "Malla",
+      "hi": "मल्ल"
+    },
+    "category": "malla",
+    "rank": 1,
+    "districts": [
+      187,
+      188,
+      189,
+      190
+    ],
+    "verse": "mallānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a gaṇa, ruled by an assembly of clans. Where the Buddha died; Pāvā was the other Malla town.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, गण, कुलों की सभा द्वारा शासित। जहाँ बुद्ध का परिनिर्वाण हुआ; पावा दूसरा मल्ल नगर था।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "The Mai la territory had for its capital the city of Kusavati or Kusinara",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 64",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 64"
+    },
+    "capital": {
+      "en": "Kusinārā",
+      "hi": "कुसिनारा"
+    }
+  },
+  {
+    "id": "cedi",
+    "status": "draft",
+    "name": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+    },
+    "category": "cedi",
+    "rank": 1,
+    "districts": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      422,
+      424,
+      425,
+      426,
+      428
+    ],
+    "verse": "cetīnaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "It corresponds roughly to the modern Bundelkhand and the adjoining region.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 66",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 66"
+    },
+    "capital": {
+      "en": "Śuktimatī",
+      "hi": "शुक्तिमती"
+    }
+  },
+  {
+    "id": "vatsa",
+    "status": "draft",
+    "name": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+    },
+    "category": "vatsa",
+    "rank": 1,
+    "districts": [
+      172,
+      174,
+      175
+    ],
+    "verse": "vaṅgānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. The text read here prints vaṅgānaṁ (the Vaṅgas); the older editions read Vaṁsa, the Vatsas of Kauśāmbī, as Raychaudhuri does.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। यहाँ पढ़ा गया पाठ vaṅgānaṁ (वंग) छापता है; पुराने संस्करण वंस पढ़ते हैं, कौशाम्बी के वत्स, जैसा रायचौधरी भी।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Vamsa or Vatsa is the country of which Kausambi, modern Kosam near Allahabad, was the capital.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 67",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 67"
+    },
+    "capital": {
+      "en": "Kauśāmbī",
+      "hi": "कौशाम्बी"
+    }
+  },
+  {
+    "id": "kuru",
+    "status": "draft",
+    "name": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "category": "kuru",
+    "rank": 1,
+    "districts": [
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      82,
+      83,
+      86,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      132,
+      133,
+      138,
+      139,
+      140,
+      141,
+      142
+    ],
+    "verse": "kurūnaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "The capital was Indapatta or Indapattana, i.e., Indraprastha or Indrapat near the modern Delhi.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 68",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 68"
+    },
+    "capital": {
+      "en": "Indraprastha",
+      "hi": "इन्द्रप्रस्थ"
+    }
+  },
+  {
+    "id": "pancala",
+    "status": "draft",
+    "name": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+    },
+    "category": "pancala",
+    "rank": 1,
+    "districts": [
+      67,
+      134,
+      135,
+      136,
+      137,
+      143,
+      144,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      201,
+      202
+    ],
+    "verse": "pañcālānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Panchala roughly corresponds to Rohilkhand and a part of the central Doab.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 69",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 69"
+    },
+    "capital": {
+      "en": "Ahicchatra and Kāmpilya",
+      "hi": "अहिच्छत्र और काम्पिल्य"
+    }
+  },
+  {
+    "id": "matsya",
+    "status": "draft",
+    "name": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+    },
+    "category": "matsya",
+    "rank": 1,
+    "districts": [
+      87,
+      104,
+      109,
+      110
+    ],
+    "verse": "macchānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Matsya had its capital at Viratanagara or Bairat in the modern Jaipur State",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 71",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 71"
+    },
+    "capital": {
+      "en": "Virāṭanagara",
+      "hi": "विराटनगर"
+    }
+  },
+  {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "category": "surasena",
+    "rank": 1,
+    "districts": [
+      105,
+      145,
+      146
+    ],
+    "verse": "sūrasenānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "The Surasena country had its capital at Mathura on the Yamuna.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 71",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 71"
+    },
+    "capital": {
+      "en": "Mathurā",
+      "hi": "मथुरा"
+    }
+  },
+  {
+    "id": "assaka",
+    "status": "draft",
+    "name": {
+      "en": "Assaka (Aśmaka)",
+      "hi": "अश्मक"
+    },
+    "category": "assaka",
+    "rank": 1,
+    "districts": [
+      511,
+      532,
+      533
+    ],
+    "verse": "assakānaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Its capital Potana is not placed: identifications range from Bodhan to Paithan's neighbourhood.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। इसकी राजधानी पोतन नहीं रखी गई: पहचानें बोधन से पैठण के आसपास तक हैं।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Assaka was situated on the banks of the Godhavari (Sutta Nipata, 977)",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 74",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 74"
+    }
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+    },
+    "category": "avanti",
+    "rank": 1,
+    "districts": [
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      448,
+      449,
+      464,
+      465,
+      466,
+      467
+    ],
+    "verse": "avantīnaṁ",
+    "locus": {
+      "en": "Aṅguttara Nikāya 3.70.28.2-3",
+      "hi": "अंगुत्तर निकाय 3.70.28.2-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. A northern half round Ujjayinī and a southern round Māhiṣmatī on the Narmadā.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। उज्जयिनी के आसपास उत्तरी भाग और नर्मदा पर माहिष्मती के आसपास दक्षिणी भाग।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "reading": "Avanti roughly corresponds to modern Malwa, Nimar and the adjoining parts of the Central Provinces.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 75",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 75"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  }
+]

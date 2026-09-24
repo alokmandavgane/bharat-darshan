@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "kuru",
+    "status": "draft",
+    "name": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.688,
+      "lon": 76.885
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa). West of the Sarasvatī the compiler carries it to the Sutlej; the Sirhind plain has no early name of its own in the lists.",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है। सरस्वती के पश्चिम में संकलक ने इसे सतलुज तक माना है; सरहिंद के मैदान का सूचियों में अपना कोई प्राचीन नाम नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "jangala",
+    "status": "draft",
+    "name": {
+      "en": "Jāṅgala",
+      "hi": "जाङ्गल"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.271,
+      "lon": 74.549
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa). Jāṅgala is the dry country; the Matsya names it with the Kurus, and again in the north (114.43).",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है। जाङ्गल शुष्क देश है; मत्स्य इसे कुरुओं के साथ, और फिर उत्तर में (114.43) गिनाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "uttara-pancala",
+    "status": "draft",
+    "name": {
+      "en": "Uttara Pañcāla",
+      "hi": "उत्तर पञ्चाल"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.449,
+      "lon": 79.422
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa). The epic divides Pañcāla at the Gaṅgā; the north had its capital at Ahicchatra.",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है। महाकाव्य पंचाल को गंगा पर बाँटता है; उत्तर की राजधानी अहिच्छत्र थी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "daksina-pancala",
+    "status": "draft",
+    "name": {
+      "en": "Dakṣiṇa Pañcāla",
+      "hi": "दक्षिण पञ्चाल"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.181,
+      "lon": 79.059
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa). South Pañcāla, with Kāmpilya, stretched from the Gaṅgā to the Chambal.",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है। दक्षिण पंचाल, काम्पिल्य सहित, गंगा से चंबल तक फैला था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.246,
+      "lon": 77.279
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa).",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "matsya",
+    "status": "draft",
+    "name": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.98,
+      "lon": 75.724
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa).",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.388,
+      "lon": 82.918
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa).",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala",
+      "hi": "कोसल"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.084,
+      "lon": 82.026
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Middle Country (Madhyadeśa). Its capitals were Ayodhyā, Sāketa and Śrāvastī; Kapilavastu of the Śākyas lies at its northern edge.",
+      "hi": "मत्स्य पुराण इसे मध्यदेश के जनों में गिनता है। इसकी राजधानियाँ अयोध्या, साकेत और श्रावस्ती थीं; शाक्यों का कपिलवस्तु इसकी उत्तरी सीमा पर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "vatsa",
+    "status": "draft",
+    "name": {
+      "en": "Vatsa",
+      "hi": "वत्स"
+    },
+    "category": "madhyadesa",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.489,
+      "lon": 81.454
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Grouped with the Middle Country (Madhyadeśa) by the compiler. Varāhamihira puts the Vatsas in the middle country; the Matsya's list lacks them.",
+      "hi": "संकलक ने इसे मध्यदेश के साथ रखा है। वराहमिहिर वत्सों को मध्य देश में रखते हैं; मत्स्य की सूची में वे नहीं हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "malla",
+    "status": "draft",
+    "name": {
+      "en": "Malla",
+      "hi": "मल्ल"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.862,
+      "lon": 83.935
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Grouped with the East (Prācya) by the compiler. Not in the Matsya's lists; placed in the east by the compiler.",
+      "hi": "संकलक ने इसे प्राच्य (पूर्व) के साथ रखा है। मत्स्य की सूचियों में नहीं; संकलक ने पूर्व में रखा।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "vajji",
+    "status": "draft",
+    "name": {
+      "en": "Vṛji (Vaiśālī)",
+      "hi": "वृजि (वैशाली)"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.762,
+      "lon": 85.37
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "Grouped with the East (Prācya) by the compiler. The Licchavis' Vaiśālī; not in the Matsya's lists.",
+      "hi": "संकलक ने इसे प्राच्य (पूर्व) के साथ रखा है। लिच्छवियों की वैशाली; मत्स्य की सूचियों में नहीं।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "videha",
+    "status": "draft",
+    "name": {
+      "en": "Videha",
+      "hi": "विदेह"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.576,
+      "lon": 85.54
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya).",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "magadha",
+    "status": "draft",
+    "name": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.221,
+      "lon": 85.456
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya).",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "anga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.86,
+      "lon": 87.312
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya). The hills (today's Santhal Parganas) are joined to Aṅga by the compiler; the Matsya's 'Antargiri, Bahirgiri' may be them.",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है। पहाड़ियाँ (आज के संथाल परगना) संकलक ने अंग में जोड़ी हैं; मत्स्य के 'अन्तर्गिरि, बहिर्गिरि' संभवतः यही हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "pundra",
+    "status": "draft",
+    "name": {
+      "en": "Puṇḍra",
+      "hi": "पुण्ड्र"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.137,
+      "lon": 88.092
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya). Its capital Puṇḍravardhana (Mahasthangarh) is in Bangladesh.",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है। इसकी राजधानी पुण्ड्रवर्धन (महास्थानगढ़) बांग्लादेश में है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "radha",
+    "status": "draft",
+    "name": {
+      "en": "Suhma (Rāḍha)",
+      "hi": "सुह्म (राढ)"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.141,
+      "lon": 87.135
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya).",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "vanga",
+    "status": "draft",
+    "name": {
+      "en": "Vaṅga",
+      "hi": "वङ्ग"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.555,
+      "lon": 88.356
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya). Most of Vaṅga lies in Bangladesh.",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है। वंग का अधिकांश भाग बांग्लादेश में है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "tamralipta",
+    "status": "draft",
+    "name": {
+      "en": "Tāmralipta",
+      "hi": "ताम्रलिप्त"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.021,
+      "lon": 87.774
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya).",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "pragjyotisa",
+    "status": "draft",
+    "name": {
+      "en": "Prāgjyotiṣa",
+      "hi": "प्राग्ज्योतिष"
+    },
+    "category": "pracya",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.285,
+      "lon": 92.282
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the East (Prācya). Later Kāmarūpa; Cooch Behar and Jalpaiguri are joined to it by the compiler.",
+      "hi": "मत्स्य पुराण इसे प्राच्य (पूर्व) के जनों में गिनता है। बाद का कामरूप; कूचबिहार और जलपाईगुड़ी संकलक ने इसमें जोड़े हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kirata",
+    "status": "draft",
+    "name": {
+      "en": "Kirāta",
+      "hi": "किरात"
+    },
+    "category": "parvatasrayin",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.779,
+      "lon": 93.785
+    },
+    "regions": [
+      "IN-NL"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Mountain Peoples (Parvatāśrayin). Kirāta is a name for hill peoples, not a kingdom; Manipur and Tripura have their own later histories.",
+      "hi": "मत्स्य पुराण इसे पर्वताश्रयी के जनों में गिनता है। किरात पहाड़ी जनों का नाम है, राज्य का नहीं; मणिपुर और त्रिपुरा के अपने बाद के इतिहास हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "trigarta",
+    "status": "draft",
+    "name": {
+      "en": "Trigarta",
+      "hi": "त्रिगर्त"
+    },
+    "category": "parvatasrayin",
+    "priority": 1,
+    "anchor": {
+      "lat": 32.109,
+      "lon": 76.318
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Mountain Peoples (Parvatāśrayin).",
+      "hi": "मत्स्य पुराण इसे पर्वताश्रयी के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kuluta",
+    "status": "draft",
+    "name": {
+      "en": "Kulūta",
+      "hi": "कुलूत"
+    },
+    "category": "parvatasrayin",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.904,
+      "lon": 77.4
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "blurb": {
+      "en": "Grouped with the Mountain Peoples (Parvatāśrayin) by the compiler.",
+      "hi": "संकलक ने इसे पर्वताश्रयी के साथ रखा है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "kulinda",
+    "status": "draft",
+    "name": {
+      "en": "Kulinda",
+      "hi": "कुलिन्द"
+    },
+    "category": "parvatasrayin",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.53,
+      "lon": 79.059
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "blurb": {
+      "en": "Grouped with the Mountain Peoples (Parvatāśrayin) by the compiler. Kuṇinda coins are found from the Sutlej to the Gaṅgā; carrying the name to Kumaon is the compiler's.",
+      "hi": "संकलक ने इसे पर्वताश्रयी के साथ रखा है। कुणिंद सिक्के सतलुज से गंगा तक मिलते हैं; नाम को कुमाऊँ तक ले जाना संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-179?oldid=51649"
+    ]
+  },
+  {
+    "id": "kasmira",
+    "status": "draft",
+    "name": {
+      "en": "Kāśmīra",
+      "hi": "काश्मीर"
+    },
+    "category": "udicya",
+    "priority": 1,
+    "anchor": {
+      "lat": 33.815,
+      "lon": 75.358
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the North (Udīcya).",
+      "hi": "मत्स्य पुराण इसे उदीच्य (उत्तर) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/पूर्वार्धम्/अध्यायः_४५?oldid=47321"
+    ]
+  },
+  {
+    "id": "abhisara",
+    "status": "draft",
+    "name": {
+      "en": "Abhisāra",
+      "hi": "अभिसार"
+    },
+    "category": "udicya",
+    "priority": 1,
+    "anchor": {
+      "lat": 33.207,
+      "lon": 74.822
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Grouped with the North (Udīcya) by the compiler. Darvābhisāra, the hill country below Kashmir.",
+      "hi": "संकलक ने इसे उदीच्य (उत्तर) के साथ रखा है। दार्वाभिसार, कश्मीर के नीचे का पहाड़ी देश।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "madra",
+    "status": "draft",
+    "name": {
+      "en": "Madra",
+      "hi": "मद्र"
+    },
+    "category": "udicya",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.705,
+      "lon": 74.901
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the North (Udīcya). Madra's heart, Śākala (Sialkot), is in Pakistan; this edge of it is the compiler's.",
+      "hi": "मत्स्य पुराण इसे उदीच्य (उत्तर) के जनों में गिनता है। मद्र का केंद्र, शाकल (सियालकोट), पाकिस्तान में है; यह किनारा संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.332,
+      "lon": 75.668
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha). Kota, Bundi and Baran are joined to it by the compiler.",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है। कोटा, बूंदी और बारां संकलक ने इसमें जोड़े हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "anupa",
+    "status": "draft",
+    "name": {
+      "en": "Anūpa",
+      "hi": "अनूप"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.936,
+      "lon": 76.571
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "Grouped with the Vindhya's Back (Vindhyapṛṣṭha) by the compiler. 'The watery land' of the Narmadā, the Haihayas' Māhiṣmatī its city.",
+      "hi": "संकलक ने इसे विन्ध्यपृष्ठ के साथ रखा है। नर्मदा की 'जलभूमि', हैहयों की माहिष्मती इसका नगर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "dasarna",
+    "status": "draft",
+    "name": {
+      "en": "Daśārṇa",
+      "hi": "दशार्ण"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.893,
+      "lon": 77.813
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha).",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "cedi",
+    "status": "draft",
+    "name": {
+      "en": "Cedi",
+      "hi": "चेदि"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.505,
+      "lon": 78.954
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Grouped with the Vindhya's Back (Vindhyapṛṣṭha) by the compiler. Gwalior and the Chambal are joined to Cedi by the compiler; Padmāvatī of the Nāgas lay there later.",
+      "hi": "संकलक ने इसे विन्ध्यपृष्ठ के साथ रखा है। ग्वालियर और चंबल संकलक ने चेदि में जोड़े हैं; बाद में नागों की पद्मावती वहीं थी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "traipura",
+    "status": "draft",
+    "name": {
+      "en": "Traipura",
+      "hi": "त्रैपुर"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.316,
+      "lon": 79.69
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha).",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "mekala",
+    "status": "draft",
+    "name": {
+      "en": "Mekala",
+      "hi": "मेकल"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.889,
+      "lon": 81.056
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha).",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "karusa",
+    "status": "draft",
+    "name": {
+      "en": "Karūṣa",
+      "hi": "करूष"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.217,
+      "lon": 82.421
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha). Placed on both sides of the Kaimur range; the lists put Karūṣa in the south and on the Vindhya.",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है। कैमूर के दोनों ओर रखा गया; सूचियाँ करूष को दक्षिण और विन्ध्य दोनों में रखती हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "daksina-kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "कोसल (दक्षिण)"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.207,
+      "lon": 82.613
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha).",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "utkala",
+    "status": "draft",
+    "name": {
+      "en": "Utkala",
+      "hi": "उत्कल"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.537,
+      "lon": 85.705
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Vindhya's Back (Vindhyapṛṣṭha).",
+      "hi": "मत्स्य पुराण इसे विन्ध्यपृष्ठ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "sibi",
+    "status": "draft",
+    "name": {
+      "en": "Śibi",
+      "hi": "शिबि"
+    },
+    "category": "vindhyaprstha",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.829,
+      "lon": 74.78
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "Grouped with the Vindhya's Back (Vindhyapṛṣṭha) by the compiler. Coins of the Śibi janapada come from Madhyamikā (Nagari, near Chittorgarh); the name for the whole hill country is the compiler's.",
+      "hi": "संकलक ने इसे विन्ध्यपृष्ठ के साथ रखा है। शिबि जनपद के सिक्के माध्यमिका (चित्तौड़गढ़ के पास नगरी) से मिले हैं; पूरे पहाड़ी देश के लिए नाम संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "maru",
+    "status": "draft",
+    "name": {
+      "en": "Maru",
+      "hi": "मरु"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.751,
+      "lon": 72.788
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "Grouped with the Western Borders (Aparānta) by the compiler. 'The desert'; Varāhamihira names it with the middle country, the compiler with the west.",
+      "hi": "संकलक ने इसे अपरान्त (पश्चिम) के साथ रखा है। 'मरुभूमि'; वराहमिहिर इसे मध्य देश के साथ, संकलक पश्चिम के साथ रखते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "arbuda",
+    "status": "draft",
+    "name": {
+      "en": "Arbuda",
+      "hi": "अर्बुद"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.098,
+      "lon": 72.212
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Western Borders (Aparānta).",
+      "hi": "मत्स्य पुराण इसे अपरान्त (पश्चिम) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "anarta",
+    "status": "draft",
+    "name": {
+      "en": "Ānarta",
+      "hi": "आनर्त"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.609,
+      "lon": 72.462
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Western Borders (Aparānta).",
+      "hi": "मत्स्य पुराण इसे अपरान्त (पश्चिम) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kaccha",
+    "status": "draft",
+    "name": {
+      "en": "Kaccha",
+      "hi": "कच्छ"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.628,
+      "lon": 69.96
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Western Borders (Aparānta).",
+      "hi": "मत्स्य पुराण इसे अपरान्त (पश्चिम) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "surastra",
+    "status": "draft",
+    "name": {
+      "en": "Surāṣṭra",
+      "hi": "सुराष्ट्र"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.263,
+      "lon": 70.775
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Western Borders (Aparānta).",
+      "hi": "मत्स्य पुराण इसे अपरान्त (पश्चिम) के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "lata",
+    "status": "draft",
+    "name": {
+      "en": "Bhārukaccha (Lāṭa)",
+      "hi": "भारुकच्छ (लाट)"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.233,
+      "lon": 73.532
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Western Borders (Aparānta). Later called Lāṭa; its port Bharuch was the Greeks' Barygaza.",
+      "hi": "मत्स्य पुराण इसे अपरान्त (पश्चिम) के जनों में गिनता है। बाद में लाट कहलाया; इसका बंदरगाह भरूच यूनानियों का बारिगाज़ा था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "aparanta-konkan",
+    "status": "draft",
+    "name": {
+      "en": "Aparānta",
+      "hi": "अपरान्त"
+    },
+    "category": "aparanta",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.274,
+      "lon": 73.457
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "Grouped with the Western Borders (Aparānta) by the compiler. The 'western border' in the narrow sense: the coast whose port was Śūrpāraka (Sopara).",
+      "hi": "संकलक ने इसे अपरान्त (पश्चिम) के साथ रखा है। संकीर्ण अर्थ में 'पश्चिमी सीमा': वह तट जिसका बंदरगाह शूर्पारक (सोपारा) था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "atavi",
+    "status": "draft",
+    "name": {
+      "en": "Āṭavika",
+      "hi": "आटविक"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.476,
+      "lon": 84.67
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha). 'The forest peoples': the name is generic, as Aśoka's and Samudragupta's forest states are; later Jhārakhaṇḍa.",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है। 'वनवासी जन': नाम सामान्य है, अशोक और समुद्रगुप्त के आटविक राज्यों की तरह; बाद का झारखंड।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिङ्ग"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.173,
+      "lon": 84.161
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "dandaka",
+    "status": "draft",
+    "name": {
+      "en": "Daṇḍaka",
+      "hi": "दण्डक"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.422,
+      "lon": 81.77
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "vidarbha",
+    "status": "draft",
+    "name": {
+      "en": "Vidarbha",
+      "hi": "विदर्भ"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.796,
+      "lon": 78.588
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "nasikya",
+    "status": "draft",
+    "name": {
+      "en": "Nāsikya",
+      "hi": "नासिक्य"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.11,
+      "lon": 74.601
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler. Khandesh is joined to Nashik by the compiler.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है। खानदेश संकलक ने नासिक में जोड़ा है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "mulaka",
+    "status": "draft",
+    "name": {
+      "en": "Mūlaka",
+      "hi": "मूलक"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.818,
+      "lon": 75.982
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler. Pratiṣṭhāna (Paithan) was its city; no list in the kosha yet names it, so the name rests on the Pali sources alone.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है। प्रतिष्ठान (पैठण) इसका नगर था; कोश की कोई सूची अभी इसे नहीं गिनाती, नाम केवल पालि स्रोतों पर टिका है।"
+    },
+    "sources": [
+      "https://censusindia.gov.in/"
+    ]
+  },
+  {
+    "id": "asmaka",
+    "status": "draft",
+    "name": {
+      "en": "Aśmaka",
+      "hi": "अश्मक"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.526,
+      "lon": 78.144
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler. The Pali Assaka 'on the banks of the Godāvarī'; its capital Potana is not agreed.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है। पालि का अस्सक 'गोदावरी के तट पर'; इसकी राजधानी पोतन पर सहमति नहीं।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms"
+    ]
+  },
+  {
+    "id": "maharashtra",
+    "status": "draft",
+    "name": {
+      "en": "Mahārāṣṭra",
+      "hi": "महाराष्ट्र"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.79,
+      "lon": 75.483
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha). The Matsya prints Navarāṣṭra where the Vāyu has Mahārāṣṭra.",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है। मत्स्य नवराष्ट्र छापता है जहाँ वायु में महाराष्ट्र है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kuntala",
+    "status": "draft",
+    "name": {
+      "en": "Kuntala",
+      "hi": "कुन्तल"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.09,
+      "lon": 76.893
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler. The Matsya lists Kuntala in the middle country, a slip of the transmission; placed south by the compiler.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है। मत्स्य कुन्तल को मध्य देश में गिनाता है, पाठ-परंपरा की भूल; संकलक ने दक्षिण में रखा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "vanavasi",
+    "status": "draft",
+    "name": {
+      "en": "Vanavāsī",
+      "hi": "वनवासी"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 14.794,
+      "lon": 74.623
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "mahisa",
+    "status": "draft",
+    "name": {
+      "en": "Māhiṣaka",
+      "hi": "माहिषक"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.52,
+      "lon": 76.948
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha). Mahiṣa-maṇḍala, Mysore by the usual reading.",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है। महिष-मण्डल, सामान्य पाठ में मैसूर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "andhra",
+    "status": "draft",
+    "name": {
+      "en": "Āndhra",
+      "hi": "आन्ध्र"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.299,
+      "lon": 80.091
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler. The Andhras' country at its widest; the Matsya's 'Andhakas' are another people.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है। आन्ध्रों का देश अपने सबसे विस्तृत रूप में; मत्स्य के 'अन्धक' दूसरे जन हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "tondai",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī (Toṇḍai)",
+      "hi": "काञ्ची (तोण्डै)"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.812,
+      "lon": 79.01
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "Grouped with the Southern Road (Dakṣiṇāpatha) by the compiler.",
+      "hi": "संकलक ने इसे दक्षिणापथ के साथ रखा है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251"
+    ]
+  },
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Cola",
+      "hi": "चोल"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.671,
+      "lon": 79.241
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.484,
+      "lon": 77.943
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  },
+  {
+    "id": "kerala",
+    "status": "draft",
+    "name": {
+      "en": "Kerala",
+      "hi": "केरल"
+    },
+    "category": "daksinapatha",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.471,
+      "lon": 76.316
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Matsya Purāṇa counts it among the peoples of the Southern Road (Dakṣiṇāpatha).",
+      "hi": "मत्स्य पुराण इसे दक्षिणापथ के जनों में गिनता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_११४?oldid=45266"
+    ]
+  }
+]

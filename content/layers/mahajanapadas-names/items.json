@@ -1,0 +1,352 @@
+[
+  {
+    "id": "anga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "category": "anga",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.27,
+      "lon": 87.084
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Annexed by Magadha under Bimbisāra.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। बिम्बिसार के समय मगध ने इसे मिला लिया।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "magadha",
+    "status": "draft",
+    "name": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "category": "magadha",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.157,
+      "lon": 85.03
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. The Patna and Gaya districts of 1923, redrawn on today's districts.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। 1923 के पटना और गया ज़िले, आज के ज़िलों पर।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "category": "kasi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.388,
+      "lon": 82.918
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Lost to Kosala before the sixth century BCE.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। छठी शताब्दी ई.पू. से पहले कोसल के अधीन हो गया।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala",
+      "hi": "कोसल"
+    },
+    "category": "kosala",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.939,
+      "lon": 81.327
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Oudh as it stood in 1923 (the Lucknow and Faizabad divisions), redrawn on today's districts.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। 1923 का अवध (लखनऊ और फ़ैज़ाबाद मंडल), आज के ज़िलों पर।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "vajji",
+    "status": "draft",
+    "name": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+    },
+    "category": "vajji",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.151,
+      "lon": 85.331
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a gaṇa, ruled by an assembly of clans. A confederacy of clans, the Licchavis and the Videhas among them: Mithilā's country with Vaiśālī's.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, गण, कुलों की सभा द्वारा शासित। कुलों का संघ, लिच्छवि और विदेह इनमें: मिथिला का देश और वैशाली का।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "malla",
+    "status": "draft",
+    "name": {
+      "en": "Malla",
+      "hi": "मल्ल"
+    },
+    "category": "malla",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.862,
+      "lon": 83.935
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a gaṇa, ruled by an assembly of clans. Where the Buddha died; Pāvā was the other Malla town.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, गण, कुलों की सभा द्वारा शासित। जहाँ बुद्ध का परिनिर्वाण हुआ; पावा दूसरा मल्ल नगर था।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "cedi",
+    "status": "draft",
+    "name": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+    },
+    "category": "cedi",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.797,
+      "lon": 79.666
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "vatsa",
+    "status": "draft",
+    "name": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+    },
+    "category": "vatsa",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.489,
+      "lon": 81.454
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. The text read here prints vaṅgānaṁ (the Vaṅgas); the older editions read Vaṁsa, the Vatsas of Kauśāmbī, as Raychaudhuri does.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। यहाँ पढ़ा गया पाठ vaṅgānaṁ (वंग) छापता है; पुराने संस्करण वंस पढ़ते हैं, कौशाम्बी के वत्स, जैसा रायचौधरी भी।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kuru",
+    "status": "draft",
+    "name": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "category": "kuru",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.055,
+      "lon": 77.313
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "pancala",
+    "status": "draft",
+    "name": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+    },
+    "category": "pancala",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.115,
+      "lon": 78.945
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "matsya",
+    "status": "draft",
+    "name": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+    },
+    "category": "matsya",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.856,
+      "lon": 76.514
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "category": "surasena",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.597,
+      "lon": 77.628
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "assaka",
+    "status": "draft",
+    "name": {
+      "en": "Assaka (Aśmaka)",
+      "hi": "अश्मक"
+    },
+    "category": "assaka",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.526,
+      "lon": 78.144
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. Its capital Potana is not placed: identifications range from Bodhan to Paithan's neighbourhood.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। इसकी राजधानी पोतन नहीं रखी गई: पहचानें बोधन से पैठण के आसपास तक हैं।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+    },
+    "category": "avanti",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.713,
+      "lon": 75.782
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "One of the sixteen great countries of the Aṅguttara Nikāya, a kingdom. A northern half round Ujjayinī and a southern round Māhiṣmatī on the Narmadā.",
+      "hi": "अंगुत्तर निकाय के सोलह महाजनपदों में से एक, राज्य। उज्जयिनी के आसपास उत्तरी भाग और नर्मदा पर माहिष्मती के आसपास दक्षिणी भाग।"
+    },
+    "sources": [
+      "https://suttacentral.net/an3.70/pli/ms",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  }
+]

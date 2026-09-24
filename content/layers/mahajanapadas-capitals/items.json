@@ -1,0 +1,431 @@
+[
+  {
+    "id": "anga-capital",
+    "status": "draft",
+    "name": {
+      "en": "Campā",
+      "hi": "चम्पा"
+    },
+    "category": "anga",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.24446,
+      "lon": 86.97183
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "identified": {
+      "en": "likely, placed at Bhagalpur",
+      "hi": "संभावित, Bhagalpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Aṅga.",
+      "hi": "अङ्ग की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1276300"
+    ]
+  },
+  {
+    "id": "magadha-capital",
+    "status": "draft",
+    "name": {
+      "en": "Girivraja (Rājagṛha)",
+      "hi": "गिरिव्रज (राजगृह)"
+    },
+    "category": "magadha",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.02828,
+      "lon": 85.42079
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "identified": {
+      "en": "certain, placed at Rajgir",
+      "hi": "निश्चित, Rajgir पर"
+    },
+    "blurb": {
+      "en": "The capital of Magadha.",
+      "hi": "मगध की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1258864"
+    ]
+  },
+  {
+    "id": "kasi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Vārāṇasī",
+      "hi": "वाराणसी"
+    },
+    "category": "kasi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "identified": {
+      "en": "certain, placed at Varanasi",
+      "hi": "निश्चित, Varanasi पर"
+    },
+    "blurb": {
+      "en": "The capital of Kāśi.",
+      "hi": "काशि की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "kosala-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śrāvastī",
+      "hi": "श्रावस्ती"
+    },
+    "category": "kosala",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.5174,
+      "lon": 82.0503
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Kosala",
+      "hi": "कोसल"
+    },
+    "identified": {
+      "en": "certain, placed at Saheth-Maheth, Shravasti district",
+      "hi": "निश्चित, Saheth-Maheth, Shravasti district पर"
+    },
+    "blurb": {
+      "en": "The capital of Kosala.",
+      "hi": "कोसल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Shravasti"
+    ]
+  },
+  {
+    "id": "vajji-capital",
+    "status": "draft",
+    "name": {
+      "en": "Vaiśālī",
+      "hi": "वैशाली"
+    },
+    "category": "vajji",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.99,
+      "lon": 85.13
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+    },
+    "identified": {
+      "en": "certain, placed at Basarh, Vaishali district (compiler's placement)",
+      "hi": "निश्चित, Basarh, Vaishali district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "The capital of Vajji.",
+      "hi": "वज्जि की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Vaishali_(ancient_city)"
+    ]
+  },
+  {
+    "id": "malla-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kusinārā",
+      "hi": "कुसिनारा"
+    },
+    "category": "malla",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.74134,
+      "lon": 83.88689
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Malla",
+      "hi": "मल्ल"
+    },
+    "identified": {
+      "en": "certain, placed at Kushinagar",
+      "hi": "निश्चित, Kushinagar पर"
+    },
+    "blurb": {
+      "en": "The capital of Malla.",
+      "hi": "मल्ल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/12032137"
+    ]
+  },
+  {
+    "id": "cedi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śuktimatī",
+      "hi": "शुक्तिमती"
+    },
+    "category": "cedi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.47758,
+      "lon": 80.33491
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+    },
+    "identified": {
+      "en": "likely, placed at Banda",
+      "hi": "संभावित, Banda पर"
+    },
+    "blurb": {
+      "en": "The capital of Ceti (Cedi).",
+      "hi": "चेदि की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1277397"
+    ]
+  },
+  {
+    "id": "vatsa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kauśāmbī",
+      "hi": "कौशाम्बी"
+    },
+    "category": "vatsa",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.53046,
+      "lon": 81.37566
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+    },
+    "identified": {
+      "en": "certain, placed at Manjhanpur",
+      "hi": "निश्चित, Manjhanpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Vatsa (Vaṁsa).",
+      "hi": "वत्स की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1263691"
+    ]
+  },
+  {
+    "id": "kuru-capital",
+    "status": "draft",
+    "name": {
+      "en": "Indraprastha",
+      "hi": "इन्द्रप्रस्थ"
+    },
+    "category": "kuru",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.6096,
+      "lon": 77.2437
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "identified": {
+      "en": "likely, placed at Purana Qila, Delhi",
+      "hi": "संभावित, Purana Qila, Delhi पर"
+    },
+    "blurb": {
+      "en": "The capital of Kuru.",
+      "hi": "कुरु की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Purana_Qila"
+    ]
+  },
+  {
+    "id": "pancala-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ahicchatra and Kāmpilya",
+      "hi": "अहिच्छत्र और काम्पिल्य"
+    },
+    "category": "pancala",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.27402,
+      "lon": 79.16521
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+    },
+    "identified": {
+      "en": "likely, placed at Aonla",
+      "hi": "संभावित, Aonla पर"
+    },
+    "blurb": {
+      "en": "The capital of Pañcāla.",
+      "hi": "पञ्चाल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1278498"
+    ]
+  },
+  {
+    "id": "matsya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Virāṭanagara",
+      "hi": "विराटनगर"
+    },
+    "category": "matsya",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.43538,
+      "lon": 76.18297
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+    },
+    "identified": {
+      "en": "likely, placed at Viratnagar",
+      "hi": "संभावित, Viratnagar पर"
+    },
+    "blurb": {
+      "en": "The capital of Matsya.",
+      "hi": "मत्स्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1277745"
+    ]
+  },
+  {
+    "id": "surasena-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mathurā",
+      "hi": "मथुरा"
+    },
+    "category": "surasena",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.5035,
+      "lon": 77.67215
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "identified": {
+      "en": "certain, placed at Mathura",
+      "hi": "निश्चित, Mathura पर"
+    },
+    "blurb": {
+      "en": "The capital of Śūrasena.",
+      "hi": "शूरसेन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1263364"
+    ]
+  },
+  {
+    "id": "avanti-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    },
+    "category": "avanti",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+    },
+    "identified": {
+      "en": "certain, placed at Ujjain",
+      "hi": "निश्चित, Ujjain पर"
+    },
+    "blurb": {
+      "en": "The capital of Avanti.",
+      "hi": "अवन्ति की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1253914"
+    ]
+  }
+]

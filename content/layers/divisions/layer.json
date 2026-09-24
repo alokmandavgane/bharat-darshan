@@ -1,0 +1,134 @@
+{
+  "id": "divisions",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "The old divisions of India",
+    "hi": "भारत के प्राचीन विभाग"
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "shades": {
+    "by": "id"
+  },
+  "categories": [
+    {
+      "id": "madhyadesa",
+      "color": "#c8964a",
+      "title": {
+        "en": "The Middle Country (Madhyadeśa)",
+        "hi": "मध्यदेश"
+      }
+    },
+    {
+      "id": "udicya",
+      "color": "#6f8fb3",
+      "title": {
+        "en": "The North (Udīcya)",
+        "hi": "उदीच्य (उत्तर)"
+      }
+    },
+    {
+      "id": "pracya",
+      "color": "#5e9a6e",
+      "title": {
+        "en": "The East (Prācya)",
+        "hi": "प्राच्य (पूर्व)"
+      }
+    },
+    {
+      "id": "daksinapatha",
+      "color": "#b8654a",
+      "title": {
+        "en": "The Southern Road (Dakṣiṇāpatha)",
+        "hi": "दक्षिणापथ"
+      }
+    },
+    {
+      "id": "aparanta",
+      "color": "#a98bc2",
+      "title": {
+        "en": "The Western Borders (Aparānta)",
+        "hi": "अपरान्त (पश्चिम)"
+      }
+    },
+    {
+      "id": "vindhyaprstha",
+      "color": "#8f9a4a",
+      "title": {
+        "en": "The Vindhya's Back (Vindhyapṛṣṭha)",
+        "hi": "विन्ध्यपृष्ठ"
+      }
+    },
+    {
+      "id": "parvatasrayin",
+      "color": "#8a7f74",
+      "title": {
+        "en": "The Mountain Peoples (Parvatāśrayin)",
+        "hi": "पर्वताश्रयी"
+      }
+    },
+    {
+      "id": "beyond",
+      "color": "#b9ab94",
+      "title": {
+        "en": "Not in the lists",
+        "hi": "सूचियों में नहीं"
+      }
+    }
+  ],
+  "fields": {
+    "modern": {
+      "type": "name",
+      "label": {
+        "en": "Today",
+        "hi": "आज"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Drawn",
+        "hi": "रेखांकन"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "The country's traditional regions, each drawn as a set of whole districts of the 2011 census and grouped by the Matsya Purāṇa's seven-fold division of the peoples of Bhāratavarṣa (114.34-55): the Middle Country, the north, the east, the Southern Road, the western borders, the Vindhya's back and the mountains. The name is the text's; the extent is the compiler's, drawn to the nearest district and graded on each card. Where the Matsya does not name a region its division is the compiler's and the card says so; Ladakh, Tulu Nadu, Kongu Nadu and the islands have no name in the lists read, and are shown as such.",
+    "hi": "देश के पारंपरिक क्षेत्र, प्रत्येक 2011 की जनगणना के पूरे ज़िलों के समूह के रूप में, मत्स्य पुराण के भारतवर्ष के जनों के सात विभागों (114.34-55) के अनुसार: मध्यदेश, उत्तर, पूर्व, दक्षिणापथ, पश्चिमी सीमा, विन्ध्यपृष्ठ और पर्वत। नाम पाठ का है; सीमा संकलक की, निकटतम ज़िले तक, हर कार्ड पर श्रेणीबद्ध। जहाँ मत्स्य किसी क्षेत्र का नाम नहीं लेता वहाँ विभाग संकलक का है और कार्ड यह बताता है; लद्दाख, तुलु नाडु, कोंगु नाडु और द्वीपों का पढ़ी गई सूचियों में कोई नाम नहीं, और वे वैसे ही दिखाए गए हैं।"
+  },
+  "sources": [
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps"
+  ],
+  "attribution": "Names from the Matsya Purāṇa and other texts as quoted in the Jñānakośa; extents drawn by the compiler on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

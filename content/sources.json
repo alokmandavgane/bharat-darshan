@@ -677,6 +677,42 @@
         "en": "Kern's English translation of chapter 14 and his notes identifying its places with sites known to Greek geographers and in his day.",
         "hi": "अध्याय 14 का केर्न का अंग्रेज़ी अनुवाद और उनकी टिप्पणियाँ, जो इसके स्थानों को यूनानी भूगोलवेत्ताओं और उनके समय के ज्ञात स्थलों से मिलाती हैं।"
       }
+    },
+    "suttacentral": {
+      "title": {
+        "en": "SuttaCentral: the Pali canon (Mahāsaṅgīti edition)",
+        "hi": "सुत्तसेंट्रल: पालि त्रिपिटक (महासंगीति संस्करण)"
+      },
+      "publisher": {
+        "en": "SuttaCentral",
+        "hi": "सुत्तसेंट्रल"
+      },
+      "url": "https://suttacentral.net/",
+      "use": "data",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Pali root texts, from SuttaCentral's bilara-data: the Aṅguttara Nikāya's list of the sixteen great countries, quoted as printed.",
+        "hi": "पालि मूल पाठ, सुत्तसेंट्रल के bilara-data से: अंगुत्तर निकाय की सोलह महाजनपदों की सूची, जैसी छपी है।"
+      }
+    },
+    "raychaudhuri-1923": {
+      "title": {
+        "en": "H. C. Raychaudhuri, Political History of Ancient India (1923)",
+        "hi": "हे. च. रायचौधरी, पॉलिटिकल हिस्ट्री ऑफ़ एंशिएंट इंडिया (1923)"
+      },
+      "publisher": {
+        "en": "University of Calcutta",
+        "hi": "कलकत्ता विश्वविद्यालय"
+      },
+      "url": "https://archive.org/details/politicalhistory00raycuoft",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The first edition's account of the sixteen mahājanapadas, whose descriptions of their extents the kingdoms page quotes and draws.",
+        "hi": "पहले संस्करण का सोलह महाजनपदों का विवरण, जिसके विस्तार-वर्णन राज्य पृष्ठ उद्धृत करता है और खींचता है।"
+      }
     }
   }
 }

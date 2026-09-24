@@ -171,8 +171,14 @@ def validate_layer(layer, folder, registry):
             p.append(f"source.dump must be one of {GEONAMES_DUMPS}")
     if layer.get('type') == 'areas':
         src = layer.get('source') or {}
-        if src.get('format') not in ('shapefile-polygon', 'geojson-polygon', 'pmtiles-polygon') or not src.get('files'):
-            p.append('an areas layer needs a polygon source.format (shapefile, geojson or pmtiles) and source.files')
+        if src.get('format') == CENSUS_DISTRICTS:
+            # Areas made of whole 2011 districts: a historical region, a kingdom's extent.
+            # The build owns the district polygons, so the layer fetches nothing itself.
+            if src.get('files'):
+                p.append(f'a {CENSUS_DISTRICTS} areas layer fetches its own source: drop source.files')
+        elif src.get('format') not in ('shapefile-polygon', 'geojson-polygon', 'pmtiles-polygon') or not src.get('files'):
+            p.append('an areas layer needs a polygon source.format (shapefile, geojson or pmtiles), '
+                     f'and source.files, or source.format "{CENSUS_DISTRICTS}"')
     if layer.get('type') == 'lines':
         src = layer.get('source') or {}
         if src.get('format') == DISTRICTS:
@@ -318,6 +324,7 @@ def build_census_choropleth(layer, ids, out):
     return items, problems
 
 
+MAX_FILL_BANDS = 8            # src/engine/choropleth.js MAX_BANDS
 AREA_RASTER_HEIGHT = 1024     # areas are broad shapes; the first-view tier's pitch is plenty
 MAX_AREAS = 255               # a uint8 raster, with 0 for "no area here"
 
@@ -334,41 +341,72 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
     clipping a line, and then triangulated to be filled at all.
     """
     src = layer['source']
+    by_districts = src.get('format') == CENSUS_DISTRICTS
     raw = os.path.join(fetch.RAW, 'layers', layer['id'])
-    index = lines.load_polygon_source(src, raw)
+    index = None if by_districts else lines.load_polygon_source(src, raw)
     height = AREA_RASTER_HEIGHT
     width = int(round(height * grid.WIDTH_KM / grid.HEIGHT_KM))
     out_items, problems, shapes = [], [], []
+    code_to_area = {}               # 2011 district code -> area id, for a districts layer
     if len(items) > MAX_AREAS:
         return [], [f'an areas layer can hold at most {MAX_AREAS} areas, got {len(items)}']
     for n, it in enumerate(items, start=1):
-        problems += validate_line_item(it, cats, 'name', fields)
+        problems += validate_line_item(it, cats, CENSUS_DISTRICTS if by_districts else 'name', fields)
         if problems and problems[-1].startswith(str(it.get('id'))):
             continue
-        rings = []
-        for name in it.get('source_names') or []:
-            rings.extend(index.get(lines.fold(name), []))
-        if not rings:
-            problems.append(f"{it['id']}: no polygon in the source is named {it['source_names']}")
-            continue
-        shapes.append((n, [(np.column_stack(grid.lonlat_to_pixel(r[:, 0], r[:, 1], width, height)), hole)
-                           for r, hole in rings]))
+        if by_districts:
+            # An area is the districts it lists, whole: the resolution is the district's,
+            # and each is claimed by one area at most, so no two areas share a pixel.
+            codes = it.get('districts')
+            if not (isinstance(codes, list) and codes and all(isinstance(c, int) and 1 <= c <= 640 for c in codes)):
+                problems.append(f"{it['id']}: districts must list 2011 census codes, 1 to 640")
+                continue
+            twice = [c for c in codes if c in code_to_area]
+            if twice:
+                problems.append(f"{it['id']}: districts already in another area: {twice}")
+                continue
+            for c in codes:
+                code_to_area[c] = n
+        else:
+            rings = []
+            for name in it.get('source_names') or []:
+                rings.extend(index.get(lines.fold(name), []))
+            if not rings:
+                problems.append(f"{it['id']}: no polygon in the source is named {it['source_names']}")
+                continue
+            shapes.append((n, [(np.column_stack(grid.lonlat_to_pixel(r[:, 0], r[:, 1], width, height)), hole)
+                               for r, hole in rings]))
         out_items.append({
             'id': it['id'], 'area_id': n, 'name': it['name'], 'category': it['category'],
             'rank': it['rank'], 'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
         } | {k: it[k] for k in fields if it.get(k) is not None})
     if problems:
         return out_items, problems
-    # Biggest first, so a small area drawn later sits on top of the one that contains it.
-    shapes.sort(key=lambda s: -sum(abs(shapefile.signed_area(r)) for r, hole in s[1] if not hole))
-    grid_ids = raster.rasterise(shapes, width, height)
     # India only: the model draws nothing else, and Natural Earth's regions run well past
     # the border -- the Ganges Plain into Bangladesh, the Thar into Pakistan.
     inside = np.array(Image.fromarray(ids.astype(np.uint8)).resize((width, height), Image.NEAREST)) > 0
+    if by_districts:
+        # The census's own district raster at this pitch, each code looked up to its area.
+        codes, _polys = census_lib.district_raster(width, height, inside)
+        lookup = np.zeros(int(codes.max()) + 1, dtype=np.uint8)
+        for c, a in code_to_area.items():
+            if c < len(lookup):
+                lookup[c] = a
+        grid_ids = lookup[codes]
+    else:
+        # Biggest first, so a small area drawn later sits on top of the one that contains it.
+        shapes.sort(key=lambda s: -sum(abs(shapefile.signed_area(r)) for r, hole in s[1] if not hole))
+        grid_ids = raster.rasterise(shapes, width, height)
     grid_ids = np.where(inside, grid_ids, 0).astype(np.uint8)
     if layer.get('shades'):
         shade_areas(out_items, grid_ids, {c['id']: c['color'] for c in layer.get('categories', [])},
                     layer['shades']['by'])
+    elif len(layer.get('categories', [])) > MAX_FILL_BANDS:
+        # The band lookup holds eight colours (choropleth.js MAX_BANDS); a layer with more
+        # categories -- one per kingdom of an era -- carries each area's colour itself.
+        col = {c['id']: c['color'] for c in layer['categories']}
+        for it in out_items:
+            it['color'] = col[it['category']]
     rel = f'layers/{layer["id"]}-areas.bin.gz'
     size = pack.write(os.path.join(out, rel), grid_ids, 'uint8', predictor='none')
     covered = {int(v) for v in np.unique(grid_ids) if v}
@@ -684,6 +722,8 @@ def validate_line_item(it, cats, join, fields=()):
             p.append(f'{tag}: waypoints must list at least two places for a routed layer')
         elif any(not (isinstance(q.get('lat'), (int, float)) and isinstance(q.get('lon'), (int, float))) for q in w):
             p.append(f'{tag}: every waypoint needs numeric lat and lon')
+    elif join == CENSUS_DISTRICTS:
+        pass                        # an area of whole districts: build_areas checks the list
     elif not it.get('source_names'):
         p.append(f'{tag}: source_names must name at least one feature in the source')
     if not it.get('sources') or any(not str(s).startswith('http') for s in it['sources']):
