@@ -992,6 +992,77 @@
    "path": "layers/districts.json"
   },
   {
+   "id": "epic-rivers",
+   "type": "lines",
+   "title": {
+    "en": "Rivers by their epic names",
+    "hi": "महाकाव्य के नामों से नदियाँ"
+   },
+   "icon": "wave",
+   "group": "culture",
+   "default_on": false,
+   "count": 21,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "certain",
+     "title": {
+      "en": "Identification certain",
+      "hi": "पहचान निश्चित"
+     },
+     "color": "#3f6f9e"
+    },
+    {
+     "id": "likely",
+     "title": {
+      "en": "Identification likely",
+      "hi": "पहचान संभावित"
+     },
+     "color": "#8a9fb8"
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Identified with",
+      "hi": "पहचान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान का आधार"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "text",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "The Mahābhārata's river catalogue (Bhīṣma 6.9.14-38) names some 130 rivers 'as memory serves'. Twenty-one that can be matched to a modern river are drawn on it under the old name. Most of the rest cannot be placed.",
+    "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9.14-38) 'जैसा स्मरण है' लगभग 130 नदियाँ गिनाती है। जिन इक्कीस का किसी आधुनिक नदी से मेल बैठता है, वे पुराने नाम से उसी पर खींची गई हैं। बाक़ी अधिकतर पहचानी नहीं जा सकतीं।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "indian-water-features",
+    "india-wris"
+   ],
+   "path": "layers/epic-rivers.json"
+  },
+  {
    "id": "festivals",
    "type": "regional",
    "title": {
@@ -1122,6 +1193,207 @@
     "wikipedia"
    ],
    "path": "layers/gi-tags.json"
+  },
+  {
+   "id": "kula-parvatas",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "The seven kula-parvatas",
+    "hi": "सात कुलपर्वत"
+   },
+   "icon": "mountain",
+   "group": "culture",
+   "default_on": false,
+   "count": 6,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "kula-parvata",
+     "title": {
+      "en": "Kula-parvata",
+      "hi": "कुलपर्वत"
+     },
+     "icon": "mountain",
+     "color": "#7a6a56"
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Identified with",
+      "hi": "पहचान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान का आधार"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "text",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "The Mahābhārata (Bhīṣma 6.9.11) frames Bhāratavarṣa with seven 'clan mountains'. Six are placed here; Śuktimat has no agreed identification and is left off. The Himālaya is not among them: it is the edge of the land, not a range inside it.",
+    "hi": "महाभारत (भीष्मपर्व 6.9.11) भारतवर्ष को सात कुलपर्वतों से घेरता है। छह यहाँ रखे गए हैं; शुक्तिमान् की कोई सर्वमान्य पहचान नहीं, इसलिए छोड़ दिया गया। हिमालय इनमें नहीं है: वह इस भूमि की सीमा है, उसके भीतर की पर्वतमाला नहीं।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/kula-parvatas.json"
+  },
+  {
+   "id": "kurma-vibhaga",
+   "type": "points",
+   "title": {
+    "en": "Countries of the old texts",
+    "hi": "प्राचीन ग्रंथों के देश"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 47,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "madhya",
+     "title": {
+      "en": "Centre",
+      "hi": "मध्य"
+     },
+     "icon": "pin",
+     "color": "#b5432f"
+    },
+    {
+     "id": "purva",
+     "title": {
+      "en": "East",
+      "hi": "पूर्व"
+     },
+     "icon": "pin",
+     "color": "#d08a2c"
+    },
+    {
+     "id": "agneya",
+     "title": {
+      "en": "South-east",
+      "hi": "आग्नेय"
+     },
+     "icon": "pin",
+     "color": "#c2653a"
+    },
+    {
+     "id": "dakshina",
+     "title": {
+      "en": "South",
+      "hi": "दक्षिण"
+     },
+     "icon": "pin",
+     "color": "#6f8f3a"
+    },
+    {
+     "id": "nairrta",
+     "title": {
+      "en": "South-west",
+      "hi": "नैऋत्य"
+     },
+     "icon": "pin",
+     "color": "#3f8f7e"
+    },
+    {
+     "id": "pashcima",
+     "title": {
+      "en": "West",
+      "hi": "पश्चिम"
+     },
+     "icon": "pin",
+     "color": "#3f6f9e"
+    },
+    {
+     "id": "vayavya",
+     "title": {
+      "en": "North-west",
+      "hi": "वायव्य"
+     },
+     "icon": "pin",
+     "color": "#5a5aa0"
+    },
+    {
+     "id": "uttara",
+     "title": {
+      "en": "North",
+      "hi": "उत्तर"
+     },
+     "icon": "pin",
+     "color": "#7a5a96"
+    },
+    {
+     "id": "aishana",
+     "title": {
+      "en": "North-east",
+      "hi": "ईशान"
+     },
+     "icon": "pin",
+     "color": "#9a4f7a"
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Identified with",
+      "hi": "पहचान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान का आधार"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "text",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "Varāhamihira's Bṛhat-saṃhitā (6th century), chapter 14, divides Bhāratavarṣa into nine parts by bearing from the middle country, one for each triad of asterisms. Each pin is a place he names, coloured by the part he puts it in, and set on the modern site it is usually identified with. Where the colour looks wrong, the text is: he puts Kashmir in the north-east.",
+    "hi": "वराहमिहिर की बृहत्संहिता (छठी शताब्दी) का 14वाँ अध्याय भारतवर्ष को मध्य देश से दिशा के अनुसार नौ भागों में बाँटता है, हर भाग नक्षत्रों की एक त्रयी के अधीन। हर पिन उनका गिनाया एक स्थान है, उस भाग के रंग में जिसमें वे उसे रखते हैं, और उस आधुनिक स्थल पर जिससे उसकी प्रायः पहचान होती है। जहाँ रंग गलत लगे, वहाँ पाठ ऐसा ही है: वे कश्मीर को ईशान में रखते हैं।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "kern-brhat-samhita",
+    "geonames"
+   ],
+   "path": "layers/kurma-vibhaga.json"
   },
   {
    "id": "language-families",
@@ -2320,12 +2592,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 22802,
-   "sha256": "aeb2fea56fb8"
+   "size": 23999,
+   "sha256": "7db3077c19a6"
   },
   "sources.json": {
-   "size": 29018,
-   "sha256": "7294e9045e72"
+   "size": 31205,
+   "sha256": "219f04e352be"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -2563,6 +2835,10 @@
    "size": 310388,
    "sha256": "8689c934a979"
   },
+  "layers/epic-rivers.json": {
+   "size": 81017,
+   "sha256": "9480a56b7512"
+  },
   "layers/festivals.json": {
    "size": 27590,
    "sha256": "f377ba648c53"
@@ -2570,6 +2846,14 @@
   "layers/gi-tags.json": {
    "size": 157505,
    "sha256": "77bc5df07c24"
+  },
+  "layers/kula-parvatas.json": {
+   "size": 8046,
+   "sha256": "c098c3ae8cc2"
+  },
+  "layers/kurma-vibhaga.json": {
+   "size": 49600,
+   "sha256": "f168defe962a"
   },
   "layers/language-families.json": {
    "size": 2453,
