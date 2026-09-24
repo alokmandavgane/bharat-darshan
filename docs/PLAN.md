@@ -2443,6 +2443,26 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, forty-seventh round: lines stay on high relief. The owner found roads,
+  railways and district lines vanishing in the Himalaya and breaking up over the Ghats
+  once the relief was turned up.
+  - **Cause**: a run's segments are ~5 km (p95 16, up to 100) against a ~3.3 km mesh
+    cell, so each straight chord passed under every ridge between its ends. Rivers
+    escaped by lying in valleys, where a chord runs above the ground.
+  - **Fix**: `lines.js` cuts every run where it crosses a grid line or a quad's
+    diagonal of the mesh it is drawn on, and the shader lays the height on that mesh's
+    own two triangles per quad, so the ribbon lies exactly on the drawn ground. The
+    lifted block cuts its own copy (only the runs reaching it) to its finer grid, which
+    `block.grid.rect` now describes. The ribbon's screen-space edges get a view-space
+    depth bias of `halfWidthKm * (1 + 2 * slope)` of the quad under it; the camera is
+    orthographic, so nothing moves on screen and a real ridge in front still hides it.
+    Picking and search keep the uncut runs.
+  - Cost: ~3-4x the vertices of a line layer at the high tier (roads 58 K -> 216 K),
+    fewer on the low tier's coarser grid.
+  - Checked headless at relief 30 and 16 (Uttarakhand, Himachal, the Ghats, the lifted
+    Uttarakhand block), before and after. Left: at relief 30 on a lifted block, a line
+    deep in a narrow valley is still mostly hidden, which is largely honest occlusion.
+    The marker shader still stands on the bilinear height, not the mesh's triangles.
 - 2026-09-24, forty-sixth round: gestures and a performance audit.
   - Pinch on a phone was often read as a tilt or a twist (F5 above has the new rule).
   - An audit of the engine, the UI and the pipeline is in
