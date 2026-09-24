@@ -106,6 +106,14 @@
       "color": "#e08a1e"
     },
     {
+      "id": "karna",
+      "title": {
+        "en": "Karṇa's conquest of the earth",
+        "hi": "कर्ण की दिग्विजय"
+      },
+      "color": "#9e1b32"
+    },
+    {
       "id": "virata",
       "title": {
         "en": "The thirteenth year",
