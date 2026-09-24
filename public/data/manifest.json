@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 84,
+   "count": 94,
    "reviewed": 0,
    "categories": [
     {
@@ -1562,6 +1562,14 @@
       "hi": "इन्द्रप्रस्थ"
      },
      "color": "#2f6f9e"
+    },
+    {
+     "id": "bhima",
+     "title": {
+      "en": "Bhīma's conquest of the east",
+      "hi": "भीम की पूर्व-विजय"
+     },
+     "color": "#4b3f9e"
     },
     {
      "id": "arjuna",
@@ -1661,8 +1669,8 @@
     }
    },
    "note": {
-    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's up the Sarasvatī from its mouth to its source, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
-    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की — सरस्वती के मुहाने से उद्गम तक — दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
+    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Bhīma's conquest of the east, Balarāma's up the Sarasvatī from its mouth to its source, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
+    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, भीम की पूर्व-विजय, बलराम की — सरस्वती के मुहाने से उद्गम तक — दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource"
@@ -1679,7 +1687,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 58,
+   "count": 66,
    "reviewed": 0,
    "categories": [
     {
@@ -1707,6 +1715,15 @@
       "hi": "इन्द्रप्रस्थ"
      },
      "color": "#2f6f9e",
+     "icon": "pin"
+    },
+    {
+     "id": "bhima",
+     "title": {
+      "en": "Bhīma's conquest of the east",
+      "hi": "भीम की पूर्व-विजय"
+     },
+     "color": "#4b3f9e",
      "icon": "pin"
     },
     {
@@ -3347,8 +3364,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 28844,
-   "sha256": "44afde7b8507"
+   "size": 28960,
+   "sha256": "c2552203750f"
   },
   "sources.json": {
    "size": 31205,
@@ -3619,12 +3636,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 83439,
-   "sha256": "97bc7d51794f"
+   "size": 92404,
+   "sha256": "dc770b123c3f"
   },
   "layers/mahabharata-stops.json": {
-   "size": 88393,
-   "sha256": "908e003eb624"
+   "size": 99214,
+   "sha256": "c45f951151ac"
   },
   "layers/minerals.json": {
    "size": 38276,
