@@ -1,0 +1,212 @@
+[
+  {
+    "id": "mahendra",
+    "status": "draft",
+    "name": {
+      "en": "Mahendra",
+      "hi": "महेन्द्र"
+    },
+    "anchor": {
+      "lat": 18.97,
+      "lon": 84.37
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "Eastern Ghats (Mahendragiri)",
+      "hi": "पूर्वी घाट (महेंद्रगिरि)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the Eastern Ghats (Mahendragiri).",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: पूर्वी घाट (महेंद्रगिरि)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://en.wikipedia.org/wiki/Eastern_Ghats"
+    ]
+  },
+  {
+    "id": "malaya",
+    "status": "draft",
+    "name": {
+      "en": "Malaya",
+      "hi": "मलय"
+    },
+    "anchor": {
+      "lat": 10.08818,
+      "lon": 77.06239
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "southern Western Ghats",
+      "hi": "दक्षिणी पश्चिमी घाट"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the southern Western Ghats.",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: दक्षिणी पश्चिमी घाट।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://www.geonames.org/1262463"
+    ]
+  },
+  {
+    "id": "sahya",
+    "status": "draft",
+    "name": {
+      "en": "Sahya",
+      "hi": "सह्य"
+    },
+    "anchor": {
+      "lat": 17.92323,
+      "lon": 73.65858
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "northern Western Ghats (Sahyadri)",
+      "hi": "उत्तरी पश्चिमी घाट (सह्याद्रि)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the northern Western Ghats (Sahyadri).",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: उत्तरी पश्चिमी घाट (सह्याद्रि)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://www.geonames.org/12501201"
+    ]
+  },
+  {
+    "id": "rksavat",
+    "status": "draft",
+    "name": {
+      "en": "Ṛkṣavat",
+      "hi": "ऋक्षवत्"
+    },
+    "anchor": {
+      "lat": 22.6,
+      "lon": 80.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "महेन्द्रो मलयः सह्यः शुक्तिमानृक्षवानपि",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "eastern Vindhya and Satpura",
+      "hi": "पूर्वी विंध्य और सतपुड़ा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the eastern Vindhya and Satpura. Placed by the compiler between the Satpura and the Maikal; the identification is approximate.",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: पूर्वी विंध्य और सतपुड़ा। संकलक ने सतपुड़ा और मैकल के बीच रखा है; पहचान अनुमानित है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://en.wikipedia.org/wiki/Satpura_Range"
+    ]
+  },
+  {
+    "id": "vindhya",
+    "status": "draft",
+    "name": {
+      "en": "Vindhya",
+      "hi": "विन्ध्य"
+    },
+    "anchor": {
+      "lat": 23.3,
+      "lon": 78.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "विन्ध्यश्च पारियात्रश्च",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "Vindhya range",
+      "hi": "विंध्य पर्वतमाला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the Vindhya range.",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: विंध्य पर्वतमाला।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://en.wikipedia.org/wiki/Vindhya_Range"
+    ]
+  },
+  {
+    "id": "pariyatra",
+    "status": "draft",
+    "name": {
+      "en": "Pāriyātra",
+      "hi": "पारियात्र"
+    },
+    "anchor": {
+      "lat": 25.2,
+      "lon": 73.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "kula-parvata",
+    "priority": 1,
+    "verse": "विन्ध्यश्च पारियात्रश्च",
+    "locus": "Mahābhārata 6.9.11",
+    "modern": {
+      "en": "the Aravalli and western Vindhya",
+      "hi": "अरावली और पश्चिमी विंध्य"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "One of the seven kula-parvatas of Mahābhārata 6.9.11; identified with the the Aravalli and western Vindhya.",
+      "hi": "महाभारत 6.9.11 के सात कुलपर्वतों में से एक; पहचान: अरावली और पश्चिमी विंध्य।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488",
+      "https://en.wikipedia.org/wiki/Aravalli_Range"
+    ]
+  }
+]

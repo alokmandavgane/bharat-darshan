@@ -1,0 +1,1649 @@
+[
+  {
+    "id": "matsya",
+    "status": "draft",
+    "name": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+    },
+    "anchor": {
+      "lat": 27.43538,
+      "lon": 76.18297
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "मत्स्य",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Viratnagar (Bairat)",
+      "hi": "विराटनगर (बैराठ)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. Placed at Virāṭa's capital of the epic.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। महाकाव्य के विराट की राजधानी पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1277745"
+    ]
+  },
+  {
+    "id": "madhyamika",
+    "status": "draft",
+    "name": {
+      "en": "Mādhyamika",
+      "hi": "माध्यमिक"
+    },
+    "anchor": {
+      "lat": 24.88963,
+      "lon": 74.62403
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "माध्यमिकाः",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Nagari, near Chittorgarh",
+      "hi": "नगरी, चित्तौड़गढ़ के पास"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. The site is Nagari, 13 km north of Chittorgarh; the pin stands at Chittorgarh.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। स्थल नगरी है, चित्तौड़गढ़ से 13 किमी उत्तर; पिन चित्तौड़गढ़ पर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1274040"
+    ]
+  },
+  {
+    "id": "mathura",
+    "status": "draft",
+    "name": {
+      "en": "Mathurā (Māthura)",
+      "hi": "मथुरा (माथुर)"
+    },
+    "anchor": {
+      "lat": 27.5035,
+      "lon": 77.67215
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 1,
+    "verse": "माथुर",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Mathura",
+      "hi": "मथुरा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. Named with the Śūrasenas, whose city it was.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। शूरसेनों के साथ गिनाया गया, जिनका यह नगर था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1263364"
+    ]
+  },
+  {
+    "id": "pancala",
+    "status": "draft",
+    "name": {
+      "en": "Pāñcāla",
+      "hi": "पाञ्चाल"
+    },
+    "anchor": {
+      "lat": 27.61268,
+      "lon": 79.27687
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 1,
+    "verse": "पाञ्चालाः",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Kampil (Kāmpilya)",
+      "hi": "कम्पिल (काम्पिल्य)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. Placed at Kāmpilya, Drupada's capital in the epic. Its king stands for the centre at 14.32.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। महाकाव्य में द्रुपद की राजधानी काम्पिल्य पर रखा गया। 14.32 में इसका राजा मध्य भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1268215"
+    ]
+  },
+  {
+    "id": "saketa",
+    "status": "draft",
+    "name": {
+      "en": "Sāketa",
+      "hi": "साकेत"
+    },
+    "anchor": {
+      "lat": 26.79909,
+      "lon": 82.2047
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 1,
+    "verse": "साकेत",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Ayodhya",
+      "hi": "अयोध्या"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1278094"
+    ]
+  },
+  {
+    "id": "kuru",
+    "status": "draft",
+    "name": {
+      "en": "Kuru",
+      "hi": "कुरु"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "कङ्ककुरुकालकोटि",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. A people and their country, placed at Kurukṣetra.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। एक जन और उसका देश, कुरुक्षेत्र पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "hastinapura",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 1,
+    "verse": "गजाह्वया",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. 'The elephant-named' closes the middle sector; Kern renders it Hastinapura.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। 'हाथी के नाम वाला' मध्य भाग की सूची पूरी करता है; केर्न इसे हस्तिनापुर पढ़ते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "kapisthala",
+    "status": "draft",
+    "name": {
+      "en": "Kāpiṣṭhala",
+      "hi": "कापिष्ठल"
+    },
+    "anchor": {
+      "lat": 29.80153,
+      "lon": 76.39959
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "कापिष्ठल",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Kaithal",
+      "hi": "कैथल"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1268593"
+    ]
+  },
+  {
+    "id": "vatsa",
+    "status": "draft",
+    "name": {
+      "en": "Vatsa",
+      "hi": "वत्स"
+    },
+    "anchor": {
+      "lat": 25.53046,
+      "lon": 81.37566
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "मरुवत्सघोष",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Kaushambi (Kosam)",
+      "hi": "कौशाम्बी (कोसम)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. Placed at Manjhanpur, the district seat near Kosam. The Vatsas recur in the south-east at 14.8.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। कोसम के पास ज़िला मुख्यालय मंझनपुर पर रखा गया। वत्स 14.8 में आग्नेय भाग में फिर आते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1263691"
+    ]
+  },
+  {
+    "id": "audumbara",
+    "status": "draft",
+    "name": {
+      "en": "Audumbara",
+      "hi": "औदुम्बर"
+    },
+    "anchor": {
+      "lat": 32.27484,
+      "lon": 75.65287
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "category": "madhya",
+    "priority": 2,
+    "verse": "औदुम्बर",
+    "locus": "Bṛhat-saṃhitā 14.1-4",
+    "modern": {
+      "en": "Pathankot",
+      "hi": "पठानकोट"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the centre of Bhāratavarṣa. Audumbara coins come from the Pathankot–Kangra hills.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के मध्य भाग में गिनाती है। औदुम्बर सिक्के पठानकोट–कांगड़ा की पहाड़ियों से मिलते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1260137"
+    ]
+  },
+  {
+    "id": "magadha",
+    "status": "draft",
+    "name": {
+      "en": "Magadha",
+      "hi": "मगध"
+    },
+    "anchor": {
+      "lat": 25.59408,
+      "lon": 85.13563
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "purva",
+    "priority": 1,
+    "verse": "मगध",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Patna (Pāṭaliputra)",
+      "hi": "पटना (पाटलिपुत्र)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa. Its king stands for the east at 14.32.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है। 14.32 में इसका राजा पूर्व भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1260086"
+    ]
+  },
+  {
+    "id": "mithila",
+    "status": "draft",
+    "name": {
+      "en": "Mithilā",
+      "hi": "मिथिला"
+    },
+    "anchor": {
+      "lat": 26.35367,
+      "lon": 86.07169
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "purva",
+    "priority": 2,
+    "verse": "मिथिल",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Madhubani (Mithila)",
+      "hi": "मधुबनी (मिथिला)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa. The country; its capital Janakpur lies across the border in Nepal.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है। यह देश है; इसकी राजधानी जनकपुर सीमा पार नेपाल में है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1264555"
+    ]
+  },
+  {
+    "id": "pragjyotisa",
+    "status": "draft",
+    "name": {
+      "en": "Prāgjyotiṣa",
+      "hi": "प्राग्ज्योतिष"
+    },
+    "anchor": {
+      "lat": 26.1844,
+      "lon": 91.7458
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "purva",
+    "priority": 2,
+    "verse": "प्राग्ज्योतिष",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Guwahati",
+      "hi": "गुवाहाटी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1271476"
+    ]
+  },
+  {
+    "id": "utkala",
+    "status": "draft",
+    "name": {
+      "en": "Utkala",
+      "hi": "उत्कल"
+    },
+    "anchor": {
+      "lat": 20.84852,
+      "lon": 86.33729
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "purva",
+    "priority": 2,
+    "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Odisha, placed at Jajpur",
+      "hi": "ओडिशा, जाजपुर पर"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1269477"
+    ]
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "purva",
+    "priority": 1,
+    "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Varanasi",
+      "hi": "वाराणसी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa. Placed in the east, not the centre: the sector is a bearing, not a surveyed box.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है। मध्य में नहीं, पूर्व में गिनाया गया: भाग एक दिशा है, नापा हुआ खाना नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "mekala",
+    "status": "draft",
+    "name": {
+      "en": "Mekala",
+      "hi": "मेकल"
+    },
+    "anchor": {
+      "lat": 22.67486,
+      "lon": 81.75908
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "purva",
+    "priority": 2,
+    "verse": "पौण्ड्रौत्कलकाशिमेकलाम्बष्ठाः",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Amarkantak, Maikal hills",
+      "hi": "अमरकंटक, मैकल पहाड़ियाँ"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1278905"
+    ]
+  },
+  {
+    "id": "tamralipti",
+    "status": "draft",
+    "name": {
+      "en": "Tāmralipti",
+      "hi": "ताम्रलिप्ति"
+    },
+    "anchor": {
+      "lat": 22.30083,
+      "lon": 87.92593
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "purva",
+    "priority": 1,
+    "verse": "ताम्रलिप्तक",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Tamluk",
+      "hi": "तमलुक"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1255046"
+    ]
+  },
+  {
+    "id": "vardhamana",
+    "status": "draft",
+    "name": {
+      "en": "Vardhamāna",
+      "hi": "वर्धमान"
+    },
+    "anchor": {
+      "lat": 23.25572,
+      "lon": 87.85691
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "purva",
+    "priority": 2,
+    "verse": "वर्धमानाश्च",
+    "locus": "Bṛhat-saṃhitā 14.5-7",
+    "modern": {
+      "en": "Bardhaman",
+      "hi": "बर्धमान"
+    },
+    "identified": {
+      "en": "likely, Kern, 1871",
+      "hi": "संभावित, केर्न, 1871"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पूर्व भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://archive.org/details/journalofroyalas5187roya",
+      "https://www.geonames.org/1277029"
+    ]
+  },
+  {
+    "id": "daksina-kosala",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "कोशल (दक्षिण)"
+    },
+    "anchor": {
+      "lat": 21.10743,
+      "lon": 82.0948
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "कोशलकलिङ्गवङ्ग",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "South Kosala, near Sirpur",
+      "hi": "दक्षिण कोसल, सिरपुर के पास"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Placed at Mahasamund, near Sirpur (Śrīpura), the capital of South Kosala.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। दक्षिण कोसल की राजधानी सिरपुर (श्रीपुर) के पास महासमुंद पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1264414"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिङ्ग"
+    },
+    "anchor": {
+      "lat": 20.27241,
+      "lon": 85.83385
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "agneya",
+    "priority": 1,
+    "verse": "कोशलकलिङ्गवङ्ग",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Bhubaneswar (Tosalī)",
+      "hi": "भुवनेश्वर (तोसली)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Placed at Bhubaneswar, beside Tosalī (Dhauli), Kaliṅga's capital under Aśoka. Its king stands for the south-east at 14.32.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। तोसली (धौली) के पास भुवनेश्वर पर रखा गया, जो अशोक के समय कलिंग की राजधानी थी। 14.32 में इसका राजा आग्नेय भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1275817"
+    ]
+  },
+  {
+    "id": "anga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+    },
+    "anchor": {
+      "lat": 25.24446,
+      "lon": 86.97183
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "जठराङ्गाः",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Bhagalpur (Campā)",
+      "hi": "भागलपुर (चम्पा)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Kern reads the compound as the Jaṭhara-Aṅgas.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। केर्न इस समास को जठर-अंग पढ़ते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1276300"
+    ]
+  },
+  {
+    "id": "vidarbha",
+    "status": "draft",
+    "name": {
+      "en": "Vidarbha",
+      "hi": "विदर्भ"
+    },
+    "anchor": {
+      "lat": 20.93333,
+      "lon": 77.75
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "विदर्भवत्सान्ध्रचेदिका",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Amravati (Kauṇḍinyapura)",
+      "hi": "अमरावती (कौण्डिन्यपुर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Placed at Amravati, near Kauṇḍinyapura, Rukmiṇī's city in the epic.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। महाकाव्य में रुक्मिणी के नगर कौण्डिन्यपुर के पास अमरावती पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1278718"
+    ]
+  },
+  {
+    "id": "andhra",
+    "status": "draft",
+    "name": {
+      "en": "Āndhra",
+      "hi": "आन्ध्र"
+    },
+    "anchor": {
+      "lat": 16.573,
+      "lon": 80.358
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "विदर्भवत्सान्ध्रचेदिका",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Amaravati (Dhānyakaṭaka)",
+      "hi": "अमरावती (धान्यकटक)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Placed at Amaravati on the Krishna, the Sātavāhana-era stūpa town.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। कृष्णा किनारे अमरावती पर रखा गया, सातवाहन काल का स्तूप-नगर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://en.wikipedia.org/wiki/Amaravati_Stupa"
+    ]
+  },
+  {
+    "id": "tripuri",
+    "status": "draft",
+    "name": {
+      "en": "Tripurī",
+      "hi": "त्रिपुरी"
+    },
+    "anchor": {
+      "lat": 23.16697,
+      "lon": 79.95006
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "agneya",
+    "priority": 1,
+    "verse": "त्रिपुरी",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Tewar, near Jabalpur",
+      "hi": "तेवर, जबलपुर के पास"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. The Kalacuri capital of the Cedi country, at Tewar 13 km from Jabalpur; the pin stands at Jabalpur.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। चेदि देश की कलचुरि राजधानी, जबलपुर से 13 किमी दूर तेवर में; पिन जबलपुर पर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1269633"
+    ]
+  },
+  {
+    "id": "dasarna",
+    "status": "draft",
+    "name": {
+      "en": "Daśārṇa",
+      "hi": "दशार्ण"
+    },
+    "anchor": {
+      "lat": 23.52604,
+      "lon": 77.81092
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "दाशार्णाः",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Vidisha",
+      "hi": "विदिशा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. The Dhasān river country, whose capital was Vidiśā.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। धसान नदी का देश, जिसकी राजधानी विदिशा थी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1253200"
+    ]
+  },
+  {
+    "id": "kiskindha",
+    "status": "draft",
+    "name": {
+      "en": "Kiṣkindhā",
+      "hi": "किष्किन्धा"
+    },
+    "anchor": {
+      "lat": 15.3352,
+      "lon": 76.4603
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "agneya",
+    "priority": 2,
+    "verse": "किष्किन्ध",
+    "locus": "Bṛhat-saṃhitā 14.8-10",
+    "modern": {
+      "en": "Hampi–Anegundi",
+      "hi": "हम्पी–आनेगुंदी"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-east of Bhāratavarṣa. Rāmāyaṇa geography placed as an ordinary entry in the south-east.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के आग्नेय भाग में गिनाती है। रामायण का भूगोल, आग्नेय भाग की सूची में साधारण प्रविष्टि के रूप में।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1270448"
+    ]
+  },
+  {
+    "id": "girinagara",
+    "status": "draft",
+    "name": {
+      "en": "Girinagara",
+      "hi": "गिरिनगर"
+    },
+    "anchor": {
+      "lat": 21.51966,
+      "lon": 70.45981
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "गिरिनगर",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Junagadh (Girnar)",
+      "hi": "जूनागढ़ (गिरनार)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1268773"
+    ]
+  },
+  {
+    "id": "bharukaccha",
+    "status": "draft",
+    "name": {
+      "en": "Bharukaccha",
+      "hi": "भरुकच्छ"
+    },
+    "anchor": {
+      "lat": 21.69482,
+      "lon": 72.9805
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "भरुकच्छाः",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Bharuch",
+      "hi": "भरूच"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. The Barygaza of the Greeks, as Kern notes.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। यूनानियों का बारिगाज़ा, जैसा केर्न लिखते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1276100"
+    ]
+  },
+  {
+    "id": "vanavasi",
+    "status": "draft",
+    "name": {
+      "en": "Vanavāsī",
+      "hi": "वनवासी"
+    },
+    "anchor": {
+      "lat": 14.62072,
+      "lon": 74.83554
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "वनवासि",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Banavasi",
+      "hi": "बनवासी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. Placed at Sirsi, 23 km west of Banavasi.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। बनवासी से 23 किमी पश्चिम सिरसी पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1256047"
+    ]
+  },
+  {
+    "id": "dasapura",
+    "status": "draft",
+    "name": {
+      "en": "Daśapura",
+      "hi": "दशपुर"
+    },
+    "anchor": {
+      "lat": 24.07184,
+      "lon": 75.06986
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "दशपुर",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Mandsaur",
+      "hi": "मंदसौर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1263834"
+    ]
+  },
+  {
+    "id": "citrakuta",
+    "status": "draft",
+    "name": {
+      "en": "Citrakūṭa",
+      "hi": "चित्रकूट"
+    },
+    "anchor": {
+      "lat": 25.21473,
+      "lon": 80.91645
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "dakshina",
+    "priority": 2,
+    "verse": "चित्रकूट",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Chitrakoot",
+      "hi": "चित्रकूट"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1267629"
+    ]
+  },
+  {
+    "id": "nasikya",
+    "status": "draft",
+    "name": {
+      "en": "Nāsikya",
+      "hi": "नासिक्य"
+    },
+    "anchor": {
+      "lat": 19.99727,
+      "lon": 73.79096
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "नासिक्य",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Nashik",
+      "hi": "नाशिक"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1261731"
+    ]
+  },
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Cola",
+      "hi": "चोल"
+    },
+    "anchor": {
+      "lat": 10.8155,
+      "lon": 78.69651
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "dakshina",
+    "priority": 2,
+    "verse": "चोलाः",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Uraiyur (Tiruchirappalli)",
+      "hi": "उरैयूर (तिरुचिरापल्ली)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. Placed at Uraiyūr, the early Cola capital, now part of Tiruchirappalli.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। आरंभिक चोल राजधानी उरैयूर पर रखा गया, जो अब तिरुचिरापल्ली का भाग है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1254388"
+    ]
+  },
+  {
+    "id": "kanci",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī",
+      "hi": "काञ्ची"
+    },
+    "anchor": {
+      "lat": 12.83515,
+      "lon": 79.70006
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "काञ्ची",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Kanchipuram",
+      "hi": "कांचीपुरम"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1268159"
+    ]
+  },
+  {
+    "id": "marucipattana",
+    "status": "draft",
+    "name": {
+      "en": "Marucīpaṭṭana",
+      "hi": "मरुचीपट्टन"
+    },
+    "anchor": {
+      "lat": 10.23263,
+      "lon": 76.19513
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "category": "dakshina",
+    "priority": 2,
+    "verse": "मरुचीपट्टन",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Muziris, near Kodungallur",
+      "hi": "मुज़िरिस, कोडुंगल्लूर के पास"
+    },
+    "identified": {
+      "en": "likely, Kern, 1871",
+      "hi": "संभावित, केर्न, 1871"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. Kern takes Marucī for Muziris, the Roman-trade port.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। केर्न मरुची को रोमन व्यापार का बंदरगाह मुज़िरिस मानते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://archive.org/details/journalofroyalas5187roya",
+      "https://www.geonames.org/1266385"
+    ]
+  },
+  {
+    "id": "dandaka",
+    "status": "draft",
+    "name": {
+      "en": "Daṇḍakāvana",
+      "hi": "दण्डकावन"
+    },
+    "anchor": {
+      "lat": 19.08136,
+      "lon": 82.02131
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "category": "dakshina",
+    "priority": 2,
+    "verse": "दण्डकावन",
+    "locus": "Bṛhat-saṃhitā 14.11-16",
+    "modern": {
+      "en": "Dandakaranya (Bastar)",
+      "hi": "दंडकारण्य (बस्तर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1269578"
+    ]
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti (Āvanta)",
+      "hi": "अवन्ति (आवन्त)"
+    },
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "dakshina",
+    "priority": 1,
+    "verse": "आवन्तो",
+    "locus": "Bṛhat-saṃhitā 14.32-33",
+    "modern": {
+      "en": "Ujjain",
+      "hi": "उज्जैन"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south of Bhāratavarṣa. Named only in the kings' verse, where its king stands for the south.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के दक्षिण भाग में गिनाती है। केवल राजाओं वाले श्लोक में नाम है, जहाँ इसका राजा दक्षिण भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1253914"
+    ]
+  },
+  {
+    "id": "anarta",
+    "status": "draft",
+    "name": {
+      "en": "Ānarta",
+      "hi": "आनर्त"
+    },
+    "anchor": {
+      "lat": 23.78593,
+      "lon": 72.63893
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "nairrta",
+    "priority": 1,
+    "verse": "नारीमुखऽनर्ताः",
+    "locus": "Bṛhat-saṃhitā 14.17-19",
+    "modern": {
+      "en": "Vadnagar (Ānartapura)",
+      "hi": "वडनगर (आनर्तपुर)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-west of Bhāratavarṣa. North Gujarat, Dvārakā's country in the epic. Its king stands for the south-west.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के नैऋत्य भाग में गिनाती है। उत्तर गुजरात, महाकाव्य में द्वारका का देश। इसका राजा नैऋत्य भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1253577"
+    ]
+  },
+  {
+    "id": "surastra",
+    "status": "draft",
+    "name": {
+      "en": "Surāṣṭra",
+      "hi": "सुराष्ट्र"
+    },
+    "anchor": {
+      "lat": 22.29161,
+      "lon": 70.79322
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "nairrta",
+    "priority": 2,
+    "verse": "रैवतकसुराष्ट्र",
+    "locus": "Bṛhat-saṃhitā 14.17-19",
+    "modern": {
+      "en": "Saurashtra",
+      "hi": "सौराष्ट्र"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the south-west of Bhāratavarṣa. The peninsula, placed at Rajkot near its middle.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के नैऋत्य भाग में गिनाती है। प्रायद्वीप, उसके बीच के पास राजकोट पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1258847"
+    ]
+  },
+  {
+    "id": "aparanta",
+    "status": "draft",
+    "name": {
+      "en": "Aparāntaka",
+      "hi": "अपरान्तक"
+    },
+    "anchor": {
+      "lat": 19.45591,
+      "lon": 72.81136
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "pashcima",
+    "priority": 1,
+    "verse": "अपरान्तक",
+    "locus": "Bṛhat-saṃhitā 14.20-21",
+    "modern": {
+      "en": "Sopara, north Konkan",
+      "hi": "सोपारा, उत्तर कोंकण"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the west of Bhāratavarṣa. 'The western march', placed at Virar beside Nala Sopara.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पश्चिम भाग में गिनाती है। 'पश्चिमी सीमांत', नाला सोपारा के पास विरार पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1253133"
+    ]
+  },
+  {
+    "id": "haihaya",
+    "status": "draft",
+    "name": {
+      "en": "Haihaya",
+      "hi": "हैहय"
+    },
+    "anchor": {
+      "lat": 22.17592,
+      "lon": 75.58715
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "pashcima",
+    "priority": 2,
+    "verse": "हैहय",
+    "locus": "Bṛhat-saṃhitā 14.20-21",
+    "modern": {
+      "en": "Maheshwar (Māhiṣmatī)",
+      "hi": "महेश्वर (माहिष्मती)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the west of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के पश्चिम भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1264385"
+    ]
+  },
+  {
+    "id": "kuluta",
+    "status": "draft",
+    "name": {
+      "en": "Kulūta",
+      "hi": "कुलूत"
+    },
+    "anchor": {
+      "lat": 31.95835,
+      "lon": 77.10823
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "vayavya",
+    "priority": 1,
+    "verse": "अश्मककुलूत",
+    "locus": "Bṛhat-saṃhitā 14.22-23",
+    "modern": {
+      "en": "Kullu",
+      "hi": "कुल्लू"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north-west of Bhāratavarṣa. Listed in both the north-west and the north-east sectors.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के वायव्य भाग में गिनाती है। वायव्य और ईशान दोनों भागों में गिनाया गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1265709"
+    ]
+  },
+  {
+    "id": "trigarta",
+    "status": "draft",
+    "name": {
+      "en": "Trigarta",
+      "hi": "त्रिगर्त"
+    },
+    "anchor": {
+      "lat": 32.09135,
+      "lon": 76.26267
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "uttara",
+    "priority": 1,
+    "verse": "त्रिगर्त",
+    "locus": "Bṛhat-saṃhitā 14.24-28",
+    "modern": {
+      "en": "Kangra",
+      "hi": "कांगड़ा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के उत्तर भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1268084"
+    ]
+  },
+  {
+    "id": "yaudheya",
+    "status": "draft",
+    "name": {
+      "en": "Yaudheya",
+      "hi": "यौधेय"
+    },
+    "anchor": {
+      "lat": 28.89447,
+      "lon": 76.58917
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "uttara",
+    "priority": 2,
+    "verse": "यौधेय",
+    "locus": "Bṛhat-saṃhitā 14.24-28",
+    "modern": {
+      "en": "Rohtak",
+      "hi": "रोहतक"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north of Bhāratavarṣa. The republic known from its coins, many found at Rohtak.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के उत्तर भाग में गिनाती है। सिक्कों से ज्ञात गणराज्य; बहुत-से सिक्के रोहतक में मिले।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1258076"
+    ]
+  },
+  {
+    "id": "kasmira",
+    "status": "draft",
+    "name": {
+      "en": "Kāśmīra",
+      "hi": "काश्मीर"
+    },
+    "anchor": {
+      "lat": 34.08565,
+      "lon": 74.80555
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "aishana",
+    "priority": 1,
+    "verse": "कीरकाश्मीराः",
+    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "modern": {
+      "en": "Srinagar (Kashmir)",
+      "hi": "श्रीनगर (कश्मीर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north-east of Bhāratavarṣa. Placed north-east, which Kern calls the author's 'grave blunder'.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के ईशान भाग में गिनाती है। ईशान भाग में गिनाया गया, जिसे केर्न लेखक की 'गंभीर भूल' कहते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1255634"
+    ]
+  },
+  {
+    "id": "abhisara",
+    "status": "draft",
+    "name": {
+      "en": "Abhisāra",
+      "hi": "अभिसार"
+    },
+    "anchor": {
+      "lat": 33.77033,
+      "lon": 74.09254
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "aishana",
+    "priority": 2,
+    "verse": "अभिसारदरद",
+    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "modern": {
+      "en": "Poonch–Rajouri",
+      "hi": "पुंछ–राजौरी"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north-east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के ईशान भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1167718"
+    ]
+  },
+  {
+    "id": "darada",
+    "status": "draft",
+    "name": {
+      "en": "Darada",
+      "hi": "दरद"
+    },
+    "anchor": {
+      "lat": 35.91869,
+      "lon": 74.31245
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "aishana",
+    "priority": 2,
+    "verse": "अभिसारदरद",
+    "locus": "Bṛhat-saṃhitā 14.29-31",
+    "modern": {
+      "en": "Gilgit (Dardistan)",
+      "hi": "गिलगित (दरदिस्तान)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Bṛhat-saṃhitā 14 names it in the north-east of Bhāratavarṣa.",
+      "hi": "बृहत्संहिता 14 इसे भारतवर्ष के ईशान भाग में गिनाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/बृहत्संहिता/अध्यायः_१४?oldid=29251",
+      "https://www.geonames.org/1178338"
+    ]
+  }
+]

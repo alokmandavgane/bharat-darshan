@@ -641,6 +641,42 @@
         "en": "India-WRIS's river network, 30,546 features naming 27,584 rivers, each with its basin and sub-basin, republished as a vector tile archive and read here at zoom 10. The CC0 dedication is the india-geodata catalogue's statement for this dataset; the republishing repository carries no licence of its own and India-WRIS's own terms for its layers have not been confirmed, so this is a dated copy taken on that catalogue's word.",
         "hi": "इंडिया-डब्ल्यूआरआईएस का नदी-जाल: 30,546 खंड, 27,584 नदियों के नाम, हर एक अपने बेसिन और उप-बेसिन सहित, वेक्टर टाइल संग्रह के रूप में पुनःप्रकाशित और यहाँ ज़ूम 10 पर पढ़ा गया। सीसी0 समर्पण इस डेटासेट के लिए इंडिया-जियोडेटा संग्रह का कथन है; पुनःप्रकाशक रिपॉज़िटरी का अपना कोई लाइसेंस नहीं है और इंडिया-डब्ल्यूआरआईएस की अपनी शर्तों की पुष्टि नहीं हुई है, इसलिए यह उसी संग्रह के कथन पर ली गई तिथि-अंकित प्रति है।"
       }
+    },
+    "sa-wikisource": {
+      "title": {
+        "en": "Sanskrit Wikisource",
+        "hi": "संस्कृत विकिस्रोत"
+      },
+      "publisher": {
+        "en": "Wikimedia Foundation and contributors",
+        "hi": "विकिमीडिया फ़ाउंडेशन और योगदानकर्ता"
+      },
+      "url": "https://sa.wikisource.org/",
+      "use": "data",
+      "licence": "cc-by-sa-4.0",
+      "retrieved": "2026-08",
+      "note": {
+        "en": "The Sanskrit texts the history plates quote: the Bṛhat-saṃhitā and the Mahābhārata, each page pinned to the revision that was read. The words shown are cut from those pages verbatim, never retyped.",
+        "hi": "इतिहास के पृष्ठ जिन संस्कृत ग्रंथों को उद्धृत करते हैं: बृहत्संहिता और महाभारत, हर पृष्ठ उसी संस्करण पर स्थिर जो पढ़ा गया। दिखाए गए शब्द उन्हीं पृष्ठों से ज्यों-के-त्यों लिए गए हैं, दोबारा टाइप नहीं किए गए।"
+      }
+    },
+    "kern-brhat-samhita": {
+      "title": {
+        "en": "H. Kern, The Bṛhat-Sanhitā of Varāha-mihira (1871)",
+        "hi": "एच. केर्न, वराहमिहिर की बृहत्संहिता (1871)"
+      },
+      "publisher": {
+        "en": "Journal of the Royal Asiatic Society, new series V",
+        "hi": "जर्नल ऑफ़ द रॉयल एशियाटिक सोसाइटी, नई शृंखला V"
+      },
+      "url": "https://archive.org/details/journalofroyalas5187roya",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-08",
+      "note": {
+        "en": "Kern's English translation of chapter 14 and his notes identifying its places with sites known to Greek geographers and in his day.",
+        "hi": "अध्याय 14 का केर्न का अंग्रेज़ी अनुवाद और उनकी टिप्पणियाँ, जो इसके स्थानों को यूनानी भूगोलवेत्ताओं और उनके समय के ज्ञात स्थलों से मिलाती हैं।"
+      }
     }
   }
 }

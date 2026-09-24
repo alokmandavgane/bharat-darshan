@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-23 (forty-second round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (forty-eighth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2443,6 +2443,35 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, forty-eighth round: the first History page, Bhāratavarṣa in the old texts
+  (`/en/atlas/bharatavarsha`). The owner asked for the old names of places on the atlas,
+  as a data layer off the front page, with tours of routes (Rāma's) and chronologies (the
+  Mahābhārata's) to follow.
+  - **Three layers, no engine change**: `kurma-vibhaga` (points, 47 places of Bṛhat-saṃhitā
+    14 coloured by the nine sectors Varāhamihira puts them in), `kula-parvatas` (labels, six
+    of the seven ranges of Mahābhārata 6.9.11) and `epic-rivers` (lines, 21 rivers of MBh
+    6.9 drawn on the Rivers layer's own features under the epic name, coloured by how
+    certain the identification is). Each card gives the modern site, the verse's own word
+    in Devanagari, the locus and whose identification it is.
+  - **Where the items come from**: the Jñānakośa (`~/dev/jnanakosha`), which quotes the
+    verses verbatim from revision-pinned sa.wikisource pages. Its `gazetteer/places.json`
+    ties each place to a quoted form and, separately, to a graded identification;
+    `python3 tools/kosha_gazetteer.py export ~/dev/bharat-darshan` writes the three
+    items.json files. Edit the gazetteer there, not the items here. Registry gains
+    `sa-wikisource` (data, CC BY-SA) and `kern-brhat-samhita` (facts, public domain).
+  - **Not drawn, on purpose**: disputed identifications (Laṅkā, Gauḍaka, Śuktimat) and
+    places outside the Survey of India boundary (Takṣaśilā, Puṣkalāvatī, Gandhāra, Madra,
+    Sindhu-Sauvīra, Samataṭa, Puṇḍra, Siṃhala, Kailāsa). Gilgit (the Daradas) is drawn in
+    Ladakh, as the boundary rule requires. Amarkantak falls on the Chhattisgarh side of the
+    coarse ID raster and is claimed there, with the reason in the gazetteer.
+  - Country zoom shows the certain cities, the sector-kings' countries of 14.32-33 and at
+    least one pin per sector, so all nine colours read at once; Kashmir shows in the
+    north-east colour, which is the text's own error and the card says so.
+  - `epic-rivers` repeats the Rivers source block, so the pipeline caches a second copy of
+    the 84 MB PMTiles under `pipeline/raw/layers/epic-rivers/`. A shared cache would save it.
+  - **Next for History**: a plate with steps (PLAN.md section 5, "Stories") for Rāma's
+    route, fed by Rāmāyaṇa Kiṣkindhā 40-43 and the Ayodhyā-kāṇḍa itinerary once the kosha
+    attests them; the Mahābhārata chronology as dated steps after that.
 - 2026-09-24, forty-seventh round: lines stay on high relief. The owner found roads,
   railways and district lines vanishing in the Himalaya and breaking up over the Ghats
   once the relief was turned up.

@@ -1,0 +1,632 @@
+[
+  {
+    "id": "ganga",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgā",
+      "hi": "गङ्गा"
+    },
+    "category": "certain",
+    "rank": 1,
+    "source_names": [
+      "Ganga @ Ganga"
+    ],
+    "verse": "गङ्गां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Ganga",
+      "hi": "गंगा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Ganga.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: गंगा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "sindhu",
+    "status": "draft",
+    "name": {
+      "en": "Sindhu",
+      "hi": "सिन्धु"
+    },
+    "category": "certain",
+    "rank": 1,
+    "source_names": [
+      "Indus"
+    ],
+    "verse": "सिन्धुं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Indus",
+      "hi": "सिंधु"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Indus.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: सिंधु।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "godavari",
+    "status": "draft",
+    "name": {
+      "en": "Godāvarī",
+      "hi": "गोदावरी"
+    },
+    "category": "certain",
+    "rank": 1,
+    "source_names": [
+      "Godavari @ Godavari"
+    ],
+    "verse": "गोदावरीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Godavari",
+      "hi": "गोदावरी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Godavari.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: गोदावरी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "narmada",
+    "status": "draft",
+    "name": {
+      "en": "Narmadā",
+      "hi": "नर्मदा"
+    },
+    "category": "certain",
+    "rank": 2,
+    "source_names": [
+      "Narmada"
+    ],
+    "verse": "नर्मदां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Narmada",
+      "hi": "नर्मदा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Narmada.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: नर्मदा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "satadru",
+    "status": "draft",
+    "name": {
+      "en": "Śatadrū",
+      "hi": "शतद्रू"
+    },
+    "category": "certain",
+    "rank": 2,
+    "source_names": [
+      "Satluj"
+    ],
+    "verse": "शतद्रूं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Sutlej",
+      "hi": "सतलुज"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Sutlej.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: सतलुज।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "candrabhaga",
+    "status": "draft",
+    "name": {
+      "en": "Candrabhāgā",
+      "hi": "चन्द्रभागा"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Chenab"
+    ],
+    "verse": "चन्द्रभागां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Chenab",
+      "hi": "चिनाब"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Chenab.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: चिनाब।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "yamuna",
+    "status": "draft",
+    "name": {
+      "en": "Yamunā",
+      "hi": "यमुना"
+    },
+    "category": "certain",
+    "rank": 2,
+    "source_names": [
+      "Yamuna"
+    ],
+    "verse": "यमुनां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Yamuna",
+      "hi": "यमुना"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Yamuna.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: यमुना।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "vipasa",
+    "status": "draft",
+    "name": {
+      "en": "Vipāśā",
+      "hi": "विपाशा"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Beas"
+    ],
+    "verse": "विपाशां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Beas",
+      "hi": "ब्यास"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Beas.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: ब्यास।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "iravati",
+    "status": "draft",
+    "name": {
+      "en": "Irāvatī",
+      "hi": "इरावती"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Ravi"
+    ],
+    "verse": "इरावतीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Ravi",
+      "hi": "रावी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Ravi.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: रावी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "vitasta",
+    "status": "draft",
+    "name": {
+      "en": "Vitastā",
+      "hi": "वितस्ता"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Jhelum"
+    ],
+    "verse": "वितस्तां",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Jhelum",
+      "hi": "झेलम"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Jhelum.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: झेलम।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "krsnaveni",
+    "status": "draft",
+    "name": {
+      "en": "Kṛṣṇaveṇī",
+      "hi": "कृष्णवेणी"
+    },
+    "category": "certain",
+    "rank": 2,
+    "source_names": [
+      "Krishna @ Krishna"
+    ],
+    "verse": "कृष्णवेणीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Krishna",
+      "hi": "कृष्णा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Krishna.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: कृष्णा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "sarayu",
+    "status": "draft",
+    "name": {
+      "en": "Sarayū",
+      "hi": "सरयू"
+    },
+    "category": "likely",
+    "rank": 3,
+    "source_names": [
+      "Ghaghara @ Ganga"
+    ],
+    "verse": "सरयूं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Ghaghara",
+      "hi": "घाघरा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Ghaghara. The Sarayū is the Ghaghara's lower course at Ayodhyā.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: घाघरा। सरयू अयोध्या के पास घाघरा की निचली धारा है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "carmanvati",
+    "status": "draft",
+    "name": {
+      "en": "Carmaṇvatī",
+      "hi": "चर्मण्वती"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Chambal @ Ganga"
+    ],
+    "verse": "चर्मण्वतीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Chambal",
+      "hi": "चंबल"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Chambal.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: चंबल।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "vetravati",
+    "status": "draft",
+    "name": {
+      "en": "Vetravatī",
+      "hi": "वेत्रवती"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Betwa @ Ganga"
+    ],
+    "verse": "वेत्रवतीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Betwa",
+      "hi": "बेतवा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Betwa.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: बेतवा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "bhimarathi",
+    "status": "draft",
+    "name": {
+      "en": "Bhīmarathī",
+      "hi": "भीमरथी"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Bhima @ Krishna"
+    ],
+    "verse": "भीमरथीमपि",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Bhima",
+      "hi": "भीमा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Bhima.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: भीमा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "kaveri",
+    "status": "draft",
+    "name": {
+      "en": "Kāverī",
+      "hi": "कावेरी"
+    },
+    "category": "certain",
+    "rank": 2,
+    "source_names": [
+      "Cauvery @ Cauvery"
+    ],
+    "verse": "कावेरीं",
+    "locus": "Mahābhārata 6.9.14-20",
+    "modern": {
+      "en": "Kaveri",
+      "hi": "कावेरी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Kaveri.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: कावेरी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "sadanira",
+    "status": "draft",
+    "name": {
+      "en": "Sadānīrā",
+      "hi": "सदानीरा"
+    },
+    "category": "likely",
+    "rank": 3,
+    "source_names": [
+      "Gandak"
+    ],
+    "verse": "सदानीरामधृष्यां",
+    "locus": "Mahābhārata 6.9.21-38",
+    "modern": {
+      "en": "Gandak",
+      "hi": "गंडक"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Gandak. The Sadānīrā of Śatapatha-brāhmaṇa 1.4.1, Videha's western boundary, usually taken as the Gandak.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: गंडक। शतपथ ब्राह्मण 1.4.1 की सदानीरा, विदेह की पश्चिमी सीमा, जिसे प्रायः गंडक माना जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "tungavena",
+    "status": "draft",
+    "name": {
+      "en": "Tuṅgaveṇā",
+      "hi": "तुङ्गवेणा"
+    },
+    "category": "likely",
+    "rank": 3,
+    "source_names": [
+      "Tungabhadra"
+    ],
+    "verse": "तुङ्गवेणां",
+    "locus": "Mahābhārata 6.9.21-38",
+    "modern": {
+      "en": "Tungabhadra",
+      "hi": "तुंगभद्रा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Tungabhadra.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: तुंगभद्रा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "sona",
+    "status": "draft",
+    "name": {
+      "en": "Śoṇa",
+      "hi": "शोण"
+    },
+    "category": "certain",
+    "rank": 3,
+    "source_names": [
+      "Sone @ Ganga"
+    ],
+    "verse": "शोणा",
+    "locus": "Mahābhārata 6.9.21-38",
+    "modern": {
+      "en": "Son",
+      "hi": "सोन"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Son.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: सोन।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "brahmani",
+    "status": "draft",
+    "name": {
+      "en": "Brāhmaṇī",
+      "hi": "ब्राह्मणी"
+    },
+    "category": "likely",
+    "rank": 3,
+    "source_names": [
+      "Brahmani @ Brahmani and Baitarni"
+    ],
+    "verse": "ब्राह्मणीं",
+    "locus": "Mahābhārata 6.9.21-38",
+    "modern": {
+      "en": "Brahmani",
+      "hi": "ब्राह्मणी"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Brahmani.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: ब्राह्मणी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  },
+  {
+    "id": "lauhitya",
+    "status": "draft",
+    "name": {
+      "en": "Lauhityā",
+      "hi": "लौहित्या"
+    },
+    "category": "certain",
+    "rank": 1,
+    "source_names": [
+      "Brahmaputra"
+    ],
+    "verse": "लोहित्यां",
+    "locus": "Mahābhārata 6.9.21-38",
+    "modern": {
+      "en": "Brahmaputra",
+      "hi": "ब्रह्मपुत्र"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Named in the Mahābhārata's river catalogue (Bhīṣma 6.9); identified with the Brahmaputra.",
+      "hi": "महाभारत की नदी-सूची (भीष्मपर्व 6.9) में नाम है; पहचान: ब्रह्मपुत्र।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-06-भीष्मपर्व-009?oldid=312488"
+    ]
+  }
+]

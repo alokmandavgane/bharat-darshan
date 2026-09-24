@@ -1,0 +1,21 @@
+{
+  "id": "bharatavarsha",
+  "section": "history",
+  "order": 1,
+  "title": {
+    "en": "Bhāratavarṣa in the old texts",
+    "hi": "प्राचीन ग्रंथों में भारतवर्ष"
+  },
+  "blurb": {
+    "en": "The land as two Sanskrit texts map it. Varāhamihira's nine parts coloured by bearing from the middle country, the Mahābhārata's seven clan mountains, and its rivers under their epic names. Tap a place for the verse that names it.",
+    "hi": "दो संस्कृत ग्रंथों के मानचित्र में यह भूमि। मध्य देश से दिशा के अनुसार वराहमिहिर के नौ भाग, महाभारत के सात कुलपर्वत, और महाकाव्य के नामों से उसकी नदियाँ। किसी स्थान को छूकर वह श्लोक पढ़ें जो उसका नाम लेता है।"
+  },
+  "base": "plain",
+  "layers": [
+    "kurma-vibhaga",
+    "epic-rivers",
+    "kula-parvatas"
+  ],
+  "relief": 10,
+  "status": "draft"
+}
