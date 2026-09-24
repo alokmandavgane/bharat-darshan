@@ -992,6 +992,225 @@
    "path": "layers/districts.json"
   },
   {
+   "id": "divisions-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names of the old divisions",
+    "hi": "प्राचीन विभागों के नाम"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 59,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "madhyadesa",
+     "color": "#c8964a",
+     "title": {
+      "en": "The Middle Country (Madhyadeśa)",
+      "hi": "मध्यदेश"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "udicya",
+     "color": "#6f8fb3",
+     "title": {
+      "en": "The North (Udīcya)",
+      "hi": "उदीच्य (उत्तर)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pracya",
+     "color": "#5e9a6e",
+     "title": {
+      "en": "The East (Prācya)",
+      "hi": "प्राच्य (पूर्व)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "daksinapatha",
+     "color": "#b8654a",
+     "title": {
+      "en": "The Southern Road (Dakṣiṇāpatha)",
+      "hi": "दक्षिणापथ"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "aparanta",
+     "color": "#a98bc2",
+     "title": {
+      "en": "The Western Borders (Aparānta)",
+      "hi": "अपरान्त (पश्चिम)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "vindhyaprstha",
+     "color": "#8f9a4a",
+     "title": {
+      "en": "The Vindhya's Back (Vindhyapṛṣṭha)",
+      "hi": "विन्ध्यपृष्ठ"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "parvatasrayin",
+     "color": "#8a7f74",
+     "title": {
+      "en": "The Mountain Peoples (Parvatāśrayin)",
+      "hi": "पर्वताश्रयी"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The regions' names, laid on the map.",
+    "hi": "क्षेत्रों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/divisions-names.json"
+  },
+  {
+   "id": "divisions",
+   "type": "areas",
+   "title": {
+    "en": "The old divisions of India",
+    "hi": "भारत के प्राचीन विभाग"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 63,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "madhyadesa",
+     "color": "#c8964a",
+     "title": {
+      "en": "The Middle Country (Madhyadeśa)",
+      "hi": "मध्यदेश"
+     }
+    },
+    {
+     "id": "udicya",
+     "color": "#6f8fb3",
+     "title": {
+      "en": "The North (Udīcya)",
+      "hi": "उदीच्य (उत्तर)"
+     }
+    },
+    {
+     "id": "pracya",
+     "color": "#5e9a6e",
+     "title": {
+      "en": "The East (Prācya)",
+      "hi": "प्राच्य (पूर्व)"
+     }
+    },
+    {
+     "id": "daksinapatha",
+     "color": "#b8654a",
+     "title": {
+      "en": "The Southern Road (Dakṣiṇāpatha)",
+      "hi": "दक्षिणापथ"
+     }
+    },
+    {
+     "id": "aparanta",
+     "color": "#a98bc2",
+     "title": {
+      "en": "The Western Borders (Aparānta)",
+      "hi": "अपरान्त (पश्चिम)"
+     }
+    },
+    {
+     "id": "vindhyaprstha",
+     "color": "#8f9a4a",
+     "title": {
+      "en": "The Vindhya's Back (Vindhyapṛṣṭha)",
+      "hi": "विन्ध्यपृष्ठ"
+     }
+    },
+    {
+     "id": "parvatasrayin",
+     "color": "#8a7f74",
+     "title": {
+      "en": "The Mountain Peoples (Parvatāśrayin)",
+      "hi": "पर्वताश्रयी"
+     }
+    },
+    {
+     "id": "beyond",
+     "color": "#b9ab94",
+     "title": {
+      "en": "Not in the lists",
+      "hi": "सूचियों में नहीं"
+     }
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Today",
+      "hi": "आज"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Drawn",
+      "hi": "रेखांकन"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "The country's traditional regions, each drawn as a set of whole districts of the 2011 census and grouped by the Matsya Purāṇa's seven-fold division of the peoples of Bhāratavarṣa (114.34-55): the Middle Country, the north, the east, the Southern Road, the western borders, the Vindhya's back and the mountains. The name is the text's; the extent is the compiler's, drawn to the nearest district and graded on each card. Where the Matsya does not name a region its division is the compiler's and the card says so; Ladakh, Tulu Nadu, Kongu Nadu and the islands have no name in the lists read, and are shown as such.",
+    "hi": "देश के पारंपरिक क्षेत्र, प्रत्येक 2011 की जनगणना के पूरे ज़िलों के समूह के रूप में, मत्स्य पुराण के भारतवर्ष के जनों के सात विभागों (114.34-55) के अनुसार: मध्यदेश, उत्तर, पूर्व, दक्षिणापथ, पश्चिमी सीमा, विन्ध्यपृष्ठ और पर्वत। नाम पाठ का है; सीमा संकलक की, निकटतम ज़िले तक, हर कार्ड पर श्रेणीबद्ध। जहाँ मत्स्य किसी क्षेत्र का नाम नहीं लेता वहाँ विभाग संकलक का है और कार्ड यह बताता है; लद्दाख, तुलु नाडु, कोंगु नाडु और द्वीपों का पढ़ी गई सूचियों में कोई नाम नहीं, और वे वैसे ही दिखाए गए हैं।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/divisions.json"
+  },
+  {
    "id": "epic-rivers",
    "type": "lines",
    "title": {
@@ -1939,6 +2158,519 @@
     "wikipedia"
    ],
    "path": "layers/mahabharata-stops.json"
+  },
+  {
+   "id": "mahajanapadas-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of the sixteen great countries",
+    "hi": "महाजनपदों की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 13,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "anga",
+     "color": "#b5542f",
+     "title": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "magadha",
+     "color": "#c9892b",
+     "title": {
+      "en": "Magadha",
+      "hi": "मगध"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kasi",
+     "color": "#8f6bb3",
+     "title": {
+      "en": "Kāśi",
+      "hi": "काशि"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kosala",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Kosala",
+      "hi": "कोसल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "vajji",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "malla",
+     "color": "#6fa8d6",
+     "title": {
+      "en": "Malla",
+      "hi": "मल्ल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "cedi",
+     "color": "#a0522d",
+     "title": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "vatsa",
+     "color": "#d67aa0",
+     "title": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kuru",
+     "color": "#3d6fb0",
+     "title": {
+      "en": "Kuru",
+      "hi": "कुरु"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pancala",
+     "color": "#7d8c2e",
+     "title": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "matsya",
+     "color": "#b07a3a",
+     "title": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "surasena",
+     "color": "#c95f84",
+     "title": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "assaka",
+     "color": "#5d7fd6",
+     "title": {
+      "en": "Assaka (Aśmaka)",
+      "hi": "अश्मक"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "avanti",
+     "color": "#9e1b32",
+     "title": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Each great country's capital as Raychaudhuri (1923) gives it, placed at the modern site or town.",
+    "hi": "हर महाजनपद की राजधानी, जैसी रायचौधरी (1923) देते हैं, आधुनिक स्थल या नगर पर।"
+   },
+   "sources": [
+    "raychaudhuri-1923",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/mahajanapadas-capitals.json"
+  },
+  {
+   "id": "mahajanapadas-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names of the sixteen great countries",
+    "hi": "महाजनपदों के नाम"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 14,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "anga",
+     "color": "#b5542f",
+     "title": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "magadha",
+     "color": "#c9892b",
+     "title": {
+      "en": "Magadha",
+      "hi": "मगध"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kasi",
+     "color": "#8f6bb3",
+     "title": {
+      "en": "Kāśi",
+      "hi": "काशि"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kosala",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Kosala",
+      "hi": "कोसल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "vajji",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "malla",
+     "color": "#6fa8d6",
+     "title": {
+      "en": "Malla",
+      "hi": "मल्ल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "cedi",
+     "color": "#a0522d",
+     "title": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "vatsa",
+     "color": "#d67aa0",
+     "title": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kuru",
+     "color": "#3d6fb0",
+     "title": {
+      "en": "Kuru",
+      "hi": "कुरु"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pancala",
+     "color": "#7d8c2e",
+     "title": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "matsya",
+     "color": "#b07a3a",
+     "title": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "surasena",
+     "color": "#c95f84",
+     "title": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "assaka",
+     "color": "#5d7fd6",
+     "title": {
+      "en": "Assaka (Aśmaka)",
+      "hi": "अश्मक"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "avanti",
+     "color": "#9e1b32",
+     "title": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The great countries' names, laid on the map.",
+    "hi": "महाजनपदों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "suttacentral",
+    "raychaudhuri-1923",
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/mahajanapadas-names.json"
+  },
+  {
+   "id": "mahajanapadas",
+   "type": "areas",
+   "title": {
+    "en": "The sixteen great countries, c. 500 BCE",
+    "hi": "सोलह महाजनपद, लगभग 500 ई.पू."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 14,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "anga",
+     "color": "#b5542f",
+     "title": {
+      "en": "Aṅga",
+      "hi": "अङ्ग"
+     }
+    },
+    {
+     "id": "magadha",
+     "color": "#c9892b",
+     "title": {
+      "en": "Magadha",
+      "hi": "मगध"
+     }
+    },
+    {
+     "id": "kasi",
+     "color": "#8f6bb3",
+     "title": {
+      "en": "Kāśi",
+      "hi": "काशि"
+     }
+    },
+    {
+     "id": "kosala",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Kosala",
+      "hi": "कोसल"
+     }
+    },
+    {
+     "id": "vajji",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Vajji",
+      "hi": "वज्जि"
+     }
+    },
+    {
+     "id": "malla",
+     "color": "#6fa8d6",
+     "title": {
+      "en": "Malla",
+      "hi": "मल्ल"
+     }
+    },
+    {
+     "id": "cedi",
+     "color": "#a0522d",
+     "title": {
+      "en": "Ceti (Cedi)",
+      "hi": "चेदि"
+     }
+    },
+    {
+     "id": "vatsa",
+     "color": "#d67aa0",
+     "title": {
+      "en": "Vatsa (Vaṁsa)",
+      "hi": "वत्स"
+     }
+    },
+    {
+     "id": "kuru",
+     "color": "#3d6fb0",
+     "title": {
+      "en": "Kuru",
+      "hi": "कुरु"
+     }
+    },
+    {
+     "id": "pancala",
+     "color": "#7d8c2e",
+     "title": {
+      "en": "Pañcāla",
+      "hi": "पञ्चाल"
+     }
+    },
+    {
+     "id": "matsya",
+     "color": "#b07a3a",
+     "title": {
+      "en": "Matsya",
+      "hi": "मत्स्य"
+     }
+    },
+    {
+     "id": "surasena",
+     "color": "#c95f84",
+     "title": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+     }
+    },
+    {
+     "id": "assaka",
+     "color": "#5d7fd6",
+     "title": {
+      "en": "Assaka (Aśmaka)",
+      "hi": "अश्मक"
+     }
+    },
+    {
+     "id": "avanti",
+     "color": "#9e1b32",
+     "title": {
+      "en": "Avanti",
+      "hi": "अवन्ति"
+     }
+    }
+   ],
+   "fields": {
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "The extent, as Raychaudhuri gives it",
+      "hi": "विस्तार, रायचौधरी के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "The sixteen mahājanapadas the Aṅguttara Nikāya names (3.70), the kingdoms and clan-republics of the Gaṅgā country and beyond before Magadha absorbed its neighbours. The names are the text's. Each extent follows H. C. Raychaudhuri's Political History of Ancient India (1923), quoted on the card, and is drawn on today's districts to the nearest district: Oudh, Bundelkhand, 'the present Patna and Gaya districts'. Gandhāra and Kamboja lie beyond India's present boundary and are not drawn; Assaka's capital is not placed. The eighth name is read Vatsa, as the older editions have it; the edition quoted prints Vaṅga.",
+    "hi": "अंगुत्तर निकाय (3.70) के सोलह महाजनपद, मगध द्वारा पड़ोसियों को मिलाने से पहले गंगा देश और उसके पार के राज्य और गणराज्य। नाम पाठ के हैं। हर विस्तार हेमचंद्र रायचौधरी की पॉलिटिकल हिस्ट्री ऑफ़ एंशिएंट इंडिया (1923) के अनुसार है, जो कार्ड पर उद्धृत है, और आज के ज़िलों पर निकटतम ज़िले तक खींचा गया है। गान्धार और कम्बोज भारत की वर्तमान सीमा के पार हैं और नहीं खींचे गए; अश्मक की राजधानी नहीं रखी गई। आठवाँ नाम वत्स पढ़ा गया है, जैसा पुराने संस्करणों में है; उद्धृत संस्करण वंग छापता है।"
+   },
+   "sources": [
+    "suttacentral",
+    "raychaudhuri-1923",
+    "census-2011",
+    "datameet-maps"
+   ],
+   "path": "layers/mahajanapadas.json"
   },
   {
    "id": "minerals",
@@ -3432,12 +4164,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 29356,
-   "sha256": "b4cc0a1bfe36"
+   "size": 31036,
+   "sha256": "42daa208c0c6"
   },
   "sources.json": {
-   "size": 31205,
-   "sha256": "219f04e352be"
+   "size": 32917,
+   "sha256": "76f2aec7cbd6"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -3675,6 +4407,18 @@
    "size": 310388,
    "sha256": "8689c934a979"
   },
+  "layers/divisions-areas.bin.gz": {
+   "size": 14426,
+   "sha256": "c35a449cddcb"
+  },
+  "layers/divisions-names.json": {
+   "size": 42033,
+   "sha256": "54cc77c85016"
+  },
+  "layers/divisions.json": {
+   "size": 74892,
+   "sha256": "baaf10fd8377"
+  },
   "layers/epic-rivers.json": {
    "size": 81983,
    "sha256": "7906e1556bdb"
@@ -3710,6 +4454,22 @@
   "layers/mahabharata-stops.json": {
    "size": 135727,
    "sha256": "8ec99bd1e531"
+  },
+  "layers/mahajanapadas-areas.bin.gz": {
+   "size": 4333,
+   "sha256": "2bce3fe8f4e4"
+  },
+  "layers/mahajanapadas-capitals.json": {
+   "size": 9351,
+   "sha256": "198d115e2fe5"
+  },
+  "layers/mahajanapadas-names.json": {
+   "size": 11295,
+   "sha256": "a5db2a161d25"
+  },
+  "layers/mahajanapadas.json": {
+   "size": 21699,
+   "sha256": "3720fc483356"
   },
   "layers/minerals.json": {
    "size": 38276,
