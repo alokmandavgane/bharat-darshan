@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 110,
+   "count": 116,
    "reviewed": 0,
    "categories": [
     {
@@ -1586,6 +1586,14 @@
       "hi": "सहदेव की दक्षिण-विजय"
      },
      "color": "#e06c9f"
+    },
+    {
+     "id": "west",
+     "title": {
+      "en": "Nakula's conquest of the west",
+      "hi": "नकुल की पश्चिम-विजय"
+     },
+     "color": "#9b7d3a"
     },
     {
      "id": "arjuna",
@@ -1685,8 +1693,8 @@
     }
    },
    "note": {
-    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Arjuna's conquest of the north, Bhīma's of the east, Sahadeva's of the south, Balarāma's up the Sarasvatī from its mouth to its source, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
-    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, अर्जुन की उत्तर-विजय, भीम की पूर्व-विजय, सहदेव की दक्षिण-विजय, बलराम की — सरस्वती के मुहाने से उद्गम तक — दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
+    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Arjuna's conquest of the north, Bhīma's of the east, Sahadeva's of the south, Nakula's of the west, Balarāma's up the Sarasvatī from its mouth to its source, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
+    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, अर्जुन की उत्तर-विजय, भीम की पूर्व-विजय, सहदेव की दक्षिण-विजय, नकुल की पश्चिम-विजय, बलराम की — सरस्वती के मुहाने से उद्गम तक — दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource"
@@ -1703,7 +1711,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 78,
+   "count": 81,
    "reviewed": 0,
    "categories": [
     {
@@ -1758,6 +1766,15 @@
       "hi": "सहदेव की दक्षिण-विजय"
      },
      "color": "#e06c9f",
+     "icon": "pin"
+    },
+    {
+     "id": "west",
+     "title": {
+      "en": "Nakula's conquest of the west",
+      "hi": "नकुल की पश्चिम-विजय"
+     },
+     "color": "#9b7d3a",
      "icon": "pin"
     },
     {
@@ -3398,8 +3415,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 29131,
-   "sha256": "fb23f7e9eb6f"
+   "size": 29177,
+   "sha256": "08cb65a172fb"
   },
   "sources.json": {
    "size": 31205,
@@ -3670,12 +3687,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 107407,
-   "sha256": "0ad96a0bd908"
+   "size": 113044,
+   "sha256": "8217d6696c85"
   },
   "layers/mahabharata-stops.json": {
-   "size": 116364,
-   "sha256": "72524bdfc1ca"
+   "size": 120449,
+   "sha256": "af0096cf0f94"
   },
   "layers/minerals.json": {
    "size": 38276,
