@@ -1,0 +1,738 @@
+[
+  {
+    "id": "hastinapura",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "youth",
+    "priority": 1,
+    "event": {
+      "en": "The boys arrive from the mountains",
+      "hi": "पर्वतों से बालकों का आगमन"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 16; thirteen years here",
+      "hi": "युधिष्ठिर 16 वर्ष; यहाँ तेरह वर्ष"
+    },
+    "verse": "जगाम हास्तिनपुरं षोडशाब्दो युधिष्ठिरः",
+    "locus": {
+      "en": "Mahābhārata 1.134.1-9",
+      "hi": "महाभारत 1.134.1-9"
+    },
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.134.1-9. Born on Śataśṛṅga beyond the Himavat, the five are brought here: Yudhiṣṭhira 16, Bhīma 15, Arjuna 14, the twins 13.",
+      "hi": "आदिपर्व 1.134.1-9। हिमवान् के पार शतशृंग पर जन्मे पाँचों यहाँ लाए गए: युधिष्ठिर 16, भीम 15, अर्जुन 14, जुड़वाँ 13।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-134?oldid=54378",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "varanavata",
+    "status": "draft",
+    "name": {
+      "en": "Vāraṇāvata",
+      "hi": "वारणावत"
+    },
+    "anchor": {
+      "lat": 29.1,
+      "lon": 77.42
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "hiding",
+    "priority": 1,
+    "event": {
+      "en": "The lac house",
+      "hi": "लाक्षागृह"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 29",
+      "hi": "युधिष्ठिर 29"
+    },
+    "verse": "नगरं वारणावतम्",
+    "locus": {
+      "en": "Mahābhārata 1.155.2-5",
+      "hi": "महाभारत 1.155.2-5"
+    },
+    "modern": {
+      "en": "Barnawa, Baghpat district",
+      "hi": "बरनावा, बागपत जिला"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.155.2-5. Sent to Paśupati's festival; the house of lac is burned and they escape by a tunnel and a boat.",
+      "hi": "आदिपर्व 1.155.2-5। पशुपति के उत्सव में भेजे गए; लाख का घर जलाया गया और वे सुरंग और नाव से बच निकले।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-155?oldid=54421",
+      "https://en.wikipedia.org/wiki/Barnawa"
+    ]
+  },
+  {
+    "id": "kampilya",
+    "status": "draft",
+    "name": {
+      "en": "Kāmpilya",
+      "hi": "काम्पिल्य"
+    },
+    "anchor": {
+      "lat": 27.61268,
+      "lon": 79.27687
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "hiding",
+    "priority": 1,
+    "event": {
+      "en": "Draupadī's svayaṃvara",
+      "hi": "द्रौपदी का स्वयंवर"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 30; a year here, then five at Hastināpura",
+      "hi": "युधिष्ठिर 30; यहाँ एक वर्ष, फिर पाँच हस्तिनापुर में"
+    },
+    "verse": "काम्पिल्यं च पुरोत्तमम्",
+    "locus": {
+      "en": "Mahābhārata 1.148.75-79",
+      "hi": "महाभारत 1.148.75-79"
+    },
+    "modern": {
+      "en": "Kampil, Farrukhabad district",
+      "hi": "कम्पिल, फ़र्रुख़ाबाद जिला"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.148.75-79. Arjuna wins Draupadī at Drupada's city after half a year in the forest and half at Ekacakrā.",
+      "hi": "आदिपर्व 1.148.75-79। वन में आधा वर्ष और एकचक्रा में आधा वर्ष बिताकर, द्रुपद के नगर में अर्जुन द्रौपदी को जीतते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-148?oldid=54407",
+      "https://www.geonames.org/1268215"
+    ]
+  },
+  {
+    "id": "indraprastha",
+    "status": "draft",
+    "name": {
+      "en": "Indraprastha",
+      "hi": "इन्द्रप्रस्थ"
+    },
+    "anchor": {
+      "lat": 28.6096,
+      "lon": 77.2437
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "category": "indraprastha",
+    "priority": 1,
+    "event": {
+      "en": "The capital of the half-kingdom",
+      "hi": "आधे राज्य की राजधानी"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 36 to 59",
+      "hi": "युधिष्ठिर 36 से 59"
+    },
+    "verse": "यथान्यायमिन्द्रप्रस्थं भवत्विति",
+    "locus": {
+      "en": "Mahābhārata 1.227.58-60",
+      "hi": "महाभारत 1.227.58-60"
+    },
+    "modern": {
+      "en": "Purana Qila, Delhi",
+      "hi": "पुराना क़िला, दिल्ली"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.227.58-60. Twenty-three years here: the Khāṇḍava fire, the hall of Maya and the rājasūya.",
+      "hi": "आदिपर्व 1.227.58-60। यहाँ तेईस वर्ष: खाण्डव-दाह, मय की सभा और राजसूय।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-227?oldid=54566",
+      "https://en.wikipedia.org/wiki/Purana_Qila"
+    ]
+  },
+  {
+    "id": "gangadvara",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgādvāra",
+      "hi": "गङ्गाद्वार"
+    },
+    "anchor": {
+      "lat": 29.94791,
+      "lon": 78.16025
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "arjuna",
+    "priority": 1,
+    "event": {
+      "en": "Arjuna's twelve years away begin",
+      "hi": "अर्जुन के बारह वर्ष के प्रवास का आरंभ"
+    },
+    "when": {
+      "en": "The Indraprastha years",
+      "hi": "इन्द्रप्रस्थ के वर्ष"
+    },
+    "verse": "स गङ्गाद्वारमाश्रित्य निवेशमकरोत्प्रभुः",
+    "locus": {
+      "en": "Mahābhārata 1.234.5-6",
+      "hi": "महाभारत 1.234.5-6"
+    },
+    "modern": {
+      "en": "Haridwar",
+      "hi": "हरिद्वार"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.234.5-6. For breaking the brothers' pact over Draupadī; here Ulūpī takes him. He goes on east and down the coast.",
+      "hi": "आदिपर्व 1.234.5-6। द्रौपदी संबंधी भाइयों का नियम तोड़ने पर; यहाँ उलूपी उन्हें ले जाती है। फिर वे पूर्व और तट के साथ दक्षिण जाते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-234?oldid=54580",
+      "https://www.geonames.org/1270351"
+    ]
+  },
+  {
+    "id": "girivraja",
+    "status": "draft",
+    "name": {
+      "en": "Girivraja",
+      "hi": "गिरिव्रज"
+    },
+    "anchor": {
+      "lat": 25.02828,
+      "lon": 85.42079
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "indraprastha",
+    "priority": 2,
+    "event": {
+      "en": "Jarāsandha killed",
+      "hi": "जरासंध वध"
+    },
+    "when": {
+      "en": "Before the rājasūya",
+      "hi": "राजसूय से पहले"
+    },
+    "verse": "गोरथं गिरिमासाद्य ददृशुर्मागधं पुरम्",
+    "locus": {
+      "en": "Mahābhārata 2.20.26-30",
+      "hi": "महाभारत 2.20.26-30"
+    },
+    "modern": {
+      "en": "Rajgir",
+      "hi": "राजगीर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.20.26-30. Kṛṣṇa, Bhīma and Arjuna walk east from Kurujāṅgala; Bhīma kills Jarāsandha in a wrestling match.",
+      "hi": "सभापर्व 2.20.26-30। कृष्ण, भीम और अर्जुन कुरुजांगल से पूर्व की ओर चलते हैं; भीम मल्लयुद्ध में जरासंध को मारते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-020?oldid=50327",
+      "https://www.geonames.org/1258864"
+    ]
+  },
+  {
+    "id": "hastinapura-dice",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "event": {
+      "en": "The game of dice",
+      "hi": "द्यूत"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 59: twelve years and a thirteenth lost",
+      "hi": "युधिष्ठिर 59: बारह वर्ष और तेरहवाँ हारे"
+    },
+    "verse": "स हास्तिनपुरं गत्वा",
+    "locus": {
+      "en": "Mahābhārata 2.83.46-47",
+      "hi": "महाभारत 2.83.46-47"
+    },
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.83.46-47. The stake of the second game: twelve years in the forest and a thirteenth unknown (2.98.12-14).",
+      "hi": "सभापर्व 2.83.46-47। दूसरे दाँव की शर्त: बारह वर्ष वन में और तेरहवाँ अज्ञात (2.98.12-14)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-083?oldid=50540",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "kamyaka",
+    "status": "draft",
+    "name": {
+      "en": "Kāmyaka",
+      "hi": "काम्यक"
+    },
+    "anchor": {
+      "lat": 29.97897,
+      "lon": 76.58249
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "event": {
+      "en": "The first forest",
+      "hi": "पहला वन"
+    },
+    "when": {
+      "en": "Exile, year 1",
+      "hi": "वनवास, पहला वर्ष"
+    },
+    "verse": "काम्यकं नाम ददृशुर्वनं मुनिजनप्रियम्",
+    "locus": {
+      "en": "Mahābhārata 3.5.1-3",
+      "hi": "महाभारत 3.5.1-3"
+    },
+    "modern": {
+      "en": "on the Sarasvatī west of Kurukṣetra",
+      "hi": "कुरुक्षेत्र के पश्चिम में सरस्वती पर"
+    },
+    "identified": {
+      "en": "likely, placed by the compiler from the text's directions",
+      "hi": "संभावित, पाठ के संकेतों से संकलक द्वारा रखा गया"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.5.1-3. West by Kurukṣetra and the Sarasvatī 'into the level desert'; later Dvaitavana lake, not placed.",
+      "hi": "आरण्यकपर्व 3.5.1-3। कुरुक्षेत्र और सरस्वती होकर पश्चिम 'समतल मरु में'; फिर द्वैतवन सरोवर, जिसका स्थान तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-005?oldid=206288",
+      "https://www.geonames.org/1259939"
+    ]
+  },
+  {
+    "id": "prabhasa",
+    "status": "draft",
+    "name": {
+      "en": "Prabhāsa",
+      "hi": "प्रभास"
+    },
+    "anchor": {
+      "lat": 20.888,
+      "lon": 70.401
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "event": {
+      "en": "The pilgrimage reaches the western sea",
+      "hi": "तीर्थयात्रा पश्चिमी समुद्र तक"
+    },
+    "when": {
+      "en": "The forest years",
+      "hi": "वनवास के वर्ष"
+    },
+    "verse": "तीर्थं प्रभासं",
+    "locus": {
+      "en": "Mahābhārata 3.119.14-15",
+      "hi": "महाभारत 3.119.14-15"
+    },
+    "modern": {
+      "en": "Prabhas Patan (Somnath)",
+      "hi": "प्रभास पाटन (सोमनाथ)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.119.14-15. With the seer Lomaśa, east, south and west; the Vṛṣṇis meet them here.",
+      "hi": "आरण्यकपर्व 3.119.14-15। ऋषि लोमश के साथ पूर्व, दक्षिण और पश्चिम; यहाँ वृष्णि उनसे मिलते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351",
+      "https://en.wikipedia.org/wiki/Prabhas_Patan"
+    ]
+  },
+  {
+    "id": "badari",
+    "status": "draft",
+    "name": {
+      "en": "Viśālā Badarī",
+      "hi": "विशाला बदरी"
+    },
+    "anchor": {
+      "lat": 30.7433,
+      "lon": 79.4938
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "exile",
+    "priority": 1,
+    "event": {
+      "en": "Badarī and the northern mountains",
+      "hi": "बदरी और उत्तरी पर्वत"
+    },
+    "when": {
+      "en": "The forest years",
+      "hi": "वनवास के वर्ष"
+    },
+    "verse": "विशाला बदरी दृष्टा नरनारायणाश्रमः",
+    "locus": {
+      "en": "Mahābhārata 3.157.9-11",
+      "hi": "महाभारत 3.157.9-11"
+    },
+    "modern": {
+      "en": "Badrinath",
+      "hi": "बद्रीनाथ"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.157.9-11. Past Gaṅgādvāra into the Himavat, on to Gandhamādana and Kubera's lake.",
+      "hi": "आरण्यकपर्व 3.157.9-11। गंगाद्वार होकर हिमवान् में, आगे गन्धमादन और कुबेर के सरोवर तक।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-157?oldid=51539",
+      "https://en.wikipedia.org/wiki/Badrinath"
+    ]
+  },
+  {
+    "id": "viratanagara",
+    "status": "draft",
+    "name": {
+      "en": "Virāṭanagara",
+      "hi": "विराटनगर"
+    },
+    "anchor": {
+      "lat": 27.43538,
+      "lon": 76.18297
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "virata",
+    "priority": 1,
+    "event": {
+      "en": "The year in disguise",
+      "hi": "अज्ञातवास"
+    },
+    "when": {
+      "en": "Exile, year 13; Yudhiṣṭhira 71",
+      "hi": "वनवास, तेरहवाँ वर्ष; युधिष्ठिर 71"
+    },
+    "verse": "मत्स्यराज्ञो विराटस्य",
+    "locus": {
+      "en": "Mahābhārata 4.7.63-65",
+      "hi": "महाभारत 4.7.63-65"
+    },
+    "modern": {
+      "en": "Viratnagar (Bairat), Jaipur district",
+      "hi": "विराटनगर (बैराठ), जयपुर जिला"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Virāṭaparvan 4.7.63-65. Weapons in a śamī tree; Bhīṣma rules the term complete, by five intercalary months and twelve nights (4.52.3-4).",
+      "hi": "विराटपर्व 4.7.63-65। अस्त्र शमी वृक्ष में; भीष्म पाँच अधिमास और बारह रातें गिनकर अवधि पूरी बताते हैं (4.52.3-4)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-04-विराटपर्व-007?oldid=20705",
+      "https://www.geonames.org/1277745"
+    ]
+  },
+  {
+    "id": "kurukshetra",
+    "status": "draft",
+    "name": {
+      "en": "Kurukṣetra",
+      "hi": "कुरुक्षेत्र"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "war",
+    "priority": 1,
+    "event": {
+      "en": "The war",
+      "hi": "युद्ध"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 72; eighteen days",
+      "hi": "युधिष्ठिर 72; अठारह दिन"
+    },
+    "verse": "कुरुक्षेत्रे हिरण्वतीम्",
+    "locus": {
+      "en": "Mahābhārata 5.152.6-8",
+      "hi": "महाभारत 5.152.6-8"
+    },
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Udyogaparvan 5.152.6-8. Camp on the Hiraṇvatī; battle from the new moon of Śakra's nakṣatra (5.142.18) for eighteen days (1.2.382).",
+      "hi": "उद्योगपर्व 5.152.6-8। हिरण्वती पर शिविर; शक्र के नक्षत्र की अमावस्या से (5.142.18) अठारह दिन युद्ध (1.2.382)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-05-उद्योगपर्व-152?oldid=20099",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "hastinapura-king",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "after",
+    "priority": 1,
+    "event": {
+      "en": "Yudhiṣṭhira crowned",
+      "hi": "युधिष्ठिर का राज्याभिषेक"
+    },
+    "when": {
+      "en": "Yudhiṣṭhira 72; rules thirty-six years",
+      "hi": "युधिष्ठिर 72; छत्तीस वर्ष राज्य"
+    },
+    "verse": "नगरं नागसाह्वयम्",
+    "locus": {
+      "en": "Mahābhārata 12.36.43",
+      "hi": "महाभारत 12.36.43"
+    },
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Śāntiparvan 12.36.43. Anointed from Kṛṣṇa's conch (12.39.16). At the solstice he goes out to Bhīṣma, who dies in Māgha.",
+      "hi": "शान्तिपर्व 12.36.43। कृष्ण के शंख से अभिषेक (12.39.16)। अयन पर वे भीष्म के पास जाते हैं, जिनका माघ में देहांत होता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-12-शांतिपर्व-036?oldid=55108",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "prabhasa-mausala",
+    "status": "draft",
+    "name": {
+      "en": "Prabhāsa",
+      "hi": "प्रभास"
+    },
+    "anchor": {
+      "lat": 20.888,
+      "lon": 70.401
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "after",
+    "priority": 2,
+    "event": {
+      "en": "The Yādavas destroy one another",
+      "hi": "यादवों का परस्पर संहार"
+    },
+    "when": {
+      "en": "The thirty-sixth year; Yudhiṣṭhira 108",
+      "hi": "छत्तीसवाँ वर्ष; युधिष्ठिर 108"
+    },
+    "verse": "ततः प्रभासे न्यवसन्",
+    "locus": {
+      "en": "Mahābhārata 16.4.10-11",
+      "hi": "महाभारत 16.4.10-11"
+    },
+    "modern": {
+      "en": "Prabhas Patan (Somnath)",
+      "hi": "प्रभास पाटन (सोमनाथ)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Mausalaparvan 16.4.10-11. Out from Dvārakā to the sea, the Vṛṣṇis kill one another with reeds turned to maces; Kṛṣṇa and Balarāma die.",
+      "hi": "मौसलपर्व 16.4.10-11। द्वारका से समुद्र-तट पर आकर वृष्णि मूसल बने सरकंडों से एक-दूसरे को मारते हैं; कृष्ण और बलराम का देहांत।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-16-मौसलपर्व-004?oldid=55465",
+      "https://en.wikipedia.org/wiki/Prabhas_Patan"
+    ]
+  },
+  {
+    "id": "dvaraka",
+    "status": "draft",
+    "name": {
+      "en": "Dvārakā",
+      "hi": "द्वारका"
+    },
+    "anchor": {
+      "lat": 22.23944,
+      "lon": 68.96778
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "after",
+    "priority": 1,
+    "event": {
+      "en": "Dvārakā taken by the sea",
+      "hi": "द्वारका समुद्र में डूबी"
+    },
+    "when": {
+      "en": "The thirty-sixth year",
+      "hi": "छत्तीसवाँ वर्ष"
+    },
+    "verse": "द्वारकां रत्नसंपूर्णां जलेनाप्लावयत्तदा",
+    "locus": {
+      "en": "Mahābhārata 16.8.42-46",
+      "hi": "महाभारत 16.8.42-46"
+    },
+    "modern": {
+      "en": "Dwarka",
+      "hi": "द्वारका"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Mausalaparvan 16.8.42-46. The sea follows Arjuna's column out and covers the city behind it.",
+      "hi": "मौसलपर्व 16.8.42-46। अर्जुन के साथ निकलते लोगों के पीछे-पीछे समुद्र नगर को ढँक लेता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-16-मौसलपर्व-008?oldid=55469",
+      "https://www.geonames.org/1272140"
+    ]
+  },
+  {
+    "id": "himavat",
+    "status": "draft",
+    "name": {
+      "en": "Himavat",
+      "hi": "हिमवत्"
+    },
+    "anchor": {
+      "lat": 30.35,
+      "lon": 79.55
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "final",
+    "priority": 1,
+    "event": {
+      "en": "The last journey",
+      "hi": "महाप्रस्थान"
+    },
+    "when": {
+      "en": "The end of a life of 108 years",
+      "hi": "108 वर्ष के जीवन का अंत"
+    },
+    "verse": "हिमवन्तं महागिरिम्",
+    "locus": {
+      "en": "Mahābhārata 17.2.1-2",
+      "hi": "महाभारत 17.2.1-2"
+    },
+    "modern": {
+      "en": "the Himalaya",
+      "hi": "हिमालय"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Mahāprasthānikaparvan 17.2.1-2. After a circuit of the coast, north over the Himavat to the sand-sea and Meru, not placed.",
+      "hi": "महाप्रस्थानिकपर्व 17.2.1-2। तट की परिक्रमा के बाद उत्तर में हिमवान् पार बालू के समुद्र और मेरु तक, जिनका स्थान तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-17-महाप्रस्थानिकपर्व-002?oldid=55369",
+      "https://en.wikipedia.org/wiki/Himalayas"
+    ]
+  }
+]

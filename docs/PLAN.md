@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-fourth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-fifth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,22 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-fifth round: the Mahābhārata chronology, a third History tour.
+  New page `/en/atlas/mahabharata`, "The Pāṇḍavas' road: a Mahābhārata chronology". 16 stops and 27
+  arrows in nine colours, from the boys' arrival at Hastināpura to the last journey over the Himavat.
+  - Each stop card has two new fields, "What happens" and "When". The dates are the southern text's own
+    count of Yudhiṣṭhira's years (Ādiparvan 1.134): 16 at Hastināpura, 29 at the lac house, 30 at the
+    svayaṃvara, 36 to 59 at Indraprastha, 59 at the dice, 71 at Virāṭa, 72 at Kurukṣetra, 108 at the end.
+  - Revisits: Hastināpura (arrival, dice, coronation) and Prabhāsa (pilgrimage, Mausala) have one item
+    per visit, each with its own id, so the tour shows a different card each time. No engine change was
+    needed; the gazetteer writes the ids.
+  - Side journeys (Arjuna's pilgrimage, Girivraja, the embassy, Balarāma up the Sarasvatī, out to
+    Bhīṣma) are rank 2. Points the text does not give (the Gaṅgā crossing, the Panjab camp, the two sea
+    ends of the last journey) are placed by the compiler and say so on their cards.
+  - Not placed: Śataśṛṅga, Ekacakrā, Dvaitavana, Upaplavya, Maṇalūra. Kāmyaka is pinned on the
+    Sarasvatī at Pehowa from the text's directions; Dvārakā at Dwarka by tradition.
+  - Checked in the browser (16 stops in order in en and hi, revisit cards distinct, no console errors);
+    tests and build pass.
 - 2026-09-24, fifty-fourth round: Rāma's road completed with the Yuddhakāṇḍa, Ayodhyā to Laṅkā and home.
   Same page (`/en/atlas/rama-exile`), now "Rāma's road: Ayodhyā to Laṅkā and home". 12 stops and 22
   arrows in ten colours.
