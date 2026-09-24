@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 72,
+   "count": 76,
    "reviewed": 0,
    "categories": [
     {
@@ -1612,6 +1612,14 @@
      "color": "#b5432f"
     },
     {
+     "id": "balarama",
+     "title": {
+      "en": "Balarāma up the Sarasvatī",
+      "hi": "बलराम सरस्वती के साथ ऊपर"
+     },
+     "color": "#5d7fd6"
+    },
+    {
      "id": "after",
      "title": {
       "en": "The kingdom and the end of the Yādavas",
@@ -1653,8 +1661,8 @@
     }
    },
    "note": {
-    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
-    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की, दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
+    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's up the Sarasvatī from its mouth to its source, the embassy, Girivraja) and Pulastya's recited circuit are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
+    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की — सरस्वती के मुहाने से उद्गम तक — दूत-कर्म, गिरिव्रज) और पुलस्त्य की सुनाई गई परिक्रमा पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource"
@@ -1671,7 +1679,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 48,
+   "count": 52,
    "reviewed": 0,
    "categories": [
     {
@@ -1753,6 +1761,15 @@
       "hi": "दूत-कर्म और युद्ध"
      },
      "color": "#b5432f",
+     "icon": "pin"
+    },
+    {
+     "id": "balarama",
+     "title": {
+      "en": "Balarāma up the Sarasvatī",
+      "hi": "बलराम सरस्वती के साथ ऊपर"
+     },
+     "color": "#5d7fd6",
      "icon": "pin"
     },
     {
@@ -3330,8 +3347,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 28667,
-   "sha256": "2e85916e9291"
+   "size": 28741,
+   "sha256": "4c1c6bbc920d"
   },
   "sources.json": {
    "size": 31205,
@@ -3602,12 +3619,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 72400,
-   "sha256": "0afa79f2abcd"
+   "size": 76546,
+   "sha256": "4aa7b02515f8"
   },
   "layers/mahabharata-stops.json": {
-   "size": 72852,
-   "sha256": "6304ced46a80"
+   "size": 78959,
+   "sha256": "8b2736ef67a1"
   },
   "layers/minerals.json": {
    "size": 38276,
