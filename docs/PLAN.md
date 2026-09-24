@@ -2455,9 +2455,20 @@ docs/DEPLOY.md).
     - the store compares arrays by their elements, and the shell queues its renders
       and runs each once per task (opening a page: 29 sheet mutations -> 16);
     - one `Intl.NumberFormat` per language instead of one per call.
-  - Next from the audit: the per-frame `project()` allocations, one pick per pointer
-    move, the half-float conversion off the main thread, a cache for state packages,
-    and in the pipeline the ~190 s `bounded_distance` in step 6.
+  - Then five more:
+    - a frame projects its markers through one reused projector (no per-marker arrays);
+    - a pointer move marches the terrain once, lazily, not three times;
+    - heights go to half floats through a 64 K lookup table (half the time, same bits);
+    - the last state package is kept after leaving it (not on the low tier);
+    - `raster.bounded_distance` is separable: same bytes, `npm run data` ~4.5 -> 2.4 min.
+  - Found on the way: the committed `regions/states.json` and `terrain/shade-*.bin.gz`
+    are not what the pipeline makes today (a few state anchors move ~2 km). The old and
+    the new `bounded_distance` both give the new bytes, so this predates today; a data
+    rebuild commit is due. And `npm run data` calls the system `python3`, which has no
+    numpy on the owner's Mac; `.venv/bin/python pipeline/build.py` works.
+  - Next from the audit: the idle-sway tier question (medium sways), the uncapped
+    marker/label collision loops, per-frame `lines.setView`, and in the pipeline
+    `corridor` (24 s) and step caching in `build.py`.
 - 2026-09-23, forty-fifth round: the language switch left the map. The owner found it too
   big beside the wordmark; it is now the first row at the foot of the contents, named in
   the other language with a globe, above the tour and the about fold.
