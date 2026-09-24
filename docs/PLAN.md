@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixty-fifth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixty-sixth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,12 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixty-sixth round: Nakula's conquest of the west; the four quarters complete.
+  81 stops and 116 arrows in seventeen colours. A khaki group after Sahadeva's: Rohītaka (Rohtak), the
+  Trigartas, the Puṣkara forest, then arrows out to the Sindhu's bank and Śākala (both beyond the
+  boundary) and home with ten thousand camels. All four Sabhā digvijayas are now on the tour, in the
+  text's order: Arjuna north, Bhīma east, Sahadeva south, Nakula west. Checked in the browser; tests and
+  build pass.
 - 2026-09-24, sixty-fifth round: Arjuna's conquest of the north added to the Mahābhārata tour.
   78 stops and 110 arrows in sixteen colours. A light-blue group before Bhīma's (the text tells
   Arjuna's first): Prāgjyotiṣa, Kashmir, Abhisārī and the Daradas (Gilgit). Seven thin arrows run from

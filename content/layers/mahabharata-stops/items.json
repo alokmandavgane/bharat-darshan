@@ -1472,6 +1472,144 @@
     ]
   },
   {
+    "id": "rohitaka",
+    "status": "draft",
+    "name": {
+      "en": "Rohītaka",
+      "hi": "रोहीतक"
+    },
+    "anchor": {
+      "lat": 28.89447,
+      "lon": 76.58917
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "west",
+    "priority": 1,
+    "event": {
+      "en": "Nakula sets out west",
+      "hi": "नकुल पश्चिम की ओर"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "कार्तिकेयस्य दयितं रोहीतकुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.35.1-4",
+      "hi": "महाभारत 2.35.1-4"
+    },
+    "modern": {
+      "en": "Rohtak",
+      "hi": "रोहतक"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.1-4. 'The quarter Vāsudeva had conquered' begins next door, at rich Rohītaka.",
+      "hi": "सभापर्व 2.35.1-4। 'वासुदेव द्वारा जीती दिशा' पास ही, समृद्ध रोहीतक से आरंभ होती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717",
+      "https://www.geonames.org/1258076"
+    ]
+  },
+  {
+    "id": "trigarta-nakula",
+    "status": "draft",
+    "name": {
+      "en": "Trigarta",
+      "hi": "त्रिगर्त"
+    },
+    "anchor": {
+      "lat": 32.09135,
+      "lon": 76.26267
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "west",
+    "priority": 2,
+    "event": {
+      "en": "The Śibis, Trigartas, Ambaṣṭhas and Mālavas",
+      "hi": "शिबि, त्रिगर्त, अम्बष्ठ और मालव"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "शिबींस्त्रिगर्तानम्बष्ठान्मालवान्पञ्च कर्पटान्",
+    "locus": {
+      "en": "Mahābhārata 2.35.5-17",
+      "hi": "महाभारत 2.35.5-17"
+    },
+    "modern": {
+      "en": "Kangra",
+      "hi": "कांगड़ा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.5-17. After the desert, Śairīṣaka and Mahettha.",
+      "hi": "सभापर्व 2.35.5-17। मरुभूमि, शैरीषक और महेत्थ के बाद।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717",
+      "https://www.geonames.org/1268084"
+    ]
+  },
+  {
+    "id": "puskara-nakula",
+    "status": "draft",
+    "name": {
+      "en": "Puṣkara",
+      "hi": "पुष्कर"
+    },
+    "anchor": {
+      "lat": 26.49022,
+      "lon": 74.55211
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "west",
+    "priority": 2,
+    "event": {
+      "en": "Back to the Puṣkara forest, and out to the Sindhu",
+      "hi": "पुष्कर वन वापस, और सिंधु तक"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "पुनश्च परिवृत्याथ पुष्करारण्यवासिनः",
+    "locus": {
+      "en": "Mahābhārata 2.35.8-11",
+      "hi": "महाभारत 2.35.8-11"
+    },
+    "modern": {
+      "en": "Pushkar, Ajmer district",
+      "hi": "पुष्कर, अजमेर जिला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.8-11. Then the Sindhu's bank, the Ābhīras by the Sarasvatī, Pañcanada, Śākala and his uncle Śalya.",
+      "hi": "सभापर्व 2.35.8-11। फिर सिंधु तट, सरस्वती के आभीर, पंचनद, शाकल और उनके मामा शल्य।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717",
+      "https://www.geonames.org/1259148"
+    ]
+  },
+  {
     "id": "hastinapura-dice",
     "status": "draft",
     "name": {

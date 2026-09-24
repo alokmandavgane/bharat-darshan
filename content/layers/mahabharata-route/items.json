@@ -3628,5 +3628,203 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-029?oldid=50381"
     ]
+  },
+  {
+    "id": "w-rohitaka",
+    "status": "draft",
+    "name": {
+      "en": "To Rohītaka",
+      "hi": "रोहीतक की ओर"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "to": {
+        "lat": 28.89447,
+        "lon": 76.58917
+      },
+      "bow": 0.12
+    },
+    "verse": "कार्तिकेयस्य दयितं रोहीतकुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.35.1-4",
+      "hi": "महाभारत 2.35.1-4"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.1-4.",
+      "hi": "सभापर्व 2.35.1-4।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "w-trigarta",
+    "status": "draft",
+    "name": {
+      "en": "By the desert to the Trigartas",
+      "hi": "मरु होकर त्रिगर्तों तक"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 28.89447,
+        "lon": 76.58917
+      },
+      "to": {
+        "lat": 32.09135,
+        "lon": 76.26267
+      },
+      "bow": 0.12
+    },
+    "verse": "शिबींस्त्रिगर्तानम्बष्ठान्मालवान्पञ्च कर्पटान्",
+    "locus": {
+      "en": "Mahābhārata 2.35.5-17",
+      "hi": "महाभारत 2.35.5-17"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.5-17.",
+      "hi": "सभापर्व 2.35.5-17।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "w-puskara",
+    "status": "draft",
+    "name": {
+      "en": "Turning back to the Puṣkara forest",
+      "hi": "लौटकर पुष्कर वन तक"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 32.09135,
+        "lon": 76.26267
+      },
+      "to": {
+        "lat": 26.49022,
+        "lon": 74.55211
+      },
+      "bow": 0.12
+    },
+    "verse": "पुनश्च परिवृत्याथ पुष्करारण्यवासिनः",
+    "locus": {
+      "en": "Mahābhārata 2.35.8-11",
+      "hi": "महाभारत 2.35.8-11"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.8-11.",
+      "hi": "सभापर्व 2.35.8-11।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "w-sindhu",
+    "status": "draft",
+    "name": {
+      "en": "To the Sindhu's bank",
+      "hi": "सिंधु तट तक"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 26.49022,
+        "lon": 74.55211
+      },
+      "to": {
+        "lat": 25.4,
+        "lon": 68.4
+      },
+      "bow": 0.12
+    },
+    "verse": "सिन्धुकूलाश्रिता ये च ग्रामणीया महाबलाः",
+    "locus": {
+      "en": "Mahābhārata 2.35.8-11",
+      "hi": "महाभारत 2.35.8-11"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.8-11. The Ābhīras by the Sarasvatī on the way; the Sindhu country is beyond the boundary.",
+      "hi": "सभापर्व 2.35.8-11। मार्ग में सरस्वती के आभीर; सिंधु देश सीमा के पार है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "w-sakala",
+    "status": "draft",
+    "name": {
+      "en": "By Pañcanada to Śākala",
+      "hi": "पंचनद होकर शाकल"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.4,
+        "lon": 68.4
+      },
+      "to": {
+        "lat": 32.49,
+        "lon": 74.53
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः शाकलमभ्येत्य मद्राणां पुटभेदनम्",
+    "locus": {
+      "en": "Mahābhārata 2.35.5-17",
+      "hi": "महाभारत 2.35.5-17"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.5-17. The Rāmaṭhas and Hāra-Hūṇas; at Śākala his uncle Śalya submits.",
+      "hi": "सभापर्व 2.35.5-17। रामठ और हार-हूण; शाकल में उनके मामा शल्य अधीन होते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
+  },
+  {
+    "id": "w-home",
+    "status": "draft",
+    "name": {
+      "en": "Home with ten thousand camels",
+      "hi": "दस हज़ार ऊँटों के साथ वापसी"
+    },
+    "category": "west",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 32.49,
+        "lon": 74.53
+      },
+      "to": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "bow": 0.2
+    },
+    "verse": "इन्द्रप्रस्थगतं वीरमभ्येत्य स युधिष्ठिरम्",
+    "locus": {
+      "en": "Mahābhārata 2.35.18-20",
+      "hi": "महाभारत 2.35.18-20"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.35.18-20. After the mlecchas of the sea's gulf: Pahlavas, Barbaras, Yavanas and Śakas.",
+      "hi": "सभापर्व 2.35.18-20। समुद्र-कुक्षि के म्लेच्छों के बाद: पह्लव, बर्बर, यवन और शक।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-035?oldid=409717"
+    ]
   }
 ]

@@ -65,6 +65,15 @@
       "icon": "pin"
     },
     {
+      "id": "west",
+      "title": {
+        "en": "Nakula's conquest of the west",
+        "hi": "नकुल की पश्चिम-विजय"
+      },
+      "color": "#9b7d3a",
+      "icon": "pin"
+    },
+    {
       "id": "arjuna",
       "title": {
         "en": "Arjuna's pilgrimage",
