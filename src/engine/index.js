@@ -884,7 +884,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   // --- the idle sway (idle.js): the model turns gently while nobody is at the controls
   createIdle(store, {
-    allowed: () => !!terrain && store.get('status') === 'ready' && !store.get('poster') && level.name === 'country'
+    allowed: () => quality.name !== 'low' && !!terrain && store.get('status') === 'ready' && !store.get('poster') && level.name === 'country'
       && !store.get('selection') && !store.get('item') && !store.get('tour')?.playing && !cancelFly,
   });
 

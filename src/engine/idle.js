@@ -2,8 +2,9 @@
 // The idle sway: when nobody is at the controls, the camera turns gently from side to
 // side about the point under the screen centre, like a model on a slow turntable.
 // Any interaction stops it at once; it returns after a pause, and only while the
-// country view is at rest (nothing selected, no tour, no flight). Frames are capped so
-// a phone left on the table spends little on it.
+// country view is at rest (nothing selected, no tour, no flight). Frames are capped, and
+// it swings a couple of times and then settles, so a phone left on the table goes back
+// to drawing nothing at all (PLAN.md section 8: zero frames while idle).
 import { clampCamera, groundAnchor, orbitAbout, paddedCentre } from './camera-math.js';
 import { reducedMotion } from './tween.js';
 
@@ -14,6 +15,7 @@ export const IDLE = {
   pitch: 2.5,       // degrees the view dips at the ends of the swing
   easeIn: 3000,     // ms over which the swing grows to full size
   fps: 30,          // frame cap while swaying
+  cycles: 2,        // full swings before it settles back to rest until the next touch
 };
 
 /**
@@ -67,6 +69,13 @@ export function createIdle(store, { allowed }) {
     last = now;
     if (!allowed()) { stop(); return; }
     const t = now - t0;
+    if (t >= IDLE.cycles * IDLE.period) {
+      // A whole number of periods ends where it began (sin = 0): put the resting camera
+      // back exactly and stop drawing. The next interaction starts the pause again.
+      store.set('camera', clampCamera(base), { source: 'idle' });
+      stop();
+      return;
+    }
     const e = Math.min(1, t / IDLE.easeIn);
     const amp = e * e * (3 - 2 * e);                       // smooth start
     const phase = (2 * Math.PI * t) / IDLE.period;
