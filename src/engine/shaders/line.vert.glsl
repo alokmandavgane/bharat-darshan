@@ -13,6 +13,7 @@ uniform vec3 uRankZoom;      // view height (km) below which each rank appears
 uniform float uZoom;
 uniform float uSelectedIdx;  // index of the highlighted item, or -1
 uniform vec2 uGrid;          // quads across and down in the mesh this copy is drawn on
+uniform vec4 uGridRect;      // the country uv that mesh spans: u0, v0, u1, v1
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
@@ -46,28 +47,47 @@ void main() {
   // vertices and the rasteriser interpolates between them, so in a valley -- which is
   // where a river is, and where a road follows it -- the drawn ground sits above the
   // height at the point itself. At the low tier's 256 grid that buries half of every
-  // river; at the high tier's 1024 the grid is the raster and this is a no-op. The
-  // marker shader does the same thing for the same reason.
-  vec2 g = luv(vUv) * uGrid;
+  // river. So the height is read at the mesh's own nodes and laid on its own two
+  // triangles per quad (terrain.js gridGeometry splits each along the b-c diagonal), and
+  // lines.js cuts every run at those edges, so the ribbon lies on the drawn ground to
+  // the last metre however steep the relief.
+  vec2 span = uGridRect.zw - uGridRect.xy;
+  vec2 g = (vUv - uGridRect.xy) / span * uGrid;
   vec2 i0 = floor(g);
   vec2 f = g - i0;
-  vec2 a = i0 / uGrid, b = (i0 + 1.0) / uGrid;
-  float h00 = lift(texture(uHeight, a).r);
-  float h10 = lift(texture(uHeight, vec2(b.x, a.y)).r);
-  float h01 = lift(texture(uHeight, vec2(a.x, b.y)).r);
-  float h11 = lift(texture(uHeight, b).r);
-  float ground = mix(mix(h00, h10, f.x), mix(h01, h11, f.x), f.y);
+  vec2 a = uGridRect.xy + i0 / uGrid * span, b = uGridRect.xy + (i0 + 1.0) / uGrid * span;
+  float h00 = lift(texture(uHeight, luv(a)).r);
+  float h10 = lift(texture(uHeight, luv(vec2(b.x, a.y))).r);
+  float h01 = lift(texture(uHeight, luv(vec2(a.x, b.y))).r);
+  float h11 = lift(texture(uHeight, luv(b)).r);
+  float ground = f.x + f.y <= 1.0
+    ? h00 + f.x * (h10 - h00) + f.y * (h01 - h00)
+    : h11 + (1.0 - f.x) * (h01 - h11) + (1.0 - f.y) * (h10 - h11);
+  // The steepest rise across this quad, km up per km along.
+  vec2 cellKm = span * uSizeKm / uGrid;
+  float slope = max(max(abs(h10 - h00), abs(h11 - h01)) / cellKm.x,
+                    max(abs(h01 - h00), abs(h11 - h10)) / cellKm.y);
   // A hair above the surface: enough to beat z-fighting, far below anything the eye reads.
   float y = ground + uLift + 0.15;
-  vec4 clip = projectionMatrix * modelViewMatrix * vec4(position.x, y, position.z, 1.0);
+  vec4 mv = modelViewMatrix * vec4(position.x, y, position.z, 1.0);
   vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y, position.z + dir.y, 1.0);
 
-  vec2 t = ahead.xy / ahead.w - clip.xy / clip.w;
+  vec4 here = projectionMatrix * mv;
+  vec2 t = ahead.xy / ahead.w - here.xy / here.w;
   t = length(t) > 0.0 ? normalize(t * uResolution) : vec2(1.0, 0.0);
   vec2 n = vec2(-t.y, t.x);
   // A picked line thickens rather than changing colour: it is still the same river.
   vSel = uSelectedIdx >= 0.0 && abs(itemIdx - uSelectedIdx) < 0.5 ? 1.0 : 0.0;
   float halfPx = byRank(uRankPx) * widen * (1.0 + 0.9 * vSel);
+  // The ribbon is widened on screen, so its edges reach past the centreline the height
+  // was taken at, and on a slope facing the camera the ground there stands in front of
+  // them. Pull the ribbon toward the eye by what the slope under it can raise its edge,
+  // twice over for a neighbouring quad that is steeper and for the angle of view: the
+  // camera is orthographic, so this moves the depth and nothing on screen. It is a
+  // ribbon's width of climb, far below any hill tall enough to hide a line honestly.
+  float halfKm = halfPx * uZoom / uResolution.y;
+  mv.z += halfKm * (1.0 + 2.0 * slope);
+  vec4 clip = projectionMatrix * mv;
   clip.xy += n * side * halfPx / uResolution * 2.0 * clip.w;
 
   vColour = colour;

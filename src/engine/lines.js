@@ -3,7 +3,7 @@
 // ribbons widened in screen space, so a river is the same weight at every zoom. The
 // engine knows the type and the fields a line item carries -- rank, category, geometry --
 // and never a layer's id.
-import { BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Vector2, Vector3 } from 'three';
+import { BufferAttribute, BufferGeometry, Color, DoubleSide, GLSL3, Mesh, ShaderMaterial, Vector2, Vector3, Vector4 } from 'three';
 import lineFrag from './shaders/line.frag.glsl?raw';
 import lineVert from './shaders/line.vert.glsl?raw';
 
@@ -11,11 +11,59 @@ const RANK_PX = [1.5, 1.1, 0.8];         // half-width in CSS pixels, widest riv
 const RANK_ZOOM = [0, 0, 2400];          // view height (km) below which a rank appears; 0 = always
 
 /**
+ * A run cut wherever it crosses an edge of the mesh it is drawn on: the lines between
+ * grid rows and columns, and the diagonal each quad is split along. Between two such
+ * cuts the run lies on one flat triangle, so the ribbon, straight between its points,
+ * follows the drawn ground exactly. Uncut, a highway simplified to one chord across a
+ * range passes under every ridge between its ends. Rivers got away with it by lying in
+ * valleys, where a chord runs above the ground; a road over a pass, a railway up a ghat
+ * and a district line along a watershed do not. Widths are carried along the cuts.
+ * @param {{ cols: number, rows: number, rect?: number[] } | null} grid
+ * @param {{ x: number, y: number }} sizeKm
+ */
+function cutToGrid(flat, widths, grid, sizeKm) {
+  if (!grid) return { flat, widths };
+  const r = grid.rect || [0, 0, 1, 1];
+  const sx = grid.cols / ((r[2] - r[0]) * sizeKm.x), sz = grid.rows / ((r[3] - r[1]) * sizeKm.y);
+  const ox = (0.5 - r[0]) * grid.cols / (r[2] - r[0]), oz = (0.5 - r[1]) * grid.rows / (r[3] - r[1]);
+  const out = [flat[0], flat[1]];
+  const w = widths ? [widths[0]] : null;
+  const ts = [];
+  /** Where f0 + (f1 - f0) t passes a whole number, for t strictly inside (0, 1). */
+  const crossings = (f0, f1) => {
+    if (f1 === f0) return;
+    const lo = Math.min(f0, f1), hi = Math.max(f0, f1);
+    for (let k = Math.floor(lo) + 1; k < hi; k++) ts.push((k - f0) / (f1 - f0));
+  };
+  for (let i = 2; i + 1 < flat.length; i += 2) {
+    const ax = flat[i - 2], az = flat[i - 1], bx = flat[i], bz = flat[i + 1];
+    const gx0 = ax * sx + ox, gz0 = az * sz + oz, gx1 = bx * sx + ox, gz1 = bz * sz + oz;
+    ts.length = 0;
+    crossings(gx0, gx1);
+    crossings(gz0, gz1);
+    crossings(gx0 + gz0, gx1 + gz1);
+    ts.sort((p, q) => p - q);
+    ts.push(1);
+    let last = 0;
+    for (const t of ts) {
+      if (t - last < 1e-6 && t < 1) continue;
+      last = t;
+      out.push(ax + (bx - ax) * t, az + (bz - az) * t);
+      if (w) w.push(widths[i / 2 - 1] + (widths[i / 2] - widths[i / 2 - 1]) * t);
+    }
+  }
+  return { flat: out, widths: w };
+}
+
+/**
  * One ribbon geometry for a whole layer, and the records picking needs: every item with
  * its runs, its bounding box in scene km, and the index the shader highlights it by.
+ * `grid` is the mesh the ribbon is drawn on (see cutToGrid); `bbox` ([x0, z0, x1, z1] in
+ * scene km) keeps only the runs that reach it, for the lifted block's own copy.
  * @param {{ items: any[], categories?: any[] }} data
+ * @param {{ grid?: any, sizeKm?: any, bbox?: number[] | null }} [opts]
  */
-export function linesGeometry(data) {
+export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } = {}) {
   const colours = new Map((data.categories || []).map((c) => [c.id, new Color(c.color || '#5a7f97')]));
   const runs = [];
   const records = (data.items || []).map((item, idx) => {
@@ -31,12 +79,17 @@ export function linesGeometry(data) {
         if (flat[i + 1] > z1) z1 = flat[i + 1];
       }
       mine.push(flat);
+    }
+    const box = [x0, z0, x1, z1];
+    if (bbox && (x1 < bbox[0] || x0 > bbox[2] || z1 < bbox[1] || z0 > bbox[3])) return { item, idx, runs: mine, bbox: box };
+    mine.forEach((flat, r) => {
       // A flow carries a width profile with its geometry: 1 along the shaft, a swell and
       // then a point at the tip, which is what makes the arrowhead. Anything else is a
       // line of even weight.
-      runs.push({ flat, colour, rank: item.rank || 3, idx, widen: (item.widths || [])[mine.length - 1] || null });
-    }
-    return { item, idx, runs: mine, bbox: [x0, z0, x1, z1] };
+      const d = cutToGrid(flat, (item.widths || [])[r] || null, grid, sizeKm);
+      runs.push({ flat: d.flat, colour, rank: item.rank || 3, idx, widen: d.widths });
+    });
+    return { item, idx, runs: mine, bbox: box };
   }).filter((r) => r.runs.length);
   const points = runs.reduce((n, r) => n + r.flat.length / 2, 0);
   const pos = new Float32Array(points * 2 * 3);
@@ -128,6 +181,7 @@ function segDist2(x, z, ax, az, bx, bz) {
  *   and the arrows over the Western Ghats were sawn into fragments.
  */
 function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 1024, rows: 1024 }) {
+  const rect = grid.rect || [0, 0, 1, 1];
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
     transparent: true, depthWrite: false, depthTest: !float_, side: DoubleSide, premultipliedAlpha: true,
@@ -141,6 +195,7 @@ function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 102
       uRankZoom: { value: new Vector3(...RANK_ZOOM) },
       uZoom: { value: 3000 },
       uGrid: { value: new Vector2(grid.cols, grid.rows) },
+      uGridRect: { value: new Vector4(...rect) },
       uSelectedIdx: { value: -1 },
       uLiftedId: { value: -1 },
       uOnBlock: { value: onBlock ? 1 : 0 },
@@ -162,6 +217,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
   let blockUniforms = null;
   let blockGrid = null;
   let liftedId = -1;
+  const sizeKm = terrainUniforms.uSizeKm.value;
   let selected = null;
   const view = { w: 1, h: 1, zoom: 3000 };
 
@@ -185,13 +241,19 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
   }
 
   function setBlockMesh(entry) {
-    if (entry.block) { scene.remove(entry.block); entry.block.material.dispose(); entry.block = null; }
+    if (entry.block) {
+      scene.remove(entry.block); entry.block.material.dispose(); entry.block.geometry.dispose(); entry.block = null;
+    }
     if (!blockUniforms) return;
     // A layer may ship a finer copy of itself per state (PLAN.md D3). The plate keeps the
     // country's own weight; the lifted block, which is where a coarse line shows, draws
-    // that state's sharper geometry instead as soon as it has arrived.
-    const mesh = new Mesh(entry.detail?.geometry || entry.geometry,
-                          lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
+    // that state's sharper geometry instead as soon as it has arrived. Either way the
+    // block gets a copy of its own, only the runs that reach it, cut to its finer grid.
+    const rect = blockGrid?.rect || [0, 0, 1, 1];
+    const bbox = [(rect[0] - 0.5) * sizeKm.x, (rect[1] - 0.5) * sizeKm.y, (rect[2] - 0.5) * sizeKm.x, (rect[3] - 0.5) * sizeKm.y];
+    const src = entry.detailData ? { ...entry.detailData, categories: entry.categories } : entry.data;
+    const { geometry } = linesGeometry(src, { grid: blockGrid, sizeKm, bbox });
+    const mesh = new Mesh(geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -203,13 +265,13 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     /** Add (or replace) a layer's geometry. `data` is public/data/layers/<id>.json. */
     setLayer(data) {
       this.remove(data.id);
-      const { geometry, records } = linesGeometry(data);
+      const { geometry, records } = linesGeometry(data, { grid: terrainGrid, sizeKm });
       const flow = !!data.flow;
       const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float, terrainGrid));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null, detail: null, detailPaths: data.detail || null };
+      const entry = { data, detailData: null, geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null, detail: null, detailPaths: data.detail || null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
@@ -225,10 +287,16 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     setDetail(id, data) {
       const l = layers.get(id);
       if (!l) return;
-      if (l.detail) l.detail.geometry.dispose();
       // The detail file carries geometry and nothing else: the colours are the layer's,
-      // and a copy without them would draw the whole state in the fallback blue.
-      l.detail = data ? linesGeometry({ ...data, categories: l.categories }) : null;
+      // and a copy without them would draw the whole state in the fallback blue. The
+      // records are for picking; the block cuts its own geometry from the data.
+      l.detailData = data;
+      l.detail = null;
+      if (data) {
+        const { geometry, records } = linesGeometry({ ...data, categories: l.categories });
+        geometry.dispose();
+        l.detail = { records };
+      }
       setBlockMesh(l);
       applyView();
     },
@@ -319,7 +387,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       if (!l) return;
       scene.remove(l.plate);
       l.plate.material.dispose();
-      if (l.block) { scene.remove(l.block); l.block.material.dispose(); }
+      if (l.block) { scene.remove(l.block); l.block.material.dispose(); l.block.geometry.dispose(); }
       l.geometry.dispose();
       layers.delete(id);
     },

@@ -141,7 +141,8 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
   return {
     group, material, unit,
     // The block's own mesh grid, so a line drawn on it stands on the surface it draws.
-    grid: { cols, rows },
+    // `rect` is the country uv it spans, which sets how finely a line is cut to follow it.
+    grid: { cols, rows, rect },
     setOutline,
     setPackage,
     setLift(km) { material.uniforms.uLift.value = km; },
