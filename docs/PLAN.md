@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-seventh round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-eighth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -634,7 +634,7 @@ map is a folder and a source, whatever it shows.
 | `symbols` | a counter **sized by a value**, coloured by category, lying on the relief and drawn by the GPU | city populations, mines by output, power plants by MW, ports by cargo | built (`"marker": "symbol"`) | power stations by capacity and fuel (done) |
 | `areas` | named polygons that are not regions, filled and draped on the relief, their edges reconstructed from the raster to sub-texel accuracy | coalfields, mineral belts, national parks and tiger reserves, river basins, physiographic divisions, soil and forest types, industrial regions | built (`type: "areas"`) | physical divisions (done); coalfields next |
 | `raster` | a continuous field tinting the clay through a colour ramp | rainfall, temperature, forest cover, night lights, land use | new; one 8-bit texture per layer at the tier's resolution, same multiply-into-albedo as a choropleth | annual rainfall normals |
-| `flows` | curved arrows between places, animated along their length, drawn over the model rather than on it | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` and `"float": true` on a `lines` layer) | the monsoon's advance (done) |
+| `flows` | curved arrows between places, animated along their length, drawn over the model rather than on it | monsoon advance, migration, trade, pilgrimage circuits, freight | built (`"arrows": true` and `"float": true` on a `lines` layer; `"arc": true` lifts each arrow into the air) | the monsoon's advance (done); the History tours fly as arcs |
 | `prisms` | a region extruded by a value -- the one drawing only a 3D atlas has | population, GDP, production by state | built (`type: "prisms"`) | 2011 population (done) |
 | `regional` | listed on a state's card; drawn as a peg at its anchor when it has one (the place it is most seen at), and the build says which by shipping `anchored` | festivals, languages, food | built | done; festivals anchored 2026-09-22 |
 
@@ -2450,6 +2450,20 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-eighth round: tour arrows fly as arcs instead of following the ground.
+  A floating arrow still followed the relief, which at the exaggerated heights (tens of km) bent a
+  1,000 km leg into a wobble over every range it crossed. That is right for a monsoon front and wrong
+  for a journey. A lines layer may now set `"arc": true` (it needs `arrows` and `float`):
+  - The vertex shader lifts each run on a parabola from the ground at its first point to the ground
+    at its last. The crown is 0.1 of the run's length, and at least 18 km so a short hop clears the
+    hills. The ends stay on their pins, which keeps them in place on a tilted view, and the depth
+    test stays off.
+  - The ribbon's screen direction takes the climb into account, so the width stays even up the arc.
+  - Picking: an arc is not on the ground, so `lines.nearestArc` lifts each run the same way (`ARC`
+    and `arcY` in lines.js) and measures on the screen. It answers before the ground lines.
+  - On: sugriva-routes, rama-exile-route, mahabharata-route. The monsoon keeps following the land.
+  - Checked in the browser: all three tours draw as smooth arcs at flat and tilted views, a tap on
+    an arc's crown opens that leg's card, no console errors; tests and build pass.
 - 2026-09-24, fifty-seventh round: Pulastya's tīrtha circuit added to the Mahābhārata tour.
   Same page (`/en/atlas/mahabharata`), now 37 stops and 59 arrows in eleven colours. An olive group
   after Kāmyaka, where Nārada recites it: Puṣkara, Mahākāla, Arbuda, Kurukṣetra, Gaṅgādvāra, Naimiṣa,

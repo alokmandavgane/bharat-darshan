@@ -14,6 +14,8 @@ uniform float uZoom;
 uniform float uSelectedIdx;  // index of the highlighted item, or -1
 uniform vec2 uGrid;          // quads across and down in the mesh this copy is drawn on
 uniform vec4 uGridRect;      // the country uv that mesh spans: u0, v0, u1, v1
+uniform float uArc;          // 1: this layer's runs are arcs in the air, not ribbons on the ground
+uniform vec2 uArcRise;       // an arc's crown: x of its own length, and at least y km
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
@@ -23,6 +25,8 @@ in float dist;               // km from the start of the run, which is its upstr
 in float widen;              // per-vertex width multiplier: 1 for a line, a swell and a
                              // point for a flow's arrowhead
 in vec3 colour;
+in float runKm;              // the whole run's length, for an arc
+in vec4 ends;                // the run's first and last points, scene km (x0, z0, x1, z1)
 
 out vec3 vColour;
 out float vDist;
@@ -69,8 +73,23 @@ void main() {
                     max(abs(h01 - h00), abs(h11 - h10)) / cellKm.y);
   // A hair above the surface: enough to beat z-fighting, far below anything the eye reads.
   float y = ground + uLift + 0.15;
+  float climb = 0.0;           // km up per km along, for the ribbon's screen direction
+  if (uArc > 0.5) {
+    // An arc leaves the ground where the run starts, rises to a crown in proportion to its
+    // length and comes down on the ground where it ends: a journey drawn over the country
+    // rather than a course along it, so the relief under it no longer bends it. The ends
+    // stay on their places, which is what keeps an arrow on them in a tilted view.
+    float L = max(runKm, 1e-3);
+    float t = clamp(dist / L, 0.0, 1.0);
+    vec2 ua = ends.xy / uSizeKm + 0.5, ub = ends.zw / uSizeKm + 0.5;
+    float ga = lift(texture(uHeight, luv(ua)).r), gb = lift(texture(uHeight, luv(ub)).r);
+    float rise = max(uArcRise.y, uArcRise.x * L);
+    y = mix(ga, gb, t) + rise * 4.0 * t * (1.0 - t) + uLift + 0.15;
+    climb = ((gb - ga) + rise * 4.0 * (1.0 - 2.0 * t)) / L;
+    slope = 0.0;
+  }
   vec4 mv = modelViewMatrix * vec4(position.x, y, position.z, 1.0);
-  vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y, position.z + dir.y, 1.0);
+  vec4 ahead = projectionMatrix * modelViewMatrix * vec4(position.x + dir.x, y + climb, position.z + dir.y, 1.0);
 
   vec4 here = projectionMatrix * mv;
   vec2 t = ahead.xy / ahead.w - here.xy / here.w;

@@ -7,7 +7,7 @@ import { FILL_TYPES, fillLookup, prismLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createGraticule } from './graticule.js';
 import { createWorld } from './world.js';
-import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
+import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, projector, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
 import { DATA_BASE, loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
@@ -925,6 +925,11 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // nearly every point. So there a line takes the pointer only when it is a named one
     // and the pointer is right on it, and everywhere else the area answers.
     const reach = areaFill ? Math.min(px, 4) : px;
+    // Arcs are drawn in the air, so they are found on the screen, and they are drawn over
+    // everything, so one under the pointer wins over a line on the ground.
+    const arc = lines.nearestArc(sx, sy, reach, projector(store.get('camera'), viewport),
+      (x, z) => liftKm(field.heightM(x, z)));
+    if (arc) return arc;
     return p ? lines.nearest(p.x, p.z, reach * (store.get('camera').zoom / viewport.h), { named: !!areaFill }) : null;
   }
 

@@ -100,12 +100,17 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
   const widen = new Float32Array(points * 2);
   const colour = new Float32Array(points * 2 * 3);
   const itemIdx = new Float32Array(points * 2);
+  const runKm = new Float32Array(points * 2);       // an arc's whole length ...
+  const ends = new Float32Array(points * 2 * 4);    // ... and the ground it leaves and lands on
   const index = new Uint32Array(Math.max(0, (points - runs.length) * 6));
   let v = 0, q = 0;
   for (const run of runs) {
     const n = run.flat.length / 2;
     const first = v;
     let along = 0;
+    let total = 0;
+    for (let i = 1; i < n; i++) total += Math.hypot(run.flat[i * 2] - run.flat[i * 2 - 2], run.flat[i * 2 + 1] - run.flat[i * 2 - 1]);
+    const e = [run.flat[0], run.flat[1], run.flat[n * 2 - 2], run.flat[n * 2 - 1]];
     for (let i = 0; i < n; i++) {
       const x = run.flat[i * 2], z = run.flat[i * 2 + 1];
       if (i > 0) along += Math.hypot(x - run.flat[(i - 1) * 2], z - run.flat[(i - 1) * 2 + 1]);
@@ -123,6 +128,8 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
         rank[v] = run.rank;
         widen[v] = run.widen ? run.widen[i] : 1;
         itemIdx[v] = run.idx;
+        runKm[v] = total;
+        ends.set(e, v * 4);
         colour[v * 3] = run.colour.r; colour[v * 3 + 1] = run.colour.g; colour[v * 3 + 2] = run.colour.b;
         v++;
       }
@@ -142,6 +149,8 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
   g.setAttribute('widen', new BufferAttribute(widen, 1));
   g.setAttribute('colour', new BufferAttribute(colour, 3));
   g.setAttribute('itemIdx', new BufferAttribute(itemIdx, 1));
+  g.setAttribute('runKm', new BufferAttribute(runKm, 1));
+  g.setAttribute('ends', new BufferAttribute(ends, 4));
   g.setIndex(new BufferAttribute(index, 1));
   return { geometry: g, records };
 }
@@ -156,6 +165,20 @@ function reaches(rec, inside) {
     for (let i = 0; i + 1 < flat.length; i += 2) if (inside(flat[i], flat[i + 1])) return true;
   }
   return false;
+}
+
+/**
+ * An `arc` layer's runs are drawn in the air (line.vert.glsl): each leaves the ground at
+ * its first point, rises to a crown of `rise` times its length (at least `minKm`) and
+ * lands at its last. The relief is exaggerated to tens of km, so the floor keeps a short
+ * hop from being lost in the hills it crosses.
+ */
+export const ARC = { rise: 0.1, minKm: 18 };
+
+/** Height (scene km) of an arc at fraction t of a run `L` km long, between its ends' ground heights. */
+export function arcY(t, ga, gb, L) {
+  const rise = Math.max(ARC.minKm, ARC.rise * L);
+  return ga + (gb - ga) * t + rise * 4 * t * (1 - t);
 }
 
 /** Square of the distance from (x, z) to the segment a-b, in scene km. */
@@ -180,7 +203,7 @@ function segDist2(x, z, ax, az, bx, bz) {
  *   instead was the first try and does not hold: something taller always comes along,
  *   and the arrows over the Western Ghats were sawn into fragments.
  */
-function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 1024, rows: 1024 }) {
+function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 1024, rows: 1024 }, arc = false) {
   const rect = grid.rect || [0, 0, 1, 1];
   return new ShaderMaterial({
     glslVersion: GLSL3, vertexShader: lineVert, fragmentShader: lineFrag,
@@ -201,6 +224,8 @@ function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 102
       uOnBlock: { value: onBlock ? 1 : 0 },
       uFlow: { value: flow ? 1 : 0 },
       uTime: { value: 0 },
+      uArc: { value: arc ? 1 : 0 },
+      uArcRise: { value: new Vector2(ARC.rise, ARC.minKm) },
     },
   });
 }
@@ -253,7 +278,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     const bbox = [(rect[0] - 0.5) * sizeKm.x, (rect[1] - 0.5) * sizeKm.y, (rect[2] - 0.5) * sizeKm.x, (rect[3] - 0.5) * sizeKm.y];
     const src = entry.detailData ? { ...entry.detailData, categories: entry.categories } : entry.data;
     const { geometry } = linesGeometry(src, { grid: blockGrid, sizeKm, bbox });
-    const mesh = new Mesh(geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid));
+    const mesh = new Mesh(geometry, lineMaterial(blockUniforms, true, entry.flow, entry.float, blockGrid, entry.arc));
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
@@ -267,11 +292,11 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       this.remove(data.id);
       const { geometry, records } = linesGeometry(data, { grid: terrainGrid, sizeKm });
       const flow = !!data.flow;
-      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float, terrainGrid));
+      const plate = new Mesh(geometry, lineMaterial(terrainUniforms, false, flow, !!data.float, terrainGrid, !!data.arc));
       plate.frustumCulled = false;
       plate.renderOrder = 3;
       plate.visible = active.has(data.id);
-      const entry = { data, detailData: null, geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, plate, block: null, detail: null, detailPaths: data.detail || null };
+      const entry = { data, detailData: null, geometry, records, categories: data.categories || [], fields: data.fields || {}, flow, float: !!data.float, arc: !!data.arc, plate, block: null, detail: null, detailPaths: data.detail || null };
       layers.set(data.id, entry);
       scene.add(plate);
       setBlockMesh(entry);
@@ -325,7 +350,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       let best = null;
       const max2 = maxKm * maxKm;
       for (const [id, l] of layers) {
-        if (!active.has(id)) continue;
+        if (!active.has(id) || l.arc) continue;   // an arc is in the air: see nearestArc
         for (const rec of l.records) {
           if (named && rec.item.network) continue;
           const [x0, z0, x1, z1] = rec.bbox;
@@ -336,6 +361,41 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
               if (d2 > max2) continue;
               const score = d2 + (rec.item.rank || 3) * 0.02 * max2;
               if (!best || score < best.score) best = { layer: id, item: rec.item, categories: l.categories, fields: l.fields, score };
+            }
+          }
+        }
+      }
+      return best;
+    },
+    /**
+     * The arc nearest a screen point, within `maxPx`. An arc is not on the ground, so the
+     * point under the pointer says nothing about it: each run is lifted as the shader
+     * lifts it and measured on the screen. `project(x, y, z, out)` gives px from the
+     * viewport centre, y up; `groundKm(x, z)` the drawn surface's height at a point.
+     */
+    nearestArc(sx, sy, maxPx, project, groundKm) {
+      let best = null;
+      const a = [0, 0], b = [0, 0];
+      for (const [id, l] of layers) {
+        if (!active.has(id) || !l.arc) continue;
+        for (const rec of l.records) {
+          for (const flat of rec.runs) {
+            const n = flat.length / 2;
+            if (n < 2) continue;
+            let L = 0;
+            for (let i = 1; i < n; i++) L += Math.hypot(flat[i * 2] - flat[i * 2 - 2], flat[i * 2 + 1] - flat[i * 2 - 1]);
+            const ga = groundKm(flat[0], flat[1]), gb = groundKm(flat[n * 2 - 2], flat[n * 2 - 1]);
+            let along = 0;
+            project(flat[0], arcY(0, ga, gb, L), flat[1], a);
+            for (let i = 1; i < n; i++) {
+              along += Math.hypot(flat[i * 2] - flat[i * 2 - 2], flat[i * 2 + 1] - flat[i * 2 - 1]);
+              project(flat[i * 2], arcY(along / L, ga, gb, L), flat[i * 2 + 1], b);
+              const d2 = segDist2(sx, sy, a[0], a[1], b[0], b[1]);
+              const score = d2 + (rec.item.rank || 3) * 0.02 * maxPx * maxPx;
+              if (d2 <= maxPx * maxPx && (!best || score < best.score)) {
+                best = { layer: id, item: rec.item, categories: l.categories, fields: l.fields, score };
+              }
+              a[0] = b[0]; a[1] = b[1];
             }
           }
         }

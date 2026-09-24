@@ -9,6 +9,7 @@
   "icon": "road",
   "default_on": false,
   "float": true,
+  "arc": true,
   "arrows": true,
   "flow": true,
   "source": {
