@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixtieth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixty-first round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,12 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixty-first round: Balarāma's Sarasvatī pilgrimage added to the Mahābhārata tour.
+  52 stops and 76 arrows in thirteen colours. A periwinkle group follows the war stop: Prabhāsa, where
+  the river meets the sea; Pṛthūdaka (Pehowa); Samantapañcaka; and the source, Plakṣaprasravaṇa (Adi
+  Badri, by tradition). It then comes down again for the last duel. It replaces the single Prabhāsa →
+  Kurukṣetra placeholder with five thin arrows up the river; the Vinaśana point is the compiler's.
+  Checked in the browser (52 stops in order, no console errors); tests and build pass.
 - 2026-09-24, sixtieth round: the horse sacrifice closes the aśvamedha group.
   One new stop at Hastināpura, "The horse sacrifice", after the horse's return by Pañcanada and
   Gandhāra (48 stops). Its card has the kosha's new passages: twenty-one posts, a golden altar in the

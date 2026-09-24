@@ -1610,6 +1610,190 @@
     ]
   },
   {
+    "id": "prabhasa-balarama",
+    "status": "draft",
+    "name": {
+      "en": "Prabhāsa",
+      "hi": "प्रभास"
+    },
+    "anchor": {
+      "lat": 20.888,
+      "lon": 70.401
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "balarama",
+    "priority": 1,
+    "event": {
+      "en": "Balarāma sets out from the Sarasvatī's mouth",
+      "hi": "सरस्वती के मुहाने से बलराम का प्रस्थान"
+    },
+    "when": {
+      "en": "The war's first days: out under Puṣya (9.34.6), or the Maitra nakṣatra (9.35.14)",
+      "hi": "युद्ध के आरंभिक दिन: पुष्य में (9.34.6), या मैत्र नक्षत्र में (9.35.14)"
+    },
+    "verse": "पुण्यं प्रभासं समुपाजगाम",
+    "locus": {
+      "en": "Mahābhārata 9.35.42-43",
+      "hi": "महाभारत 9.35.42-43"
+    },
+    "modern": {
+      "en": "Prabhas Patan (Somnath)",
+      "hi": "प्रभास पाटन (सोमनाथ)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.35.42-43. Refusing to fight for either side, he goes up the river against the current, from the sea.",
+      "hi": "शल्यपर्व 9.35.42-43। किसी भी पक्ष से लड़ने से इनकार कर वे समुद्र से धारा के विरुद्ध नदी के साथ ऊपर जाते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D-09-%E0%A4%B6%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5-035",
+      "https://en.wikipedia.org/wiki/Prabhas_Patan"
+    ]
+  },
+  {
+    "id": "prthudaka",
+    "status": "draft",
+    "name": {
+      "en": "Pṛthūdaka",
+      "hi": "पृथूदक"
+    },
+    "anchor": {
+      "lat": 29.97897,
+      "lon": 76.58249
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "balarama",
+    "priority": 2,
+    "event": {
+      "en": "Pṛthūdaka, where dying frees one from death",
+      "hi": "पृथूदक, जहाँ मृत्यु मृत्यु से मुक्त करती है"
+    },
+    "when": {
+      "en": "The war's eighteen days",
+      "hi": "युद्ध के अठारह दिन"
+    },
+    "verse": "पृथूदके जप्यपरो नैनं श्वो मरणं तपेत्",
+    "locus": {
+      "en": "Mahābhārata 9.40.29-33",
+      "hi": "महाभारत 9.40.29-33"
+    },
+    "modern": {
+      "en": "Pehowa, Kurukshetra district",
+      "hi": "पिहोवा, कुरुक्षेत्र जिला"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.40.29-33. After Vinaśana, the eastward turn and the bends where the river flowed west again, and Saptasārasvata.",
+      "hi": "शल्यपर्व 9.40.29-33। विनशन, पूर्व की ओर मोड़ और वे घुमाव जहाँ नदी फिर पश्चिम बही, और सप्तसारस्वत के बाद।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-040?oldid=53510",
+      "https://www.geonames.org/1259939"
+    ]
+  },
+  {
+    "id": "kurukshetra-balarama",
+    "status": "draft",
+    "name": {
+      "en": "Kurukṣetra",
+      "hi": "कुरुक्षेत्र"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "balarama",
+    "priority": 2,
+    "event": {
+      "en": "Samantapañcaka, the northern altar",
+      "hi": "समन्तपंचक, उत्तरवेदी"
+    },
+    "when": {
+      "en": "The war's eighteen days",
+      "hi": "युद्ध के अठारह दिन"
+    },
+    "verse": "एतत्कुरुक्षेत्रसमन्तपञ्चकं",
+    "locus": {
+      "en": "Mahābhārata 9.54.28",
+      "hi": "महाभारत 9.54.28"
+    },
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.54.28. The field, between the Sarasvatī and the Dṛṣadvatī.",
+      "hi": "शल्यपर्व 9.54.28। सरस्वती और दृषद्वती के बीच का क्षेत्र।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-054?oldid=53538",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "plaksaprasravana",
+    "status": "draft",
+    "name": {
+      "en": "Plakṣaprasravaṇa",
+      "hi": "प्लक्षप्रस्रवण"
+    },
+    "anchor": {
+      "lat": 30.45,
+      "lon": 77.33
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "balarama",
+    "priority": 2,
+    "event": {
+      "en": "The Sarasvatī's source",
+      "hi": "सरस्वती का उद्गम"
+    },
+    "when": {
+      "en": "The war's last day, forty-two days out, the moon in Śravaṇa (9.34.6)",
+      "hi": "युद्ध का अंतिम दिन, प्रस्थान के बयालीस दिन बाद, चंद्र श्रवण में (9.34.6)"
+    },
+    "verse": "प्रभवं च सरस्वत्याः प्लक्षप्रस्रवणं बलः",
+    "locus": {
+      "en": "Mahābhārata 9.55.9-14",
+      "hi": "महाभारत 9.55.9-14"
+    },
+    "modern": {
+      "en": "Adi Badri, Yamunanagar district (by tradition)",
+      "hi": "आदि बद्री, यमुनानगर जिला (परंपरा से)"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.55.9-14. Nārada brings word of the mace duel, and he comes down to Samantapañcaka to watch his two pupils.",
+      "hi": "शल्यपर्व 9.55.9-14। नारद गदायुद्ध का समाचार लाते हैं, और वे अपने दो शिष्यों को देखने समन्तपंचक उतरते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-055?oldid=53539",
+      "https://en.wikipedia.org/wiki/Adi_Badri,_Haryana"
+    ]
+  },
+  {
     "id": "hastinapura-king",
     "status": "draft",
     "name": {

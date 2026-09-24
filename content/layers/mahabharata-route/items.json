@@ -495,39 +495,6 @@
     ]
   },
   {
-    "id": "balarama",
-    "status": "draft",
-    "name": {
-      "en": "Balarāma up the Sarasvatī",
-      "hi": "बलराम सरस्वती के साथ ऊपर"
-    },
-    "category": "war",
-    "rank": 2,
-    "geometry": {
-      "from": {
-        "lat": 20.888,
-        "lon": 70.401
-      },
-      "to": {
-        "lat": 29.97323,
-        "lon": 76.83214
-      },
-      "bow": -0.12
-    },
-    "verse": "सरस्वत्याः प्रतिस्रोतः समुद्रादभिजग्मिवान",
-    "locus": {
-      "en": "Mahābhārata 9.35.21-22",
-      "hi": "महाभारत 9.35.21-22"
-    },
-    "blurb": {
-      "en": "Śalyaparvan 9.35.21-22. Forty-two days, out under Puṣya and back under Śravaṇa, in time for the last duel (9.34.6).",
-      "hi": "शल्यपर्व 9.35.21-22। बयालीस दिन, पुष्य में निकले और श्रवण में लौटे, अंतिम द्वंद्व के समय पर (9.34.6)।"
-    },
-    "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-035?oldid=53501"
-    ]
-  },
-  {
     "id": "the-return",
     "status": "draft",
     "name": {
@@ -2373,6 +2340,171 @@
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-179?oldid=51649"
+    ]
+  },
+  {
+    "id": "bal-vinasana",
+    "status": "draft",
+    "name": {
+      "en": "By Udapāna to Vinaśana",
+      "hi": "उदपान होकर विनशन"
+    },
+    "category": "balarama",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "to": {
+        "lat": 29.53,
+        "lon": 75.03
+      },
+      "bow": 0.12
+    },
+    "verse": "नदीगतमदीनात्मा प्राप्तो विनशनं तदा",
+    "locus": {
+      "en": "Mahābhārata 9.37.53",
+      "hi": "महाभारत 9.37.53"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.37.53. Udapāna is not placed; the Vinaśana point on the Ghaggar is the compiler's.",
+      "hi": "शल्यपर्व 9.37.53। उदपान तय नहीं; घग्गर पर विनशन का बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-037?oldid=400277"
+    ]
+  },
+  {
+    "id": "bal-prthudaka",
+    "status": "draft",
+    "name": {
+      "en": "Up the bending river to Pṛthūdaka",
+      "hi": "घुमावदार नदी के साथ पृथूदक तक"
+    },
+    "category": "balarama",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.53,
+        "lon": 75.03
+      },
+      "to": {
+        "lat": 29.97897,
+        "lon": 76.58249
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः कुञ्जान्बहून्कृत्वा सन्निवृत्ता सरस्वती",
+    "locus": {
+      "en": "Mahābhārata 9.38.53-57",
+      "hi": "महाभारत 9.38.53-57"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.38.53-57. Subhūmika, Vāsuki's Nāgadhanvan, the eastward turn and Saptasārasvata, none placed.",
+      "hi": "शल्यपर्व 9.38.53-57। सुभूमिक, वासुकि का नागधन्वन, पूर्व की ओर मोड़ और सप्तसारस्वत, कोई तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-038?oldid=409716"
+    ]
+  },
+  {
+    "id": "bal-kurukshetra",
+    "status": "draft",
+    "name": {
+      "en": "To Samantapañcaka",
+      "hi": "समन्तपंचक तक"
+    },
+    "category": "balarama",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.97897,
+        "lon": 76.58249
+      },
+      "to": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "bow": 0.12
+    },
+    "verse": "एतत्कुरुक्षेत्रसमन्तपञ्चकं",
+    "locus": {
+      "en": "Mahābhārata 9.54.28",
+      "hi": "महाभारत 9.54.28"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.54.28. By Vasiṣṭhāpavāha, the Yamunā tīrtha of Varuṇa's rājasūya and the old maiden's hermitage.",
+      "hi": "शल्यपर्व 9.54.28। वसिष्ठापवाह, वरुण के राजसूय वाले यमुना तीर्थ और वृद्धकन्या के आश्रम होकर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-054?oldid=53538"
+    ]
+  },
+  {
+    "id": "bal-source",
+    "status": "draft",
+    "name": {
+      "en": "Up to the source, Plakṣaprasravaṇa",
+      "hi": "ऊपर उद्गम, प्लक्षप्रस्रवण तक"
+    },
+    "category": "balarama",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "to": {
+        "lat": 30.45,
+        "lon": 77.33
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रभवं च सरस्वत्याः प्लक्षप्रस्रवणं बलः",
+    "locus": {
+      "en": "Mahābhārata 9.55.9-14",
+      "hi": "महाभारत 9.55.9-14"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.55.9-14.",
+      "hi": "शल्यपर्व 9.55.9-14।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-055?oldid=53539"
+    ]
+  },
+  {
+    "id": "bal-duel",
+    "status": "draft",
+    "name": {
+      "en": "Down for the last duel",
+      "hi": "अंतिम द्वंद्व के लिए नीचे"
+    },
+    "category": "balarama",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 30.45,
+        "lon": 77.33
+      },
+      "to": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "bow": -0.2
+    },
+    "verse": "सोऽवतीर्याचलश्रेष्ठात्प्लक्षप्रस्रवणाच्छुभात्",
+    "locus": {
+      "en": "Mahābhārata 9.55.33-36",
+      "hi": "महाभारत 9.55.33-36"
+    },
+    "blurb": {
+      "en": "Śalyaparvan 9.55.33-36. Forty-two days out, in time to see Bhīma break Duryodhana's thighs.",
+      "hi": "शल्यपर्व 9.55.33-36। बयालीस दिन बाद, भीम द्वारा दुर्योधन की जाँघें तोड़ते देखने के समय पर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-055?oldid=53539"
     ]
   }
 ]
