@@ -525,6 +525,8 @@ export function createShell(root, store) {
 
   // --- the tour: a row at the foot of the contents starts it; the card's steps carry it
   const toggleTour = () => store.set('tour', { playing: !store.get('tour')?.playing });
+  /** @type {HTMLButtonElement | null} the open story's own play button, when the page has one */
+  let pageTour = null;
   tourRow.addEventListener('click', toggleTour);
   tourStep.addEventListener('click', toggleTour);
   function renderTour() {
@@ -538,6 +540,13 @@ export function createShell(root, store) {
       b.title = label;
     }
     /** @type {HTMLElement} */ (tourRow.querySelector('span')).textContent = label;
+    if (pageTour) {
+      const own = playing ? label : (pageTour.dataset.label || label);
+      pageTour.setAttribute('aria-pressed', String(playing));
+      pageTour.setAttribute('aria-label', own);
+      pageTour.title = own;
+      /** @type {HTMLElement} */ (pageTour.querySelector('span')).textContent = own;
+    }
     root.body.dataset.tour = playing ? 'playing' : '';
   }
   store.subscribe('tour', (tr, prev) => {
@@ -732,6 +741,19 @@ export function createShell(root, store) {
     p.className = 'contents-blurb';
     p.textContent = pick(plate.blurb);
     contents.appendChild(p);
+    // A story names its stops, so its page carries the play button itself, under its own
+    // title: the foot's tour row belongs to the contents, which a page does not show.
+    pageTour = null;
+    if (plate.tour) {
+      pageTour = /** @type {HTMLButtonElement} */ (tourRow.cloneNode(true));
+      pageTour.classList.add('page-tour');
+      pageTour.querySelector('[data-i18n]')?.removeAttribute('data-i18n');   // its label is the page's, not a string
+      pageTour.hidden = false;
+      pageTour.dataset.label = pick(plate.tour.title) || t('tour.play');
+      pageTour.addEventListener('click', toggleTour);
+      contents.appendChild(pageTour);
+      renderTour();
+    }
     // A page cannot show a map without saying whose it is: the build unions its layers'
     // sources into the plate, so this line is never the page's own promise (PLAN.md D11).
     const src = sourceNote(plate.sources);

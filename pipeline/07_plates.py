@@ -48,7 +48,7 @@ def plate_sources(plate, layer_sources, registry):
     return out
 
 
-def validate(plate, name, layer_ids):
+def validate(plate, name, layer_ids, layers_dir):
     p = []
     if plate.get('id') != name:
         p.append('plate.id must equal the file name')
@@ -77,6 +77,37 @@ def validate(plate, name, layer_ids):
     relief = plate.get('relief')
     if relief is not None and not (isinstance(relief, (int, float)) and 0 <= relief <= 30):
         p.append('relief must be between 0 and 30')
+    p += validate_tour(plate, layers_dir)
+    return p
+
+
+def validate_tour(plate, layers_dir):
+    """A story (PLAN.md section 5, "Stories"): a page may name the stops its tour visits,
+    in order, from one of its own points layers. Without `tour` the tour visits whatever
+    is on show, nearest first; with it, exactly these, in this order, and the play
+    button on the page carries the tour's own title."""
+    t = plate.get('tour')
+    if t is None:
+        return []
+    p = []
+    if not isinstance(t, dict) or not isinstance(t.get('stops'), list) or not t['stops']:
+        return ['tour needs a layer and a non-empty list of stops']
+    if t.get('layer') not in (plate.get('layers') or []):
+        p.append("tour.layer must be one of the page's own layers")
+        return p
+    if t.get('title') is not None and not bilingual(t['title']):
+        p.append('tour.title needs en and hi')
+    path = os.path.join(layers_dir, f"{t['layer']}.json")
+    with open(path, encoding='utf-8') as f:
+        built = json.load(f)
+    if built.get('type') != 'points':
+        p.append('tour.layer must be a points layer')
+    ids = {i['id'] for i in built.get('items', [])}
+    missing = [s for s in t['stops'] if s not in ids]
+    if missing:
+        p.append(f"tour names stops its layer does not have: {', '.join(missing)}")
+    if len(set(t['stops'])) != len(t['stops']):
+        p.append('tour names a stop twice')
     return p
 
 
@@ -102,7 +133,7 @@ def main():
             continue
         with open(os.path.join(args.content, name), encoding='utf-8') as f:
             plate = json.load(f)
-        p = validate(plate, name[:-5], layer_ids)
+        p = validate(plate, name[:-5], layer_ids, layers_dir)
         p += registry.check(plate.get('sources'), f'{name}: sources')
         if p:
             problems.append((name, p))
@@ -112,7 +143,7 @@ def main():
             problems.append((name, ['none of its layers cites a source, so the page could not say where it came from']))
             continue
         plates.append({k: plate[k] for k in ('id', 'section', 'order', 'title', 'blurb',
-                                             'layers', 'relief', 'base', 'status') if k in plate}
+                                             'layers', 'relief', 'base', 'status', 'tour') if k in plate}
                       | {'sources': cites})
 
     for name, p in problems:

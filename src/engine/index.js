@@ -887,11 +887,19 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     }
   });
 
-  // --- the tour (tour.js): every place on show, with its card, one flight after another
+  // --- the tour (tour.js): every place on show, with its card, one flight after another;
+  // or, on a page that names its stops (a story, PLAN.md section 5), exactly those in order
   const tour = createTour(store, {
-    stops: () => points.list({ active: new Set(store.get('layers')?.active || []), drafts: !!store.get('drafts'), level, tour: true }),
+    stops: () => {
+      const list = points.list({ active: new Set(store.get('layers')?.active || []), drafts: !!store.get('drafts'), level, tour: true });
+      const plate = store.get('plates')?.plates?.find((p) => p.id === store.get('plate'));
+      if (!plate?.tour) return list;
+      const byId = new Map(list.filter((s) => s.layer === plate.tour.layer).map((s) => [s.item.id, s]));
+      const story = plate.tour.stops.map((id) => byId.get(id)).filter(Boolean);
+      return Object.assign(story, { ordered: true });
+    },
     visit: ({ layer, item }, opts) => {
-      store.set('item', { layer, id: item.id, data: item, categories: points.categories(layer) }, { source: 'tour' });
+      store.set('item', { layer, id: item.id, data: item, categories: points.categories(layer), fields: points.fields(layer) }, { source: 'tour' });
       return flyToItem(item, opts);
     },
     home: () => store.set('home', { t: performance.now() }),

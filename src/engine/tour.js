@@ -1,7 +1,7 @@
 // @ts-check
 // The tour: the camera visits every place on show, one after another, each with its
 // card, along a short path from the north (nearest neighbour, so no zig-zag across the
-// country). The play button pauses and resumes; any gesture, tap or card change hands
+// country). A page that names its stops (a story) gets exactly those, in its order. The play button pauses and resumes; any gesture, tap or card change hands
 // control back. Layers reach it through the engine's callbacks: it knows no layer ids.
 import { clamp, DEFAULT_CAMERA } from './camera-math.js';
 
@@ -29,8 +29,9 @@ export function createTour(store, { stops, visit, home }) {
 
   const d2 = (a, b) => (a.item.x - b.item.x) ** 2 + (a.item.z - b.item.z) ** 2;
 
-  /** Nearest-neighbour path from the northernmost stop. */
+  /** Nearest-neighbour path from the northernmost stop, unless the page gave the order. */
   function order(list) {
+    if (list.ordered) return [...list];
     const rest = [...list];
     const out = [];
     let cur = rest.length ? rest.reduce((a, b) => (b.item.z < a.item.z ? b : a)) : null;
@@ -109,5 +110,7 @@ export function createTour(store, { stops, visit, home }) {
   store.subscribe('level', () => { stop(); refresh(); });
   store.subscribe('layers', () => refresh());
   store.subscribe('drafts', () => refresh());
+  store.subscribe('plate', () => { stop(); refresh(); });
+  store.subscribe('plates', () => refresh());
   return { refresh, stop };
 }
