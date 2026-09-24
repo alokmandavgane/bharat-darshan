@@ -3,12 +3,12 @@
   "section": "history",
   "order": 3,
   "title": {
-    "en": "Rāma's road into exile: Ayodhyā to Citrakūṭa",
-    "hi": "राम का वनवास-मार्ग: अयोध्या से चित्रकूट"
+    "en": "Rāma's road: Ayodhyā to the Pampā",
+    "hi": "राम का मार्ग: अयोध्या से पम्पा"
   },
   "blurb": {
-    "en": "Ayodhyā-kāṇḍa 46-56, stage by stage: the rivers crossed, Guha's boat over the Gaṅgā, the confluence at Prayāga, a raft over the Yamunā, and Citrakūṭa. Play the tour to walk it in order.",
-    "hi": "अयोध्याकाण्ड 46-56, पड़ाव-दर-पड़ाव: पार की गई नदियाँ, गुह की नाव से गंगा, प्रयाग का संगम, बेड़े से यमुना, और चित्रकूट। क्रम से चलने के लिए भ्रमण चलाएँ।"
+    "en": "The Ayodhyā-kāṇḍa and the Araṇya-kāṇḍa: Kosala's rivers, Guha's boat, Prayāga, Citrakūṭa, the Daṇḍaka hermitages, Pañcavaṭī, Rāvaṇa's flight with Sītā and Rāma's search to the Pampā. Play the tour to follow it.",
+    "hi": "अयोध्याकाण्ड और अरण्यकाण्ड: कोसल की नदियाँ, गुह की नाव, प्रयाग, चित्रकूट, दण्डक के आश्रम, पंचवटी, सीता को लेकर रावण की उड़ान और पम्पा तक राम की खोज। इसे क्रम से देखने के लिए भ्रमण चलाएँ।"
   },
   "base": "plain",
   "layers": [
@@ -25,7 +25,9 @@
       "syandika",
       "sringaverapura",
       "prayaga",
-      "citrakuta"
+      "citrakuta",
+      "pancavati",
+      "pampa"
     ],
     "title": {
       "en": "Walk the road",

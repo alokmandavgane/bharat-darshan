@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fiftieth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-first round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,20 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-first round: Rāma's road extended through the Araṇyakāṇḍa to the Pampā.
+  Same page (`/en/atlas/rama-exile`), same layers, now titled "Rāma's road: Ayodhyā to the Pampā".
+  - 8 stops (Pañcavaṭī and the Pampā added) and 9 arrows in four colours: the road into exile,
+    the Daṇḍaka hermitages to Pañcavaṭī, Rāvaṇa's flight with Sītā (over the Pampā and on towards
+    Laṅkā, the arrow stopping at sea), and Rāma's search to the Pampā. The flight and the search
+    both run Pañcavaṭī to the Pampā and bow apart so they read as two routes.
+  - Pañcavaṭī is pinned at Nashik and the Pampā at the Pampā Sarovar near Hampi, both "likely, by
+    tradition"; Pañcavaṭī's card names Bhadrachalam's rival claim. The hermitages, the Krauñca
+    forest and Kabandha are named in the leg cards and not pinned.
+  - The search arrow is a diagram: the text's own bearings contradict one another (west, south,
+    east, then west) and its distances are a few krośas; the card says so.
+  - Checked in the browser (8 stops in order, new stop and leg cards read); tests and build pass.
+  - **Next for the route**: Kiṣkindhākāṇḍa (Ṛṣyamūka, Kiṣkindhā, Prasravaṇa, the search parties
+    already drawn on the Sugrīva page) and Yuddhakāṇḍa 4-22 (the march to the sea and the setu).
 - 2026-09-24, fiftieth round: Rāma's own road, Ayodhyā to Citrakūṭa (`/en/atlas/rama-exile`).
   The kosha attested Ayodhyākāṇḍa 46-56, which tells this stretch as a real itinerary in order,
   unlike Sugrīva's lists. Second story on the `tour` primitive, no engine change.

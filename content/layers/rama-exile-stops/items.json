@@ -226,5 +226,81 @@
       "https://sa.wikisource.org/wiki/रामायणम्/अयोध्याकाण्डम्/सर्गः_५६?oldid=313569",
       "https://www.geonames.org/1267629"
     ]
+  },
+  {
+    "id": "pancavati",
+    "status": "draft",
+    "name": {
+      "en": "Pañcavaṭī",
+      "hi": "पञ्चवटी"
+    },
+    "anchor": {
+      "lat": 19.99727,
+      "lon": 73.79096
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "forest",
+    "priority": 1,
+    "verse": "पञ्चवट्यभिविश्रुतः",
+    "locus": {
+      "en": "Rāmāyaṇa 3.13.13-22",
+      "hi": "रामायण 3.13.13-22"
+    },
+    "modern": {
+      "en": "Panchavati, Nashik",
+      "hi": "पंचवटी, नासिक"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Araṇya-kāṇḍa 13.13-22. Agastya's landmarks: two yojanas, north of a mahua forest, towards a banyan, up a rise by a mountain, near the Godāvarī. Sītā is carried off from here.",
+      "hi": "अरण्यकाण्ड 13.13-22। अगस्त्य के चिह्न: दो योजन, महुआ वन के उत्तर, एक वट की ओर, पर्वत के पास ऊँचाई पर, गोदावरी के निकट। यहीं से सीता का हरण होता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अरण्यकाण्डम्/सर्गः_१३?oldid=350940",
+      "https://www.geonames.org/1261731"
+    ]
+  },
+  {
+    "id": "pampa",
+    "status": "draft",
+    "name": {
+      "en": "Pampā",
+      "hi": "पम्पा"
+    },
+    "anchor": {
+      "lat": 15.3538,
+      "lon": 76.4774
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "search",
+    "priority": 1,
+    "verse": "पम्पायाः पश्चिमं तीरं",
+    "locus": {
+      "en": "Rāmāyaṇa 3.74.1-5",
+      "hi": "रामायण 3.74.1-5"
+    },
+    "modern": {
+      "en": "Pampā Sarovar, near Hampi",
+      "hi": "पम्पा सरोवर, हम्पी के पास"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Araṇya-kāṇḍa 74.1-5. Śabarī's hermitage on the west shore; Ṛṣyamūka, where Sugrīva lives, is close by. Rāvaṇa flew over this lake with Sītā.",
+      "hi": "अरण्यकाण्ड 74.1-5। पश्चिमी तट पर शबरी का आश्रम; पास ही ऋष्यमूक, जहाँ सुग्रीव रहते हैं। रावण सीता को लेकर इसी सरोवर के ऊपर से उड़ा था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/अरण्यकाण्डम्/सर्गः_७४?oldid=352122",
+      "https://en.wikipedia.org/wiki/Pampa_Sarovar"
+    ]
   }
 ]
