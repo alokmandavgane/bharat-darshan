@@ -3,12 +3,12 @@
   "section": "history",
   "order": 3,
   "title": {
-    "en": "Rāma's road: Ayodhyā to the southern sea",
-    "hi": "राम का मार्ग: अयोध्या से दक्षिणी समुद्र"
+    "en": "Rāma's road: Ayodhyā to Laṅkā and home",
+    "hi": "राम का मार्ग: अयोध्या से लंका और वापसी"
   },
   "blurb": {
-    "en": "Ayodhyā to Kiṣkindhā and the sea: Kosala's rivers, Prayāga, Citrakūṭa, the Daṇḍaka, Pañcavaṭī, Rāvaṇa's flight, the search, the rains, the monkeys' road to Mahendra and Hanumān's leap to Laṅkā and back.",
-    "hi": "अयोध्या से किष्किन्धा और समुद्र तक: कोसल की नदियाँ, प्रयाग, चित्रकूट, दण्डक, पंचवटी, रावण की उड़ान, खोज, वर्षा, महेन्द्र तक वानरों का मार्ग और लंका तक हनुमान की छलाँग और वापसी।"
+    "en": "Rāma's whole road as the epic tells it: into exile by Prayāga and Citrakūṭa, the Daṇḍaka and Pañcavaṭī, the search to Kiṣkindhā, Hanumān's leap, the march, the setu, and home to Ayodhyā by the Puṣpaka.",
+    "hi": "महाकाव्य के अनुसार राम का पूरा मार्ग: प्रयाग और चित्रकूट होकर वनवास, दण्डक और पंचवटी, किष्किन्धा तक खोज, हनुमान की छलाँग, कूच, सेतु, और पुष्पक से अयोध्या वापसी।"
   },
   "base": "plain",
   "layers": [
@@ -29,7 +29,9 @@
       "pancavati",
       "pampa",
       "kiskindha",
-      "mahendra-south"
+      "mahendra-south",
+      "setubandha",
+      "nandigrama"
     ],
     "title": {
       "en": "Walk the road",

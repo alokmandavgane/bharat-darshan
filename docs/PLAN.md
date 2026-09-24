@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-third round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-fourth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,20 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-fourth round: Rāma's road completed with the Yuddhakāṇḍa, Ayodhyā to Laṅkā and home.
+  Same page (`/en/atlas/rama-exile`), now "Rāma's road: Ayodhyā to Laṅkā and home". 12 stops and 22
+  arrows in ten colours.
+  - New stops: Setubandha (Rameswaram) and Nandigrāma (Bharatkund, 15 km south of Ayodhyā), both
+    "likely, by tradition". The Setubandha card quotes the text's own tīrtha, "where Mahādeva showed
+    his grace", without the later name Rāmeśvara.
+  - New colours: the march (Kiṣkindhā over the Sahya and Malaya to the sea), the setu (Setubandha
+    across the strait, a hundred yojanas in five days by the text), and the Puṣpaka return in six
+    arrows, Laṅkā → Kiṣkindhā → Pañcavaṭī → Citrakūṭa → Prayāga → Nandigrāma → Ayodhyā, bowed
+    apart from the outbound arrows. The return is the text's own recapitulation of the whole route.
+  - The Prayāga arrow carries the exile's closing date: the fourteenth year full, the fifth day.
+  - Checked in the browser (12 stops in order, new stop and leg cards read); tests and build pass.
+  - The route is now attested from Ayodhyā round to Ayodhyā. The kosha gazetteer holds 124 places;
+    34 are recorded and not drawn (outside the boundary, disputed, or unplaced by the text).
 - 2026-09-24, fifty-third round: Hanumān's leap and return added to Rāma's road (Sundarakāṇḍa).
   Same page (`/en/atlas/rama-exile`). No new stops: the kāṇḍa's action is in Laṅkā, which is not
   placed. A seventh colour, Hanumān's leap and return, replaces the Kiṣkindhā stage's "leap to come"

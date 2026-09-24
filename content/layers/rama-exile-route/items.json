@@ -460,5 +460,269 @@
     "sources": [
       "https://sa.wikisource.org/wiki/रामायणम्/सुन्दरकाण्डम्/सर्गः_६१?oldid=355599"
     ]
+  },
+  {
+    "id": "the-march",
+    "status": "draft",
+    "name": {
+      "en": "The march: over the Sahya and Malaya to the sea",
+      "hi": "कूच: सह्य और मलय पार कर समुद्र तक"
+    },
+    "category": "march",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 9.2885,
+        "lon": 79.31271
+      },
+      "bow": 0.12
+    },
+    "verse": "ते सह्यं समतिक्रम्य मलयं च महागिरिम्",
+    "locus": {
+      "en": "Rāmāyaṇa 6.4.92-96",
+      "hi": "रामायण 6.4.92-96"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 4.92-96. The army reaches Mahendra and the shore-forest and camps on the ocean's northern shore; the arrow is drawn to the setu's traditional head.",
+      "hi": "युद्धकाण्ड 4.92-96। सेना महेन्द्र और तट-वन तक पहुँचकर समुद्र के उत्तरी तट पर डेरा डालती है; तीर सेतु के पारंपरिक सिरे तक खींचा गया है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_४?oldid=356861"
+    ]
+  },
+  {
+    "id": "the-setu",
+    "status": "draft",
+    "name": {
+      "en": "Nala's setu: a hundred yojanas in five days",
+      "hi": "नल का सेतु: पाँच दिन में सौ योजन"
+    },
+    "category": "setu",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 9.2885,
+        "lon": 79.31271
+      },
+      "to": {
+        "lat": 9.05,
+        "lon": 79.85
+      },
+      "bow": 0.12
+    },
+    "verse": "कृतानि प्रथमेनाह्ना योजनानि चतुर्दश",
+    "locus": {
+      "en": "Rāmāyaṇa 6.22.66-76",
+      "hi": "रामायण 6.22.66-76"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 22.66-76. 14, 20, 21, 22 and 23 yojanas a day, ten wide, to Suvela. Adam's Bridge is the tradition; the strait is about 30 km.",
+      "hi": "युद्धकाण्ड 22.66-76। प्रतिदिन 14, 20, 21, 22 और 23 योजन, दस योजन चौड़ा, सुवेल तक। परंपरा इसे रामसेतु मानती है; जलडमरूमध्य लगभग 30 किमी है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_२२?oldid=357090"
+    ]
+  },
+  {
+    "id": "puspaka-1",
+    "status": "draft",
+    "name": {
+      "en": "The Puṣpaka: over the setu to Kiṣkindhā",
+      "hi": "पुष्पक: सेतु के ऊपर से किष्किन्धा"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 9.05,
+        "lon": 79.85
+      },
+      "to": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "bow": -0.18
+    },
+    "verse": "सेतुबन्ध इति ख्यातं त्रैलोक्येन च पूजितम्",
+    "locus": {
+      "en": "Rāmāyaṇa 6.123.15-21",
+      "hi": "रामायण 6.123.15-21"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 123.15-21. Rāma shows Sītā the camp, the bridge, Maināka and the tīrtha; they stop at Kiṣkindhā for the monkey wives.",
+      "hi": "युद्धकाण्ड 123.15-21। राम सीता को डेरा, सेतु, मैनाक और तीर्थ दिखाते हैं; वानर-पत्नियों के लिए किष्किन्धा में रुकते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२३?oldid=362606"
+    ]
+  },
+  {
+    "id": "puspaka-2",
+    "status": "draft",
+    "name": {
+      "en": "Over Ṛṣyamūka, the Pampā and Janasthāna to the Godāvarī",
+      "hi": "ऋष्यमूक, पम्पा और जनस्थान के ऊपर से गोदावरी तक"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 19.99727,
+        "lon": 73.79096
+      },
+      "bow": -0.18
+    },
+    "verse": "एषा गोदावरी रम्या",
+    "locus": {
+      "en": "Rāmāyaṇa 6.123.38-46",
+      "hi": "रामायण 6.123.38-46"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 123.38-46.",
+      "hi": "युद्धकाण्ड 123.38-46।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२३?oldid=362606"
+    ]
+  },
+  {
+    "id": "puspaka-3",
+    "status": "draft",
+    "name": {
+      "en": "Over the Daṇḍaka hermitages and Atri's to Citrakūṭa",
+      "hi": "दण्डक के आश्रमों और अत्रि के आश्रम के ऊपर से चित्रकूट तक"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 19.99727,
+        "lon": 73.79096
+      },
+      "to": {
+        "lat": 25.21473,
+        "lon": 80.91645
+      },
+      "bow": -0.18
+    },
+    "verse": "अत्रिः कुलपतिर्यत्र",
+    "locus": {
+      "en": "Rāmāyaṇa 6.123.47-51",
+      "hi": "रामायण 6.123.47-51"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 123.47-51. The only place the Rāmāyaṇa passages here put Atri on the route, between the Daṇḍaka and Citrakūṭa.",
+      "hi": "युद्धकाण्ड 123.47-51। यहाँ के रामायण अंशों में केवल यही स्थान अत्रि को मार्ग पर, दण्डक और चित्रकूट के बीच, रखता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२३?oldid=362606"
+    ]
+  },
+  {
+    "id": "puspaka-4",
+    "status": "draft",
+    "name": {
+      "en": "To Bharadvāja's, when the fourteenth year was full",
+      "hi": "चौदहवाँ वर्ष पूरा होने पर भरद्वाज के आश्रम तक"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.21473,
+        "lon": 80.91645
+      },
+      "to": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "bow": -0.18
+    },
+    "verse": "पूर्णे चतुर्दशे वर्षे",
+    "locus": {
+      "en": "Rāmāyaṇa 6.124.1",
+      "hi": "रामायण 6.124.1"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 124.1. Dated: the fifth day, the fourteen years complete.",
+      "hi": "युद्धकाण्ड 124.1। तिथि: पंचमी, चौदह वर्ष पूर्ण।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२४?oldid=362607"
+    ]
+  },
+  {
+    "id": "puspaka-5",
+    "status": "draft",
+    "name": {
+      "en": "To Nandigrāma and Bharata",
+      "hi": "नन्दिग्राम में भरत तक"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "to": {
+        "lat": 26.65,
+        "lon": 82.15
+      },
+      "bow": -0.18
+    },
+    "verse": "नन्दिग्राममुपागमत्",
+    "locus": {
+      "en": "Rāmāyaṇa 6.127.23-30",
+      "hi": "रामायण 6.127.23-30"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 127.23-30. Hanumān has gone ahead by Śṛṅgaverapura; Bharata hears the army 'crossing the Gomatī'.",
+      "hi": "युद्धकाण्ड 127.23-30। हनुमान शृंगवेरपुर होकर आगे जा चुके हैं; भरत सेना को 'गोमती पार करते' सुनते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२७?oldid=362610"
+    ]
+  },
+  {
+    "id": "puspaka-6",
+    "status": "draft",
+    "name": {
+      "en": "Home to Ayodhyā",
+      "hi": "अयोध्या वापसी"
+    },
+    "category": "return",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 26.65,
+        "lon": 82.15
+      },
+      "to": {
+        "lat": 26.79909,
+        "lon": 82.2047
+      },
+      "bow": -0.18
+    },
+    "verse": "राजधानी पितुर्मम",
+    "locus": {
+      "en": "Rāmāyaṇa 6.123.52-55",
+      "hi": "रामायण 6.123.52-55"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 123.52-55. 'Bow to Ayodhyā, Vaidehī, now that you are back.' The road ends where it began.",
+      "hi": "युद्धकाण्ड 123.52-55। 'वैदेही, लौट आई हो, अयोध्या को प्रणाम करो।' मार्ग वहीं समाप्त होता है जहाँ से आरंभ हुआ था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२३?oldid=362606"
+    ]
   }
 ]

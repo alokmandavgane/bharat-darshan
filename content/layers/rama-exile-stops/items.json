@@ -378,5 +378,81 @@
       "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_६७?oldid=354107",
       "https://www.geonames.org/1268008"
     ]
+  },
+  {
+    "id": "setubandha",
+    "status": "draft",
+    "name": {
+      "en": "Setubandha",
+      "hi": "सेतुबन्ध"
+    },
+    "anchor": {
+      "lat": 9.2885,
+      "lon": 79.31271
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "setu",
+    "priority": 1,
+    "verse": "सेतुबन्ध इति ख्यातं त्रैलोक्येन च पूजितम्",
+    "locus": {
+      "en": "Rāmāyaṇa 6.123.15-21",
+      "hi": "रामायण 6.123.15-21"
+    },
+    "modern": {
+      "en": "Rameswaram",
+      "hi": "रामेश्वरम"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 123.15-21. The text names a tīrtha 'Setubandha' at the bridge's head, where 'Mahādeva showed his grace' — the seed of the Rāmeśvaram tradition. Pinned at Rameswaram by tradition.",
+      "hi": "युद्धकाण्ड 123.15-21। पाठ सेतु के सिरे पर 'सेतुबन्ध' नाम का तीर्थ बताता है, जहाँ 'महादेव ने कृपा की' — रामेश्वरम परंपरा का बीज। परंपरा से रामेश्वरम पर रखा गया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२३?oldid=362606",
+      "https://www.geonames.org/1258698"
+    ]
+  },
+  {
+    "id": "nandigrama",
+    "status": "draft",
+    "name": {
+      "en": "Nandigrāma",
+      "hi": "नन्दिग्राम"
+    },
+    "anchor": {
+      "lat": 26.65,
+      "lon": 82.15
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "return",
+    "priority": 1,
+    "verse": "नन्दिग्राममुपागमत्",
+    "locus": {
+      "en": "Rāmāyaṇa 6.127.23-30",
+      "hi": "रामायण 6.127.23-30"
+    },
+    "modern": {
+      "en": "Bharatkund (Nandigram), near Ayodhya",
+      "hi": "भरतकुंड (नंदीग्राम), अयोध्या के पास"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Yuddha-kāṇḍa 127.23-30. Bharata ruled from here in Rāma's name. The last halt before Ayodhyā, 15 km on, where the road began.",
+      "hi": "युद्धकाण्ड 127.23-30। भरत ने यहीं से राम के नाम पर शासन किया। अयोध्या से पहले अंतिम पड़ाव, 15 किमी आगे, जहाँ से मार्ग आरंभ हुआ था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/युद्धकाण्डम्/सर्गः_१२७?oldid=362610",
+      "https://en.wikipedia.org/wiki/Bharat_Kund"
+    ]
   }
 ]
