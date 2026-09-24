@@ -363,46 +363,13 @@
     ]
   },
   {
-    "id": "to-the-western-sea",
-    "status": "draft",
-    "name": {
-      "en": "The pilgrimage, round to the western sea",
-      "hi": "तीर्थयात्रा, घूमकर पश्चिमी समुद्र तक"
-    },
-    "category": "exile",
-    "rank": 1,
-    "geometry": {
-      "from": {
-        "lat": 29.97897,
-        "lon": 76.58249
-      },
-      "to": {
-        "lat": 19.4167,
-        "lon": 72.8167
-      },
-      "bow": 0.3
-    },
-    "verse": "पुनः स शूर्पारकमाजगाम",
-    "locus": {
-      "en": "Mahābhārata 3.119.14-15",
-      "hi": "महाभारत 3.119.14-15"
-    },
-    "blurb": {
-      "en": "Āraṇyakaparvan 3.119.14-15. With Lomaśa east to Naimiṣa, Prayāga and Gayā, to the Gaṅgā's mouth and the south, then Śūrpāraka.",
-      "hi": "आरण्यकपर्व 3.119.14-15। लोमश के साथ पूर्व में नैमिष, प्रयाग और गया, गंगा के मुहाने और दक्षिण, फिर शूर्पारक।"
-    },
-    "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351"
-    ]
-  },
-  {
     "id": "up-the-coast",
     "status": "draft",
     "name": {
       "en": "Up the coast to Prabhāsa",
       "hi": "तट के साथ प्रभास तक"
     },
-    "category": "exile",
+    "category": "lomasa",
     "rank": 1,
     "geometry": {
       "from": {
@@ -426,39 +393,6 @@
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351"
-    ]
-  },
-  {
-    "id": "to-badari",
-    "status": "draft",
-    "name": {
-      "en": "North by Gaṅgādvāra to Badarī",
-      "hi": "गंगाद्वार होकर उत्तर में बदरी"
-    },
-    "category": "exile",
-    "rank": 1,
-    "geometry": {
-      "from": {
-        "lat": 20.888,
-        "lon": 70.401
-      },
-      "to": {
-        "lat": 30.7433,
-        "lon": 79.4938
-      },
-      "bow": 0.12
-    },
-    "verse": "गङ्गाद्वारमतिक्रम्य बहवः पर्वताः शुभाः",
-    "locus": {
-      "en": "Mahābhārata 3.157.9-11",
-      "hi": "महाभारत 3.157.9-11"
-    },
-    "blurb": {
-      "en": "Āraṇyakaparvan 3.157.9-11.",
-      "hi": "आरण्यकपर्व 3.157.9-11।"
-    },
-    "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-157?oldid=51539"
     ]
   },
   {
@@ -1944,6 +1878,501 @@
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "lom-naimisa",
+    "status": "draft",
+    "name": {
+      "en": "East with Lomaśa to Naimiṣa",
+      "hi": "लोमश के साथ पूर्व में नैमिष"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 29.97897,
+        "lon": 76.58249
+      },
+      "to": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "bow": 0.12
+    },
+    "verse": "क्रमेण पृथिवीपाल नैमिषारण्यमागताः",
+    "locus": {
+      "en": "Mahābhārata 3.93.1-8",
+      "hi": "महाभारत 3.93.1-8"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.93.1-8.",
+      "hi": "आरण्यकपर्व 3.93.1-8।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-093?oldid=51227"
+    ]
+  },
+  {
+    "id": "lom-prayaga",
+    "status": "draft",
+    "name": {
+      "en": "By the Bāhudā to Prayāga",
+      "hi": "बाहुदा होकर प्रयाग"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "to": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रयागे देवयजने देवानां पृथिवीपते",
+    "locus": {
+      "en": "Mahābhārata 3.93.1-8",
+      "hi": "महाभारत 3.93.1-8"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.93.1-8.",
+      "hi": "आरण्यकपर्व 3.93.1-8।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-093?oldid=51227"
+    ]
+  },
+  {
+    "id": "lom-kausiki",
+    "status": "draft",
+    "name": {
+      "en": "By Agastya's hermitage and the Nandā to the Kauśikī",
+      "hi": "अगस्त्याश्रम और नन्दा होकर कौशिकी"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "to": {
+        "lat": 25.9,
+        "lon": 86.7
+      },
+      "bow": 0.12
+    },
+    "verse": "जगामकौशिकीं पुण्यां रम्यां शीतजलां शुभां",
+    "locus": {
+      "en": "Mahābhārata 3.110.21-22",
+      "hi": "महाभारत 3.110.21-22"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.110.21-22. Durjayā, the Nandā and Hemakūṭa are not placed; the point on the Kosi is the compiler's.",
+      "hi": "आरण्यकपर्व 3.110.21-22। दुर्जया, नन्दा और हेमकूट तय नहीं; कोसी पर बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-110?oldid=52382"
+    ]
+  },
+  {
+    "id": "lom-sagara",
+    "status": "draft",
+    "name": {
+      "en": "Down to the Gaṅgā's mouth",
+      "hi": "नीचे गंगा के मुहाने तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.9,
+        "lon": 86.7
+      },
+      "to": {
+        "lat": 21.64,
+        "lon": 88.08
+      },
+      "bow": 0.12
+    },
+    "verse": "स सागरं समासाद्य गङ्गायाः संगमे नृप",
+    "locus": {
+      "en": "Mahābhārata 3.115.1-5",
+      "hi": "महाभारत 3.115.1-5"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.1-5.",
+      "hi": "आरण्यकपर्व 3.115.1-5।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331"
+    ]
+  },
+  {
+    "id": "lom-kalinga",
+    "status": "draft",
+    "name": {
+      "en": "By the sea shore to Kaliṅga",
+      "hi": "समुद्र तट से कलिंग"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 21.64,
+        "lon": 88.08
+      },
+      "to": {
+        "lat": 20.27241,
+        "lon": 85.83385
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः समुद्रतीरेण जगाम वसुधाधिपः",
+    "locus": {
+      "en": "Mahābhārata 3.115.1-5",
+      "hi": "महाभारत 3.115.1-5"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.1-5.",
+      "hi": "आरण्यकपर्व 3.115.1-5।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331"
+    ]
+  },
+  {
+    "id": "lom-mahendra",
+    "status": "draft",
+    "name": {
+      "en": "Into the sea, and a night on Mahendra",
+      "hi": "समुद्र-स्नान, और महेन्द्र पर एक रात"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 20.27241,
+        "lon": 85.83385
+      },
+      "to": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "bow": 0.12
+    },
+    "verse": "महेन्द्रमासाद्य निशामुवास",
+    "locus": {
+      "en": "Mahābhārata 3.115.31",
+      "hi": "महाभारत 3.115.31"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.31.",
+      "hi": "आरण्यकपर्व 3.115.31।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331"
+    ]
+  },
+  {
+    "id": "lom-godavari",
+    "status": "draft",
+    "name": {
+      "en": "To the Godāvarī's mouth",
+      "hi": "गोदावरी के मुहाने तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "to": {
+        "lat": 16.6,
+        "lon": 82.3
+      },
+      "bow": 0.12
+    },
+    "verse": "गोदावरीं सागरगामगच्छत्",
+    "locus": {
+      "en": "Mahābhārata 3.119.1-4",
+      "hi": "महाभारत 3.119.1-4"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.119.1-4. The point at the mouth is the compiler's.",
+      "hi": "आरण्यकपर्व 3.119.1-4। मुहाने का बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351"
+    ]
+  },
+  {
+    "id": "lom-dravida",
+    "status": "draft",
+    "name": {
+      "en": "Down the Draviḍa coast",
+      "hi": "द्रविड़ तट के साथ नीचे"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 16.6,
+        "lon": 82.3
+      },
+      "to": {
+        "lat": 10.8,
+        "lon": 79.85
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो विपाप्मा द्रविडेषु राज-",
+    "locus": {
+      "en": "Mahābhārata 3.119.1-4",
+      "hi": "महाभारत 3.119.1-4"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.119.1-4. Agastya's tīrtha and the Women's tīrthas are not placed; the point is the compiler's.",
+      "hi": "आरण्यकपर्व 3.119.1-4। अगस्त्य तीर्थ और नारी तीर्थ तय नहीं; बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351"
+    ]
+  },
+  {
+    "id": "lom-west",
+    "status": "draft",
+    "name": {
+      "en": "Across to Śūrpāraka",
+      "hi": "पार शूर्पारक तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 10.8,
+        "lon": 79.85
+      },
+      "to": {
+        "lat": 19.4167,
+        "lon": 72.8167
+      },
+      "bow": 0.12
+    },
+    "verse": "पुनः स शूर्पारकमाजगाम",
+    "locus": {
+      "en": "Mahābhārata 3.119.14-15",
+      "hi": "महाभारत 3.119.14-15"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.119.14-15. The text goes from the east coast to the west without saying how.",
+      "hi": "आरण्यकपर्व 3.119.14-15। पाठ बिना बताए पूर्वी तट से पश्चिमी तट पर जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351"
+    ]
+  },
+  {
+    "id": "lom-narmada",
+    "status": "draft",
+    "name": {
+      "en": "By the Payoṣṇī to the Narmadā",
+      "hi": "पयोष्णी होकर नर्मदा"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "to": {
+        "lat": 22.1,
+        "lon": 75.6
+      },
+      "bow": 0.12
+    },
+    "verse": "वैदूर्यपर्वतं चैव नर्मदां च महानदीम्",
+    "locus": {
+      "en": "Mahābhārata 3.122.16-20",
+      "hi": "महाभारत 3.122.16-20"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.122.16-20. The Payoṣṇī of Vidarbha and the Vaidūrya mountain are not placed; the point on the river is the compiler's.",
+      "hi": "आरण्यकपर्व 3.122.16-20। विदर्भ की पयोष्णी और वैदूर्य पर्वत तय नहीं; नदी पर बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-122?oldid=51365"
+    ]
+  },
+  {
+    "id": "lom-kurukshetra",
+    "status": "draft",
+    "name": {
+      "en": "North by the Yamunā to Kurukṣetra's door",
+      "hi": "यमुना होकर उत्तर में कुरुक्षेत्र के द्वार तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 22.1,
+        "lon": 75.6
+      },
+      "to": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "bow": 0.12
+    },
+    "verse": "द्वारमेतत्तु कौन्तेय कुरुक्षेत्रस्य भारत",
+    "locus": {
+      "en": "Mahābhārata 3.131.11-12",
+      "hi": "महाभारत 3.131.11-12"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.131.11-12.",
+      "hi": "आरण्यकपर्व 3.131.11-12।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-131?oldid=51410"
+    ]
+  },
+  {
+    "id": "lom-kashmir",
+    "status": "draft",
+    "name": {
+      "en": "By the Vipāśā to Kashmir",
+      "hi": "विपाशा होकर कश्मीर"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "to": {
+        "lat": 34.08565,
+        "lon": 74.80555
+      },
+      "bow": 0.12
+    },
+    "verse": "काश्मीरमण्डलं चैतत्सर्वपुण्यमरिंदम",
+    "locus": {
+      "en": "Mahābhārata 3.132.8-12",
+      "hi": "महाभारत 3.132.8-12"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.132.8-12.",
+      "hi": "आरण्यकपर्व 3.132.8-12।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-132?oldid=51415"
+    ]
+  },
+  {
+    "id": "lom-kanakhala",
+    "status": "draft",
+    "name": {
+      "en": "To Kanakhala and the Gaṅgā",
+      "hi": "कनखल और गंगा तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 34.08565,
+        "lon": 74.80555
+      },
+      "to": {
+        "lat": 29.94791,
+        "lon": 78.16025
+      },
+      "bow": 0.12
+    },
+    "verse": "एते कनखला राजन्नृषीणां दयिता नगाः",
+    "locus": {
+      "en": "Mahābhārata 3.137.4-6",
+      "hi": "महाभारत 3.137.4-6"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.137.4-6.",
+      "hi": "आरण्यकपर्व 3.137.4-6।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-137?oldid=51439"
+    ]
+  },
+  {
+    "id": "lom-badari",
+    "status": "draft",
+    "name": {
+      "en": "Up the sevenfold Gaṅgā to Badarī",
+      "hi": "सप्तधा गंगा के साथ ऊपर बदरी तक"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 29.94791,
+        "lon": 78.16025
+      },
+      "to": {
+        "lat": 30.7433,
+        "lon": 79.4938
+      },
+      "bow": 0.12
+    },
+    "verse": "उशीरबीजं मैनाकं गिरिं श्वेतं च भारत",
+    "locus": {
+      "en": "Mahābhārata 3.141.1-2",
+      "hi": "महाभारत 3.141.1-2"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.141.1-2.",
+      "hi": "आरण्यकपर्व 3.141.1-2।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-141?oldid=51461"
+    ]
+  },
+  {
+    "id": "lom-home",
+    "status": "draft",
+    "name": {
+      "en": "Home by the Kulindas, Viśākhayūpa and the Sarasvatī",
+      "hi": "कुलिन्द, विशाखयूप और सरस्वती होकर वापसी"
+    },
+    "category": "lomasa",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 30.7433,
+        "lon": 79.4938
+      },
+      "to": {
+        "lat": 29.97897,
+        "lon": 76.58249
+      },
+      "bow": -0.12
+    },
+    "verse": "सरस्वतीमेत्य निवासकामाः",
+    "locus": {
+      "en": "Mahābhārata 3.179.20-24",
+      "hi": "महाभारत 3.179.20-24"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.179.20-24. A month at Badarī, a year at Viśākhayūpa, 'as the twelfth year came on' to Dvaitavana, then Kāmyaka.",
+      "hi": "आरण्यकपर्व 3.179.20-24। बदरी में एक मास, विशाखयूप में एक वर्ष, 'बारहवाँ वर्ष आते' द्वैतवन, फिर काम्यक।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-179?oldid=51649"
     ]
   }
 ]

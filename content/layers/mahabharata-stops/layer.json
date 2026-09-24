@@ -65,6 +65,15 @@
       "icon": "pin"
     },
     {
+      "id": "lomasa",
+      "title": {
+        "en": "The pilgrimage with Lomaśa",
+        "hi": "लोमश के साथ तीर्थयात्रा"
+      },
+      "color": "#e08a1e",
+      "icon": "pin"
+    },
+    {
       "id": "virata",
       "title": {
         "en": "The thirteenth year",
@@ -155,8 +164,8 @@
     }
   },
   "note": {
-    "en": "The Mahābhārata's story as a road, in order, from the boys' arrival at Hastināpura to the last journey over the Himavat. The dates are the southern text's own: a passage of the Ādiparvan (1.134) counts Yudhiṣṭhira's years, sixteen on arrival, twenty-nine at the lac house, fifty-nine at the dice, seventy-two at Kurukṣetra, a hundred and eight at the end. In the forest years Nārada recites Pulastya's circuit of the tīrthas, a rightwise round of the country from Puṣkara to Prayāga, drawn as thin arrows because no one in the story walks it. After the coronation comes the aśvamedha horse's year, from one Caitra full moon to the next, followed by Arjuna round the country. Places the story returns to, Hastināpura, Prabhāsa, Kurukṣetra, Gaṅgādvāra, Gokarṇa, Girivraja and Dvārakā, have one pin per visit. Śataśṛṅga, Ekacakrā, Dvaitavana, Upaplavya and Maṇalūra are not placed.",
-    "hi": "महाभारत की कथा एक मार्ग के रूप में, क्रम से: बालकों के हस्तिनापुर आगमन से हिमवान् के पार महाप्रस्थान तक। तिथियाँ दक्षिणी पाठ की अपनी हैं: आदिपर्व का एक अंश (1.134) युधिष्ठिर की आयु गिनता है — आगमन पर सोलह, लाक्षागृह में उनतीस, द्यूत में उनसठ, कुरुक्षेत्र में बहत्तर, अंत में एक सौ आठ। वनवास के वर्षों में नारद पुलस्त्य की तीर्थ-परिक्रमा सुनाते हैं, पुष्कर से प्रयाग तक देश का दक्षिणावर्त चक्कर, जिसे पतले तीरों से दिखाया गया है क्योंकि कथा में कोई इस पर चलता नहीं। राज्याभिषेक के बाद अश्वमेध के अश्व का वर्ष आता है, एक चैत्र पूर्णिमा से अगली तक, जिसके पीछे अर्जुन देश भर घूमते हैं। जिन स्थानों पर कथा लौटती है — हस्तिनापुर, प्रभास, कुरुक्षेत्र, गंगाद्वार, गोकर्ण, गिरिव्रज और द्वारका — वहाँ हर बार का अलग पिन है। शतशृंग, एकचक्रा, द्वैतवन, उपप्लव्य और मणलूर के स्थान तय नहीं।"
+    "en": "The Mahābhārata's story as a road, in order, from the boys' arrival at Hastināpura to the last journey over the Himavat. The dates are the southern text's own: a passage of the Ādiparvan (1.134) counts Yudhiṣṭhira's years, sixteen on arrival, twenty-nine at the lac house, fifty-nine at the dice, seventy-two at Kurukṣetra, a hundred and eight at the end. In the forest years Nārada recites Pulastya's circuit of the tīrthas, a rightwise round of the country from Puṣkara to Prayāga, drawn as thin arrows because no one in the story walks it. The brothers then walk their own round with the seer Lomaśa, east to the Gaṅgā's mouth, down the coast, over to Prabhāsa and north to Badarī, and are back at Kāmyaka as the twelfth year begins. After the coronation comes the aśvamedha horse's year, from one Caitra full moon to the next, followed by Arjuna round the country. Places the story returns to, Hastināpura, Prabhāsa, Kurukṣetra, Gaṅgādvāra, Naimiṣa, Prayāga, the Gaṅgā's mouth, Gokarṇa, Girivraja, Dvārakā and Kāmyaka, have one pin per visit. Śataśṛṅga, Ekacakrā, Dvaitavana, Upaplavya and Maṇalūra are not placed.",
+    "hi": "महाभारत की कथा एक मार्ग के रूप में, क्रम से: बालकों के हस्तिनापुर आगमन से हिमवान् के पार महाप्रस्थान तक। तिथियाँ दक्षिणी पाठ की अपनी हैं: आदिपर्व का एक अंश (1.134) युधिष्ठिर की आयु गिनता है — आगमन पर सोलह, लाक्षागृह में उनतीस, द्यूत में उनसठ, कुरुक्षेत्र में बहत्तर, अंत में एक सौ आठ। वनवास के वर्षों में नारद पुलस्त्य की तीर्थ-परिक्रमा सुनाते हैं, पुष्कर से प्रयाग तक देश का दक्षिणावर्त चक्कर, जिसे पतले तीरों से दिखाया गया है क्योंकि कथा में कोई इस पर चलता नहीं। फिर भाई ऋषि लोमश के साथ अपनी परिक्रमा करते हैं — पूर्व में गंगा के मुहाने तक, तट के साथ नीचे, पार प्रभास और उत्तर में बदरी तक — और बारहवाँ वर्ष आरंभ होते काम्यक लौट आते हैं। राज्याभिषेक के बाद अश्वमेध के अश्व का वर्ष आता है, एक चैत्र पूर्णिमा से अगली तक, जिसके पीछे अर्जुन देश भर घूमते हैं। जिन स्थानों पर कथा लौटती है — हस्तिनापुर, प्रभास, कुरुक्षेत्र, गंगाद्वार, नैमिष, प्रयाग, गंगा का मुहाना, गोकर्ण, गिरिव्रज, द्वारका और काम्यक — वहाँ हर बार का अलग पिन है। शतशृंग, एकचक्रा, द्वैतवन, उपप्लव्य और मणलूर के स्थान तय नहीं।"
   },
   "sources": [
     "sa-wikisource",

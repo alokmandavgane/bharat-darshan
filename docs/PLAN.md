@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-eighth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-ninth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,17 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-ninth round: the pilgrimage with Lomaśa added to the Mahābhārata tour.
+  Same page, now 47 stops and 72 arrows in twelve colours. An orange group, "The pilgrimage with
+  Lomaśa", replaces the two placeholder arrows (Kāmyaka → Śūrpāraka, Prabhāsa → Badarī) with the
+  route the brothers walk. It runs east to Naimiṣa, Prayāga, the Kauśikī and the Gaṅgā's mouth; down
+  the coast by Kaliṅga and Mahendra to the Godāvarī and the Draviḍas; over to Śūrpāraka and Prabhāsa;
+  then by the Narmadā to Kurukṣetra's door, Kashmir, Kanakhala and Badarī; and home to Kāmyaka "as
+  the twelfth year came on".
+  - Revisits get their own cards: Naimiṣa, Prayāga, the Gaṅgā's mouth, Kurukṣetra, Gaṅgādvāra and
+    Kāmyaka.
+  - The Kosi, Godāvarī-mouth, Draviḍa and Narmadā points are the compiler's and say so.
+  - Checked in the browser (47 stops in order, no console errors); tests and build pass.
 - 2026-09-24, fifty-eighth round: tour arrows fly as arcs instead of following the ground.
   A floating arrow still followed the relief, which at the exaggerated heights (tens of km) bent a
   1,000 km leg into a wobble over every range it crossed. That is right for a monsoon front and wrong

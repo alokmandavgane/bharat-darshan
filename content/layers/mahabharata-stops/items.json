@@ -612,7 +612,7 @@
       "IN-UP"
     ],
     "category": "pulastya",
-    "priority": 2,
+    "priority": 1,
     "event": {
       "en": "Naimiṣa, where all tīrthas are",
       "hi": "नैमिष, जहाँ सब तीर्थ हैं"
@@ -750,7 +750,7 @@
       "IN-WB"
     ],
     "category": "pulastya",
-    "priority": 2,
+    "priority": 1,
     "event": {
       "en": "The Gaṅgā meets the sea",
       "hi": "गंगा का सागर-संगम"
@@ -934,7 +934,7 @@
       "IN-UP"
     ],
     "category": "pulastya",
-    "priority": 2,
+    "priority": 1,
     "event": {
       "en": "Prayāga, above all tīrthas",
       "hi": "प्रयाग, सब तीर्थों से श्रेष्ठ"
@@ -966,6 +966,282 @@
     ]
   },
   {
+    "id": "naimisa-lomasa",
+    "status": "draft",
+    "name": {
+      "en": "Naimiṣa",
+      "hi": "नैमिष"
+    },
+    "anchor": {
+      "lat": 27.35,
+      "lon": 80.49
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "lomasa",
+    "priority": 1,
+    "event": {
+      "en": "Naimiṣa and the Gomatī",
+      "hi": "नैमिष और गोमती"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "नैमिषारण्यमागताः",
+    "locus": {
+      "en": "Mahābhārata 3.93.1-8",
+      "hi": "महाभारत 3.93.1-8"
+    },
+    "modern": {
+      "en": "Naimisharanya (Nimsar), on the Gomati",
+      "hi": "नैमिषारण्य (नीमसार), गोमती पर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.93.1-8. Lomaśa leads the brothers and a few brahmins east from Kāmyaka, as Dhaumya's survey began.",
+      "hi": "आरण्यकपर्व 3.93.1-8। लोमश भाइयों और कुछ ब्राह्मणों को काम्यक से पूर्व की ओर ले जाते हैं, जैसे धौम्य का वर्णन आरंभ हुआ था।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-093?oldid=51227",
+      "https://en.wikipedia.org/wiki/Naimisharanya"
+    ]
+  },
+  {
+    "id": "prayaga-lomasa",
+    "status": "draft",
+    "name": {
+      "en": "Prayāga",
+      "hi": "प्रयाग"
+    },
+    "anchor": {
+      "lat": 25.44478,
+      "lon": 81.84322
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "lomasa",
+    "priority": 2,
+    "event": {
+      "en": "Prayāga, Prajāpati's altar",
+      "hi": "प्रयाग, प्रजापति की वेदी"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "प्रयागे देवयजने देवानां पृथिवीपते",
+    "locus": {
+      "en": "Mahābhārata 3.93.1-8",
+      "hi": "महाभारत 3.93.1-8"
+    },
+    "modern": {
+      "en": "Prayagraj",
+      "hi": "प्रयागराज"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.93.1-8. The confluence, and Bharadvāja's hermitage beside it.",
+      "hi": "आरण्यकपर्व 3.93.1-8। संगम, और उसके पास भरद्वाज का आश्रम।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-093?oldid=51227",
+      "https://www.geonames.org/1278994"
+    ]
+  },
+  {
+    "id": "gangasagara-lomasa",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgā-sāgara-saṅgama",
+      "hi": "गङ्गासागरसङ्गम"
+    },
+    "anchor": {
+      "lat": 21.64,
+      "lon": 88.08
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "lomasa",
+    "priority": 2,
+    "event": {
+      "en": "The Gaṅgā's mouth, among five hundred rivers",
+      "hi": "पाँच सौ नदियों के बीच गंगा का मुहाना"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "स सागरं समासाद्य गङ्गायाः संगमे नृप",
+    "locus": {
+      "en": "Mahābhārata 3.115.1-5",
+      "hi": "महाभारत 3.115.1-5"
+    },
+    "modern": {
+      "en": "Gangasagar, Sagar Island",
+      "hi": "गंगासागर, सागर द्वीप"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.1-5. After Agastya's Durjayā, the Nandā, Hemakūṭa and the Kauśikī, where Ṛṣyaśṛṅga's story is told.",
+      "hi": "आरण्यकपर्व 3.115.1-5। अगस्त्य की दुर्जया, नन्दा, हेमकूट और कौशिकी के बाद, जहाँ ऋष्यशृंग की कथा कही जाती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331",
+      "https://en.wikipedia.org/wiki/Gangasagar"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिङ्ग"
+    },
+    "anchor": {
+      "lat": 20.27241,
+      "lon": 85.83385
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "lomasa",
+    "priority": 1,
+    "event": {
+      "en": "Kaliṅga and the Vaitaraṇī",
+      "hi": "कलिंग और वैतरणी"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "एते कलिङ्गाः कौन्तेय यत्र वैतरणी नदी",
+    "locus": {
+      "en": "Mahābhārata 3.115.1-5",
+      "hi": "महाभारत 3.115.1-5"
+    },
+    "modern": {
+      "en": "Bhubaneswar (Tosalī)",
+      "hi": "भुवनेश्वर (तोसली)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.1-5. Placed at Bhubaneswar, beside Tosalī (Dhauli), Kaliṅga's capital under Aśoka. Its king stands for the south-east at 14.32.",
+      "hi": "आरण्यकपर्व 3.115.1-5। तोसली (धौली) के पास भुवनेश्वर पर रखा गया, जो अशोक के समय कलिंग की राजधानी थी। 14.32 में इसका राजा आग्नेय भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331",
+      "https://www.geonames.org/1275817"
+    ]
+  },
+  {
+    "id": "mahendra",
+    "status": "draft",
+    "name": {
+      "en": "Mahendra",
+      "hi": "महेन्द्र"
+    },
+    "anchor": {
+      "lat": 18.97,
+      "lon": 84.37
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "lomasa",
+    "priority": 1,
+    "event": {
+      "en": "Mahendra, Paraśurāma's mountain",
+      "hi": "महेन्द्र, परशुराम का पर्वत"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "महेन्द्रमासाद्य निशामुवास",
+    "locus": {
+      "en": "Mahābhārata 3.115.31",
+      "hi": "महाभारत 3.115.31"
+    },
+    "modern": {
+      "en": "Eastern Ghats (Mahendragiri)",
+      "hi": "पूर्वी घाट (महेंद्रगिरि)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.115.31.",
+      "hi": "आरण्यकपर्व 3.115.31।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-115?oldid=51331",
+      "https://en.wikipedia.org/wiki/Eastern_Ghats"
+    ]
+  },
+  {
+    "id": "surparaka",
+    "status": "draft",
+    "name": {
+      "en": "Śūrpāraka",
+      "hi": "शूर्पारक"
+    },
+    "anchor": {
+      "lat": 19.4167,
+      "lon": 72.8167
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "lomasa",
+    "priority": 1,
+    "event": {
+      "en": "Śūrpāraka on the western sea",
+      "hi": "पश्चिमी समुद्र पर शूर्पारक"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "पुनः स शूर्पारकमाजगाम",
+    "locus": {
+      "en": "Mahābhārata 3.119.14-15",
+      "hi": "महाभारत 3.119.14-15"
+    },
+    "modern": {
+      "en": "Sopara, Palghar district",
+      "hi": "सोपारा, पालघर जिला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.119.14-15. After the Godāvarī's mouth and the Draviḍa coast; the text crosses to the west coast without saying how.",
+      "hi": "आरण्यकपर्व 3.119.14-15। गोदावरी के मुहाने और द्रविड़ तट के बाद; पाठ बिना बताए पश्चिमी तट पर पहुँचता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-119?oldid=51351",
+      "https://en.wikipedia.org/wiki/Sopara"
+    ]
+  },
+  {
     "id": "prabhasa",
     "status": "draft",
     "name": {
@@ -979,15 +1255,15 @@
     "regions": [
       "IN-GJ"
     ],
-    "category": "exile",
+    "category": "lomasa",
     "priority": 1,
     "event": {
       "en": "The pilgrimage reaches the western sea",
       "hi": "तीर्थयात्रा पश्चिमी समुद्र तक"
     },
     "when": {
-      "en": "The forest years",
-      "hi": "वनवास के वर्ष"
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
     },
     "verse": "तीर्थं प्रभासं",
     "locus": {
@@ -1012,6 +1288,144 @@
     ]
   },
   {
+    "id": "kurukshetra-lomasa",
+    "status": "draft",
+    "name": {
+      "en": "Kurukṣetra",
+      "hi": "कुरुक्षेत्र"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "lomasa",
+    "priority": 2,
+    "event": {
+      "en": "'The door of Kurukṣetra'",
+      "hi": "'कुरुक्षेत्र का द्वार'"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "द्वारमेतत्तु कौन्तेय कुरुक्षेत्रस्य भारत",
+    "locus": {
+      "en": "Mahābhārata 3.131.11-12",
+      "hi": "महाभारत 3.131.11-12"
+    },
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.131.11-12. From Prabhāsa by the Payoṣṇī, the Vaidūrya and the Narmadā, then the Yamunā's old sacrificial grounds.",
+      "hi": "आरण्यकपर्व 3.131.11-12। प्रभास से पयोष्णी, वैदूर्य और नर्मदा होकर, फिर यमुना की प्राचीन यज्ञभूमियाँ।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-131?oldid=51410",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "kasmira",
+    "status": "draft",
+    "name": {
+      "en": "Kāśmīra",
+      "hi": "काश्मीर"
+    },
+    "anchor": {
+      "lat": 34.08565,
+      "lon": 74.80555
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "lomasa",
+    "priority": 1,
+    "event": {
+      "en": "Kashmir and the gate of the Mānasa",
+      "hi": "कश्मीर और मानस का द्वार"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "काश्मीरमण्डलं चैतत्सर्वपुण्यमरिंदम",
+    "locus": {
+      "en": "Mahābhārata 3.132.8-12",
+      "hi": "महाभारत 3.132.8-12"
+    },
+    "modern": {
+      "en": "Srinagar (Kashmir)",
+      "hi": "श्रीनगर (कश्मीर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.132.8-12. By the Vipāśā, named for Vasiṣṭha rising from it 'unbound'.",
+      "hi": "आरण्यकपर्व 3.132.8-12। विपाशा होकर, जिसका नाम वसिष्ठ के उससे 'पाशमुक्त' उठने से पड़ा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-132?oldid=51415",
+      "https://www.geonames.org/1255634"
+    ]
+  },
+  {
+    "id": "gangadvara-lomasa",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgādvāra",
+      "hi": "गङ्गाद्वार"
+    },
+    "anchor": {
+      "lat": 29.94791,
+      "lon": 78.16025
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "lomasa",
+    "priority": 2,
+    "event": {
+      "en": "Kanakhala and the Gaṅgā",
+      "hi": "कनखल और गंगा"
+    },
+    "when": {
+      "en": "The forest years, while Arjuna is in Indra's heaven",
+      "hi": "वनवास के वर्ष, जब अर्जुन इन्द्रलोक में हैं"
+    },
+    "verse": "एते कनखला राजन्नृषीणां दयिता नगाः",
+    "locus": {
+      "en": "Mahābhārata 3.137.4-6",
+      "hi": "महाभारत 3.137.4-6"
+    },
+    "modern": {
+      "en": "Haridwar",
+      "hi": "हरिद्वार"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.137.4-6. Where the Gaṅgā leaves the mountains.",
+      "hi": "आरण्यकपर्व 3.137.4-6। जहाँ गंगा पर्वतों से निकलती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-137?oldid=51439",
+      "https://www.geonames.org/1270351"
+    ]
+  },
+  {
     "id": "badari",
     "status": "draft",
     "name": {
@@ -1025,15 +1439,15 @@
     "regions": [
       "IN-UK"
     ],
-    "category": "exile",
+    "category": "lomasa",
     "priority": 1,
     "event": {
-      "en": "Badarī and the northern mountains",
-      "hi": "बदरी और उत्तरी पर्वत"
+      "en": "Badarī, and on into the mountains",
+      "hi": "बदरी, और आगे पर्वतों में"
     },
     "when": {
-      "en": "The forest years",
-      "hi": "वनवास के वर्ष"
+      "en": "Arjuna rejoins after five years in Indra's heaven",
+      "hi": "इन्द्रलोक में पाँच वर्ष बाद अर्जुन लौटते हैं"
     },
     "verse": "विशाला बदरी दृष्टा नरनारायणाश्रमः",
     "locus": {
@@ -1049,12 +1463,58 @@
       "hi": "निश्चित, मानक पहचान"
     },
     "blurb": {
-      "en": "Āraṇyakaparvan 3.157.9-11. Past Gaṅgādvāra into the Himavat, on to Gandhamādana and Kubera's lake.",
-      "hi": "आरण्यकपर्व 3.157.9-11। गंगाद्वार होकर हिमवान् में, आगे गन्धमादन और कुबेर के सरोवर तक।"
+      "en": "Āraṇyakaparvan 3.157.9-11. Seventeen days on, Vṛṣaparvan's hermitage and Kubera's realm, beyond the range; then a month back at Badarī.",
+      "hi": "आरण्यकपर्व 3.157.9-11। सत्रह दिन आगे, पर्वत के पार, वृषपर्वा का आश्रम और कुबेर का लोक; फिर बदरी में एक मास।"
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-157?oldid=51539",
       "https://en.wikipedia.org/wiki/Badrinath"
+    ]
+  },
+  {
+    "id": "kamyaka-return",
+    "status": "draft",
+    "name": {
+      "en": "Kāmyaka",
+      "hi": "काम्यक"
+    },
+    "anchor": {
+      "lat": 29.97897,
+      "lon": 76.58249
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "lomasa",
+    "priority": 2,
+    "event": {
+      "en": "Back to Kāmyaka",
+      "hi": "काम्यक वापसी"
+    },
+    "when": {
+      "en": "The twelfth year: the Kārttika full moon on the Sarasvatī",
+      "hi": "बारहवाँ वर्ष: सरस्वती पर कार्तिक पूर्णिमा"
+    },
+    "verse": "काम्यकं प्रययुर्वनम्",
+    "locus": {
+      "en": "Mahābhārata 3.184.15-18",
+      "hi": "महाभारत 3.184.15-18"
+    },
+    "modern": {
+      "en": "on the Sarasvatī west of Kurukṣetra",
+      "hi": "कुरुक्षेत्र के पश्चिम में सरस्वती पर"
+    },
+    "identified": {
+      "en": "likely, placed by the compiler from the text's directions",
+      "hi": "संभावित, पाठ के संकेतों से संकलक द्वारा रखा गया"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.184.15-18. By Subāhu's Kulinda country and a year at Viśākhayūpa, then the desert's edge, the Sarasvatī and Dvaitavana.",
+      "hi": "आरण्यकपर्व 3.184.15-18। सुबाहु के कुलिन्द देश और विशाखयूप में एक वर्ष, फिर मरु का किनारा, सरस्वती और द्वैतवन होकर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-184?oldid=52026",
+      "https://www.geonames.org/1259939"
     ]
   },
   {

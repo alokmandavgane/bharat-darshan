@@ -66,6 +66,14 @@
       "color": "#7d8c2e"
     },
     {
+      "id": "lomasa",
+      "title": {
+        "en": "The pilgrimage with Lomaśa",
+        "hi": "लोमश के साथ तीर्थयात्रा"
+      },
+      "color": "#e08a1e"
+    },
+    {
       "id": "virata",
       "title": {
         "en": "The thirteenth year",
