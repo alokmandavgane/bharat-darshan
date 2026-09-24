@@ -38,6 +38,15 @@
       "icon": "pin"
     },
     {
+      "id": "north",
+      "title": {
+        "en": "Arjuna's conquest of the north",
+        "hi": "अर्जुन की उत्तर-विजय"
+      },
+      "color": "#6fa8d6",
+      "icon": "pin"
+    },
+    {
       "id": "bhima",
       "title": {
         "en": "Bhīma's conquest of the east",

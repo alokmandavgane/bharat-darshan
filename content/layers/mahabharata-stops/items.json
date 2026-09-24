@@ -552,6 +552,190 @@
     ]
   },
   {
+    "id": "pragjyotisa-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Prāgjyotiṣa",
+      "hi": "प्राग्ज्योतिष"
+    },
+    "anchor": {
+      "lat": 26.1844,
+      "lon": 91.7458
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "north",
+    "priority": 1,
+    "event": {
+      "en": "Bhagadatta fights eight days",
+      "hi": "भगदत्त आठ दिन लड़ते हैं"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "प्रग्ज्योतिषमुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.27.16-18",
+      "hi": "महाभारत 2.27.16-18"
+    },
+    "modern": {
+      "en": "Guwahati",
+      "hi": "गुवाहाटी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.27.16-18. After Kuliṅga, the Śālvas and Śākala's 'seven islands' in the Panjab; the old king yields to his friend Pāṇḍu's son.",
+      "hi": "सभापर्व 2.27.16-18। पंजाब में कुलिंग, शाल्व और शाकल के 'सात द्वीपों' के बाद; वृद्ध राजा अपने मित्र पाण्डु के पुत्र के आगे झुकते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-027?oldid=50371",
+      "https://www.geonames.org/1271476"
+    ]
+  },
+  {
+    "id": "kasmira-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Kāśmīra",
+      "hi": "काश्मीर"
+    },
+    "anchor": {
+      "lat": 34.08565,
+      "lon": 74.80555
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "north",
+    "priority": 2,
+    "event": {
+      "en": "Kashmir and the Trigartas",
+      "hi": "कश्मीर और त्रिगर्त"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "ततः काश्मीरकान्वीरान्क्षत्रियान्क्षत्रियर्षभः",
+    "locus": {
+      "en": "Mahābhārata 2.28.17-25",
+      "hi": "महाभारत 2.28.17-25"
+    },
+    "modern": {
+      "en": "Srinagar (Kashmir)",
+      "hi": "श्रीनगर (कश्मीर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.17-25. Along the hills from the east: the inner, outer and near ranges, the Ulūkas, Devaprastha and the Paurava.",
+      "hi": "सभापर्व 2.28.17-25। पूर्व से पहाड़ियों के साथ: भीतरी, बाहरी और निकट पर्वत, उलूक, देवप्रस्थ और पौरव।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375",
+      "https://www.geonames.org/1255634"
+    ]
+  },
+  {
+    "id": "abhisara",
+    "status": "draft",
+    "name": {
+      "en": "Abhisāra",
+      "hi": "अभिसार"
+    },
+    "anchor": {
+      "lat": 33.77033,
+      "lon": 74.09254
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "category": "north",
+    "priority": 2,
+    "event": {
+      "en": "Abhisārī and Uraśā",
+      "hi": "अभिसारी और उरशा"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "अभिसारीं ततो रम्यां विजिग्ये कुरुनन्दनः",
+    "locus": {
+      "en": "Mahābhārata 2.28.17-25",
+      "hi": "महाभारत 2.28.17-25"
+    },
+    "modern": {
+      "en": "Poonch–Rajouri",
+      "hi": "पुंछ–राजौरी"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.17-25. Kingdoms Alexander's historians knew; then Siṃhapura and the Bāhlīkas, beyond the boundary.",
+      "hi": "सभापर्व 2.28.17-25। सिकंदर के इतिहासकारों को ज्ञात राज्य; फिर सिंहपुर और बाह्लीक, सीमा के पार।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375",
+      "https://www.geonames.org/1167718"
+    ]
+  },
+  {
+    "id": "darada",
+    "status": "draft",
+    "name": {
+      "en": "Darada",
+      "hi": "दरद"
+    },
+    "anchor": {
+      "lat": 35.91869,
+      "lon": 74.31245
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "category": "north",
+    "priority": 2,
+    "event": {
+      "en": "The Daradas and Kambojas",
+      "hi": "दरद और कम्बोज"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "दरदान्सहकाम्भोजैरजयत्पाकशासनिः",
+    "locus": {
+      "en": "Mahābhārata 2.28.17-25",
+      "hi": "महाभारत 2.28.17-25"
+    },
+    "modern": {
+      "en": "Gilgit (Dardistan)",
+      "hi": "गिलगित (दरदिस्तान)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.17-25. Then the Ṛṣikas, the Himavat and the White mountain; beyond it lake Mānasa and the Gandharvas' horses.",
+      "hi": "सभापर्व 2.28.17-25। फिर ऋषिक, हिमवान् और श्वेत पर्वत; उसके पार मानसरोवर और गन्धर्वों के घोड़े।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375",
+      "https://www.geonames.org/1178338"
+    ]
+  },
+  {
     "id": "kampilya-bhima",
     "status": "draft",
     "name": {
@@ -915,7 +1099,7 @@
       "hi": "सभापर्व 2.31.25-28। पौण्ड्रक वासुदेव, कौशिकी के कच्छ और वंग के बाद; फिर लौहित्य तक।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031",
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390",
       "https://www.geonames.org/1255046"
     ]
   },
@@ -1237,7 +1421,7 @@
       "hi": "सभापर्व 2.32.73-75। अंतरीप पर कन्या का तीर्थ, जहाँ तीन समुद्र मिलते हैं।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032",
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
       "https://www.geonames.org/1268008"
     ]
   },
@@ -2663,7 +2847,7 @@
       "hi": "शल्यपर्व 9.35.42-43। किसी भी पक्ष से लड़ने से इनकार कर वे समुद्र से धारा के विरुद्ध नदी के साथ ऊपर जाते हैं।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D-09-%E0%A4%B6%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5-035",
+      "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D-09-%E0%A4%B6%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5-035?oldid=53501",
       "https://en.wikipedia.org/wiki/Prabhas_Patan"
     ]
   },

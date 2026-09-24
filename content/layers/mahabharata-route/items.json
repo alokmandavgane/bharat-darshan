@@ -3032,7 +3032,7 @@
       "hi": "सभापर्व 2.31.25-28। पुण्ड्र और वंग अधिकतर सीमा के बाहर; तीर बंदरगाह तक जाता है।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031"
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
     ]
   },
   {
@@ -3065,7 +3065,7 @@
       "hi": "सभापर्व 2.31.25-28। ब्रह्मपुत्र; गुवाहाटी पर बिंदु संकलक का है।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031"
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
     ]
   },
   {
@@ -3329,7 +3329,7 @@
       "hi": "सभापर्व 2.32.73-75।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032"
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
     ]
   },
   {
@@ -3396,6 +3396,237 @@
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-034?oldid=50404"
+    ]
+  },
+  {
+    "id": "n-sakala",
+    "status": "draft",
+    "name": {
+      "en": "To Śākala and 'the seven islands'",
+      "hi": "शाकल और 'सात द्वीपों' तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "to": {
+        "lat": 32.49,
+        "lon": 74.53
+      },
+      "bow": 0.12
+    },
+    "verse": "विजिग्ये शाकलद्वीपे प्रतिविन्ध्यं च पार्थिवम्",
+    "locus": {
+      "en": "Mahābhārata 2.27.9-15",
+      "hi": "महाभारत 2.27.9-15"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.27.9-15. By Kuliṅga and the Śālvas; Śākala (Sialkot) is beyond the boundary.",
+      "hi": "सभापर्व 2.27.9-15। कुलिंग और शाल्वों होकर; शाकल (सियालकोट) सीमा के पार है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-027?oldid=50371"
+    ]
+  },
+  {
+    "id": "n-pragjyotisa",
+    "status": "draft",
+    "name": {
+      "en": "Across to Prāgjyotiṣa",
+      "hi": "पार प्राग्ज्योतिष तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 32.49,
+        "lon": 74.53
+      },
+      "to": {
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रग्ज्योतिषमुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.27.16-18",
+      "hi": "महाभारत 2.27.16-18"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.27.16-18. From the Panjab to the far east, as the text orders it.",
+      "hi": "सभापर्व 2.27.16-18। पंजाब से सुदूर पूर्व, जैसा पाठ क्रम देता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-027?oldid=50371"
+    ]
+  },
+  {
+    "id": "n-hills",
+    "status": "draft",
+    "name": {
+      "en": "Along the hills to Kashmir",
+      "hi": "पहाड़ियों के साथ कश्मीर तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      "to": {
+        "lat": 34.08565,
+        "lon": 74.80555
+      },
+      "bow": 0.12
+    },
+    "verse": "अन्तर्गिरिं च कौन्तेयस्तथैव च बहिर्गिरिम्",
+    "locus": {
+      "en": "Mahābhārata 2.28.1-5",
+      "hi": "महाभारत 2.28.1-5"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.1-5.",
+      "hi": "सभापर्व 2.28.1-5।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375"
+    ]
+  },
+  {
+    "id": "n-abhisara",
+    "status": "draft",
+    "name": {
+      "en": "By the Trigartas to Abhisārī",
+      "hi": "त्रिगर्तों होकर अभिसारी"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 34.08565,
+        "lon": 74.80555
+      },
+      "to": {
+        "lat": 33.77033,
+        "lon": 74.09254
+      },
+      "bow": 0.12
+    },
+    "verse": "अभिसारीं ततो रम्यां विजिग्ये कुरुनन्दनः",
+    "locus": {
+      "en": "Mahābhārata 2.28.17-25",
+      "hi": "महाभारत 2.28.17-25"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.17-25.",
+      "hi": "सभापर्व 2.28.17-25।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375"
+    ]
+  },
+  {
+    "id": "n-darada",
+    "status": "draft",
+    "name": {
+      "en": "To the Daradas",
+      "hi": "दरदों तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 33.77033,
+        "lon": 74.09254
+      },
+      "to": {
+        "lat": 35.91869,
+        "lon": 74.31245
+      },
+      "bow": 0.12
+    },
+    "verse": "दरदान्सहकाम्भोजैरजयत्पाकशासनिः",
+    "locus": {
+      "en": "Mahābhārata 2.28.17-25",
+      "hi": "महाभारत 2.28.17-25"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.28.17-25.",
+      "hi": "सभापर्व 2.28.17-25।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-028?oldid=50375"
+    ]
+  },
+  {
+    "id": "n-manasa",
+    "status": "draft",
+    "name": {
+      "en": "Over the White mountain to lake Mānasa",
+      "hi": "श्वेत पर्वत पार मानसरोवर तक"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 35.91869,
+        "lon": 74.31245
+      },
+      "to": {
+        "lat": 30.65,
+        "lon": 81.45
+      },
+      "bow": 0.12
+    },
+    "verse": "तांस्तु सान्त्वेन निर्जित्य मानसं सर उत्तमम्",
+    "locus": {
+      "en": "Mahābhārata 2.29.1-6",
+      "hi": "महाभारत 2.29.1-6"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.29.1-6. The Ṛṣikas, the Kimpuruṣas and Hāṭaka; Mānasa is beyond the boundary.",
+      "hi": "सभापर्व 2.29.1-6। ऋषिक, किम्पुरुष और हाटक; मानस सीमा के पार है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-029?oldid=50381"
+    ]
+  },
+  {
+    "id": "n-home",
+    "status": "draft",
+    "name": {
+      "en": "Home with the north's horses",
+      "hi": "उत्तर के घोड़ों के साथ वापसी"
+    },
+    "category": "north",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 30.65,
+        "lon": 81.45
+      },
+      "to": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "bow": -0.15
+    },
+    "verse": "आजगाम पुनर्वीरः शक्रप्रस्थं पुरोत्तमम्",
+    "locus": {
+      "en": "Mahābhārata 2.29.76-80",
+      "hi": "महाभारत 2.29.76-80"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.29.76-80. The southern text first takes him round Meru and the purāṇic continents to the Uttarakurus, not mapped.",
+      "hi": "सभापर्व 2.29.76-80। दक्षिणी पाठ पहले उन्हें मेरु और पौराणिक वर्षों से उत्तरकुरु तक ले जाता है, जो मानचित्र पर नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-029?oldid=50381"
     ]
   }
 ]
