@@ -2443,6 +2443,21 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, forty-sixth round: gestures and a performance audit.
+  - Pinch on a phone was often read as a tilt or a twist (F5 above has the new rule).
+  - An audit of the engine, the UI and the pipeline is in
+    [docs/AUDIT-2026-09-24.md](AUDIT-2026-09-24.md): about 45 findings with file and
+    line, ranked. Four are done:
+    - the idle sway swings twice and settles, and the low tier does not sway, so an
+      idle phone draws nothing;
+    - the relief slider updates its own row instead of rebuilding the catalogue per
+      step, and the URL is written once the drag stops;
+    - the store compares arrays by their elements, and the shell queues its renders
+      and runs each once per task (opening a page: 29 sheet mutations -> 16);
+    - one `Intl.NumberFormat` per language instead of one per call.
+  - Next from the audit: the per-frame `project()` allocations, one pick per pointer
+    move, the half-float conversion off the main thread, a cache for state packages,
+    and in the pipeline the ~190 s `bounded_distance` in step 6.
 - 2026-09-23, forty-fifth round: the language switch left the map. The owner found it too
   big beside the wordmark; it is now the first row at the foot of the contents, named in
   the other language with a globe, above the tour and the about fold.
