@@ -1,4 +1,5 @@
 // @ts-check
+import { episodeRole } from './episodes.js';
 // The `points` layer type (PLAN.md section 5) as HTML markers: sticker-like pins that
 // ride the terrain (and the lifted block) through the same projection as the labels.
 // A layer's `marker` says what the element is: the name alone for a stretch of country
@@ -115,7 +116,7 @@ export function createPoints(container, { text, onSelect }) {
   }
 
   /** Reposition markers for the frame just drawn; returns the screen rects they occupy. */
-  function update({ project, level, viewport, camera, active, selected, lang, drafts, month = null, stateNames = null, stateNamesFirst = true }) {
+  function update({ project, level, viewport, camera, active, selected, lang, drafts, month = null, stateNames = null, stateNamesFirst = true, episode = null }) {
     const placed = [];
     if (!container) return placed;
     const maxPriority = priorityAt(camera.zoom);
@@ -154,12 +155,16 @@ export function createPoints(container, { text, onSelect }) {
         // The scrubber: an item with a month of its own goes with its month.
         if (show && month && item.month && item.month !== month) show = false;
         // A range crosses states, so a state view keeps showing the ones around it.
-        if (show && level.name === 'state' && !asLabel) show = item.region === level.id;
+        const inState = level.name === 'state' && !asLabel;
+        if (show && inState) show = item.region === level.id;
+        // An episode (episodes.js) draws its own few stops at every zoom and hides the rest.
+        const role = episodeRole(episode, id, item);
+        if (role === 'out') show = false;
         // A symbol's whole point is the comparison between its value and the next one's,
         // so a symbols layer is not thinned by zoom the way place tokens are: the reader
         // switched it on to see the set. Collision still thins it, biggest first, which
         // is the order the build writes them in. A figurine is the point of its page.
-        else if (show && !asSymbol && !asModel) show = item.priority <= maxPriority || isSel;
+        else if (show && !inState && !role && !asSymbol && !asModel) show = item.priority <= maxPriority || isSel;
         if (!show) { el.hidden = true; continue; }
         const p = project(item.x, item.z);
         if (!p) { el.hidden = true; continue; }

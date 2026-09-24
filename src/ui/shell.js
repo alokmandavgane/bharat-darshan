@@ -4,6 +4,7 @@
 // from i18n.
 import { DEFAULT_CAMERA, kmPerPixel, wrapYaw } from '../engine/camera-math.js';
 import { FILL_TYPES } from '../engine/choropleth.js';
+import { stepEpisode } from '../engine/episodes.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { DEFAULT_RELIEF } from '../state/url.js';
 import { citeLabel, creditList, hostOf, sourceList } from './credits.js';
@@ -523,6 +524,77 @@ export function createShell(root, store) {
     resetBtn.title = label;
   }, { immediate: true });
 
+  // --- episodes: a story page steps through its tour's groups one at a time (the engine's
+  // episodes.js); the page carries the steps, under its play button
+  /** @type {HTMLElement | null} */
+  let pageEpisodes = null;
+  const arrow = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  function episodeStepper() {
+    const el = document.createElement('div');
+    el.className = 'page-episodes';
+    el.setAttribute('role', 'group');
+    el.hidden = true;
+    el.innerHTML = `<div class="episode-row">
+        <button type="button" class="episode-prev">${arrow('M15 5l-7 7 7 7')}</button>
+        <div class="episode-now" aria-live="polite"><span class="episode-swatch"></span>
+          <span class="episode-text"><span class="episode-count"></span><span class="episode-name"></span></span></div>
+        <button type="button" class="episode-next">${arrow('M9 5l7 7-7 7')}</button>
+      </div>
+      <button type="button" class="episode-all"></button>`;
+    const go = (by) => {
+      const eps = store.get('episodes');
+      const ep = store.get('episode');
+      if (!eps?.list?.length) return;
+      const next = stepEpisode(eps.list.map((e) => e.id), ep?.plate === eps.plate ? ep.id : null, by);
+      store.set('tour', { playing: false });
+      store.set('episode', { plate: eps.plate, id: next }, { source: 'stepper' });
+    };
+    /** @type {HTMLElement} */ (el.querySelector('.episode-prev')).addEventListener('click', () => go(-1));
+    /** @type {HTMLElement} */ (el.querySelector('.episode-next')).addEventListener('click', () => go(1));
+    /** @type {HTMLElement} */ (el.querySelector('.episode-all')).addEventListener('click', () => {
+      const eps = store.get('episodes');
+      const ep = store.get('episode');
+      if (!eps?.list?.length) return;
+      store.set('tour', { playing: false });
+      const all = ep?.plate === eps.plate && ep.id === null;
+      store.set('episode', { plate: eps.plate, id: all ? eps.list[0].id : null }, { source: 'stepper' });
+    });
+    pageEpisodes = el;
+    return el;
+  }
+
+  function renderEpisodes() {
+    const el = pageEpisodes;
+    if (!el || !el.isConnected) return;
+    const eps = store.get('episodes');
+    const ep = store.get('episode');
+    const list = eps?.plate === openPlate()?.id ? eps.list : [];
+    el.hidden = list.length < 2;
+    if (el.hidden) return;
+    el.setAttribute('aria-label', t('episode.steps'));
+    const at = ep?.plate === eps.plate ? list.findIndex((e) => e.id === ep.id) : -1;
+    const now = at >= 0 ? list[at] : null;
+    const $$ = (sel) => /** @type {HTMLElement} */ (el.querySelector(sel));
+    $$('.episode-count').textContent = now
+      ? t('episode.count', { n: formatNumber(at + 1), total: formatNumber(list.length) })
+      : t('episode.everything', { total: formatNumber(list.length) });
+    $$('.episode-name').textContent = now ? pick(now.title) : '';
+    $$('.episode-name').hidden = !now;
+    $$('.episode-swatch').style.background = now?.color || 'transparent';
+    $$('.episode-swatch').hidden = !now;
+    for (const [sel, key] of [['.episode-prev', 'episode.prev'], ['.episode-next', 'episode.next']]) {
+      $$(sel).setAttribute('aria-label', t(key));
+      $$(sel).title = t(key);
+    }
+    const all = $$('.episode-all');
+    all.textContent = t(now ? 'episode.all' : 'episode.one');
+    all.setAttribute('aria-pressed', String(!now));
+  }
+  store.subscribe('episodes', renderEpisodes);
+  store.subscribe('episode', renderEpisodes);
+  store.subscribe('lang', renderEpisodes);
+
   // --- the tour: a row at the foot of the contents starts it; the card's steps carry it
   const toggleTour = () => store.set('tour', { playing: !store.get('tour')?.playing });
   /** @type {HTMLButtonElement | null} the open story's own play button, when the page has one */
@@ -753,6 +825,8 @@ export function createShell(root, store) {
       pageTour.addEventListener('click', toggleTour);
       contents.appendChild(pageTour);
       renderTour();
+      contents.appendChild(episodeStepper());
+      renderEpisodes();
     }
     // A page cannot show a map without saying whose it is: the build unions its layers'
     // sources into the plate, so this line is never the page's own promise (PLAN.md D11).

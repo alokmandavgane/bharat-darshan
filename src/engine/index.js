@@ -18,6 +18,7 @@ import { createPoints, markerScale, priorityAt } from './points.js';
 import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
 import { byteTexture } from './textures.js';
+import { contextStops, episodeList } from './episodes.js';
 import { createTour } from './tour.js';
 import { easeOutCubic, reducedMotion, tween } from './tween.js';
 
@@ -59,6 +60,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   let block = null;            // the lifted state block while in the state view
   let dropping = null;         // the outgoing block mid-sink, so a handover cancels nothing
   let lines = null;            // every `lines` layer on screen, once loaded
+  /** @type {{ cat: string, layers: Set<string>, context: Set<string>, key: string } | null} */
+  let episode = null;          // the story page's episode on show (episodes.js), null for all
   let marks = null;            // the beads and figurines the GPU draws (marks.js), once the terrain exists
   let world = null;            // the wide backdrop, once Surroundings has asked for it
   let worldLoad = null;
@@ -124,7 +127,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // town); when the markers were flat stickers they were left off the cards.
     const now = performance.now();
     const until = marks?.setView({ active, level, drafts: !!store.get('drafts'), month: store.get('month'),
-      maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom), now }) || 0;
+      maxPriority: priorityAt(cam.zoom), selected: store.get('item'), scale: markerScale(cam.zoom), now, episode }) || 0;
     draw();
     if (until > now) invalidate();      // pieces are still springing up
     // Markers first (they are interactive), the state names among them where points.js
@@ -133,7 +136,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     const project = frameProjector();
     points.update({ project, level, viewport, camera: cam, active,
       selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month'),
-      stateNamesFirst: !store.get('plate'),
+      stateNamesFirst: !store.get('plate'), episode,
       stateNames: (taken) => labels.update({ project, level, viewport, camera: cam, regions: store.get('regions'),
         selection: store.get('selection'), hover: store.get('hover'), lang: store.get('lang'), avoid: taken }) });
   }
@@ -377,6 +380,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           if (drawnByGpu(data)) marks?.setLayer(data).then(invalidate);
           tour.refresh();
           publishIndex();
+          publishEpisodes();
         });
       } else if (entry.type === 'lines' && lines && !lines.has(id)) {
         done((data) => {
@@ -384,6 +388,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
           lines.setActive(store.get('layers')?.active || []);
           loadDetail();          // the layer has only now said whether it has a finer copy
           publishIndex();
+          publishEpisodes();
         });
       } else if (FILL_TYPES.includes(entry.type) && !choroFiles.has(id)) {
         // A fill that brings its own id raster -- an `areas` layer, or a choropleth on the
@@ -903,6 +908,98 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
       return flyToItem(item, opts);
     },
     home: () => store.set('home', { t: performance.now() }),
+  });
+
+  // --- episodes (episodes.js): a story page drawn one group of its tour at a time. The
+  // engine works out which groups there are once the page's layers have arrived and
+  // publishes them as `episodes`; `episode` is the one on show, null for all at once.
+  // A page opens on its first episode; the tour and the card's steps move it along.
+  const openPlate = () => store.get('plates')?.plates?.find((p) => p.id === store.get('plate')) || null;
+
+  function publishEpisodes() {
+    const plate = openPlate();
+    let list = [];
+    const tourData = plate?.tour && points.get(plate.tour.layer);
+    const cats = plate ? plate.layers.map((id) => points.categories(id).length ? points.categories(id) : lines?.categories(id)) : [];
+    // Only once every layer of the page is here: a group missing from one not yet
+    // loaded would make a page look steppable that is not.
+    if (tourData && cats.every(Boolean)) {
+      list = episodeList(plate, tourData.items, cats).map((id) => {
+        const c = tourData.categories.find((x) => x.id === id) || {};
+        return { id, title: c.title || null, color: c.color || null };
+      });
+    }
+    const was = store.get('episodes');
+    const ids = list.map((e) => e.id).join(',');
+    if (was?.plate !== (plate?.id || null) || was?.ids !== ids) store.set('episodes', { plate: plate?.id || null, ids, list });
+    const ep = store.get('episode');
+    if (list.length && ep?.plate !== plate.id) store.set('episode', { plate: plate.id, id: list[0].id }, { source: 'default' });
+    applyEpisode();
+  }
+
+  function applyEpisode() {
+    const plate = openPlate();
+    const ep = store.get('episode');
+    const eps = store.get('episodes');
+    const cat = plate && ep?.plate === plate.id && eps?.plate === plate.id && eps.list.some((e) => e.id === ep.id) ? ep.id : null;
+    if (!cat) {
+      episode = null;
+      lines?.setEpisode(null);
+      invalidate();
+      return;
+    }
+    const layers = new Set(plate.layers);
+    const { ends } = lines ? lines.episodeRuns(layers, cat) : { ends: [] };
+    const own = [], others = [];
+    for (const id of layers) {
+      for (const item of points.get(id)?.items || []) {
+        if (typeof item.x !== 'number') continue;
+        if (item.category === cat) own.push([item.x, item.z]);
+        else others.push({ layer: id, item });
+      }
+    }
+    const tourIndex = new Map((plate.tour?.stops || []).map((id, i) => [id, i]));
+    const context = contextStops(ends, others, tourIndex, eps.list.map((e) => e.id), cat, { ownPins: own });
+    episode = { cat, layers, context, key: `${cat}:${[...context].join(',')}` };
+    lines?.setEpisode(layers, cat);
+    invalidate();
+  }
+
+  /** Frame an episode: its stops and the arrows between them. */
+  function fitEpisode() {
+    if (!episode) return;
+    const { box } = lines ? lines.episodeRuns(episode.layers, episode.cat) : { box: [Infinity, Infinity, -Infinity, -Infinity] };
+    for (const id of episode.layers) {
+      for (const item of points.get(id)?.items || []) {
+        if (typeof item.x !== 'number' || item.category !== episode.cat) continue;
+        box[0] = Math.min(box[0], item.x); box[1] = Math.min(box[1], item.z);
+        box[2] = Math.max(box[2], item.x); box[3] = Math.max(box[3], item.z);
+      }
+    }
+    if (!Number.isFinite(box[0])) return;
+    // A single stop, or two close together, is framed with room round it rather than filling the screen.
+    const pad = Math.max(0, 250 - Math.max(box[2] - box[0], box[3] - box[1]) / 2);
+    fitBox([box[0] - pad, box[1] - pad, box[2] + pad, box[3] + pad], 900);
+  }
+
+  store.subscribe('episode', (_, __, meta) => {
+    applyEpisode();
+    if (meta.source === 'stepper') fitEpisode();
+  });
+  store.subscribe('plate', publishEpisodes);
+  store.subscribe('plates', publishEpisodes);
+  // A card of the page opened while one episode is on show -- by the tour, the card's
+  // steps, a search or a pin an arrow borrowed -- brings its own episode with it.
+  store.subscribe('item', (sel) => {
+    if (!sel?.data) return;
+    const plate = openPlate();
+    const eps = store.get('episodes');
+    const ep = store.get('episode');
+    if (!plate || eps?.plate !== plate.id || !plate.layers.includes(sel.layer)) return;
+    const cat = sel.data.category;
+    if (!eps.list.some((e) => e.id === cat)) return;
+    const following = (ep?.plate === plate.id && ep.id !== null) || store.get('tour')?.playing;
+    if (following && ep?.id !== cat) store.set('episode', { plate: plate.id, id: cat }, { source: 'item' });
   });
 
   // --- the idle sway (idle.js): the model turns gently while nobody is at the controls

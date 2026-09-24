@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixty-seventh round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixty-eighth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,18 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixty-eighth round: episodes, a story page one chapter at a time. With 92 stops and
+  131 arrows the Mahābhārata page drawn whole was a tangle (the owner: "a mess"). A page whose tour
+  visits every group its layers have now opens on its first group, with a stepper under the play
+  button (‹ Episode 4 of 18 · Arjuna's pilgrimage ›) and "Show all at once". An episode draws its own
+  stops at every zoom (no priority thinning) and its own arrows, plus one borrowed pin where an arrow
+  starts or lands without a stop of its own (the latest earlier visit to that place, so tapping it
+  steps back in the story). Stepping frames the episode; the tour and the card's steps carry the
+  episode along with them. Arrows are hidden in the vertex shader by a per-vertex category index
+  (`uEpisode`), pins in marks.js and points.js; the logic is src/engine/episodes.js, with tests.
+  Mahābhārata (18) and Sugrīva (4) get it; Rāma's exile does not yet, because three of its groups
+  (Rāvaṇa's flight, Hanumān's leap, the march) are arrows only and could never be stepped to.
+  Checked in the browser; 48 tests and the build pass.
 - 2026-09-24, sixty-seventh round: Karṇa's conquest of the earth added to the Mahābhārata tour.
   92 stops and 131 arrows in eighteen colours. A crimson group in the forest years, after the return to
   Kāmyaka: Karṇa's one-man answer to the four Sabhā digvijayas. Eleven stops (Kāmpilya, Prāgjyotiṣa,

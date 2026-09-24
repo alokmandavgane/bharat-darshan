@@ -522,6 +522,32 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .tour-row[aria-pressed="true"] { color: var(--accent); }
 /* A story's own play button, on its page rather than at the foot of the contents. */
 .page-tour { margin: 10px 0 2px; border: 1px solid var(--line); font-weight: 600; }
+/* A story's episodes: one group of its tour at a time, stepped under the play button. */
+.page-episodes { margin: 8px 0 2px; }
+.page-episodes[hidden] { display: none; }
+.episode-row { display: flex; align-items: center; gap: 8px; }
+.episode-row button {
+  width: 34px; height: 34px; flex: none; padding: 0;
+  border-radius: 50%; border: 1.5px solid var(--gold-soft);
+  background: transparent; color: var(--muted);
+  display: grid; place-items: center; cursor: pointer; position: relative;
+}
+.episode-row button::before { content: ""; position: absolute; inset: -5px; }   /* a 44 px touch target */
+.episode-row button svg { width: 16px; height: 16px; }
+.episode-row button:hover { background: rgba(120, 80, 40, 0.1); color: var(--ink); }
+.episode-row button:focus-visible, .episode-all:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.episode-now { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; }
+.episode-swatch { width: 12px; height: 12px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.7); }
+.episode-swatch[hidden] { display: none; }
+.episode-text { display: flex; flex-direction: column; min-width: 0; }
+.episode-count { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.episode-name { font-weight: 600; color: var(--ink); line-height: 1.25; }
+.episode-name[hidden] { display: none; }
+.episode-all {
+  margin: 6px 0 0 42px; padding: 2px 0; border: 0; background: transparent;
+  font: inherit; font-size: 0.85rem; color: var(--accent-deep);
+  text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; cursor: pointer;
+}
 .about { font-size: 0.92rem; }
 .about-summary {
   list-style: none;

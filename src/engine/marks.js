@@ -15,6 +15,7 @@ import { beadGeometry, buildModel, coinGeometry, PEG, pegGeometry } from './mode
 import { symbolSizer } from './points.js';
 import markFrag from './shaders/mark.frag.glsl?raw';
 import markVert from './shaders/mark.vert.glsl?raw';
+import { episodeRole } from './episodes.js';
 
 const DOT_PX = 2.4;              // a bead's radius when the layer sizes none
 const MODEL_PX = 1.5;            // screen px per model unit at the base scale: a figurine stands about 30 px
@@ -170,11 +171,11 @@ export function createMarks(scene, tu, { loadRecipe, grid }) {
    * band or selection, and left alone while the camera merely moves. Returns the time
    * (ms) until which markers are still springing up, so the caller keeps drawing.
    */
-  function setView({ active, level, drafts, month, maxPriority, selected, scale, now }) {
+  function setView({ active, level, drafts, month, maxPriority, selected, scale, now, episode = null }) {
     uScale.value = scale;
     uTime.value = now / 1000;
     const key = [[...active].join(','), level.name, level.id, drafts, month, maxPriority,
-      selected ? `${selected.layer}:${selected.id}` : ''].join('|');
+      selected ? `${selected.layer}:${selected.id}` : '', episode?.key || ''].join('|');
     if (key === sig) return until;
     sig = key;
     let popped = 0;
@@ -198,7 +199,10 @@ export function createMarks(scene, tu, { loadRecipe, grid }) {
         // Tokens and beads thin with the zoom. A figurine is the point of its page, and a
         // counter's whole job is the comparison with the next one, so neither is thinned:
         // the reader switched that layer on to see the set.
-        if (show && !['model', 'symbol'].includes(entry.kind) && it.priority > maxPriority && !isSel) show = false;
+        // An episode draws its own few stops at every zoom, and nothing of the others.
+        const role = episodeRole(episode, id, it);
+        if (role === 'out') show = false;
+        else if (show && !role && !['model', 'symbol'].includes(entry.kind) && it.priority > maxPriority && !isSel) show = false;
         const g = rec.group;
         if (show && !g.shown[rec.index]) {
           // Just arrived: it springs up after the ones before it, none of them too late.

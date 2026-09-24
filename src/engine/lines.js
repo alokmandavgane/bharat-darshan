@@ -65,6 +65,7 @@ function cutToGrid(flat, widths, grid, sizeKm) {
  */
 export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } = {}) {
   const colours = new Map((data.categories || []).map((c) => [c.id, new Color(c.color || '#5a7f97')]));
+  const catOf = new Map((data.categories || []).map((c, i) => [c.id, i]));
   const runs = [];
   const records = (data.items || []).map((item, idx) => {
     const colour = colours.get(item.category) || new Color('#5a7f97');
@@ -89,7 +90,7 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
       // An arc shapes its own head in the shader, so the shipped width profile is not used.
       const d = data.arc ? cutToGrid(densifyEnds(flat), null, grid, sizeKm)
         : cutToGrid(flat, (item.widths || [])[r] || null, grid, sizeKm);
-      runs.push({ flat: d.flat, colour, rank: item.rank || 3, idx, widen: d.widths });
+      runs.push({ flat: d.flat, colour, rank: item.rank || 3, idx, widen: d.widths, cat: catOf.get(item.category) ?? -1 });
     });
     return { item, idx, runs: mine, bbox: box };
   }).filter((r) => r.runs.length);
@@ -102,6 +103,7 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
   const widen = new Float32Array(points * 2);
   const colour = new Float32Array(points * 2 * 3);
   const itemIdx = new Float32Array(points * 2);
+  const catIdx = new Float32Array(points * 2);      // which of the layer's categories, for episodes
   const runKm = new Float32Array(points * 2);       // an arc's whole length ...
   const ends = new Float32Array(points * 2 * 4);    // ... and the ground it leaves and lands on
   const index = new Uint32Array(Math.max(0, (points - runs.length) * 6));
@@ -130,6 +132,7 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
         rank[v] = run.rank;
         widen[v] = run.widen ? run.widen[i] : 1;
         itemIdx[v] = run.idx;
+        catIdx[v] = run.cat;
         runKm[v] = total;
         ends.set(e, v * 4);
         colour[v * 3] = run.colour.r; colour[v * 3 + 1] = run.colour.g; colour[v * 3 + 2] = run.colour.b;
@@ -151,6 +154,7 @@ export function linesGeometry(data, { grid = null, sizeKm = null, bbox = null } 
   g.setAttribute('widen', new BufferAttribute(widen, 1));
   g.setAttribute('colour', new BufferAttribute(colour, 3));
   g.setAttribute('itemIdx', new BufferAttribute(itemIdx, 1));
+  g.setAttribute('catIdx', new BufferAttribute(catIdx, 1));
   g.setAttribute('runKm', new BufferAttribute(runKm, 1));
   g.setAttribute('ends', new BufferAttribute(ends, 4));
   g.setIndex(new BufferAttribute(index, 1));
@@ -258,6 +262,7 @@ function lineMaterial(surface, onBlock, flow, float_ = false, grid = { cols: 102
       uArcRise: { value: new Vector2(ARC.rise, ARC.minKm) },
       uArcHead: { value: new Vector4(ARC.headPx, ARC.headWiden, ARC.gapEndPx, ARC.gapStartPx) },
       uArcShaft: { value: ARC.shaft },
+      uEpisode: { value: new Vector2(0, -1) },
     },
   });
 }
@@ -297,6 +302,12 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     }
   }
 
+  /** In an episode, is this item one of those drawn? */
+  function inEpisode(l, rec) {
+    const [on, idx] = l.plate.material.uniforms.uEpisode.value.toArray();
+    return !on || (l.categories.findIndex((c) => c.id === rec.item.category) === idx && idx >= 0);
+  }
+
   function setBlockMesh(entry) {
     if (entry.block) {
       scene.remove(entry.block); entry.block.material.dispose(); entry.block.geometry.dispose(); entry.block = null;
@@ -314,6 +325,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
     mesh.frustumCulled = false;
     mesh.renderOrder = 3;
     mesh.visible = entry.plate.visible;
+    mesh.material.uniforms.uEpisode.value.copy(entry.plate.material.uniforms.uEpisode.value);
     entry.block = mesh;
     scene.add(mesh);
   }
@@ -385,6 +397,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
         if (!active.has(id) || l.arc) continue;   // an arc is in the air: see nearestArc
         for (const rec of l.records) {
           if (named && rec.item.network) continue;
+          if (!inEpisode(l, rec)) continue;
           const [x0, z0, x1, z1] = rec.bbox;
           if (x < x0 - maxKm || x > x1 + maxKm || z < z0 - maxKm || z > z1 + maxKm) continue;
           for (const flat of rec.runs) {
@@ -411,6 +424,7 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       for (const [id, l] of layers) {
         if (!active.has(id) || !l.arc) continue;
         for (const rec of l.records) {
+          if (!inEpisode(l, rec)) continue;
           for (const flat of rec.runs) {
             const n = flat.length / 2;
             if (n < 2) continue;
@@ -456,6 +470,38 @@ export function createLines(scene, terrainUniforms, terrainGrid) {
       const rec = l?.records.find((r) => r.item.id === itemId);
       return rec ? { ...rec, categories: l.categories, fields: l.fields } : null;
     },
+    /**
+     * Draw one episode of the given layers -- the items of category `cat` -- or, with
+     * `ids` null, everything again. A layer of the page that has no such category
+     * draws nothing in that episode.
+     */
+    setEpisode(ids, cat = null) {
+      for (const [id, l] of layers) {
+        const on = !!ids && ids.has(id);
+        const idx = on ? l.categories.findIndex((c) => c.id === cat) : -1;
+        for (const m of [l.plate.material, l.block?.material]) m?.uniforms.uEpisode.value.set(on ? 1 : 0, idx);
+      }
+    },
+    /** Where the episode's arrows start and end, [x, z], and the box round them. */
+    episodeRuns(ids, cat) {
+      const ends = [];
+      const box = [Infinity, Infinity, -Infinity, -Infinity];
+      for (const [id, l] of layers) {
+        if (!ids.has(id)) continue;
+        for (const rec of l.records) {
+          if (rec.item.category !== cat) continue;
+          for (const flat of rec.runs) {
+            const n = flat.length;
+            ends.push([flat[0], flat[1]], [flat[n - 2], flat[n - 1]]);
+          }
+          box[0] = Math.min(box[0], rec.bbox[0]); box[1] = Math.min(box[1], rec.bbox[1]);
+          box[2] = Math.max(box[2], rec.bbox[2]); box[3] = Math.max(box[3], rec.bbox[3]);
+        }
+      }
+      return { ends, box };
+    },
+    /** A layer's categories, for the engine to tell which page's groups line up. */
+    categories(id) { return layers.get(id)?.categories || null; },
     /** Highlight one item, or nothing. */
     setSelected(sel) {
       selected = sel;

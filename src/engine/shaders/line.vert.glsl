@@ -18,11 +18,13 @@ uniform float uArc;          // 1: this layer's runs are arcs in the air, not ri
 uniform vec2 uArcRise;       // an arc's crown: x of its own length, and at least y km
 uniform vec4 uArcHead;       // an arc's head in px: length, width against the shaft, gap before the pin, gap after the start
 uniform float uArcShaft;     // an arc's shaft against a line of the same rank
+uniform vec2 uEpisode;       // x 1: draw only the category of index y (episodes.js); 0: all
 
 in vec2 dir;                 // tangent of the run at this vertex, in the ground plane
 in float side;               // -1 or 1: which edge of the ribbon
 in float rank;               // 1, 2 or 3
 in float itemIdx;            // which item of the layer this vertex belongs to
+in float catIdx;             // which of the layer's categories that item is in
 in float dist;               // km from the start of the run, which is its upstream end
 in float widen;              // per-vertex width multiplier: 1 for a line, a swell and a
                              // point for a flow's arrowhead
@@ -48,6 +50,12 @@ float byRank(vec3 v) {
 }
 
 void main() {
+  vColour = colour; vDist = 0.0; vFade = 0.0; vSel = 0.0; vUv = vec2(0.0); vEdge = 0.0;
+  // Another episode's: put outside the clip volume, so its triangles are never drawn.
+  if (uEpisode.x > 0.5 && (uEpisode.y < -0.5 || abs(catIdx - uEpisode.y) > 0.5)) {
+    gl_Position = vec4(2.0, 2.0, 2.0, 1.0);
+    return;
+  }
   vUv = vec2(position.x / uSizeKm.x + 0.5, position.z / uSizeKm.y + 0.5);
   // On the surface the mesh *draws*, not the raster it samples. The mesh lifts its own
   // vertices and the rasteriser interpolates between them, so in a valley -- which is
