@@ -552,6 +552,374 @@
     ]
   },
   {
+    "id": "kampilya-bhima",
+    "status": "draft",
+    "name": {
+      "en": "Kāmpilya",
+      "hi": "काम्पिल्य"
+    },
+    "anchor": {
+      "lat": 27.61268,
+      "lon": 79.27687
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "bhima",
+    "priority": 1,
+    "event": {
+      "en": "Bhīma sets out east",
+      "hi": "भीम पूर्व की ओर"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "स गत्वा नरशार्दूलः पञ्चालानां पुरं महत्",
+    "locus": {
+      "en": "Mahābhārata 2.30.1-6",
+      "hi": "महाभारत 2.30.1-6"
+    },
+    "modern": {
+      "en": "Kampil, Farrukhabad district",
+      "hi": "कम्पिल, फ़र्रुख़ाबाद जिला"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.1-6. One of the four conquests of the quarters that pay for the rājasūya; the Pañcālas are won over first.",
+      "hi": "सभापर्व 2.30.1-6। राजसूय के लिए धन जुटाने वाली चार दिग्विजयों में से एक; पहले पांचालों को मनाया जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385",
+      "https://www.geonames.org/1268215"
+    ]
+  },
+  {
+    "id": "dasarna-bhima",
+    "status": "draft",
+    "name": {
+      "en": "Daśārṇa",
+      "hi": "दशार्ण"
+    },
+    "anchor": {
+      "lat": 23.52604,
+      "lon": 77.81092
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Daśārṇa's king becomes his general",
+      "hi": "दशार्ण का राजा उनका सेनापति बनता है"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "दशार्णानजयत्प्रभुः",
+    "locus": {
+      "en": "Mahābhārata 2.30.1-6",
+      "hi": "महाभारत 2.30.1-6"
+    },
+    "modern": {
+      "en": "Vidisha",
+      "hi": "विदिशा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.1-6. The Dhasān river country, whose capital was Vidiśā.",
+      "hi": "सभापर्व 2.30.1-6। धसान नदी का देश, जिसकी राजधानी विदिशा थी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385",
+      "https://www.geonames.org/1253200"
+    ]
+  },
+  {
+    "id": "suktimati-bhima",
+    "status": "draft",
+    "name": {
+      "en": "Śuktisāhvayā (Śuktimatī)",
+      "hi": "शुक्तिसाह्वया (शुक्तिमती)"
+    },
+    "anchor": {
+      "lat": 25.47758,
+      "lon": 80.33491
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Śiśupāla of Cedi submits",
+      "hi": "चेदि का शिशुपाल अधीन होता है"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "शिशुपालं महावीर्यमभ्यगाज्जनमेजय",
+    "locus": {
+      "en": "Mahābhārata 2.30.11-16",
+      "hi": "महाभारत 2.30.11-16"
+    },
+    "modern": {
+      "en": "near Banda, Bundelkhand (the Cedi country)",
+      "hi": "बाँदा के पास, बुंदेलखंड (चेदि देश)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.11-16. Bhīma stays thirty nights; Kṛṣṇa will kill Śiśupāla at the rājasūya.",
+      "hi": "सभापर्व 2.30.11-16। भीम तीस रातें ठहरते हैं; राजसूय में कृष्ण शिशुपाल का वध करेंगे।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385",
+      "https://www.geonames.org/1277397"
+    ]
+  },
+  {
+    "id": "ayodhya",
+    "status": "draft",
+    "name": {
+      "en": "Ayodhyā",
+      "hi": "अयोध्या"
+    },
+    "anchor": {
+      "lat": 26.79909,
+      "lon": 82.2047
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Kosala, and Ayodhyā's king Dīrghayajña",
+      "hi": "कोसल, और अयोध्या का राजा दीर्घयज्ञ"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "अयोध्यायां तु धर्मज्ञं दीर्घयज्ञं महाबलम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.1-4",
+      "hi": "महाभारत 2.31.1-4"
+    },
+    "modern": {
+      "en": "Ayodhya",
+      "hi": "अयोध्या"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.1-4. Rāma's city on the Sarayū, where the road begins.",
+      "hi": "सभापर्व 2.31.1-4। सरयू किनारे राम का नगर, जहाँ से मार्ग आरंभ होता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390",
+      "https://www.geonames.org/1278094"
+    ]
+  },
+  {
+    "id": "kasi-bhima",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Kāśi's Subāhu",
+      "hi": "काशी का सुबाहु"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "स काशिराजं समरे सुबाहुमनिवर्तिनम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.5-11",
+      "hi": "महाभारत 2.31.5-11"
+    },
+    "modern": {
+      "en": "Varanasi",
+      "hi": "वाराणसी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.5-11. After the Mallas, the Himavat's side, Bhallāṭa and Śuktimat; then Vatsa, the Bhargas and Niṣādas.",
+      "hi": "सभापर्व 2.31.5-11। मल्ल, हिमवान् का पार्श्व, भल्लाट और शुक्तिमान् के बाद; फिर वत्स, भर्ग और निषाद।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "girivraja-bhima",
+    "status": "draft",
+    "name": {
+      "en": "Girivraja",
+      "hi": "गिरिव्रज"
+    },
+    "anchor": {
+      "lat": 25.02828,
+      "lon": 85.42079
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Jarāsandha's son pays tribute",
+      "hi": "जरासंध का पुत्र कर देता है"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "तैरेव सहितैः सर्वैर्गिरिव्रजमुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.31.16-21",
+      "hi": "महाभारत 2.31.16-21"
+    },
+    "modern": {
+      "en": "Rajgir",
+      "hi": "राजगीर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.16-21. After Janaka's Videha, the seven Kirāta kings and the Suhmas.",
+      "hi": "सभापर्व 2.31.16-21। जनक के विदेह, सात किरात राजाओं और सुह्मों के बाद।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390",
+      "https://www.geonames.org/1258864"
+    ]
+  },
+  {
+    "id": "modagiri",
+    "status": "draft",
+    "name": {
+      "en": "Modāgiri",
+      "hi": "मोदागिरि"
+    },
+    "anchor": {
+      "lat": 25.37459,
+      "lon": 86.47455
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Karṇa of Aṅga beaten; Modāgiri",
+      "hi": "अंग के कर्ण की हार; मोदागिरि"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "अथ मोदागिरौ चैव राजानं बलवत्तरम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.16-21",
+      "hi": "महाभारत 2.31.16-21"
+    },
+    "modern": {
+      "en": "Munger, on the Gaṅgā",
+      "hi": "मुंगेर, गंगा पर"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.16-21. The old Mudgagiri, a rock on the Gaṅgā east of Aṅga's Campā.",
+      "hi": "सभापर्व 2.31.16-21। प्राचीन मुद्गगिरि, अंग की चंपा के पूर्व गंगा पर एक चट्टान।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390",
+      "https://www.geonames.org/1262482"
+    ]
+  },
+  {
+    "id": "tamralipta",
+    "status": "draft",
+    "name": {
+      "en": "Tāmralipta",
+      "hi": "ताम्रलिप्त"
+    },
+    "anchor": {
+      "lat": 22.30083,
+      "lon": 87.92593
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "bhima",
+    "priority": 2,
+    "event": {
+      "en": "Tāmralipta and the sea",
+      "hi": "ताम्रलिप्त और समुद्र"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "ताम्रलिप्तं च राजानं",
+    "locus": {
+      "en": "Mahābhārata 2.31.25-28",
+      "hi": "महाभारत 2.31.25-28"
+    },
+    "modern": {
+      "en": "Tamluk, Purba Medinipur",
+      "hi": "तमलुक, पूर्व मेदिनीपुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.25-28. After Pauṇḍraka Vāsudeva, the Kauśikī marshes and Vaṅga; then to the Lauhitya.",
+      "hi": "सभापर्व 2.31.25-28। पौण्ड्रक वासुदेव, कौशिकी के कच्छ और वंग के बाद; फिर लौहित्य तक।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031",
+      "https://www.geonames.org/1255046"
+    ]
+  },
+  {
     "id": "hastinapura-dice",
     "status": "draft",
     "name": {

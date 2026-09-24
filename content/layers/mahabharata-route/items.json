@@ -2770,5 +2770,335 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-246?oldid=54603"
     ]
+  },
+  {
+    "id": "bh-pancala",
+    "status": "draft",
+    "name": {
+      "en": "To the Pāñcāla city",
+      "hi": "पांचाल नगर की ओर"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "to": {
+        "lat": 27.61268,
+        "lon": 79.27687
+      },
+      "bow": 0.12
+    },
+    "verse": "स गत्वा नरशार्दूलः पञ्चालानां पुरं महत्",
+    "locus": {
+      "en": "Mahābhārata 2.30.1-6",
+      "hi": "महाभारत 2.30.1-6"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.1-6.",
+      "hi": "सभापर्व 2.30.1-6।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385"
+    ]
+  },
+  {
+    "id": "bh-dasarna",
+    "status": "draft",
+    "name": {
+      "en": "To Daśārṇa",
+      "hi": "दशार्ण की ओर"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 27.61268,
+        "lon": 79.27687
+      },
+      "to": {
+        "lat": 23.52604,
+        "lon": 77.81092
+      },
+      "bow": 0.12
+    },
+    "verse": "दशार्णानजयत्प्रभुः",
+    "locus": {
+      "en": "Mahābhārata 2.30.1-6",
+      "hi": "महाभारत 2.30.1-6"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.1-6. The text first sends him to Videha and the Gaṇḍakas, out of map order.",
+      "hi": "सभापर्व 2.30.1-6। पाठ पहले उन्हें विदेह और गण्डकों तक भेजता है, मानचित्र के क्रम से बाहर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385"
+    ]
+  },
+  {
+    "id": "bh-cedi",
+    "status": "draft",
+    "name": {
+      "en": "By the Pulindas to Cedi",
+      "hi": "पुलिन्दों होकर चेदि"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 23.52604,
+        "lon": 77.81092
+      },
+      "to": {
+        "lat": 25.47758,
+        "lon": 80.33491
+      },
+      "bow": 0.12
+    },
+    "verse": "शिशुपालं महावीर्यमभ्यगाज्जनमेजय",
+    "locus": {
+      "en": "Mahābhārata 2.30.11-16",
+      "hi": "महाभारत 2.30.11-16"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.30.11-16. Rocamāna of Aśvamedha, the eastern country and the Pulinda city, none placed.",
+      "hi": "सभापर्व 2.30.11-16। अश्वमेध का रोचमान, पूर्वी देश और पुलिन्द नगर, कोई तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-030?oldid=50385"
+    ]
+  },
+  {
+    "id": "bh-kosala",
+    "status": "draft",
+    "name": {
+      "en": "To Kosala and Ayodhyā",
+      "hi": "कोसल और अयोध्या"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.47758,
+        "lon": 80.33491
+      },
+      "to": {
+        "lat": 26.79909,
+        "lon": 82.2047
+      },
+      "bow": 0.12
+    },
+    "verse": "अयोध्यायां तु धर्मज्ञं दीर्घयज्ञं महाबलम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.1-4",
+      "hi": "महाभारत 2.31.1-4"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.1-4.",
+      "hi": "सभापर्व 2.31.1-4।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
+    ]
+  },
+  {
+    "id": "bh-kasi",
+    "status": "draft",
+    "name": {
+      "en": "By the Himavat's side to Kāśi",
+      "hi": "हिमवान् के पार्श्व से काशी"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 26.79909,
+        "lon": 82.2047
+      },
+      "to": {
+        "lat": 25.31668,
+        "lon": 83.01041
+      },
+      "bow": 0.12
+    },
+    "verse": "स काशिराजं समरे सुबाहुमनिवर्तिनम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.5-11",
+      "hi": "महाभारत 2.31.5-11"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.5-11.",
+      "hi": "सभापर्व 2.31.5-11।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
+    ]
+  },
+  {
+    "id": "bh-magadha",
+    "status": "draft",
+    "name": {
+      "en": "By Videha and the Kirātas to Girivraja",
+      "hi": "विदेह और किरातों होकर गिरिव्रज"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.31668,
+        "lon": 83.01041
+      },
+      "to": {
+        "lat": 25.02828,
+        "lon": 85.42079
+      },
+      "bow": 0.12
+    },
+    "verse": "तैरेव सहितैः सर्वैर्गिरिव्रजमुपाद्रवत्",
+    "locus": {
+      "en": "Mahābhārata 2.31.16-21",
+      "hi": "महाभारत 2.31.16-21"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.16-21.",
+      "hi": "सभापर्व 2.31.16-21।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
+    ]
+  },
+  {
+    "id": "bh-anga",
+    "status": "draft",
+    "name": {
+      "en": "Against Karṇa, to Modāgiri",
+      "hi": "कर्ण के विरुद्ध, मोदागिरि तक"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.02828,
+        "lon": 85.42079
+      },
+      "to": {
+        "lat": 25.37459,
+        "lon": 86.47455
+      },
+      "bow": 0.12
+    },
+    "verse": "अथ मोदागिरौ चैव राजानं बलवत्तरम्",
+    "locus": {
+      "en": "Mahābhārata 2.31.16-21",
+      "hi": "महाभारत 2.31.16-21"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.16-21.",
+      "hi": "सभापर्व 2.31.16-21।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
+    ]
+  },
+  {
+    "id": "bh-vanga",
+    "status": "draft",
+    "name": {
+      "en": "By Puṇḍra and Vaṅga to Tāmralipta",
+      "hi": "पुण्ड्र और वंग होकर ताम्रलिप्त"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.37459,
+        "lon": 86.47455
+      },
+      "to": {
+        "lat": 22.30083,
+        "lon": 87.92593
+      },
+      "bow": 0.12
+    },
+    "verse": "ताम्रलिप्तं च राजानं",
+    "locus": {
+      "en": "Mahābhārata 2.31.25-28",
+      "hi": "महाभारत 2.31.25-28"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.25-28. Puṇḍra and Vaṅga lie mostly outside the boundary; the arrow runs to the port.",
+      "hi": "सभापर्व 2.31.25-28। पुण्ड्र और वंग अधिकतर सीमा के बाहर; तीर बंदरगाह तक जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031"
+    ]
+  },
+  {
+    "id": "bh-lauhitya",
+    "status": "draft",
+    "name": {
+      "en": "To the Lauhitya",
+      "hi": "लौहित्य तक"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.30083,
+        "lon": 87.92593
+      },
+      "to": {
+        "lat": 26.18,
+        "lon": 91.74
+      },
+      "bow": 0.12
+    },
+    "verse": "लौहित्यमगद्बली",
+    "locus": {
+      "en": "Mahābhārata 2.31.25-28",
+      "hi": "महाभारत 2.31.25-28"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.25-28. The Brahmaputra; the point at Guwahati is the compiler's.",
+      "hi": "सभापर्व 2.31.25-28। ब्रह्मपुत्र; गुवाहाटी पर बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031"
+    ]
+  },
+  {
+    "id": "bh-home",
+    "status": "draft",
+    "name": {
+      "en": "Home with the eastern tribute",
+      "hi": "पूर्वी कर के साथ वापसी"
+    },
+    "category": "bhima",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 26.18,
+        "lon": 91.74
+      },
+      "to": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "bow": -0.15
+    },
+    "verse": "इन्द्रप्रस्थमुपागम्य भीमो भीमपराक्रमः",
+    "locus": {
+      "en": "Mahābhārata 2.31.29-31",
+      "hi": "महाभारत 2.31.29-31"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.31.29-31. Sandal, aloe-wood, pearls and coral for the rājasūya.",
+      "hi": "सभापर्व 2.31.29-31। राजसूय के लिए चंदन, अगरु, मोती और मूँगा।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
+    ]
   }
 ]

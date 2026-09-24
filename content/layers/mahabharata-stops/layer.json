@@ -38,6 +38,15 @@
       "icon": "pin"
     },
     {
+      "id": "bhima",
+      "title": {
+        "en": "Bhīma's conquest of the east",
+        "hi": "भीम की पूर्व-विजय"
+      },
+      "color": "#4b3f9e",
+      "icon": "pin"
+    },
+    {
       "id": "arjuna",
       "title": {
         "en": "Arjuna's pilgrimage",
