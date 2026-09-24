@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-sixth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-seventh round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,16 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-seventh round: Pulastya's tīrtha circuit added to the Mahābhārata tour.
+  Same page (`/en/atlas/mahabharata`), now 37 stops and 59 arrows in eleven colours. An olive group
+  after Kāmyaka, where Nārada recites it: Puṣkara, Mahākāla, Arbuda, Kurukṣetra, Gaṅgādvāra, Naimiṣa,
+  Kāśī, Gayā, the Gaṅgā's mouth (Gangasagar, by tradition), Kanyātīrtha, Gokarṇa, Kālañjara, Prayāga:
+  a clockwise circuit of the country, as the text frames it ("a rightwise circuit of the earth").
+  - Its 18 arrows are rank 2 (thin): the circuit is recited, and no one in the story walks it.
+  - The Indus mouth arrow points beyond the boundary; the Kashmir point is the compiler's.
+  - Epic-rivers cards now cite only Bhīṣmaparvan 6.9 (the new passages would otherwise have been
+    added to their sources).
+  - Checked in the browser (37 stops in order, en and hi, no console errors); tests and build pass.
 - 2026-09-24, fifty-sixth round: the aśvamedha horse added to the Mahābhārata tour.
   Same page (`/en/atlas/mahabharata`), now 24 stops and 41 arrows in ten colours. A tenth colour
   (magenta, "The aśvamedha horse") follows the coronation: Hastināpura (the horse let go on the Caitra

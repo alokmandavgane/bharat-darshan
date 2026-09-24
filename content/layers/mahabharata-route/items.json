@@ -1351,5 +1351,599 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-086?oldid=56566"
     ]
+  },
+  {
+    "id": "pul-mahakala",
+    "status": "draft",
+    "name": {
+      "en": "By Jambūmārga and Kaṇva's hermitage to Mahākāla",
+      "hi": "जम्बूमार्ग और कण्वाश्रम होकर महाकाल"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 26.49022,
+        "lon": 74.55211
+      },
+      "to": {
+        "lat": 23.18239,
+        "lon": 75.77643
+      },
+      "bow": 0.12
+    },
+    "verse": "महाकालं ततो गच्छेन्नियतो नियताशनः",
+    "locus": {
+      "en": "Mahābhārata 3.80.49-54",
+      "hi": "महाभारत 3.80.49-54"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.49-54.",
+      "hi": "आरण्यकपर्व 3.80.49-54।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-arbuda",
+    "status": "draft",
+    "name": {
+      "en": "The Narmadā, the Carmaṇvatī and Arbuda",
+      "hi": "नर्मदा, चर्मण्वती और अर्बुद"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 23.18239,
+        "lon": 75.77643
+      },
+      "to": {
+        "lat": 24.5926,
+        "lon": 72.7156
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो गच्छेत धर्मज्ञं हिमवत्सुतमर्बुदम्",
+    "locus": {
+      "en": "Mahābhārata 3.80.55-58",
+      "hi": "महाभारत 3.80.55-58"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.55-58.",
+      "hi": "आरण्यकपर्व 3.80.55-58।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-prabhasa",
+    "status": "draft",
+    "name": {
+      "en": "To Prabhāsa and the Sarasvatī's mouth",
+      "hi": "प्रभास और सरस्वती के मुहाने तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 24.5926,
+        "lon": 72.7156
+      },
+      "to": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो गच्छेत राजेन्द्र प्रभासं लोकविश्रुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.80.60-66",
+      "hi": "महाभारत 3.80.60-66"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.60-66.",
+      "hi": "आरण्यकपर्व 3.80.60-66।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-dvaraka",
+    "status": "draft",
+    "name": {
+      "en": "To Dvāravatī and Piṇḍāraka",
+      "hi": "द्वारवती और पिण्डारक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "to": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो द्वारवतीं गच्छेन्नियतो नियताशनः",
+    "locus": {
+      "en": "Mahābhārata 3.80.60-66",
+      "hi": "महाभारत 3.80.60-66"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.60-66.",
+      "hi": "आरण्यकपर्व 3.80.60-66।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-indus",
+    "status": "draft",
+    "name": {
+      "en": "To the Indus mouth",
+      "hi": "सिंधु के मुहाने तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "to": {
+        "lat": 24.0,
+        "lon": 67.5
+      },
+      "bow": 0.12
+    },
+    "verse": "सागरस्य च सिन्धोश्च संगमं प्राप्य दुर्लभम्",
+    "locus": {
+      "en": "Mahābhārata 3.80.69-71",
+      "hi": "महाभारत 3.80.69-71"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.69-71. Outside the Survey of India boundary; the arrow points to it.",
+      "hi": "आरण्यकपर्व 3.80.69-71। भारतीय सर्वेक्षण सीमा के बाहर; तीर उस ओर इंगित करता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-kashmir",
+    "status": "draft",
+    "name": {
+      "en": "By Pañcanada to the Vitastā in Kashmir",
+      "hi": "पंचनद होकर कश्मीर में वितस्ता"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 24.0,
+        "lon": 67.5
+      },
+      "to": {
+        "lat": 34.08,
+        "lon": 74.8
+      },
+      "bow": 0.12
+    },
+    "verse": "काश्मीरष्वेव नागस्य भवनं तक्षकस्य च",
+    "locus": {
+      "en": "Mahābhārata 3.80.90-91",
+      "hi": "महाभारत 3.80.90-91"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.90-91. Takṣaka's home; the point on the Jhelum is the compiler's.",
+      "hi": "आरण्यकपर्व 3.80.90-91। तक्षक का निवास; झेलम पर बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-kurukshetra",
+    "status": "draft",
+    "name": {
+      "en": "By the Devikā and Vinaśana to Kurukṣetra",
+      "hi": "देविका और विनशन होकर कुरुक्षेत्र"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 34.08,
+        "lon": 74.8
+      },
+      "to": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो विनशनं गच्छेन्नियतो नियताशनः",
+    "locus": {
+      "en": "Mahābhārata 3.80.111-112",
+      "hi": "महाभारत 3.80.111-112"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.111-112. At Vinaśana the Sarasvatī goes underground; neither is placed.",
+      "hi": "आरण्यकपर्व 3.80.111-112। विनशन पर सरस्वती भूमिगत होती है; दोनों के स्थान तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154"
+    ]
+  },
+  {
+    "id": "pul-gangadvara",
+    "status": "draft",
+    "name": {
+      "en": "Twelve from Kurukṣetra to Gaṅgādvāra",
+      "hi": "कुरुक्षेत्र से बारह, गंगाद्वार"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.97323,
+        "lon": 76.83214
+      },
+      "to": {
+        "lat": 29.94791,
+        "lon": 78.16025
+      },
+      "bow": 0.12
+    },
+    "verse": "षष्टिं प्रयागाद्राजेन्द्र कुरुक्षेत्रात्तु द्वादश",
+    "locus": {
+      "en": "Mahābhārata 3.82.26-27",
+      "hi": "महाभारत 3.82.26-27"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.26-27.",
+      "hi": "आरण्यकपर्व 3.82.26-27।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667"
+    ]
+  },
+  {
+    "id": "pul-naimisa",
+    "status": "draft",
+    "name": {
+      "en": "To Naimiṣa",
+      "hi": "नैमिष की ओर"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.94791,
+        "lon": 78.16025
+      },
+      "to": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "bow": 0.12
+    },
+    "verse": "ततस्तु नैमिषं गच्छेत्पुण्यं सिद्धनिषेवितम्",
+    "locus": {
+      "en": "Mahābhārata 3.82.59-61",
+      "hi": "महाभारत 3.82.59-61"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.59-61.",
+      "hi": "आरण्यकपर्व 3.82.59-61।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667"
+    ]
+  },
+  {
+    "id": "pul-kasi",
+    "status": "draft",
+    "name": {
+      "en": "By Goprātara to Vārāṇasī",
+      "hi": "गोप्रतार होकर वाराणसी"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "to": {
+        "lat": 25.31668,
+        "lon": 83.01041
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो वाराणसीं गत्वा अर्चयित्वा नृषध्वजम्",
+    "locus": {
+      "en": "Mahābhārata 3.82.77-80",
+      "hi": "महाभारत 3.82.77-80"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.77-80.",
+      "hi": "आरण्यकपर्व 3.82.77-80।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667"
+    ]
+  },
+  {
+    "id": "pul-gaya",
+    "status": "draft",
+    "name": {
+      "en": "To Gayā",
+      "hi": "गया की ओर"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.31668,
+        "lon": 83.01041
+      },
+      "to": {
+        "lat": 24.79686,
+        "lon": 85.00385
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो गयां समासाद्य ब्रह्मचारी समाहितः",
+    "locus": {
+      "en": "Mahābhārata 3.82.81-84",
+      "hi": "महाभारत 3.82.81-84"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.81-84.",
+      "hi": "आरण्यकपर्व 3.82.81-84।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667"
+    ]
+  },
+  {
+    "id": "pul-sagara",
+    "status": "draft",
+    "name": {
+      "en": "By Rājagṛha and the Kauśikī to the Gaṅgā's mouth",
+      "hi": "राजगृह और कौशिकी होकर गंगा के मुहाने तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 24.79686,
+        "lon": 85.00385
+      },
+      "to": {
+        "lat": 21.64,
+        "lon": 88.08
+      },
+      "bow": 0.12
+    },
+    "verse": "गङ्गायास्तत्र राजेन्द्र सागरस्य च सङ्गमे",
+    "locus": {
+      "en": "Mahābhārata 3.83.2-5",
+      "hi": "महाभारत 3.83.2-5"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.2-5.",
+      "hi": "आरण्यकपर्व 3.83.2-5।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-mahendra",
+    "status": "draft",
+    "name": {
+      "en": "By the Vaitaraṇī to Mahendra",
+      "hi": "वैतरणी होकर महेन्द्र"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 21.64,
+        "lon": 88.08
+      },
+      "to": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो महेन्द्रमासाद्य जामदग्न्यनिपेवितम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.16",
+      "hi": "महाभारत 3.83.16"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.16.",
+      "hi": "आरण्यकपर्व 3.83.16।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-kanya",
+    "status": "draft",
+    "name": {
+      "en": "By the Pāṇḍyas and the Kāverī to the cape",
+      "hi": "पाण्ड्यों और कावेरी होकर अंतरीप तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "to": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "bow": 0.12
+    },
+    "verse": "ततस्तीरे समुद्रस्य कन्यातीर्थमुपस्पृशेत्",
+    "locus": {
+      "en": "Mahābhārata 3.83.21-24",
+      "hi": "महाभारत 3.83.21-24"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.21-24.",
+      "hi": "आरण्यकपर्व 3.83.21-24।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-gokarna",
+    "status": "draft",
+    "name": {
+      "en": "Up the west coast to Gokarṇa",
+      "hi": "पश्चिमी तट पर गोकर्ण तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "to": {
+        "lat": 14.55,
+        "lon": 74.31667
+      },
+      "bow": 0.12
+    },
+    "verse": "अथ गोकर्णमासाद्य त्रिषु लोकेषु विश्रुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.21-24",
+      "hi": "महाभारत 3.83.21-24"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.21-24.",
+      "hi": "आरण्यकपर्व 3.83.21-24।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-surparaka",
+    "status": "draft",
+    "name": {
+      "en": "To Śūrpāraka",
+      "hi": "शूर्पारक की ओर"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 14.55,
+        "lon": 74.31667
+      },
+      "to": {
+        "lat": 19.4167,
+        "lon": 72.8167
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः शूर्पारकं गच्छेज्जामदग्न्यनिषेवितम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.43",
+      "hi": "महाभारत 3.83.43"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.43. The Veṇā and the Godāvarī are named between, out of map order.",
+      "hi": "आरण्यकपर्व 3.83.43। बीच में वेणा और गोदावरी के नाम हैं, मानचित्र के क्रम से बाहर।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-kalanjara",
+    "status": "draft",
+    "name": {
+      "en": "Inland to Kālañjara",
+      "hi": "भीतर कालंजर तक"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 19.4167,
+        "lon": 72.8167
+      },
+      "to": {
+        "lat": 25.0167,
+        "lon": 80.4833
+      },
+      "bow": 0.12
+    },
+    "verse": "अत्र कालञ्जरं गत्वा पर्वतं लोकविश्रुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.56-58",
+      "hi": "महाभारत 3.83.56-58"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.56-58.",
+      "hi": "आरण्यकपर्व 3.83.56-58।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
+  },
+  {
+    "id": "pul-prayaga",
+    "status": "draft",
+    "name": {
+      "en": "By Citrakūṭa and Śṛṅgaverapura to Prayāga",
+      "hi": "चित्रकूट और शृंगवेरपुर होकर प्रयाग"
+    },
+    "category": "pulastya",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 25.0167,
+        "lon": 80.4833
+      },
+      "to": {
+        "lat": 25.44478,
+        "lon": 81.84322
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रयागं सर्वतीर्थेभ्यः प्रवदन्त्यधिकं विभो",
+    "locus": {
+      "en": "Mahābhārata 3.83.75-79",
+      "hi": "महाभारत 3.83.75-79"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.75-79.",
+      "hi": "आरण्यकपर्व 3.83.75-79।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941"
+    ]
   }
 ]

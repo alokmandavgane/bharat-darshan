@@ -368,6 +368,604 @@
     ]
   },
   {
+    "id": "puskara",
+    "status": "draft",
+    "name": {
+      "en": "Puṣkara",
+      "hi": "पुष्कर"
+    },
+    "anchor": {
+      "lat": 26.49022,
+      "lon": 74.55211
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "pulastya",
+    "priority": 1,
+    "event": {
+      "en": "Pulastya's circuit begins",
+      "hi": "पुलस्त्य की परिक्रमा का आरंभ"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years; best on the Kārttika full moon",
+      "hi": "वनवास में काम्यक में सुनाया गया; कार्तिक पूर्णिमा सर्वोत्तम"
+    },
+    "verse": "पुष्करं नाम विख्यातं महाभागः समाविशेत्",
+    "locus": {
+      "en": "Mahābhārata 3.80.20-21",
+      "hi": "महाभारत 3.80.20-21"
+    },
+    "modern": {
+      "en": "Pushkar, Ajmer district",
+      "hi": "पुष्कर, अजमेर जिला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.20-21. Nārada tells Yudhiṣṭhira what Pulastya told Bhīṣma: a rightwise circuit of the earth, beginning here.",
+      "hi": "आरण्यकपर्व 3.80.20-21। नारद युधिष्ठिर को वह बताते हैं जो पुलस्त्य ने भीष्म से कहा: पृथ्वी की दक्षिणावर्त परिक्रमा, यहीं से आरंभ।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154",
+      "https://www.geonames.org/1259148"
+    ]
+  },
+  {
+    "id": "mahakala",
+    "status": "draft",
+    "name": {
+      "en": "Mahākāla",
+      "hi": "महाकाल"
+    },
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Mahākāla and the Narmadā",
+      "hi": "महाकाल और नर्मदा"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "महाकालं ततो गच्छेन्नियतो नियताशनः",
+    "locus": {
+      "en": "Mahābhārata 3.80.49-54",
+      "hi": "महाभारत 3.80.49-54"
+    },
+    "modern": {
+      "en": "Ujjain",
+      "hi": "उज्जैन"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.49-54. The Śiva of Ujjain, with its Koṭitīrtha tank.",
+      "hi": "आरण्यकपर्व 3.80.49-54। उज्जैन के शिव, कोटितीर्थ कुंड सहित।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154",
+      "https://www.geonames.org/1253914"
+    ]
+  },
+  {
+    "id": "arbuda",
+    "status": "draft",
+    "name": {
+      "en": "Arbuda",
+      "hi": "अर्बुद"
+    },
+    "anchor": {
+      "lat": 24.5926,
+      "lon": 72.7156
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Arbuda, son of Himavat",
+      "hi": "अर्बुद, हिमवान् का पुत्र"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततो गच्छेत धर्मज्ञं हिमवत्सुतमर्बुदम्",
+    "locus": {
+      "en": "Mahābhārata 3.80.55-58",
+      "hi": "महाभारत 3.80.55-58"
+    },
+    "modern": {
+      "en": "Mount Abu",
+      "hi": "माउंट आबू"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.80.55-58. After the southern Sindhu and the Carmaṇvatī; then Prabhāsa, Dvāravatī and the Indus mouth.",
+      "hi": "आरण्यकपर्व 3.80.55-58। दक्षिणी सिंधु और चर्मण्वती के बाद; फिर प्रभास, द्वारवती और सिंधु का मुहाना।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-080?oldid=302154",
+      "https://en.wikipedia.org/wiki/Mount_Abu"
+    ]
+  },
+  {
+    "id": "kurukshetra-pulastya",
+    "status": "draft",
+    "name": {
+      "en": "Kurukṣetra",
+      "hi": "कुरुक्षेत्र"
+    },
+    "anchor": {
+      "lat": 29.97323,
+      "lon": 76.83214
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Kurukṣetra, between its two rivers",
+      "hi": "कुरुक्षेत्र, अपनी दो नदियों के बीच"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततो गच्छेत राजेन्द्र कुरुक्षेत्रमभिष्टुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.81.1-4",
+      "hi": "महाभारत 3.81.1-4"
+    },
+    "modern": {
+      "en": "Kurukshetra (Thanesar)",
+      "hi": "कुरुक्षेत्र (थानेसर)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.81.1-4. Reached from Kashmir by Vinaśana, where the Sarasvatī vanishes; the catalogue's longest section.",
+      "hi": "आरण्यकपर्व 3.81.1-4। कश्मीर से विनशन होकर, जहाँ सरस्वती लुप्त होती है; सूची का सबसे लंबा भाग।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-081?oldid=321666",
+      "https://www.geonames.org/1254657"
+    ]
+  },
+  {
+    "id": "gangadvara-pulastya",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgādvāra",
+      "hi": "गङ्गाद्वार"
+    },
+    "anchor": {
+      "lat": 29.94791,
+      "lon": 78.16025
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Gaṅgādvāra, the gate of heaven",
+      "hi": "गंगाद्वार, स्वर्ग का द्वार"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "स्वर्गद्वारेण यत्तुल्यं गङ्गाद्वारं न संशयः",
+    "locus": {
+      "en": "Mahābhārata 3.82.26-27",
+      "hi": "महाभारत 3.82.26-27"
+    },
+    "modern": {
+      "en": "Haridwar",
+      "hi": "हरिद्वार"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.26-27. 'Sixty from Prayāga, twelve from Kurukṣetra'; then the sources of the Yamunā and the Sindhu.",
+      "hi": "आरण्यकपर्व 3.82.26-27। 'प्रयाग से साठ, कुरुक्षेत्र से बारह'; फिर यमुना और सिंधु के उद्गम।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667",
+      "https://www.geonames.org/1270351"
+    ]
+  },
+  {
+    "id": "naimisa",
+    "status": "draft",
+    "name": {
+      "en": "Naimiṣa",
+      "hi": "नैमिष"
+    },
+    "anchor": {
+      "lat": 27.35,
+      "lon": 80.49
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Naimiṣa, where all tīrthas are",
+      "hi": "नैमिष, जहाँ सब तीर्थ हैं"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततस्तु नैमिषं गच्छेत्पुण्यं सिद्धनिषेवितम्",
+    "locus": {
+      "en": "Mahābhārata 3.82.59-61",
+      "hi": "महाभारत 3.82.59-61"
+    },
+    "modern": {
+      "en": "Naimisharanya (Nimsar), on the Gomati",
+      "hi": "नैमिषारण्य (नीमसार), गोमती पर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.59-61. The forest where the epic itself is recited.",
+      "hi": "आरण्यकपर्व 3.82.59-61। वह वन जहाँ स्वयं महाकाव्य सुनाया जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667",
+      "https://en.wikipedia.org/wiki/Naimisharanya"
+    ]
+  },
+  {
+    "id": "kasi",
+    "status": "draft",
+    "name": {
+      "en": "Kāśi",
+      "hi": "काशि"
+    },
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Avimukta, where dying gives release",
+      "hi": "अविमुक्त, जहाँ मृत्यु मोक्ष देती है"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततो वाराणसीं गत्वा अर्चयित्वा नृषध्वजम्",
+    "locus": {
+      "en": "Mahābhārata 3.82.77-80",
+      "hi": "महाभारत 3.82.77-80"
+    },
+    "modern": {
+      "en": "Varanasi",
+      "hi": "वाराणसी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.77-80. On the way, Goprātara on the Sarayū, where Rāma went to heaven (3.82.70).",
+      "hi": "आरण्यकपर्व 3.82.77-80। मार्ग में, सरयू पर गोप्रतार, जहाँ राम स्वर्ग गए (3.82.70)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "gaya",
+    "status": "draft",
+    "name": {
+      "en": "Gayā",
+      "hi": "गया"
+    },
+    "anchor": {
+      "lat": 24.79686,
+      "lon": 85.00385
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Gayā and the undying banyan",
+      "hi": "गया और अक्षयवट"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततो गयां समासाद्य ब्रह्मचारी समाहितः",
+    "locus": {
+      "en": "Mahābhārata 3.82.81-84",
+      "hi": "महाभारत 3.82.81-84"
+    },
+    "modern": {
+      "en": "Gaya",
+      "hi": "गया"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.82.81-84. The tīrtha of the dead: the undying banyan and the Phalgu.",
+      "hi": "आरण्यकपर्व 3.82.81-84। पितरों का तीर्थ: अक्षयवट और फल्गु।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-082?oldid=321667",
+      "https://www.geonames.org/1271439"
+    ]
+  },
+  {
+    "id": "gangasagara",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgā-sāgara-saṅgama",
+      "hi": "गङ्गासागरसङ्गम"
+    },
+    "anchor": {
+      "lat": 21.64,
+      "lon": 88.08
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "The Gaṅgā meets the sea",
+      "hi": "गंगा का सागर-संगम"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "गङ्गायास्तत्र राजेन्द्र सागरस्य च सङ्गमे",
+    "locus": {
+      "en": "Mahābhārata 3.83.2-5",
+      "hi": "महाभारत 3.83.2-5"
+    },
+    "modern": {
+      "en": "Gangasagar, Sagar Island",
+      "hi": "गंगासागर, सागर द्वीप"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.2-5. After Rājagṛha, the Kauśikī, the Lauhitya and the Karatoyā: the circuit's eastern corner.",
+      "hi": "आरण्यकपर्व 3.83.2-5। राजगृह, कौशिकी, लौहित्य और करतोया के बाद: परिक्रमा का पूर्वी कोना।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941",
+      "https://en.wikipedia.org/wiki/Gangasagar"
+    ]
+  },
+  {
+    "id": "kanyatirtha",
+    "status": "draft",
+    "name": {
+      "en": "Kanyātīrtha",
+      "hi": "कन्यातीर्थ"
+    },
+    "anchor": {
+      "lat": 8.09008,
+      "lon": 77.53841
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Kanyātīrtha at the cape",
+      "hi": "अंतरीप पर कन्यातीर्थ"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "ततस्तीरे समुद्रस्य कन्यातीर्थमुपस्पृशेत्",
+    "locus": {
+      "en": "Mahābhārata 3.83.21-24",
+      "hi": "महाभारत 3.83.21-24"
+    },
+    "modern": {
+      "en": "Kanyakumari",
+      "hi": "कन्याकुमारी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.21-24. After the Vaitaraṇī, Mahendra, the Pāṇḍyas' Ṛṣabha and the Kāverī.",
+      "hi": "आरण्यकपर्व 3.83.21-24। वैतरणी, महेन्द्र, पाण्ड्यों के ऋषभ और कावेरी के बाद।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941",
+      "https://www.geonames.org/1268008"
+    ]
+  },
+  {
+    "id": "gokarna-pulastya",
+    "status": "draft",
+    "name": {
+      "en": "Gokarṇa",
+      "hi": "गोकर्ण"
+    },
+    "anchor": {
+      "lat": 14.55,
+      "lon": 74.31667
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Gokarṇa, in the middle of the sea",
+      "hi": "गोकर्ण, समुद्र के बीच"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "अथ गोकर्णमासाद्य त्रिषु लोकेषु विश्रुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.21-24",
+      "hi": "महाभारत 3.83.21-24"
+    },
+    "modern": {
+      "en": "Gokarna, Uttara Kannada",
+      "hi": "गोकर्ण, उत्तर कन्नड़"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.21-24. The Śiva tīrtha on the western sea.",
+      "hi": "आरण्यकपर्व 3.83.21-24। पश्चिमी समुद्र पर शिव का तीर्थ।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941",
+      "https://www.geonames.org/1271064"
+    ]
+  },
+  {
+    "id": "kalanjara",
+    "status": "draft",
+    "name": {
+      "en": "Kālañjara",
+      "hi": "कालञ्जर"
+    },
+    "anchor": {
+      "lat": 25.0167,
+      "lon": 80.4833
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Kālañjara and Citrakūṭa",
+      "hi": "कालंजर और चित्रकूट"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "अत्र कालञ्जरं गत्वा पर्वतं लोकविश्रुतम्",
+    "locus": {
+      "en": "Mahābhārata 3.83.56-58",
+      "hi": "महाभारत 3.83.56-58"
+    },
+    "modern": {
+      "en": "Kalinjar, Banda district",
+      "hi": "कालिंजर, बाँदा जिला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.56-58. After Śūrpāraka on the west coast, the circuit turns inland to the middle country.",
+      "hi": "आरण्यकपर्व 3.83.56-58। पश्चिमी तट पर शूर्पारक के बाद परिक्रमा मध्य देश की ओर मुड़ती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941",
+      "https://en.wikipedia.org/wiki/Kalinjar_Fort"
+    ]
+  },
+  {
+    "id": "prayaga",
+    "status": "draft",
+    "name": {
+      "en": "Prayāga",
+      "hi": "प्रयाग"
+    },
+    "anchor": {
+      "lat": 25.44478,
+      "lon": 81.84322
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "pulastya",
+    "priority": 2,
+    "event": {
+      "en": "Prayāga, above all tīrthas",
+      "hi": "प्रयाग, सब तीर्थों से श्रेष्ठ"
+    },
+    "when": {
+      "en": "Recited at Kāmyaka in the forest years",
+      "hi": "वनवास के वर्षों में काम्यक में सुनाया गया"
+    },
+    "verse": "प्रयागं सर्वतीर्थेभ्यः प्रवदन्त्यधिकं विभो",
+    "locus": {
+      "en": "Mahābhārata 3.83.75-79",
+      "hi": "महाभारत 3.83.75-79"
+    },
+    "modern": {
+      "en": "Prayagraj",
+      "hi": "प्रयागराज"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āraṇyakaparvan 3.83.75-79. The circuit ends at the confluence, 'the loins of the earth'; by Śṛṅgaverapura, where Rāma crossed.",
+      "hi": "आरण्यकपर्व 3.83.75-79। परिक्रमा संगम पर समाप्त होती है, 'पृथ्वी का जघन'; शृंगवेरपुर होकर, जहाँ राम ने गंगा पार की।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-03-आरण्यकपर्व-083?oldid=402941",
+      "https://www.geonames.org/1278994"
+    ]
+  },
+  {
     "id": "prabhasa",
     "status": "draft",
     "name": {
