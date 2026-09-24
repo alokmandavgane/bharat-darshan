@@ -920,6 +920,374 @@
     ]
   },
   {
+    "id": "surasena",
+    "status": "draft",
+    "name": {
+      "en": "Śūrasena",
+      "hi": "शूरसेन"
+    },
+    "anchor": {
+      "lat": 27.5035,
+      "lon": 77.67215
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "sahadeva",
+    "priority": 1,
+    "event": {
+      "en": "Sahadeva sets out south",
+      "hi": "सहदेव दक्षिण की ओर"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "स शूरसेनान्कार्त्स्न्येन पूर्वमेवाजयत्प्रभुः",
+    "locus": {
+      "en": "Mahābhārata 2.32.1-4",
+      "hi": "महाभारत 2.32.1-4"
+    },
+    "modern": {
+      "en": "Mathura",
+      "hi": "मथुरा"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.1-4. The Śūrasenas of Mathurā first, then Matsya, Dantavakra, Kuntibhoja and the Chambal.",
+      "hi": "सभापर्व 2.32.1-4। पहले मथुरा के शूरसेन, फिर मत्स्य, दन्तवक्र, कुन्तिभोज और चर्मण्वती।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1263364"
+    ]
+  },
+  {
+    "id": "avanti",
+    "status": "draft",
+    "name": {
+      "en": "Avanti (Āvanta)",
+      "hi": "अवन्ति (आवन्त)"
+    },
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "Avanti's Vinda and Anuvinda",
+      "hi": "अवन्ती के विन्द और अनुविन्द"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "विन्दानुविन्दावावन्त्यौ सैन्येन महतावृतौ",
+    "locus": {
+      "en": "Mahābhārata 2.32.9-11",
+      "hi": "महाभारत 2.32.9-11"
+    },
+    "modern": {
+      "en": "Ujjain",
+      "hi": "उज्जैन"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.9-11. Named only in the kings' verse, where its king stands for the south.",
+      "hi": "सभापर्व 2.32.9-11। केवल राजाओं वाले श्लोक में नाम है, जहाँ इसका राजा दक्षिण भाग का प्रतिनिधि है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1253914"
+    ]
+  },
+  {
+    "id": "kiskindha",
+    "status": "draft",
+    "name": {
+      "en": "Kiṣkindhā",
+      "hi": "किष्किन्धा"
+    },
+    "anchor": {
+      "lat": 15.3352,
+      "lon": 76.4603
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "Seven days against Rāma's monkeys",
+      "hi": "राम के वानरों से सात दिन युद्ध"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "गुहामासादयामास किष्किन्धां लोकविश्रुताम्",
+    "locus": {
+      "en": "Mahābhārata 2.32.18-22",
+      "hi": "महाभारत 2.32.18-22"
+    },
+    "modern": {
+      "en": "Hampi–Anegundi",
+      "hi": "हम्पी–आनेगुंदी"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.18-22. By Bhojakaṭa, the Veṇā and a day's fight with the Pāṇḍya; Mainda and Dvivida still hold Kiṣkindhā.",
+      "hi": "सभापर्व 2.32.18-22। भोजकट, वेणा और पाण्ड्य से एक दिन के युद्ध के बाद; मैंद और द्विविद अब भी किष्किन्धा में हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1270448"
+    ]
+  },
+  {
+    "id": "mahismati",
+    "status": "draft",
+    "name": {
+      "en": "Māhiṣmatī",
+      "hi": "माहिष्मती"
+    },
+    "anchor": {
+      "lat": 22.17592,
+      "lon": 75.58715
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "Māhiṣmatī, where Agni fights for King Nīla",
+      "hi": "माहिष्मती, जहाँ अग्नि राजा नील के लिए लड़ते हैं"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "ततो रत्नान्युपादाय पुरीं माहिष्मतीं ययौ",
+    "locus": {
+      "en": "Mahābhārata 2.32.23-27",
+      "hi": "महाभारत 2.32.23-27"
+    },
+    "modern": {
+      "en": "Maheshwar, on the Narmadā",
+      "hi": "महेश्वर, नर्मदा पर"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.23-27. Sahadeva's army catches fire; he wins Agni over with a hymn.",
+      "hi": "सभापर्व 2.32.23-27। सहदेव की सेना में आग लग जाती है; वे स्तुति से अग्नि को प्रसन्न करते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1264385"
+    ]
+  },
+  {
+    "id": "surastra",
+    "status": "draft",
+    "name": {
+      "en": "Surāṣṭra",
+      "hi": "सुराष्ट्र"
+    },
+    "anchor": {
+      "lat": 22.29161,
+      "lon": 70.79322
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "Surāṣṭra",
+      "hi": "सुराष्ट्र"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "वशे चक्रे महाबाहुः सुराष्ट्राधिपतिं तदा",
+    "locus": {
+      "en": "Mahābhārata 2.32.62-66",
+      "hi": "महाभारत 2.32.62-66"
+    },
+    "modern": {
+      "en": "Saurashtra",
+      "hi": "सौराष्ट्र"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.62-66. After Traipura and the Paurava; from here he sends to Bhīṣmaka at Bhojakaṭa.",
+      "hi": "सभापर्व 2.32.62-66। त्रैपुर और पौरव के बाद; यहाँ से वे भोजकट में भीष्मक को संदेश भेजते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1258847"
+    ]
+  },
+  {
+    "id": "surparaka-sahadeva",
+    "status": "draft",
+    "name": {
+      "en": "Śūrpāraka",
+      "hi": "शूर्पारक"
+    },
+    "anchor": {
+      "lat": 19.4167,
+      "lon": 72.8167
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "The far south by envoys",
+      "hi": "दूतों द्वारा सुदूर दक्षिण"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "ततः शूर्पारकं चैव तालाकटमथापि च",
+    "locus": {
+      "en": "Mahābhārata 2.32.67-72",
+      "hi": "महाभारत 2.32.67-72"
+    },
+    "modern": {
+      "en": "Sopara, Palghar district",
+      "hi": "सोपारा, पालघर जिला"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.67-72. The Daṇḍakas, island mlecchas, one-footed and ear-cloaked peoples, the Keralas and Karahāṭaka pay by embassy.",
+      "hi": "सभापर्व 2.32.67-72। दण्डक, द्वीपों के म्लेच्छ, एकपाद और कर्णप्रावरण लोग, केरल और करहाटक दूतों से ही कर देते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://en.wikipedia.org/wiki/Sopara"
+    ]
+  },
+  {
+    "id": "kanyatirtha-sahadeva",
+    "status": "draft",
+    "name": {
+      "en": "Kanyātīrtha",
+      "hi": "कन्यातीर्थ"
+    },
+    "anchor": {
+      "lat": 8.09008,
+      "lon": 77.53841
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "The Tāmraparṇī and Kanyātīrtha",
+      "hi": "ताम्रपर्णी और कन्यातीर्थ"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "कन्यातीर्थमतीत्य च",
+    "locus": {
+      "en": "Mahābhārata 2.32.73-75",
+      "hi": "महाभारत 2.32.73-75"
+    },
+    "modern": {
+      "en": "Kanyakumari",
+      "hi": "कन्याकुमारी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.73-75. The Maiden's ford at the cape, where three seas meet.",
+      "hi": "सभापर्व 2.32.73-75। अंतरीप पर कन्या का तीर्थ, जहाँ तीन समुद्र मिलते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032",
+      "https://www.geonames.org/1268008"
+    ]
+  },
+  {
+    "id": "bhrgukaccha",
+    "status": "draft",
+    "name": {
+      "en": "Bhṛgukaccha",
+      "hi": "भृगुकच्छ"
+    },
+    "anchor": {
+      "lat": 21.69482,
+      "lon": 72.9805
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "sahadeva",
+    "priority": 2,
+    "event": {
+      "en": "Ghaṭotkaca sent to Laṅkā",
+      "hi": "घटोत्कच लंका भेजे गए"
+    },
+    "when": {
+      "en": "The Indraprastha years, before the rājasūya",
+      "hi": "इन्द्रप्रस्थ के वर्ष, राजसूय से पहले"
+    },
+    "verse": "भृगुकच्छात्ततो धीमान्साम्नैवामित्रकर्शनः",
+    "locus": {
+      "en": "Mahābhārata 2.32.76-82",
+      "hi": "महाभारत 2.32.76-82"
+    },
+    "modern": {
+      "en": "Bharuch, at the Narmadā's mouth",
+      "hi": "भरूच, नर्मदा के मुहाने पर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.76-82. From Bhṛgukaccha he sends Ghaṭotkaca to Vibhīṣaṇa, who pays tribute; Laṅkā is not placed.",
+      "hi": "सभापर्व 2.32.76-82। भृगुकच्छ से वे घटोत्कच को विभीषण के पास भेजते हैं, जो कर देते हैं; लंका का स्थान तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396",
+      "https://www.geonames.org/1276100"
+    ]
+  },
+  {
     "id": "hastinapura-dice",
     "status": "draft",
     "name": {

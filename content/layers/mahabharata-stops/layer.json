@@ -47,6 +47,15 @@
       "icon": "pin"
     },
     {
+      "id": "sahadeva",
+      "title": {
+        "en": "Sahadeva's conquest of the south",
+        "hi": "सहदेव की दक्षिण-विजय"
+      },
+      "color": "#e06c9f",
+      "icon": "pin"
+    },
+    {
       "id": "arjuna",
       "title": {
         "en": "Arjuna's pilgrimage",

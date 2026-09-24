@@ -3100,5 +3100,302 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-031?oldid=50390"
     ]
+  },
+  {
+    "id": "sh-surasena",
+    "status": "draft",
+    "name": {
+      "en": "To the Śūrasenas",
+      "hi": "शूरसेनों की ओर"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "to": {
+        "lat": 27.5035,
+        "lon": 77.67215
+      },
+      "bow": 0.12
+    },
+    "verse": "स शूरसेनान्कार्त्स्न्येन पूर्वमेवाजयत्प्रभुः",
+    "locus": {
+      "en": "Mahābhārata 2.32.1-4",
+      "hi": "महाभारत 2.32.1-4"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.1-4.",
+      "hi": "सभापर्व 2.32.1-4।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-avanti",
+    "status": "draft",
+    "name": {
+      "en": "By the Chambal and the Narmadā to Avanti",
+      "hi": "चर्मण्वती और नर्मदा होकर अवन्ती"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 27.5035,
+        "lon": 77.67215
+      },
+      "to": {
+        "lat": 23.18239,
+        "lon": 75.77643
+      },
+      "bow": 0.12
+    },
+    "verse": "विन्दानुविन्दावावन्त्यौ सैन्येन महतावृतौ",
+    "locus": {
+      "en": "Mahābhārata 2.32.9-11",
+      "hi": "महाभारत 2.32.9-11"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.9-11.",
+      "hi": "सभापर्व 2.32.9-11।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-kiskindha",
+    "status": "draft",
+    "name": {
+      "en": "Down the southern road to Kiṣkindhā",
+      "hi": "दक्षिणापथ से किष्किन्धा"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 23.18239,
+        "lon": 75.77643
+      },
+      "to": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "bow": 0.12
+    },
+    "verse": "गुहामासादयामास किष्किन्धां लोकविश्रुताम्",
+    "locus": {
+      "en": "Mahābhārata 2.32.18-22",
+      "hi": "महाभारत 2.32.18-22"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.18-22. Bhojakaṭa, the Veṇā and the forest peoples are not placed.",
+      "hi": "सभापर्व 2.32.18-22। भोजकट, वेणा और वनवासी लोग तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-mahismati",
+    "status": "draft",
+    "name": {
+      "en": "Back north to Māhiṣmatī",
+      "hi": "उत्तर लौटकर माहिष्मती"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 22.17592,
+        "lon": 75.58715
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो रत्नान्युपादाय पुरीं माहिष्मतीं ययौ",
+    "locus": {
+      "en": "Mahābhārata 2.32.23-27",
+      "hi": "महाभारत 2.32.23-27"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.23-27.",
+      "hi": "सभापर्व 2.32.23-27।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-surastra",
+    "status": "draft",
+    "name": {
+      "en": "By Traipura to Surāṣṭra",
+      "hi": "त्रैपुर होकर सुराष्ट्र"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.17592,
+        "lon": 75.58715
+      },
+      "to": {
+        "lat": 22.29161,
+        "lon": 70.79322
+      },
+      "bow": 0.12
+    },
+    "verse": "वशे चक्रे महाबाहुः सुराष्ट्राधिपतिं तदा",
+    "locus": {
+      "en": "Mahābhārata 2.32.62-66",
+      "hi": "महाभारत 2.32.62-66"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.62-66.",
+      "hi": "सभापर्व 2.32.62-66।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-surparaka",
+    "status": "draft",
+    "name": {
+      "en": "Down the coast to Śūrpāraka",
+      "hi": "तट के साथ शूर्पारक"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.29161,
+        "lon": 70.79322
+      },
+      "to": {
+        "lat": 19.4167,
+        "lon": 72.8167
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः शूर्पारकं चैव तालाकटमथापि च",
+    "locus": {
+      "en": "Mahābhārata 2.32.67-72",
+      "hi": "महाभारत 2.32.67-72"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.67-72.",
+      "hi": "सभापर्व 2.32.67-72।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-kanya",
+    "status": "draft",
+    "name": {
+      "en": "By envoys to the far south",
+      "hi": "दूतों द्वारा सुदूर दक्षिण"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 19.4167,
+        "lon": 72.8167
+      },
+      "to": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "bow": 0.12
+    },
+    "verse": "कन्यातीर्थमतीत्य च",
+    "locus": {
+      "en": "Mahābhārata 2.32.73-75",
+      "hi": "महाभारत 2.32.73-75"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.73-75.",
+      "hi": "सभापर्व 2.32.73-75।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032"
+    ]
+  },
+  {
+    "id": "sh-bhrgukaccha",
+    "status": "draft",
+    "name": {
+      "en": "Back up to Bhṛgukaccha",
+      "hi": "ऊपर भृगुकच्छ तक"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "to": {
+        "lat": 21.69482,
+        "lon": 72.9805
+      },
+      "bow": -0.15
+    },
+    "verse": "भृगुकच्छात्ततो धीमान्साम्नैवामित्रकर्शनः",
+    "locus": {
+      "en": "Mahābhārata 2.32.76-82",
+      "hi": "महाभारत 2.32.76-82"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.32.76-82. The text says 'the northern shore of the sea'; Bhṛgukaccha is where Ghaṭotkaca is called.",
+      "hi": "सभापर्व 2.32.76-82। पाठ 'समुद्र का उत्तरी तट' कहता है; भृगुकच्छ वह स्थान है जहाँ घटोत्कच बुलाए जाते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-032?oldid=50396"
+    ]
+  },
+  {
+    "id": "sh-home",
+    "status": "draft",
+    "name": {
+      "en": "Home with Laṅkā's treasure",
+      "hi": "लंका के धन के साथ वापसी"
+    },
+    "category": "sahadeva",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 21.69482,
+        "lon": 72.9805
+      },
+      "to": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "bow": 0.12
+    },
+    "verse": "इन्द्रप्रस्थं विवेशाथ कम्पयन्निव मेदिनीम्",
+    "locus": {
+      "en": "Mahābhārata 2.34.90-93",
+      "hi": "महाभारत 2.34.90-93"
+    },
+    "blurb": {
+      "en": "Sabhāparvan 2.34.90-93.",
+      "hi": "सभापर्व 2.34.90-93।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-02-सभापर्व-034?oldid=50404"
+    ]
   }
 ]
