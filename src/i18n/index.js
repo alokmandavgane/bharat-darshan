@@ -45,8 +45,12 @@ export function pick(field) {
   return field[current] ?? field.en ?? '';
 }
 
+// One formatter per language, made on first use: building an Intl.NumberFormat is slow,
+// and the scale bar formats a number on every camera frame.
+const formatters = {};
 export function formatNumber(n) {
-  return new Intl.NumberFormat(current === 'hi' ? 'hi-IN' : 'en-IN').format(n);
+  const locale = current === 'hi' ? 'hi-IN' : 'en-IN';
+  return (formatters[locale] ??= new Intl.NumberFormat(locale)).format(n);
 }
 
 /** Re-render every bound element: data-i18n="key" (text), data-i18n-aria-label="key", data-i18n-title="key". */
