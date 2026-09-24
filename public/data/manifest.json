@@ -2147,7 +2147,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 9,
+   "count": 12,
    "reviewed": 0,
    "categories": [
     {
@@ -2181,6 +2181,22 @@
       "hi": "राम की खोज, पम्पा तक"
      },
      "color": "#3f6f9e"
+    },
+    {
+     "id": "kiskindha",
+     "title": {
+      "en": "Kiṣkindhā and the rains",
+      "hi": "किष्किन्धा और वर्षा"
+     },
+     "color": "#a86f2f"
+    },
+    {
+     "id": "vanara",
+     "title": {
+      "en": "The southern party, to Mahendra",
+      "hi": "दक्षिणी दल, महेन्द्र तक"
+     },
+     "color": "#d08a2c"
     }
    ],
    "fields": {
@@ -2200,8 +2216,8 @@
     }
    },
    "note": {
-    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search. An arrow is a diagram of the stage, not the track.",
-    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज। तीर चरण का चित्र है, रास्ता नहीं।"
+    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search — then Kiṣkindhā and the southern party's road to Mahendra. An arrow is a diagram of the stage, not the track.",
+    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज — फिर किष्किन्धा और महेन्द्र तक दक्षिणी दल का मार्ग। तीर चरण का चित्र है, रास्ता नहीं।"
    },
    "sources": [
     "sa-wikisource"
@@ -2212,13 +2228,13 @@
    "id": "rama-exile-stops",
    "type": "points",
    "title": {
-    "en": "Rāma's halts, Ayodhyā to the Pampā",
-    "hi": "राम के पड़ाव, अयोध्या से पम्पा"
+    "en": "Rāma's halts, Ayodhyā to the southern sea",
+    "hi": "राम के पड़ाव, अयोध्या से दक्षिणी समुद्र"
    },
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 8,
+   "count": 10,
    "reviewed": 0,
    "categories": [
     {
@@ -2256,6 +2272,24 @@
      },
      "color": "#3f6f9e",
      "icon": "pin"
+    },
+    {
+     "id": "kiskindha",
+     "title": {
+      "en": "Kiṣkindhā and the rains",
+      "hi": "किष्किन्धा और वर्षा"
+     },
+     "color": "#a86f2f",
+     "icon": "pin"
+    },
+    {
+     "id": "vanara",
+     "title": {
+      "en": "The southern party, to Mahendra",
+      "hi": "दक्षिणी दल, महेन्द्र तक"
+     },
+     "color": "#d08a2c",
+     "icon": "pin"
     }
    ],
    "fields": {
@@ -2289,8 +2323,8 @@
     }
    },
    "note": {
-    "en": "The Ayodhyākāṇḍa and the Araṇyakāṇḍa tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī and on to the Pampā. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
-    "hi": "अयोध्याकाण्ड और अरण्यकाण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी और फिर पम्पा तक। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
+    "en": "The Ayodhyā, Araṇya and Kiṣkindhā kāṇḍas tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī, the Pampā and Kiṣkindhā, and the monkeys' road on to Mahendra by the sea. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
+    "hi": "अयोध्या, अरण्य और किष्किन्धा काण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी, पम्पा और किष्किन्धा तक, और फिर समुद्र-तट के महेन्द्र तक वानरों का मार्ग। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource",
@@ -2916,8 +2950,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 26786,
-   "sha256": "f0dadcac57ed"
+   "size": 26788,
+   "sha256": "8b6e78f288c7"
   },
   "sources.json": {
    "size": 31205,
@@ -3224,12 +3258,12 @@
    "sha256": "6b4f926e2030"
   },
   "layers/rama-exile-route.json": {
-   "size": 12256,
-   "sha256": "9db00a56c994"
+   "size": 16427,
+   "sha256": "2a67d403fe07"
   },
   "layers/rama-exile-stops.json": {
-   "size": 11656,
-   "sha256": "ad34a0d0e962"
+   "size": 15155,
+   "sha256": "64e7372abb4d"
   },
   "layers/ranges.json": {
    "size": 13461,
