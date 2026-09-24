@@ -2138,6 +2138,117 @@
    "path": "layers/rail.json"
   },
   {
+   "id": "rama-exile-route",
+   "type": "lines",
+   "title": {
+    "en": "Rāma's road into exile",
+    "hi": "राम का वनवास-मार्ग"
+   },
+   "icon": "road",
+   "group": "culture",
+   "default_on": false,
+   "count": 5,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "exile",
+     "title": {
+      "en": "Ayodhyā to Citrakūṭa",
+      "hi": "अयोध्या से चित्रकूट"
+     },
+     "color": "#b5432f"
+    }
+   ],
+   "fields": {
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "One arrow per stage, halt to halt, in the text's order. An arrow is a diagram of the stage, not the track walked: from Prayāga the text sends the exiles up the Yamunā to an old ford before they turn south to Citrakūṭa.",
+    "hi": "हर चरण का एक तीर, पड़ाव से पड़ाव, पाठ के क्रम में। तीर चरण का चित्र है, चला गया रास्ता नहीं: प्रयाग से पाठ वनवासियों को एक पुराने घाट तक यमुना के साथ ऊपर भेजता है, फिर वे दक्षिण में चित्रकूट की ओर मुड़ते हैं।"
+   },
+   "sources": [
+    "sa-wikisource"
+   ],
+   "path": "layers/rama-exile-route.json"
+  },
+  {
+   "id": "rama-exile-stops",
+   "type": "points",
+   "title": {
+    "en": "Rāma's halts, Ayodhyā to Citrakūṭa",
+    "hi": "राम के पड़ाव, अयोध्या से चित्रकूट"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 6,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "exile",
+     "title": {
+      "en": "Ayodhyā to Citrakūṭa",
+      "hi": "अयोध्या से चित्रकूट"
+     },
+     "icon": "pin",
+     "color": "#b5432f"
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Identified with",
+      "hi": "पहचान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान का आधार"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "Ayodhyākāṇḍa 46-56 tells the first stretch of the exile as a journey in order. Each pin is a halt or crossing the text names that can be set on the modern map. The Gomatī and Syandikā crossings are not placed by the text: their pins stand on towns on those rivers along the line of the road, and their cards say so.",
+    "hi": "अयोध्याकाण्ड 46-56 वनवास के पहले चरण को क्रम से एक यात्रा के रूप में कहता है। हर पिन पाठ का बताया एक पड़ाव या नदी-पार है जिसे आधुनिक मानचित्र पर रखा जा सकता है। गोमती और स्यन्दिका के पार के स्थान पाठ नहीं बताता: उनके पिन मार्ग की रेखा पर उन नदियों के नगरों पर हैं, और उनके कार्ड यही कहते हैं।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/rama-exile-stops.json"
+  },
+  {
    "id": "ranges",
    "type": "points",
    "marker": "label",
@@ -2754,8 +2865,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 25499,
-   "sha256": "74632373e2e9"
+   "size": 26660,
+   "sha256": "b63733050bf9"
   },
   "sources.json": {
    "size": 31205,
@@ -3060,6 +3171,14 @@
   "layers/rail.json": {
    "size": 509505,
    "sha256": "6b4f926e2030"
+  },
+  "layers/rama-exile-route.json": {
+   "size": 6604,
+   "sha256": "90ae7cf9191c"
+  },
+  "layers/rama-exile-stops.json": {
+   "size": 8729,
+   "sha256": "4aa492217879"
   },
   "layers/ranges.json": {
    "size": 13461,
