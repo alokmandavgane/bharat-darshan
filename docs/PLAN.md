@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-second round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-third round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,16 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-third round: Hanumān's leap and return added to Rāma's road (Sundarakāṇḍa).
+  Same page (`/en/atlas/rama-exile`). No new stops: the kāṇḍa's action is in Laṅkā, which is not
+  placed. A seventh colour, Hanumān's leap and return, replaces the Kiṣkindhā stage's "leap to come"
+  arrow with three: Mahendra out to sea (the leap to Laṅkā on Trikūṭa), back from sea to Mahendra
+  (the return from Mount Ariṣṭa, bowed the other way), and Mahendra to Kiṣkindhā by Madhuvana (the
+  report, bowed apart from the southern party's arrow). 10 stops, 14 arrows.
+  - The arrows stop at sea where Laṅkā would be; the layer note and each card say Laṅkā is not placed.
+  - Checked in the browser (the three new cards read, 10 stops in order); tests and build pass.
+  - **Next for the route**: Yuddhakāṇḍa 4-22 (the march to the sea and the setu), then Laṅkā and the
+    return to Ayodhyā by the Puṣpaka.
 - 2026-09-24, fifty-second round: Rāma's road extended through the Kiṣkindhākāṇḍa to Mahendra.
   Same page (`/en/atlas/rama-exile`), now "Rāma's road: Ayodhyā to the southern sea".
   - 10 stops (Kiṣkindhā and the southern Mahendra added) and 12 arrows in six colours; the two new

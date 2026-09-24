@@ -363,14 +363,14 @@
     ]
   },
   {
-    "id": "to-lanka",
+    "id": "hanuman-leap",
     "status": "draft",
     "name": {
-      "en": "A hundred yojanas to Laṅkā: the leap to come",
-      "hi": "लंका तक सौ योजन: आगे की छलाँग"
+      "en": "Hanumān's leap: a hundred yojanas to Laṅkā",
+      "hi": "हनुमान की छलाँग: लंका तक सौ योजन"
     },
-    "category": "vanara",
-    "rank": 2,
+    "category": "hanuman",
+    "rank": 1,
     "geometry": {
       "from": {
         "lat": 8.09008,
@@ -382,17 +382,83 @@
       },
       "bow": 0.12
     },
-    "verse": "इतो द्वीपे समुद्रस्य सम्पूर्णे शतयोजने",
+    "verse": "त्रिकूटस्य तटे लंकां",
     "locus": {
-      "en": "Rāmāyaṇa 4.58.19-24",
-      "hi": "रामायण 4.58.19-24"
+      "en": "Rāmāyaṇa 5.2.1-4",
+      "hi": "रामायण 5.2.1-4"
     },
     "blurb": {
-      "en": "Kiṣkindhā-kāṇḍa 58.19-24. Sampāti's figure; the leap itself is the Sundarakāṇḍa's.",
-      "hi": "किष्किन्धाकाण्ड 58.19-24। सम्पाति का बताया माप; छलाँग स्वयं सुन्दरकाण्ड में है।"
+      "en": "Sundara-kāṇḍa 2.1-4. Past Maināka to Laṅkā on the slope of Trikūṭa, entered at nightfall. Laṅkā is not placed; the arrow stops at sea.",
+      "hi": "सुन्दरकाण्ड 2.1-4। मैनाक के ऊपर से त्रिकूट की ढलान पर बसी लंका तक, रात होते प्रवेश। लंका का स्थान तय नहीं; तीर समुद्र में रुकता है।"
     },
     "sources": [
-      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_५८?oldid=353750"
+      "https://sa.wikisource.org/wiki/रामायणम्/सुन्दरकाण्डम्/सर्गः_२?oldid=354117"
+    ]
+  },
+  {
+    "id": "hanuman-return",
+    "status": "draft",
+    "name": {
+      "en": "The leap back from Mount Ariṣṭa",
+      "hi": "अरिष्ट पर्वत से वापसी की छलाँग"
+    },
+    "category": "hanuman",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 8.25,
+        "lon": 79.55
+      },
+      "to": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "bow": -0.25
+    },
+    "verse": "दक्षिणादुत्तरं पारं",
+    "locus": {
+      "en": "Rāmāyaṇa 5.56.40-42",
+      "hi": "रामायण 5.56.40-42"
+    },
+    "blurb": {
+      "en": "Sundara-kāṇḍa 56.40-42. From the southern shore to the northern; Ariṣṭa, ten yojanas by thirty, is pressed into the earth.",
+      "hi": "सुन्दरकाण्ड 56.40-42। दक्षिणी तट से उत्तरी तट तक; दस योजन चौड़ा, तीस योजन ऊँचा अरिष्ट धरती में धँस जाता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/सुन्दरकाण्डम्/सर्गः_५६?oldid=355244"
+    ]
+  },
+  {
+    "id": "back-to-rama",
+    "status": "draft",
+    "name": {
+      "en": "By Madhuvana back to Rāma on Prasravaṇa",
+      "hi": "मधुवन होकर प्रस्रवण पर राम के पास"
+    },
+    "category": "hanuman",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "to": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "bow": -0.12
+    },
+    "verse": "यत् तन्मधुवनं नाम सुग्रीवस्याभिरक्षितम्",
+    "locus": {
+      "en": "Rāmāyaṇa 5.61.1-8",
+      "hi": "रामायण 5.61.1-8"
+    },
+    "blurb": {
+      "en": "Sundara-kāṇḍa 61.1-8. The report: Laṅkā on the southern shore of the southern ocean, and Sītā will live one month.",
+      "hi": "सुन्दरकाण्ड 61.1-8। समाचार: लंका दक्षिणी समुद्र के दक्षिणी तट पर है, और सीता एक मास जीवित रहेंगी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/सुन्दरकाण्डम्/सर्गः_६१?oldid=355599"
     ]
   }
 ]
