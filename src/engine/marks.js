@@ -227,7 +227,7 @@ export function createMarks(scene, tu, { loadRecipe, grid }) {
       if (!active.has(id)) continue;
       for (const rec of entry.records) {
         if (!rec.group || !rec.group.shown[rec.index]) continue;
-        const p = project([rec.item.x, rec.item.z]);
+        const p = project(rec.item.x, rec.item.z);
         if (!p) continue;
         const px = rec.size * uScale.value;                       // screen px per model unit
         const h = entry.kind === 'dot' ? px * 2 : rec.group.height * px;

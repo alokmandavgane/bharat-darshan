@@ -100,7 +100,7 @@ export function createLabels(container, text) {
       const u = it.unit;
       if (hideAll) { it.el.hidden = true; continue; }
       if (it.lang !== lang) measure(it, lang);
-      const p = project(u.anchor);
+      const p = project(u.anchor[0], u.anchor[1]);
       if (!p) { it.el.hidden = true; continue; }
       const cx = viewport.w / 2 + p[0], cy = viewport.h / 2 - p[1];
       // A name runs across its state, so it is the width that has to hold it; the

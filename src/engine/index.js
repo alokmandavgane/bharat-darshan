@@ -13,7 +13,7 @@ import { createIdle } from './idle.js';
 import { createLabels } from './labels.js';
 import { createMarks } from './marks.js';
 import { loadPack } from './pack.js';
-import { biasedPick, createHeightfield, landMask, pickTerrain, projectGround } from './picking.js';
+import { biasedPick, createHeightfield, groundProjector, landMask, pickTerrain, projectGround } from './picking.js';
 import { createPoints, markerScale, priorityAt } from './points.js';
 import { pickQuality } from './quality.js';
 import { createTerrain, CURVE } from './terrain.js';
@@ -126,6 +126,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     // Markers first (they are interactive), the state names among them where points.js
     // says -- ahead of a page's own names only when no page is open -- and the towns'
     // names last, keeping clear of everything.
+    const project = frameProjector();
     points.update({ project, level, viewport, camera: cam, active,
       selected: store.get('item'), lang: store.get('lang'), drafts: !!store.get('drafts'), month: store.get('month'),
       stateNamesFirst: !store.get('plate'),
@@ -731,6 +732,15 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     return projectGround(store.get('camera'), viewport, point[0], point[1], field, liftKm, raised, prismLift);
   }
 
+  /**
+   * The same for a batch under the current camera, as (x, z): markers and labels call it
+   * hundreds of times a frame. It reuses one output array (see `groundProjector`).
+   */
+  function frameProjector() {
+    if (!field) return () => null;
+    return groundProjector(store.get('camera'), viewport, field, liftKm, raised, prismLift);
+  }
+
   // --- state view: the unit lifts out as a block, the rest steps back, the camera flies in
   async function fineIdsTexture() {
     if (quality.heightTier !== FIRST_TIER) return null;          // the tier on screen is already 2048
@@ -921,7 +931,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
 
   /** A bead or a figurine under a screen point: they have no element of their own to click. */
   function markAt(sx, sy, px) {
-    return marks?.nearest(project, sx, sy, px, new Set(store.get('layers')?.active || [])) || null;
+    return marks?.nearest(frameProjector(), sx, sy, px, new Set(store.get('layers')?.active || [])) || null;
   }
 
   store.subscribe('tap', (tap) => {

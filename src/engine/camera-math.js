@@ -110,10 +110,27 @@ export function paddedCentre(viewport, pad) {
 
 /** Screen position (px from the viewport centre, y up) of a scene point. */
 export function project(cam, point, viewport) {
+  return projector(cam, viewport)(point[0], point[1], point[2], [0, 0]);
+}
+
+/**
+ * `project` for many points under one camera: the basis is worked out once, and each
+ * call writes into `out` rather than making an array. Markers and labels are projected
+ * a few hundred at a time on every frame of a pan, and the garbage that made showed up
+ * as hitches on a phone.
+ * @returns {(x: number, y: number, z: number, out: number[]) => number[]}
+ */
+export function projector(cam, viewport) {
   const k = kmPerPixel(cam, viewport);
   const { right, up } = basis(cam.yaw, cam.pitch);
-  const px = point[0] - cam.x, py = point[1], pz = point[2] - cam.z;
-  return [(px * right[0] + pz * right[2]) / k, (px * up[0] + py * up[1] + pz * up[2]) / k];
+  const r0 = right[0], r2 = right[2], u0 = up[0], u1 = up[1], u2 = up[2];
+  const cx = cam.x, cz = cam.z;
+  return (x, y, z, out) => {
+    const px = x - cx, pz = z - cz;
+    out[0] = (px * r0 + pz * r2) / k;
+    out[1] = (px * u0 + y * u1 + pz * u2) / k;
+    return out;
+  };
 }
 
 // --- anchors: the one rule the handling rests on (PLAN.md D13)

@@ -161,7 +161,7 @@ export function createPoints(container, { text, onSelect }) {
         // is the order the build writes them in. A figurine is the point of its page.
         else if (show && !asSymbol && !asModel) show = item.priority <= maxPriority || isSel;
         if (!show) { el.hidden = true; continue; }
-        const p = project([item.x, item.z]);
+        const p = project(item.x, item.z);
         if (!p) { el.hidden = true; continue; }
         const cx = viewport.w / 2 + p[0], cy = viewport.h / 2 - p[1];
         const onScreen = cx > -size && cx < viewport.w + size && cy > -size && cy < viewport.h + size;

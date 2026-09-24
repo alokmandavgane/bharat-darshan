@@ -1,7 +1,7 @@
 // @ts-check
 // Region picking on the CPU: the pointer ray meets the displaced heightfield, then the
 // ID raster says which state is there (PLAN.md section 6). Pure maths, no three.js.
-import { basis, groundPoint, project as projectPoint } from './camera-math.js';
+import { basis, groundPoint, projector } from './camera-math.js';
 
 /**
  * Wrap a tier's decoded packs for sampling in scene km.
@@ -107,11 +107,24 @@ export function pickTerrain(cam, viewport, sx, sy, field, liftKm, raised = null,
 
 /** Screen position (px from the viewport centre, y up) of a ground location, on top of the terrain. */
 export function projectGround(cam, viewport, x, z, field, liftKm, raised = null, prismKm = null) {
-  const id = field.idAt(x, z);
-  const y = liftKm(field.heightM(x, z))
-    + (raised && id === raised.id ? raised.km : 0)
-    + (prismKm ? prismKm(id) : 0);
-  return projectPoint(cam, [x, y, z], viewport);
+  return [...groundProjector(cam, viewport, field, liftKm, raised, prismKm)(x, z)];
+}
+
+/**
+ * `projectGround` for a whole frame's markers: one camera basis, and one array that
+ * every call writes into, so the caller must read the result before the next call.
+ * @returns {(x: number, z: number) => number[]}
+ */
+export function groundProjector(cam, viewport, field, liftKm, raised = null, prismKm = null) {
+  const toScreen = projector(cam, viewport);
+  const out = [0, 0];
+  return (x, z) => {
+    const id = field.idAt(x, z);
+    const y = liftKm(field.heightM(x, z))
+      + (raised && id === raised.id ? raised.km : 0)
+      + (prismKm ? prismKm(id) : 0);
+    return toScreen(x, y, z, out);
+  };
 }
 
 /**
