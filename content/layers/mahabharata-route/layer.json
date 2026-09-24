@@ -81,6 +81,14 @@
       "color": "#5a5a5a"
     },
     {
+      "id": "horse",
+      "title": {
+        "en": "The aśvamedha horse",
+        "hi": "अश्वमेध का अश्व"
+      },
+      "color": "#b0417a"
+    },
+    {
       "id": "final",
       "title": {
         "en": "The last journey",
@@ -106,8 +114,8 @@
     }
   },
   "note": {
-    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's, the embassy, Girivraja) are drawn thinner. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
-    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की, दूत-कर्म, गिरिव्रज) पतली खींची गई हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
+    "en": "Each arrow is a journey the text tells, in the order of the story; side journeys (Arjuna's, Balarāma's, the embassy, Girivraja) are drawn thinner. The horse's arrows into the Sindhu country and Gandhāra point beyond the Survey of India boundary. Points not in the text, the Gaṅgā crossing, the Panjab camp and the sea ends of the last journey, are placed by the compiler and say so.",
+    "hi": "हर तीर पाठ में कही गई एक यात्रा है, कथा के क्रम से; उप-यात्राएँ (अर्जुन की, बलराम की, दूत-कर्म, गिरिव्रज) पतली खींची गई हैं। सिंधु देश और गांधार की ओर अश्व के तीर भारतीय सर्वेक्षण सीमा के पार इंगित करते हैं। जो बिंदु पाठ में नहीं — गंगा का पार, पंजाब का पड़ाव और महाप्रस्थान के समुद्री छोर — संकलक द्वारा रखे गए हैं और यह बताते हैं।"
   },
   "sources": [
     "sa-wikisource"

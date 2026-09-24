@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-fifth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-sixth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,17 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-sixth round: the aśvamedha horse added to the Mahābhārata tour.
+  Same page (`/en/atlas/mahabharata`), now 24 stops and 41 arrows in ten colours. A tenth colour
+  (magenta, "The aśvamedha horse") follows the coronation: Hastināpura (the horse let go on the Caitra
+  full moon), Trigarta, Prāgjyotiṣa, Girivraja (Meghasandhi), Śuktisāhvayā (the Cedi city, near Banda),
+  Daśārṇa, Gokarṇa and Dvārakā, then home by Pañcanada and Gandhāra for the Māgha full moon.
+  - The route is drawn in the text's order, which zig-zags: the text says the horse wandered "at will",
+    though it announces a rightwise circuit, north first.
+  - The Sindhu and Gandhāra arrows point beyond the Survey of India boundary; no pins there. The Vaṅga
+    and southern-sea points are the compiler's and say so.
+  - Checked in the browser (24 stops in order, horse cards read, en and hi, no console errors); tests
+    and build pass.
 - 2026-09-24, fifty-fifth round: the Mahābhārata chronology, a third History tour.
   New page `/en/atlas/mahabharata`, "The Pāṇḍavas' road: a Mahābhārata chronology". 16 stops and 27
   arrows in nine colours, from the boys' arrival at Hastināpura to the last journey over the Himavat.

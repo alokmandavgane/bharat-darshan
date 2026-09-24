@@ -244,7 +244,7 @@
       "IN-BR"
     ],
     "category": "indraprastha",
-    "priority": 2,
+    "priority": 1,
     "event": {
       "en": "Jarāsandha killed",
       "hi": "जरासंध वध"
@@ -595,6 +595,374 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-12-शांतिपर्व-036?oldid=55108",
       "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "hastinapura-asvamedha",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "The horse let go",
+      "hi": "अश्व छोड़ा गया"
+    },
+    "when": {
+      "en": "The Caitra full moon; the sacrifice at the next Caitra",
+      "hi": "चैत्र पूर्णिमा; यज्ञ अगले चैत्र में"
+    },
+    "verse": "चैत्र्यां हि पौर्णमास्यां तु तव दीक्षा भविष्यति",
+    "locus": {
+      "en": "Mahābhārata 14.72.4-6",
+      "hi": "महाभारत 14.72.4-6"
+    },
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.72.4-6. Arjuna follows the sacrificial horse round the earth for ten months, fighting whoever stops it.",
+      "hi": "आश्वमेधिकपर्व 14.72.4-6। अर्जुन यज्ञ के अश्व के पीछे दस महीने पृथ्वी पर घूमते हैं, जो रोके उससे लड़ते हुए।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-072?oldid=56507",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
+    "id": "trigarta",
+    "status": "draft",
+    "name": {
+      "en": "Trigarta",
+      "hi": "त्रिगर्त"
+    },
+    "anchor": {
+      "lat": 32.09135,
+      "lon": 76.26267
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "The first battle: the Trigartas",
+      "hi": "पहला युद्ध: त्रिगर्त"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "त्रिगर्तैरभवद्युद्धं",
+    "locus": {
+      "en": "Mahābhārata 14.74.1-2",
+      "hi": "महाभारत 14.74.1-2"
+    },
+    "modern": {
+      "en": "Kangra",
+      "hi": "कांगड़ा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.74.1-2. 'North first' (14.73.21): the sons of the Trigarta kings killed at Kurukṣetra.",
+      "hi": "आश्वमेधिकपर्व 14.74.1-2। 'पहले उत्तर' (14.73.21): कुरुक्षेत्र में मारे गए त्रिगर्त राजाओं के पुत्र।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-074?oldid=56516",
+      "https://www.geonames.org/1268084"
+    ]
+  },
+  {
+    "id": "pragjyotisa",
+    "status": "draft",
+    "name": {
+      "en": "Prāgjyotiṣa",
+      "hi": "प्राग्ज्योतिष"
+    },
+    "anchor": {
+      "lat": 26.1844,
+      "lon": 91.7458
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "Bhagadatta's son fights",
+      "hi": "भगदत्त के पुत्र से युद्ध"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "प्राग्ज्योतिषमथाभ्येत्य",
+    "locus": {
+      "en": "Mahābhārata 14.75.1-2",
+      "hi": "महाभारत 14.75.1-2"
+    },
+    "modern": {
+      "en": "Guwahati",
+      "hi": "गुवाहाटी"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.75.1-2. From the western hills to the far east; then the horse is in the Sindhu country in the far west.",
+      "hi": "आश्वमेधिकपर्व 14.75.1-2। पश्चिमी पहाड़ों से सुदूर पूर्व; फिर अश्व सुदूर पश्चिम में सिंधु देश में।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-075?oldid=56520",
+      "https://www.geonames.org/1271476"
+    ]
+  },
+  {
+    "id": "girivraja-horse",
+    "status": "draft",
+    "name": {
+      "en": "Girivraja",
+      "hi": "गिरिव्रज"
+    },
+    "anchor": {
+      "lat": 25.02828,
+      "lon": 85.42079
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "horse",
+    "priority": 2,
+    "event": {
+      "en": "Meghasandhi of Rājagṛha",
+      "hi": "राजगृह का मेघसंधि"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "पुरं राजगृहं तदा",
+    "locus": {
+      "en": "Mahābhārata 14.83.1-4",
+      "hi": "महाभारत 14.83.1-4"
+    },
+    "modern": {
+      "en": "Rajgir",
+      "hi": "राजगीर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.83.1-4. After Maṇalūra, where Babhruvāhana fights his father, the horse turns for home but goes on through the east and south.",
+      "hi": "आश्वमेधिकपर्व 14.83.1-4। मणलूर के बाद, जहाँ बभ्रुवाहन अपने पिता से लड़ते हैं, अश्व घर की ओर मुड़ता है पर पूर्व और दक्षिण में घूमता रहता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-083?oldid=56553",
+      "https://www.geonames.org/1258864"
+    ]
+  },
+  {
+    "id": "suktimati",
+    "status": "draft",
+    "name": {
+      "en": "Śuktisāhvayā (Śuktimatī)",
+      "hi": "शुक्तिसाह्वया (शुक्तिमती)"
+    },
+    "anchor": {
+      "lat": 25.47758,
+      "lon": 80.33491
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "Śiśupāla's son at the Cedi city",
+      "hi": "चेदि नगर में शिशुपाल का पुत्र"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "आससाद पुरीं रम्यां चेदीनां शुक्तिसाह्वयाम्",
+    "locus": {
+      "en": "Mahābhārata 14.84.1-5",
+      "hi": "महाभारत 14.84.1-5"
+    },
+    "modern": {
+      "en": "near Banda, Bundelkhand (the Cedi country)",
+      "hi": "बाँदा के पास, बुंदेलखंड (चेदि देश)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.1-5. The Cedi capital, Śiśupāla's city; usually put near Banda on the Ken. The exact site is not known.",
+      "hi": "आश्वमेधिकपर्व 14.84.1-5। चेदि की राजधानी, शिशुपाल का नगर; प्रायः केन नदी पर बाँदा के पास माना जाता है। ठीक स्थान अज्ञात।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558",
+      "https://www.geonames.org/1277397"
+    ]
+  },
+  {
+    "id": "dasarna",
+    "status": "draft",
+    "name": {
+      "en": "Daśārṇa",
+      "hi": "दशार्ण"
+    },
+    "anchor": {
+      "lat": 23.52604,
+      "lon": 77.81092
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "Citrāṅgada of Daśārṇa",
+      "hi": "दशार्ण का चित्रांगद"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "दशार्णानगमत्तदा",
+    "locus": {
+      "en": "Mahābhārata 14.84.1-5",
+      "hi": "महाभारत 14.84.1-5"
+    },
+    "modern": {
+      "en": "Vidisha",
+      "hi": "विदिशा"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.1-5. Reached 'turning back again', after the Kāśis, Aṅgas, Kosalas, Kirātas and Taṅgaṇas.",
+      "hi": "आश्वमेधिकपर्व 14.84.1-5। काशी, अंग, कोसल, किरात और तंगण के बाद 'फिर लौटकर' पहुँचे।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558",
+      "https://www.geonames.org/1253200"
+    ]
+  },
+  {
+    "id": "gokarna",
+    "status": "draft",
+    "name": {
+      "en": "Gokarṇa",
+      "hi": "गोकर्ण"
+    },
+    "anchor": {
+      "lat": 14.55,
+      "lon": 74.31667
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "category": "horse",
+    "priority": 1,
+    "event": {
+      "en": "Up the western coast",
+      "hi": "पश्चिमी तट पर ऊपर"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "गोकर्णमथ चासाद्य",
+    "locus": {
+      "en": "Mahābhārata 14.84.7-12",
+      "hi": "महाभारत 14.84.7-12"
+    },
+    "modern": {
+      "en": "Gokarna, Uttara Kannada",
+      "hi": "गोकर्ण, उत्तर कन्नड़"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.7-12. After Ekalavya's Niṣādas and the peoples of the southern sea; then Prabhāsa.",
+      "hi": "आश्वमेधिकपर्व 14.84.7-12। एकलव्य के निषादों और दक्षिणी समुद्र के लोगों के बाद; फिर प्रभास।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558",
+      "https://www.geonames.org/1271064"
+    ]
+  },
+  {
+    "id": "dvaraka-horse",
+    "status": "draft",
+    "name": {
+      "en": "Dvārakā",
+      "hi": "द्वारका"
+    },
+    "anchor": {
+      "lat": 22.23944,
+      "lon": 68.96778
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "horse",
+    "priority": 2,
+    "event": {
+      "en": "The Yādava boys seize the horse",
+      "hi": "यादव बालक अश्व पकड़ लेते हैं"
+    },
+    "when": {
+      "en": "The aśvamedha year",
+      "hi": "अश्वमेध का वर्ष"
+    },
+    "verse": "ततो द्वारवतीं रम्यां",
+    "locus": {
+      "en": "Mahābhārata 14.84.13-16",
+      "hi": "महाभारत 14.84.13-16"
+    },
+    "modern": {
+      "en": "Dwarka",
+      "hi": "द्वारका"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.13-16. Ugrasena stops them and, with Vasudeva, receives Arjuna: the one place the horse passes without a fight.",
+      "hi": "आश्वमेधिकपर्व 14.84.13-16। उग्रसेन उन्हें रोकते हैं और वसुदेव के साथ अर्जुन का स्वागत करते हैं: एकमात्र स्थान जहाँ अश्व बिना युद्ध के निकलता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558",
+      "https://www.geonames.org/1272140"
     ]
   },
   {

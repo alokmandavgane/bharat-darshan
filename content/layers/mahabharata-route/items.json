@@ -889,5 +889,467 @@
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-17-महाप्रस्थानिकपर्व-002?oldid=55369"
     ]
+  },
+  {
+    "id": "horse-north",
+    "status": "draft",
+    "name": {
+      "en": "The horse let go: north first",
+      "hi": "अश्व छोड़ा गया: पहले उत्तर"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 29.16042,
+        "lon": 78.00762
+      },
+      "to": {
+        "lat": 32.09135,
+        "lon": 76.26267
+      },
+      "bow": 0.12
+    },
+    "verse": "स हयः पृथिवीं राजन्प्रदक्षिणमवर्तत",
+    "locus": {
+      "en": "Mahābhārata 14.73.19-22",
+      "hi": "महाभारत 14.73.19-22"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.73.19-22.",
+      "hi": "आश्वमेधिकपर्व 14.73.19-22।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-073?oldid=56511"
+    ]
+  },
+  {
+    "id": "horse-east",
+    "status": "draft",
+    "name": {
+      "en": "To Prāgjyotiṣa",
+      "hi": "प्राग्ज्योतिष की ओर"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 32.09135,
+        "lon": 76.26267
+      },
+      "to": {
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      "bow": 0.12
+    },
+    "verse": "प्राग्ज्योतिषमथाभ्येत्य व्यचरत्स हयोत्तमः",
+    "locus": {
+      "en": "Mahābhārata 14.75.1-2",
+      "hi": "महाभारत 14.75.1-2"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.75.1-2.",
+      "hi": "आश्वमेधिकपर्व 14.75.1-2।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-075?oldid=56520"
+    ]
+  },
+  {
+    "id": "horse-sindhu",
+    "status": "draft",
+    "name": {
+      "en": "Across to the Sindhu country",
+      "hi": "पार सिंधु देश तक"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 26.1844,
+        "lon": 91.7458
+      },
+      "to": {
+        "lat": 25.4,
+        "lon": 68.4
+      },
+      "bow": 0.12
+    },
+    "verse": "सैन्धवान्प्रति",
+    "locus": {
+      "en": "Mahābhārata 14.77.1-2",
+      "hi": "महाभारत 14.77.1-2"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.77.1-2. Jayadratha's people, outside the Survey of India boundary; the arrow points into it.",
+      "hi": "आश्वमेधिकपर्व 14.77.1-2। जयद्रथ के लोग, भारतीय सर्वेक्षण सीमा के बाहर; तीर उस ओर इंगित करता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-077?oldid=56529"
+    ]
+  },
+  {
+    "id": "horse-rajagrha",
+    "status": "draft",
+    "name": {
+      "en": "By Maṇalūra to Rājagṛha",
+      "hi": "मणलूर होकर राजगृह"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.4,
+        "lon": 68.4
+      },
+      "to": {
+        "lat": 25.02828,
+        "lon": 85.42079
+      },
+      "bow": 0.12
+    },
+    "verse": "यदृच्छया समापेदे पुरं राजगृहं तदा",
+    "locus": {
+      "en": "Mahābhārata 14.83.1-4",
+      "hi": "महाभारत 14.83.1-4"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.83.1-4. Maṇalūra, Babhruvāhana's kingdom, is not placed; after it the horse turns for Hastināpura.",
+      "hi": "आश्वमेधिकपर्व 14.83.1-4। बभ्रुवाहन का राज्य मणलूर तय नहीं; उसके बाद अश्व हस्तिनापुर की ओर मुड़ता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-083?oldid=56553"
+    ]
+  },
+  {
+    "id": "horse-vanga",
+    "status": "draft",
+    "name": {
+      "en": "By the sea shore to the Vaṅgas and Puṇḍras",
+      "hi": "समुद्र तट से वंग और पुण्ड्र तक"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.02828,
+        "lon": 85.42079
+      },
+      "to": {
+        "lat": 22.3,
+        "lon": 88.1
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः समुद्रतीरेण वङ्गान्पुण्ड्रान्सकेरलान्",
+    "locus": {
+      "en": "Mahābhārata 14.83.28-31",
+      "hi": "महाभारत 14.83.28-31"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.83.28-31. The Keralas follow in the same line; the point in the delta is the compiler's.",
+      "hi": "आश्वमेधिकपर्व 14.83.28-31। उसी पंक्ति में केरल भी; डेल्टा का बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-083?oldid=56553"
+    ]
+  },
+  {
+    "id": "horse-cedi",
+    "status": "draft",
+    "name": {
+      "en": "South to the Cedi city",
+      "hi": "दक्षिण में चेदि नगर"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 22.3,
+        "lon": 88.1
+      },
+      "to": {
+        "lat": 25.47758,
+        "lon": 80.33491
+      },
+      "bow": 0.12
+    },
+    "verse": "आससाद पुरीं रम्यां चेदीनां शुक्तिसाह्वयाम्",
+    "locus": {
+      "en": "Mahābhārata 14.84.1-5",
+      "hi": "महाभारत 14.84.1-5"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.1-5.",
+      "hi": "आश्वमेधिकपर्व 14.84.1-5।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-dasarna",
+    "status": "draft",
+    "name": {
+      "en": "Round the middle country to Daśārṇa",
+      "hi": "मध्य देश घूमकर दशार्ण"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 25.47758,
+        "lon": 80.33491
+      },
+      "to": {
+        "lat": 23.52604,
+        "lon": 77.81092
+      },
+      "bow": 0.12
+    },
+    "verse": "पुनरावृत्त्य कौन्तेयो दशार्णानगमत्तदा",
+    "locus": {
+      "en": "Mahābhārata 14.84.1-5",
+      "hi": "महाभारत 14.84.1-5"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.1-5. Kāśi, Aṅga, Kosala, the Kirātas and Taṅgaṇas, then back.",
+      "hi": "आश्वमेधिकपर्व 14.84.1-5। काशी, अंग, कोसल, किरात और तंगण, फिर वापस।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-south",
+    "status": "draft",
+    "name": {
+      "en": "By the Niṣādas to the southern sea",
+      "hi": "निषादों होकर दक्षिणी समुद्र"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 23.52604,
+        "lon": 77.81092
+      },
+      "to": {
+        "lat": 8.2,
+        "lon": 78.3
+      },
+      "bow": 0.12
+    },
+    "verse": "अर्चितः प्रययौ भूयो दक्षिणं सलिलार्णवम्",
+    "locus": {
+      "en": "Mahābhārata 14.84.7-12",
+      "hi": "महाभारत 14.84.7-12"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.7-12. Draviḍas, Andhras, Raudras, Māhiṣakas and the Kolla hills; the point on the sea is the compiler's.",
+      "hi": "आश्वमेधिकपर्व 14.84.7-12। द्रविड़, आंध्र, रौद्र, माहिषक और कोल्ल पर्वत; समुद्र का बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-gokarna",
+    "status": "draft",
+    "name": {
+      "en": "Round to Gokarṇa",
+      "hi": "घूमकर गोकर्ण"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 8.2,
+        "lon": 78.3
+      },
+      "to": {
+        "lat": 14.55,
+        "lon": 74.31667
+      },
+      "bow": 0.12
+    },
+    "verse": "गोकर्णमथ चासाद्य प्रभासमपि जग्मिवान्",
+    "locus": {
+      "en": "Mahābhārata 14.84.7-12",
+      "hi": "महाभारत 14.84.7-12"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.7-12.",
+      "hi": "आश्वमेधिकपर्व 14.84.7-12।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-prabhasa",
+    "status": "draft",
+    "name": {
+      "en": "Surāṣṭra and Prabhāsa",
+      "hi": "सुराष्ट्र और प्रभास"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 14.55,
+        "lon": 74.31667
+      },
+      "to": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "bow": 0.12
+    },
+    "verse": "तुरङ्गमवशेनाथ सुराष्ट्रानभितो ययौ",
+    "locus": {
+      "en": "Mahābhārata 14.84.7-12",
+      "hi": "महाभारत 14.84.7-12"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.7-12.",
+      "hi": "आश्वमेधिकपर्व 14.84.7-12।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-dvaraka",
+    "status": "draft",
+    "name": {
+      "en": "To Dvāravatī",
+      "hi": "द्वारवती की ओर"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "to": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "bow": 0.12
+    },
+    "verse": "ततो द्वारवतीं रम्यां वृष्णिवीराभिपालिताम्",
+    "locus": {
+      "en": "Mahābhārata 14.84.13-16",
+      "hi": "महाभारत 14.84.13-16"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.13-16.",
+      "hi": "आश्वमेधिकपर्व 14.84.13-16।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-pancanada",
+    "status": "draft",
+    "name": {
+      "en": "The western sea-board to Pañcanada",
+      "hi": "पश्चिमी समुद्र-तट से पंचनद"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "to": {
+        "lat": 30.9,
+        "lon": 75.85
+      },
+      "bow": -0.12
+    },
+    "verse": "क्रमेणि व्यचरत्स्फीतं ततः पञ्चनदं ययौ",
+    "locus": {
+      "en": "Mahābhārata 14.84.17-19",
+      "hi": "महाभारत 14.84.17-19"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.17-19.",
+      "hi": "आश्वमेधिकपर्व 14.84.17-19।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-gandhara",
+    "status": "draft",
+    "name": {
+      "en": "Into Gandhāra",
+      "hi": "गांधार में"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 30.9,
+        "lon": 75.85
+      },
+      "to": {
+        "lat": 34.0,
+        "lon": 71.55
+      },
+      "bow": 0.12
+    },
+    "verse": "तस्मादपि स कौरव्य गन्धारविषयं हयः",
+    "locus": {
+      "en": "Mahābhārata 14.84.17-19",
+      "hi": "महाभारत 14.84.17-19"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.84.17-19. Śakuni's son fights and is spared; Gandhāra is outside the boundary.",
+      "hi": "आश्वमेधिकपर्व 14.84.17-19। शकुनि का पुत्र लड़ता है और छोड़ दिया जाता है; गांधार सीमा के बाहर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-084?oldid=56558"
+    ]
+  },
+  {
+    "id": "horse-home",
+    "status": "draft",
+    "name": {
+      "en": "Home to Hastināpura",
+      "hi": "हस्तिनापुर वापसी"
+    },
+    "category": "horse",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 34.0,
+        "lon": 71.55
+      },
+      "to": {
+        "lat": 29.16042,
+        "lon": 78.00762
+      },
+      "bow": 0.12
+    },
+    "verse": "न्यवर्तत ततो वाजी येन नागाह्वयं पुरम्",
+    "locus": {
+      "en": "Mahābhārata 14.86.1-7",
+      "hi": "महाभारत 14.86.1-7"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.86.1-7. Near home on the Māgha twelfth; at the Māgha full moon 'a month is left' before the Caitra sacrifice.",
+      "hi": "आश्वमेधिकपर्व 14.86.1-7। माघ द्वादशी को घर के पास; माघ पूर्णिमा को चैत्र यज्ञ से पहले 'एक मास शेष'।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-086?oldid=56566"
+    ]
   }
 ]
