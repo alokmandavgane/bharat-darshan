@@ -83,22 +83,39 @@ def edges(ids, land=None):
 def bounded_distance(mask, radius):
     """Euclidean distance (pixels) from each pixel to the nearest True pixel, capped at radius.
 
-    Exact within the cap: tests every integer offset inside the disc. O(radius^2) numpy
-    passes, which is fine for radius <= ~12 on rasters of a few megapixels.
+    Exact within the cap, and separable: each row's distance to its nearest True pixel
+    first (from running indices, two numpy passes), then the minimum over the 2r-1 rows
+    in reach of dy^2 + that squared. That is O(radius) passes rather than one per offset
+    in the disc: the bleed and coast bands in step 6 are radius 29 and 43, which made
+    this most of the pipeline's run time. The squared distance goes back to a float32
+    through a table of the same `np.float32(np.hypot(dy, dx))` values the per-offset
+    loop wrote, so the output is the same bytes.
     """
     h, w = mask.shape
-    dist = np.full((h, w), float(radius), np.float32)
-    pad = np.zeros((h + 2 * radius, w + 2 * radius), bool)
-    pad[radius:radius + h, radius:radius + w] = mask
-    offsets = [(dy, dx, np.hypot(dy, dx)) for dy in range(-radius, radius + 1)
-               for dx in range(-radius, radius + 1) if dy * dy + dx * dx <= radius * radius]
-    offsets.sort(key=lambda o: o[2])
-    for dy, dx, d in offsets:
-        if d >= radius:
-            break
-        hit = pad[radius + dy:radius + dy + h, radius + dx:radius + dx + w]
-        np.minimum(dist, np.where(hit, np.float32(d), dist), out=dist)
-    return dist
+    r2 = radius * radius
+    mask = np.asarray(mask, bool)
+    # Along each row: how far to the nearest True pixel, as far as the cap matters.
+    col = np.arange(w, dtype=np.int64)
+    far = w + radius + 1
+    left = np.where(mask, col, -far)
+    np.maximum.accumulate(left, axis=1, out=left)
+    right = np.where(mask, col, w + far)
+    right = np.minimum.accumulate(right[:, ::-1], axis=1)[:, ::-1]
+    g = np.minimum(col - left, right - col)
+    g2 = np.where(g < radius, g * g, r2).astype(np.int64)
+    # Down the columns: the nearest of those rows, with the rows between counted in.
+    k = g2.copy()
+    for dy in range(1, radius):
+        dd = dy * dy
+        np.minimum(k[dy:], g2[:-dy] + dd, out=k[dy:])
+        np.minimum(k[:-dy], g2[dy:] + dd, out=k[:-dy])
+    lut = np.full(r2 + 1, np.float32(radius), np.float32)
+    for dy in range(radius):
+        for dx in range(radius):
+            q = dy * dy + dx * dx
+            if q < r2:
+                lut[q] = min(lut[q], np.float32(np.hypot(dy, dx)))
+    return lut[np.minimum(k, r2)]
 
 
 def distance_to_segments(segments, width, height, radius):
