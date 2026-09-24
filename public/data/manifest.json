@@ -2141,13 +2141,13 @@
    "id": "rama-exile-route",
    "type": "lines",
    "title": {
-    "en": "Rāma's road, and Rāvaṇa's flight",
-    "hi": "राम का मार्ग, और रावण की उड़ान"
+    "en": "Rāma's road, there and back",
+    "hi": "राम का मार्ग, जाना और लौटना"
    },
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 14,
+   "count": 22,
    "reviewed": 0,
    "categories": [
     {
@@ -2205,6 +2205,30 @@
       "hi": "हनुमान की छलाँग और वापसी"
      },
      "color": "#2f8f8a"
+    },
+    {
+     "id": "march",
+     "title": {
+      "en": "The march to the sea",
+      "hi": "समुद्र तक कूच"
+     },
+     "color": "#7a5230"
+    },
+    {
+     "id": "setu",
+     "title": {
+      "en": "The setu",
+      "hi": "सेतु"
+     },
+     "color": "#4a4a4a"
+    },
+    {
+     "id": "return",
+     "title": {
+      "en": "The return by the Puṣpaka",
+      "hi": "पुष्पक से वापसी"
+     },
+     "color": "#c9a227"
     }
    ],
    "fields": {
@@ -2224,8 +2248,8 @@
     }
    },
    "note": {
-    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search — then Kiṣkindhā, the southern party's road to Mahendra, and Hanumān's leap to Laṅkā and back, the arrows stopping at sea where Laṅkā is not placed. An arrow is a diagram of the stage, not the track.",
-    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज — फिर किष्किन्धा, महेन्द्र तक दक्षिणी दल का मार्ग, और लंका तक हनुमान की छलाँग और वापसी; तीर समुद्र में रुकते हैं, क्योंकि लंका का स्थान तय नहीं। तीर चरण का चित्र है, रास्ता नहीं।"
+    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka to Pañcavaṭī, Rāvaṇa's flight and Rāma's search to the Pampā, Kiṣkindhā, the southern party and Hanumān's leap, the march, the setu, and the Puṣpaka's return home, which retraces the whole road. Arrows to Laṅkā stop at sea. An arrow is a diagram of the stage, not the track.",
+    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक से पंचवटी, रावण की उड़ान और पम्पा तक राम की खोज, किष्किन्धा, दक्षिणी दल और हनुमान की छलाँग, कूच, सेतु, और पुष्पक से घर वापसी, जो पूरे मार्ग को उलटे क्रम में दोहराती है। लंका की ओर के तीर समुद्र में रुकते हैं। तीर चरण का चित्र है, रास्ता नहीं।"
    },
    "sources": [
     "sa-wikisource"
@@ -2236,13 +2260,13 @@
    "id": "rama-exile-stops",
    "type": "points",
    "title": {
-    "en": "Rāma's halts, Ayodhyā to the southern sea",
-    "hi": "राम के पड़ाव, अयोध्या से दक्षिणी समुद्र"
+    "en": "Rāma's halts, Ayodhyā to Laṅkā and home",
+    "hi": "राम के पड़ाव, अयोध्या से लंका और वापसी"
    },
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 10,
+   "count": 12,
    "reviewed": 0,
    "categories": [
     {
@@ -2307,6 +2331,33 @@
      },
      "color": "#2f8f8a",
      "icon": "pin"
+    },
+    {
+     "id": "march",
+     "title": {
+      "en": "The march to the sea",
+      "hi": "समुद्र तक कूच"
+     },
+     "color": "#7a5230",
+     "icon": "pin"
+    },
+    {
+     "id": "setu",
+     "title": {
+      "en": "The setu",
+      "hi": "सेतु"
+     },
+     "color": "#4a4a4a",
+     "icon": "pin"
+    },
+    {
+     "id": "return",
+     "title": {
+      "en": "The return by the Puṣpaka",
+      "hi": "पुष्पक से वापसी"
+     },
+     "color": "#c9a227",
+     "icon": "pin"
     }
    ],
    "fields": {
@@ -2340,8 +2391,8 @@
     }
    },
    "note": {
-    "en": "The Ayodhyā, Araṇya, Kiṣkindhā and Sundara kāṇḍas tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī, the Pampā and Kiṣkindhā, and the monkeys' road on to Mahendra by the sea. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
-    "hi": "अयोध्या, अरण्य, किष्किन्धा और सुन्दर काण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी, पम्पा और किष्किन्धा तक, और फिर समुद्र-तट के महेन्द्र तक वानरों का मार्ग। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
+    "en": "The Rāmāyaṇa tells Rāma's road as a journey in order: from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī, the Pampā and Kiṣkindhā, the monkeys' road to Mahendra, the march to the setu, and home by the Puṣpaka to Nandigrāma and Ayodhyā. Each pin is a halt the text names that can be set on the modern map; pins placed by tradition or by the compiler say so on their cards. Laṅkā is not placed.",
+    "hi": "रामायण राम के मार्ग को क्रम से एक यात्रा के रूप में कहता है: अयोध्या से चित्रकूट और दण्डक होकर पंचवटी, पम्पा और किष्किन्धा, महेन्द्र तक वानरों का मार्ग, सेतु तक कूच, और पुष्पक से नन्दिग्राम और अयोध्या वापसी। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है; परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं। लंका का स्थान तय नहीं।"
    },
    "sources": [
     "sa-wikisource",
@@ -2967,8 +3018,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 26803,
-   "sha256": "0dd08ac754f4"
+   "size": 26783,
+   "sha256": "92e9a0da66c1"
   },
   "sources.json": {
    "size": 31205,
@@ -3275,12 +3326,12 @@
    "sha256": "6b4f926e2030"
   },
   "layers/rama-exile-route.json": {
-   "size": 19369,
-   "sha256": "cedbc5dd0d41"
+   "size": 28618,
+   "sha256": "29fec2a779bf"
   },
   "layers/rama-exile-stops.json": {
-   "size": 15348,
-   "sha256": "e2928f09bb0f"
+   "size": 18403,
+   "sha256": "a151b1b24d6f"
   },
   "layers/ranges.json": {
    "size": 13461,
