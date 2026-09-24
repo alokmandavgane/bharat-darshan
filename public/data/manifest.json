@@ -2141,13 +2141,13 @@
    "id": "rama-exile-route",
    "type": "lines",
    "title": {
-    "en": "Rāma's road into exile",
-    "hi": "राम का वनवास-मार्ग"
+    "en": "Rāma's road, and Rāvaṇa's flight",
+    "hi": "राम का मार्ग, और रावण की उड़ान"
    },
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 5,
+   "count": 9,
    "reviewed": 0,
    "categories": [
     {
@@ -2157,6 +2157,30 @@
       "hi": "अयोध्या से चित्रकूट"
      },
      "color": "#b5432f"
+    },
+    {
+     "id": "forest",
+     "title": {
+      "en": "Citrakūṭa to Pañcavaṭī",
+      "hi": "चित्रकूट से पंचवटी"
+     },
+     "color": "#6f8f3a"
+    },
+    {
+     "id": "ravana",
+     "title": {
+      "en": "Rāvaṇa's flight with Sītā",
+      "hi": "सीता को लेकर रावण की उड़ान"
+     },
+     "color": "#5a3a6e"
+    },
+    {
+     "id": "search",
+     "title": {
+      "en": "Rāma's search, to the Pampā",
+      "hi": "राम की खोज, पम्पा तक"
+     },
+     "color": "#3f6f9e"
     }
    ],
    "fields": {
@@ -2176,8 +2200,8 @@
     }
    },
    "note": {
-    "en": "One arrow per stage, halt to halt, in the text's order. An arrow is a diagram of the stage, not the track walked: from Prayāga the text sends the exiles up the Yamunā to an old ford before they turn south to Citrakūṭa.",
-    "hi": "हर चरण का एक तीर, पड़ाव से पड़ाव, पाठ के क्रम में। तीर चरण का चित्र है, चला गया रास्ता नहीं: प्रयाग से पाठ वनवासियों को एक पुराने घाट तक यमुना के साथ ऊपर भेजता है, फिर वे दक्षिण में चित्रकूट की ओर मुड़ते हैं।"
+    "en": "One arrow per stage, in the text's order: the road into exile, the Daṇḍaka hermitages to Pañcavaṭī, then two routes from Pañcavaṭī to the Pampā — Rāvaṇa's flight with Sītā, and Rāma's search. An arrow is a diagram of the stage, not the track.",
+    "hi": "हर चरण का एक तीर, पाठ के क्रम में: वनवास का मार्ग, दण्डक के आश्रमों से पंचवटी, फिर पंचवटी से पम्पा तक दो मार्ग — सीता को लेकर रावण की उड़ान, और राम की खोज। तीर चरण का चित्र है, रास्ता नहीं।"
    },
    "sources": [
     "sa-wikisource"
@@ -2188,13 +2212,13 @@
    "id": "rama-exile-stops",
    "type": "points",
    "title": {
-    "en": "Rāma's halts, Ayodhyā to Citrakūṭa",
-    "hi": "राम के पड़ाव, अयोध्या से चित्रकूट"
+    "en": "Rāma's halts, Ayodhyā to the Pampā",
+    "hi": "राम के पड़ाव, अयोध्या से पम्पा"
    },
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 6,
+   "count": 8,
    "reviewed": 0,
    "categories": [
     {
@@ -2203,8 +2227,35 @@
       "en": "Ayodhyā to Citrakūṭa",
       "hi": "अयोध्या से चित्रकूट"
      },
-     "icon": "pin",
-     "color": "#b5432f"
+     "color": "#b5432f",
+     "icon": "pin"
+    },
+    {
+     "id": "forest",
+     "title": {
+      "en": "Citrakūṭa to Pañcavaṭī",
+      "hi": "चित्रकूट से पंचवटी"
+     },
+     "color": "#6f8f3a",
+     "icon": "pin"
+    },
+    {
+     "id": "ravana",
+     "title": {
+      "en": "Rāvaṇa's flight with Sītā",
+      "hi": "सीता को लेकर रावण की उड़ान"
+     },
+     "color": "#5a3a6e",
+     "icon": "pin"
+    },
+    {
+     "id": "search",
+     "title": {
+      "en": "Rāma's search, to the Pampā",
+      "hi": "राम की खोज, पम्पा तक"
+     },
+     "color": "#3f6f9e",
+     "icon": "pin"
     }
    ],
    "fields": {
@@ -2238,8 +2289,8 @@
     }
    },
    "note": {
-    "en": "Ayodhyākāṇḍa 46-56 tells the first stretch of the exile as a journey in order. Each pin is a halt or crossing the text names that can be set on the modern map. The Gomatī and Syandikā crossings are not placed by the text: their pins stand on towns on those rivers along the line of the road, and their cards say so.",
-    "hi": "अयोध्याकाण्ड 46-56 वनवास के पहले चरण को क्रम से एक यात्रा के रूप में कहता है। हर पिन पाठ का बताया एक पड़ाव या नदी-पार है जिसे आधुनिक मानचित्र पर रखा जा सकता है। गोमती और स्यन्दिका के पार के स्थान पाठ नहीं बताता: उनके पिन मार्ग की रेखा पर उन नदियों के नगरों पर हैं, और उनके कार्ड यही कहते हैं।"
+    "en": "The Ayodhyākāṇḍa and the Araṇyakāṇḍa tell Rāma's road as a journey in order, from Ayodhyā through Citrakūṭa and the Daṇḍaka to Pañcavaṭī and on to the Pampā. Each pin is a halt the text names that can be set on the modern map. Pins placed by tradition or by the compiler say so on their cards.",
+    "hi": "अयोध्याकाण्ड और अरण्यकाण्ड राम के मार्ग को क्रम से एक यात्रा के रूप में कहते हैं, अयोध्या से चित्रकूट और दण्डक होकर पंचवटी और फिर पम्पा तक। हर पिन पाठ का बताया ऐसा पड़ाव है जिसे आधुनिक मानचित्र पर रखा जा सकता है। परंपरा या संकलक द्वारा रखे गए पिन अपने कार्ड पर यह बताते हैं।"
    },
    "sources": [
     "sa-wikisource",
@@ -2865,8 +2916,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 26660,
-   "sha256": "b63733050bf9"
+   "size": 26786,
+   "sha256": "f0dadcac57ed"
   },
   "sources.json": {
    "size": 31205,
@@ -3173,12 +3224,12 @@
    "sha256": "6b4f926e2030"
   },
   "layers/rama-exile-route.json": {
-   "size": 6604,
-   "sha256": "90ae7cf9191c"
+   "size": 12256,
+   "sha256": "9db00a56c994"
   },
   "layers/rama-exile-stops.json": {
-   "size": 8729,
-   "sha256": "4aa492217879"
+   "size": 11656,
+   "sha256": "ad34a0d0e962"
   },
   "layers/ranges.json": {
    "size": 13461,
