@@ -2463,8 +2463,8 @@ docs/DEPLOY.md).
     - `raster.bounded_distance` is separable: same bytes, `npm run data` ~4.5 -> 2.4 min.
   - Found on the way: the committed `regions/states.json` and `terrain/shade-*.bin.gz`
     are not what the pipeline makes today (a few state anchors move ~2 km). The old and
-    the new `bounded_distance` both give the new bytes, so this predates today; a data
-    rebuild commit is due. And `npm run data` calls the system `python3`, which has no
+    the new `bounded_distance` both give the new bytes, so this predates today; rebuilt
+    and committed on its own. And `npm run data` calls the system `python3`, which has no
     numpy on the owner's Mac; `.venv/bin/python pipeline/build.py` works.
   - Next from the audit: the idle-sway tier question (medium sways), the uncapped
     marker/label collision loops, per-frame `lines.setView`, and in the pipeline
