@@ -16,13 +16,19 @@ const TAP_SLOP = 8;         // px of travel that still counts as a tap
 const TAP_MS = 350;
 const DOUBLE_MS = 300;
 const GIVE = 0.12;          // how far past the bounds a hand may stretch the view, x the view height
-// What two fingers mean (F5). A gesture pans until it has travelled this far, then
-// commits: fingers together and mostly vertical (the spread within TILT_SPREAD_PX and
-// the angle within TILT_TWIST_DEG) is a tilt, anything else is the map.
+// What two fingers mean (F5). A gesture pans and pinches until it has travelled this
+// far, then commits: both fingers moving the same way up or down the screen, by similar
+// amounts, with the spread within TILT_SPREAD_PX and the angle within TILT_TWIST_DEG, is
+// a tilt; anything else is the map.
 const MODE_SLOP_PX = 12;
 const TILT_SPREAD_PX = 24;
 const TILT_TWIST_DEG = 7;
-const TWIST_LATCH_DEG = 8;  // how far the fingers must turn before a twist becomes a turn
+const TILT_MATCH = 0.5;     // the slower finger must travel at least this share of the faster
+// How far the fingers must turn before a twist becomes a turn: an angle, and an arc each
+// finger has swept, so fingers close together (where a few px of wobble is many degrees)
+// do not start the map turning in the middle of a pinch.
+const TWIST_LATCH_DEG = 12;
+const TWIST_LATCH_PX = 20;
 const TILT_PER_PX = 0.2;    // degrees of pitch per pixel the midpoint travels
 const TURN_PER_PX = 0.25;   // degrees of yaw per pixel a turning drag travels
 const VEL_SMOOTH = 0.72;    // how much of the previous velocity a sample keeps (F6)
@@ -181,7 +187,8 @@ export function attachGestures(canvas, store) {
 
   function pinchState() {
     const [a, b] = [...pointers.values()];
-    return { dist: Math.hypot(b.x - a.x, b.y - a.y), angle: Math.atan2(b.y - a.y, b.x - a.x), midX: (a.x + b.x) / 2, midY: (a.y + b.y) / 2 };
+    return { dist: Math.hypot(b.x - a.x, b.y - a.y), angle: Math.atan2(b.y - a.y, b.x - a.x), midX: (a.x + b.x) / 2, midY: (a.y + b.y) / 2,
+             ay: a.y, by: b.y };
   }
 
   function onMove(e) {
@@ -219,7 +226,9 @@ export function attachGestures(canvas, store) {
         write(orbitAbout(c, c.yaw, c.pitch + (now.midY - pinch.midY) * TILT_PER_PX, held, vp));
       } else {
         // Pinch to zoom; twist to turn, but only once it has latched.
-        if (two.mode === 'map' && pinch.dist > 20 && now.dist > 20) {
+        // An undecided gesture pinches too, so a pinch answers at once; a tilt barely
+        // changes the spread, so what it zooms before it commits is nothing to see.
+        if (pinch.dist > 20 && now.dist > 20) {
           c = { ...c, zoom: clamp(c.zoom * (pinch.dist / now.dist), LIMITS.zoom[0], LIMITS.zoom[1]) };
         }
         if (two.twist) c = clampCamera({ ...c, yaw: c.yaw - (deltaAngle(now.angle, pinch.angle) * 180) / Math.PI });
@@ -255,17 +264,24 @@ export function attachGestures(canvas, store) {
    * The mode holds until a finger lifts.
    */
   function decideTwoFinger(now) {
-    const turned = Math.abs(deltaAngle(now.angle, two.start.angle) * 180) / Math.PI;
+    const turnedRad = Math.abs(deltaAngle(now.angle, two.start.angle));
+    const turned = (turnedRad * 180) / Math.PI;
+    const twisted = turned > TWIST_LATCH_DEG && turnedRad * now.dist / 2 > TWIST_LATCH_PX;
     if (two.mode !== 'undecided') {
-      if (two.mode === 'map' && !two.twist && turned > TWIST_LATCH_DEG) two.twist = true;
+      if (two.mode === 'map' && !two.twist && twisted) two.twist = true;
       return;
     }
     const spread = Math.abs(now.dist - two.start.dist);
     const dx = now.midX - two.start.midX, dy = now.midY - two.start.midY;
-    if (Math.max(spread, Math.hypot(dx, dy)) < MODE_SLOP_PX && turned < TWIST_LATCH_DEG) return;
-    const together = spread < TILT_SPREAD_PX && turned < TILT_TWIST_DEG;
+    if (Math.max(spread, Math.hypot(dx, dy)) < MODE_SLOP_PX && !twisted) return;
+    // Each finger's own vertical travel: a tilt moves both the same way by much the same
+    // amount. A pinch with one finger still (or both moving apart) also moves the
+    // midpoint up or down, and used to be taken for a tilt, which then shut out the zoom.
+    const da = now.ay - two.start.ay, db = now.by - two.start.by;
+    const matched = da * db > 0 && Math.min(Math.abs(da), Math.abs(db)) >= TILT_MATCH * Math.max(Math.abs(da), Math.abs(db));
+    const together = matched && spread < TILT_SPREAD_PX && turned < TILT_TWIST_DEG;
     two.mode = together && Math.abs(dy) > Math.abs(dx) * 1.5 ? 'tilt' : 'map';
-    if (two.mode === 'map' && turned > TWIST_LATCH_DEG) two.twist = true;
+    if (two.mode === 'map' && twisted) two.twist = true;
   }
 
   function onUp(e) {

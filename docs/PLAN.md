@@ -157,10 +157,13 @@ every fix after them is checked against something:
   the cartographic rule: light from the bottom of the screen inverts relief to the eye,
   valleys reading as ridges, worst near top-down. Baked AO and the coastal shadow are
   direction-free, so nothing in the pipeline changes.
-- **F5. One gesture, one meaning on touch.** *Done.* Two fingers start undecided. Both moving the
-  same way, mostly vertical, with the spread and the angle between them barely changing
-  -> *tilt*, and only tilt. Anything else -> *pinch/pan*, with twist joining only once
-  the angle has moved ~8°, then latched. The mode holds until a finger lifts. This is
+- **F5. One gesture, one meaning on touch.** *Done.* Two fingers start undecided (panning and
+  pinching). Both fingers moving the same way by similar amounts, mostly vertical, with
+  the spread and the angle between them barely changing -> *tilt*, and only tilt. (Each
+  finger's own travel is checked: a pinch with one finger still also moves the midpoint
+  vertically, and was being taken for a tilt, which shut the zoom out.) Anything else ->
+  *pinch/pan*, with twist joining only once the angle has moved 12° *and* each finger
+  has swept 20 px of arc (close fingers wobble through many degrees), then latched. The mode holds until a finger lifts. This is
   what Google Maps and Mapbox do and what thumbs already expect.
 - **F6. Momentum.** *Done, except a look on a real phone: the pane here never fires a frame.* Release velocity carries pan and turn on with an exponential decay
   (~300 ms), killed by the next touch, off under reduced motion. It only runs while
