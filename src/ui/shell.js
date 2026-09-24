@@ -24,6 +24,24 @@ const BASE_MARKS = {
  */
 export function createShell(root, store) {
   const $ = (sel) => /** @type {HTMLElement} */ (root.querySelector(sel));
+
+  /**
+   * Renders are queued and run once, together, at the end of the task that changed the
+   * store: opening a page sets eight slices, and a layer switch sets off the engine's
+   * own republishing, and each of those used to rebuild the sheet, the strip and the
+   * catalogue again. A microtask still runs before the frame is painted.
+   */
+  const queued = new Set();
+  function flush() {
+    for (const fn of queued) { queued.delete(fn); fn(); }
+  }
+  function queue(...fns) {
+    if (!queued.size) queueMicrotask(flush);
+    for (const fn of fns) queued.add(fn);
+  }
+  /** Returns a subscriber that queues the renders instead of running them. */
+  const later = (...fns) => () => queue(...fns);
+
   const langRow = $('.lang-row');
   const langLabel = $('.lang-row-label');
   const status = $('.status');
@@ -998,7 +1016,7 @@ export function createShell(root, store) {
     show(foot, view === 'contents');
     hint.hidden = true;
     alt.hidden = true;
-    renderStrip();
+    queue(renderStrip);
 
     if (view === 'layers') {
       // Under the catalogue's title, where it was opened from.
@@ -1088,8 +1106,7 @@ export function createShell(root, store) {
 
   /** Everything that reads the layers on show: the catalogue and the strip. */
   function renderLayers() {
-    renderLayerList();
-    renderStrip();
+    queue(renderLayerList, renderStrip);
   }
 
   // The slider changes only the numbers on its own row; rebuilding the list would also
@@ -1097,14 +1114,14 @@ export function createShell(root, store) {
   store.subscribe('relief', (relief, _, meta) => {
     const key = layerList.querySelector('[data-base="relief"] .layer-key');
     if (meta.source === 'slider' && key) key.textContent = t('relief.hint', { n: formatNumber(relief.amount) });
-    else renderLayerList();
+    else queue(renderLayerList);
   });
-  store.subscribe('surroundings', renderLayerList);
-  store.subscribe('graticule', renderLayerList);
-  store.subscribe('regions', () => { renderUnits(); renderSheet(); renderList(); }, { immediate: true });
-  for (const k of ['selection', 'level', 'drafts', 'plates', 'plate', 'regional', 'month', 'catalogue']) store.subscribe(k, renderSheet);
-  store.subscribe('item', () => { renderSheet(); renderSteps(); });
-  store.subscribe('index', renderList);
+  store.subscribe('surroundings', later(renderLayerList));
+  store.subscribe('graticule', later(renderLayerList));
+  store.subscribe('regions', later(renderUnits, renderSheet, renderList), { immediate: true });
+  for (const k of ['selection', 'level', 'drafts', 'plates', 'plate', 'regional', 'month', 'catalogue']) store.subscribe(k, later(renderSheet));
+  store.subscribe('item', later(renderSheet, renderSteps));
+  store.subscribe('index', later(renderList));
   // The atlas's own pages, fetched once. They are small and they are the way in.
   fetch('/data/plates.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (!d) return;
@@ -1113,16 +1130,16 @@ export function createShell(root, store) {
     if (wanted && d.plates.some((p) => p.id === wanted)) openPlateById(wanted);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
-  store.subscribe('plates', () => { renderPoster(); renderStrip(); });
+  store.subscribe('plates', () => { renderPoster(); queue(renderStrip); });
   store.subscribe('plate', renderPoster);
   store.subscribe('viewport', () => renderScale(store.get('camera')));
-  store.subscribe('sources', () => { renderLayers(); renderSheet(); renderCredits(); });
+  store.subscribe('sources', later(renderLayerList, renderStrip, renderSheet, renderCredits));
   // The source registry: every dataset once, which the legends, the pages and the credits
   // all resolve their ids through (PLAN.md section 5, "Source registry").
   fetch('/data/sources.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (d) store.set('sources', d);
   }).catch(() => {});
-  store.subscribe('tour', renderSteps);
+  store.subscribe('tour', later(renderSteps));
   store.subscribe('catalog', renderLayers, { immediate: true });
   store.subscribe('layers', renderLayers);
   store.subscribe('hover', renderHover);
@@ -1132,14 +1149,9 @@ export function createShell(root, store) {
   renderLang();
   store.subscribe('lang', () => {
     renderLang();
-    renderLayers();
-    renderUnits();
-    renderList();
-    renderSheet();
+    queue(renderLayerList, renderStrip, renderUnits, renderList, renderSheet, renderTour, renderCredits);
     renderHover();
     renderStatus(store.get('status'));
-    renderTour();
-    renderCredits();
     renderScale(store.get('camera'));
   });
 

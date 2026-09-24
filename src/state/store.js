@@ -2,12 +2,23 @@
 // A tiny store: named slices, shallow merge on set, per-slice subscribers.
 // Everything the engine and the UI share goes through here (PLAN.md section 4).
 
+// Arrays compare by their elements, one level down: the engine republishes lists like
+// `layers.active` and `regional` as fresh arrays, and a fresh array holding the same
+// things is no change, so it should not set every subscriber off again.
+function sameArray(a, b) {
+  if (a === b) return true;
+  if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+  return true;
+}
+
 function shallowEqual(a, b) {
   if (a === b) return true;
   if (!a || !b || typeof a !== 'object' || typeof b !== 'object') return false;
+  if (Array.isArray(a) || Array.isArray(b)) return sameArray(a, b);
   const ka = Object.keys(a), kb = Object.keys(b);
   if (ka.length !== kb.length) return false;
-  for (const k of ka) if (a[k] !== b[k]) return false;
+  for (const k of ka) if (a[k] !== b[k] && !sameArray(a[k], b[k])) return false;
   return true;
 }
 
