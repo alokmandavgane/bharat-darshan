@@ -1536,7 +1536,7 @@
    "icon": "road",
    "group": "culture",
    "default_on": false,
-   "count": 76,
+   "count": 84,
    "reviewed": 0,
    "categories": [
     {
@@ -1679,7 +1679,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 52,
+   "count": 58,
    "reviewed": 0,
    "categories": [
     {
@@ -3347,8 +3347,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 28741,
-   "sha256": "4c1c6bbc920d"
+   "size": 28844,
+   "sha256": "44afde7b8507"
   },
   "sources.json": {
    "size": 31205,
@@ -3619,12 +3619,12 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 76546,
-   "sha256": "4aa7b02515f8"
+   "size": 83439,
+   "sha256": "97bc7d51794f"
   },
   "layers/mahabharata-stops.json": {
-   "size": 78959,
-   "sha256": "8b2736ef67a1"
+   "size": 88393,
+   "sha256": "908e003eb624"
   },
   "layers/minerals.json": {
    "size": 38276,
