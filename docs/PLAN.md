@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-ninth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixtieth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,11 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixtieth round: the horse sacrifice closes the aśvamedha group.
+  One new stop at Hastināpura, "The horse sacrifice", after the horse's return by Pañcanada and
+  Gandhāra (48 stops). Its card has the kosha's new passages: twenty-one posts, a golden altar in the
+  shape of Garuḍa, the horse offered, and the earth given as the fee and bought back with gold. Checked
+  in the browser; tests and build pass.
 - 2026-09-24, fifty-ninth round: the pilgrimage with Lomaśa added to the Mahābhārata tour.
   Same page, now 47 stops and 72 arrows in twelve colours. An orange group, "The pilgrimage with
   Lomaśa", replaces the two placeholder arrows (Kāmyaka → Śūrpāraka, Prabhāsa → Badarī) with the

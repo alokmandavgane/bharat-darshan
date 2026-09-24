@@ -2024,6 +2024,52 @@
     ]
   },
   {
+    "id": "hastinapura-sacrifice",
+    "status": "draft",
+    "name": {
+      "en": "Gajāhvaya (Hastināpura)",
+      "hi": "गजाह्वय (हस्तिनापुर)"
+    },
+    "anchor": {
+      "lat": 29.16042,
+      "lon": 78.00762
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "category": "horse",
+    "priority": 2,
+    "event": {
+      "en": "The horse sacrifice",
+      "hi": "अश्वमेध यज्ञ"
+    },
+    "when": {
+      "en": "The next Caitra, three days after the guests gather",
+      "hi": "अगले चैत्र में, अतिथियों के आने के तीन दिन बाद"
+    },
+    "verse": "अश्वमेधे महायज्ञे पृथिवी दक्षिणा स्मृता",
+    "locus": {
+      "en": "Mahābhārata 14.90.6-14",
+      "hi": "महाभारत 14.90.6-14"
+    },
+    "modern": {
+      "en": "Hastinapur",
+      "hi": "हस्तिनापुर"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Āśvamedhikaparvan 14.90.6-14. Twenty-one posts, a golden Garuḍa altar, the horse offered; the earth is the fee, bought back with gold. A half-golden mongoose finds it wanting.",
+      "hi": "आश्वमेधिकपर्व 14.90.6-14। इक्कीस यूप, स्वर्ण गरुड़-वेदी, अश्व की आहुति; दक्षिणा स्वयं पृथ्वी, सोने से वापस ली गई। आधा सुनहला नेवला इसे कम आँकता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-14-आश्वमेधिकपर्व-090?oldid=56583",
+      "https://www.geonames.org/1270237"
+    ]
+  },
+  {
     "id": "prabhasa-mausala",
     "status": "draft",
     "name": {
