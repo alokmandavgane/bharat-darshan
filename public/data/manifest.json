@@ -1044,7 +1044,7 @@
      }
     },
     "locus": {
-     "type": "text",
+     "type": "name",
      "label": {
       "en": "Where",
       "hi": "स्थान"
@@ -1241,7 +1241,7 @@
      }
     },
     "locus": {
-     "type": "text",
+     "type": "name",
      "label": {
       "en": "Where",
       "hi": "स्थान"
@@ -1269,7 +1269,7 @@
    "icon": "temple",
    "group": "culture",
    "default_on": false,
-   "count": 47,
+   "count": 50,
    "reviewed": 0,
    "categories": [
     {
@@ -1377,7 +1377,7 @@
      }
     },
     "locus": {
-     "type": "text",
+     "type": "name",
      "label": {
       "en": "Where",
       "hi": "स्थान"
@@ -2459,6 +2459,168 @@
    "path": "layers/sub-basins.json"
   },
   {
+   "id": "sugriva-routes",
+   "type": "lines",
+   "title": {
+    "en": "Where the parties go",
+    "hi": "दल कहाँ जाते हैं"
+   },
+   "icon": "road",
+   "group": "culture",
+   "default_on": false,
+   "count": 11,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "east",
+     "title": {
+      "en": "East: Vinata's party",
+      "hi": "पूर्व: विनत का दल"
+     },
+     "color": "#d08a2c"
+    },
+    {
+     "id": "south",
+     "title": {
+      "en": "South: Aṅgada's party",
+      "hi": "दक्षिण: अंगद का दल"
+     },
+     "color": "#b5432f"
+    },
+    {
+     "id": "west",
+     "title": {
+      "en": "West: Suṣeṇa's party",
+      "hi": "पश्चिम: सुषेण का दल"
+     },
+     "color": "#3f6f9e"
+    },
+    {
+     "id": "north",
+     "title": {
+      "en": "North: Śatabali's party",
+      "hi": "उत्तर: शतबलि का दल"
+     },
+     "color": "#6f8f3a"
+    }
+   ],
+   "fields": {
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "Four arrows leave Kiṣkindhā, one per party. The others mark where the text itself goes on: the southern road that runs 'then … then' past Agastya to Mahendra and the island, and the ways out over the sea or the snow. An arrow is a diagram of the text, not a surveyed track.",
+    "hi": "किष्किन्धा से चार तीर निकलते हैं, हर दल का एक। बाक़ी वहाँ हैं जहाँ पाठ स्वयं आगे बढ़ता है: 'फिर … फिर' कहता दक्षिणी मार्ग जो अगस्त्य से होकर महेन्द्र और द्वीप तक जाता है, और समुद्र या हिम के पार के रास्ते। तीर पाठ का चित्र है, नापा हुआ रास्ता नहीं।"
+   },
+   "sources": [
+    "sa-wikisource"
+   ],
+   "path": "layers/sugriva-routes.json"
+  },
+  {
+   "id": "sugriva-search",
+   "type": "points",
+   "title": {
+    "en": "Sugrīva's search parties",
+    "hi": "सुग्रीव के खोजी दल"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 25,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "east",
+     "title": {
+      "en": "East: Vinata's party",
+      "hi": "पूर्व: विनत का दल"
+     },
+     "icon": "pin",
+     "color": "#d08a2c"
+    },
+    {
+     "id": "south",
+     "title": {
+      "en": "South: Aṅgada's party",
+      "hi": "दक्षिण: अंगद का दल"
+     },
+     "icon": "pin",
+     "color": "#b5432f"
+    },
+    {
+     "id": "west",
+     "title": {
+      "en": "West: Suṣeṇa's party",
+      "hi": "पश्चिम: सुषेण का दल"
+     },
+     "icon": "pin",
+     "color": "#3f6f9e"
+    },
+    {
+     "id": "north",
+     "title": {
+      "en": "North: Śatabali's party",
+      "hi": "उत्तर: शतबलि का दल"
+     },
+     "icon": "pin",
+     "color": "#6f8f3a"
+    }
+   ],
+   "fields": {
+    "modern": {
+     "type": "name",
+     "label": {
+      "en": "Identified with",
+      "hi": "पहचान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान का आधार"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the verse has it",
+      "hi": "श्लोक में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    }
+   },
+   "note": {
+    "en": "In Kiṣkindhā 40-43 Sugrīva sends a party to each quarter to find Sītā and names the countries, rivers and mountains it must search. Each pin is a place he names that can be set on the modern map, in his order; most of what lies beyond each quarter's edge is mythic and is not drawn.",
+    "hi": "किष्किन्धाकाण्ड 40-43 में सुग्रीव सीता की खोज में हर दिशा में एक दल भेजते हैं और बताते हैं कि उसे किन देशों, नदियों और पर्वतों में खोजना है। हर पिन उनका गिनाया ऐसा स्थान है जिसे आधुनिक मानचित्र पर रखा जा सकता है, उन्हीं के क्रम में; हर दिशा की सीमा के पार का अधिकांश पौराणिक है और नहीं खींचा गया।"
+   },
+   "sources": [
+    "sa-wikisource",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/sugriva-search.json"
+  },
+  {
    "id": "summits",
    "type": "points",
    "title": {
@@ -2592,8 +2754,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 23999,
-   "sha256": "7db3077c19a6"
+   "size": 25499,
+   "sha256": "74632373e2e9"
   },
   "sources.json": {
    "size": 31205,
@@ -2836,8 +2998,8 @@
    "sha256": "8689c934a979"
   },
   "layers/epic-rivers.json": {
-   "size": 81017,
-   "sha256": "9480a56b7512"
+   "size": 81983,
+   "sha256": "7906e1556bdb"
   },
   "layers/festivals.json": {
    "size": 27590,
@@ -2848,12 +3010,12 @@
    "sha256": "77bc5df07c24"
   },
   "layers/kula-parvatas.json": {
-   "size": 8046,
-   "sha256": "c098c3ae8cc2"
+   "size": 8304,
+   "sha256": "3619abf08589"
   },
   "layers/kurma-vibhaga.json": {
-   "size": 49600,
-   "sha256": "f168defe962a"
+   "size": 55381,
+   "sha256": "4dd2d3e02e81"
   },
   "layers/language-families.json": {
    "size": 2453,
@@ -2868,8 +3030,8 @@
    "sha256": "aa49f864b3fb"
   },
   "layers/monsoon.json": {
-   "size": 8533,
-   "sha256": "bc5d682ec419"
+   "size": 8463,
+   "sha256": "a90d7c2d14b2"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
@@ -2926,6 +3088,14 @@
   "layers/sub-basins.json": {
    "size": 76482,
    "sha256": "b0efb6a35b22"
+  },
+  "layers/sugriva-routes.json": {
+   "size": 13828,
+   "sha256": "f890303778ca"
+  },
+  "layers/sugriva-search.json": {
+   "size": 31477,
+   "sha256": "b9c9eed1dc87"
   },
   "layers/summits.json": {
    "size": 19314,
