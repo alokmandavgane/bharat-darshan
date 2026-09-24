@@ -200,12 +200,12 @@
     "category": "arjuna",
     "priority": 1,
     "event": {
-      "en": "Arjuna's twelve years away begin",
-      "hi": "अर्जुन के बारह वर्ष के प्रवास का आरंभ"
+      "en": "Arjuna's exile from Indraprastha begins",
+      "hi": "इन्द्रप्रस्थ से अर्जुन के प्रवास का आरंभ"
     },
     "when": {
-      "en": "The Indraprastha years",
-      "hi": "इन्द्रप्रस्थ के वर्ष"
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
     },
     "verse": "स गङ्गाद्वारमाश्रित्य निवेशमकरोत्प्रभुः",
     "locus": {
@@ -221,12 +221,288 @@
       "hi": "निश्चित, मानक पहचान"
     },
     "blurb": {
-      "en": "Ādiparvan 1.234.5-6. For breaking the brothers' pact over Draupadī; here Ulūpī takes him. He goes on east and down the coast.",
-      "hi": "आदिपर्व 1.234.5-6। द्रौपदी संबंधी भाइयों का नियम तोड़ने पर; यहाँ उलूपी उन्हें ले जाती है। फिर वे पूर्व और तट के साथ दक्षिण जाते हैं।"
+      "en": "Ādiparvan 1.234.5-6. For breaking the brothers' pact over Draupadī. Here the nāga Ulūpī draws him under the Gaṅgā; their son is Irāvat.",
+      "hi": "आदिपर्व 1.234.5-6। द्रौपदी संबंधी भाइयों का नियम तोड़ने पर। यहाँ नागकन्या उलूपी उन्हें गंगा के नीचे ले जाती है; उनका पुत्र इरावान्।"
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-234?oldid=54580",
       "https://www.geonames.org/1270351"
+    ]
+  },
+  {
+    "id": "gaya-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Gayā",
+      "hi": "गया"
+    },
+    "anchor": {
+      "lat": 24.79686,
+      "lon": 85.00385
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "Up the Himavat, then east to Gayā",
+      "hi": "हिमवान् पर, फिर पूर्व में गया तक"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "महानदीं गयां चैव गङ्गामपि च भारत",
+    "locus": {
+      "en": "Mahābhārata 1.235.1-8",
+      "hi": "महाभारत 1.235.1-8"
+    },
+    "modern": {
+      "en": "Gaya",
+      "hi": "गया"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.1-8. Agastya's banyan, Vasiṣṭha's mountain, Bhṛgutuṅga; then Naimiṣa, the Nandā, the Kauśikī and the Mahānadī.",
+      "hi": "आदिपर्व 1.235.1-8। अगस्त्यवट, वसिष्ठ पर्वत, भृगुतुंग; फिर नैमिष, नन्दा, कौशिकी और महानदी।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582",
+      "https://www.geonames.org/1271439"
+    ]
+  },
+  {
+    "id": "mahendra-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Mahendra",
+      "hi": "महेन्द्र"
+    },
+    "anchor": {
+      "lat": 18.97,
+      "lon": 84.37
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "Down the Kaliṅga coast to Maṇalūra",
+      "hi": "कलिंग तट से मणलूर तक"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "महेन्द्रपर्वतं दृष्ट्वा",
+    "locus": {
+      "en": "Mahābhārata 1.235.9-15",
+      "hi": "महाभारत 1.235.9-15"
+    },
+    "modern": {
+      "en": "Eastern Ghats (Mahendragiri)",
+      "hi": "पूर्वी घाट (महेंद्रगिरि)"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.9-15. Three months with Citrāṅgadā at Maṇalūra (not placed), whose son Babhruvāhana stays as her father's heir.",
+      "hi": "आदिपर्व 1.235.9-15। मणलूर (स्थान तय नहीं) में चित्रांगदा के साथ तीन मास; उनका पुत्र बभ्रुवाहन नाना का उत्तराधिकारी रहता है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582",
+      "https://en.wikipedia.org/wiki/Eastern_Ghats"
+    ]
+  },
+  {
+    "id": "prabhasa-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Prabhāsa",
+      "hi": "प्रभास"
+    },
+    "anchor": {
+      "lat": 20.888,
+      "lon": 70.401
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "Up the western sea to Prabhāsa",
+      "hi": "पश्चिमी समुद्र के साथ प्रभास तक"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "तानि सर्वाणि गत्वा स प्रभासमुपजग्मिवान्",
+    "locus": {
+      "en": "Mahābhārata 1.238.1-2",
+      "hi": "महाभारत 1.238.1-2"
+    },
+    "modern": {
+      "en": "Prabhas Patan (Somnath)",
+      "hi": "प्रभास पाटन (सोमनाथ)"
+    },
+    "identified": {
+      "en": "certain, the standard identification",
+      "hi": "निश्चित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.238.1-2. After the five shunned tīrthas of the southern sea, where he frees five apsarases turned crocodiles. Kṛṣṇa meets him here.",
+      "hi": "आदिपर्व 1.238.1-2। दक्षिणी समुद्र के पाँच वर्जित तीर्थों के बाद, जहाँ वे मगर बनी पाँच अप्सराओं को मुक्त करते हैं। यहाँ कृष्ण उनसे मिलते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-238?oldid=54588",
+      "https://en.wikipedia.org/wiki/Prabhas_Patan"
+    ]
+  },
+  {
+    "id": "raivataka",
+    "status": "draft",
+    "name": {
+      "en": "Raivataka",
+      "hi": "रैवतक"
+    },
+    "anchor": {
+      "lat": 21.5292,
+      "lon": 70.5275
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "The Raivataka festival",
+      "hi": "रैवतक उत्सव"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "महीधरं रैवतकं वासायैवाभिजग्मतुः",
+    "locus": {
+      "en": "Mahābhārata 1.238.21-27",
+      "hi": "महाभारत 1.238.21-27"
+    },
+    "modern": {
+      "en": "Girnar, above Junagadh",
+      "hi": "गिरनार, जूनागढ़ के ऊपर"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.238.21-27. Where he first sees Subhadrā, Kṛṣṇa's sister.",
+      "hi": "आदिपर्व 1.238.21-27। जहाँ वे पहली बार कृष्ण की बहन सुभद्रा को देखते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-238?oldid=54588",
+      "https://en.wikipedia.org/wiki/Girnar"
+    ]
+  },
+  {
+    "id": "dvaraka-arjuna",
+    "status": "draft",
+    "name": {
+      "en": "Dvārakā",
+      "hi": "द्वारका"
+    },
+    "anchor": {
+      "lat": 22.23944,
+      "lon": 68.96778
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "Subhadrā carried off",
+      "hi": "सुभद्रा-हरण"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "द्वारकाया उपवने तस्थौ वै कार्यसाधनः",
+    "locus": {
+      "en": "Mahābhārata 1.240.2-3",
+      "hi": "महाभारत 1.240.2-3"
+    },
+    "modern": {
+      "en": "Dwarka",
+      "hi": "द्वारका"
+    },
+    "identified": {
+      "en": "likely, by tradition",
+      "hi": "संभावित, परंपरा से"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.240.2-3. With Kṛṣṇa's agreement he waits outside Dvārakā and drives her off from the city gate.",
+      "hi": "आदिपर्व 1.240.2-3। कृष्ण की सहमति से वे द्वारका के बाहर प्रतीक्षा करते हैं और नगर-द्वार से उन्हें ले जाते हैं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-240?oldid=54592",
+      "https://www.geonames.org/1272140"
+    ]
+  },
+  {
+    "id": "indraprastha-subhadra",
+    "status": "draft",
+    "name": {
+      "en": "Indraprastha",
+      "hi": "इन्द्रप्रस्थ"
+    },
+    "anchor": {
+      "lat": 28.6096,
+      "lon": 77.2437
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "category": "arjuna",
+    "priority": 2,
+    "event": {
+      "en": "Home, with Subhadrā",
+      "hi": "सुभद्रा के साथ घर"
+    },
+    "when": {
+      "en": "The Indraprastha years: 'twelve months' in this text, twelve years in the CE",
+      "hi": "इन्द्रप्रस्थ के वर्ष: इस पाठ में 'बारह मास', समीक्षित संस्करण में बारह वर्ष"
+    },
+    "verse": "इन्द्रप्रस्थं पुरवरं कृष्णां द्रष्टुं यशस्विनीम्",
+    "locus": {
+      "en": "Mahābhārata 1.246.8-12",
+      "hi": "महाभारत 1.246.8-12"
+    },
+    "modern": {
+      "en": "Purana Qila, Delhi",
+      "hi": "पुराना क़िला, दिल्ली"
+    },
+    "identified": {
+      "en": "likely, the standard identification",
+      "hi": "संभावित, मानक पहचान"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.246.8-12. She enters dressed as a cowherd girl, so that Draupadī will greet her kindly.",
+      "hi": "आदिपर्व 1.246.8-12। वे ग्वालिन के वेश में प्रवेश करती हैं, ताकि द्रौपदी स्नेह से स्वागत करें।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-246?oldid=54603",
+      "https://en.wikipedia.org/wiki/Purana_Qila"
     ]
   },
   {

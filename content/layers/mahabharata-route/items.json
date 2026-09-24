@@ -264,39 +264,6 @@
     ]
   },
   {
-    "id": "arjuna-east",
-    "status": "draft",
-    "name": {
-      "en": "Arjuna east to Kaliṅga and Mahendra",
-      "hi": "अर्जुन पूर्व में कलिंग और महेन्द्र तक"
-    },
-    "category": "arjuna",
-    "rank": 2,
-    "geometry": {
-      "from": {
-        "lat": 29.94791,
-        "lon": 78.16025
-      },
-      "to": {
-        "lat": 18.97,
-        "lon": 84.37
-      },
-      "bow": 0.12
-    },
-    "verse": "महेन्द्रपर्वतं दृष्ट्वा तापसैरुपशोभितम्",
-    "locus": {
-      "en": "Mahābhārata 1.235.9-15",
-      "hi": "महाभारत 1.235.9-15"
-    },
-    "blurb": {
-      "en": "Ādiparvan 1.235.9-15. Aṅga, Vaṅga, Kaliṅga, Mahendra; then the Godāvarī, the Kāverī's mouth and Maṇalūra, which are not placed.",
-      "hi": "आदिपर्व 1.235.9-15। अंग, वंग, कलिंग, महेन्द्र; फिर गोदावरी, कावेरी का मुहाना और मणलूर, जिनका स्थान तय नहीं।"
-    },
-    "sources": [
-      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582"
-    ]
-  },
-  {
     "id": "to-the-dice",
     "status": "draft",
     "name": {
@@ -2505,6 +2472,303 @@
     },
     "sources": [
       "https://sa.wikisource.org/wiki/महाभारतम्-09-शल्यपर्व-055?oldid=53539"
+    ]
+  },
+  {
+    "id": "arj-east",
+    "status": "draft",
+    "name": {
+      "en": "By the Himavat's side, then east to Naimiṣa",
+      "hi": "हिमवान् के पार्श्व से, फिर पूर्व में नैमिष"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 29.94791,
+        "lon": 78.16025
+      },
+      "to": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "bow": 0.12
+    },
+    "verse": "प्रययौ हिमवत्पार्श्वं ततो वज्रधरात्मजः",
+    "locus": {
+      "en": "Mahābhārata 1.235.1-8",
+      "hi": "महाभारत 1.235.1-8"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.1-8. The Himalayan tīrthas of 1.235.2-4 are not placed.",
+      "hi": "आदिपर्व 1.235.1-8। 1.235.2-4 के हिमालयी तीर्थ तय नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582"
+    ]
+  },
+  {
+    "id": "arj-gaya",
+    "status": "draft",
+    "name": {
+      "en": "By the Nandā and the Kauśikī to Gayā",
+      "hi": "नन्दा और कौशिकी होकर गया"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 27.35,
+        "lon": 80.49
+      },
+      "to": {
+        "lat": 24.79686,
+        "lon": 85.00385
+      },
+      "bow": 0.12
+    },
+    "verse": "महानदीं गयां चैव गङ्गामपि च भारत",
+    "locus": {
+      "en": "Mahābhārata 1.235.1-8",
+      "hi": "महाभारत 1.235.1-8"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.1-8.",
+      "hi": "आदिपर्व 1.235.1-8।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582"
+    ]
+  },
+  {
+    "id": "arj-kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Aṅga, Vaṅga, Kaliṅga and Mahendra",
+      "hi": "अंग, वंग, कलिंग और महेन्द्र"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 24.79686,
+        "lon": 85.00385
+      },
+      "to": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "bow": 0.12
+    },
+    "verse": "महेन्द्रपर्वतं दृष्ट्वा तापसैरुपशोभितम्",
+    "locus": {
+      "en": "Mahābhārata 1.235.9-15",
+      "hi": "महाभारत 1.235.9-15"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.9-15.",
+      "hi": "आदिपर्व 1.235.9-15।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582"
+    ]
+  },
+  {
+    "id": "arj-kaveri",
+    "status": "draft",
+    "name": {
+      "en": "Down the coast to the Kāverī's mouth",
+      "hi": "तट के साथ कावेरी के मुहाने तक"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 18.97,
+        "lon": 84.37
+      },
+      "to": {
+        "lat": 11.1,
+        "lon": 79.85
+      },
+      "bow": 0.12
+    },
+    "verse": "कावेरीं तां समासाद्य सङ्गमे सागरस्य च",
+    "locus": {
+      "en": "Mahābhārata 1.235.9-15",
+      "hi": "महाभारत 1.235.9-15"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.235.9-15. A southern addition; Maṇalūra, reached 'along the sea shore', is not placed. The point is the compiler's.",
+      "hi": "आदिपर्व 1.235.9-15। दक्षिणी जोड़; 'समुद्र तट से' पहुँचा मणलूर तय नहीं। बिंदु संकलक का है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-235?oldid=54582"
+    ]
+  },
+  {
+    "id": "arj-south",
+    "status": "draft",
+    "name": {
+      "en": "The five tīrthas of the southern sea",
+      "hi": "दक्षिणी समुद्र के पाँच तीर्थ"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 11.1,
+        "lon": 79.85
+      },
+      "to": {
+        "lat": 8.2,
+        "lon": 78.3
+      },
+      "bow": 0.12
+    },
+    "verse": "ततः समुद्रे तीर्थानि दक्षिमे भरतर्षभः",
+    "locus": {
+      "en": "Mahābhārata 1.236.1-4",
+      "hi": "महाभारत 1.236.1-4"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.236.1-4. Then back to Maṇalūra, where Babhruvāhana is born (1.237.25-28).",
+      "hi": "आदिपर्व 1.236.1-4। फिर मणलूर वापस, जहाँ बभ्रुवाहन जन्मते हैं (1.237.25-28)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-236?oldid=54584"
+    ]
+  },
+  {
+    "id": "arj-west",
+    "status": "draft",
+    "name": {
+      "en": "Up the western sea by the Aparāntas",
+      "hi": "अपरान्त होकर पश्चिमी समुद्र के साथ ऊपर"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.2,
+        "lon": 78.3
+      },
+      "to": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "bow": 0.12
+    },
+    "verse": "समुद्रे पश्चिमे यानि तीर्थान्यायतनानि च",
+    "locus": {
+      "en": "Mahābhārata 1.238.1-2",
+      "hi": "महाभारत 1.238.1-2"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.238.1-2.",
+      "hi": "आदिपर्व 1.238.1-2।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-238?oldid=54588"
+    ]
+  },
+  {
+    "id": "arj-raivataka",
+    "status": "draft",
+    "name": {
+      "en": "With Kṛṣṇa to Raivataka",
+      "hi": "कृष्ण के साथ रैवतक"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 20.888,
+        "lon": 70.401
+      },
+      "to": {
+        "lat": 21.5292,
+        "lon": 70.5275
+      },
+      "bow": 0.12
+    },
+    "verse": "महीधरं रैवतकं वासायैवाभिजग्मतुः",
+    "locus": {
+      "en": "Mahābhārata 1.238.21-27",
+      "hi": "महाभारत 1.238.21-27"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.238.21-27.",
+      "hi": "आदिपर्व 1.238.21-27।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-238?oldid=54588"
+    ]
+  },
+  {
+    "id": "arj-dvaraka",
+    "status": "draft",
+    "name": {
+      "en": "To Dvārakā",
+      "hi": "द्वारका की ओर"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 21.5292,
+        "lon": 70.5275
+      },
+      "to": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "bow": 0.12
+    },
+    "verse": "द्वारकाया उपवने तस्थौ वै कार्यसाधनः",
+    "locus": {
+      "en": "Mahābhārata 1.240.2-3",
+      "hi": "महाभारत 1.240.2-3"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.240.2-3.",
+      "hi": "आदिपर्व 1.240.2-3।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-240?oldid=54592"
+    ]
+  },
+  {
+    "id": "arj-home",
+    "status": "draft",
+    "name": {
+      "en": "Home to Indraprastha with Subhadrā",
+      "hi": "सुभद्रा के साथ इन्द्रप्रस्थ वापसी"
+    },
+    "category": "arjuna",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 22.23944,
+        "lon": 68.96778
+      },
+      "to": {
+        "lat": 28.6096,
+        "lon": 77.2437
+      },
+      "bow": 0.2
+    },
+    "verse": "इन्द्रप्रस्थं पुरवरं कृष्णां द्रष्टुं यशस्विनीम्",
+    "locus": {
+      "en": "Mahābhārata 1.246.8-12",
+      "hi": "महाभारत 1.246.8-12"
+    },
+    "blurb": {
+      "en": "Ādiparvan 1.246.8-12.",
+      "hi": "आदिपर्व 1.246.8-12।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभारतम्-01-आदिपर्व-246?oldid=54603"
     ]
   }
 ]

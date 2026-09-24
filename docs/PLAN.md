@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixty-first round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (sixty-second round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,12 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, sixty-second round: Arjuna's pilgrimage filled out in the Mahābhārata tour.
+  58 stops and 84 arrows. The Arjuna group grows from one stop to seven: Gaṅgādvāra, then up the
+  Himavat and east to Gayā, down the Kaliṅga coast to Maṇalūra, up the western sea to Prabhāsa, the
+  Raivataka (Girnar) festival, Subhadrā carried off from Dvārakā, and home to Indraprastha. Nine thin
+  arrows replace the Gaṅgādvāra → Mahendra placeholder. The date line carries the text's own crux:
+  "twelve months" here, twelve years in the CE. Checked in the browser; tests and build pass.
 - 2026-09-24, sixty-first round: Balarāma's Sarasvatī pilgrimage added to the Mahābhārata tour.
   52 stops and 76 arrows in thirteen colours. A periwinkle group follows the war stop: Prabhāsa, where
   the river meets the sea; Pṛthūdaka (Pehowa); Samantapañcaka; and the source, Plakṣaprasravaṇa (Adi
