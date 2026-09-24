@@ -2353,7 +2353,7 @@
   },
   "regions/states.json": {
    "size": 53002,
-   "sha256": "2a663548ed1b"
+   "sha256": "6f65978db87c"
   },
   "regions/outlines/andaman-and-nicobar-islands.json": {
    "size": 9191,
@@ -3613,11 +3613,11 @@
   },
   "terrain/shade-1024.bin.gz": {
    "size": 160041,
-   "sha256": "17e06999d4af"
+   "sha256": "de8682b020d1"
   },
   "terrain/shade-2048.bin.gz": {
-   "size": 687146,
-   "sha256": "43430e0c01fb"
+   "size": 687155,
+   "sha256": "7a4a09fca8b0"
   },
   "terrain/world-heights.bin.gz": {
    "size": 436548,
