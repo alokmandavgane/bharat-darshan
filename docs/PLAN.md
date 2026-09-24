@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (fifty-first round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-24 (fifty-second round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,19 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-24, fifty-second round: Rāma's road extended through the Kiṣkindhākāṇḍa to Mahendra.
+  Same page (`/en/atlas/rama-exile`), now "Rāma's road: Ayodhyā to the southern sea".
+  - 10 stops (Kiṣkindhā and the southern Mahendra added) and 12 arrows in six colours; the two new
+    groups are Kiṣkindhā and the rains (Ṛṣyamūka to Kiṣkindhā) and the southern party (Kiṣkindhā
+    through the Vindhya caves and Ṛkṣabila to Mahendra, then the hundred-yojana crossing to come,
+    stopping at sea).
+  - Kiṣkindhā's card carries the dated rains (four months from Śrāvaṇa, in a cave on Prasravaṇa);
+    Prasravaṇa itself is not pinned, since no verifiable coordinates were found for the
+    Mālyavanta hill tradition. Mahendra's card names the text's own crux, a "Vindhya" on the
+    southern shore.
+  - Checked in the browser (10 stops in order, new stop and leg cards read); tests and build pass.
+  - **Next for the route**: Sundarakāṇḍa (the leap, Laṅkā) and Yuddhakāṇḍa 4-22 (the march to
+    the sea and the setu).
 - 2026-09-24, fifty-first round: Rāma's road extended through the Araṇyakāṇḍa to the Pampā.
   Same page (`/en/atlas/rama-exile`), same layers, now titled "Rāma's road: Ayodhyā to the Pampā".
   - 8 stops (Pañcavaṭī and the Pampā added) and 9 arrows in four colours: the road into exile,

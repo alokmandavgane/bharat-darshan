@@ -3,12 +3,12 @@
   "section": "history",
   "order": 3,
   "title": {
-    "en": "Rāma's road: Ayodhyā to the Pampā",
-    "hi": "राम का मार्ग: अयोध्या से पम्पा"
+    "en": "Rāma's road: Ayodhyā to the southern sea",
+    "hi": "राम का मार्ग: अयोध्या से दक्षिणी समुद्र"
   },
   "blurb": {
-    "en": "The Ayodhyā-kāṇḍa and the Araṇya-kāṇḍa: Kosala's rivers, Guha's boat, Prayāga, Citrakūṭa, the Daṇḍaka hermitages, Pañcavaṭī, Rāvaṇa's flight with Sītā and Rāma's search to the Pampā. Play the tour to follow it.",
-    "hi": "अयोध्याकाण्ड और अरण्यकाण्ड: कोसल की नदियाँ, गुह की नाव, प्रयाग, चित्रकूट, दण्डक के आश्रम, पंचवटी, सीता को लेकर रावण की उड़ान और पम्पा तक राम की खोज। इसे क्रम से देखने के लिए भ्रमण चलाएँ।"
+    "en": "The Ayodhyā, Araṇya and Kiṣkindhā kāṇḍas: Kosala's rivers, Prayāga, Citrakūṭa, the Daṇḍaka, Pañcavaṭī, Rāvaṇa's flight, the search to the Pampā, the rains at Kiṣkindhā and the monkeys' road to Mahendra.",
+    "hi": "अयोध्या, अरण्य और किष्किन्धा काण्ड: कोसल की नदियाँ, प्रयाग, चित्रकूट, दण्डक, पंचवटी, रावण की उड़ान, पम्पा तक खोज, किष्किन्धा में वर्षा और महेन्द्र तक वानरों का मार्ग।"
   },
   "base": "plain",
   "layers": [
@@ -27,7 +27,9 @@
       "prayaga",
       "citrakuta",
       "pancavati",
-      "pampa"
+      "pampa",
+      "kiskindha",
+      "mahendra-south"
     ],
     "title": {
       "en": "Walk the road",

@@ -295,5 +295,104 @@
     "sources": [
       "https://sa.wikisource.org/wiki/रामायणम्/अरण्यकाण्डम्/सर्गः_६९?oldid=352113"
     ]
+  },
+  {
+    "id": "to-kiskindha",
+    "status": "draft",
+    "name": {
+      "en": "From Ṛṣyamūka to Kiṣkindhā",
+      "hi": "ऋष्यमूक से किष्किन्धा"
+    },
+    "category": "kiskindha",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3538,
+        "lon": 76.4774
+      },
+      "to": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "bow": 0.12
+    },
+    "verse": "ते गत्वा दूरमध्वानं",
+    "locus": {
+      "en": "Rāmāyaṇa 4.13.28-29",
+      "hi": "रामायण 4.13.28-29"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā-kāṇḍa 13.28-29. 'A long road' past the hermitage of the Seven; the tradition puts both near Hampi, a few kilometres apart.",
+      "hi": "किष्किन्धाकाण्ड 13.28-29। सात ऋषियों के आश्रम से होकर 'लंबा मार्ग'; परंपरा दोनों को हम्पी के पास, कुछ किलोमीटर की दूरी पर मानती है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_१३?oldid=352253"
+    ]
+  },
+  {
+    "id": "southern-party",
+    "status": "draft",
+    "name": {
+      "en": "The southern party: the Vindhya's caves, Ṛkṣabila, the shore",
+      "hi": "दक्षिणी दल: विंध्य की गुफाएँ, ऋक्षबिल, समुद्र-तट"
+    },
+    "category": "vanara",
+    "rank": 1,
+    "geometry": {
+      "from": {
+        "lat": 15.3352,
+        "lon": 76.4603
+      },
+      "to": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "bow": 0.12
+    },
+    "verse": "दुर्गमृक्षबिलं नाम",
+    "locus": {
+      "en": "Rāmāyaṇa 4.50.7-8",
+      "hi": "रामायण 4.50.7-8"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā-kāṇḍa 50.7-8. They come out on a shore the text calls 'the Vindhya', meet Sampāti and camp on the ocean's north shore; none of it is placed.",
+      "hi": "किष्किन्धाकाण्ड 50.7-8। वे एक तट पर निकलते हैं जिसे पाठ 'विंध्य' कहता है, सम्पाति से मिलते हैं और समुद्र के उत्तरी तट पर डेरा डालते हैं; इनमें से कुछ भी स्थापित नहीं।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_५०?oldid=353708"
+    ]
+  },
+  {
+    "id": "to-lanka",
+    "status": "draft",
+    "name": {
+      "en": "A hundred yojanas to Laṅkā: the leap to come",
+      "hi": "लंका तक सौ योजन: आगे की छलाँग"
+    },
+    "category": "vanara",
+    "rank": 2,
+    "geometry": {
+      "from": {
+        "lat": 8.09008,
+        "lon": 77.53841
+      },
+      "to": {
+        "lat": 8.25,
+        "lon": 79.55
+      },
+      "bow": 0.12
+    },
+    "verse": "इतो द्वीपे समुद्रस्य सम्पूर्णे शतयोजने",
+    "locus": {
+      "en": "Rāmāyaṇa 4.58.19-24",
+      "hi": "रामायण 4.58.19-24"
+    },
+    "blurb": {
+      "en": "Kiṣkindhā-kāṇḍa 58.19-24. Sampāti's figure; the leap itself is the Sundarakāṇḍa's.",
+      "hi": "किष्किन्धाकाण्ड 58.19-24। सम्पाति का बताया माप; छलाँग स्वयं सुन्दरकाण्ड में है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/रामायणम्/किष्किन्धाकाण्डम्/सर्गः_५८?oldid=353750"
+    ]
   }
 ]
