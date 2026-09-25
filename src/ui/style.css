@@ -543,6 +543,9 @@ body[data-level="state"] .sheet-head { cursor: default; }
 .episode-count { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .episode-name { font-weight: 600; color: var(--ink); line-height: 1.25; }
 .episode-name[hidden] { display: none; }
+.page-eras { margin: 10px 0 4px; }
+.page-eras .episode-row button:disabled { opacity: 0.35; cursor: default; }
+.era-blurb { margin: 8px 0 0; color: var(--muted); font-size: 0.92rem; }
 .episode-all {
   margin: 6px 0 0 42px; padding: 2px 0; border: 0; background: transparent;
   font: inherit; font-size: 0.85rem; color: var(--accent-deep);

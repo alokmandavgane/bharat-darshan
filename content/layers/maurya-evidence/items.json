@@ -1,0 +1,920 @@
+[
+  {
+    "id": "girnar",
+    "status": "draft",
+    "name": {
+      "en": "Girnar",
+      "hi": "गिरनार"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.51966,
+      "lon": 70.45981
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1822,
+    "identified": {
+      "en": "placed at Junagadh",
+      "hi": "Junagadh पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1822, recorded by Hultzsch 1925.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1822 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1268773"
+    ]
+  },
+  {
+    "id": "kalsi",
+    "status": "draft",
+    "name": {
+      "en": "Kalsi",
+      "hi": "कालसी"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.54,
+      "lon": 77.85
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1860,
+    "identified": {
+      "en": "placed at Kalsi, Dehradun district (compiler's placement)",
+      "hi": "Kalsi, Dehradun district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1860, recorded by Hultzsch 1925.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1860 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://en.wikipedia.org/wiki/Rock_edicts_of_Khalsi"
+    ]
+  },
+  {
+    "id": "sopara",
+    "status": "draft",
+    "name": {
+      "en": "Sopara",
+      "hi": "सोपारा"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.42,
+      "lon": 72.82
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1882,
+    "identified": {
+      "en": "placed at Nala Sopara, Palghar district (compiler's placement)",
+      "hi": "Nala Sopara, Palghar district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1882, recorded by Hultzsch 1925.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1882 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://en.wikipedia.org/wiki/Nala_Sopara"
+    ]
+  },
+  {
+    "id": "dhauli",
+    "status": "draft",
+    "name": {
+      "en": "Dhauli",
+      "hi": "धौली"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.27241,
+      "lon": 85.83385
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1837,
+    "identified": {
+      "en": "placed at Bhubaneswar",
+      "hi": "Bhubaneswar पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1837, recorded by Hultzsch 1925. With the two separate edicts to Tosali.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1837 में मिला, हुल्त्श 1925 में दर्ज। तोसली के दो पृथक अभिलेखों सहित।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1275817"
+    ]
+  },
+  {
+    "id": "jaugada",
+    "status": "draft",
+    "name": {
+      "en": "Jaugada",
+      "hi": "जौगड़"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.52024,
+      "lon": 84.88514
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1850,
+    "identified": {
+      "en": "placed at Purushottampur",
+      "hi": "Purushottampur पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1850, recorded by Hultzsch 1925. With the two separate edicts to Samāpā.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1850 में मिला, हुल्त्श 1925 में दर्ज। समापा के दो पृथक अभिलेखों सहित।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1259158"
+    ]
+  },
+  {
+    "id": "erragudi",
+    "status": "draft",
+    "name": {
+      "en": "Erragudi",
+      "hi": "एर्रगुडी"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.11836,
+      "lon": 77.63776
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1928,
+    "identified": {
+      "en": "placed at Gooty",
+      "hi": "Gooty पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1928, found after Hultzsch.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1928 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1270974"
+    ]
+  },
+  {
+    "id": "sannati",
+    "status": "draft",
+    "name": {
+      "en": "Sannati",
+      "hi": "सन्नति"
+    },
+    "category": "major-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.12357,
+      "lon": 77.0824
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Major rock edict",
+      "hi": "प्रमुख शिलालेख"
+    },
+    "found": 1989,
+    "identified": {
+      "en": "placed at Chitapur",
+      "hi": "Chitapur पर"
+    },
+    "blurb": {
+      "en": "Major rock edict of Aśoka, found in 1989, found after Hultzsch.",
+      "hi": "अशोक का प्रमुख शिलालेख, 1989 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1274077"
+    ]
+  },
+  {
+    "id": "rupnath",
+    "status": "draft",
+    "name": {
+      "en": "Rupnath",
+      "hi": "रूपनाथ"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.4871,
+      "lon": 80.10404
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1871,
+    "identified": {
+      "en": "placed at Sihora",
+      "hi": "Sihora पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1871, recorded by Hultzsch 1925.",
+      "hi": "अशोक का लघु शिलालेख, 1871 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1256340"
+    ]
+  },
+  {
+    "id": "sahasram",
+    "status": "draft",
+    "name": {
+      "en": "Sahasram",
+      "hi": "सहसराम"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.94942,
+      "lon": 84.01645
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1873,
+    "identified": {
+      "en": "placed at Sasaram",
+      "hi": "Sasaram पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1873, recorded by Hultzsch 1925.",
+      "hi": "अशोक का लघु शिलालेख, 1873 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1257086"
+    ]
+  },
+  {
+    "id": "bairat",
+    "status": "draft",
+    "name": {
+      "en": "Bairat",
+      "hi": "बैराठ"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.43538,
+      "lon": 76.18297
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1837,
+    "identified": {
+      "en": "placed at Viratnagar",
+      "hi": "Viratnagar पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1837, recorded by Hultzsch 1925.",
+      "hi": "अशोक का लघु शिलालेख, 1837 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1277745"
+    ]
+  },
+  {
+    "id": "maski",
+    "status": "draft",
+    "name": {
+      "en": "Maski",
+      "hi": "मस्की"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.96,
+      "lon": 76.66
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1915,
+    "identified": {
+      "en": "placed at Maski, Raichur district (compiler's placement)",
+      "hi": "Maski, Raichur district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1915, recorded by Hultzsch 1925. The first edict found that names the king Aśoka.",
+      "hi": "अशोक का लघु शिलालेख, 1915 में मिला, हुल्त्श 1925 में दर्ज। पहला मिला अभिलेख जो राजा का नाम अशोक लेता है।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://en.wikipedia.org/wiki/Maski"
+    ]
+  },
+  {
+    "id": "brahmagiri",
+    "status": "draft",
+    "name": {
+      "en": "Brahmagiri, Siddapura, Jaṭiṅga-Rāmeśvara",
+      "hi": "ब्रह्मगिरि, सिद्दापुर, जटिंग-रामेश्वर"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 14.81,
+      "lon": 76.8
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1892,
+    "identified": {
+      "en": "placed at Brahmagiri, Chitradurga district (compiler's placement)",
+      "hi": "Brahmagiri, Chitradurga district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1892, recorded by Hultzsch 1925. Three rocks of the district of Isila, under Suvarṇagiri.",
+      "hi": "अशोक का लघु शिलालेख, 1892 में मिला, हुल्त्श 1925 में दर्ज। इसिल ज़िले की तीन शिलाएँ, सुवर्णगिरि के अधीन।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://en.wikipedia.org/wiki/Brahmagiri_(Chitradurga)"
+    ]
+  },
+  {
+    "id": "gavimath",
+    "status": "draft",
+    "name": {
+      "en": "Gavimath and Palkigundu",
+      "hi": "गवीमठ और पालकीगुंडु"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.34522,
+      "lon": 76.15478
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1931,
+    "identified": {
+      "en": "placed at Koppal",
+      "hi": "Koppal पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1931, found after Hultzsch.",
+      "hi": "अशोक का लघु शिलालेख, 1931 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1266154"
+    ]
+  },
+  {
+    "id": "rajula-mandagiri",
+    "status": "draft",
+    "name": {
+      "en": "Rajula-Mandagiri",
+      "hi": "राजुल-मंडगिरि"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.82887,
+      "lon": 78.03602
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1953,
+    "identified": {
+      "en": "placed at Kurnool",
+      "hi": "Kurnool पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1953, found after Hultzsch. Placed at Kurnool, the district town.",
+      "hi": "अशोक का लघु शिलालेख, 1953 में मिला, हुल्त्श के बाद मिला। ज़िला नगर कुरनूल पर रखा गया।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1265491"
+    ]
+  },
+  {
+    "id": "gujarra",
+    "status": "draft",
+    "name": {
+      "en": "Gujarra",
+      "hi": "गुजर्रा"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.67312,
+      "lon": 78.45908
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1953,
+    "identified": {
+      "en": "placed at Datia",
+      "hi": "Datia पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1953, found after Hultzsch. The second edict that names the king Aśoka.",
+      "hi": "अशोक का लघु शिलालेख, 1953 में मिला, हुल्त्श के बाद मिला। दूसरा अभिलेख जो राजा का नाम अशोक लेता है।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1273403"
+    ]
+  },
+  {
+    "id": "ahraura",
+    "status": "draft",
+    "name": {
+      "en": "Ahraura",
+      "hi": "अहरौरा"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.01579,
+      "lon": 83.03294
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1961,
+    "identified": {
+      "en": "placed at Ahraura",
+      "hi": "Ahraura पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1961, found after Hultzsch.",
+      "hi": "अशोक का लघु शिलालेख, 1961 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1279219"
+    ]
+  },
+  {
+    "id": "bahapur",
+    "status": "draft",
+    "name": {
+      "en": "Delhi (Bahapur)",
+      "hi": "दिल्ली (बहापुर)"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.62137,
+      "lon": 77.2148
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1966,
+    "identified": {
+      "en": "placed at New Delhi",
+      "hi": "New Delhi पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1966, found after Hultzsch.",
+      "hi": "अशोक का लघु शिलालेख, 1966 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1261481"
+    ]
+  },
+  {
+    "id": "panguraria",
+    "status": "draft",
+    "name": {
+      "en": "Panguraria",
+      "hi": "पानगुडारिया"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.78659,
+      "lon": 77.68109
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1975,
+    "identified": {
+      "en": "placed at Budhni",
+      "hi": "Budhni पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1975, found after Hultzsch.",
+      "hi": "अशोक का लघु शिलालेख, 1975 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/8740799"
+    ]
+  },
+  {
+    "id": "nittur",
+    "status": "draft",
+    "name": {
+      "en": "Nittur and Udegolam",
+      "hi": "निट्टूर और उडेगोलम"
+    },
+    "category": "minor-rock",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.63,
+      "lon": 76.89217
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Minor rock edict",
+      "hi": "लघु शिलालेख"
+    },
+    "found": 1977,
+    "identified": {
+      "en": "placed at Siruguppa",
+      "hi": "Siruguppa पर"
+    },
+    "blurb": {
+      "en": "Minor rock edict of Aśoka, found in 1977, found after Hultzsch.",
+      "hi": "अशोक का लघु शिलालेख, 1977 में मिला, हुल्त्श के बाद मिला।"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Edicts_of_Ashoka",
+      "https://www.geonames.org/1256029"
+    ]
+  },
+  {
+    "id": "topra",
+    "status": "draft",
+    "name": {
+      "en": "Delhi-Topra pillar (from Topra)",
+      "hi": "दिल्ली-टोपरा स्तंभ (टोपरा से)"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.16719,
+      "lon": 77.30367
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1356,
+    "identified": {
+      "en": "placed at Jagadhri",
+      "hi": "Jagadhri पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1356, recorded by Hultzsch 1925. Moved to Delhi by Fīrūz Shāh Tughluq; placed at its first site, near Topra.",
+      "hi": "अशोक का स्तंभ लेख, 1356 में मिला, हुल्त्श 1925 में दर्ज। फ़ीरोज़ शाह तुग़लक़ ने दिल्ली पहुँचाया; पहले स्थान, टोपरा के पास, रखा गया।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1269605"
+    ]
+  },
+  {
+    "id": "meerut-pillar",
+    "status": "draft",
+    "name": {
+      "en": "Delhi-Meerut pillar (from Meerut)",
+      "hi": "दिल्ली-मेरठ स्तंभ (मेरठ से)"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.98002,
+      "lon": 77.70636
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1356,
+    "identified": {
+      "en": "placed at Meerut",
+      "hi": "Meerut पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1356, recorded by Hultzsch 1925.",
+      "hi": "अशोक का स्तंभ लेख, 1356 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1263214"
+    ]
+  },
+  {
+    "id": "kosam-pillar",
+    "status": "draft",
+    "name": {
+      "en": "Allahabad-Kosam pillar",
+      "hi": "इलाहाबाद-कोसम स्तंभ"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.44478,
+      "lon": 81.84322
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1834,
+    "identified": {
+      "en": "placed at Prayagraj",
+      "hi": "Prayagraj पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1834, recorded by Hultzsch 1925. Addressed to the officers at Kauśāmbī, where it first stood.",
+      "hi": "अशोक का स्तंभ लेख, 1834 में मिला, हुल्त्श 1925 में दर्ज। कौशाम्बी के अधिकारियों को संबोधित, जहाँ यह पहले खड़ा था।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1278994"
+    ]
+  },
+  {
+    "id": "lauriya-araraj",
+    "status": "draft",
+    "name": {
+      "en": "Lauriya-Araraj",
+      "hi": "लौरिया-अरेराज"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.5503,
+      "lon": 84.6801
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1834,
+    "identified": {
+      "en": "placed at Areraj",
+      "hi": "Areraj पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1834, recorded by Hultzsch 1925.",
+      "hi": "अशोक का स्तंभ लेख, 1834 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/8740819"
+    ]
+  },
+  {
+    "id": "lauriya-nandangarh",
+    "status": "draft",
+    "name": {
+      "en": "Lauriya-Nandangarh and Rampurva",
+      "hi": "लौरिया-नंदनगढ़ और रामपुरवा"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.10383,
+      "lon": 84.46185
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1834,
+    "identified": {
+      "en": "placed at Narkatiaganj",
+      "hi": "Narkatiaganj पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1834, recorded by Hultzsch 1925. Two pillar sites of West Champaran, placed at Narkatiaganj.",
+      "hi": "अशोक का स्तंभ लेख, 1834 में मिला, हुल्त्श 1925 में दर्ज। पश्चिम चंपारण के दो स्तंभ स्थल, नरकटियागंज पर रखे गए।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1261784"
+    ]
+  },
+  {
+    "id": "sanchi",
+    "status": "draft",
+    "name": {
+      "en": "Sanchi",
+      "hi": "साँची"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.48646,
+      "lon": 77.7378
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1851,
+    "identified": {
+      "en": "placed at Sanchi",
+      "hi": "Sanchi पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1851, recorded by Hultzsch 1925.",
+      "hi": "अशोक का स्तंभ लेख, 1851 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1257479"
+    ]
+  },
+  {
+    "id": "sarnath",
+    "status": "draft",
+    "name": {
+      "en": "Sarnath",
+      "hi": "सारनाथ"
+    },
+    "category": "pillar",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.31668,
+      "lon": 83.01041
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Pillar edict",
+      "hi": "स्तंभ लेख"
+    },
+    "found": 1905,
+    "identified": {
+      "en": "placed at Varanasi",
+      "hi": "Varanasi पर"
+    },
+    "blurb": {
+      "en": "Pillar edict of Aśoka, found in 1905, recorded by Hultzsch 1925.",
+      "hi": "अशोक का स्तंभ लेख, 1905 में मिला, हुल्त्श 1925 में दर्ज।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1253405"
+    ]
+  },
+  {
+    "id": "barabar",
+    "status": "draft",
+    "name": {
+      "en": "Barabar caves",
+      "hi": "बराबर गुफाएँ"
+    },
+    "category": "cave",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.06567,
+      "lon": 84.97247
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "kind": {
+      "en": "Cave inscription",
+      "hi": "गुफा लेख"
+    },
+    "found": 1847,
+    "identified": {
+      "en": "placed at Makhdumpur",
+      "hi": "Makhdumpur पर"
+    },
+    "blurb": {
+      "en": "Cave inscription of Aśoka, found in 1847, recorded by Hultzsch 1925. Caves given to the Ājīvikas, naming the hill Khalatika.",
+      "hi": "अशोक का गुफा लेख, 1847 में मिला, हुल्त्श 1925 में दर्ज। आजीविकों को दी गई गुफाएँ, पहाड़ी का नाम खलतिक।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/10834074"
+    ]
+  }
+]

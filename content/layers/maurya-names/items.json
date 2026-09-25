@@ -1,0 +1,123 @@
+[
+  {
+    "id": "maurya",
+    "status": "draft",
+    "name": {
+      "en": "Maurya empire",
+      "hi": "मौर्य साम्राज्य"
+    },
+    "category": "maurya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.217,
+      "lon": 78.118
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "Aśoka's empire c. 250 BCE, shaded by the evidence of his own inscriptions, from the core round Pāṭaliputra outwards.",
+      "hi": "लगभग 250 ई.पू. अशोक का साम्राज्य, उनके अपने अभिलेखों के प्रमाण के अनुसार, पाटलिपुत्र के आसपास के केंद्र से बाहर की ओर।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch"
+    ]
+  },
+  {
+    "id": "coda",
+    "status": "draft",
+    "name": {
+      "en": "Coḍa (Cōḻa)",
+      "hi": "चोड (चोल)"
+    },
+    "category": "coda",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.671,
+      "lon": 79.241
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "A borderer beyond Aśoka's empire, a kingdom his rock edicts name.",
+      "hi": "अशोक के साम्राज्य के बाहर सीमावर्ती, राज्य जिसका नाम उनके शिलालेख लेते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.484,
+      "lon": 77.943
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "A borderer beyond Aśoka's empire, a kingdom his rock edicts name.",
+      "hi": "अशोक के साम्राज्य के बाहर सीमावर्ती, राज्य जिसका नाम उनके शिलालेख लेते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch"
+    ]
+  },
+  {
+    "id": "keralaputa",
+    "status": "draft",
+    "name": {
+      "en": "Keralaputa",
+      "hi": "केरलपुत्र"
+    },
+    "category": "keralaputa",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.471,
+      "lon": 76.316
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "A borderer beyond Aśoka's empire, a kingdom his rock edicts name.",
+      "hi": "अशोक के साम्राज्य के बाहर सीमावर्ती, राज्य जिसका नाम उनके शिलालेख लेते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch"
+    ]
+  },
+  {
+    "id": "satiyaputa",
+    "status": "draft",
+    "name": {
+      "en": "Satiyaputa",
+      "hi": "सतियपुत्र"
+    },
+    "category": "satiyaputa",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.515,
+      "lon": 77.414
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "A borderer beyond Aśoka's empire, a kingdom his rock edicts name.",
+      "hi": "अशोक के साम्राज्य के बाहर सीमावर्ती, राज्य जिसका नाम उनके शिलालेख लेते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://en.wikipedia.org/wiki/Satyaputa"
+    ]
+  }
+]

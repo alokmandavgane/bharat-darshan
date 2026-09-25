@@ -379,7 +379,9 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
         out_items.append({
             'id': it['id'], 'area_id': n, 'name': it['name'], 'category': it['category'],
             'rank': it['rank'], 'blurb': it['blurb'], 'sources': it['sources'], 'status': it['status'],
-        } | {k: it[k] for k in fields if it.get(k) is not None})
+        } | {k: it[k] for k in fields if it.get(k) is not None}
+          # an area may bring its own colour: a grade of one empire, shaded from the core outwards
+          | ({'color': it['color']} if isinstance(it.get('color'), str) and it['color'].startswith('#') else {}))
     if problems:
         return out_items, problems
     # India only: the model draws nothing else, and Natural Earth's regions run well past
@@ -401,7 +403,7 @@ def build_areas(layer, folder, items, cats, fields, ids, out):
     if layer.get('shades'):
         shade_areas(out_items, grid_ids, {c['id']: c['color'] for c in layer.get('categories', [])},
                     layer['shades']['by'])
-    elif len(layer.get('categories', [])) > MAX_FILL_BANDS:
+    elif len(layer.get('categories', [])) > MAX_FILL_BANDS and not all(it.get('color') for it in out_items):
         # The band lookup holds eight colours (choropleth.js MAX_BANDS); a layer with more
         # categories -- one per kingdom of an era -- carries each area's colour itself.
         col = {c['id']: c['color'] for c in layer['categories']}

@@ -1,0 +1,129 @@
+{
+  "id": "maurya",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "The Mauryas under Aśoka, c. 250 BCE",
+    "hi": "अशोक के समय मौर्य, लगभग 250 ई.पू."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "maurya",
+      "color": "#9c4a2c",
+      "title": {
+        "en": "The Maurya empire",
+        "hi": "मौर्य साम्राज्य"
+      }
+    },
+    {
+      "id": "coda",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḍa (Cōḻa)",
+        "hi": "चोड (चोल)"
+      }
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      }
+    },
+    {
+      "id": "keralaputa",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Keralaputa",
+        "hi": "केरलपुत्र"
+      }
+    },
+    {
+      "id": "satiyaputa",
+      "color": "#6b4f8f",
+      "title": {
+        "en": "Satiyaputa",
+        "hi": "सतियपुत्र"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As Hultzsch puts it",
+        "hi": "हुल्त्श के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the inscription has it",
+        "hi": "अभिलेख में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "Aśoka's empire drawn from his own inscriptions, which Hultzsch (1925) thought 'engraved along the very confines of his territories'. Five shades from dark to light: the core round Pāṭaliputra; the regions where an edict stands or whose seat the edicts name; the Andhras, whom the thirteenth rock edict counts 'here in the king's territory'; the forest peoples, inside by the same edict but not placed; and the rest, within the edicts' bounds with nothing of its own. Outside, in their own colours, the borderers the edicts name: the Coḍas, Pāṇḍyas, Keralaputa and Satiyaputa. The north-east, Kerala's Tulu and Vanavāsī coasts, and Toṇḍai are left blank: nothing in the edicts places them. Drawn on today's districts, to the nearest district.",
+    "hi": "अशोक का साम्राज्य उनके अपने अभिलेखों से, जिन्हें हुल्त्श (1925) ने 'उनके राज्य की ठीक सीमाओं पर उत्कीर्ण' माना। गहरे से हल्के पाँच रंग: पाटलिपुत्र के आसपास का केंद्र; वे क्षेत्र जहाँ अभिलेख है या जिनके केंद्र का अभिलेख नाम लेते हैं; आन्ध्र, जिन्हें तेरहवाँ शिलालेख 'यहाँ राजा के राज्य में' गिनता है; वन-जन, उसी अभिलेख से भीतर पर अनिर्धारित; और शेष, अभिलेखों की सीमाओं के भीतर पर अपने किसी प्रमाण के बिना। बाहर, अपने रंगों में, अभिलेखों में नामित सीमावर्ती: चोड, पाण्ड्य, केरलपुत्र और सतियपुत्र। पूर्वोत्तर, तुलु और वनवासी तट, और तोण्डै खाली छोड़े गए हैं: अभिलेख उन्हें कहीं नहीं रखते। आज के ज़िलों पर, निकटतम ज़िले तक।"
+  },
+  "sources": [
+    "hultzsch-1925",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extent after Hultzsch, Inscriptions of Asoka (1925, public domain), drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

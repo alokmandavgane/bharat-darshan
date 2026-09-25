@@ -1,0 +1,116 @@
+[
+  {
+    "id": "pataliputra",
+    "status": "draft",
+    "name": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    },
+    "category": "seat",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.59408,
+      "lon": 85.13563
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "The capital",
+      "hi": "राजधानी"
+    },
+    "verse": "(EC) Patalipute",
+    "locus": {
+      "en": "Aśoka, RE V Girnar (J)-(M)",
+      "hi": "अशोक, RE V Girnar (J)-(M)"
+    },
+    "identified": {
+      "en": "certain, placed at Patna",
+      "hi": "निश्चित, Patna पर"
+    },
+    "blurb": {
+      "en": "The capital, named in the edicts.",
+      "hi": "राजधानी, अभिलेखों में नामित।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1260086"
+    ]
+  },
+  {
+    "id": "tosali",
+    "status": "draft",
+    "name": {
+      "en": "Tosali",
+      "hi": "तोसली"
+    },
+    "category": "seat",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.27241,
+      "lon": 85.83385
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "polity": {
+      "en": "Seat of Kaliṅga, under a prince",
+      "hi": "कलिंग का केंद्र, एक राजकुमार के अधीन"
+    },
+    "verse": "Tosaliyaiii ma[ha]mata",
+    "locus": {
+      "en": "Aśoka, SE I Dhauli (A)",
+      "hi": "अशोक, SE I Dhauli (A)"
+    },
+    "identified": {
+      "en": "likely, placed at Bhubaneswar",
+      "hi": "संभावित, Bhubaneswar पर"
+    },
+    "blurb": {
+      "en": "Seat of Kaliṅga, under a prince, named in the edicts.",
+      "hi": "कलिंग का केंद्र, एक राजकुमार के अधीन, अभिलेखों में नामित।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1275817"
+    ]
+  },
+  {
+    "id": "ujjayini",
+    "status": "draft",
+    "name": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    },
+    "category": "seat",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Seat of Avanti, under a prince",
+      "hi": "अवन्ति का केंद्र, एक राजकुमार के अधीन"
+    },
+    "verse": "Ujenite pi chu kumale",
+    "locus": {
+      "en": "Aśoka, SE I Dhauli (AA)-(BB)",
+      "hi": "अशोक, SE I Dhauli (AA)-(BB)"
+    },
+    "identified": {
+      "en": "certain, placed at Ujjain",
+      "hi": "निश्चित, Ujjain पर"
+    },
+    "blurb": {
+      "en": "Seat of Avanti, under a prince, named in the edicts.",
+      "hi": "अवन्ति का केंद्र, एक राजकुमार के अधीन, अभिलेखों में नामित।"
+    },
+    "sources": [
+      "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "https://www.geonames.org/1253914"
+    ]
+  }
+]

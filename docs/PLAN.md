@@ -7,7 +7,7 @@ tilt, enter a state of, and tap for the facts. It grows by adding data: many sou
 many maps, a small fixed set of ways to draw them. Most users will be on phones; bigger
 screens should use their full width.
 
-Last updated: 2026-09-24 (sixty-ninth round). Status and next steps are at the bottom of this file;
+Last updated: 2026-09-25 (seventieth round). Status and next steps are at the bottom of this file;
 update them at the end of every working session so any machine can pick up the work.
 
 ---
@@ -2450,6 +2450,16 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-25, seventieth round: the Mauryas under Aśoka, and eras on one page. "Kingdoms and
+  empires" now carries `eras` (07_plates validates them; the page's `layers` is their union) and the
+  page shows a stepper, "‹ c. 250 BCE · era 2 of 2 · The Mauryas under Aśoka ›", with the era's blurb;
+  stepping swaps the layers on, and the era is read back off the layers, so a link restores it. The
+  Maurya era is the first graded extent: one empire in five shades carried as each area's own
+  colour (an areas item may now bring `color`), core round Pāṭaliputra, held (an edict in the
+  region or a seat the edicts name), the Andhras named inside, the forest peoples, and within the
+  edicts' bounds; the Coḍas, Pāṇḍyas, Keralaputa and Satiyaputa outside in their own colours. 27 edict
+  sites as evidence pins (kind and year found) and three seats; cards quote Hultzsch 1925 and the
+  edicts themselves. Checked in the browser; 48 tests and the build pass.
 - 2026-09-24, sixty-ninth round: divisions and kingdoms. Journeys paused at the owner's word; two new
   history pages from the Jñānakośa's new gazetteer/regions.json. An `areas` layer can now be made of
   whole 2011 census districts (`"source": {"format": "districts-2011"}`, each item listing its codes;

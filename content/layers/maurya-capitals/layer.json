@@ -1,0 +1,61 @@
+{
+  "id": "maurya-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Seats of the Maurya provinces",
+    "hi": "मौर्य प्रांतों के केंद्र"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "seat",
+      "color": "#6e2c1a",
+      "icon": "pin",
+      "title": {
+        "en": "Capital or provincial seat",
+        "hi": "राजधानी या प्रांतीय केंद्र"
+      }
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Role",
+        "hi": "भूमिका"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the inscription has it",
+        "hi": "अभिलेख में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "The capital and the provincial seats the edicts name: Pāṭaliputra, Tosali and Ujjayinī are drawn; Suvarṇagiri is not placed, and Takṣaśilā lies in Pakistan.",
+    "hi": "अभिलेखों में नामित राजधानी और प्रांतीय केंद्र: पाटलिपुत्र, तोसली और उज्जयिनी दिखाए गए हैं; सुवर्णगिरि अनिर्धारित है, और तक्षशिला पाकिस्तान में है।"
+  },
+  "sources": [
+    "hultzsch-1925",
+    "geonames"
+  ]
+}

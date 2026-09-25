@@ -1,0 +1,82 @@
+{
+  "id": "maurya-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Where Aśoka's edicts stand",
+    "hi": "अशोक के अभिलेख कहाँ हैं"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "major-rock",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Major rock edicts",
+        "hi": "प्रमुख शिलालेख"
+      }
+    },
+    {
+      "id": "minor-rock",
+      "color": "#c26a3a",
+      "icon": "pin",
+      "title": {
+        "en": "Minor rock edicts",
+        "hi": "लघु शिलालेख"
+      }
+    },
+    {
+      "id": "pillar",
+      "color": "#3d6fb0",
+      "icon": "pin",
+      "title": {
+        "en": "Pillar edicts",
+        "hi": "स्तंभ लेख"
+      }
+    },
+    {
+      "id": "cave",
+      "color": "#6b4f8f",
+      "icon": "pin",
+      "title": {
+        "en": "Cave inscriptions",
+        "hi": "गुफा लेख"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "found": {
+      "type": "year",
+      "label": {
+        "en": "Found",
+        "hi": "मिला"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The evidence the extent rests on: the rocks, pillars and caves that carry Aśoka's inscriptions, each at its site or the nearest town. Those Hultzsch recorded by 1925 cite his edition; later finds cite a modern list. Shahbazgarhi, Mansehra and Kandahar (north-west) and Lumbinī and Nigali Sagar (Nepal) lie outside the boundary.",
+    "hi": "वह प्रमाण जिस पर विस्तार टिका है: अशोक के अभिलेख वाली शिलाएँ, स्तंभ और गुफाएँ, हर एक अपने स्थल या निकटतम नगर पर। 1925 तक हुल्त्श द्वारा दर्ज अभिलेख उनके संस्करण का हवाला देते हैं; बाद की खोजें एक आधुनिक सूची का। शाहबाज़गढ़ी, मानसेहरा और कंधार (उत्तर-पश्चिम) और लुम्बिनी और निगली सागर (नेपाल) सीमा के बाहर हैं।"
+  },
+  "sources": [
+    "hultzsch-1925",
+    "geonames",
+    "wikipedia"
+  ]
+}

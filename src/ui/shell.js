@@ -390,7 +390,7 @@ export function createShell(root, store) {
   function renderStrip() {
     const catalog = store.get('catalog') || [];
     const active = new Set(store.get('layers')?.active || []);
-    const own = new Set(openPlate()?.layers || []);
+    const own = new Set(pageLayers(openPlate()));
     const rows = catalog.filter((l) => active.has(l.id) || own.has(l.id));
     // The catalogue is the strip, spelled out: the strip steps aside while it is open.
     strip.hidden = !rows.length || !!store.get('catalogue');
@@ -731,7 +731,7 @@ export function createShell(root, store) {
     if (!plate) return;
     store.set('plate', id);
     store.set('item', null);
-    store.set('layers', { active: [...plate.layers] });
+    store.set('layers', { active: [...(plate.eras ? plate.eras[0].layers : plate.layers)] });
     store.set('base', plate.base || 'physical');
     if (plate.relief !== undefined) store.set('relief', { on: plate.relief > 0, amount: plate.relief || DEFAULT_RELIEF }, { animate: true });
     if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
@@ -807,12 +807,81 @@ export function createShell(root, store) {
     }
   }
 
+  /**
+   * A page of eras (kingdoms and empires) shows one era's layers at a time. Which era is
+   * on is read off the layers themselves, so a link or the back button that restores the
+   * layers restores the era with them.
+   */
+  function eraOn(plate) {
+    if (!plate?.eras) return null;
+    const active = new Set(store.get('layers')?.active || []);
+    return plate.eras.find((e) => e.layers.length === active.size && e.layers.every((id) => active.has(id))) || null;
+  }
+  /** The layers a page is showing now: its era's, or all of them. */
+  function pageLayers(plate) {
+    if (!plate) return [];
+    return plate.eras ? (eraOn(plate) || plate.eras[0]).layers : plate.layers || [];
+  }
+
+  /** @type {HTMLElement | null} */
+  let pageEras = null;
+  function eraStepper(plate) {
+    const el = document.createElement('div');
+    el.className = 'page-episodes page-eras';
+    el.setAttribute('role', 'group');
+    el.innerHTML = `<div class="episode-row">
+        <button type="button" class="episode-prev">${arrow('M15 5l-7 7 7 7')}</button>
+        <div class="episode-now" aria-live="polite"><span class="episode-text"><span class="episode-count"></span><span class="episode-name"></span></span></div>
+        <button type="button" class="episode-next">${arrow('M9 5l7 7-7 7')}</button>
+      </div>
+      <p class="era-blurb"></p>`;
+    const go = (by) => {
+      const i = plate.eras.indexOf(eraOn(plate) || plate.eras[0]);
+      const next = plate.eras[Math.max(0, Math.min(plate.eras.length - 1, i + by))];
+      store.set('item', null);
+      store.set('layers', { active: [...next.layers] });
+    };
+    /** @type {HTMLElement} */ (el.querySelector('.episode-prev')).addEventListener('click', () => go(-1));
+    /** @type {HTMLElement} */ (el.querySelector('.episode-next')).addEventListener('click', () => go(1));
+    pageEras = el;
+    return el;
+  }
+  function renderEras() {
+    const el = pageEras;
+    const plate = openPlate();
+    if (!el || !el.isConnected || !plate?.eras) return;
+    const era = eraOn(plate);
+    const i = era ? plate.eras.indexOf(era) : -1;
+    const $$ = (sel) => /** @type {HTMLElement} */ (el.querySelector(sel));
+    $$('.episode-count').textContent = era
+      ? `${pick(era.display)} · ${t('era.count', { n: formatNumber(i + 1), total: formatNumber(plate.eras.length) })}`
+      : t('era.mixed');
+    $$('.episode-name').textContent = era ? pick(era.title) : '';
+    $$('.era-blurb').textContent = era ? pick(era.blurb) : '';
+    const prev = /** @type {HTMLButtonElement} */ (el.querySelector('.episode-prev'));
+    const next = /** @type {HTMLButtonElement} */ (el.querySelector('.episode-next'));
+    prev.disabled = i <= 0;
+    next.disabled = i < 0 ? false : i >= plate.eras.length - 1;
+    for (const [b, key] of [[prev, 'era.prev'], [next, 'era.next']]) {
+      b.setAttribute('aria-label', t(key));
+      b.title = t(key);
+    }
+    el.setAttribute('aria-label', t('era.steps'));
+  }
+  store.subscribe('layers', () => { renderEras(); const plate = openPlate(); if (plate?.eras) queue(renderSheet); });
+  store.subscribe('lang', renderEras);
+
   /** The open page's own words and its sources. Its layers are the strip above. */
   function renderPage(plate) {
     const p = document.createElement('p');
     p.className = 'contents-blurb';
     p.textContent = pick(plate.blurb);
     contents.appendChild(p);
+    pageEras = null;
+    if (plate.eras) {
+      contents.appendChild(eraStepper(plate));
+      renderEras();
+    }
     // A story names its stops, so its page carries the play button itself, under its own
     // title: the foot's tour row belongs to the contents, which a page does not show.
     pageTour = null;
@@ -1155,7 +1224,7 @@ export function createShell(root, store) {
       // The head is the page's: its title, where it sits, and the way back to the contents.
       setCrumb('');
       title.textContent = pick(plate.title);
-      const n = (plate.layers || []).length;
+      const n = pageLayers(plate).length;
       subtitle.textContent = [section, n === 1 ? t('layer.count.one') : t('layer.count', { n: formatNumber(n) })].join(' · ');
       setBack(t('atlas.back'));
       renderPage(plate);

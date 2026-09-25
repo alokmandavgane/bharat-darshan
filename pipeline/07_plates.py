@@ -78,6 +78,33 @@ def validate(plate, name, layer_ids, layers_dir):
     if relief is not None and not (isinstance(relief, (int, float)) and 0 <= relief <= 30):
         p.append('relief must be between 0 and 30')
     p += validate_tour(plate, layers_dir)
+    p += validate_eras(plate)
+    return p
+
+
+def validate_eras(plate):
+    """A page of eras (kingdoms and empires): each era a dated set of the page's own layers,
+    which the page's stepper turns on one era at a time. The page's `layers` is their union,
+    so the sources, the strip and this check all see every layer the page can show."""
+    eras = plate.get('eras')
+    if eras is None:
+        return []
+    p = []
+    if not isinstance(eras, list) or len(eras) < 1:
+        return ['eras must list at least one era']
+    own, ids = set(plate.get('layers') or []), set()
+    for e in eras:
+        tag = f"era {e.get('id')}"
+        if not e.get('id') or e['id'] in ids:
+            p.append(f'{tag}: id missing or repeated')
+        ids.add(e.get('id'))
+        for k in ('display', 'title', 'blurb'):
+            if not bilingual(e.get(k)):
+                p.append(f'{tag}: {k} needs en and hi')
+        if not e.get('layers') or not set(e['layers']) <= own:
+            p.append(f"{tag}: layers must be some of the page's own layers")
+    if set().union(*(set(e.get('layers') or []) for e in eras)) != own:
+        p.append("the page's layers must be exactly its eras' layers")
     return p
 
 
@@ -143,7 +170,7 @@ def main():
             problems.append((name, ['none of its layers cites a source, so the page could not say where it came from']))
             continue
         plates.append({k: plate[k] for k in ('id', 'section', 'order', 'title', 'blurb',
-                                             'layers', 'relief', 'base', 'status', 'tour') if k in plate}
+                                             'layers', 'relief', 'base', 'status', 'tour', 'eras') if k in plate}
                       | {'sources': cites})
 
     for name, p in problems:

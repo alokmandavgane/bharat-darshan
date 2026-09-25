@@ -1,0 +1,66 @@
+{
+  "id": "maurya-names",
+  "type": "points",
+  "marker": "label",
+  "group": "culture",
+  "title": {
+    "en": "Names: the Mauryas and their neighbours",
+    "hi": "नाम: मौर्य और उनके पड़ोसी"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "maurya",
+      "color": "#9c4a2c",
+      "title": {
+        "en": "The Maurya empire",
+        "hi": "मौर्य साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "coda",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḍa (Cōḻa)",
+        "hi": "चोड (चोल)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "keralaputa",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Keralaputa",
+        "hi": "केरलपुत्र"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "satiyaputa",
+      "color": "#6b4f8f",
+      "title": {
+        "en": "Satiyaputa",
+        "hi": "सतियपुत्र"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The empire's and its borderers' names, laid on the map.",
+    "hi": "साम्राज्य और सीमावर्तियों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "hultzsch-1925"
+  ]
+}

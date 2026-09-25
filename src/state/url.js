@@ -93,7 +93,7 @@ export function syncUrl(store) {
   /** What a page asks to be on: the plate's layers, or the catalogue's own defaults. */
   const baselineLayers = (plateId) => {
     const plate = plateId ? (store.get('plates')?.plates || []).find((p) => p.id === plateId) : null;
-    if (plate) return [...plate.layers];
+    if (plate) return [...(plate.eras ? plate.eras[0].layers : plate.layers)];
     return (store.get('catalog') || []).filter((l) => l.default_on).map((l) => l.id);
   };
 
@@ -120,7 +120,7 @@ export function syncUrl(store) {
     const catalog = store.get('catalog') || [];
     if (!active || !catalog.length) return null;
     const plate = openPlate();
-    const baseline = plate ? plate.layers : catalog.filter((l) => l.default_on).map((l) => l.id);
+    const baseline = plate ? (plate.eras ? plate.eras[0].layers : plate.layers) : catalog.filter((l) => l.default_on).map((l) => l.id);
     const same = active.length === baseline.length && baseline.every((id) => active.includes(id));
     return same ? null : active;
   };

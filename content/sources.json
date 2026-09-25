@@ -713,6 +713,24 @@
         "en": "The first edition's account of the sixteen mahājanapadas, whose descriptions of their extents the kingdoms page quotes and draws.",
         "hi": "पहले संस्करण का सोलह महाजनपदों का विवरण, जिसके विस्तार-वर्णन राज्य पृष्ठ उद्धृत करता है और खींचता है।"
       }
+    },
+    "hultzsch-1925": {
+      "title": {
+        "en": "E. Hultzsch, Inscriptions of Asoka (1925)",
+        "hi": "ई. हुल्त्श, इंस्क्रिप्शंस ऑफ़ अशोक (1925)"
+      },
+      "publisher": {
+        "en": "Clarendon Press, Oxford (Corpus Inscriptionum Indicarum, vol. I)",
+        "hi": "क्लैरेंडन प्रेस, ऑक्सफ़ोर्ड (कॉर्पस इंस्क्रिप्शनम इंडिकारम, खंड I)"
+      },
+      "url": "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The standard edition of Aśoka's inscriptions: the texts the kingdoms page quotes, the findspots known by 1925, and Hultzsch's reading of the empire's extent.",
+        "hi": "अशोक के अभिलेखों का मानक संस्करण: राज्य पृष्ठ द्वारा उद्धृत पाठ, 1925 तक ज्ञात स्थल, और साम्राज्य के विस्तार का हुल्त्श का पाठ।"
+      }
     }
   }
 }
