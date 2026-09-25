@@ -2673,6 +2673,350 @@
    "path": "layers/mahajanapadas.json"
   },
   {
+   "id": "maurya-capitals",
+   "type": "points",
+   "title": {
+    "en": "Seats of the Maurya provinces",
+    "hi": "मौर्य प्रांतों के केंद्र"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 3,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "seat",
+     "color": "#6e2c1a",
+     "icon": "pin",
+     "title": {
+      "en": "Capital or provincial seat",
+      "hi": "राजधानी या प्रांतीय केंद्र"
+     }
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Role",
+      "hi": "भूमिका"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the inscription has it",
+      "hi": "अभिलेख में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "The capital and the provincial seats the edicts name: Pāṭaliputra, Tosali and Ujjayinī are drawn; Suvarṇagiri is not placed, and Takṣaśilā lies in Pakistan.",
+    "hi": "अभिलेखों में नामित राजधानी और प्रांतीय केंद्र: पाटलिपुत्र, तोसली और उज्जयिनी दिखाए गए हैं; सुवर्णगिरि अनिर्धारित है, और तक्षशिला पाकिस्तान में है।"
+   },
+   "sources": [
+    "hultzsch-1925",
+    "geonames"
+   ],
+   "path": "layers/maurya-capitals.json"
+  },
+  {
+   "id": "maurya-evidence",
+   "type": "points",
+   "title": {
+    "en": "Where Aśoka's edicts stand",
+    "hi": "अशोक के अभिलेख कहाँ हैं"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 27,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "major-rock",
+     "color": "#7a2e1f",
+     "icon": "pin",
+     "title": {
+      "en": "Major rock edicts",
+      "hi": "प्रमुख शिलालेख"
+     }
+    },
+    {
+     "id": "minor-rock",
+     "color": "#c26a3a",
+     "icon": "pin",
+     "title": {
+      "en": "Minor rock edicts",
+      "hi": "लघु शिलालेख"
+     }
+    },
+    {
+     "id": "pillar",
+     "color": "#3d6fb0",
+     "icon": "pin",
+     "title": {
+      "en": "Pillar edicts",
+      "hi": "स्तंभ लेख"
+     }
+    },
+    {
+     "id": "cave",
+     "color": "#6b4f8f",
+     "icon": "pin",
+     "title": {
+      "en": "Cave inscriptions",
+      "hi": "गुफा लेख"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "found": {
+     "type": "year",
+     "label": {
+      "en": "Found",
+      "hi": "मिला"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "The evidence the extent rests on: the rocks, pillars and caves that carry Aśoka's inscriptions, each at its site or the nearest town. Those Hultzsch recorded by 1925 cite his edition; later finds cite a modern list. Shahbazgarhi, Mansehra and Kandahar (north-west) and Lumbinī and Nigali Sagar (Nepal) lie outside the boundary.",
+    "hi": "वह प्रमाण जिस पर विस्तार टिका है: अशोक के अभिलेख वाली शिलाएँ, स्तंभ और गुफाएँ, हर एक अपने स्थल या निकटतम नगर पर। 1925 तक हुल्त्श द्वारा दर्ज अभिलेख उनके संस्करण का हवाला देते हैं; बाद की खोजें एक आधुनिक सूची का। शाहबाज़गढ़ी, मानसेहरा और कंधार (उत्तर-पश्चिम) और लुम्बिनी और निगली सागर (नेपाल) सीमा के बाहर हैं।"
+   },
+   "sources": [
+    "hultzsch-1925",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/maurya-evidence.json"
+  },
+  {
+   "id": "maurya-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the Mauryas and their neighbours",
+    "hi": "नाम: मौर्य और उनके पड़ोसी"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 5,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "maurya",
+     "color": "#9c4a2c",
+     "title": {
+      "en": "The Maurya empire",
+      "hi": "मौर्य साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "coda",
+     "color": "#2f6f9e",
+     "title": {
+      "en": "Coḍa (Cōḻa)",
+      "hi": "चोड (चोल)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pandya",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "keralaputa",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Keralaputa",
+      "hi": "केरलपुत्र"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "satiyaputa",
+     "color": "#6b4f8f",
+     "title": {
+      "en": "Satiyaputa",
+      "hi": "सतियपुत्र"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The empire's and its borderers' names, laid on the map.",
+    "hi": "साम्राज्य और सीमावर्तियों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "hultzsch-1925"
+   ],
+   "path": "layers/maurya-names.json"
+  },
+  {
+   "id": "maurya",
+   "type": "areas",
+   "title": {
+    "en": "The Mauryas under Aśoka, c. 250 BCE",
+    "hi": "अशोक के समय मौर्य, लगभग 250 ई.पू."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 9,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "maurya",
+     "color": "#9c4a2c",
+     "title": {
+      "en": "The Maurya empire",
+      "hi": "मौर्य साम्राज्य"
+     }
+    },
+    {
+     "id": "coda",
+     "color": "#2f6f9e",
+     "title": {
+      "en": "Coḍa (Cōḻa)",
+      "hi": "चोड (चोल)"
+     }
+    },
+    {
+     "id": "pandya",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+     }
+    },
+    {
+     "id": "keralaputa",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Keralaputa",
+      "hi": "केरलपुत्र"
+     }
+    },
+    {
+     "id": "satiyaputa",
+     "color": "#6b4f8f",
+     "title": {
+      "en": "Satiyaputa",
+      "hi": "सतियपुत्र"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As Hultzsch puts it",
+      "hi": "हुल्त्श के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the inscription has it",
+      "hi": "अभिलेख में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "Aśoka's empire drawn from his own inscriptions, which Hultzsch (1925) thought 'engraved along the very confines of his territories'. Five shades from dark to light: the core round Pāṭaliputra; the regions where an edict stands or whose seat the edicts name; the Andhras, whom the thirteenth rock edict counts 'here in the king's territory'; the forest peoples, inside by the same edict but not placed; and the rest, within the edicts' bounds with nothing of its own. Outside, in their own colours, the borderers the edicts name: the Coḍas, Pāṇḍyas, Keralaputa and Satiyaputa. The north-east, Kerala's Tulu and Vanavāsī coasts, and Toṇḍai are left blank: nothing in the edicts places them. Drawn on today's districts, to the nearest district.",
+    "hi": "अशोक का साम्राज्य उनके अपने अभिलेखों से, जिन्हें हुल्त्श (1925) ने 'उनके राज्य की ठीक सीमाओं पर उत्कीर्ण' माना। गहरे से हल्के पाँच रंग: पाटलिपुत्र के आसपास का केंद्र; वे क्षेत्र जहाँ अभिलेख है या जिनके केंद्र का अभिलेख नाम लेते हैं; आन्ध्र, जिन्हें तेरहवाँ शिलालेख 'यहाँ राजा के राज्य में' गिनता है; वन-जन, उसी अभिलेख से भीतर पर अनिर्धारित; और शेष, अभिलेखों की सीमाओं के भीतर पर अपने किसी प्रमाण के बिना। बाहर, अपने रंगों में, अभिलेखों में नामित सीमावर्ती: चोड, पाण्ड्य, केरलपुत्र और सतियपुत्र। पूर्वोत्तर, तुलु और वनवासी तट, और तोण्डै खाली छोड़े गए हैं: अभिलेख उन्हें कहीं नहीं रखते। आज के ज़िलों पर, निकटतम ज़िले तक।"
+   },
+   "sources": [
+    "hultzsch-1925",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/maurya.json"
+  },
+  {
    "id": "minerals",
    "type": "points",
    "title": {
@@ -4164,12 +4508,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 31036,
-   "sha256": "42daa208c0c6"
+   "size": 32745,
+   "sha256": "2170973ce130"
   },
   "sources.json": {
-   "size": 32917,
-   "sha256": "76f2aec7cbd6"
+   "size": 34014,
+   "sha256": "00eeea6352a1"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -4470,6 +4814,26 @@
   "layers/mahajanapadas.json": {
    "size": 21699,
    "sha256": "3720fc483356"
+  },
+  "layers/maurya-areas.bin.gz": {
+   "size": 8399,
+   "sha256": "779b766956af"
+  },
+  "layers/maurya-capitals.json": {
+   "size": 3882,
+   "sha256": "f52128502111"
+  },
+  "layers/maurya-evidence.json": {
+   "size": 22891,
+   "sha256": "de9dd0ea0f6d"
+  },
+  "layers/maurya-names.json": {
+   "size": 4128,
+   "sha256": "6e9371699500"
+  },
+  "layers/maurya.json": {
+   "size": 16731,
+   "sha256": "748a7f9cd70e"
   },
   "layers/minerals.json": {
    "size": 38276,
