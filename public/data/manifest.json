@@ -633,6 +633,475 @@
    }
   },
   {
+   "id": "aurangzeb-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 1707 CE",
+    "hi": "लगभग 1707 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 11,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mewar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "marwar",
+     "color": "#a8544a",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "amber",
+     "color": "#c9854a",
+     "title": {
+      "en": "Amber",
+      "hi": "आमेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "ahom",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "koch",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "keladi",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "calicut",
+     "color": "#9e6a2f",
+     "title": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "cochin",
+     "color": "#b8454f",
+     "title": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "travancore",
+     "color": "#c9785a",
+     "title": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi and Padmanābhapuram.",
+    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि और पद्मनाभपुरम।"
+   },
+   "sources": [
+    "smith-1919",
+    "wikipedia"
+   ],
+   "path": "layers/aurangzeb-capitals.json",
+   "subgroup": {
+    "id": "aurangzeb",
+    "order": 12,
+    "pos": 2,
+    "title": {
+     "en": "c. 1707 CE · The Mughal maximum and the Marāṭhās",
+     "hi": "लगभग 1707 ई. · मुग़ल चरम और मराठा"
+    }
+   }
+  },
+  {
+   "id": "aurangzeb-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the kingdoms of c. 1707 CE",
+    "hi": "नाम: लगभग 1707 ई. के राज्य"
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 11,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mewar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "marwar",
+     "color": "#a8544a",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "amber",
+     "color": "#c9854a",
+     "title": {
+      "en": "Amber",
+      "hi": "आमेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "ahom",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "koch",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "keladi",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "calicut",
+     "color": "#9e6a2f",
+     "title": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "cochin",
+     "color": "#b8454f",
+     "title": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "travancore",
+     "color": "#c9785a",
+     "title": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "elliot-dowson-1877",
+    "hamilton-1727",
+    "smith-1919"
+   ],
+   "path": "layers/aurangzeb-names.json",
+   "subgroup": {
+    "id": "aurangzeb",
+    "order": 12,
+    "pos": 1,
+    "title": {
+     "en": "c. 1707 CE · The Mughal maximum and the Marāṭhās",
+     "hi": "लगभग 1707 ई. · मुग़ल चरम और मराठा"
+    }
+   }
+  },
+  {
+   "id": "aurangzeb",
+   "type": "areas",
+   "title": {
+    "en": "The Mughal maximum and the Marāṭhās, c. 1707 CE",
+    "hi": "मुग़ल चरम और मराठा, लगभग 1707 ई."
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 12,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+     }
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+     }
+    },
+    {
+     "id": "mewar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     }
+    },
+    {
+     "id": "marwar",
+     "color": "#a8544a",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     }
+    },
+    {
+     "id": "amber",
+     "color": "#c9854a",
+     "title": {
+      "en": "Amber",
+      "hi": "आमेर"
+     }
+    },
+    {
+     "id": "ahom",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+     }
+    },
+    {
+     "id": "koch",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+     }
+    },
+    {
+     "id": "keladi",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+     }
+    },
+    {
+     "id": "calicut",
+     "color": "#9e6a2f",
+     "title": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+     }
+    },
+    {
+     "id": "cochin",
+     "color": "#b8454f",
+     "title": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+     }
+    },
+    {
+     "id": "travancore",
+     "color": "#c9785a",
+     "title": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore. Left blank: Mysore, the Nāyakas of Madurai, the Marāṭhās of Tanjore, the Setupatis, the Himalayan hill states and the north-east hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य। खाली छोड़े गए: मैसूर, मदुरै के नायक, तंजावुर के मराठा, सेतुपति, हिमालय के पहाड़ी राज्य और पूर्वोत्तर के पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+   },
+   "sources": [
+    "elliot-dowson-1877",
+    "hamilton-1727",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/aurangzeb.json",
+   "subgroup": {
+    "id": "aurangzeb",
+    "order": 12,
+    "pos": 0,
+    "title": {
+     "en": "c. 1707 CE · The Mughal maximum and the Marāṭhās",
+     "hi": "लगभग 1707 ई. · मुग़ल चरम और मराठा"
+    }
+   }
+  },
+  {
    "id": "basins",
    "type": "areas",
    "title": {
@@ -9171,12 +9640,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 43021,
-   "sha256": "dbbea7678274"
+   "size": 44006,
+   "sha256": "af1ecc9d244e"
   },
   "sources.json": {
-   "size": 50986,
-   "sha256": "96ed276c1dbc"
+   "size": 52711,
+   "sha256": "7cd58f76cd70"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -9373,6 +9842,22 @@
   "layers/akbar.json": {
    "size": 30144,
    "sha256": "37634bef52db"
+  },
+  "layers/aurangzeb-areas.bin.gz": {
+   "size": 7275,
+   "sha256": "9e4e5575daaf"
+  },
+  "layers/aurangzeb-capitals.json": {
+   "size": 8634,
+   "sha256": "8de323c06216"
+  },
+  "layers/aurangzeb-names.json": {
+   "size": 8445,
+   "sha256": "a77f62683538"
+  },
+  "layers/aurangzeb.json": {
+   "size": 23250,
+   "sha256": "59f63fd042bb"
   },
   "layers/basins-areas.bin.gz": {
    "size": 10351,
