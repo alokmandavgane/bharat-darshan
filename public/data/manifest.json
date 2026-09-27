@@ -4845,6 +4845,316 @@
    "path": "layers/power.json"
   },
   {
+   "id": "pratihara-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 850 CE",
+    "hi": "लगभग 850 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 3,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "pratihara",
+     "color": "#b04a32",
+     "title": {
+      "en": "The Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pala",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "The Pāla empire",
+      "hi": "पाल साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "rashtrakuta",
+     "color": "#4f68b8",
+     "title": {
+      "en": "The Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Kānyakubja, Mudgagiri (Monghyr, where Devapāla held court) and Mānyakheṭa.",
+    "hi": "कान्यकुब्ज, मुद्गगिरि (मुंगेर, जहाँ देवपाल का दरबार था) और मान्यखेट।"
+   },
+   "sources": [
+    "smith-1914",
+    "wikipedia"
+   ],
+   "path": "layers/pratihara-capitals.json"
+  },
+  {
+   "id": "pratihara-evidence",
+   "type": "points",
+   "title": {
+    "en": "The evidence of c. 850 CE",
+    "hi": "लगभग 850 ई. के प्रमाण"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 2,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "inscription",
+     "color": "#7a2e1f",
+     "icon": "pin",
+     "title": {
+      "en": "Inscriptions",
+      "hi": "अभिलेख"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "The Gwalior praśasti of Bhoja and the Sanjan plates of Amoghavarṣa I. Sulaimān's account, the era's other witness, is a book, not a place.",
+    "hi": "भोज की ग्वालियर प्रशस्ति और अमोघवर्ष प्रथम के संजान ताम्रपत्र। सुलेमान का वृत्तांत, इस युग का दूसरा साक्षी, एक ग्रंथ है, स्थान नहीं।"
+   },
+   "sources": [
+    "epigraphia-indica-xviii",
+    "wikipedia"
+   ],
+   "path": "layers/pratihara-evidence.json"
+  },
+  {
+   "id": "pratihara-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the kingdoms of c. 850 CE",
+    "hi": "नाम: लगभग 850 ई. के राज्य"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 3,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "pratihara",
+     "color": "#b04a32",
+     "title": {
+      "en": "The Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pala",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "The Pāla empire",
+      "hi": "पाल साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "rashtrakuta",
+     "color": "#4f68b8",
+     "title": {
+      "en": "The Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The empires' names, laid on the map.",
+    "hi": "साम्राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "smith-1914",
+    "elliot-dowson-1867"
+   ],
+   "path": "layers/pratihara-names.json"
+  },
+  {
+   "id": "pratihara",
+   "type": "areas",
+   "title": {
+    "en": "Pratihāras, Pālas and Rāṣṭrakūṭas, c. 850 CE",
+    "hi": "प्रतिहार, पाल और राष्ट्रकूट, लगभग 850 ई."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 10,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "pratihara",
+     "color": "#b04a32",
+     "title": {
+      "en": "The Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+     }
+    },
+    {
+     "id": "pala",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "The Pāla empire",
+      "hi": "पाल साम्राज्य"
+     }
+    },
+    {
+     "id": "rashtrakuta",
+     "color": "#4f68b8",
+     "title": {
+      "en": "The Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Left blank: the Pallavas, Pāṇḍyas and Colas, the Eastern Cālukyas of Veṅgī, and Kashmir. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। खाली छोड़े गए: पल्लव, पाण्ड्य और चोल, वेंगी के पूर्वी चालुक्य, और कश्मीर। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
+   },
+   "sources": [
+    "smith-1914",
+    "elliot-dowson-1867",
+    "epigraphia-indica-xviii",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/pratihara.json"
+  },
+  {
    "id": "rail",
    "type": "lines",
    "title": {
@@ -6178,12 +6488,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 36850,
-   "sha256": "ef1190ddb7fc"
+   "size": 37923,
+   "sha256": "00148a3db5d7"
   },
   "sources.json": {
-   "size": 39266,
-   "sha256": "0ecd33ca93fe"
+   "size": 41820,
+   "sha256": "ecf65ea8dbb1"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -6596,6 +6906,26 @@
   "layers/power.json": {
    "size": 54290,
    "sha256": "ce327c1c1317"
+  },
+  "layers/pratihara-areas.bin.gz": {
+   "size": 7172,
+   "sha256": "1c906fb8f0f9"
+  },
+  "layers/pratihara-capitals.json": {
+   "size": 3155,
+   "sha256": "71ccb0449db8"
+  },
+  "layers/pratihara-evidence.json": {
+   "size": 3991,
+   "sha256": "689b9286f997"
+  },
+  "layers/pratihara-names.json": {
+   "size": 3685,
+   "sha256": "e6e9113be34b"
+  },
+  "layers/pratihara.json": {
+   "size": 22190,
+   "sha256": "0352064c5606"
   },
   "layers/rail.json": {
    "size": 509505,
