@@ -1,0 +1,57 @@
+{
+  "id": "tiger-reserves",
+  "type": "points",
+  "marker": "symbol",
+  "group": "wildlife",
+  "title": {
+    "en": "Tiger reserves",
+    "hi": "बाघ अभयारण्य"
+  },
+  "icon": "paw",
+  "default_on": false,
+  "categories": [
+    { "id": "shivalik-gangetic",     "color": "#8a9a3c", "title": { "en": "Shivalik hills and Gangetic plain",          "hi": "शिवालिक पहाड़ियाँ और गंगा मैदान" } },
+    { "id": "central-eastern-ghats", "color": "#b04a26", "title": { "en": "Central India and Eastern Ghats",            "hi": "मध्य भारत और पूर्वी घाट" } },
+    { "id": "western-ghats",         "color": "#3f7f52", "title": { "en": "Western Ghats",                              "hi": "पश्चिमी घाट" } },
+    { "id": "northeast-brahmaputra", "color": "#3f7f9c", "title": { "en": "North-east hills and Brahmaputra plains",     "hi": "पूर्वोत्तर पहाड़ियाँ और ब्रह्मपुत्र मैदान" } },
+    { "id": "sundarbans",            "color": "#7a5a9c", "title": { "en": "Sundarbans",                                 "hi": "सुंदरबन" } }
+  ],
+  "fields": {
+    "area_km2": {
+      "type": "number",
+      "required": true,
+      "label": { "en": "Area", "hi": "क्षेत्रफल" },
+      "unit": { "en": "{n} km²", "hi": "{n} वर्ग किमी" }
+    },
+    "core_km2": {
+      "type": "number",
+      "label": { "en": "Core (critical tiger habitat)", "hi": "कोर (महत्वपूर्ण बाघ पर्यावास)" },
+      "unit": { "en": "{n} km²", "hi": "{n} वर्ग किमी" }
+    },
+    "buffer_km2": {
+      "type": "number",
+      "label": { "en": "Buffer", "hi": "बफ़र" },
+      "unit": { "en": "{n} km²", "hi": "{n} वर्ग किमी" }
+    },
+    "notified": {
+      "type": "year",
+      "label": { "en": "Notified as a tiger reserve", "hi": "बाघ अभयारण्य के रूप में अधिसूचित" }
+    }
+  },
+  "size": {
+    "field": "area_km2",
+    "domain": [450, 3300],
+    "range": [12, 32],
+    "legend": [500, 1500, 3000]
+  },
+  "note": {
+    "en": "All 58 tiger reserves the National Tiger Conservation Authority lists, each a circle at the heart of the reserve, its area the reserve's. A reserve is a core kept free of people and a buffer around it where people live and work; the colour is the tiger landscape it belongs to. The year is the latest notification, not when the reserve began: most of the first nine date from Project Tiger in 1973.",
+    "hi": "राष्ट्रीय बाघ संरक्षण प्राधिकरण द्वारा सूचीबद्ध सभी 58 बाघ अभयारण्य, हर एक अपने केंद्र पर एक वृत्त, जिसका क्षेत्रफल अभयारण्य का है। अभयारण्य में एक कोर होता है जहाँ लोग नहीं बसते, और उसके चारों ओर बफ़र जहाँ लोग रहते और काम करते हैं; रंग उस बाघ-भूदृश्य का है जिसका यह भाग है। वर्ष सबसे नई अधिसूचना का है, अभयारण्य की शुरुआत का नहीं: पहले नौ में से अधिकांश 1973 के प्रोजेक्ट टाइगर से हैं।"
+  },
+  "sources": [
+    "ntca",
+    "wikipedia"
+  ],
+  "attribution": "Names, notification years and core, buffer and total areas from the National Tiger Conservation Authority's table of tiger reserves; the landscape grouping is the one NTCA's tiger status reports use. Anchors are the reserve articles' coordinates on Wikipedia, two of them moved onto their own side of a state line; every item awaits review.",
+  "_categories": "The landscape is the category: it says which forests a reserve's tigers can walk to, which is the thing the map shows that a list cannot."
+}

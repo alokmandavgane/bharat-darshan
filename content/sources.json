@@ -547,8 +547,42 @@
       "licence": "cc0-1.0",
       "retrieved": "2026-09",
       "note": {
-        "en": "Hindi names and, where it has them, populations of the towns GeoNames lists; and the check that a row filed under a town's name is a town at all.",
-        "hi": "जियोनेम्स के नगरों के हिंदी नाम और, जहाँ हों, जनसंख्या; और यह जाँच कि किसी नगर के नाम पर दर्ज पंक्ति सचमुच नगर है।"
+        "en": "Hindi names and, where it has them, populations of the towns GeoNames lists; the check that a row filed under a town's name is a town at all; and India's national parks and sanctuaries, each with its coordinates and, where recorded, its area and the year it was set up.",
+        "hi": "जियोनेम्स के नगरों के हिंदी नाम और, जहाँ हों, जनसंख्या; यह जाँच कि किसी नगर के नाम पर दर्ज पंक्ति सचमुच नगर है; और भारत के राष्ट्रीय उद्यान और अभयारण्य, हर एक के निर्देशांक और, जहाँ दर्ज हों, क्षेत्रफल और स्थापना वर्ष के साथ।"
+      }
+    },
+    "ntca": {
+      "title": {
+        "en": "National Tiger Conservation Authority",
+        "hi": "राष्ट्रीय बाघ संरक्षण प्राधिकरण"
+      },
+      "publisher": {
+        "en": "Ministry of Environment, Forest and Climate Change, Government of India",
+        "hi": "पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय, भारत सरकार"
+      },
+      "url": "https://ntca.gov.in/tiger-reserves/",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The official list of India's tiger reserves, with each one's notification year and its core, buffer and total area.",
+        "hi": "भारत के बाघ अभयारण्यों की आधिकारिक सूची, हर एक के अधिसूचना वर्ष और कोर, बफ़र तथा कुल क्षेत्रफल के साथ।"
+      }
+    },
+    "unesco-mab": {
+      "title": {
+        "en": "World Network of Biosphere Reserves",
+        "hi": "जैवमंडल आरक्षित क्षेत्रों का विश्व नेटवर्क"
+      },
+      "publisher": {
+        "en": "UNESCO Man and the Biosphere Programme",
+        "hi": "यूनेस्को मानव और जैवमंडल कार्यक्रम"
+      },
+      "url": "https://www.unesco.org/en/mab/wnbr",
+      "use": "facts",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Which of India's biosphere reserves UNESCO lists, and the year each joined its world network.",
+        "hi": "भारत के कौन से जैवमंडल आरक्षित क्षेत्र यूनेस्को की सूची में हैं, और हर एक किस वर्ष उसके विश्व नेटवर्क में जुड़ा।"
       }
     },
     "gi-registry": {

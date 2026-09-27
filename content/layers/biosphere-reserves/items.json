@@ -1,0 +1,500 @@
+[
+ {
+  "id": "nilgiri",
+  "status": "draft",
+  "name": {
+   "en": "Nilgiri",
+   "hi": "नीलगिरि"
+  },
+  "anchor": {
+   "lat": 11.6,
+   "lon": 76.55
+  },
+  "category": "western-ghats",
+  "priority": 1,
+  "area_km2": 5520,
+  "designated": 1986,
+  "unesco": 2000,
+  "blurb": {
+   "en": "India's first biosphere reserve, where Karnataka, Tamil Nadu and Kerala meet: Bandipur, Nagarhole, Mudumalai, Wayanad, Mukurthi, Silent Valley and the forests between them. Home of the Nilgiri tahr and lion-tailed macaque.",
+   "hi": "भारत का पहला जैवमंडल आरक्षित क्षेत्र, जहाँ कर्नाटक, तमिलनाडु और केरल मिलते हैं: बांदीपुर, नागरहोल, मुदुमलै, वायनाड, मुकुर्ती, साइलेंट वैली और उनके बीच के वन। नीलगिरि तहर और शेर-पूँछ मकाक का घर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-KA",
+   "IN-TN",
+   "IN-KL"
+  ]
+ },
+ {
+  "id": "nanda-devi",
+  "status": "draft",
+  "name": {
+   "en": "Nanda Devi",
+   "hi": "नंदा देवी"
+  },
+  "anchor": {
+   "lat": 30.42,
+   "lon": 79.85
+  },
+  "category": "himalaya",
+  "priority": 1,
+  "area_km2": 5860,
+  "designated": 1988,
+  "unesco": 2004,
+  "blurb": {
+   "en": "The ring of peaks around Nanda Devi in Chamoli, Pithoragarh and Bageshwar, with the Nanda Devi and Valley of Flowers national parks at its core. Snow leopard and Himalayan black bear.",
+   "hi": "चमोली, पिथौरागढ़ और बागेश्वर में नंदा देवी के चारों ओर शिखरों का घेरा, जिसके केंद्र में नंदा देवी और फूलों की घाटी राष्ट्रीय उद्यान हैं। हिम तेंदुआ और हिमालयी काला भालू।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-UK"
+  ]
+ },
+ {
+  "id": "nokrek",
+  "status": "draft",
+  "name": {
+   "en": "Nokrek",
+   "hi": "नोकरेक"
+  },
+  "anchor": {
+   "lat": 25.4855,
+   "lon": 90.338
+  },
+  "category": "northeast",
+  "priority": 2,
+  "area_km2": 820,
+  "designated": 1988,
+  "unesco": 2009,
+  "blurb": {
+   "en": "The Nokrek peak in the Garo hills of Meghalaya, where wild citrus grows. Red panda and elephants in its forests.",
+   "hi": "मेघालय की गारो पहाड़ियों में नोकरेक शिखर, जहाँ जंगली नींबू-वंश उगता है। इसके वनों में लाल पांडा और हाथी।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-ML"
+  ]
+ },
+ {
+  "id": "gulf-of-mannar",
+  "status": "draft",
+  "name": {
+   "en": "Gulf of Mannar",
+   "hi": "मन्नार की खाड़ी"
+  },
+  "anchor": {
+   "lat": 9.28,
+   "lon": 79.12
+  },
+  "category": "coast",
+  "priority": 1,
+  "area_km2": 10500,
+  "designated": 1989,
+  "unesco": 2001,
+  "blurb": {
+   "en": "The Indian side of the Gulf of Mannar, from Rameswaram to Kanyakumari: coral reefs, seagrass and 21 small islands. One of the last places with dugongs.",
+   "hi": "रामेश्वरम से कन्याकुमारी तक मन्नार की खाड़ी का भारतीय भाग: प्रवाल भित्तियाँ, समुद्री घास और 21 छोटे द्वीप। डुगोंग के अंतिम ठिकानों में से एक।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "sundarbans-biosphere",
+  "status": "draft",
+  "name": {
+   "en": "Sundarbans",
+   "hi": "सुंदरबन"
+  },
+  "anchor": {
+   "lat": 22.1,
+   "lon": 88.8
+  },
+  "category": "coast",
+  "priority": 1,
+  "area_km2": 9630,
+  "designated": 1989,
+  "unesco": 2001,
+  "blurb": {
+   "en": "The Indian part of the Ganga-Brahmaputra delta's mangroves, with the tiger reserve at its core and villages on the islands around it.",
+   "hi": "गंगा-ब्रह्मपुत्र डेल्टा के मैंग्रोव का भारतीय भाग, जिसके केंद्र में बाघ अभयारण्य है और चारों ओर के द्वीपों पर गाँव।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-WB"
+  ]
+ },
+ {
+  "id": "manas-biosphere",
+  "status": "draft",
+  "name": {
+   "en": "Manas",
+   "hi": "मानस"
+  },
+  "anchor": {
+   "lat": 26.6,
+   "lon": 90.95
+  },
+  "category": "northeast",
+  "priority": 2,
+  "area_km2": 2837,
+  "designated": 1989,
+  "blurb": {
+   "en": "The Manas forests and grasslands of lower Assam below the Bhutan hills, with the golden langur, pygmy hog and hispid hare.",
+   "hi": "भूटान की पहाड़ियों के नीचे निचले असम के मानस वन और घास के मैदान, सुनहरे लंगूर, पिग्मी हॉग और खरगोश की दुर्लभ प्रजाति के साथ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "great-nicobar",
+  "status": "draft",
+  "name": {
+   "en": "Great Nicobar",
+   "hi": "ग्रेट निकोबार"
+  },
+  "anchor": {
+   "lat": 7.05,
+   "lon": 93.78
+  },
+  "category": "islands",
+  "priority": 2,
+  "area_km2": 885,
+  "designated": 1989,
+  "unesco": 2013,
+  "blurb": {
+   "en": "Rainforest covering most of the southernmost island of India, with the Campbell Bay and Galathea national parks. Saltwater crocodile, leatherback turtles and the Nicobar megapode.",
+   "hi": "भारत के सबसे दक्षिणी द्वीप के अधिकांश भाग पर वर्षावन, कैंपबेल बे और गैलेथिया राष्ट्रीय उद्यानों सहित। खारे पानी का मगर, लेदरबैक कछुए और निकोबार मेगापोड।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-AN"
+  ]
+ },
+ {
+  "id": "similipal-biosphere",
+  "status": "draft",
+  "name": {
+   "en": "Similipal",
+   "hi": "सिमलीपाल"
+  },
+  "anchor": {
+   "lat": 21.95,
+   "lon": 86.4
+  },
+  "category": "central",
+  "priority": 2,
+  "area_km2": 4374,
+  "designated": 1994,
+  "unesco": 2009,
+  "blurb": {
+   "en": "The hills of Mayurbhanj around the Similipal tiger reserve: sal forest, grassland and waterfalls, with gaur, elephants and tigers.",
+   "hi": "सिमलीपाल बाघ अभयारण्य के चारों ओर मयूरभंज की पहाड़ियाँ: साल वन, घास के मैदान और जलप्रपात, गौर, हाथियों और बाघों के साथ।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-OD"
+  ]
+ },
+ {
+  "id": "dibru-saikhowa",
+  "status": "draft",
+  "name": {
+   "en": "Dibru-Saikhowa",
+   "hi": "दिबरू-साइखोवा"
+  },
+  "anchor": {
+   "lat": 27.6498,
+   "lon": 95.3403
+  },
+  "category": "northeast",
+  "priority": 2,
+  "area_km2": 765,
+  "designated": 1997,
+  "blurb": {
+   "en": "Swamp forest and grassland on a Brahmaputra island in Dibrugarh and Tinsukia, home of the white-winged wood duck and feral horses.",
+   "hi": "डिब्रूगढ़ और तिनसुकिया में ब्रह्मपुत्र के एक द्वीप पर दलदली वन और घास के मैदान, सफ़ेद-पंख वाली वन बत्तख और जंगली घोड़ों का घर।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "dihang-dibang",
+  "status": "draft",
+  "name": {
+   "en": "Dihang-Dibang",
+   "hi": "दिहांग-दिबांग"
+  },
+  "anchor": {
+   "lat": 28.6,
+   "lon": 95.0
+  },
+  "category": "himalaya",
+  "priority": 1,
+  "area_km2": 5112,
+  "designated": 1998,
+  "blurb": {
+   "en": "The upper valleys of the Siang (Dihang) and Dibang in Arunachal Pradesh, from subtropical forest to alpine meadow, with Mouling National Park. Mishmi takin and musk deer.",
+   "hi": "अरुणाचल प्रदेश में सियांग (दिहांग) और दिबांग की ऊपरी घाटियाँ, उपोष्ण वन से अल्पाइन घास के मैदानों तक, मौलिंग राष्ट्रीय उद्यान सहित। मिश्मी टाकिन और कस्तूरी मृग।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848"
+  ],
+  "regions": [
+   "IN-AR"
+  ]
+ },
+ {
+  "id": "pachmarhi",
+  "status": "draft",
+  "name": {
+   "en": "Pachmarhi",
+   "hi": "पचमढ़ी"
+  },
+  "anchor": {
+   "lat": 22.47,
+   "lon": 78.43
+  },
+  "category": "central",
+  "priority": 2,
+  "area_km2": 4981.72,
+  "designated": 1999,
+  "unesco": 2009,
+  "blurb": {
+   "en": "The Satpura range around Pachmarhi in Betul, Narmadapuram and Chhindwara, with Satpura National Park and the Bori and Pachmarhi sanctuaries. Giant squirrels and flying squirrels.",
+   "hi": "बैतूल, नर्मदापुरम और छिंदवाड़ा में पचमढ़ी के चारों ओर सतपुड़ा श्रेणी, सतपुड़ा राष्ट्रीय उद्यान और बोरी तथा पचमढ़ी अभयारण्यों सहित। विशाल गिलहरी और उड़न गिलहरी।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "khangchendzonga",
+  "status": "draft",
+  "name": {
+   "en": "Khangchendzonga",
+   "hi": "कंचनजंगा"
+  },
+  "anchor": {
+   "lat": 27.6563,
+   "lon": 88.3123
+  },
+  "category": "himalaya",
+  "priority": 2,
+  "area_km2": 2620,
+  "designated": 2000,
+  "unesco": 2018,
+  "blurb": {
+   "en": "The Sikkim side of Kangchenjunga, the world's third-highest peak, around Khangchendzonga National Park. Snow leopard and red panda.",
+   "hi": "संसार के तीसरे सबसे ऊँचे शिखर कंचनजंगा का सिक्किम वाला भाग, कंचनजंगा राष्ट्रीय उद्यान के चारों ओर। हिम तेंदुआ और लाल पांडा।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-SK"
+  ]
+ },
+ {
+  "id": "agasthyamalai",
+  "status": "draft",
+  "name": {
+   "en": "Agasthyamalai",
+   "hi": "अगस्त्यमलै"
+  },
+  "anchor": {
+   "lat": 8.7,
+   "lon": 77.24
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 3500.08,
+  "designated": 2001,
+  "unesco": 2016,
+  "blurb": {
+   "en": "The southern tip of the Western Ghats on the Kerala-Tamil Nadu border, with the Neyyar, Peppara and Shendurney sanctuaries and Kalakad-Mundanthurai. The Kani people live here.",
+   "hi": "केरल-तमिलनाडु सीमा पर पश्चिमी घाट का दक्षिणी छोर, नेय्यार, पेप्पारा और शेंदुरनी अभयारण्यों तथा कलक्काड-मुंडनथुरै सहित। यहाँ कानी लोग रहते हैं।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-KL",
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "achanakmar-amarkantak",
+  "status": "draft",
+  "name": {
+   "en": "Achanakmar-Amarkantak",
+   "hi": "अचानकमार-अमरकंटक"
+  },
+  "anchor": {
+   "lat": 22.55,
+   "lon": 81.8
+  },
+  "category": "central",
+  "priority": 2,
+  "area_km2": 3835.51,
+  "designated": 2005,
+  "unesco": 2012,
+  "blurb": {
+   "en": "The Maikal hills from the Achanakmar forest to Amarkantak, where the Narmada and the Son rise, across Chhattisgarh and Madhya Pradesh.",
+   "hi": "अचानकमार वन से अमरकंटक तक मैकल पहाड़ियाँ, जहाँ नर्मदा और सोन निकलती हैं, छत्तीसगढ़ और मध्य प्रदेश में।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-CG",
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "kachchh",
+  "status": "draft",
+  "name": {
+   "en": "Kachchh",
+   "hi": "कच्छ"
+  },
+  "anchor": {
+   "lat": 23.91,
+   "lon": 70.44
+  },
+  "category": "desert",
+  "priority": 1,
+  "area_km2": 12454,
+  "designated": 2008,
+  "blurb": {
+   "en": "The Great Rann of Kutch, a salt flat flooded by the monsoon and dry for the rest of the year, and the largest biosphere reserve in India. The last home of the Indian wild ass.",
+   "hi": "कच्छ का बड़ा रण, एक लवण मैदान जो मानसून में डूबता है और शेष वर्ष सूखा रहता है; भारत का सबसे बड़ा जैवमंडल आरक्षित क्षेत्र। भारतीय जंगली गधे का अंतिम ठिकाना।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848"
+  ],
+  "regions": [
+   "IN-GJ"
+  ]
+ },
+ {
+  "id": "cold-desert",
+  "status": "draft",
+  "name": {
+   "en": "Cold Desert",
+   "hi": "शीत मरुस्थल"
+  },
+  "anchor": {
+   "lat": 31.95,
+   "lon": 77.9
+  },
+  "category": "himalaya",
+  "priority": 1,
+  "area_km2": 7770,
+  "designated": 2009,
+  "unesco": 2025,
+  "blurb": {
+   "en": "The high dry valleys of Spiti and Lahaul, with Pin Valley National Park, Chandratal and the Kibber sanctuary. Snow leopard country.",
+   "hi": "स्पीति और लाहौल की ऊँची सूखी घाटियाँ, पिन घाटी राष्ट्रीय उद्यान, चंद्रताल और किब्बर अभयारण्य सहित। हिम तेंदुए का प्रदेश।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-HP"
+  ]
+ },
+ {
+  "id": "seshachalam",
+  "status": "draft",
+  "name": {
+   "en": "Seshachalam",
+   "hi": "शेषाचलम"
+  },
+  "anchor": {
+   "lat": 13.7511,
+   "lon": 79.3378
+  },
+  "category": "central",
+  "priority": 2,
+  "area_km2": 4755.997,
+  "designated": 2010,
+  "blurb": {
+   "en": "The Seshachalam hills of the Eastern Ghats around Tirumala, in Tirupati and Kadapa districts, with Sri Venkateswara National Park. Known for red sanders and the slender loris.",
+   "hi": "तिरुमला के चारों ओर पूर्वी घाट की शेषाचलम पहाड़ियाँ, तिरुपति और कडपा ज़िलों में, श्री वेंकटेश्वर राष्ट्रीय उद्यान सहित। लाल चंदन और पतले लोरिस के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848"
+  ],
+  "regions": [
+   "IN-AP"
+  ]
+ },
+ {
+  "id": "panna-biosphere",
+  "status": "draft",
+  "name": {
+   "en": "Panna",
+   "hi": "पन्ना"
+  },
+  "anchor": {
+   "lat": 24.6,
+   "lon": 79.95
+  },
+  "category": "central",
+  "priority": 2,
+  "area_km2": 2998.98,
+  "designated": 2011,
+  "unesco": 2020,
+  "blurb": {
+   "en": "The Ken valley and the plateau around the Panna tiger reserve in Panna and Chhatarpur districts.",
+   "hi": "पन्ना और छतरपुर ज़िलों में पन्ना बाघ अभयारण्य के चारों ओर केन घाटी और पठार।"
+  },
+  "sources": [
+   "https://en.wikipedia.org/w/index.php?title=Biosphere_reserves_of_India&oldid=1370428848",
+   "https://www.unesco.org/en/mab/wnbr"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ }
+]

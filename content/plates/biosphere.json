@@ -1,0 +1,19 @@
+{
+  "id": "biosphere",
+  "section": "resources",
+  "order": 3,
+  "title": {
+    "en": "Biosphere reserves",
+    "hi": "जैवमंडल आरक्षित क्षेत्र"
+  },
+  "blurb": {
+    "en": "Eighteen whole landscapes kept for the living things in them and the people who live among them, from the salt flats of Kachchh to the rainforest of Great Nicobar. Thirteen are in UNESCO's world network.",
+    "hi": "अठारह पूरे भूदृश्य, जो उनमें रहने वाले जीवों और उनके बीच बसे लोगों के लिए संरक्षित हैं, कच्छ के लवण मैदानों से ग्रेट निकोबार के वर्षावन तक। तेरह यूनेस्को के विश्व नेटवर्क में हैं।"
+  },
+  "base": "plain",
+  "layers": [
+    "biosphere-reserves"
+  ],
+  "relief": 10,
+  "status": "draft"
+}

@@ -1,0 +1,1684 @@
+[
+ {
+  "id": "bandipur",
+  "status": "draft",
+  "name": {
+   "en": "Bandipur",
+   "hi": "बांदीपुर"
+  },
+  "anchor": {
+   "lat": 11.6617,
+   "lon": 76.6272
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1456.3,
+  "core_km2": 872.2,
+  "buffer_km2": 584.1,
+  "notified": 2007,
+  "blurb": {
+   "en": "On the Mysuru plateau at the foot of the Nilgiris, joined to Nagarhole, Mudumalai and Wayanad in one of the largest forest blocks of southern India. Among the first nine reserves of Project Tiger in 1973.",
+   "hi": "नीलगिरि की तलहटी में मैसूर पठार पर, नागरहोल, मुदुमलै और वायनाड से जुड़ा, दक्षिण भारत के सबसे बड़े वन-खंडों में से एक। 1973 में प्रोजेक्ट टाइगर के पहले नौ अभयारण्यों में।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Bandipur_National_Park"
+  ],
+  "regions": [
+   "IN-KA"
+  ]
+ },
+ {
+  "id": "corbett",
+  "status": "draft",
+  "name": {
+   "en": "Corbett",
+   "hi": "कॉर्बेट"
+  },
+  "anchor": {
+   "lat": 29.5486,
+   "lon": 78.9353
+  },
+  "category": "shivalik-gangetic",
+  "priority": 2,
+  "area_km2": 1288.3,
+  "core_km2": 822.0,
+  "buffer_km2": 466.3,
+  "notified": 2010,
+  "blurb": {
+   "en": "In the Shivalik foothills along the Ramganga, around India's first national park, set up in 1936 as Hailey National Park. Project Tiger was launched here in 1973. Amangarh in Uttar Pradesh is its buffer.",
+   "hi": "रामगंगा के किनारे शिवालिक की तलहटी में, भारत के पहले राष्ट्रीय उद्यान के चारों ओर, जो 1936 में हेली राष्ट्रीय उद्यान नाम से बना। 1973 में प्रोजेक्ट टाइगर यहीं शुरू हुआ। उत्तर प्रदेश का अमानगढ़ इसका बफ़र है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Jim_Corbett_National_Park"
+  ],
+  "regions": [
+   "IN-UK"
+  ]
+ },
+ {
+  "id": "kanha",
+  "status": "draft",
+  "name": {
+   "en": "Kanha",
+   "hi": "कान्हा"
+  },
+  "anchor": {
+   "lat": 22.2275,
+   "lon": 80.645
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2051.8,
+  "core_km2": 917.4,
+  "buffer_km2": 1134.4,
+  "notified": 2007,
+  "blurb": {
+   "en": "Sal forest and open meadows in the Maikal hills of Mandla and Balaghat. It is where the hard-ground barasingha was brought back from the brink.",
+   "hi": "मंडला और बालाघाट की मैकल पहाड़ियों में साल वन और खुले घास के मैदान। यहीं कठोर-भूमि बारहसिंगा को विलुप्ति के कगार से लौटाया गया।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kanha_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "manas",
+  "status": "draft",
+  "name": {
+   "en": "Manas",
+   "hi": "मानस"
+  },
+  "anchor": {
+   "lat": 26.7167,
+   "lon": 90.9333
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 1,
+  "area_km2": 2837.1,
+  "core_km2": 526.2,
+  "buffer_km2": 2310.9,
+  "notified": 2008,
+  "blurb": {
+   "en": "On the Bhutan border where the Manas river leaves the hills, with Royal Manas across it. Grassland and forest at the foot of the Himalaya, home to the pygmy hog and golden langur.",
+   "hi": "भूटान सीमा पर जहाँ मानस नदी पहाड़ों से निकलती है, उस पार रॉयल मानस है। हिमालय की तलहटी में घास के मैदान और वन, पिग्मी हॉग और सुनहरे लंगूर का घर।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Manas_National_Park"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "melghat",
+  "status": "draft",
+  "name": {
+   "en": "Melghat",
+   "hi": "मेलघाट"
+  },
+  "anchor": {
+   "lat": 21.4458,
+   "lon": 77.1972
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2768.5,
+  "core_km2": 1500.5,
+  "buffer_km2": 1268.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "In the Gawilgarh hills of the Satpura range in Amravati district, dry teak forest cut by deep ravines. It was one of the first nine Project Tiger reserves.",
+   "hi": "अमरावती ज़िले में सतपुड़ा की गाविलगढ़ पहाड़ियों में, गहरे खड्डों से कटा शुष्क सागौन वन। प्रोजेक्ट टाइगर के पहले नौ अभयारण्यों में से एक।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Melghat"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "palamau",
+  "status": "draft",
+  "name": {
+   "en": "Palamau",
+   "hi": "पलामू"
+  },
+  "anchor": {
+   "lat": 23.6889,
+   "lon": 84.2489
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1129.9,
+  "core_km2": 414.1,
+  "buffer_km2": 715.9,
+  "notified": 2012,
+  "blurb": {
+   "en": "In the Betla forests of the Chota Nagpur plateau along the North Koel river. One of the first nine reserves; its tigers have since dwindled to very few.",
+   "hi": "उत्तरी कोयल नदी के किनारे छोटानागपुर पठार के बेतला वनों में। पहले नौ अभयारण्यों में से एक; अब यहाँ बहुत कम बाघ बचे हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Palamau_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-JH"
+  ]
+ },
+ {
+  "id": "ranthambore",
+  "status": "draft",
+  "name": {
+   "en": "Ranthambore",
+   "hi": "रणथंभौर"
+  },
+  "anchor": {
+   "lat": 26.0172,
+   "lon": 76.5025
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1411.3,
+  "core_km2": 1113.4,
+  "buffer_km2": 297.9,
+  "notified": 2007,
+  "blurb": {
+   "en": "Dry forest where the Aravalli and Vindhya hills meet, around the old fort of Ranthambore in Sawai Madhopur. Its tigers are known for hunting by day.",
+   "hi": "सवाई माधोपुर में रणथंभौर के पुराने क़िले के चारों ओर, जहाँ अरावली और विंध्य पहाड़ियाँ मिलती हैं, शुष्क वन। यहाँ के बाघ दिन में शिकार के लिए जाने जाते हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Ranthambore_National_Park"
+  ],
+  "regions": [
+   "IN-RJ"
+  ]
+ },
+ {
+  "id": "similipal",
+  "status": "draft",
+  "name": {
+   "en": "Similipal",
+   "hi": "सिमलीपाल"
+  },
+  "anchor": {
+   "lat": 21.8333,
+   "lon": 86.3333
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2750.0,
+  "core_km2": 1194.8,
+  "buffer_km2": 1555.2,
+  "notified": 2007,
+  "blurb": {
+   "en": "A ring of hills in Mayurbhanj district with sal forest, waterfalls and the headwaters of several rivers. Also a biosphere reserve.",
+   "hi": "मयूरभंज ज़िले में पहाड़ियों का एक घेरा, साल वन, जलप्रपात और कई नदियों के उद्गम सहित। यह जैवमंडल आरक्षित क्षेत्र भी है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Simlipal_National_Park"
+  ],
+  "regions": [
+   "IN-OD"
+  ]
+ },
+ {
+  "id": "sundarban",
+  "status": "draft",
+  "name": {
+   "en": "Sundarban",
+   "hi": "सुंदरबन"
+  },
+  "anchor": {
+   "lat": 21.8381,
+   "lon": 88.8853
+  },
+  "category": "sundarbans",
+  "priority": 1,
+  "area_km2": 2584.9,
+  "core_km2": 1699.6,
+  "buffer_km2": 885.3,
+  "notified": 2007,
+  "blurb": {
+   "en": "Mangrove islands of the Ganga-Brahmaputra delta, continuing into Bangladesh. The only tigers in the world that live in mangrove, swimming the channels between islands.",
+   "hi": "गंगा-ब्रह्मपुत्र डेल्टा के मैंग्रोव द्वीप, जो बांग्लादेश तक फैले हैं। संसार के एकमात्र बाघ जो मैंग्रोव में रहते हैं और द्वीपों के बीच की धाराएँ तैरकर पार करते हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sundarbans_National_Park"
+  ],
+  "regions": [
+   "IN-WB"
+  ]
+ },
+ {
+  "id": "periyar",
+  "status": "draft",
+  "name": {
+   "en": "Periyar",
+   "hi": "पेरियार"
+  },
+  "anchor": {
+   "lat": 9.5775,
+   "lon": 77.18
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 925.0,
+  "core_km2": 881.0,
+  "buffer_km2": 44.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Around the lake made by the Mullaperiyar dam in the Cardamom hills, in Idukki and Pathanamthitta. Known for elephants seen from boats on the lake.",
+   "hi": "इलायची पहाड़ियों में, मुल्लपेरियार बाँध से बनी झील के चारों ओर, इडुक्की और पतनमतिट्टा में। झील पर नावों से दिखते हाथियों के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Periyar_National_Park"
+  ],
+  "regions": [
+   "IN-KL"
+  ]
+ },
+ {
+  "id": "sariska",
+  "status": "draft",
+  "name": {
+   "en": "Sariska",
+   "hi": "सरिस्का"
+  },
+  "anchor": {
+   "lat": 27.3175,
+   "lon": 76.4369
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1213.3,
+  "core_km2": 881.1,
+  "buffer_km2": 332.2,
+  "notified": 2007,
+  "blurb": {
+   "en": "Dry forest in the Aravalli hills of Alwar district. Its tigers were all lost by 2005, and it was the first reserve to be restocked with tigers moved from Ranthambore.",
+   "hi": "अलवर ज़िले की अरावली पहाड़ियों में शुष्क वन। 2005 तक यहाँ के सभी बाघ समाप्त हो गए थे, और रणथंभौर से लाए बाघों से फिर बसाया जाने वाला यह पहला अभयारण्य बना।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sariska_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-RJ"
+  ]
+ },
+ {
+  "id": "buxa",
+  "status": "draft",
+  "name": {
+   "en": "Buxa",
+   "hi": "बक्सा"
+  },
+  "anchor": {
+   "lat": 26.65,
+   "lon": 89.58
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 757.9,
+  "core_km2": 390.6,
+  "buffer_km2": 367.3,
+  "notified": 2009,
+  "blurb": {
+   "en": "In the Duars of Alipurduar district below the Bhutan hills, around the old Buxa fort. Forest, rivers and grassland on an elephant corridor into Assam.",
+   "hi": "भूटान की पहाड़ियों के नीचे अलीपुरद्वार ज़िले के डुआर्स में, पुराने बक्सा क़िले के चारों ओर। असम जाने वाले हाथी-गलियारे पर वन, नदियाँ और घास के मैदान।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Buxa_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-WB"
+  ]
+ },
+ {
+  "id": "indravati",
+  "status": "draft",
+  "name": {
+   "en": "Indravati",
+   "hi": "इंद्रावती"
+  },
+  "anchor": {
+   "lat": 19.205,
+   "lon": 81.0314
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2799.1,
+  "core_km2": 1258.4,
+  "buffer_km2": 1540.7,
+  "notified": 2009,
+  "blurb": {
+   "en": "In Bijapur district of Bastar, named after the Indravati river on its northern edge. One of the last homes of the wild water buffalo in central India.",
+   "hi": "बस्तर के बीजापुर ज़िले में, उत्तरी किनारे की इंद्रावती नदी के नाम पर। मध्य भारत में जंगली भैंसे के अंतिम ठिकानों में से एक।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Indravati_National_Park"
+  ],
+  "regions": [
+   "IN-CG"
+  ]
+ },
+ {
+  "id": "namdapha",
+  "status": "draft",
+  "name": {
+   "en": "Namdapha",
+   "hi": "नमदाफा"
+  },
+  "anchor": {
+   "lat": 27.4833,
+   "lon": 96.3833
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 1,
+  "area_km2": 2052.8,
+  "core_km2": 1807.8,
+  "buffer_km2": 245.0,
+  "notified": 1987,
+  "blurb": {
+   "en": "Rainforest rising to snow peaks on the Myanmar border in Changlang district. The only place in India with four big cats: tiger, leopard, clouded leopard and snow leopard.",
+   "hi": "चांगलांग ज़िले में म्यांमार सीमा पर वर्षावन से हिम-शिखरों तक। भारत में एकमात्र स्थान जहाँ चार बड़ी बिल्लियाँ हैं: बाघ, तेंदुआ, धूमिल तेंदुआ और हिम तेंदुआ।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Namdapha_National_Park"
+  ],
+  "regions": [
+   "IN-AR"
+  ]
+ },
+ {
+  "id": "nagarjunsagar-srisailam",
+  "status": "draft",
+  "name": {
+   "en": "Nagarjunsagar-Srisailam",
+   "hi": "नागार्जुनसागर-श्रीशैलम"
+  },
+  "anchor": {
+   "lat": 15.95,
+   "lon": 78.85
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 3296.3,
+  "core_km2": 2595.7,
+  "buffer_km2": 700.6,
+  "notified": 2007,
+  "blurb": {
+   "en": "The largest tiger reserve in India, in the Nallamala hills of the Eastern Ghats around the Krishna gorge and the Srisailam temple. Its northern part across the river is now Amrabad.",
+   "hi": "भारत का सबसे बड़ा बाघ अभयारण्य, पूर्वी घाट की नल्लमला पहाड़ियों में कृष्णा घाटी और श्रीशैलम मंदिर के चारों ओर। नदी पार इसका उत्तरी भाग अब अमराबाद है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Nagarjunsagar-Srisailam_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-AP"
+  ]
+ },
+ {
+  "id": "dudhwa",
+  "status": "draft",
+  "name": {
+   "en": "Dudhwa",
+   "hi": "दुधवा"
+  },
+  "anchor": {
+   "lat": 28.5083,
+   "lon": 80.68
+  },
+  "category": "shivalik-gangetic",
+  "priority": 1,
+  "area_km2": 2201.8,
+  "core_km2": 1093.8,
+  "buffer_km2": 1108.0,
+  "notified": 2010,
+  "blurb": {
+   "en": "Terai grassland and sal forest on the Nepal border in Lakhimpur Kheri, with Kishanpur and Katarniaghat. The one-horned rhino was brought back here in 1984.",
+   "hi": "लखीमपुर खीरी में नेपाल सीमा पर तराई के घास के मैदान और साल वन, किशनपुर और कतर्नियाघाट सहित। 1984 में एक-सींग वाला गैंडा यहाँ फिर बसाया गया।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Dudhwa_National_Park"
+  ],
+  "regions": [
+   "IN-UP"
+  ]
+ },
+ {
+  "id": "kalakad-mundanthurai",
+  "status": "draft",
+  "name": {
+   "en": "Kalakad-Mundanthurai",
+   "hi": "कलक्काड-मुंडनथुरै"
+  },
+  "anchor": {
+   "lat": 8.6833,
+   "lon": 77.3167
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1601.5,
+  "core_km2": 895.0,
+  "buffer_km2": 706.5,
+  "notified": 2007,
+  "blurb": {
+   "en": "At the southern end of the Western Ghats in Tirunelveli district, where the Tamirabarani rises. Wet forest high up, dry thorn forest on the eastern slopes.",
+   "hi": "तिरुनेलवेली ज़िले में पश्चिमी घाट के दक्षिणी छोर पर, जहाँ ताम्रपर्णी निकलती है। ऊपर नम वन, पूर्वी ढलानों पर शुष्क काँटेदार वन।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kalakkad_Mundanthurai_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "valmiki",
+  "status": "draft",
+  "name": {
+   "en": "Valmiki",
+   "hi": "वाल्मीकि"
+  },
+  "anchor": {
+   "lat": 27.3317,
+   "lon": 84.1625
+  },
+  "category": "shivalik-gangetic",
+  "priority": 2,
+  "area_km2": 899.4,
+  "core_km2": 598.5,
+  "buffer_km2": 300.9,
+  "notified": 2012,
+  "blurb": {
+   "en": "Bihar's only tiger reserve, in West Champaran between the Gandak and the Nepal border, where it meets Chitwan. Named after the sage's hermitage said to stand here.",
+   "hi": "बिहार का एकमात्र बाघ अभयारण्य, पश्चिम चंपारण में गंडक और नेपाल सीमा के बीच, जहाँ यह चितवन से मिलता है। यहाँ माने जाने वाले ऋषि के आश्रम के नाम पर।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Valmiki_National_Park"
+  ],
+  "regions": [
+   "IN-BR"
+  ]
+ },
+ {
+  "id": "pench-mp",
+  "status": "draft",
+  "name": {
+   "en": "Pench (MP)",
+   "hi": "पेंच (म.प्र.)"
+  },
+  "anchor": {
+   "lat": 21.8,
+   "lon": 79.2
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1179.6,
+  "core_km2": 411.3,
+  "buffer_km2": 768.3,
+  "notified": 2007,
+  "blurb": {
+   "en": "Teak forest along the Pench river in Seoni and Chhindwara, the country of Kipling's Jungle Book. The Maharashtra half lies across the river.",
+   "hi": "सिवनी और छिंदवाड़ा में पेंच नदी के किनारे सागौन वन, किपलिंग की जंगल बुक का प्रदेश। महाराष्ट्र वाला आधा भाग नदी के पार है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Pench_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "tadoba-andhari",
+  "status": "draft",
+  "name": {
+   "en": "Tadoba-Andhari",
+   "hi": "ताडोबा-अंधारी"
+  },
+  "anchor": {
+   "lat": 20.2667,
+   "lon": 79.4
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1727.6,
+  "core_km2": 625.8,
+  "buffer_km2": 1101.8,
+  "notified": 2007,
+  "blurb": {
+   "en": "Dry teak and bamboo forest in Chandrapur district, around Tadoba lake and the Andhari river. Maharashtra's oldest national park.",
+   "hi": "चंद्रपुर ज़िले में ताडोबा झील और अंधारी नदी के चारों ओर शुष्क सागौन और बाँस वन। महाराष्ट्र का सबसे पुराना राष्ट्रीय उद्यान।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Tadoba_Andhari_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "bandhavgarh",
+  "status": "draft",
+  "name": {
+   "en": "Bandhavgarh",
+   "hi": "बांधवगढ़"
+  },
+  "anchor": {
+   "lat": 23.6994,
+   "lon": 80.9619
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1536.9,
+  "core_km2": 716.9,
+  "buffer_km2": 820.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Sal forest and meadows below the hill fort of Bandhavgarh in Umaria district, once the Rewa rulers' hunting ground. It has one of the densest tiger populations in India.",
+   "hi": "उमरिया ज़िले में बांधवगढ़ के पहाड़ी क़िले के नीचे साल वन और घास के मैदान, कभी रीवा के शासकों का शिकारगाह। यहाँ बाघों का घनत्व भारत में सबसे अधिक में से एक है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Bandhavgarh_National_Park"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "panna",
+  "status": "draft",
+  "name": {
+   "en": "Panna",
+   "hi": "पन्ना"
+  },
+  "anchor": {
+   "lat": 24.7304,
+   "lon": 80.0108
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1598.1,
+  "core_km2": 576.1,
+  "buffer_km2": 1022.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Plateau and gorges along the Ken river in Panna and Chhatarpur. Its tigers were lost by 2009 and brought back from other reserves. Also a biosphere reserve.",
+   "hi": "पन्ना और छतरपुर में केन नदी के किनारे पठार और घाटियाँ। 2009 तक यहाँ के बाघ समाप्त हो गए थे और दूसरे अभयारण्यों से फिर लाए गए। यह जैवमंडल आरक्षित क्षेत्र भी है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Panna_National_Park"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "dampa",
+  "status": "draft",
+  "name": {
+   "en": "Dampa",
+   "hi": "डंपा"
+  },
+  "anchor": {
+   "lat": 23.5667,
+   "lon": 92.3667
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 988.0,
+  "core_km2": 500.0,
+  "buffer_km2": 488.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Hill forest in Mamit district of western Mizoram, on the Bangladesh border.",
+   "hi": "पश्चिमी मिज़ोरम के मामित ज़िले में, बांग्लादेश सीमा पर पहाड़ी वन।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Dampa_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MZ"
+  ]
+ },
+ {
+  "id": "bhadra",
+  "status": "draft",
+  "name": {
+   "en": "Bhadra",
+   "hi": "भद्रा"
+  },
+  "anchor": {
+   "lat": 13.6955,
+   "lon": 75.6368
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1064.3,
+  "core_km2": 492.5,
+  "buffer_km2": 571.8,
+  "notified": 2007,
+  "blurb": {
+   "en": "Western Ghats forest around the Bhadra reservoir in Chikkamagaluru district. Its villages were moved out by consent in the early 2000s, a model for later reserves.",
+   "hi": "चिक्कमगलूरु ज़िले में भद्रा जलाशय के चारों ओर पश्चिमी घाट के वन। इसके गाँव 2000 के दशक की शुरुआत में सहमति से बाहर बसाए गए, जो बाद के अभयारण्यों के लिए उदाहरण बना।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Bhadra_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-KA"
+  ]
+ },
+ {
+  "id": "pench-mh",
+  "status": "draft",
+  "name": {
+   "en": "Pench (MH)",
+   "hi": "पेंच (महा.)"
+  },
+  "anchor": {
+   "lat": 21.62,
+   "lon": 79.33
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 741.2,
+  "core_km2": 257.3,
+  "buffer_km2": 484.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "The Maharashtra half of Pench, in Nagpur district on the south bank of the Pench river, facing the Madhya Pradesh reserve across the water.",
+   "hi": "पेंच का महाराष्ट्र वाला आधा भाग, नागपुर ज़िले में पेंच नदी के दक्षिणी तट पर, पानी के पार मध्य प्रदेश के अभयारण्य के सामने।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Pench_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "pakke",
+  "status": "draft",
+  "name": {
+   "en": "Pakke",
+   "hi": "पक्के"
+  },
+  "anchor": {
+   "lat": 27.0833,
+   "lon": 92.8583
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 1198.5,
+  "core_km2": 683.5,
+  "buffer_km2": 515.0,
+  "notified": 2012,
+  "blurb": {
+   "en": "Foothill forest in East Kameng between the Kameng and Pakke rivers, joined to Nameri across the Assam border. Known for hornbills.",
+   "hi": "पूर्वी कामेंग में कामेंग और पक्के नदियों के बीच तलहटी के वन, असम सीमा पार नामेरी से जुड़े। धनेश पक्षियों के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Pakke_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-AR"
+  ]
+ },
+ {
+  "id": "nameri",
+  "status": "draft",
+  "name": {
+   "en": "Nameri",
+   "hi": "नामेरी"
+  },
+  "anchor": {
+   "lat": 27.01,
+   "lon": 92.79
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 464.0,
+  "core_km2": 320.0,
+  "buffer_km2": 144.0,
+  "notified": 2000,
+  "blurb": {
+   "en": "Forest along the Jia Bhoroli in Sonitpur district at the foot of the Arunachal hills, continuous with Pakke to the north.",
+   "hi": "अरुणाचल की पहाड़ियों की तलहटी में सोनितपुर ज़िले में जिया भरोली के किनारे वन, उत्तर में पक्के से लगातार जुड़ा।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Nameri_National_Park"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "satpura",
+  "status": "draft",
+  "name": {
+   "en": "Satpura",
+   "hi": "सतपुड़ा"
+  },
+  "anchor": {
+   "lat": 22.495,
+   "lon": 78.2311
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2133.3,
+  "core_km2": 1339.3,
+  "buffer_km2": 794.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Sandstone hills, gorges and sal forest around Pachmarhi, the highest ground of the Satpura range. With Bori and Pachmarhi sanctuaries it forms the core of the Pachmarhi biosphere reserve.",
+   "hi": "पचमढ़ी के चारों ओर बलुआ पत्थर की पहाड़ियाँ, घाटियाँ और साल वन, सतपुड़ा श्रेणी की सबसे ऊँची भूमि। बोरी और पचमढ़ी अभयारण्यों के साथ यह पचमढ़ी जैवमंडल का केंद्र है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Satpura_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "anamalai",
+  "status": "draft",
+  "name": {
+   "en": "Anamalai",
+   "hi": "आनामलै"
+  },
+  "anchor": {
+   "lat": 10.417,
+   "lon": 77.0567
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1479.9,
+  "core_km2": 958.6,
+  "buffer_km2": 521.3,
+  "notified": 2007,
+  "blurb": {
+   "en": "The Anamalai hills south of the Palghat gap in Coimbatore and Tiruppur, from dry forest to shola and grassland. Joined to Parambikulam in Kerala.",
+   "hi": "पालघाट दर्रे के दक्षिण में कोयंबटूर और तिरुप्पुर की आनामलै पहाड़ियाँ, शुष्क वन से शोला और घास के मैदानों तक। केरल के परम्बिकुलम से जुड़ी।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Anamalai_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "udanti-sitanadi",
+  "status": "draft",
+  "name": {
+   "en": "Udanti-Sitanadi",
+   "hi": "उदंती-सीतानदी"
+  },
+  "anchor": {
+   "lat": 20.1857,
+   "lon": 81.9362
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1842.5,
+  "core_km2": 851.1,
+  "buffer_km2": 991.5,
+  "notified": 2009,
+  "blurb": {
+   "en": "Two sanctuaries joined in Gariaband and Dhamtari districts on the Odisha border, sal and mixed forest. Kept for Chhattisgarh's wild buffalo.",
+   "hi": "ओडिशा सीमा पर गरियाबंद और धमतरी ज़िलों में जोड़े गए दो अभयारण्य, साल और मिश्रित वन। छत्तीसगढ़ के जंगली भैंसे के लिए संरक्षित।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sitanadi_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-CG"
+  ]
+ },
+ {
+  "id": "satkosia",
+  "status": "draft",
+  "name": {
+   "en": "Satkosia",
+   "hi": "सतकोसिया"
+  },
+  "anchor": {
+   "lat": 20.54,
+   "lon": 84.8317
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 963.9,
+  "core_km2": 523.6,
+  "buffer_km2": 440.3,
+  "notified": 2007,
+  "blurb": {
+   "en": "Along the gorge where the Mahanadi cuts through the Eastern Ghats in Angul district. Known for gharial and mugger in the river.",
+   "hi": "अंगुल ज़िले में जहाँ महानदी पूर्वी घाट को काटती है, उस घाटी के किनारे। नदी के घड़ियाल और मगर के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Satkosia_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-OD"
+  ]
+ },
+ {
+  "id": "kaziranga",
+  "status": "draft",
+  "name": {
+   "en": "Kaziranga",
+   "hi": "काज़ीरंगा"
+  },
+  "anchor": {
+   "lat": 26.6667,
+   "lon": 93.35
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 1173.6,
+  "core_km2": 625.6,
+  "buffer_km2": 548.0,
+  "notified": 2007,
+  "blurb": {
+   "en": "Floodplain grassland on the south bank of the Brahmaputra, below the Karbi hills. It holds about two-thirds of the world's one-horned rhinos and one of the densest tiger populations.",
+   "hi": "कार्बी पहाड़ियों के नीचे ब्रह्मपुत्र के दक्षिणी तट पर बाढ़-मैदानी घास के मैदान। संसार के लगभग दो-तिहाई एक-सींग वाले गैंडे यहीं हैं, और बाघों का घनत्व भी सबसे अधिक में से एक है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kaziranga_National_Park"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "achanakmar",
+  "status": "draft",
+  "name": {
+   "en": "Achanakmar",
+   "hi": "अचानकमार"
+  },
+  "anchor": {
+   "lat": 22.4366,
+   "lon": 81.8385
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 914.0,
+  "core_km2": 626.2,
+  "buffer_km2": 287.8,
+  "notified": 2009,
+  "blurb": {
+   "en": "Sal and bamboo forest in the Maikal hills of Mungeli district, joined to Kanha by a forest corridor. The core of the Achanakmar-Amarkantak biosphere reserve.",
+   "hi": "मुंगेली ज़िले की मैकल पहाड़ियों में साल और बाँस वन, वन-गलियारे से कान्हा से जुड़ा। अचानकमार-अमरकंटक जैवमंडल का केंद्र।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Achanakmar_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-CG"
+  ]
+ },
+ {
+  "id": "kali",
+  "status": "draft",
+  "name": {
+   "en": "Kali",
+   "hi": "काली"
+  },
+  "anchor": {
+   "lat": 14.9564,
+   "lon": 74.2521
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1097.5,
+  "core_km2": 814.9,
+  "buffer_km2": 282.6,
+  "notified": 2007,
+  "blurb": {
+   "en": "Evergreen and moist forest along the Kali river in Uttara Kannada, once called Dandeli-Anshi. Known for black panthers and hornbills.",
+   "hi": "उत्तर कन्नड़ में काली नदी के किनारे सदाबहार और नम वन, पहले दांडेली-अंशी कहलाता था। काले तेंदुओं और धनेश पक्षियों के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kali_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-KA"
+  ]
+ },
+ {
+  "id": "sanjay-dubri",
+  "status": "draft",
+  "name": {
+   "en": "Sanjay-Dubri",
+   "hi": "संजय-दुबरी"
+  },
+  "anchor": {
+   "lat": 23.8853,
+   "lon": 82.0553
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1674.5,
+  "core_km2": 812.6,
+  "buffer_km2": 861.9,
+  "notified": 2011,
+  "blurb": {
+   "en": "Sal forest in Sidhi and Shahdol districts, continuous with Guru Ghasidas across the Chhattisgarh border.",
+   "hi": "सीधी और शहडोल ज़िलों में साल वन, छत्तीसगढ़ सीमा पार गुरु घासीदास से लगातार जुड़ा।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sanjay_National_Park"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "mudumalai",
+  "status": "draft",
+  "name": {
+   "en": "Mudumalai",
+   "hi": "मुदुमलै"
+  },
+  "anchor": {
+   "lat": 11.6,
+   "lon": 76.5
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 688.6,
+  "core_km2": 321.0,
+  "buffer_km2": 367.6,
+  "notified": 2007,
+  "blurb": {
+   "en": "In the Nilgiris district where Tamil Nadu, Karnataka and Kerala meet, joined to Bandipur and Wayanad. Known for its elephant camp at Theppakadu.",
+   "hi": "नीलगिरि ज़िले में जहाँ तमिलनाडु, कर्नाटक और केरल मिलते हैं, बांदीपुर और वायनाड से जुड़ा। तेप्पकाडु के हाथी शिविर के लिए प्रसिद्ध।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Mudumalai_National_Park"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "nagarhole",
+  "status": "draft",
+  "name": {
+   "en": "Nagarhole",
+   "hi": "नागरहोल"
+  },
+  "anchor": {
+   "lat": 12.06,
+   "lon": 76.1511
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1205.8,
+  "core_km2": 643.4,
+  "buffer_km2": 562.4,
+  "notified": 2007,
+  "blurb": {
+   "en": "Moist deciduous forest along the Kabini in Kodagu and Mysuru districts, one of the densest tiger areas in India. Also called Rajiv Gandhi National Park.",
+   "hi": "कोडगु और मैसूरु ज़िलों में काबिनी के किनारे नम पर्णपाती वन, भारत में बाघों के सबसे घने क्षेत्रों में से एक। इसे राजीव गांधी राष्ट्रीय उद्यान भी कहते हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Nagarhole_National_Park"
+  ],
+  "regions": [
+   "IN-KA"
+  ]
+ },
+ {
+  "id": "parambikulam",
+  "status": "draft",
+  "name": {
+   "en": "Parambikulam",
+   "hi": "परम्बिकुलम"
+  },
+  "anchor": {
+   "lat": 10.3833,
+   "lon": 76.7083
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 643.7,
+  "core_km2": 390.9,
+  "buffer_km2": 252.8,
+  "notified": 2009,
+  "blurb": {
+   "en": "A valley between the Anamalai and Nelliampathy hills in Palakkad district, with teak plantations and a famous old teak tree.",
+   "hi": "पालक्काड ज़िले में आनामलै और नेल्लियमपति पहाड़ियों के बीच की घाटी, सागौन बागानों और एक प्रसिद्ध पुराने सागौन वृक्ष के साथ।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Parambikulam_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-KL"
+  ]
+ },
+ {
+  "id": "sahyadri",
+  "status": "draft",
+  "name": {
+   "en": "Sahyadri",
+   "hi": "सह्याद्रि"
+  },
+  "anchor": {
+   "lat": 17.4861,
+   "lon": 73.8089
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1165.6,
+  "core_km2": 600.1,
+  "buffer_km2": 565.5,
+  "notified": 2012,
+  "blurb": {
+   "en": "Chandoli and Koyna in the northern Western Ghats of Satara, Sangli, Kolhapur and Ratnagiri. Tigers are few here and the forest is being readied for more.",
+   "hi": "सातारा, सांगली, कोल्हापुर और रत्नागिरि के उत्तरी पश्चिमी घाट में चांदोली और कोयना। यहाँ बाघ कम हैं और वन को और बाघों के लिए तैयार किया जा रहा है।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sahyadri_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "biligiri-ranganatha-temple",
+  "status": "draft",
+  "name": {
+   "en": "Biligiri Ranganatha Temple",
+   "hi": "बिलिगिरि रंगनाथ मंदिर"
+  },
+  "anchor": {
+   "lat": 11.9939,
+   "lon": 77.1406
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 574.8,
+  "core_km2": 359.1,
+  "buffer_km2": 215.7,
+  "notified": 2007,
+  "blurb": {
+   "en": "The Biligiri Rangana hills in Chamarajanagar, a bridge between the Western and Eastern Ghats, named after the hilltop temple. The Soliga people's forest rights here were recognised in 2011.",
+   "hi": "चामराजनगर की बिलिगिरि रंगन पहाड़ियाँ, पश्चिमी और पूर्वी घाट के बीच का सेतु, पहाड़ी की चोटी के मंदिर के नाम पर। 2011 में यहाँ सोलिगा लोगों के वन अधिकार माने गए।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Biligiriranga_Hills"
+  ],
+  "regions": [
+   "IN-KA"
+  ]
+ },
+ {
+  "id": "kawal",
+  "status": "draft",
+  "name": {
+   "en": "Kawal",
+   "hi": "कवाल"
+  },
+  "anchor": {
+   "lat": 18.9939,
+   "lon": 79.25
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2015.4,
+  "core_km2": 892.2,
+  "buffer_km2": 1123.2,
+  "notified": 2012,
+  "blurb": {
+   "en": "Teak forest along the Godavari in Mancherial and Nirmal districts, on a corridor to Tadoba in Maharashtra.",
+   "hi": "मंचेरियल और निर्मल ज़िलों में गोदावरी के किनारे सागौन वन, महाराष्ट्र के ताडोबा जाने वाले गलियारे पर।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kawal_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-TS"
+  ]
+ },
+ {
+  "id": "sathyamangalam",
+  "status": "draft",
+  "name": {
+   "en": "Sathyamangalam",
+   "hi": "सत्यमंगलम"
+  },
+  "anchor": {
+   "lat": 11.64,
+   "lon": 77.2261
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1408.4,
+  "core_km2": 793.5,
+  "buffer_km2": 614.9,
+  "notified": 2013,
+  "blurb": {
+   "en": "In Erode district where the Western and Eastern Ghats meet, linking the Nilgiris to BRT. Its tigers have grown in number since it became a reserve in 2013.",
+   "hi": "इरोड ज़िले में जहाँ पश्चिमी और पूर्वी घाट मिलते हैं, नीलगिरि को बीआरटी से जोड़ता। 2013 में अभयारण्य बनने के बाद से यहाँ बाघ बढ़े हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Sathyamangalam_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "mukundara",
+  "status": "draft",
+  "name": {
+   "en": "Mukundara",
+   "hi": "मुकुंदरा"
+  },
+  "anchor": {
+   "lat": 24.8681,
+   "lon": 75.8561
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 760.0,
+  "core_km2": 417.2,
+  "buffer_km2": 342.8,
+  "notified": 2013,
+  "blurb": {
+   "en": "The Mukundara hills south of Kota along the Chambal, dry forest and gorges.",
+   "hi": "कोटा के दक्षिण में चंबल के किनारे मुकुंदरा पहाड़ियाँ, शुष्क वन और घाटियाँ।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Mukandra_Hills_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-RJ"
+  ]
+ },
+ {
+  "id": "nawegaon-nagzira",
+  "status": "draft",
+  "name": {
+   "en": "Nawegaon-Nagzira",
+   "hi": "नवेगाँव-नागझिरा"
+  },
+  "anchor": {
+   "lat": 20.9333,
+   "lon": 80.1667
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1894.9,
+  "core_km2": 653.7,
+  "buffer_km2": 1241.3,
+  "notified": 2013,
+  "blurb": {
+   "en": "Navegaon and Nagzira in Gondia and Bhandara districts, teak and bamboo forest with old irrigation lakes.",
+   "hi": "गोंदिया और भंडारा ज़िलों में नवेगाँव और नागझिरा, पुराने सिंचाई तालाबों के साथ सागौन और बाँस वन।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Navegaon_National_Park"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "amrabad",
+  "status": "draft",
+  "name": {
+   "en": "Amrabad",
+   "hi": "अमराबाद"
+  },
+  "anchor": {
+   "lat": 16.38,
+   "lon": 78.83
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2611.4,
+  "core_km2": 2166.4,
+  "buffer_km2": 445.0,
+  "notified": 2015,
+  "blurb": {
+   "en": "The northern Nallamala hills south of Hyderabad, the Telangana part of the old Nagarjunsagar-Srisailam reserve. The Chenchu people live inside it.",
+   "hi": "हैदराबाद के दक्षिण में उत्तरी नल्लमला पहाड़ियाँ, पुराने नागार्जुनसागर-श्रीशैलम अभयारण्य का तेलंगाना भाग। चेंचु लोग इसके भीतर रहते हैं।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Amrabad_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-TS"
+  ]
+ },
+ {
+  "id": "pilibhit",
+  "status": "draft",
+  "name": {
+   "en": "Pilibhit",
+   "hi": "पीलीभीत"
+  },
+  "anchor": {
+   "lat": 28.7188,
+   "lon": 80.072
+  },
+  "category": "shivalik-gangetic",
+  "priority": 2,
+  "area_km2": 730.2,
+  "core_km2": 602.8,
+  "buffer_km2": 127.5,
+  "notified": 2014,
+  "blurb": {
+   "en": "Terai sal forest and grassland on the Nepal border, along the Sharda and the head of the Gomti.",
+   "hi": "नेपाल सीमा पर शारदा और गोमती के उद्गम के पास तराई के साल वन और घास के मैदान।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Pilibhit_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-UP"
+  ]
+ },
+ {
+  "id": "bor",
+  "status": "draft",
+  "name": {
+   "en": "Bor",
+   "hi": "बोर"
+  },
+  "anchor": {
+   "lat": 20.9775,
+   "lon": 78.6758
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 816.3,
+  "core_km2": 138.1,
+  "buffer_km2": 678.1,
+  "notified": 2014,
+  "blurb": {
+   "en": "A small reserve around the Bor dam in Wardha and Nagpur districts, on the corridor between Pench and Tadoba.",
+   "hi": "वर्धा और नागपुर ज़िलों में बोर बाँध के चारों ओर एक छोटा अभयारण्य, पेंच और ताडोबा के बीच के गलियारे पर।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Bor_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-MH"
+  ]
+ },
+ {
+  "id": "rajaji",
+  "status": "draft",
+  "name": {
+   "en": "Rajaji",
+   "hi": "राजाजी"
+  },
+  "anchor": {
+   "lat": 30.0581,
+   "lon": 78.1728
+  },
+  "category": "shivalik-gangetic",
+  "priority": 2,
+  "area_km2": 1075.2,
+  "core_km2": 819.5,
+  "buffer_km2": 255.6,
+  "notified": 2015,
+  "blurb": {
+   "en": "The Shivalik hills between Haridwar, Dehradun and Rishikesh, where the Ganga leaves the mountains. The western limit of the Terai's elephants.",
+   "hi": "हरिद्वार, देहरादून और ऋषिकेश के बीच शिवालिक पहाड़ियाँ, जहाँ गंगा पहाड़ों से निकलती है। तराई के हाथियों की पश्चिमी सीमा।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Rajaji_National_Park"
+  ],
+  "regions": [
+   "IN-UK"
+  ]
+ },
+ {
+  "id": "orang",
+  "status": "draft",
+  "name": {
+   "en": "Orang",
+   "hi": "ओरंग"
+  },
+  "anchor": {
+   "lat": 26.5569,
+   "lon": 92.3278
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 492.5,
+  "core_km2": 79.3,
+  "buffer_km2": 413.2,
+  "notified": 2016,
+  "blurb": {
+   "en": "Floodplain grassland on the north bank of the Brahmaputra in Darrang and Sonitpur, with rhinos and tigers like a smaller Kaziranga.",
+   "hi": "दरंग और सोनितपुर में ब्रह्मपुत्र के उत्तरी तट पर बाढ़-मैदानी घास के मैदान, छोटे काज़ीरंगा जैसे गैंडों और बाघों के साथ।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Orang_National_Park"
+  ],
+  "regions": [
+   "IN-AS"
+  ]
+ },
+ {
+  "id": "kamlang",
+  "status": "draft",
+  "name": {
+   "en": "Kamlang",
+   "hi": "कमलांग"
+  },
+  "anchor": {
+   "lat": 27.6667,
+   "lon": 96.4333
+  },
+  "category": "northeast-brahmaputra",
+  "priority": 2,
+  "area_km2": 783.0,
+  "core_km2": 671.0,
+  "buffer_km2": 112.0,
+  "notified": 2017,
+  "blurb": {
+   "en": "Forest along the Kamlang river in Lohit district, next to Namdapha.",
+   "hi": "लोहित ज़िले में कमलांग नदी के किनारे वन, नमदाफा के पास।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Kamlang_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-AR"
+  ]
+ },
+ {
+  "id": "srivilliputhur-megamalai",
+  "status": "draft",
+  "name": {
+   "en": "Srivilliputhur-Megamalai",
+   "hi": "श्रीविल्लिपुत्तूर-मेगामलै"
+  },
+  "anchor": {
+   "lat": 9.3939,
+   "lon": 77.3642
+  },
+  "category": "western-ghats",
+  "priority": 2,
+  "area_km2": 1016.6,
+  "core_km2": 641.9,
+  "buffer_km2": 374.7,
+  "notified": 2021,
+  "blurb": {
+   "en": "The Megamalai hills and the grizzled squirrel sanctuary of Srivilliputhur in the southern Western Ghats, joined to Periyar across the Kerala border.",
+   "hi": "दक्षिणी पश्चिमी घाट में मेगामलै पहाड़ियाँ और श्रीविल्लिपुत्तूर का धूसर गिलहरी अभयारण्य, केरल सीमा पार पेरियार से जुड़े।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Srivilliputhur-Megamalai_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-TN"
+  ]
+ },
+ {
+  "id": "ramgarh-vishdhari",
+  "status": "draft",
+  "name": {
+   "en": "Ramgarh Vishdhari",
+   "hi": "रामगढ़ विषधारी"
+  },
+  "anchor": {
+   "lat": 25.9833,
+   "lon": 75.3167
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1501.9,
+  "core_km2": 481.9,
+  "buffer_km2": 1020.0,
+  "notified": 2022,
+  "blurb": {
+   "en": "Hills and forest in Bundi district, between Ranthambore and Mukundara.",
+   "hi": "बूंदी ज़िले में पहाड़ियाँ और वन, रणथंभौर और मुकुंदरा के बीच।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Ramgarh_Vishdhari_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-RJ"
+  ]
+ },
+ {
+  "id": "ranipur",
+  "status": "draft",
+  "name": {
+   "en": "Ranipur",
+   "hi": "रानीपुर"
+  },
+  "anchor": {
+   "lat": 24.96,
+   "lon": 81.064
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 529.4,
+  "core_km2": 230.3,
+  "buffer_km2": 299.1,
+  "notified": 2022,
+  "blurb": {
+   "en": "Dry forest in the Vindhyan hills of Chitrakoot district in Bundelkhand.",
+   "hi": "बुंदेलखंड में चित्रकूट ज़िले की विंध्य पहाड़ियों में शुष्क वन।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Ranipur_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-UP"
+  ]
+ },
+ {
+  "id": "veerangana-durgavati",
+  "status": "draft",
+  "name": {
+   "en": "Veerangana Durgavati",
+   "hi": "वीरांगना दुर्गावती"
+  },
+  "anchor": {
+   "lat": 23.54,
+   "lon": 79.72
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2339.1,
+  "core_km2": 1414.0,
+  "buffer_km2": 925.1,
+  "notified": 2023,
+  "blurb": {
+   "en": "The old Nauradehi sanctuary in Sagar, Damoh and Narsinghpur, renamed for the Gond queen of Garha. The largest reserve in Madhya Pradesh.",
+   "hi": "सागर, दमोह और नरसिंहपुर का पुराना नौरादेही अभयारण्य, गढ़ा की गोंड रानी के नाम पर नया नाम। मध्य प्रदेश का सबसे बड़ा अभयारण्य।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Veerangana_Durgavati_Wildlife_Sanctuary"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "dholpur-karauli",
+  "status": "draft",
+  "name": {
+   "en": "Dholpur-Karauli",
+   "hi": "धौलपुर-करौली"
+  },
+  "anchor": {
+   "lat": 26.5,
+   "lon": 77.02
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1057.9,
+  "core_km2": 599.6,
+  "buffer_km2": 458.2,
+  "notified": 2023,
+  "blurb": {
+   "en": "Ravines and dry forest along the Chambal in Dholpur and Karauli, east of Ranthambore.",
+   "hi": "रणथंभौर के पूर्व में धौलपुर और करौली में चंबल के किनारे बीहड़ और शुष्क वन।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Dholpur—Karauli_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-RJ"
+  ]
+ },
+ {
+  "id": "guru-ghasidas-tamor-pingla",
+  "status": "draft",
+  "name": {
+   "en": "Guru Ghasidas-Tamor Pingla",
+   "hi": "गुरु घासीदास-तमोर पिंगला"
+  },
+  "anchor": {
+   "lat": 23.6019,
+   "lon": 82.4719
+  },
+  "category": "central-eastern-ghats",
+  "priority": 1,
+  "area_km2": 2829.4,
+  "core_km2": 2049.2,
+  "buffer_km2": 780.2,
+  "notified": 2024,
+  "blurb": {
+   "en": "Guru Ghasidas National Park and Tamor Pingla sanctuary in northern Chhattisgarh, joined to Sanjay-Dubri across the Madhya Pradesh border.",
+   "hi": "उत्तरी छत्तीसगढ़ में गुरु घासीदास राष्ट्रीय उद्यान और तमोर पिंगला अभयारण्य, मध्य प्रदेश सीमा पार संजय-दुबरी से जुड़े।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Guru_Ghasidas_-_Tamor_Pingla_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-CG"
+  ]
+ },
+ {
+  "id": "ratapani",
+  "status": "draft",
+  "name": {
+   "en": "Ratapani",
+   "hi": "रातापानी"
+  },
+  "anchor": {
+   "lat": 22.9175,
+   "lon": 77.7222
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1271.5,
+  "core_km2": 763.8,
+  "buffer_km2": 507.7,
+  "notified": 2024,
+  "blurb": {
+   "en": "Teak forest in the Vindhya hills just south of Bhopal, around the rock shelters of Bhimbetka.",
+   "hi": "भोपाल के ठीक दक्षिण में विंध्य पहाड़ियों में सागौन वन, भीमबेटका के शैलाश्रयों के चारों ओर।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Ratapani_Tiger_Reserve"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ },
+ {
+  "id": "madhav",
+  "status": "draft",
+  "name": {
+   "en": "Madhav",
+   "hi": "माधव"
+  },
+  "anchor": {
+   "lat": 25.5,
+   "lon": 77.8167
+  },
+  "category": "central-eastern-ghats",
+  "priority": 2,
+  "area_km2": 1651.4,
+  "core_km2": 375.2,
+  "buffer_km2": 1276.2,
+  "notified": 2025,
+  "blurb": {
+   "en": "Dry forest and lakes around Shivpuri, once the Scindias' hunting ground. Tigers were brought back in 2023.",
+   "hi": "शिवपुरी के चारों ओर शुष्क वन और झीलें, कभी सिंधिया का शिकारगाह। 2023 में बाघ फिर लाए गए।"
+  },
+  "sources": [
+   "https://ntca.gov.in/tiger-reserves/",
+   "https://en.wikipedia.org/wiki/Madhav_National_Park"
+  ],
+  "regions": [
+   "IN-MP"
+  ]
+ }
+]

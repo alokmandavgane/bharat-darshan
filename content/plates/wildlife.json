@@ -1,0 +1,20 @@
+{
+  "id": "wildlife",
+  "section": "resources",
+  "order": 2,
+  "title": {
+    "en": "Wildlife reserves",
+    "hi": "वन्यजीव अभयारण्य"
+  },
+  "blurb": {
+    "en": "The 58 tiger reserves as circles sized by area, and some five hundred national parks and sanctuaries as beads. They cluster on hills the plough never reached: the Western Ghats, the Satpura and Maikal ranges, the Shivaliks, the north-east.",
+    "hi": "58 बाघ अभयारण्य क्षेत्रफल के अनुपात वाले वृत्तों के रूप में, और लगभग पाँच सौ राष्ट्रीय उद्यान व अभयारण्य मनकों के रूप में। ये उन पहाड़ियों पर जुटे हैं जहाँ हल नहीं पहुँचा: पश्चिमी घाट, सतपुड़ा और मैकल, शिवालिक और पूर्वोत्तर।"
+  },
+  "base": "plain",
+  "layers": [
+    "protected-areas",
+    "tiger-reserves"
+  ],
+  "relief": 10,
+  "status": "draft"
+}

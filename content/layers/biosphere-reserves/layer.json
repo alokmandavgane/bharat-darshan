@@ -1,0 +1,53 @@
+{
+  "id": "biosphere-reserves",
+  "type": "points",
+  "marker": "symbol",
+  "group": "wildlife",
+  "title": {
+    "en": "Biosphere reserves",
+    "hi": "जैवमंडल आरक्षित क्षेत्र"
+  },
+  "icon": "leaf",
+  "default_on": false,
+  "categories": [
+    { "id": "himalaya",      "color": "#7f95a3", "title": { "en": "Himalaya",               "hi": "हिमालय" } },
+    { "id": "northeast",     "color": "#3f7f9c", "title": { "en": "North-east",             "hi": "पूर्वोत्तर" } },
+    { "id": "central",       "color": "#b04a26", "title": { "en": "Central India and the Eastern Ghats", "hi": "मध्य भारत और पूर्वी घाट" } },
+    { "id": "western-ghats", "color": "#3f7f52", "title": { "en": "Western Ghats",          "hi": "पश्चिमी घाट" } },
+    { "id": "desert",        "color": "#8f6f35", "title": { "en": "Desert",                 "hi": "मरुस्थल" } },
+    { "id": "coast",         "color": "#5fa3a0", "title": { "en": "Coast and delta",        "hi": "तट और डेल्टा" } },
+    { "id": "islands",       "color": "#7a5a9c", "title": { "en": "Islands",                "hi": "द्वीप" } }
+  ],
+  "fields": {
+    "area_km2": {
+      "type": "number",
+      "required": true,
+      "label": { "en": "Area", "hi": "क्षेत्रफल" },
+      "unit": { "en": "{n} km²", "hi": "{n} वर्ग किमी" }
+    },
+    "designated": {
+      "type": "year",
+      "label": { "en": "Designated", "hi": "घोषित" }
+    },
+    "unesco": {
+      "type": "year",
+      "label": { "en": "In UNESCO's world network since", "hi": "यूनेस्को के विश्व नेटवर्क में" }
+    }
+  },
+  "size": {
+    "field": "area_km2",
+    "domain": [750, 12500],
+    "range": [10, 34],
+    "legend": [1000, 5000, 10000]
+  },
+  "note": {
+    "en": "All eighteen biosphere reserves India has designated, thirteen of them in UNESCO's World Network. A biosphere reserve is a whole landscape rather than a park: a protected core, often a national park or tiger reserve, inside a much larger area where people live and farm. A circle stands at its heart and cannot show its shape, which can span three states.",
+    "hi": "भारत के घोषित सभी अठारह जैवमंडल आरक्षित क्षेत्र, जिनमें से तेरह यूनेस्को के विश्व नेटवर्क में हैं। जैवमंडल आरक्षित क्षेत्र उद्यान नहीं, पूरा भूदृश्य है: एक संरक्षित कोर, प्रायः कोई राष्ट्रीय उद्यान या बाघ अभयारण्य, एक कहीं बड़े क्षेत्र के भीतर जहाँ लोग रहते और खेती करते हैं। वृत्त उसके केंद्र पर है और उसका आकार नहीं दिखा सकता, जो तीन राज्यों तक फैला हो सकता है।"
+  },
+  "sources": [
+    "wikipedia",
+    "unesco-mab"
+  ],
+  "attribution": "The eighteen reserves, their years and areas from Wikipedia's list (revision 1370428848), which cites the Ministry of Environment, Forest and Climate Change; the ministry's own page has moved and was not reached. UNESCO years from the World Network of Biosphere Reserves. Anchors are the core parks' Wikidata coordinates or the reserve's own; every item awaits review.",
+  "_categories": "The biome is the category: eighteen reserves across seven landscapes is what the map can say that a list cannot."
+}

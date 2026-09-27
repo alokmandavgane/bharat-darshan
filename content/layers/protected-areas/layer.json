@@ -1,0 +1,58 @@
+{
+  "id": "protected-areas",
+  "type": "points",
+  "marker": "dot",
+  "group": "wildlife",
+  "title": {
+    "en": "National parks and sanctuaries",
+    "hi": "राष्ट्रीय उद्यान और अभयारण्य"
+  },
+  "icon": "leaf",
+  "default_on": false,
+  "categories": [
+    { "id": "national-park", "color": "#2f6b3f", "title": { "en": "National park",                        "hi": "राष्ट्रीय उद्यान" } },
+    { "id": "sanctuary",     "color": "#8a9a3c", "title": { "en": "Wildlife sanctuary",                   "hi": "वन्यजीव अभयारण्य" } },
+    { "id": "bird",          "color": "#3f8fa8", "title": { "en": "Bird sanctuary",                       "hi": "पक्षी अभयारण्य" } },
+    { "id": "reserve",       "color": "#a88a5a", "title": { "en": "Conservation or community reserve",    "hi": "संरक्षण या सामुदायिक आरक्षित क्षेत्र" } }
+  ],
+  "fields": {
+    "area_km2": {
+      "type": "int",
+      "label": { "en": "Area", "hi": "क्षेत्रफल" },
+      "unit": { "en": "{n} km²", "hi": "{n} वर्ग किमी" }
+    },
+    "established": {
+      "type": "year",
+      "label": { "en": "Established", "hi": "स्थापना" }
+    }
+  },
+  "source": {
+    "format": "wikidata",
+    "root": "Q473972",
+    "country": "Q668",
+    "hindi": "hindi.json",
+    "rules": [
+      { "label": ["Tiger Reserve", "Biosphere Reserve", "Biosphere"], "skip": true },
+      { "label": ["National Park"], "category": "national-park", "priority": 2 },
+      { "label": ["Bird Sanctuary", "Pakshi", "Bird Park"], "category": "bird" },
+      { "label": ["Sanctuary", "Wildlife Reserve", "Abhayaranya"], "category": "sanctuary" },
+      { "label": ["Conservation Reserve", "Community Reserve"], "category": "reserve" },
+      { "classes": ["Q5533772", "Q158454"], "skip": true },
+      { "classes": ["Q46169"], "category": "national-park", "priority": 2 },
+      { "classes": ["Q2714144"], "category": "bird" },
+      { "classes": ["Q1377575"], "category": "sanctuary" },
+      { "classes": ["Q5162999"], "category": "reserve" }
+    ],
+    "_exclude": "A deer park and a fossil site filed as protected areas, and two second items for one sanctuary (Ramadevara Betta, Thol).",
+    "exclude": ["Q4682873", "Q7426133", "Q112252443", "Q129176824"]
+  },
+  "note": {
+    "en": "India's national parks and wildlife sanctuaries as Wikidata records them, a bead each at the point it gives. Wikidata is not the official register: it has almost all of the 106 national parks but only about three in four of the 570-odd sanctuaries, and few of the conservation and community reserves. Tiger and biosphere reserves have layers of their own.",
+    "hi": "भारत के राष्ट्रीय उद्यान और वन्यजीव अभयारण्य, जैसे विकिडेटा उन्हें दर्ज करता है, हर एक उसके दिए बिंदु पर एक मनका। विकिडेटा आधिकारिक रजिस्टर नहीं है: इसमें 106 राष्ट्रीय उद्यानों में से लगभग सभी हैं, पर 570 के आसपास अभयारण्यों में से केवल लगभग तीन-चौथाई, और संरक्षण तथा सामुदायिक आरक्षित क्षेत्र बहुत कम। बाघ और जैवमंडल आरक्षित क्षेत्रों की अपनी परतें हैं।"
+  },
+  "sources": [
+    "wikidata"
+  ],
+  "attribution": "Generated from Wikidata: every item in India that is an instance of protected area (Q473972) or a subclass of it, sorted by its English name first and its classes second, placed at its own coordinates. Hindi names are Wikidata's where it has one and otherwise drafted in hindi.json; every item awaits review.",
+  "_source": "\"wikidata\" asks one query and turns each row into an item by source.rules: the engine never sees this layer's name, and the pipeline knows only the rule format."
+}

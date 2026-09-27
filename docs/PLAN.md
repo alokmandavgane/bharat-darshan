@@ -2450,6 +2450,30 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-fifth round: parks and reserves. A new catalogue section ("Parks and reserves") and two Resources
+  pages, Wildlife reserves and Biosphere reserves. History is on hold at the owner's word.
+  - **Tiger reserves:** all 58 from NTCA's own table (ntca.gov.in/tiger-reserves), symbols sized by total area,
+    coloured by NTCA's five tiger landscapes; cards carry core, buffer and the latest notification year. NTCA
+    corrects six of Wikipedia's figures (Sahyadri, Ramgarh Vishdhari, Veerangana Durgavati, Dholpur-Karauli,
+    Guru Ghasidas-Tamor Pingla, Madhav). Anchors are the Wikipedia articles' coordinates; Pench (MP), Pench (MH)
+    and Nagarjunsagar-Srisailam were moved onto their own side of a state line. The 2022 tiger counts in
+    Wikipedia's table are not shipped: they are not yet checked against the Status of Tigers 2022 report.
+  - **Biosphere reserves:** all 18, thirteen in UNESCO's network (Cold Desert joined in 2025), sized by area and
+    coloured by biome. Years and areas from Wikipedia (rev. 1370428848), which cites the ministry; the ministry's
+    page has moved (404) and WII ENVIS did not answer, so those figures are not yet checked at source.
+  - **National parks and sanctuaries:** a new points generator, `source.format: "wikidata"` (04_layers.py): one
+    SPARQL for every instance of a class (here protected area, Q473972) in India, sorted into categories by
+    `source.rules` (name words first, classes second), Hindi from Wikidata or the layer's `hindi.json`. 524
+    items: 106 national parks, 351 wildlife sanctuaries, 56 bird sanctuaries, 11 conservation/community reserves.
+    Negative findings: Wikidata has about three in four of the ~570 sanctuaries and few of the ~115 conservation
+    and ~220 community reserves; 23 items have no coordinates; 91 reserved forests and other rows are left out on
+    purpose (a scattered, arbitrary sample of the country's reserved forests). 319 Hindi names were drafted or
+    corrected in hindi.json (Latin-script labels, and labels that called a national park a sanctuary).
+  - **Forests are on hold.** Hansen's tree cover (CC BY 4.0) is 11 tiles and 1.86 GB for India; each tile stores
+    one row per strip (LZW, no predictor), so range-reading a few rows in fifty would need ~150 MB. The owner
+    chose to wait. It would be the first `raster` layer.
+  - Kuno is still filed on Wikidata as a wildlife sanctuary (a national park since 2018); fix it on Wikidata
+    rather than here. 48 tests and the build pass.
 - 2026-09-27, eighty-fourth round: the Company's India and the princely states, c. 1857 CE. "Kingdoms and empires"
   gains its fifteenth and last planned era, from Edward Thornton's Gazetteer of 1857 and Smith's Oxford History (1919).
   - **The areas:** British India as one polity in seven shades (Bengal, the North-Western Provinces, Oudh, the Panjab,
