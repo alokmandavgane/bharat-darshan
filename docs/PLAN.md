@@ -2450,6 +2450,19 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-second round: c. 150 CE, and names before pins. "Kingdoms and empires" gains its fourth era,
+  "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas". It is drawn from Rudradāman's Junāgaḍh inscription (dated 150
+  CE), Gautamī Balaśrī's Nāsik praśasti and Kaniṣka's Sārnāth record (Epigraphia Indica VIII), with Raychaudhuri
+  1923.
+  - **The areas.** The Western Kṣatrapas are in six shades. The Sātavāhanas are in four, with Pratiṣṭhāna
+    as their capital. The Kuṣāṇas are in three, the east disputed. The Yaudheyas are drawn at Bijayagaḍh alone.
+  - **The capitals and pins.** Two capitals, Ujjayinī and Pratiṣṭhāna. Eight inscription pins.
+  - **Names first.** A `label` points layer may now carry `"names_first": true` (04_layers validates it; points.js
+    ranks such a layer before the pins). At country zoom the kingdoms pages' polity names were losing every
+    collision with the evidence pins: the Śuṅgas and the Sātavāhanas never showed. All four eras' name layers
+    now carry it. Names still never overlap one another, so in the crowded Tamil south one of Kerala and Pāṇḍya
+    waits for a closer zoom.
+  - Checked in the browser at 1280x800 (all four eras' names; the Kṣatrapa card); 48 tests and the build pass.
 - 2026-09-27, seventy-first round: after the Mauryas, and links that open where they point. "Kingdoms and
   empires" gains its third era, "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela". It is
   not a single year: each power is drawn at its attested height, and the blurb says two dates are disputed.

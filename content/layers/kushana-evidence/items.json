@@ -1,0 +1,322 @@
+[
+  {
+    "id": "junagadh",
+    "status": "draft",
+    "name": {
+      "en": "Junāgaḍh (Girnar rock)",
+      "hi": "जूनागढ़ (गिरनार शिला)"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.51966,
+      "lon": 70.45981
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Girnar rock, Junagadh (compiler's placement)",
+      "hi": "the Girnar rock, Junagadh (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Rudradāman's record of the Sudarśana dam, cut on Aśoka's rock in the year 72 (c. 150 CE).",
+      "hi": "सुदर्शन बाँध का रुद्रदामन् का अभिलेख, वर्ष 72 (लगभग 150 ई.) में अशोक की शिला पर उत्कीर्ण।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://en.wikipedia.org/wiki/Junagadh_rock_inscription_of_Rudradaman"
+    ],
+    "reading": "Accordingly, our inscription maybe assumed to have been gomposed about A.D. 151 or 152.",
+    "page": {
+      "en": "F. Kielhorn, Junagadh Rock Inscription of Rudradaman (1906), p. 41",
+      "hi": "F. Kielhorn, Junagadh Rock Inscription of Rudradaman (1906), पृ. 41"
+    },
+    "verse": "Rudradamno  varshe  dvisaptatitain[e] (read: Rudradāmno varṣe dvisaptatitame)",
+    "locus": {
+      "en": "Junāgaḍh, l. 4",
+      "hi": "जूनागढ़, l. 4"
+    }
+  },
+  {
+    "id": "nasik-cave-3",
+    "status": "draft",
+    "name": {
+      "en": "Nāsik, Cave 3",
+      "hi": "नासिक, गुफा 3"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.9412,
+      "lon": 73.7486
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Pandavleni caves, Nashik",
+      "hi": "the Pandavleni caves, Nashik पर"
+    },
+    "blurb": {
+      "en": "Queen Gautamī Balaśrī's praśasti of her son Gautamīputra Sātakarṇi, in her grandson Puḷumāvi's 19th year.",
+      "hi": "रानी गौतमी बलश्री की अपने पुत्र गौतमीपुत्र सातकर्णि की प्रशस्ति, उनके पौत्र पुळुमावि के 19वें वर्ष में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Pandavleni_Caves"
+    ],
+    "reading": "his dominions extended not only over Asika, Asaka",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 262",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 262"
+    },
+    "verse": "Anupa-Vidabha-Akaravati-rajasa (read: Anupa-Vidabha-Ākarāvati-rājasa)",
+    "locus": {
+      "en": "Nāsik praśasti, ll. 1-3",
+      "hi": "नासिक प्रशस्ति, ll. 1-3"
+    }
+  },
+  {
+    "id": "karle",
+    "status": "draft",
+    "name": {
+      "en": "Kārle",
+      "hi": "कार्ले"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.78333,
+      "lon": 73.47056
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Karla caves, Pune district",
+      "hi": "the Karla caves, Pune district पर"
+    },
+    "blurb": {
+      "en": "Gautamīputra's order to his officer at Māmala, the proof of his recovery of Mahārāṣṭra.",
+      "hi": "गौतमीपुत्र का मामल के अधिकारी को आदेश, महाराष्ट्र की वापसी का प्रमाण।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Karla_Caves"
+    ],
+    "reading": "a Karle epigraph addressed to the Amatya in charge of Mamala",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 262",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 262"
+    }
+  },
+  {
+    "id": "kanheri",
+    "status": "draft",
+    "name": {
+      "en": "Kānherī",
+      "hi": "कान्हेरी"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.20833,
+      "lon": 72.90639
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Kanheri caves, Mumbai Suburban",
+      "hi": "the Kanheri caves, Mumbai Suburban पर"
+    },
+    "blurb": {
+      "en": "Vāsiṣṭhīputra Sātakarṇi, husband of a daughter of the mahākṣatrapa Ru(dra): the Kṣatrapa-Sātavāhana marriage.",
+      "hi": "वासिष्ठीपुत्र सातकर्णि, महाक्षत्रप रु(द्र) की पुत्री के पति: क्षत्रप-सातवाहन विवाह।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Kanheri_Caves"
+    ],
+    "reading": "who is represented in a Kanheri inscription as the husband of a daughter of the Mahakshatrapa Ru(dra).",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 265",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 265"
+    }
+  },
+  {
+    "id": "sarnath",
+    "status": "draft",
+    "name": {
+      "en": "Sārnāth",
+      "hi": "सारनाथ"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.378,
+      "lon": 83.0251
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Sarnath, Varanasi district",
+      "hi": "Sarnath, Varanasi district पर"
+    },
+    "blurb": {
+      "en": "Friar Bala's Bodhisattva of Kaniṣka's year 3, the earliest record naming him, with the satraps Vanaṣpara and Kharapallāna.",
+      "hi": "कनिष्क के वर्ष 3 का भिक्षु बल का बोधिसत्त्व, उनका नाम लेने वाला प्राचीनतम अभिलेख, क्षत्रप वनष्पर और खरपल्लान के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://en.wikipedia.org/wiki/Sarnath"
+    ],
+    "reading": "no absolute proof that at that time Kanishka's rule extended as far as Benares",
+    "page": {
+      "en": "J. Ph. Vogel, Epigraphical Discoveries at Sarnath (1906), p. 173",
+      "hi": "J. Ph. Vogel, Epigraphical Discoveries at Sarnath (1906), पृ. 173"
+    },
+    "verse": "Mahftrajasya  Kanishkasya  sam  3 (read: Mahārājasya Kaniṣkasya saṃ 3)",
+    "locus": {
+      "en": "Sārnāth, iii a ll. 1-10",
+      "hi": "सारनाथ, iii a ll. 1-10"
+    }
+  },
+  {
+    "id": "mathura-kushana",
+    "status": "draft",
+    "name": {
+      "en": "Mathurā",
+      "hi": "मथुरा"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.4924,
+      "lon": 77.6737
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Mathura",
+      "hi": "Mathura पर"
+    },
+    "blurb": {
+      "en": "The Kuṣāṇas' southern city: Kaniṣka's and Huviṣka's dated inscriptions, and Huviṣka's monastery.",
+      "hi": "कुषाणों का दक्षिणी नगर: कनिष्क और हुविष्क के तिथियुक्त अभिलेख, और हुविष्क का विहार।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Mathura"
+    ],
+    "reading": "built a splendid monastery at Mathura",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 254",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 254"
+    }
+  },
+  {
+    "id": "sravasti",
+    "status": "draft",
+    "name": {
+      "en": "Śrāvastī",
+      "hi": "श्रावस्ती"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.51708,
+      "lon": 82.05061
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Saheth-Maheth, Shravasti district",
+      "hi": "Saheth-Maheth, Shravasti district पर"
+    },
+    "blurb": {
+      "en": "A dated record of Kaniṣka's reign.",
+      "hi": "कनिष्क के शासन का एक तिथियुक्त अभिलेख।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Shravasti"
+    ],
+    "reading": "from Mathura and Sravasti, and from Sarnath near Benares",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 253",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 253"
+    }
+  },
+  {
+    "id": "bijayagadh",
+    "status": "draft",
+    "name": {
+      "en": "Bijayagaḍh",
+      "hi": "बिजयगढ़"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9,
+      "lon": 77.28
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Bayana, Bharatpur district",
+      "hi": "Bayana, Bharatpur district पर"
+    },
+    "blurb": {
+      "en": "The Yaudheyas' stone inscription.",
+      "hi": "यौधेयों का शिलालेख।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Bayana"
+    ],
+    "reading": "Rudradaman also conquered the Yaudheyas, who are known, from a stone inscription to have occupied the Bijayagadh region in the Bbaratpur state.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 268",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 268"
+    }
+  }
+]

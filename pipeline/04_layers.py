@@ -27,7 +27,10 @@ Layer types known today:
            is drawn there as well
 A points layer's `marker` says how it draws: a clay token (default), a name alone
 (label), a proportional circle (symbol), a bead the size of a pinhead (dot), or a
-figurine built from a recipe under content/models/ (model). A points layer may also be
+figurine built from a recipe under content/models/ (model). A names layer may say
+`"names_first": true` to be placed before the pins, which otherwise claim their space first:
+on a kingdoms page the polities' names are the point, and a top-priority pin still draws
+where it overlaps one. A points layer may also be
 generated from a source (`source.format: "geonames"`) and merged with its curated items.
 The engine knows types and markers, never layer ids.
 """
@@ -163,6 +166,8 @@ def validate_layer(layer, folder, registry):
             p.append('only a points layer has a marker')
         elif layer['marker'] not in MARKERS:
             p.append(f'marker must be one of {MARKERS}')
+    if 'names_first' in layer and (layer.get('marker') != 'label' or layer['names_first'] is not True):
+        p.append('names_first is `true` on a label layer, or absent')
     if layer.get('type') == 'points':
         src = layer.get('source') or {}
         if src and src.get('format') not in ('geonames', DISTRICTS):
@@ -1489,7 +1494,7 @@ def finish(layer, out_items, out, problems, order, extra=None):
     # the build did with the source, for whoever edits the layer. What the reader is owed --
     # who published it, under what licence -- is the registry's job now, and saying it twice
     # is the sprawl the registry exists to stop.
-    data = {k: layer[k] for k in ('id', 'type', 'marker', 'model', 'flow', 'float', 'arc', 'size', 'title', 'icon', 'group', 'categories',
+    data = {k: layer[k] for k in ('id', 'type', 'marker', 'names_first', 'model', 'flow', 'float', 'arc', 'size', 'title', 'icon', 'group', 'categories',
                                   'fields', 'scale', 'height', 'arrows', 'unit', 'note', 'sources') if k in layer}
     data['default_on'] = bool(layer.get('default_on'))
     data['count'] = len(out_items)

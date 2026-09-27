@@ -22,7 +22,11 @@
     "sunga",
     "sunga-names",
     "sunga-capitals",
-    "sunga-evidence"
+    "sunga-evidence",
+    "kushana",
+    "kushana-names",
+    "kushana-capitals",
+    "kushana-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -87,6 +91,27 @@
         "sunga-names",
         "sunga-capitals",
         "sunga-evidence"
+      ]
+    },
+    {
+      "id": "kushana",
+      "display": {
+        "en": "c. 150 CE",
+        "hi": "लगभग 150 ई."
+      },
+      "title": {
+        "en": "Kuṣāṇas, Kṣatrapas and Sātavāhanas",
+        "hi": "कुषाण, क्षत्रप और सातवाहन"
+      },
+      "blurb": {
+        "en": "The Kuṣāṇas in the north, Rudradāman's Western Kṣatrapas and the restored Sātavāhanas, when the Junāgaḍh inscription was cut (150 CE). From their own records and Raychaudhuri (1923).",
+        "hi": "उत्तर में कुषाण, रुद्रदामन् के पश्चिमी क्षत्रप और पुनर्स्थापित सातवाहन, जब जूनागढ़ अभिलेख उत्कीर्ण हुआ (150 ई.)। उनके अपने अभिलेखों और रायचौधुरी (1923) से।"
+      },
+      "layers": [
+        "kushana",
+        "kushana-names",
+        "kushana-capitals",
+        "kushana-evidence"
       ]
     }
   ],

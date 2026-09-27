@@ -1,0 +1,863 @@
+[
+  {
+    "id": "kushana-held",
+    "status": "draft",
+    "name": {
+      "en": "Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+    },
+    "category": "kushana",
+    "rank": 1,
+    "districts": [
+      89,
+      106,
+      107,
+      145,
+      146,
+      153,
+      154,
+      157,
+      158,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186
+    ],
+    "verse": "Mahftrajasya  Kanishkasya  sam  3 (read: Mahārājasya Kaniṣkasya saṃ 3)",
+    "locus": {
+      "en": "Sārnāth, iii a ll. 1-10",
+      "hi": "सारनाथ, iii a ll. 1-10"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Kaniṣka and Huviṣka, 'from Gandhāra and Kaśmīr to Benares'; its capital Puruṣapura (Peshawar) lies outside today's India. Kaniṣka's era is disputed: 78 CE, or c. 125.",
+      "hi": "कनिष्क और हुविष्क का साम्राज्य, 'गांधार और कश्मीर से बनारस तक'; इसकी राजधानी पुरुषपुर (पेशावर) आज के भारत के बाहर है। कनिष्क का संवत् विवादित है: 78 ई., या लगभग 125।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#5b6b1e",
+    "grade": {
+      "en": "Held: Mathurā and Śrāvastī, where their dated inscriptions stand",
+      "hi": "अधिकृत: मथुरा और श्रावस्ती, जहाँ उनके तिथियुक्त अभिलेख हैं"
+    },
+    "reading": "from Mathura and Sravasti, and from Sarnath near Benares",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 253",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 253"
+    }
+  },
+  {
+    "id": "kushana-east",
+    "status": "draft",
+    "name": {
+      "en": "Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+    },
+    "category": "kushana",
+    "rank": 1,
+    "districts": [
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    "verse": "Mahftrajasya  Kanishkasya  sam  3 (read: Mahārājasya Kaniṣkasya saṃ 3)",
+    "locus": {
+      "en": "Sārnāth, iii a ll. 1-10",
+      "hi": "सारनाथ, iii a ll. 1-10"
+    },
+    "identified": {
+      "en": "disputed, after Vogel 1906",
+      "hi": "विवादित, Vogel 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Kaniṣka and Huviṣka, 'from Gandhāra and Kaśmīr to Benares'; its capital Puruṣapura (Peshawar) lies outside today's India. Kaniṣka's era is disputed: 78 CE, or c. 125.",
+      "hi": "कनिष्क और हुविष्क का साम्राज्य, 'गांधार और कश्मीर से बनारस तक'; इसकी राजधानी पुरुषपुर (पेशावर) आज के भारत के बाहर है। कनिष्क का संवत् विवादित है: 78 ई., या लगभग 125।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637"
+    ],
+    "color": "#8a9b3c",
+    "grade": {
+      "en": "The east: Sārnāth's satraps, and Kaniṣka's coins to Ghazipur (disputed)",
+      "hi": "पूर्व: सारनाथ के क्षत्रप, और गाज़ीपुर तक कनिष्क के सिक्के (विवादित)"
+    },
+    "reading": "no absolute proof that at that time Kanishka's rule extended as far as Benares",
+    "page": {
+      "en": "J. Ph. Vogel, Epigraphical Discoveries at Sarnath (1906), p. 173",
+      "hi": "J. Ph. Vogel, Epigraphical Discoveries at Sarnath (1906), पृ. 173"
+    }
+  },
+  {
+    "id": "kushana-within",
+    "status": "draft",
+    "name": {
+      "en": "Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+    },
+    "category": "kushana",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      28,
+      29,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      155,
+      156,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      172,
+      173,
+      174,
+      175,
+      201,
+      202
+    ],
+    "verse": "Mahftrajasya  Kanishkasya  sam  3 (read: Mahārājasya Kaniṣkasya saṃ 3)",
+    "locus": {
+      "en": "Sārnāth, iii a ll. 1-10",
+      "hi": "सारनाथ, iii a ll. 1-10"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Kaniṣka and Huviṣka, 'from Gandhāra and Kaśmīr to Benares'; its capital Puruṣapura (Peshawar) lies outside today's India. Kaniṣka's era is disputed: 78 CE, or c. 125.",
+      "hi": "कनिष्क और हुविष्क का साम्राज्य, 'गांधार और कश्मीर से बनारस तक'; इसकी राजधानी पुरुषपुर (पेशावर) आज के भारत के बाहर है। कनिष्क का संवत् विवादित है: 78 ई., या लगभग 125।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#b3c07a",
+    "grade": {
+      "en": "Within 'Gandhāra and Kaśmīr to Benares', with no evidence of its own",
+      "hi": "'गांधार और कश्मीर से बनारस तक' के भीतर, अपने किसी प्रमाण के बिना"
+    },
+    "reading": "ruled over a wide realm which extended from Gandhara and Kas'mir to Benares",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 253",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 253"
+    }
+  },
+  {
+    "id": "kshatrapa-seat",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      121,
+      127,
+      128,
+      129,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      442,
+      464,
+      465
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#1f4e5f",
+    "grade": {
+      "en": "Seat: Avanti, Rudradāman's court at Ujjain",
+      "hi": "केंद्र: अवन्ति, उज्जैन में रुद्रदामन् का दरबार"
+    },
+    "reading": "Rudradaman apparently held his court at Ujjain",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 268",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 268"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "kshatrapa-held",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      494
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#2e6f86",
+    "grade": {
+      "en": "Held: Ānarta and Surāṣṭra, under the Pahlava governor Suviśākha",
+      "hi": "अधिकृत: आनर्त और सुराष्ट्र, पह्लव राज्यपाल सुविशाख के अधीन"
+    },
+    "reading": "placing the provinces of Anarta and Surashtra under his Pallava Amatya, Suvisakha",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 268",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 268"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "kshatrapa-cutch",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      468
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#3f86a0",
+    "grade": {
+      "en": "Held: Kaccha, where the Andhau inscriptions stand",
+      "hi": "अधिकृत: कच्छ, जहाँ अंधौ के अभिलेख हैं"
+    },
+    "reading": "the Andhau inscriptions merely imply the possession of Cutch by the House of",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 261",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 261"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "kshatrapa-named",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      440,
+      441,
+      448,
+      449,
+      466,
+      467,
+      495,
+      496,
+      517,
+      518,
+      519,
+      520,
+      528,
+      529,
+      585,
+      586
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#6ea8bd",
+    "grade": {
+      "en": "Named in his list: Maru, Anūpa, Aparānta",
+      "hi": "उनकी सूची में नामित: मरु, अनूप, अपरान्त"
+    },
+    "reading": "The place names in the inscription seem to show that the rule of Rudradaman extended over",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 267",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 267"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "kshatrapa-loose",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      122,
+      123,
+      124,
+      125,
+      126,
+      130,
+      131
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#a3c7d4",
+    "grade": {
+      "en": "Kukura and Niṣāda, placed only loosely by the western Vindhyas",
+      "hi": "कुकुर और निषाद, पश्चिमी विन्ध्य के पास केवल मोटे तौर पर"
+    },
+    "reading": "(in the region of the Western Vindhyas",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 267",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 267"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "kshatrapa-within",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "rank": 1,
+    "districts": [
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493
+    ],
+    "verse": "Anupanivrid-Anartta-Sura8htra (read: Anūpanīvṛd-Ānartta-Surāṣṭra)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "likely: drawn by the compiler",
+      "hi": "संभावित: संकलक द्वारा"
+    },
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654"
+    ],
+    "color": "#c9dfe6",
+    "grade": {
+      "en": "Within: the Gujarat plain between, with no evidence of its own",
+      "hi": "भीतर: बीच का गुजरात मैदान, अपने किसी प्रमाण के बिना"
+    },
+    "capital": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    }
+  },
+  {
+    "id": "satavahana-core",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      513,
+      514,
+      515,
+      523
+    ],
+    "verse": "Anupa-Vidabha-Akaravati-rajasa (read: Anupa-Vidabha-Ākarāvati-rājasa)",
+    "locus": {
+      "en": "Nāsik praśasti, ll. 1-3",
+      "hi": "नासिक प्रशस्ति, ll. 1-3"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The restored Sātavāhanas of Gautamīputra and his son Puḷumāvi, ruling from Pratiṣṭhāna across the Deccan. Rudradāman twice defeated their Sātakarṇi but spared him, 'their connection being so near'.",
+      "hi": "गौतमीपुत्र और उनके पुत्र पुळुमावि के पुनर्स्थापित सातवाहन, प्रतिष्ठान से दक्कन भर में शासन करते। रुद्रदामन् ने उनके सातकर्णि को दो बार हराया पर छोड़ दिया, 'संबंध निकट होने से'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#8a4a0e",
+    "grade": {
+      "en": "Core: Mūlaka, round the capital Pratiṣṭhāna (Paithan)",
+      "hi": "केंद्र: मूलक, राजधानी प्रतिष्ठान (पैठण) के आसपास"
+    },
+    "reading": "We learn from Ptolemy that his capital was Baithan, i. e., Paithan",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 264",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 264"
+    },
+    "capital": {
+      "en": "Pratiṣṭhāna",
+      "hi": "प्रतिष्ठान"
+    }
+  },
+  {
+    "id": "satavahana-held",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      497,
+      498,
+      499,
+      516,
+      521,
+      522,
+      524,
+      525,
+      526,
+      527,
+      530,
+      531,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      634
+    ],
+    "verse": "Anupa-Vidabha-Akaravati-rajasa (read: Anupa-Vidabha-Ākarāvati-rājasa)",
+    "locus": {
+      "en": "Nāsik praśasti, ll. 1-3",
+      "hi": "नासिक प्रशस्ति, ll. 1-3"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The restored Sātavāhanas of Gautamīputra and his son Puḷumāvi, ruling from Pratiṣṭhāna across the Deccan. Rudradāman twice defeated their Sātakarṇi but spared him, 'their connection being so near'.",
+      "hi": "गौतमीपुत्र और उनके पुत्र पुळुमावि के पुनर्स्थापित सातवाहन, प्रतिष्ठान से दक्कन भर में शासन करते। रुद्रदामन् ने उनके सातकर्णि को दो बार हराया पर छोड़ दिया, 'संबंध निकट होने से'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#b8691f",
+    "grade": {
+      "en": "Held: Nāsik, Mahārāṣṭra and the Krishna country, by inscriptions and coins",
+      "hi": "अधिकृत: नासिक, महाराष्ट्र और कृष्णा देश, अभिलेखों और सिक्कों से"
+    },
+    "reading": "coins prove that Pulumayi's dominions included the Krishna district as well as Maharashtra.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 264",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 264"
+    },
+    "capital": {
+      "en": "Pratiṣṭhāna",
+      "hi": "प्रतिष्ठान"
+    }
+  },
+  {
+    "id": "satavahana-named",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      447,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      532,
+      533,
+      534
+    ],
+    "verse": "Anupa-Vidabha-Akaravati-rajasa (read: Anupa-Vidabha-Ākarāvati-rājasa)",
+    "locus": {
+      "en": "Nāsik praśasti, ll. 1-3",
+      "hi": "नासिक प्रशस्ति, ll. 1-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The restored Sātavāhanas of Gautamīputra and his son Puḷumāvi, ruling from Pratiṣṭhāna across the Deccan. Rudradāman twice defeated their Sātakarṇi but spared him, 'their connection being so near'.",
+      "hi": "गौतमीपुत्र और उनके पुत्र पुळुमावि के पुनर्स्थापित सातवाहन, प्रतिष्ठान से दक्कन भर में शासन करते। रुद्रदामन् ने उनके सातकर्णि को दो बार हराया पर छोड़ दिया, 'संबंध निकट होने से'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#d99a55",
+    "grade": {
+      "en": "Named in the Nāsik praśasti, and not in Rudradāman's list: Asaka, Vidarbha",
+      "hi": "नासिक प्रशस्ति में नामित, रुद्रदामन् की सूची में नहीं: असक, विदर्भ"
+    },
+    "reading": "his dominions extended not only over Asika, Asaka",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 262",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 262"
+    },
+    "capital": {
+      "en": "Pratiṣṭhāna",
+      "hi": "प्रतिष्ठान"
+    }
+  },
+  {
+    "id": "satavahana-kuntala",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      552,
+      553,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      568,
+      579,
+      580
+    ],
+    "verse": "Anupa-Vidabha-Akaravati-rajasa (read: Anupa-Vidabha-Ākarāvati-rājasa)",
+    "locus": {
+      "en": "Nāsik praśasti, ll. 1-3",
+      "hi": "नासिक प्रशस्ति, ll. 1-3"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The restored Sātavāhanas of Gautamīputra and his son Puḷumāvi, ruling from Pratiṣṭhāna across the Deccan. Rudradāman twice defeated their Sātakarṇi but spared him, 'their connection being so near'.",
+      "hi": "गौतमीपुत्र और उनके पुत्र पुळुमावि के पुनर्स्थापित सातवाहन, प्रतिष्ठान से दक्कन भर में शासन करते। रुद्रदामन् ने उनके सातकर्णि को दो बार हराया पर छोड़ दिया, 'संबंध निकट होने से'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#ecc690",
+    "grade": {
+      "en": "Kuntala: a line of Sātakarṇis in the Kanarese country",
+      "hi": "कुन्तल: कन्नड़ देश में सातकर्णियों की एक शाखा"
+    },
+    "reading": "testify to the existence of a family of Satakarnis who ruled over Kuntala",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 219",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 219"
+    },
+    "capital": {
+      "en": "Pratiṣṭhāna",
+      "hi": "प्रतिष्ठान"
+    }
+  },
+  {
+    "id": "yaudheya-held",
+    "status": "draft",
+    "name": {
+      "en": "Yaudheya",
+      "hi": "यौधेय"
+    },
+    "category": "yaudheya",
+    "rank": 1,
+    "districts": [
+      105
+    ],
+    "verse": "YaudheyanSm  prasahy=6tsadakena (read: Yaudheyānāṃ prasahyotsādakena)",
+    "locus": {
+      "en": "Junāgaḍh, ll. 11-12",
+      "hi": "जूनागढ़, ll. 11-12"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Yaudheyas, 'proud of their title of heroes among all kṣatriyas', whom Rudradāman claims to have destroyed. Drawn only at Bijayagaḍh, where their stone inscription stands; how far they reached is not said.",
+      "hi": "यौधेय, 'सब क्षत्रियों में वीर की उपाधि पर गर्वित', जिन्हें रुद्रदामन् नष्ट करने का दावा करते हैं। केवल बिजयगढ़ पर, जहाँ उनका शिलालेख है; वे कितनी दूर तक थे, यह नहीं कहा गया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#9e3b6b",
+    "grade": {
+      "en": "Bijayagaḍh, their stone inscription's place",
+      "hi": "बिजयगढ़, उनके शिलालेख का स्थान"
+    },
+    "reading": "Rudradaman also conquered the Yaudheyas, who are known, from a stone inscription to have occupied the Bijayagadh region in the Bbaratpur state.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 268",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 268"
+    }
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "kushana-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 150 CE",
+    "hi": "नाम: लगभग 150 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "kushana",
+      "color": "#5b6b1e",
+      "title": {
+        "en": "The Kuṣāṇa empire",
+        "hi": "कुषाण साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kshatrapa",
+      "color": "#2e6f86",
+      "title": {
+        "en": "The Western Kṣatrapas",
+        "hi": "पश्चिमी क्षत्रप"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "satavahana",
+      "color": "#b8691f",
+      "title": {
+        "en": "The Sātavāhanas",
+        "hi": "सातवाहन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "yaudheya",
+      "color": "#9e3b6b",
+      "title": {
+        "en": "The Yaudheyas",
+        "hi": "यौधेय"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "epigraphia-indica-viii"
+  ]
+}

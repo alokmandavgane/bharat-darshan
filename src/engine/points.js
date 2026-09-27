@@ -134,12 +134,14 @@ export function createPoints(container, { text, onSelect }) {
     // view should name Rajasthan, not the Aravalli across it) and after them on a page,
     // whose own names are the point of it. A town's name always yields to its state's;
     // the bead itself is drawn by the GPU regardless.
-    const rank = (k) => (k === 'dot' ? 2 : k === 'label' ? 1 : 0);
-    const order = [...layers].sort((a, b) => rank(a[1].layer.marker || 'token') - rank(b[1].layer.marker || 'token'));
+    // A names layer may ask to go first (`names_first`): a kingdoms page is about its
+    // polities, whose names would otherwise lose every tussle with the evidence pins.
+    const rank = (layer) => (layer.marker === 'label' ? (layer.names_first ? -1 : 1) : layer.marker === 'dot' ? 2 : 0);
+    const order = [...layers].sort((a, b) => rank(a[1].layer) - rank(b[1].layer));
     const statesAt = stateNamesFirst ? 1 : 2;
     let stateNamesPlaced = false;
     for (const [id, { items }] of order) {
-      if (!stateNamesPlaced && rank(layers.get(id).layer.marker || 'token') >= statesAt) {
+      if (!stateNamesPlaced && rank(layers.get(id).layer) >= statesAt) {
         if (stateNames) placed.push(...stateNames(placed));
         stateNamesPlaced = true;
       }

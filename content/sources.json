@@ -749,6 +749,24 @@
         "en": "The edition of Khāravela's inscription the kingdoms page quotes, with its editors' identifications of the places it names.",
         "hi": "खारवेल के अभिलेख का वह संस्करण जिसे राज्य पृष्ठ उद्धृत करता है, उसमें नामित स्थानों की संपादकों द्वारा पहचान के साथ।"
       }
+    },
+    "epigraphia-indica-viii": {
+      "title": {
+        "en": "Epigraphia Indica, vol. VIII (1905-06)",
+        "hi": "एपिग्राफ़िया इंडिका, खंड VIII (1905-06)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta: Kielhorn on the Junāgaḍh inscription, Senart on the Nāsik caves, Vogel on Sārnāth",
+        "hi": "भारत सरकार, कलकत्ता: जूनागढ़ अभिलेख पर कीलहॉर्न, नासिक गुफाओं पर सेनार, सारनाथ पर फ़ोगल"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.56654",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The editions of Rudradāman's, Gautamī Balaśrī's and Kaniṣka's inscriptions that the kingdoms page quotes for c. 150 CE.",
+        "hi": "रुद्रदामन्, गौतमी बलश्री और कनिष्क के अभिलेखों के संस्करण जिन्हें राज्य पृष्ठ लगभग 150 ई. के लिए उद्धृत करता है।"
+      }
     }
   }
 }

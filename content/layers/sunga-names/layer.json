@@ -2,6 +2,7 @@
   "id": "sunga-names",
   "type": "points",
   "marker": "label",
+  "names_first": true,
   "group": "culture",
   "title": {
     "en": "Names: the kingdoms after the Mauryas",

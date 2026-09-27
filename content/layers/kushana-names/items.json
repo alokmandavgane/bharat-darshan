@@ -1,0 +1,104 @@
+[
+  {
+    "id": "kushana",
+    "status": "draft",
+    "name": {
+      "en": "Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+    },
+    "category": "kushana",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.9,
+      "lon": 75.85
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The empire of Kaniṣka and Huviṣka, 'from Gandhāra and Kaśmīr to Benares'; its capital Puruṣapura (Peshawar) lies outside today's India. Kaniṣka's era is disputed: 78 CE, or c. 125.",
+      "hi": "कनिष्क और हुविष्क का साम्राज्य, 'गांधार और कश्मीर से बनारस तक'; इसकी राजधानी पुरुषपुर (पेशावर) आज के भारत के बाहर है। कनिष्क का संवत् विवादित है: 78 ई., या लगभग 125।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kshatrapa",
+    "status": "draft",
+    "name": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "category": "kshatrapa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 73.0
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Śaka satraps of Ujjain under the mahākṣatrapa Rudradāman, who lists the countries he won by his own valour. Five of them had been Gautamīputra's (Raychaudhuri p. 267).",
+      "hi": "महाक्षत्रप रुद्रदामन् के अधीन उज्जैन के शक क्षत्रप, जो अपने पराक्रम से जीते देशों की सूची देते हैं। इनमें से पाँच गौतमीपुत्र के थे (रायचौधुरी पृ. 267)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "satavahana",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.3,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The restored Sātavāhanas of Gautamīputra and his son Puḷumāvi, ruling from Pratiṣṭhāna across the Deccan. Rudradāman twice defeated their Sātakarṇi but spared him, 'their connection being so near'.",
+      "hi": "गौतमीपुत्र और उनके पुत्र पुळुमावि के पुनर्स्थापित सातवाहन, प्रतिष्ठान से दक्कन भर में शासन करते। रुद्रदामन् ने उनके सातकर्णि को दो बार हराया पर छोड़ दिया, 'संबंध निकट होने से'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "yaudheya",
+    "status": "draft",
+    "name": {
+      "en": "Yaudheya",
+      "hi": "यौधेय"
+    },
+    "category": "yaudheya",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.1,
+      "lon": 77.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Yaudheyas, 'proud of their title of heroes among all kṣatriyas', whom Rudradāman claims to have destroyed. Drawn only at Bijayagaḍh, where their stone inscription stands; how far they reached is not said.",
+      "hi": "यौधेय, 'सब क्षत्रियों में वीर की उपाधि पर गर्वित', जिन्हें रुद्रदामन् नष्ट करने का दावा करते हैं। केवल बिजयगढ़ पर, जहाँ उनका शिलालेख है; वे कितनी दूर तक थे, यह नहीं कहा गया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56654",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  }
+]

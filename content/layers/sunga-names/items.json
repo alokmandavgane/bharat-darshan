@@ -9,8 +9,8 @@
     "category": "sunga",
     "priority": 1,
     "anchor": {
-      "lat": 24.9,
-      "lon": 78.6
+      "lat": 25.75,
+      "lon": 82.7
     },
     "regions": [
       "IN-UP"
@@ -62,8 +62,8 @@
     "category": "satavahana",
     "priority": 1,
     "anchor": {
-      "lat": 19.6,
-      "lon": 75.3
+      "lat": 18.2,
+      "lon": 76.3
     },
     "regions": [
       "IN-MH"
@@ -160,8 +160,8 @@
     "category": "kerala",
     "priority": 1,
     "anchor": {
-      "lat": 10.5,
-      "lon": 76.25
+      "lat": 11.25,
+      "lon": 75.78
     },
     "regions": [
       "IN-KL"

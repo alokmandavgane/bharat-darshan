@@ -2,6 +2,7 @@
   "id": "mahajanapadas-names",
   "type": "points",
   "marker": "label",
+  "names_first": true,
   "group": "culture",
   "title": {
     "en": "Names of the sixteen great countries",

@@ -1,0 +1,76 @@
+{
+  "id": "kushana-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 150 CE",
+    "hi": "लगभग 150 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "inscription",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Inscriptions",
+        "hi": "अभिलेख"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The inscriptions the map rests on. Junāgaḍh is the Kṣatrapas'. Nāsik, Kārle and Kānherī are the Sātavāhanas', Kānherī recording their marriage with Rudradāman's house. Sārnāth, Mathurā and Śrāvastī are the Kuṣāṇas', and Bijayagaḍh is the Yaudheyas'. Each pin is at its site or the nearest town.",
+    "hi": "वे अभिलेख जिन पर मानचित्र टिका है। जूनागढ़ क्षत्रपों का है। नासिक, कार्ले और कान्हेरी सातवाहनों के हैं, कान्हेरी रुद्रदामन् के घराने के साथ उनके विवाह को दर्ज करता है। सारनाथ, मथुरा और श्रावस्ती कुषाणों के हैं, और बिजयगढ़ यौधेयों का है। हर पिन अपने स्थल या निकटतम नगर पर है।"
+  },
+  "sources": [
+    "epigraphia-indica-viii",
+    "raychaudhuri-1923",
+    "wikipedia"
+  ]
+}

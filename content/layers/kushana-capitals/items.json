@@ -1,0 +1,67 @@
+[
+  {
+    "id": "kshatrapa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ujjayinī",
+      "hi": "उज्जयिनी"
+    },
+    "category": "kshatrapa",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.18239,
+      "lon": 75.77643
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+    },
+    "identified": {
+      "en": "certain, placed at Ujjain",
+      "hi": "निश्चित, Ujjain पर"
+    },
+    "blurb": {
+      "en": "The capital of Western Kṣatrapas.",
+      "hi": "पश्चिमी क्षत्रप की राजधानी।"
+    },
+    "sources": [
+      "https://www.geonames.org/1253914"
+    ]
+  },
+  {
+    "id": "satavahana-capital",
+    "status": "draft",
+    "name": {
+      "en": "Pratiṣṭhāna",
+      "hi": "प्रतिष्ठान"
+    },
+    "category": "satavahana",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.48,
+      "lon": 75.38
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "identified": {
+      "en": "certain, placed at Paithan",
+      "hi": "निश्चित, Paithan पर"
+    },
+    "blurb": {
+      "en": "The capital of Sātavāhana (Āndhra).",
+      "hi": "सातवाहन (आन्ध्र) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Paithan"
+    ]
+  }
+]
