@@ -1,0 +1,123 @@
+{
+  "id": "aurangzeb-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Names: the kingdoms of c. 1707 CE",
+    "hi": "नाम: लगभग 1707 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Mughal empire",
+        "hi": "मुग़ल साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "maratha",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Marāṭhās",
+        "hi": "मराठा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mewar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "marwar",
+      "color": "#a8544a",
+      "title": {
+        "en": "Mārwār",
+        "hi": "मारवाड़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "amber",
+      "color": "#c9854a",
+      "title": {
+        "en": "Amber",
+        "hi": "आमेर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "ahom",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Ahom kingdom",
+        "hi": "अहोम राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "koch",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Kūch Bihār",
+        "hi": "कूच बिहार"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "keladi",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Kanara (Keḷadi)",
+        "hi": "कनारा (केलदि)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "calicut",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Calicut (the Sāmūtiri)",
+        "hi": "कालीकट (सामूतिरि)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cochin",
+      "color": "#b8454f",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "travancore",
+      "color": "#c9785a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "elliot-dowson-1877",
+    "hamilton-1727",
+    "smith-1919"
+  ]
+}

@@ -1,0 +1,365 @@
+[
+  {
+    "id": "mughal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.65583333,
+      "lon": 77.24083333
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Red Fort, Delhi",
+      "hi": "निश्चित, Red Fort, Delhi पर"
+    },
+    "blurb": {
+      "en": "The capital of Mughal empire.",
+      "hi": "मुग़ल साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Red_Fort"
+    ]
+  },
+  {
+    "id": "maratha-capital",
+    "status": "draft",
+    "name": {
+      "en": "Sātārā",
+      "hi": "सातारा"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.67236111,
+      "lon": 73.99538889
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+    },
+    "identified": {
+      "en": "certain, placed at Ajinkyatara, Satara",
+      "hi": "निश्चित, Ajinkyatara, Satara पर"
+    },
+    "blurb": {
+      "en": "The capital of Marāṭhās.",
+      "hi": "मराठा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Ajinkyatara"
+    ]
+  },
+  {
+    "id": "mewar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.576,
+      "lon": 73.683
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at City Palace, Udaipur",
+      "hi": "निश्चित, City Palace, Udaipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Mewār.",
+      "hi": "मेवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://en.wikipedia.org/wiki/City_Palace,_Udaipur"
+    ]
+  },
+  {
+    "id": "marwar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "category": "marwar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.29805556,
+      "lon": 73.01888889
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at Mehrangarh, Jodhpur",
+      "hi": "निश्चित, Mehrangarh, Jodhpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Mārwār.",
+      "hi": "मारवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://en.wikipedia.org/wiki/Mehrangarh"
+    ]
+  },
+  {
+    "id": "amber-capital",
+    "status": "draft",
+    "name": {
+      "en": "Āmer",
+      "hi": "आमेर"
+    },
+    "category": "amber",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9859,
+      "lon": 75.8507
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Amber",
+      "hi": "आमेर"
+    },
+    "identified": {
+      "en": "certain, placed at Amber Fort",
+      "hi": "निश्चित, Amber Fort पर"
+    },
+    "blurb": {
+      "en": "The capital of Amber.",
+      "hi": "आमेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://en.wikipedia.org/wiki/Amer_Fort"
+    ]
+  },
+  {
+    "id": "ahom-capital",
+    "status": "draft",
+    "name": {
+      "en": "Garhgaon",
+      "hi": "गढ़गाँव"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.935531,
+      "lon": 94.744257
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Garhgaon",
+      "hi": "निश्चित, Garhgaon पर"
+    },
+    "blurb": {
+      "en": "The capital of Ahom kingdom.",
+      "hi": "अहोम राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://en.wikipedia.org/wiki/Garhgaon"
+    ]
+  },
+  {
+    "id": "koch-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3269,
+      "lon": 89.4386
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    },
+    "identified": {
+      "en": "certain, placed at Cooch Behar",
+      "hi": "निश्चित, Cooch Behar पर"
+    },
+    "blurb": {
+      "en": "The capital of Kūch Bihār.",
+      "hi": "कूच बिहार की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://en.wikipedia.org/wiki/Cooch_Behar_Palace"
+    ]
+  },
+  {
+    "id": "keladi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bednūr (Nagara)",
+      "hi": "बेदनूर (नगर)"
+    },
+    "category": "keladi",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.82,
+      "lon": 75.04
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+    },
+    "identified": {
+      "en": "likely, placed at Nagara, Hosanagara (approximate)",
+      "hi": "संभावित, Nagara, Hosanagara (approximate) पर"
+    },
+    "blurb": {
+      "en": "The capital of Kanara (Keḷadi).",
+      "hi": "कनारा (केलदि) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001",
+      "https://en.wikipedia.org/wiki/Nagara_Fort"
+    ]
+  },
+  {
+    "id": "calicut-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kozhikode",
+      "hi": "कोझिकोड"
+    },
+    "category": "calicut",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.24888889,
+      "lon": 75.78388889
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+    },
+    "identified": {
+      "en": "certain, placed at Kozhikode",
+      "hi": "निश्चित, Kozhikode पर"
+    },
+    "blurb": {
+      "en": "The capital of Calicut (the Sāmūtiri).",
+      "hi": "कालीकट (सामूतिरि) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001",
+      "https://en.wikipedia.org/wiki/Kozhikode"
+    ]
+  },
+  {
+    "id": "cochin-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kochi (Mattancherry)",
+      "hi": "कोच्चि (मट्टनचेरी)"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.958,
+      "lon": 76.259
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "identified": {
+      "en": "certain, placed at Mattancherry Palace",
+      "hi": "निश्चित, Mattancherry Palace पर"
+    },
+    "blurb": {
+      "en": "The capital of Cochin.",
+      "hi": "कोचीन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001",
+      "https://en.wikipedia.org/wiki/Mattancherry_Palace"
+    ]
+  },
+  {
+    "id": "travancore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Padmanābhapuram",
+      "hi": "पद्मनाभपुरम"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.250916,
+      "lon": 77.326702
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "identified": {
+      "en": "certain, placed at Padmanabhapuram Palace",
+      "hi": "निश्चित, Padmanabhapuram Palace पर"
+    },
+    "blurb": {
+      "en": "The capital of Travancore.",
+      "hi": "त्रावणकोर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001",
+      "https://en.wikipedia.org/wiki/Padmanabhapuram_Palace"
+    ]
+  }
+]

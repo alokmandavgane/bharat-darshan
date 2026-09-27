@@ -1,0 +1,137 @@
+{
+  "id": "aurangzeb-capitals",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Capitals of c. 1707 CE",
+    "hi": "लगभग 1707 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Mughal empire",
+        "hi": "मुग़ल साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "maratha",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Marāṭhās",
+        "hi": "मराठा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mewar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "marwar",
+      "color": "#a8544a",
+      "title": {
+        "en": "Mārwār",
+        "hi": "मारवाड़"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "amber",
+      "color": "#c9854a",
+      "title": {
+        "en": "Amber",
+        "hi": "आमेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "ahom",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Ahom kingdom",
+        "hi": "अहोम राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "koch",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Kūch Bihār",
+        "hi": "कूच बिहार"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "keladi",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Kanara (Keḷadi)",
+        "hi": "कनारा (केलदि)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "calicut",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Calicut (the Sāmūtiri)",
+        "hi": "कालीकट (सामूतिरि)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "cochin",
+      "color": "#b8454f",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "travancore",
+      "color": "#c9785a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi and Padmanābhapuram.",
+    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि और पद्मनाभपुरम।"
+  },
+  "sources": [
+    "smith-1919",
+    "wikipedia"
+  ]
+}

@@ -58,7 +58,10 @@
     "akbar",
     "akbar-names",
     "akbar-capitals",
-    "akbar-evidence"
+    "akbar-evidence",
+    "aurangzeb",
+    "aurangzeb-names",
+    "aurangzeb-capitals"
   ],
   "relief": 10,
   "status": "draft",
@@ -312,6 +315,26 @@
         "akbar-names",
         "akbar-capitals",
         "akbar-evidence"
+      ]
+    },
+    {
+      "id": "aurangzeb",
+      "display": {
+        "en": "c. 1707 CE",
+        "hi": "लगभग 1707 ई."
+      },
+      "title": {
+        "en": "The Mughal maximum and the Marāṭhās",
+        "hi": "मुग़ल चरम और मराठा"
+      },
+      "blurb": {
+        "en": "Aurangzeb's twenty-one ṣūbas at his death, the Deccan overrun by Tārā Bāī's Marāṭhās, the Rajputs in revolt, Assam, and the kingdoms of Kanara and Malabar, from Khāfī Khān, Hamilton and Smith.",
+        "hi": "मृत्यु के समय औरंगज़ेब के इक्कीस सूबे, ताराबाई के मराठों से रौंदा दक्कन, विद्रोही राजपूत, असम, और कनारा और मालाबार के राज्य, ख़ाफ़ी ख़ान, हैमिल्टन और स्मिथ से।"
+      },
+      "layers": [
+        "aurangzeb",
+        "aurangzeb-names",
+        "aurangzeb-capitals"
       ]
     }
   ],

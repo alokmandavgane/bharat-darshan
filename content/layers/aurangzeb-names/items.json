@@ -1,0 +1,268 @@
+[
+  {
+    "id": "mughal",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.4,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Mughal empire at Aurangzeb's death (1707), at its widest on paper, with the Deccan lost in all but name to the Marāṭhās.",
+      "hi": "औरंगज़ेब की मृत्यु (1707) के समय मुग़ल साम्राज्य, काग़ज़ पर सबसे विस्तृत, पर दक्कन नाम को छोड़ मराठों के हाथ।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "maratha",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.4,
+      "lon": 73.8
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Marāṭhā state under Tārā Bāī, regent for her son, whose armies ranged over the six Mughal ṣūbas of the Deccan and into Malwa.",
+      "hi": "अपने पुत्र की संरक्षिका ताराबाई के अधीन मराठा राज्य, जिनकी सेनाएँ दक्कन के छह मुग़ल सूबों और मालवा तक फैलीं।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "mewar",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.6,
+      "lon": 74.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṇās of Mewār, in arms with the other Rajput houses in the war after Aurangzeb's death.",
+      "hi": "मेवाड़ के राणा, औरंगज़ेब की मृत्यु के बाद के युद्ध में अन्य राजपूत घरानों के साथ सशस्त्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ]
+  },
+  {
+    "id": "marwar",
+    "status": "draft",
+    "name": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "category": "marwar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.0,
+      "lon": 72.3
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṭhoṛs of Mārwār under Ajit Singh, who had 'cast off his allegiance' and seized Jodhpur again in 1707.",
+      "hi": "अजीत सिंह के अधीन मारवाड़ के राठौड़, जिन्होंने 'अपनी निष्ठा त्याग दी' और 1707 में फिर जोधपुर लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ]
+  },
+  {
+    "id": "amber",
+    "status": "draft",
+    "name": {
+      "en": "Amber",
+      "hi": "आमेर"
+    },
+    "category": "amber",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3,
+      "lon": 75.9
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Kachhwāhas of Amber under Jai Singh II, allied with Mārwār and Mewār in 1708.",
+      "hi": "जय सिंह द्वितीय के अधीन आमेर के कछवाहा, 1708 में मारवाड़ और मेवाड़ के मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ]
+  },
+  {
+    "id": "ahom",
+    "status": "draft",
+    "name": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.6,
+      "lon": 93.6
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Ahom kings of Assam under Rudra Siṃha, who had driven the Mughals from Gauhati in 1682.",
+      "hi": "रुद्र सिंह के अधीन असम के अहोम राजा, जिन्होंने 1682 में मुग़लों को गुवाहाटी से खदेड़ा था।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ]
+  },
+  {
+    "id": "koch",
+    "status": "draft",
+    "name": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.4,
+      "lon": 89.5
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Koch kings of Kūch Bihār, reduced to paying tribute since Mīr Jumla's campaign of 1661.",
+      "hi": "कूच बिहार के कोच राजा, 1661 के मीर जुमला के अभियान से कर देने को विवश।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ]
+  },
+  {
+    "id": "keladi",
+    "status": "draft",
+    "name": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+    },
+    "category": "keladi",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.9,
+      "lon": 75.0
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Keḷadi Nāyakas of Kanara, whose queen kept her court at Bednūr, 'two Days Journey from the Sea'.",
+      "hi": "कनारा के केलदि नायक, जिनकी रानी का दरबार बेदनूर में था, 'समुद्र से दो दिन की यात्रा पर'।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ]
+  },
+  {
+    "id": "calicut",
+    "status": "draft",
+    "name": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+    },
+    "category": "calicut",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.2,
+      "lon": 76.0
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Zamorins of Calicut, once 'Lord Paramount of Malabar', still 'one of the most potent' of its kings.",
+      "hi": "कालीकट के ज़मोरिन, कभी 'मालाबार के सर्वोपरि स्वामी', अब भी उसके 'सबसे शक्तिशाली' राजाओं में।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ]
+  },
+  {
+    "id": "cochin",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.2,
+      "lon": 76.3
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The kings of Cochin, one of the 'potent Principalities' of Malabar.",
+      "hi": "कोचीन के राजा, मालाबार की 'शक्तिशाली रियासतों' में एक।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ]
+  },
+  {
+    "id": "travancore",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.7,
+      "lon": 77.0
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The kings of Travancore (Veṇāṭ), in the far south of Malabar, before Mārtāṇḍa Varma's conquests.",
+      "hi": "मार्तंड वर्मा की विजयों से पहले, मालाबार के सुदूर दक्षिण में त्रावणकोर (वेणाट) के राजा।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ]
+  }
+]

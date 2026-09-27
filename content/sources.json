@@ -1037,6 +1037,42 @@
         "en": "Asad Beg on the Deccan kingdoms, quoted for c. 1605 CE.",
         "hi": "दक्कन के राज्यों पर असद बेग, लगभग 1605 ई. के लिए उद्धृत।"
       }
+    },
+    "elliot-dowson-1877": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VII (1877)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियन्स, खंड VII (1877)"
+      },
+      "publisher": {
+        "en": "Trübner, London: Khāfī Khān's Muntakhab al-Lubāb in translation",
+        "hi": "ट्रुब्नर, लंदन: ख़ाफ़ी ख़ान का मुंतख़ब उल-लुबाब, अनुवाद में"
+      },
+      "url": "https://archive.org/details/india.history.resource.309",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Khāfī Khān, quoted for the Mughals and Marāṭhās, c. 1707 CE.",
+        "hi": "ख़ाफ़ी ख़ान, लगभग 1707 ई. के मुग़लों और मराठों के लिए उद्धृत।"
+      }
+    },
+    "hamilton-1727": {
+      "title": {
+        "en": "A. Hamilton, A New Account of the East Indies, vol. I (1727)",
+        "hi": "ए. हैमिल्टन, ए न्यू अकाउंट ऑफ़ द ईस्ट इंडीज़, खंड I (1727)"
+      },
+      "publisher": {
+        "en": "John Mosman, Edinburgh",
+        "hi": "जॉन मॉसमैन, एडिनबरा"
+      },
+      "url": "https://archive.org/details/b30529190_0001",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "A sea-captain's account of Kanara and Malabar, quoted for c. 1707 CE.",
+        "hi": "कनारा और मालाबार का एक जहाज़ी कप्तान का विवरण, लगभग 1707 ई. के लिए उद्धृत।"
+      }
     }
   }
 }

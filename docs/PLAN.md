@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-second round: the Mughal maximum and the Marāṭhās, c. 1707 CE. "Kingdoms and empires" gains its
+  thirteenth era, from Khāfī Khān (Elliot and Dowson vol. VII, 1877), Alexander Hamilton's New Account of the East
+  Indies (1727) and Smith's Oxford History (1919).
+  - **The areas:** the Mughal empire in two shades (the ṣūbas of Hindustan; the six Deccan ṣūbas, disputed, overrun by
+    the Marāṭhās); the Marāṭhā state under Tārā Bāī; Mewār, Mārwār and Amber in revolt; the Ahom kingdom and the
+    tributary Kūch Bihār; Kanara (Keḷadi), Calicut, Cochin and Travancore.
+  - **Capitals:** eleven. No evidence pins: the era has no sites, so it ships three layers, like the first era.
+  - **Left blank:** Mysore, Madurai, Tanjore and the far south, unattested for 1707 in what was read.
+  - All eleven names show at 1280x800; 48 tests and the build pass.
 - 2026-09-27, eighty-first round: Akbar's empire and the Deccan kingdoms, c. 1605 CE. "Kingdoms and empires" gains
   its twelfth era, from the Āʾīn-i Akbarī (Jarrett, vol. II, 1891), Asad Beg's Wikāya (Elliot and Dowson vol. VI,
   1875), Barradas's letter of 1616 (Sewell 1900) and Smith's Oxford History (1919).

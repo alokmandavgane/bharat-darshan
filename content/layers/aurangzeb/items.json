@@ -1,0 +1,943 @@
+[
+  {
+    "id": "mughal-held",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      104,
+      105,
+      106,
+      107,
+      108,
+      114,
+      117,
+      119,
+      120,
+      121,
+      124,
+      125,
+      127,
+      128,
+      129,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      300,
+      301,
+      302,
+      319,
+      320,
+      328,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      350,
+      351,
+      352,
+      353,
+      362,
+      363,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      407,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494
+    ],
+    "verse": "six sébas of the Dakhin (read: six sūbas of the Dakhin)",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 373-374",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 373-374"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Mughal empire at Aurangzeb's death (1707), at its widest on paper, with the Deccan lost in all but name to the Marāṭhās.",
+      "hi": "औरंगज़ेब की मृत्यु (1707) के समय मुग़ल साम्राज्य, काग़ज़ पर सबसे विस्तृत, पर दक्कन नाम को छोड़ मराठों के हाथ।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#2f5d50",
+    "grade": {
+      "en": "The ṣūbas of Hindustan, twenty-one in all with the Deccan",
+      "hi": "हिन्दुस्तान के सूबे, दक्कन के साथ कुल इक्कीस"
+    },
+    "reading": "fifteen provinces (subas) of Akbar's time had increased, to twenty- one",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 450",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 450"
+    },
+    "capital": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    }
+  },
+  {
+    "id": "mughal-deccan",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      447,
+      466,
+      467,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      564,
+      565,
+      572,
+      579,
+      580,
+      581,
+      582,
+      583,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      634,
+      635
+    ],
+    "verse": "six sébas of the Dakhin (read: six sūbas of the Dakhin)",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 373-374",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 373-374"
+    },
+    "identified": {
+      "en": "disputed, after Oxford History 1919",
+      "hi": "विवादित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Mughal empire at Aurangzeb's death (1707), at its widest on paper, with the Deccan lost in all but name to the Marāṭhās.",
+      "hi": "औरंगज़ेब की मृत्यु (1707) के समय मुग़ल साम्राज्य, काग़ज़ पर सबसे विस्तृत, पर दक्कन नाम को छोड़ मराठों के हाथ।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#8fb3a2",
+    "grade": {
+      "en": "The six ṣūbas of the Deccan, overrun by Marāṭhā armies collecting chauth",
+      "hi": "दक्कन के छह सूबे, चौथ वसूलती मराठा सेनाओं से रौंदे हुए"
+    },
+    "reading": "the provinces of the Deccan had become six instead of three",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 450",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 450"
+    },
+    "capital": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    }
+  },
+  {
+    "id": "maratha-core",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhās",
+      "hi": "मराठा"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      527,
+      530,
+      531,
+      528,
+      529,
+      520
+    ],
+    "verse": "T4ré Bai (read: Tārā Bāī)",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 373-374",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 373-374"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā state under Tārā Bāī, regent for her son, whose armies ranged over the six Mughal ṣūbas of the Deccan and into Malwa.",
+      "hi": "अपने पुत्र की संरक्षिका ताराबाई के अधीन मराठा राज्य, जिनकी सेनाएँ दक्कन के छह मुग़ल सूबों और मालवा तक फैलीं।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#c46a2f",
+    "grade": {
+      "en": "The hill forts and coast held under Tārā Bāī, regent from Satara",
+      "hi": "सतारा से संरक्षिका ताराबाई के अधीन पहाड़ी किले और तट"
+    },
+    "reading": "the affairs of the state as regent, and gave the Moguls no peace. Her capital was Satara.",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 444",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 444"
+    },
+    "capital": {
+      "en": "Sātārā",
+      "hi": "सातारा"
+    }
+  },
+  {
+    "id": "mewar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "rank": 1,
+    "districts": [
+      130,
+      123,
+      126,
+      122
+    ],
+    "verse": "Rand of \nUdipar (read: Rānā of Udipur)",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 405",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 405"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṇās of Mewār, in arms with the other Rajput houses in the war after Aurangzeb's death.",
+      "hi": "मेवाड़ के राणा, औरंगज़ेब की मृत्यु के बाद के युद्ध में अन्य राजपूत घरानों के साथ सशस्त्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ],
+    "color": "#8a1f2c",
+    "grade": {
+      "en": "Mewār under its Rāṇā, allied with Mārwār and Amber against the emperor",
+      "hi": "अपने राणा के अधीन मेवाड़, सम्राट के विरुद्ध मारवाड़ और आमेर के साथ"
+    },
+    "reading": "warmly supported and assisted the army of the Rand of Udipar",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 405",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 405"
+    },
+    "capital": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    }
+  },
+  {
+    "id": "marwar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "category": "marwar",
+    "rank": 1,
+    "districts": [
+      113,
+      112,
+      118,
+      115,
+      116
+    ],
+    "verse": "Raja Ajit Singh",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 404",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 404"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṭhoṛs of Mārwār under Ajit Singh, who had 'cast off his allegiance' and seized Jodhpur again in 1707.",
+      "hi": "अजीत सिंह के अधीन मारवाड़ के राठौड़, जिन्होंने 'अपनी निष्ठा त्याग दी' और 1707 में फिर जोधपुर लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ],
+    "color": "#a8544a",
+    "grade": {
+      "en": "Mārwār, retaken by Ajit Singh at Aurangzeb's death",
+      "hi": "मारवाड़, औरंगज़ेब की मृत्यु पर अजीत सिंह द्वारा फिर लिया गया"
+    },
+    "reading": "the Rajputs in the vicinity of Udipir and Jodpir",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 404",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 404"
+    },
+    "capital": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    }
+  },
+  {
+    "id": "amber-held",
+    "status": "draft",
+    "name": {
+      "en": "Amber",
+      "hi": "आमेर"
+    },
+    "category": "amber",
+    "rank": 1,
+    "districts": [
+      110,
+      109,
+      111,
+      103
+    ],
+    "verse": "Raja Jai Singh",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 405",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 405"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachhwāhas of Amber under Jai Singh II, allied with Mārwār and Mewār in 1708.",
+      "hi": "जय सिंह द्वितीय के अधीन आमेर के कछवाहा, 1708 में मारवाड़ और मेवाड़ के मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ],
+    "color": "#c9854a",
+    "grade": {
+      "en": "Amber under Jai Singh, ally of Ajit Singh",
+      "hi": "जय सिंह के अधीन आमेर, अजीत सिंह के मित्र"
+    },
+    "reading": "was closely allied with Raja Jai Singh",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 405",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 405"
+    },
+    "capital": {
+      "en": "Āmer",
+      "hi": "आमेर"
+    }
+  },
+  {
+    "id": "ahom-held",
+    "status": "draft",
+    "name": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "category": "ahom",
+    "rank": 1,
+    "districts": [
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      306,
+      305,
+      304,
+      321,
+      322,
+      323,
+      325,
+      326,
+      324,
+      303
+    ],
+    "verse": "Ash&m (Assam) (read: Ashām (Assam))",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 264",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 264"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Ahom kings of Assam under Rudra Siṃha, who had driven the Mughals from Gauhati in 1682.",
+      "hi": "रुद्र सिंह के अधीन असम के अहोम राजा, जिन्होंने 1682 में मुग़लों को गुवाहाटी से खदेड़ा था।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ],
+    "color": "#6d4a8a",
+    "grade": {
+      "en": "The Brahmaputra valley to the Manas",
+      "hi": "मानस तक ब्रह्मपुत्र घाटी"
+    },
+    "reading": "The country of Ash&m (Assam) lies to the east and north of Bengal between long ranges of hills.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 264",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 264"
+    },
+    "capital": {
+      "en": "Garhgaon",
+      "hi": "गढ़गाँव"
+    }
+  },
+  {
+    "id": "koch-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    },
+    "category": "koch",
+    "rank": 1,
+    "districts": [
+      329
+    ],
+    "verse": "Raja of Kuch Bih4r (read: Raja of Kuch Bihār)",
+    "locus": {
+      "en": "Khāfī Khān, E&D vii. 268",
+      "hi": "ख़ाफ़ी ख़ान, E&D vii. 268"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Koch kings of Kūch Bihār, reduced to paying tribute since Mīr Jumla's campaign of 1661.",
+      "hi": "कूच बिहार के कोच राजा, 1661 के मीर जुमला के अभियान से कर देने को विवश।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.309"
+    ],
+    "color": "#1f5e3f",
+    "grade": {
+      "en": "Kūch Bihār, a tributary of the Mughals",
+      "hi": "कूच बिहार, मुग़लों का करद"
+    },
+    "reading": "failed in keeping his engagements and paying tribute",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 268",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 268"
+    },
+    "capital": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    }
+  },
+  {
+    "id": "keladi-held",
+    "status": "draft",
+    "name": {
+      "en": "Kanara (Keḷadi)",
+      "hi": "कनारा (केलदि)"
+    },
+    "category": "keladi",
+    "rank": 1,
+    "districts": [
+      569,
+      575,
+      563,
+      568,
+      570
+    ],
+    "verse": "Canara",
+    "locus": {
+      "en": "Hamilton, Hamilton i. 279",
+      "hi": "हैमिल्टन, Hamilton i. 279"
+    },
+    "identified": {
+      "en": "likely, after New Account 1727",
+      "hi": "संभावित, New Account 1727 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Keḷadi Nāyakas of Kanara, whose queen kept her court at Bednūr, 'two Days Journey from the Sea'.",
+      "hi": "कनारा के केलदि नायक, जिनकी रानी का दरबार बेदनूर में था, 'समुद्र से दो दिन की यात्रा पर'।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "'The Canara Dominions', bounded inland by the Ghats",
+      "hi": "'कनारा के प्रदेश', भीतर घाटों से घिरे"
+    },
+    "reading": "and are the in¬ land Bounds of the Canara Dominions.",
+    "page": {
+      "en": "Alexander Hamilton, A New Account of the East Indies (1727), p. 282",
+      "hi": "Alexander Hamilton, A New Account of the East Indies (1727), पृ. 282"
+    },
+    "capital": {
+      "en": "Bednūr (Nagara)",
+      "hi": "बेदनूर (नगर)"
+    }
+  },
+  {
+    "id": "calicut-held",
+    "status": "draft",
+    "name": {
+      "en": "Calicut (the Sāmūtiri)",
+      "hi": "कालीकट (सामूतिरि)"
+    },
+    "category": "calicut",
+    "rank": 1,
+    "districts": [
+      591,
+      592
+    ],
+    "verse": "Calecut",
+    "locus": {
+      "en": "Hamilton, Hamilton i. 288-289",
+      "hi": "हैमिल्टन, Hamilton i. 288-289"
+    },
+    "identified": {
+      "en": "likely, after New Account 1727",
+      "hi": "संभावित, New Account 1727 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Zamorins of Calicut, once 'Lord Paramount of Malabar', still 'one of the most potent' of its kings.",
+      "hi": "कालीकट के ज़मोरिन, कभी 'मालाबार के सर्वोपरि स्वामी', अब भी उसके 'सबसे शक्तिशाली' राजाओं में।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ],
+    "color": "#9e6a2f",
+    "grade": {
+      "en": "The Samorin's 'Empire of Calecut'",
+      "hi": "सामूतिरि का 'कालीकट साम्राज्य'"
+    },
+    "reading": "or Empire of Calecut , one of the moil po¬ tent of them all",
+    "page": {
+      "en": "Alexander Hamilton, A New Account of the East Indies (1727), p. 289",
+      "hi": "Alexander Hamilton, A New Account of the East Indies (1727), पृ. 289"
+    },
+    "capital": {
+      "en": "Kozhikode",
+      "hi": "कोझिकोड"
+    }
+  },
+  {
+    "id": "cochin-held",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "rank": 1,
+    "districts": [
+      595,
+      594
+    ],
+    "verse": "Couchin",
+    "locus": {
+      "en": "Hamilton, Hamilton i. 288-289",
+      "hi": "हैमिल्टन, Hamilton i. 288-289"
+    },
+    "identified": {
+      "en": "likely, after New Account 1727",
+      "hi": "संभावित, New Account 1727 के अनुसार"
+    },
+    "blurb": {
+      "en": "The kings of Cochin, one of the 'potent Principalities' of Malabar.",
+      "hi": "कोचीन के राजा, मालाबार की 'शक्तिशाली रियासतों' में एक।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ],
+    "color": "#b8454f",
+    "grade": {
+      "en": "The kingdom of Cochin, under Dutch protection",
+      "hi": "कोचीन का राज्य, डच संरक्षण में"
+    },
+    "reading": "doms of Couchin and Borcat are not put",
+    "page": {
+      "en": "Alexander Hamilton, A New Account of the East Indies (1727), p. 288",
+      "hi": "Alexander Hamilton, A New Account of the East Indies (1727), पृ. 288"
+    },
+    "capital": {
+      "en": "Kochi (Mattancherry)",
+      "hi": "कोच्चि (मट्टनचेरी)"
+    }
+  },
+  {
+    "id": "travancore-held",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "rank": 1,
+    "districts": [
+      601,
+      600,
+      629
+    ],
+    "verse": "Ferivancoar (read: Tervancoar)",
+    "locus": {
+      "en": "Hamilton, Hamilton i. 284",
+      "hi": "हैमिल्टन, Hamilton i. 284"
+    },
+    "identified": {
+      "en": "likely, after New Account 1727",
+      "hi": "संभावित, New Account 1727 के अनुसार"
+    },
+    "blurb": {
+      "en": "The kings of Travancore (Veṇāṭ), in the far south of Malabar, before Mārtāṇḍa Varma's conquests.",
+      "hi": "मार्तंड वर्मा की विजयों से पहले, मालाबार के सुदूर दक्षिण में त्रावणकोर (वेणाट) के राजा।"
+    },
+    "sources": [
+      "https://archive.org/details/b30529190_0001"
+    ],
+    "color": "#c9785a",
+    "grade": {
+      "en": "Travancore, first on Van Rheede's list of the Malabar princes",
+      "hi": "त्रावणकोर, मालाबार के राजाओं की वान रीड सूची में पहला"
+    },
+    "reading": "MALABAR is a pretty large Coun¬ try, divided into many Principalities",
+    "page": {
+      "en": "Alexander Hamilton, A New Account of the East Indies (1727), p. 284",
+      "hi": "Alexander Hamilton, A New Account of the East Indies (1727), पृ. 284"
+    },
+    "capital": {
+      "en": "Padmanābhapuram",
+      "hi": "पद्मनाभपुरम"
+    }
+  }
+]
