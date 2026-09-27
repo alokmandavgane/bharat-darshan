@@ -1935,7 +1935,7 @@
    "path": "layers/company-capitals.json",
    "subgroup": {
     "id": "company",
-    "order": 14,
+    "order": 15,
     "pos": 2,
     "title": {
      "en": "c. 1857 CE · The Company's India and the princely states",
@@ -2077,7 +2077,7 @@
    "path": "layers/company-names.json",
    "subgroup": {
     "id": "company",
-    "order": 14,
+    "order": 15,
     "pos": 1,
     "title": {
      "en": "c. 1857 CE · The Company's India and the princely states",
@@ -2271,7 +2271,7 @@
    "path": "layers/company.json",
    "subgroup": {
     "id": "company",
-    "order": 14,
+    "order": 15,
     "pos": 0,
     "title": {
      "en": "c. 1857 CE · The Company's India and the princely states",
@@ -9112,6 +9112,412 @@
    "path": "layers/roads.json"
   },
   {
+   "id": "salbai-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 1780 CE",
+    "hi": "लगभग 1780 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 8,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "company",
+     "color": "#b8454f",
+     "title": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "rampur",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Calcutta, Pune, Delhi, Lucknow, Rāmpūr, Hyderabad, Śrīraṅgapaṭṭaṇa and Arcot. The Sikh misls had no single capital.",
+    "hi": "कलकत्ता, पुणे, दिल्ली, लखनऊ, रामपुर, हैदराबाद, श्रीरंगपट्टण और आर्काट। सिख मिसलों की कोई एक राजधानी नहीं थी।"
+   },
+   "sources": [
+    "smith-1919",
+    "wikipedia"
+   ],
+   "path": "layers/salbai-capitals.json",
+   "subgroup": {
+    "id": "salbai",
+    "order": 14,
+    "pos": 2,
+    "title": {
+     "en": "c. 1780 CE · The Company, the Marāṭhās and Mysore",
+     "hi": "लगभग 1780 ई. · कंपनी, मराठा और मैसूर"
+    }
+   }
+  },
+  {
+   "id": "salbai-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the powers of c. 1780 CE",
+    "hi": "नाम: लगभग 1780 ई. की शक्तियाँ"
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 9,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "company",
+     "color": "#b8454f",
+     "title": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "rampur",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "sikh",
+     "color": "#d4a017",
+     "title": {
+      "en": "The Sikh misls",
+      "hi": "सिख मिसलें"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "elliot-dowson-1877-viii",
+    "smith-1919"
+   ],
+   "path": "layers/salbai-names.json",
+   "subgroup": {
+    "id": "salbai",
+    "order": 14,
+    "pos": 1,
+    "title": {
+     "en": "c. 1780 CE · The Company, the Marāṭhās and Mysore",
+     "hi": "लगभग 1780 ई. · कंपनी, मराठा और मैसूर"
+    }
+   }
+  },
+  {
+   "id": "salbai",
+   "type": "areas",
+   "title": {
+    "en": "The Company, the Marāṭhās and Mysore, c. 1780 CE",
+    "hi": "कंपनी, मराठा और मैसूर, लगभग 1780 ई."
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 17,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "company",
+     "color": "#b8454f",
+     "title": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+     }
+    },
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     }
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     }
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     }
+    },
+    {
+     "id": "rampur",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+     }
+    },
+    {
+     "id": "sikh",
+     "color": "#d4a017",
+     "title": {
+      "en": "The Sikh misls",
+      "hi": "सिख मिसलें"
+     }
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     }
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     }
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. Left blank: the Rajput states, Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states and the north-east, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। ख़ाली छोड़े गए: राजपूत राज्य, फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य और पूर्वोत्तर, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+   },
+   "sources": [
+    "elliot-dowson-1877-viii",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/salbai.json",
+   "subgroup": {
+    "id": "salbai",
+    "order": 14,
+    "pos": 0,
+    "title": {
+     "en": "c. 1780 CE · The Company, the Marāṭhās and Mysore",
+     "hi": "लगभग 1780 ई. · कंपनी, मराठा और मैसूर"
+    }
+   }
+  },
+  {
    "id": "steel",
    "type": "points",
    "title": {
@@ -10975,8 +11381,8 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 48051,
-   "sha256": "732a1bfe033b"
+   "size": 49037,
+   "sha256": "36d1414436df"
   },
   "sources.json": {
    "size": 56735,
@@ -11484,7 +11890,7 @@
   },
   "layers/panipat.json": {
    "size": 27617,
-   "sha256": "52862c70fa9c"
+   "sha256": "fea8e608b73f"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
@@ -11561,6 +11967,22 @@
   "layers/roads.json": {
    "size": 441345,
    "sha256": "e0691be257a8"
+  },
+  "layers/salbai-areas.bin.gz": {
+   "size": 8174,
+   "sha256": "d0392fec42a5"
+  },
+  "layers/salbai-capitals.json": {
+   "size": 6707,
+   "sha256": "0308400bd13f"
+  },
+  "layers/salbai-names.json": {
+   "size": 8820,
+   "sha256": "b7803a486948"
+  },
+  "layers/salbai.json": {
+   "size": 34358,
+   "sha256": "f075e7301b3e"
   },
   "layers/steel.json": {
    "size": 15080,
