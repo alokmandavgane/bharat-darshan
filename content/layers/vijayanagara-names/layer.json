@@ -1,0 +1,132 @@
+{
+  "id": "vijayanagara-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 1525 CE",
+    "hi": "नाम: लगभग 1525 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "lodi",
+      "color": "#3f5f4a",
+      "title": {
+        "en": "Lodī sultanate",
+        "hi": "लोदी सल्तनत"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "gujarat",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Gujarat",
+        "hi": "गुजरात"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "malwa",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Malwa",
+        "hi": "मालवा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mewar",
+      "color": "#c46a6a",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bengal",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Bengal",
+        "hi": "बंगाल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "berar",
+      "color": "#4f6f9e",
+      "title": {
+        "en": "Berar",
+        "hi": "बरार"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "ahmadnagar",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Ahmadnagar",
+        "hi": "अहमदनगर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bijapur",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Bijapur",
+        "hi": "बीजापुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bidar",
+      "color": "#7a6a9e",
+      "title": {
+        "en": "Bidar",
+        "hi": "बीदर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "golkonda",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Golkonda",
+        "hi": "गोलकोंडा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vijayanagara",
+      "color": "#c9785a",
+      "title": {
+        "en": "Vijayanagara",
+        "hi": "विजयनगर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "orissa",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Orissa",
+        "hi": "ओडिशा"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "leyden-erskine-1826",
+    "sewell-1900",
+    "smith-1919"
+  ]
+}

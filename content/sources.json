@@ -965,6 +965,42 @@
         "en": "The chronicles the kingdoms page quotes for the Tughluq empire, c. 1330 CE.",
         "hi": "वे इतिवृत्त जिन्हें राज्य पृष्ठ लगभग 1330 ई. के तुग़लक़ साम्राज्य के लिए उद्धृत करता है।"
       }
+    },
+    "leyden-erskine-1826": {
+      "title": {
+        "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826)",
+        "hi": "जे. लेडन और डब्ल्यू. एर्स्किन, मेमॉयर्स ऑफ़ ज़हीरुद्दीन मुहम्मद बाबर (1826)"
+      },
+      "publisher": {
+        "en": "Longman, London: Bābur's memoirs in translation",
+        "hi": "लॉन्गमैन, लंदन: बाबर के संस्मरण, अनुवाद में"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.82774",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Bābur's survey of the kingdoms of Hindustan, quoted for c. 1525 CE.",
+        "hi": "हिन्दुस्तान के राज्यों का बाबर का सर्वेक्षण, लगभग 1525 ई. के लिए उद्धृत।"
+      }
+    },
+    "sewell-1900": {
+      "title": {
+        "en": "R. Sewell, A Forgotten Empire (Vijayanagar) (1900)",
+        "hi": "आर. सुएल, ए फ़ॉरगॉटन एम्पायर (विजयनगर) (1900)"
+      },
+      "publisher": {
+        "en": "Swan Sonnenschein, London: with the chronicles of Paes and Nuniz in translation",
+        "hi": "स्वॉन सोनेनशाइन, लंदन: पाइस और नुनीज़ के वृत्तांत अनुवाद में"
+      },
+      "url": "https://archive.org/details/aforgottenempir00paesgoog",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Paes and Nuniz on Vijayanagara, quoted for c. 1525 CE.",
+        "hi": "विजयनगर पर पाइस और नुनीज़, लगभग 1525 ई. के लिए उद्धृत।"
+      }
     }
   }
 }

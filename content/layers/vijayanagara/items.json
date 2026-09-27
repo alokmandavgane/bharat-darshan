@@ -1,0 +1,952 @@
+[
+  {
+    "id": "lodi-held",
+    "status": "draft",
+    "name": {
+      "en": "Lodī sultanate",
+      "hi": "लोदी सल्तनत"
+    },
+    "category": "lodi",
+    "rank": 1,
+    "districts": [
+      23,
+      24,
+      28,
+      29,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      105,
+      106,
+      107,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      201,
+      202,
+      216,
+      217,
+      218,
+      219,
+      220,
+      222,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      419,
+      420,
+      421,
+      422,
+      423
+    ],
+    "verse": "the Afghans",
+    "locus": {
+      "en": "Bābur, L&E p. 310, Afghans",
+      "hi": "बाबर, L&E p. 310, Afghans"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "Ibrāhīm Lodī's Afghan sultanate, from the Panjab to Bihar, whose nobles invited Bābur and who fell at Panipat in April 1526; Sikandar Lodī had made Agra his residence.",
+      "hi": "इब्राहीम लोदी की अफ़ग़ान सल्तनत, पंजाब से बिहार तक, जिसके अमीरों ने बाबर को बुलाया और जो अप्रैल 1526 में पानीपत में गिरी; सिकंदर लोदी ने आगरा को निवास बनाया था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#3f5f4a",
+    "grade": {
+      "en": "'Whose government included the capital, and extended from Behreh to Behar'",
+      "hi": "'जिनके शासन में राजधानी थी, और जो भेरा से बिहार तक फैला था'"
+    },
+    "reading": "whose government included the capital, and ex-",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 310",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 310"
+    },
+    "capital": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    }
+  },
+  {
+    "id": "gujarat-held",
+    "status": "draft",
+    "name": {
+      "en": "Gujarat",
+      "hi": "गुजरात"
+    },
+    "category": "gujarat",
+    "rank": 1,
+    "districts": [
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494
+    ],
+    "verse": "Gujrat",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Gujarat",
+      "hi": "बाबर, L&E p. 311, Gujarat"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "The sultans of Gujarat, whose Muẓaffar Shāh II died a few days before Ibrāhīm Lodī's defeat (1526).",
+      "hi": "गुजरात के सुल्तान, जिनके मुज़फ़्फ़र शाह द्वितीय इब्राहीम लोदी की हार से कुछ दिन पहले (1526) मरे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#b07a1a",
+    "grade": {
+      "en": "Gujarat under Sultan Muẓaffar",
+      "hi": "सुल्तान मुज़फ़्फ़र के अधीन गुजरात"
+    },
+    "reading": "The second prince was Sultan Muhamraed Mozeffer, in Gujrat.",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 311",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 311"
+    },
+    "capital": {
+      "en": "Ahmadābād",
+      "hi": "अहमदाबाद"
+    }
+  },
+  {
+    "id": "malwa-held",
+    "status": "draft",
+    "name": {
+      "en": "Malwa",
+      "hi": "मालवा"
+    },
+    "category": "malwa",
+    "rank": 1,
+    "districts": [
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      444,
+      445,
+      448,
+      449,
+      464,
+      465
+    ],
+    "verse": "Malwa",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Malwa",
+      "hi": "बाबर, L&E p. 311, Malwa"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Khaljī sultans of Malwa under Maḥmūd II, weakened: Rana Sanka had beaten them and taken a number of their provinces.",
+      "hi": "महमूद द्वितीय के अधीन मालवा के ख़लजी सुल्तान, दुर्बल: राणा साँगा ने उन्हें हराकर उनके कई प्रांत ले लिए थे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#6d4a8a",
+    "grade": {
+      "en": "Malwa, 'which they likewise call Mandu', less the provinces Rana Sanka had taken",
+      "hi": "मालवा, 'जिसे वे माण्डू भी कहते हैं', राणा साँगा द्वारा लिए प्रांतों को छोड़कर"
+    },
+    "reading": "The fourth King was Sultan Mahmud, who reigned in the country of Malwa, which they likewise call Mandu.",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 311",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 311"
+    },
+    "capital": {
+      "en": "Māṇḍū",
+      "hi": "माण्डू"
+    }
+  },
+  {
+    "id": "mewar-core",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "rank": 1,
+    "districts": [
+      122,
+      123,
+      124,
+      125,
+      126,
+      130,
+      131
+    ],
+    "verse": "Rana Sanka",
+    "locus": {
+      "en": "Bābur, L&E p. 312",
+      "hi": "बाबर, L&E p. 312"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "Rāṇā Sāṅgā of Mewār, who rose 'by his own valour and his sword' and took the Malwa provinces; Bābur beat him at Khanua in 1527.",
+      "hi": "मेवाड़ के राणा साँगा, जो 'अपने पराक्रम और तलवार से' उठे और मालवा के प्रांत लिए; बाबर ने 1527 में खानवा में उन्हें हराया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#8a1f2c",
+    "grade": {
+      "en": "Core: 'his original principality was Chitur'",
+      "hi": "केंद्र: 'उनकी मूल रियासत चित्तौड़ थी'"
+    },
+    "reading": "His original principality was Chitur.",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 312",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 312"
+    },
+    "capital": {
+      "en": "Citrakūṭa (Chitor)",
+      "hi": "चित्रकूट (चित्तौड़)"
+    }
+  },
+  {
+    "id": "mewar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "rank": 1,
+    "districts": [
+      108,
+      442,
+      443,
+      459
+    ],
+    "verse": "Rana Sanka",
+    "locus": {
+      "en": "Bābur, L&E p. 312",
+      "hi": "बाबर, L&E p. 312"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "Rāṇā Sāṅgā of Mewār, who rose 'by his own valour and his sword' and took the Malwa provinces; Bābur beat him at Khanua in 1527.",
+      "hi": "मेवाड़ के राणा साँगा, जो 'अपने पराक्रम और तलवार से' उठे और मालवा के प्रांत लिए; बाबर ने 1527 में खानवा में उन्हें हराया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#c46a6a",
+    "grade": {
+      "en": "Rantpur, Sarangpur, Bhilsan and Chanderi, seized from Malwa",
+      "hi": "रणथंभौर, सारंगपुर, भिलसा और चंदेरी, मालवा से छीने गए"
+    },
+    "reading": "such as Rantpur,'* Sarangpur, Bhils&n, and Chanderi.",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 312",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 312"
+    },
+    "capital": {
+      "en": "Citrakūṭa (Chitor)",
+      "hi": "चित्रकूट (चित्तौड़)"
+    }
+  },
+  {
+    "id": "bengal-held",
+    "status": "draft",
+    "name": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "category": "bengal",
+    "rank": 1,
+    "districts": [
+      209,
+      210,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345
+    ],
+    "verse": "Nusrat Shah",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Bengal",
+      "hi": "बाबर, L&E p. 311, Bengal"
+    },
+    "identified": {
+      "en": "likely, after Memoirs of Baber 1826",
+      "hi": "संभावित, Memoirs of Baber 1826 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Ḥusain Shāhī sultans of Bengal under Nuṣrat Shāh, son of ʿAlā' al-Dīn Ḥusain Shāh; their capital was Gaur.",
+      "hi": "अलाउद्दीन हुसैन शाह के पुत्र नुसरत शाह के अधीन बंगाल के हुसैन शाही सुल्तान; उनकी राजधानी गौड़ थी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ],
+    "color": "#1f5e3f",
+    "grade": {
+      "en": "Bengal under Nuṣrat Shāh",
+      "hi": "नुसरत शाह के अधीन बंगाल"
+    },
+    "reading": "The fifth Prince was Nusrat Shah 1 in the kingdom of Bengal.",
+    "page": {
+      "en": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), p. 311",
+      "hi": "J. Leyden and W. Erskine, Memoirs of Zehir-ed-din Muhammed Baber (1826), पृ. 311"
+    },
+    "capital": {
+      "en": "Gauḍa (Gaur)",
+      "hi": "गौड़"
+    }
+  },
+  {
+    "id": "berar-held",
+    "status": "draft",
+    "name": {
+      "en": "Berar",
+      "hi": "बरार"
+    },
+    "category": "berar",
+    "rank": 1,
+    "districts": [
+      447,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510
+    ],
+    "verse": "Bahmanis",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Bahmanis",
+      "hi": "बाबर, L&E p. 311, Bahmanis"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Imād Shāhīs of Berar, the first province to break from the Bahmanīs (1484 or 1490).",
+      "hi": "बरार के इमाद शाही, बहमनियों से अलग होने वाला पहला प्रांत (1484 या 1490)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#4f6f9e",
+    "grade": {
+      "en": "Berar, 'more or less equivalent to the ancient Vidarbha'",
+      "hi": "बरार, 'कमोबेश प्राचीन विदर्भ के बराबर'"
+    },
+    "reading": "more or less equivalent to the ancient Vidarbha",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 286",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 286"
+    },
+    "capital": {
+      "en": "Gāwilgarh",
+      "hi": "गाविलगढ़"
+    }
+  },
+  {
+    "id": "ahmadnagar-held",
+    "status": "draft",
+    "name": {
+      "en": "Ahmadnagar",
+      "hi": "अहमदनगर"
+    },
+    "category": "ahmadnagar",
+    "rank": 1,
+    "districts": [
+      521,
+      522,
+      516,
+      515,
+      514,
+      523,
+      513
+    ],
+    "verse": "Ozemelluco",
+    "locus": {
+      "en": "Paes, Sewell p. 239, neighbours",
+      "hi": "पाइस, Sewell p. 239, neighbours"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Niẓām Shāhīs, Paes's 'Ozemelluco', independent of the Bahmanīs since 1490.",
+      "hi": "निज़ाम शाही, पाइस के 'ओज़ेमेलुको', 1490 से बहमनियों से स्वतंत्र।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "Ahmadnagar, from Junnar north of Poona",
+      "hi": "अहमदनगर, पूना के उत्तर में जुन्नर से"
+    },
+    "reading": "His son Malik Ahmad, governor of Junnar (Joonair) to the north of Poona, then revolted.",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 290",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 290"
+    },
+    "capital": {
+      "en": "Ahmadnagar",
+      "hi": "अहमदनगर"
+    }
+  },
+  {
+    "id": "bijapur-held",
+    "status": "draft",
+    "name": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "rank": 1,
+    "districts": [
+      557,
+      556,
+      555,
+      526,
+      527,
+      531,
+      530,
+      528,
+      529
+    ],
+    "verse": "Ydallcio (read: Ydallcão)",
+    "locus": {
+      "en": "Paes, Sewell p. 239, neighbours",
+      "hi": "पाइस, Sewell p. 239, neighbours"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The ʿĀdil Shāhīs, Paes's 'Ydallcão', who lost Goa to the Portuguese (1510) and Raichur to Kṛṣṇadevarāya (1520).",
+      "hi": "आदिल शाही, पाइस के 'यदालकाओ', जिन्होंने गोवा पुर्तगालियों को (1510) और रायचूर कृष्णदेवराय को (1520) खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "Bijapur, whose governor declared himself independent in 1489",
+      "hi": "बीजापुर, जिसके राज्यपाल ने 1489 में स्वतंत्रता घोषित की"
+    },
+    "reading": "governor of Bijapur, who declared his independence in 1489",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 291",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 291"
+    },
+    "capital": {
+      "en": "Bijāpur",
+      "hi": "बीजापुर"
+    }
+  },
+  {
+    "id": "bidar-held",
+    "status": "draft",
+    "name": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "rank": 1,
+    "districts": [
+      558,
+      579,
+      580,
+      524,
+      525,
+      511,
+      512
+    ],
+    "verse": "Bahmanis",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Bahmanis",
+      "hi": "बाबर, L&E p. 311, Bahmanis"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Barīd ministers at Bidar, who still set up nominal Bahmanī sultans until 1526.",
+      "hi": "बीदर के बरीद मंत्री, जो 1526 तक नाममात्र के बहमनी सुल्तान बिठाते रहे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#7a6a9e",
+    "grade": {
+      "en": "'The residuum of the Bahmani Empire', round the capital",
+      "hi": "'बहमनी साम्राज्य का बचा हुआ भाग', राजधानी के आसपास"
+    },
+    "reading": "was simply the residuum of the Bahmani Empire, consisting of the territory near the capital",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 287",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 287"
+    },
+    "capital": {
+      "en": "Bīdar",
+      "hi": "बीदर"
+    }
+  },
+  {
+    "id": "golkonda-held",
+    "status": "draft",
+    "name": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "rank": 1,
+    "districts": [
+      536,
+      537,
+      535,
+      539,
+      540,
+      541,
+      534,
+      533,
+      532,
+      538,
+      547,
+      546
+    ],
+    "verse": "Bahmanis",
+    "locus": {
+      "en": "Bābur, L&E p. 311, Bahmanis",
+      "hi": "बाबर, L&E p. 311, Bahmanis"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Quṭb Shāhīs, who took the old Kākatīya country of Warangal and declared independence in 1512.",
+      "hi": "क़ुतुब शाही, जिन्होंने वारंगल का पुराना काकतीय देश लिया और 1512 में स्वतंत्रता घोषित की।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#3f7a4f",
+    "grade": {
+      "en": "'Between the lower courses of the Godavari and Krishna rivers', with a northern extension",
+      "hi": "'गोदावरी और कृष्णा के निचले प्रवाहों के बीच', एक उत्तरी विस्तार के साथ"
+    },
+    "reading": "lying for the most part between the lower courses of the Godavarl and Krishna rivers",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 289",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 289"
+    },
+    "capital": {
+      "en": "Golkoṇḍa",
+      "hi": "गोलकोंडा"
+    }
+  },
+  {
+    "id": "vijayanagara-held",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "rank": 1,
+    "districts": [
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584,
+      588,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      635,
+      637
+    ],
+    "verse": "Raja of Bijnager",
+    "locus": {
+      "en": "Bābur, L&E p. 312",
+      "hi": "बाबर, L&E p. 312"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kṛṣṇadevarāya's Vijayanagara (1509-29), which took Raichur from Bijapur in 1520; to Bābur, 'the most powerful of the Pagan princes'.",
+      "hi": "कृष्णदेवराय का विजयनगर (1509-29), जिसने 1520 में बीजापुर से रायचूर लिया; बाबर के लिए 'मूर्तिपूजक राजाओं में सबसे शक्तिशाली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "The kingdom of 'Narsymga', from Batacalla to Coromandel",
+      "hi": "'नरसिंग' का राज्य, भटकल से कोरोमंडल तक"
+    },
+    "reading": "until you arrive at Ballagate and Charamaodel,’ which belong to this kingdom",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 239",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 239"
+    },
+    "capital": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    }
+  },
+  {
+    "id": "vijayanagara-raichur",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "rank": 1,
+    "districts": [
+      559
+    ],
+    "verse": "Raja of Bijnager",
+    "locus": {
+      "en": "Bābur, L&E p. 312",
+      "hi": "बाबर, L&E p. 312"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kṛṣṇadevarāya's Vijayanagara (1509-29), which took Raichur from Bijapur in 1520; to Bābur, 'the most powerful of the Pagan princes'.",
+      "hi": "कृष्णदेवराय का विजयनगर (1509-29), जिसने 1520 में बीजापुर से रायचूर लिया; बाबर के लिए 'मूर्तिपूजक राजाओं में सबसे शक्तिशाली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#c9785a",
+    "grade": {
+      "en": "The Raichur doab, taken from Bijapur in 1520",
+      "hi": "रायचूर दोआब, 1520 में बीजापुर से लिया गया"
+    },
+    "reading": "marched upon Rachol which remained under the king of Bisnaga.",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 361",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 361"
+    },
+    "capital": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    }
+  },
+  {
+    "id": "orissa-held",
+    "status": "draft",
+    "name": {
+      "en": "Orissa",
+      "hi": "ओडिशा"
+    },
+    "category": "orissa",
+    "rank": 1,
+    "districts": [
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      396,
+      542,
+      543,
+      544,
+      545
+    ],
+    "verse": "Orya",
+    "locus": {
+      "en": "Paes, Sewell p. 239, neighbours",
+      "hi": "पाइस, Sewell p. 239, neighbours"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Gajapati kings of Orissa under Pratāparudra, who lost the Telugu coast south of the Godavari to Kṛṣṇadevarāya.",
+      "hi": "प्रतापरुद्र के अधीन ओडिशा के गजपति राजा, जिन्होंने गोदावरी के दक्षिण का तेलुगु तट कृष्णदेवराय को खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#9e6a2f",
+    "grade": {
+      "en": "The kingdom of 'Orya', 'which is to the east' of Vijayanagara",
+      "hi": "'ओर्या' का राज्य, 'जो पूर्व में है'"
+    },
+    "reading": "on the other side with the kingdom of Orya, which is to the east",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 239",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 239"
+    },
+    "capital": {
+      "en": "Kaṭaka (Cuttack)",
+      "hi": "कटक"
+    }
+  }
+]

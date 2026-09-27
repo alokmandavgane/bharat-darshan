@@ -1,0 +1,296 @@
+[
+  {
+    "id": "lodi",
+    "status": "draft",
+    "name": {
+      "en": "Lodī sultanate",
+      "hi": "लोदी सल्तनत"
+    },
+    "category": "lodi",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9,
+      "lon": 80.4
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Ibrāhīm Lodī's Afghan sultanate, from the Panjab to Bihar, whose nobles invited Bābur and who fell at Panipat in April 1526; Sikandar Lodī had made Agra his residence.",
+      "hi": "इब्राहीम लोदी की अफ़ग़ान सल्तनत, पंजाब से बिहार तक, जिसके अमीरों ने बाबर को बुलाया और जो अप्रैल 1526 में पानीपत में गिरी; सिकंदर लोदी ने आगरा को निवास बनाया था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ]
+  },
+  {
+    "id": "gujarat",
+    "status": "draft",
+    "name": {
+      "en": "Gujarat",
+      "hi": "गुजरात"
+    },
+    "category": "gujarat",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.1,
+      "lon": 71.0
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The sultans of Gujarat, whose Muẓaffar Shāh II died a few days before Ibrāhīm Lodī's defeat (1526).",
+      "hi": "गुजरात के सुल्तान, जिनके मुज़फ़्फ़र शाह द्वितीय इब्राहीम लोदी की हार से कुछ दिन पहले (1526) मरे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ]
+  },
+  {
+    "id": "malwa",
+    "status": "draft",
+    "name": {
+      "en": "Malwa",
+      "hi": "मालवा"
+    },
+    "category": "malwa",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.8,
+      "lon": 76.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Khaljī sultans of Malwa under Maḥmūd II, weakened: Rana Sanka had beaten them and taken a number of their provinces.",
+      "hi": "महमूद द्वितीय के अधीन मालवा के ख़लजी सुल्तान, दुर्बल: राणा साँगा ने उन्हें हराकर उनके कई प्रांत ले लिए थे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ]
+  },
+  {
+    "id": "mewar",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.6,
+      "lon": 74.1
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "Rāṇā Sāṅgā of Mewār, who rose 'by his own valour and his sword' and took the Malwa provinces; Bābur beat him at Khanua in 1527.",
+      "hi": "मेवाड़ के राणा साँगा, जो 'अपने पराक्रम और तलवार से' उठे और मालवा के प्रांत लिए; बाबर ने 1527 में खानवा में उन्हें हराया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ]
+  },
+  {
+    "id": "bengal",
+    "status": "draft",
+    "name": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "category": "bengal",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.3,
+      "lon": 87.9
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Ḥusain Shāhī sultans of Bengal under Nuṣrat Shāh, son of ʿAlā' al-Dīn Ḥusain Shāh; their capital was Gaur.",
+      "hi": "अलाउद्दीन हुसैन शाह के पुत्र नुसरत शाह के अधीन बंगाल के हुसैन शाही सुल्तान; उनकी राजधानी गौड़ थी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774"
+    ]
+  },
+  {
+    "id": "berar",
+    "status": "draft",
+    "name": {
+      "en": "Berar",
+      "hi": "बरार"
+    },
+    "category": "berar",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.8,
+      "lon": 78.2
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Imād Shāhīs of Berar, the first province to break from the Bahmanīs (1484 or 1490).",
+      "hi": "बरार के इमाद शाही, बहमनियों से अलग होने वाला पहला प्रांत (1484 या 1490)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "ahmadnagar",
+    "status": "draft",
+    "name": {
+      "en": "Ahmadnagar",
+      "hi": "अहमदनगर"
+    },
+    "category": "ahmadnagar",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.5,
+      "lon": 74.0
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Niẓām Shāhīs, Paes's 'Ozemelluco', independent of the Bahmanīs since 1490.",
+      "hi": "निज़ाम शाही, पाइस के 'ओज़ेमेलुको', 1490 से बहमनियों से स्वतंत्र।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "bijapur",
+    "status": "draft",
+    "name": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.7,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The ʿĀdil Shāhīs, Paes's 'Ydallcão', who lost Goa to the Portuguese (1510) and Raichur to Kṛṣṇadevarāya (1520).",
+      "hi": "आदिल शाही, पाइस के 'यदालकाओ', जिन्होंने गोवा पुर्तगालियों को (1510) और रायचूर कृष्णदेवराय को (1520) खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "bidar",
+    "status": "draft",
+    "name": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.9,
+      "lon": 77.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Barīd ministers at Bidar, who still set up nominal Bahmanī sultans until 1526.",
+      "hi": "बीदर के बरीद मंत्री, जो 1526 तक नाममात्र के बहमनी सुल्तान बिठाते रहे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "golkonda",
+    "status": "draft",
+    "name": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.2,
+      "lon": 81.0
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Quṭb Shāhīs, who took the old Kākatīya country of Warangal and declared independence in 1512.",
+      "hi": "क़ुतुब शाही, जिन्होंने वारंगल का पुराना काकतीय देश लिया और 1512 में स्वतंत्रता घोषित की।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "vijayanagara",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.4,
+      "lon": 77.6
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Kṛṣṇadevarāya's Vijayanagara (1509-29), which took Raichur from Bijapur in 1520; to Bābur, 'the most powerful of the Pagan princes'.",
+      "hi": "कृष्णदेवराय का विजयनगर (1509-29), जिसने 1520 में बीजापुर से रायचूर लिया; बाबर के लिए 'मूर्तिपूजक राजाओं में सबसे शक्तिशाली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ]
+  },
+  {
+    "id": "orissa",
+    "status": "draft",
+    "name": {
+      "en": "Orissa",
+      "hi": "ओडिशा"
+    },
+    "category": "orissa",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.4,
+      "lon": 85.0
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The Gajapati kings of Orissa under Pratāparudra, who lost the Telugu coast south of the Godavari to Kṛṣṇadevarāya.",
+      "hi": "प्रतापरुद्र के अधीन ओडिशा के गजपति राजा, जिन्होंने गोदावरी के दक्षिण का तेलुगु तट कृष्णदेवराय को खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ]
+  }
+]

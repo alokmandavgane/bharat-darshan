@@ -1,0 +1,187 @@
+{
+  "id": "vijayanagara",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "Vijayanagara, the sultanates and Rana Sanga, c. 1525 CE",
+    "hi": "विजयनगर, सल्तनतें और राणा साँगा, लगभग 1525 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "lodi",
+      "color": "#3f5f4a",
+      "title": {
+        "en": "Lodī sultanate",
+        "hi": "लोदी सल्तनत"
+      }
+    },
+    {
+      "id": "gujarat",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Gujarat",
+        "hi": "गुजरात"
+      }
+    },
+    {
+      "id": "malwa",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Malwa",
+        "hi": "मालवा"
+      }
+    },
+    {
+      "id": "mewar",
+      "color": "#c46a6a",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      }
+    },
+    {
+      "id": "bengal",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Bengal",
+        "hi": "बंगाल"
+      }
+    },
+    {
+      "id": "berar",
+      "color": "#4f6f9e",
+      "title": {
+        "en": "Berar",
+        "hi": "बरार"
+      }
+    },
+    {
+      "id": "ahmadnagar",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Ahmadnagar",
+        "hi": "अहमदनगर"
+      }
+    },
+    {
+      "id": "bijapur",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Bijapur",
+        "hi": "बीजापुर"
+      }
+    },
+    {
+      "id": "bidar",
+      "color": "#7a6a9e",
+      "title": {
+        "en": "Bidar",
+        "hi": "बीदर"
+      }
+    },
+    {
+      "id": "golkonda",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Golkonda",
+        "hi": "गोलकोंडा"
+      }
+    },
+    {
+      "id": "vijayanagara",
+      "color": "#c9785a",
+      "title": {
+        "en": "Vijayanagara",
+        "hi": "विजयनगर"
+      }
+    },
+    {
+      "id": "orissa",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Orissa",
+        "hi": "ओडिशा"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. Left blank: Khandesh, Kashmir and the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, Assam and the north-east, and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। खाली छोड़े गए: ख़ानदेश, कश्मीर और पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, असम और पूर्वोत्तर, और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+  },
+  "sources": [
+    "leyden-erskine-1826",
+    "sewell-1900",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Smith (1914), Sachau's Alberuni (1888) and Hultzsch in Epigraphia Indica IX, all public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

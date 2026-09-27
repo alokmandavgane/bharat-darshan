@@ -2450,6 +2450,19 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-ninth round: Vijayanagara, the sultanates and Rana Sanga, c. 1525 CE. "Kingdoms and empires"
+  gains its eleventh era: Hindustan as Bābur found it in 1526, from his Memoirs (Leyden and Erskine, 1826), Paes
+  and Nuniz in Sewell's A Forgotten Empire (1900) and Smith's Oxford History (1919).
+  - **The areas:** twelve polities: the Lodī sultanate, Gujarat, Malwa, Mewār (two shades), Bengal, the five Deccan
+    sultanates (Berar, Ahmadnagar, Bijapur, Bidar, Golkonda), Vijayanagara (with the Raichur doab) and Orissa.
+  - **Names:** at country zoom the Deccan could not hold full dynasty names ('Niẓām Shāhīs of Ahmadnagar' is
+    about 9° wide against 10° of Deccan): the polities take Bābur's short names and the dynasties go in the leads.
+    Label anchors were spaced by hand (about 22 px per degree of longitude, 10 per degree of latitude there, at
+    1280x800), and `04_layers.py` rejects an anchor whose claimed region is wrong, silently keeping the old data
+    until fixed — watch its 'problem(s)' line.
+  - **Capitals and pins:** twelve capitals; the battles of Raichur (1520) and Panipat (1526), under a new site
+    kind `battle`.
+  - All twelve names show at 1280x800; 48 tests and the build pass.
 - 2026-09-27, seventy-eighth round: the Tughluq empire at its height, c. 1330 CE. "Kingdoms and empires" gains its
   tenth era, the first drawn mainly from secondary scholarship: extents from Smith's Oxford History of India (1919),
   attested by Baranī and al-ʿUmarī in Elliot and Dowson's vol. III (1871).

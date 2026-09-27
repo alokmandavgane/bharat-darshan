@@ -50,7 +50,11 @@
     "tughluq",
     "tughluq-names",
     "tughluq-capitals",
-    "tughluq-evidence"
+    "tughluq-evidence",
+    "vijayanagara",
+    "vijayanagara-names",
+    "vijayanagara-capitals",
+    "vijayanagara-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -262,6 +266,27 @@
         "tughluq-names",
         "tughluq-capitals",
         "tughluq-evidence"
+      ]
+    },
+    {
+      "id": "vijayanagara",
+      "display": {
+        "en": "c. 1525 CE",
+        "hi": "लगभग 1525 ई."
+      },
+      "title": {
+        "en": "Vijayanagara, the sultanates and Rana Sanga",
+        "hi": "विजयनगर, सल्तनतें और राणा साँगा"
+      },
+      "blurb": {
+        "en": "Hindustan as Bābur found it: the Lodīs, Gujarat, Malwa, Bengal and the Deccan sultanates, Rana Sanga's Mewār, and Kṛṣṇadevarāya's Vijayanagara, from Bābur, Paes, Nuniz and Smith (1919).",
+        "hi": "हिन्दुस्तान जैसा बाबर ने पाया: लोदी, गुजरात, मालवा, बंगाल और दक्कन की सल्तनतें, राणा साँगा का मेवाड़, और कृष्णदेवराय का विजयनगर, बाबर, पाइस, नुनीज़ और स्मिथ (1919) से।"
+      },
+      "layers": [
+        "vijayanagara",
+        "vijayanagara-names",
+        "vijayanagara-capitals",
+        "vijayanagara-evidence"
       ]
     }
   ],

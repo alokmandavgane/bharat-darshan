@@ -1,0 +1,77 @@
+{
+  "id": "vijayanagara-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 1525 CE",
+    "hi": "लगभग 1525 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "battle",
+      "color": "#9e1b32",
+      "icon": "pin",
+      "title": {
+        "en": "Battles",
+        "hi": "युद्ध"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The battles of Raichur (1520) and Panipat (1526).",
+    "hi": "रायचूर (1520) और पानीपत (1526) के युद्ध।"
+  },
+  "sources": [
+    "leyden-erskine-1826",
+    "sewell-1900",
+    "smith-1919",
+    "wikipedia"
+  ]
+}

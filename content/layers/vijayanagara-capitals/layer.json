@@ -1,0 +1,146 @@
+{
+  "id": "vijayanagara-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 1525 CE",
+    "hi": "लगभग 1525 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "lodi",
+      "color": "#3f5f4a",
+      "title": {
+        "en": "Lodī sultanate",
+        "hi": "लोदी सल्तनत"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "gujarat",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Gujarat",
+        "hi": "गुजरात"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "malwa",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Malwa",
+        "hi": "मालवा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mewar",
+      "color": "#c46a6a",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bengal",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Bengal",
+        "hi": "बंगाल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "berar",
+      "color": "#4f6f9e",
+      "title": {
+        "en": "Berar",
+        "hi": "बरार"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "ahmadnagar",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Ahmadnagar",
+        "hi": "अहमदनगर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bijapur",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Bijapur",
+        "hi": "बीजापुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bidar",
+      "color": "#7a6a9e",
+      "title": {
+        "en": "Bidar",
+        "hi": "बीदर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "golkonda",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Golkonda",
+        "hi": "गोलकोंडा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "vijayanagara",
+      "color": "#c9785a",
+      "title": {
+        "en": "Vijayanagara",
+        "hi": "विजयनगर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "orissa",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Orissa",
+        "hi": "ओडिशा"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Āgra, Ahmadābād, Māṇḍū, Chitor, Gaur, Gāwilgarh, Ahmadnagar, Bijāpur, Bīdar, Golkoṇḍa, Vijayanagara and Kaṭaka.",
+    "hi": "आगरा, अहमदाबाद, माण्डू, चित्तौड़, गौड़, गाविलगढ़, अहमदनगर, बीजापुर, बीदर, गोलकोंडा, विजयनगर और कटक।"
+  },
+  "sources": [
+    "smith-1919",
+    "wikipedia"
+  ]
+}

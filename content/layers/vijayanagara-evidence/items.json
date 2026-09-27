@@ -1,0 +1,90 @@
+[
+  {
+    "id": "panipat",
+    "status": "draft",
+    "name": {
+      "en": "Pānīpat",
+      "hi": "पानीपत"
+    },
+    "category": "battle",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.3875,
+      "lon": 76.97
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "kind": {
+      "en": "Battle",
+      "hi": "युद्ध"
+    },
+    "identified": {
+      "en": "placed at Panipat",
+      "hi": "Panipat पर"
+    },
+    "blurb": {
+      "en": "Bābur's victory over Ibrāhīm Lodī, 21 April 1526, which ended the Lodī sultanate.",
+      "hi": "21 अप्रैल 1526 को इब्राहीम लोदी पर बाबर की विजय, जिसने लोदी सल्तनत का अंत किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Panipat"
+    ],
+    "reading": "inflicted on Sultan Ibrahim a crushing defeat at Panlpat",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 256",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 256"
+    },
+    "verse": "Panipat",
+    "locus": {
+      "en": "Bābur, L&E p. 304",
+      "hi": "बाबर, L&E p. 304"
+    }
+  },
+  {
+    "id": "raichur",
+    "status": "draft",
+    "name": {
+      "en": "Rāychūr",
+      "hi": "रायचूर"
+    },
+    "category": "battle",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.2,
+      "lon": 77.37
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Battle",
+      "hi": "युद्ध"
+    },
+    "identified": {
+      "en": "placed at Raichur",
+      "hi": "Raichur पर"
+    },
+    "blurb": {
+      "en": "Kṛṣṇadevarāya's victory over Ismāʿīl ʿĀdil Shāh, 19 May 1520, which won the Raichur doab.",
+      "hi": "19 मई 1520 को इस्माइल आदिल शाह पर कृष्णदेवराय की विजय, जिसने रायचूर दोआब जीता।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Raichur"
+    ],
+    "reading": "resulted in the recovery of the much disputed fortress of Raichiir",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 304",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 304"
+    },
+    "verse": "Rachol",
+    "locus": {
+      "en": "Nuniz, Sewell p. 332",
+      "hi": "नुनीज़, Sewell p. 332"
+    }
+  }
+]

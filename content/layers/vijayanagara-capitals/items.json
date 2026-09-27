@@ -1,0 +1,398 @@
+[
+  {
+    "id": "lodi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    },
+    "category": "lodi",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.179542,
+      "lon": 78.021101
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Lodī sultanate",
+      "hi": "लोदी सल्तनत"
+    },
+    "identified": {
+      "en": "likely, placed at Agra Fort",
+      "hi": "संभावित, Agra Fort पर"
+    },
+    "blurb": {
+      "en": "The capital of Lodī sultanate.",
+      "hi": "लोदी सल्तनत की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://en.wikipedia.org/wiki/Agra_Fort"
+    ]
+  },
+  {
+    "id": "gujarat-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ahmadābād",
+      "hi": "अहमदाबाद"
+    },
+    "category": "gujarat",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.0225,
+      "lon": 72.57138889
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Gujarat",
+      "hi": "गुजरात"
+    },
+    "identified": {
+      "en": "certain, placed at Ahmedabad",
+      "hi": "निश्चित, Ahmedabad पर"
+    },
+    "blurb": {
+      "en": "The capital of Gujarat.",
+      "hi": "गुजरात की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://en.wikipedia.org/wiki/Ahmedabad"
+    ]
+  },
+  {
+    "id": "malwa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Māṇḍū",
+      "hi": "माण्डू"
+    },
+    "category": "malwa",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.33527778,
+      "lon": 75.41583333
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Malwa",
+      "hi": "मालवा"
+    },
+    "identified": {
+      "en": "certain, placed at Mandu",
+      "hi": "निश्चित, Mandu पर"
+    },
+    "blurb": {
+      "en": "The capital of Malwa.",
+      "hi": "मालवा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://en.wikipedia.org/wiki/Mandu,_Madhya_Pradesh"
+    ]
+  },
+  {
+    "id": "mewar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Citrakūṭa (Chitor)",
+      "hi": "चित्रकूट (चित्तौड़)"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.88,
+      "lon": 74.63
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at Chittorgarh",
+      "hi": "निश्चित, Chittorgarh पर"
+    },
+    "blurb": {
+      "en": "The capital of Mewār.",
+      "hi": "मेवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://en.wikipedia.org/wiki/Chittorgarh"
+    ]
+  },
+  {
+    "id": "bengal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gauḍa (Gaur)",
+      "hi": "गौड़"
+    },
+    "category": "bengal",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.86666667,
+      "lon": 88.13333333
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "identified": {
+      "en": "certain, placed at Gaur, Malda",
+      "hi": "निश्चित, Gaur, Malda पर"
+    },
+    "blurb": {
+      "en": "The capital of Bengal.",
+      "hi": "बंगाल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.82774",
+      "https://en.wikipedia.org/wiki/Gauḍa_(city)"
+    ]
+  },
+  {
+    "id": "berar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gāwilgarh",
+      "hi": "गाविलगढ़"
+    },
+    "category": "berar",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.38222222,
+      "lon": 77.33388889
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Berar",
+      "hi": "बरार"
+    },
+    "identified": {
+      "en": "likely, placed at Gawilghur",
+      "hi": "संभावित, Gawilghur पर"
+    },
+    "blurb": {
+      "en": "The capital of Berar.",
+      "hi": "बरार की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Gawilghur"
+    ]
+  },
+  {
+    "id": "ahmadnagar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ahmadnagar",
+      "hi": "अहमदनगर"
+    },
+    "category": "ahmadnagar",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.08,
+      "lon": 74.73
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Ahmadnagar",
+      "hi": "अहमदनगर"
+    },
+    "identified": {
+      "en": "certain, placed at Ahmednagar",
+      "hi": "निश्चित, Ahmednagar पर"
+    },
+    "blurb": {
+      "en": "The capital of Ahmadnagar.",
+      "hi": "अहमदनगर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Ahmednagar"
+    ]
+  },
+  {
+    "id": "bijapur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bijāpur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.83,
+      "lon": 75.71
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "identified": {
+      "en": "certain, placed at Vijayapura (Bijapur)",
+      "hi": "निश्चित, Vijayapura (Bijapur) पर"
+    },
+    "blurb": {
+      "en": "The capital of Bijapur.",
+      "hi": "बीजापुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Bijapur"
+    ]
+  },
+  {
+    "id": "bidar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bīdar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.912,
+      "lon": 77.52
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "identified": {
+      "en": "certain, placed at Bidar",
+      "hi": "निश्चित, Bidar पर"
+    },
+    "blurb": {
+      "en": "The capital of Bidar.",
+      "hi": "बीदर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Bidar"
+    ]
+  },
+  {
+    "id": "golkonda-capital",
+    "status": "draft",
+    "name": {
+      "en": "Golkoṇḍa",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.38305556,
+      "lon": 78.40111111
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "identified": {
+      "en": "certain, placed at Golconda",
+      "hi": "निश्चित, Golconda पर"
+    },
+    "blurb": {
+      "en": "The capital of Golkonda.",
+      "hi": "गोलकोंडा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Golconda"
+    ]
+  },
+  {
+    "id": "vijayanagara-capital",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.33444444,
+      "lon": 76.46222222
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "identified": {
+      "en": "certain, placed at Hampi",
+      "hi": "निश्चित, Hampi पर"
+    },
+    "blurb": {
+      "en": "The capital of Vijayanagara.",
+      "hi": "विजयनगर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://en.wikipedia.org/wiki/Hampi"
+    ]
+  },
+  {
+    "id": "orissa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kaṭaka (Cuttack)",
+      "hi": "कटक"
+    },
+    "category": "orissa",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.48463056,
+      "lon": 85.864425
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "polity": {
+      "en": "Orissa",
+      "hi": "ओडिशा"
+    },
+    "identified": {
+      "en": "likely, placed at Barabati fort, Cuttack",
+      "hi": "संभावित, Barabati fort, Cuttack पर"
+    },
+    "blurb": {
+      "en": "The capital of Orissa.",
+      "hi": "ओडिशा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://en.wikipedia.org/wiki/Barabati_fort"
+    ]
+  }
+]
