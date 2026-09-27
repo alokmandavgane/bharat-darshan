@@ -1,0 +1,175 @@
+[
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Cola empire",
+      "hi": "चोल साम्राज्य"
+    },
+    "category": "cola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.6,
+      "lon": 78.4
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Cola empire of Rājendra I, who took Ceylon, broke Jayasiṃha, raided to the Gaṅgā and sent his fleet to Kaḍāram.",
+      "hi": "राजेन्द्र प्रथम का चोल साम्राज्य, जिन्होंने सीलोन लिया, जयसिंह को हराया, गंगा तक धावा किया और कडारम तक बेड़ा भेजा।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "kalyani",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Kalyāṇi",
+      "hi": "कल्याणी के चालुक्य"
+    },
+    "category": "kalyani",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.8,
+      "lon": 76.2
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Western Cālukyas under Jayasiṃha II, lord of Iraṭṭapāḍi, whom Rājendra Cola put to flight at Muyaṅgi.",
+      "hi": "जयसिंह द्वितीय के अधीन पश्चिमी चालुक्य, इरट्टपाडि के स्वामी, जिन्हें राजेन्द्र चोल ने मुयंगि में भगाया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "paramara",
+    "status": "draft",
+    "name": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+    },
+    "category": "paramara",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.4,
+      "lon": 76.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Paramāras of Dhārā under Bhoja, the scholar-king al-Bīrūnī names as reigning 'in our days'.",
+      "hi": "भोज के अधीन धारा के परमार, विद्वान राजा जिन्हें अल-बीरूनी 'हमारे दिनों में' शासक बताते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/alberunisindiaac01brnm",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "pala",
+    "status": "draft",
+    "name": {
+      "en": "Pāla kingdom",
+      "hi": "पाल राज्य"
+    },
+    "category": "pala",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.0,
+      "lon": 86.5
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "The Pālas of Bihar and Bengal under Mahīpāla I, whom Rājendra Cola 'frightened in a hot battle' on his raid to the Gaṅgā.",
+      "hi": "महीपाल प्रथम के अधीन बिहार और बंगाल के पाल, जिन्हें राजेन्द्र चोल ने गंगा के धावे में 'घोर युद्ध में डराया'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "caulukya",
+    "status": "draft",
+    "name": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+    },
+    "category": "caulukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.0,
+      "lon": 71.0
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Caulukya (Solaṅkī) kingdom of Anhilvāra in Gujarat, whose Somanāth Mahmūd sacked in 1025.",
+      "hi": "गुजरात में अणहिलवाड का चौलुक्य (सोलंकी) राज्य, जिसका सोमनाथ महमूद ने 1025 में लूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/alberunisindiaac01brnm",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "ghaznavid",
+    "status": "draft",
+    "name": {
+      "en": "Ghaznavid Panjab",
+      "hi": "ग़ज़नवी पंजाब"
+    },
+    "category": "ghaznavid",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.8,
+      "lon": 75.0
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Panjab conquered by Mahmūd of Ghazni (d. 1030), who 'utterly ruined the prosperity of the country'; the capital, Ghazni, is in Afghanistan.",
+      "hi": "ग़ज़नी के महमूद (मृ. 1030) द्वारा जीता पंजाब, जिन्होंने 'देश की समृद्धि को पूरी तरह नष्ट कर दिया'; राजधानी ग़ज़नी अफ़ग़ानिस्तान में है।"
+    },
+    "sources": [
+      "https://archive.org/details/alberunisindiaac01brnm"
+    ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.0,
+      "lon": 74.8
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Kashmir under Saṅgrāmarāja and Ananta, which Mahmūd could not take and which let no stranger in.",
+      "hi": "संग्रामराज और अनन्त के अधीन कश्मीर, जिसे महमूद ले न सका और जो किसी अजनबी को आने नहीं देता था।"
+    },
+    "sources": [
+      "https://archive.org/details/alberunisindiaac01brnm"
+    ]
+  }
+]

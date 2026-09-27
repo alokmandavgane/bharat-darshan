@@ -875,6 +875,42 @@
         "en": "The editions the kingdoms page quotes and cites for c. 850 CE.",
         "hi": "वे संस्करण जिन्हें राज्य पृष्ठ लगभग 850 ई. के लिए उद्धृत करता है।"
       }
+    },
+    "sachau-1888": {
+      "title": {
+        "en": "E. C. Sachau, Alberuni's India (1888)",
+        "hi": "ई. सी. साख़ाउ, अल्बेरूनी का भारत (1888)"
+      },
+      "publisher": {
+        "en": "Trübner, London",
+        "hi": "ट्रूबनर, लंदन"
+      },
+      "url": "https://archive.org/details/alberunisindiaac01brnm",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The translation of al-Bīrūnī's India (c. 1030) that the kingdoms page quotes, with Sachau's preface.",
+        "hi": "अल-बीरूनी के भारत (लगभग 1030) का अनुवाद जिसे राज्य पृष्ठ उद्धृत करता है, साख़ाउ की भूमिका के साथ।"
+      }
+    },
+    "epigraphia-indica-ix": {
+      "title": {
+        "en": "Epigraphia Indica, vol. IX (1907-08)",
+        "hi": "एपिग्राफ़िया इंडिका, खंड IX (1907-08)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta: Hultzsch on the Tirumalai inscription of Rājendra Cola I",
+        "hi": "भारत सरकार, कलकत्ता: राजेन्द्र चोल प्रथम के तिरुमलै अभिलेख पर हुल्त्श"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.56657",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The edition the kingdoms page quotes for the Colas of c. 1030 CE.",
+        "hi": "वह संस्करण जिसे राज्य पृष्ठ लगभग 1030 ई. के चोलों के लिए उद्धृत करता है।"
+      }
     }
   }
 }

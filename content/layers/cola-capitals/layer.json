@@ -1,0 +1,65 @@
+{
+  "id": "cola-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 1030 CE",
+    "hi": "लगभग 1030 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "cola",
+      "color": "#b8454f",
+      "title": {
+        "en": "Cola empire",
+        "hi": "चोल साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "paramara",
+      "color": "#a585c2",
+      "title": {
+        "en": "Paramāras of Mālava",
+        "hi": "मालव के परमार"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "caulukya",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Caulukyas of Anhilvāra",
+        "hi": "अणहिलवाड के चौलुक्य"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Gaṅgaikoṇḍacoḻapuram, Dhārā and Aṇahilapāṭaka.",
+    "hi": "गंगैकोण्डचोलपुरम्, धारा और अणहिलपाटक।"
+  },
+  "sources": [
+    "smith-1914",
+    "wikipedia"
+  ]
+}

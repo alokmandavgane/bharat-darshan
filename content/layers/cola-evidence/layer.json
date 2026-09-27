@@ -1,0 +1,75 @@
+{
+  "id": "cola-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 1030 CE",
+    "hi": "लगभग 1030 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "inscription",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Inscriptions",
+        "hi": "अभिलेख"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The Tirumalai inscription of Rājendra Cola I. Al-Bīrūnī's book, the era's other witness, has no pin.",
+    "hi": "राजेन्द्र चोल प्रथम का तिरुमलै अभिलेख। अल-बीरूनी की पुस्तक, इस युग का दूसरा साक्षी, का कोई पिन नहीं।"
+  },
+  "sources": [
+    "epigraphia-indica-ix",
+    "wikipedia"
+  ]
+}

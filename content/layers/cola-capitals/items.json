@@ -1,0 +1,101 @@
+[
+  {
+    "id": "cola-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgaikoṇḍacoḻapuram",
+      "hi": "गंगैकोण्डचोलपुरम्"
+    },
+    "category": "cola",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.20644,
+      "lon": 79.44833
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Cola empire",
+      "hi": "चोल साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Gangaikonda Cholapuram",
+      "hi": "निश्चित, Gangaikonda Cholapuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Cola empire.",
+      "hi": "चोल साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Gangaikonda_Cholapuram"
+    ]
+  },
+  {
+    "id": "paramara-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dhārā",
+      "hi": "धारा"
+    },
+    "category": "paramara",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.59722,
+      "lon": 75.30417
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+    },
+    "identified": {
+      "en": "certain, placed at Dhar",
+      "hi": "निश्चित, Dhar पर"
+    },
+    "blurb": {
+      "en": "The capital of Paramāras of Mālava.",
+      "hi": "मालव के परमार की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/alberunisindiaac01brnm",
+      "https://en.wikipedia.org/wiki/Dhar"
+    ]
+  },
+  {
+    "id": "caulukya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Aṇahilapāṭaka",
+      "hi": "अणहिलपाटक"
+    },
+    "category": "caulukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.85,
+      "lon": 72.125
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+    },
+    "identified": {
+      "en": "certain, placed at Patan",
+      "hi": "निश्चित, Patan पर"
+    },
+    "blurb": {
+      "en": "The capital of Caulukyas of Anhilvāra.",
+      "hi": "अणहिलवाड के चौलुक्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Patan,_Gujarat"
+    ]
+  }
+]

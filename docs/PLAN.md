@@ -2450,6 +2450,13 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-sixth round: Colas, Paramāras and Cālukyas, c. 1030 CE. "Kingdoms and empires" gains its eighth
+  era. It is drawn from Rājendra Cola I's Tirumalai inscription (Epigraphia Indica IX, Roman text), al-Bīrūnī in
+  Sachau's translation (1888) and Smith (1914).
+  - **The areas:** the Colas in three shades, the Kalyāṇi Cālukyas in two, Bhoja's Paramāras in two, the Pālas,
+    the Caulukyas of Anhilvāra, the Ghaznavid Panjab and Kashmir.
+  - **Capitals and pins:** three capitals and the Tirumalai pin.
+  - All seven names show at 1280x800; 48 tests and the build pass.
 - 2026-09-27, seventy-fifth round: Pratihāras, Pālas and Rāṣṭrakūṭas, c. 850 CE. "Kingdoms and empires" gains its
   seventh era. It shows the three powers the merchant Sulaimān found in 851, drawn from the Gwalior praśasti
   (Epigraphia Indica XVIII), Sulaimān in Elliot and Dowson (1867), and Smith's Early History of India (1914).

@@ -1,0 +1,86 @@
+{
+  "id": "cola-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 1030 CE",
+    "hi": "नाम: लगभग 1030 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "cola",
+      "color": "#b8454f",
+      "title": {
+        "en": "Cola empire",
+        "hi": "चोल साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kalyani",
+      "color": "#6199c4",
+      "title": {
+        "en": "Cālukyas of Kalyāṇi",
+        "hi": "कल्याणी के चालुक्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "paramara",
+      "color": "#a585c2",
+      "title": {
+        "en": "Paramāras of Mālava",
+        "hi": "मालव के परमार"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pala",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Pāla kingdom",
+        "hi": "पाल राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "caulukya",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Caulukyas of Anhilvāra",
+        "hi": "अणहिलवाड के चौलुक्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "ghaznavid",
+      "color": "#4a6a6a",
+      "title": {
+        "en": "Ghaznavid Panjab",
+        "hi": "ग़ज़नवी पंजाब"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "smith-1914",
+    "sachau-1888"
+  ]
+}

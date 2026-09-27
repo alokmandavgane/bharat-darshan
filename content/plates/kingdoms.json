@@ -38,7 +38,11 @@
     "pratihara",
     "pratihara-names",
     "pratihara-capitals",
-    "pratihara-evidence"
+    "pratihara-evidence",
+    "cola",
+    "cola-names",
+    "cola-capitals",
+    "cola-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -187,6 +191,27 @@
         "pratihara-names",
         "pratihara-capitals",
         "pratihara-evidence"
+      ]
+    },
+    {
+      "id": "cola",
+      "display": {
+        "en": "c. 1030 CE",
+        "hi": "लगभग 1030 ई."
+      },
+      "title": {
+        "en": "Colas, Paramāras and Cālukyas",
+        "hi": "चोल, परमार और चालुक्य"
+      },
+      "blurb": {
+        "en": "Rājendra Cola's empire in the south, Bhoja's Mālava, the Cālukyas of Kalyāṇi, and the north Mahmūd of Ghazni had broken, from the Tirumalai inscription, al-Bīrūnī (c. 1030) and Smith (1914).",
+        "hi": "दक्षिण में राजेन्द्र चोल का साम्राज्य, भोज का मालव, कल्याणी के चालुक्य, और वह उत्तर जिसे ग़ज़नी के महमूद ने तोड़ा, तिरुमलै अभिलेख, अल-बीरूनी (लगभग 1030) और स्मिथ (1914) से।"
+      },
+      "layers": [
+        "cola",
+        "cola-names",
+        "cola-capitals",
+        "cola-evidence"
       ]
     }
   ],

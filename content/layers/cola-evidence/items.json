@@ -1,0 +1,45 @@
+[
+  {
+    "id": "tirumalai",
+    "status": "draft",
+    "name": {
+      "en": "Tirumalai",
+      "hi": "तिरुमलै"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.55668,
+      "lon": 79.20595
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Tirumalai hill, Tiruvannamalai district",
+      "hi": "Tirumalai hill, Tiruvannamalai district पर"
+    },
+    "blurb": {
+      "en": "Rājendra Cola I's list of conquests, cut in his 13th year (1024-25) above a Jaina gift.",
+      "hi": "राजेन्द्र चोल प्रथम की विजय-सूची, उनके 13वें वर्ष (1024-25) में एक जैन दान के ऊपर उत्कीर्ण।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://en.wikipedia.org/wiki/Tirumalai_(Jain_complex)"
+    ],
+    "reading": "Jayasimha of Ratta-padi (1. 6), who was put to flight at Musangi, is the Western Chalukya king Jayasimha II.",
+    "page": {
+      "en": "E. Hultzsch, Tirumalai Rock Inscription of Rajendra-Chola I (1908), p. 230",
+      "hi": "E. Hultzsch, Tirumalai Rock Inscription of Rajendra-Chola I (1908), पृ. 230"
+    },
+    "verse": "Kangaiyu (read: Gaṅgaiyum)",
+    "locus": {
+      "en": "Tirumalai, ll. 9-11",
+      "hi": "तिरुमलै, ll. 9-11"
+    }
+  }
+]
