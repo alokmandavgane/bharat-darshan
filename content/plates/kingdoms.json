@@ -66,6 +66,9 @@
     "panipat-names",
     "panipat-capitals",
     "panipat-evidence",
+    "salbai",
+    "salbai-names",
+    "salbai-capitals",
     "company",
     "company-names",
     "company-capitals"
@@ -363,6 +366,26 @@
         "panipat-names",
         "panipat-capitals",
         "panipat-evidence"
+      ]
+    },
+    {
+      "id": "salbai",
+      "display": {
+        "en": "c. 1780 CE",
+        "hi": "लगभग 1780 ई."
+      },
+      "title": {
+        "en": "The Company, the Marāṭhās and Mysore",
+        "hi": "कंपनी, मराठा और मैसूर"
+      },
+      "blurb": {
+        "en": "India in 1779 as Qudratullāh saw it: Bengal under the Firingīs, Awadh with the Rohilla country, Najaf Khān's Delhi, the Sikhs in the Panjab, and the Deccan shared by the Niẓām, the Marāṭhās, Haidar and Arcot.",
+        "hi": "1779 का भारत, जैसा क़ुदरतुल्लाह ने देखा: फ़िरंगियों के अधीन बंगाल, रोहिल्ला प्रदेश सहित अवध, नजफ़ ख़ान की दिल्ली, पंजाब में सिख, और निज़ाम, मराठों, हैदर और आर्काट में बँटा दक्कन।"
+      },
+      "layers": [
+        "salbai",
+        "salbai-names",
+        "salbai-capitals"
       ]
     },
     {

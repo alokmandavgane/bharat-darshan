@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "company-bengal",
+    "status": "draft",
+    "name": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "category": "company",
+    "rank": 1,
+    "districts": [
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369
+    ],
+    "verse": "Firingis (read: Firingīs)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "certain, after Elliot and Dowson 1877",
+      "hi": "निश्चित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Company's India under Warren Hastings: Bengal and Bihar, Benares, the Northern Sarkars and Bombay, at war with the Marāṭhās (1775-82) and with Haidar ʿAlī (1780-84).",
+      "hi": "वॉरेन हेस्टिंग्स के अधीन कंपनी का भारत: बंगाल और बिहार, बनारस, उत्तरी सरकार और बंबई, मराठों (1775-82) और हैदर अली (1780-84) से युद्धरत।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#b8454f",
+    "grade": {
+      "en": "Bengal and Bihar, the dīwānī granted by Shāh ʿĀlam in 1765",
+      "hi": "बंगाल और बिहार, 1765 में शाह आलम द्वारा दी गई दीवानी"
+    },
+    "reading": "the whole country of Bengal has been subjected by the strong arm of the Firingis.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Calcutta (Fort William)",
+      "hi": "कलकत्ता (फ़ोर्ट विलियम)"
+    }
+  },
+  {
+    "id": "company-benares",
+    "status": "draft",
+    "name": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "category": "company",
+    "rank": 1,
+    "districts": [
+      197,
+      196,
+      194,
+      195,
+      193,
+      199,
+      200,
+      198
+    ],
+    "verse": "Firingis (read: Firingīs)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "certain, after Oxford History 1919",
+      "hi": "निश्चित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Company's India under Warren Hastings: Bengal and Bihar, Benares, the Northern Sarkars and Bombay, at war with the Marāṭhās (1775-82) and with Haidar ʿAlī (1780-84).",
+      "hi": "वॉरेन हेस्टिंग्स के अधीन कंपनी का भारत: बंगाल और बिहार, बनारस, उत्तरी सरकार और बंबई, मराठों (1775-82) और हैदर अली (1780-84) से युद्धरत।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#e09aa0",
+    "grade": {
+      "en": "The Benares province, ceded by Awadh in 1775, under its Raja Chait Singh",
+      "hi": "बनारस प्रांत, 1775 में अवध द्वारा सौंपा गया, अपने राजा चेतसिंह के अधीन"
+    },
+    "reading": "The sovereignty of the Benares province undoubtedly had been vested in the Company from 1775.",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 538",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 538"
+    },
+    "capital": {
+      "en": "Calcutta (Fort William)",
+      "hi": "कलकत्ता (फ़ोर्ट विलियम)"
+    }
+  },
+  {
+    "id": "company-sarkars",
+    "status": "draft",
+    "name": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "category": "company",
+    "rank": 1,
+    "districts": [
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      388
+    ],
+    "verse": "Firingis (read: Firingīs)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Company's India under Warren Hastings: Bengal and Bihar, Benares, the Northern Sarkars and Bombay, at war with the Marāṭhās (1775-82) and with Haidar ʿAlī (1780-84).",
+      "hi": "वॉरेन हेस्टिंग्स के अधीन कंपनी का भारत: बंगाल और बिहार, बनारस, उत्तरी सरकार और बंबई, मराठों (1775-82) और हैदर अली (1780-84) से युद्धरत।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#8a2a36",
+    "grade": {
+      "en": "The Northern Sarkars, held from Madras",
+      "hi": "उत्तरी सरकार, मद्रास से शासित"
+    },
+    "reading": "and the Northern Sarkars (Circars).",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 503",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 503"
+    },
+    "capital": {
+      "en": "Calcutta (Fort William)",
+      "hi": "कलकत्ता (फ़ोर्ट विलियम)"
+    }
+  },
+  {
+    "id": "company-bombay",
+    "status": "draft",
+    "name": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "category": "company",
+    "rank": 1,
+    "districts": [
+      519,
+      518
+    ],
+    "verse": "Firingis (read: Firingīs)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "certain, after Oxford History 1919",
+      "hi": "निश्चित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Company's India under Warren Hastings: Bengal and Bihar, Benares, the Northern Sarkars and Bombay, at war with the Marāṭhās (1775-82) and with Haidar ʿAlī (1780-84).",
+      "hi": "वॉरेन हेस्टिंग्स के अधीन कंपनी का भारत: बंगाल और बिहार, बनारस, उत्तरी सरकार और बंबई, मराठों (1775-82) और हैदर अली (1780-84) से युद्धरत।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#c4808a",
+    "grade": {
+      "en": "Bombay and Salsette",
+      "hi": "बंबई और सालसेट"
+    },
+    "reading": "the Bombay people took possession of Salsette",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 532",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 532"
+    },
+    "capital": {
+      "en": "Calcutta (Fort William)",
+      "hi": "कलकत्ता (फ़ोर्ट विलियम)"
+    }
+  },
+  {
+    "id": "maratha-core",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      497,
+      498,
+      499,
+      513,
+      514,
+      515,
+      516,
+      517,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      555,
+      556,
+      557,
+      562
+    ],
+    "verse": "Mahrattas (read: Marāṭhās)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy after Panipat: the regency at Pune for the infant Peshwa, Sindhia rising in the north, the Bhonsles at Nagpur and the Gaekwad at Baroda, at war with Bombay over Raghunāth Rāo.",
+      "hi": "पानीपत के बाद मराठा संघ: शिशु पेशवा के लिए पुणे में राज-प्रतिनिधि मंडल, उत्तर में उभरते सिंधिया, नागपुर में भोंसले और बड़ौदा में गायकवाड़, रघुनाथराव को लेकर बंबई से युद्ध में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#c46a2f",
+    "grade": {
+      "en": "The Peshwa's Deccan, governed for the infant Sawāī Mādhav Rāo from Pune",
+      "hi": "पेशवा का दक्कन, शिशु सवाई माधवराव के लिए पुणे से शासित"
+    },
+    "reading": "the Dakhin is partly © under Niz4m °Ali Khén, partly under the Mahrattas, and partly under Haidar Naik and Muhammad °Ali Khan Siréju-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "maratha-sindhia",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      445,
+      446,
+      448,
+      449,
+      450,
+      451,
+      452,
+      455,
+      456,
+      457,
+      458,
+      459,
+      464,
+      465,
+      466,
+      467
+    ],
+    "verse": "Mahrattas (read: Marāṭhās)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy after Panipat: the regency at Pune for the infant Peshwa, Sindhia rising in the north, the Bhonsles at Nagpur and the Gaekwad at Baroda, at war with Bombay over Raghunāth Rāo.",
+      "hi": "पानीपत के बाद मराठा संघ: शिशु पेशवा के लिए पुणे में राज-प्रतिनिधि मंडल, उत्तर में उभरते सिंधिया, नागपुर में भोंसले और बड़ौदा में गायकवाड़, रघुनाथराव को लेकर बंबई से युद्ध में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#e0a060",
+    "grade": {
+      "en": "Malwa, Bundelkhand and Gwalior, under Sindhia, Holkar and the Peshwa's governors",
+      "hi": "मालवा, बुंदेलखंड और ग्वालियर, सिंधिया, होल्कर और पेशवा के सूबेदारों के अधीन"
+    },
+    "reading": "took possession of the surrounding districts, along with the fortress of Gwélior",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 296",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 296"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "maratha-bhonsle",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      370,
+      371,
+      372,
+      373,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      391,
+      392,
+      393,
+      394,
+      403,
+      404,
+      405,
+      406,
+      408,
+      409,
+      410,
+      411,
+      412,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509
+    ],
+    "verse": "Mahrattas (read: Marāṭhās)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy after Panipat: the regency at Pune for the infant Peshwa, Sindhia rising in the north, the Bhonsles at Nagpur and the Gaekwad at Baroda, at war with Bombay over Raghunāth Rāo.",
+      "hi": "पानीपत के बाद मराठा संघ: शिशु पेशवा के लिए पुणे में राज-प्रतिनिधि मंडल, उत्तर में उभरते सिंधिया, नागपुर में भोंसले और बड़ौदा में गायकवाड़, रघुनाथराव को लेकर बंबई से युद्ध में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#d9b27a",
+    "grade": {
+      "en": "The Bhonsle Rajas of Nagpur: Nagpur, Chhattisgarh and Cuttack",
+      "hi": "नागपुर के भोंसले राजा: नागपुर, छत्तीसगढ़ और कटक"
+    },
+    "reading": "Janiji Bhonsla, the Raja of that place",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 291",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 291"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "maratha-gaekwad",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      470,
+      471,
+      472,
+      473,
+      474,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      490
+    ],
+    "verse": "Mahrattas (read: Marāṭhās)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy after Panipat: the regency at Pune for the infant Peshwa, Sindhia rising in the north, the Bhonsles at Nagpur and the Gaekwad at Baroda, at war with Bombay over Raghunāth Rāo.",
+      "hi": "पानीपत के बाद मराठा संघ: शिशु पेशवा के लिए पुणे में राज-प्रतिनिधि मंडल, उत्तर में उभरते सिंधिया, नागपुर में भोंसले और बड़ौदा में गायकवाड़, रघुनाथराव को लेकर बंबई से युद्ध में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#9e6a2f",
+    "grade": {
+      "en": "The Gaekwad's Gujarat, allied to the English from 1780",
+      "hi": "गायकवाड़ का गुजरात, 1780 से अंग्रेज़ों का मित्र"
+    },
+    "reading": "made an alliance with the Gaikwar of Baroda",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 533",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 533"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "mughal-delhi",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      95,
+      93,
+      94,
+      91,
+      92,
+      90,
+      98,
+      97,
+      96
+    ],
+    "verse": "Dehli",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 185",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 185"
+    },
+    "identified": {
+      "en": "certain, after Elliot and Dowson 1877",
+      "hi": "निश्चित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Shāh ʿĀlam II, back at Delhi from 1772, and his regent Mīrzā Najaf Khān, who took Agra and the Jāṭ country for the throne; after Najaf Khān's death (1782) Sindhia took his place.",
+      "hi": "1772 से दिल्ली लौटे शाह आलम द्वितीय और उनके नायब मीर्ज़ा नजफ़ ख़ान, जिन्होंने सिंहासन के लिए आगरा और जाट प्रदेश लिया; नजफ़ ख़ान की मृत्यु (1782) के बाद सिंधिया ने उनकी जगह ली।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#2f5d50",
+    "grade": {
+      "en": "Delhi, where Shāh ʿĀlam 'sits in the palace'",
+      "hi": "दिल्ली, जहाँ शाह आलम 'महल में बैठे हैं'"
+    },
+    "reading": "sits in the palace of Dehli",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 185",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 185"
+    },
+    "capital": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    }
+  },
+  {
+    "id": "mughal-najaf",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      146,
+      145,
+      105,
+      87,
+      89,
+      86,
+      88,
+      144,
+      143
+    ],
+    "verse": "Dehli",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 185",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 185"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Shāh ʿĀlam II, back at Delhi from 1772, and his regent Mīrzā Najaf Khān, who took Agra and the Jāṭ country for the throne; after Najaf Khān's death (1782) Sindhia took his place.",
+      "hi": "1772 से दिल्ली लौटे शाह आलम द्वितीय और उनके नायब मीर्ज़ा नजफ़ ख़ान, जिन्होंने सिंहासन के लिए आगरा और जाट प्रदेश लिया; नजफ़ ख़ान की मृत्यु (1782) के बाद सिंधिया ने उनकी जगह ली।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#5f8a6a",
+    "grade": {
+      "en": "Agra and the Jāṭ country, held for the emperor by Najaf Khān",
+      "hi": "आगरा और जाट प्रदेश, सम्राट के लिए नजफ़ ख़ान के हाथ में"
+    },
+    "reading": "The country of the Jats is under Najaf Kh&n",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    }
+  },
+  {
+    "id": "awadh-held",
+    "status": "draft",
+    "name": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "category": "awadh",
+    "rank": 1,
+    "districts": [
+      147,
+      148,
+      153,
+      154,
+      156,
+      157,
+      158,
+      161,
+      162,
+      163,
+      164,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192
+    ],
+    "verse": "Asafu-d daula (read: Āṣafu-d daula)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "certain, after Elliot and Dowson 1877",
+      "hi": "निश्चित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawab-wazīrs of Awadh: Shujāʿ ud-Daula, who took Rohilkhand with a Company brigade in 1774, and Āṣaf ud-Daula, who moved the capital to Lucknow.",
+      "hi": "अवध के नवाब-वज़ीर: शुजाउद्दौला, जिन्होंने 1774 में कंपनी की सेना के साथ रोहिलखंड लिया, और आसफ़ुद्दौला, जिन्होंने राजधानी लखनऊ में बसाई।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#3f7a4f",
+    "grade": {
+      "en": "Awadh, with Allahabad, Etawah and Shikohabad",
+      "hi": "अवध, इलाहाबाद, इटावा और शिकोहाबाद के साथ"
+    },
+    "reading": "Oudh, Etawah, Shukohdbad, and the whale country of the Afgh4ns (Rohillas) are in the possession of the Naw&b Wazir Asafu-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Lucknow",
+      "hi": "लखनऊ"
+    }
+  },
+  {
+    "id": "awadh-rohilkhand",
+    "status": "draft",
+    "name": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "category": "awadh",
+    "rank": 1,
+    "districts": [
+      67,
+      135,
+      137,
+      149,
+      150,
+      151,
+      152
+    ],
+    "verse": "Asafu-d daula (read: Āṣafu-d daula)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Oudh",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Oudh"
+    },
+    "identified": {
+      "en": "certain, after Elliot and Dowson 1877",
+      "hi": "निश्चित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawab-wazīrs of Awadh: Shujāʿ ud-Daula, who took Rohilkhand with a Company brigade in 1774, and Āṣaf ud-Daula, who moved the capital to Lucknow.",
+      "hi": "अवध के नवाब-वज़ीर: शुजाउद्दौला, जिन्होंने 1774 में कंपनी की सेना के साथ रोहिलखंड लिया, और आसफ़ुद्दौला, जिन्होंने राजधानी लखनऊ में बसाई।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#7fae86",
+    "grade": {
+      "en": "Rohilkhand, conquered from the Rohillas in 1774",
+      "hi": "रोहिलखंड, 1774 में रोहिल्लों से जीता गया"
+    },
+    "reading": "The Rohilla country then came into the power of Shuja’u-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 183",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 183"
+    },
+    "capital": {
+      "en": "Lucknow",
+      "hi": "लखनऊ"
+    }
+  },
+  {
+    "id": "rampur-held",
+    "status": "draft",
+    "name": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "rank": 1,
+    "districts": [
+      136
+    ],
+    "verse": "Rémpir (read: Rāmpūr)",
+    "locus": {
+      "en": "Ḥadīqat al-Aqālīm, E&D viii. 183",
+      "hi": "हदीक़त-उल-अक़ालीम, E&D viii. 183"
+    },
+    "identified": {
+      "en": "certain, after Elliot and Dowson 1877",
+      "hi": "निश्चित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rohilla state of Rāmpūr, left to Faiẓullāh Khān, son of ʿAlī Muḥammad Khān, by the treaty that ended the Rohilla war (1774).",
+      "hi": "रोहिल्ला युद्ध (1774) को समाप्त करने वाली संधि से अली मुहम्मद ख़ान के पुत्र फ़ैज़ुल्लाह ख़ान को मिला रोहिल्ला राज्य रामपुर।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#8a5a1f",
+    "grade": {
+      "en": "Faiẓullāh Khān's Rāmpūr, the one Rohilla state left",
+      "hi": "फ़ैज़ुल्लाह ख़ान का रामपुर, बचा हुआ एकमात्र रोहिल्ला राज्य"
+    },
+    "reading": "who obtained under it his hereditary estates of Rémpir.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 183",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 183"
+    },
+    "capital": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+    }
+  },
+  {
+    "id": "sikh-held",
+    "status": "draft",
+    "name": {
+      "en": "The Sikh misls",
+      "hi": "सिख मिसलें"
+    },
+    "category": "sikh",
+    "rank": 1,
+    "districts": [
+      49,
+      54,
+      46,
+      45,
+      40,
+      43,
+      35,
+      38,
+      37,
+      36,
+      41,
+      47,
+      42,
+      44,
+      48,
+      51,
+      52,
+      53,
+      39,
+      50,
+      55
+    ],
+    "verse": "Sikhs",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Panjab",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Panjab"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sikh misls, who took the Panjab from the Durrānīs in the 1760s and held it in shares among their chiefs; Lahore and Multān are now in Pakistan.",
+      "hi": "सिख मिसलें, जिन्होंने 1760 के दशक में दुर्रानियों से पंजाब लिया और उसे अपने सरदारों में बाँटकर रखा; लाहौर और मुल्तान अब पाकिस्तान में हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#d4a017",
+    "grade": {
+      "en": "The Panjab, held by the Sikh chiefs",
+      "hi": "पंजाब, सिख सरदारों के हाथ में"
+    },
+    "reading": "The Sikhs hold the whole sua of the Panjab, and Lahore, and Multén",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    }
+  },
+  {
+    "id": "nizam-held",
+    "status": "draft",
+    "name": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "category": "nizam",
+    "rank": 1,
+    "districts": [
+      500,
+      501,
+      502,
+      503,
+      510,
+      511,
+      512,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      548,
+      549,
+      551,
+      552,
+      558,
+      559,
+      579,
+      580,
+      634
+    ],
+    "verse": "Niz4m °Ali Khén (read: Niẓām ʿAlī Khān)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Āṣaf Jāhī Niẓām ʿAlī Khān, who moved his capital to Hyderabad and in 1779 raised a league of the Marāṭhās and Haidar ʿAlī against the English.",
+      "hi": "आसफ़जाही निज़ाम अली ख़ान, जिन्होंने अपनी राजधानी हैदराबाद में बसाई और 1779 में अंग्रेज़ों के विरुद्ध मराठों और हैदर अली का गठबंधन बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "Hyderabad, Telingāna and Berar",
+      "hi": "हैदराबाद, तेलिंगाना और बरार"
+    },
+    "reading": "the Dakhin is partly © under Niz4m °Ali Khén, partly under the Mahrattas, and partly under Haidar Naik and Muhammad °Ali Khan Siréju-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    }
+  },
+  {
+    "id": "mysore-held",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "rank": 1,
+    "districts": [
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      612
+    ],
+    "verse": "Haidar Naik (read: Haidar Nāik)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Haidar ʿAlī's Mysore, grown by the conquest of Bednūr (1763) and Malabar (1766); in 1780 he poured into the Carnatic and destroyed a Company army at Pollilur.",
+      "hi": "हैदर अली का मैसूर, बेदनूर (1763) और मालाबार (1766) की विजय से बढ़ा; 1780 में वह कर्नाटक में घुसे और पोल्लिलूर में कंपनी की एक सेना नष्ट की।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "Haidar ʿAlī's Mysore, with Bednūr, Canara and Malabar",
+      "hi": "हैदर अली का मैसूर, बेदनूर, कनारा और मालाबार के साथ"
+    },
+    "reading": "the Dakhin is partly © under Niz4m °Ali Khén, partly under the Mahrattas, and partly under Haidar Naik and Muhammad °Ali Khan Siréju-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Śrīraṅgapaṭṭaṇa",
+      "hi": "श्रीरंगपट्टण"
+    }
+  },
+  {
+    "id": "carnatic-held",
+    "status": "draft",
+    "name": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "category": "carnatic",
+    "rank": 1,
+    "districts": [
+      550,
+      554,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      614,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      635
+    ],
+    "verse": "Muhammad °Ali Khan (read: Muḥammad ʿAlī Khān)",
+    "locus": {
+      "en": "Jām-i Jahān-numā, E&D viii. 184, Dakhin",
+      "hi": "जाम-ए-जहाँनुमा, E&D viii. 184, Dakhin"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Muḥammad ʿAlī Khān Wālājāh, Nawab of the Carnatic, deep in debt to the Company's servants at Madras, whose country Haidar ʿAlī overran in 1780.",
+      "hi": "कर्नाटक के नवाब मुहम्मद अली ख़ान वालाजाह, मद्रास के कंपनी सेवकों के भारी कर्ज़ में, जिनके प्रदेश को 1780 में हैदर अली ने रौंद डाला।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "The Nawab of Arcot's Carnatic, under the English",
+      "hi": "आर्काट के नवाब का कर्नाटक, अंग्रेज़ों के अधीन"
+    },
+    "reading": "the Dakhin is partly © under Niz4m °Ali Khén, partly under the Mahrattas, and partly under Haidar Naik and Muhammad °Ali Khan Siréju-d daula",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 184",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 184"
+    },
+    "capital": {
+      "en": "Ārkāṭ",
+      "hi": "आर्काट"
+    }
+  }
+]

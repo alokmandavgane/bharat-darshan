@@ -2450,6 +2450,17 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-sixth round: the Company, the Marāṭhās and Mysore, c. 1780 CE. "Kingdoms and empires" gains a
+  sixteenth era, between c. 1760 and c. 1857, from Qudratullāh's survey of India in 1779 (the Jām-i Jahān-numā),
+  Murtaẓā Ḥusain's Ḥadīqat al-Aqālīm (c. 1782) and the Tārīkh-i Ibrāhīm Khān, all in Elliot and Dowson vol. VIII,
+  with Smith's Oxford History (1919) for the Company's lands. No new download.
+  - **The areas:** the Company in four shades (Bengal and Bihar; Benares; the Northern Sarkars; Bombay and Salsette);
+    the Marāṭhās in four (the Peshwa's Deccan; Sindhia and Holkar; the Bhonsles; the Gaekwad); Delhi with Najaf
+    Khān's Agra; Awadh with Rohilkhand; Rāmpūr; the Sikh misls; the Niẓām; Haidar ʿAlī's Mysore; the Carnatic.
+  - **Capitals:** eight (the Sikh misls had none). No sites.
+  - "Delhi and Najaf Khān" collided with Rāmpūr at country zoom, so the polity is "Delhi" (Najaf Khān is on the card).
+    All nine names show at 1280x800; 48 tests and the build pass.
+  - The c. 1760 Mysore cite moved from p. 287 to p. 288 after a page check of every Elliot and Dowson locus.
 - 2026-09-27, eighty-fifth round: parks and reserves. A new catalogue section ("Parks and reserves") and two Resources
   pages, Wildlife reserves and Biosphere reserves. History is on hold at the owner's word.
   - **Tiger reserves:** all 58 from NTCA's own table (ntca.gov.in/tiger-reserves), symbols sized by total area,

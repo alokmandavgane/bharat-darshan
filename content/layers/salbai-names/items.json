@@ -1,0 +1,218 @@
+[
+  {
+    "id": "company",
+    "status": "draft",
+    "name": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "category": "company",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.6,
+      "lon": 86.6
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "blurb": {
+      "en": "The Company's India under Warren Hastings: Bengal and Bihar, Benares, the Northern Sarkars and Bombay, at war with the Marāṭhās (1775-82) and with Haidar ʿAlī (1780-84).",
+      "hi": "वॉरेन हेस्टिंग्स के अधीन कंपनी का भारत: बंगाल और बिहार, बनारस, उत्तरी सरकार और बंबई, मराठों (1775-82) और हैदर अली (1780-84) से युद्धरत।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "maratha",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.0,
+      "lon": 75.2
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Marāṭhā confederacy after Panipat: the regency at Pune for the infant Peshwa, Sindhia rising in the north, the Bhonsles at Nagpur and the Gaekwad at Baroda, at war with Bombay over Raghunāth Rāo.",
+      "hi": "पानीपत के बाद मराठा संघ: शिशु पेशवा के लिए पुणे में राज-प्रतिनिधि मंडल, उत्तर में उभरते सिंधिया, नागपुर में भोंसले और बड़ौदा में गायकवाड़, रघुनाथराव को लेकर बंबई से युद्ध में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "mughal",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.8,
+      "lon": 78.0
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Shāh ʿĀlam II, back at Delhi from 1772, and his regent Mīrzā Najaf Khān, who took Agra and the Jāṭ country for the throne; after Najaf Khān's death (1782) Sindhia took his place.",
+      "hi": "1772 से दिल्ली लौटे शाह आलम द्वितीय और उनके नायब मीर्ज़ा नजफ़ ख़ान, जिन्होंने सिंहासन के लिए आगरा और जाट प्रदेश लिया; नजफ़ ख़ान की मृत्यु (1782) के बाद सिंधिया ने उनकी जगह ली।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "awadh",
+    "status": "draft",
+    "name": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "category": "awadh",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.6,
+      "lon": 81.3
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Nawab-wazīrs of Awadh: Shujāʿ ud-Daula, who took Rohilkhand with a Company brigade in 1774, and Āṣaf ud-Daula, who moved the capital to Lucknow.",
+      "hi": "अवध के नवाब-वज़ीर: शुजाउद्दौला, जिन्होंने 1774 में कंपनी की सेना के साथ रोहिलखंड लिया, और आसफ़ुद्दौला, जिन्होंने राजधानी लखनऊ में बसाई।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "rampur",
+    "status": "draft",
+    "name": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.95,
+      "lon": 79.05
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Rohilla state of Rāmpūr, left to Faiẓullāh Khān, son of ʿAlī Muḥammad Khān, by the treaty that ended the Rohilla war (1774).",
+      "hi": "रोहिल्ला युद्ध (1774) को समाप्त करने वाली संधि से अली मुहम्मद ख़ान के पुत्र फ़ैज़ुल्लाह ख़ान को मिला रोहिल्ला राज्य रामपुर।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "sikh",
+    "status": "draft",
+    "name": {
+      "en": "The Sikh misls",
+      "hi": "सिख मिसलें"
+    },
+    "category": "sikh",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.9,
+      "lon": 75.4
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Sikh misls, who took the Panjab from the Durrānīs in the 1760s and held it in shares among their chiefs; Lahore and Multān are now in Pakistan.",
+      "hi": "सिख मिसलें, जिन्होंने 1760 के दशक में दुर्रानियों से पंजाब लिया और उसे अपने सरदारों में बाँटकर रखा; लाहौर और मुल्तान अब पाकिस्तान में हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "nizam",
+    "status": "draft",
+    "name": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "category": "nizam",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.3,
+      "lon": 78.9
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Āṣaf Jāhī Niẓām ʿAlī Khān, who moved his capital to Hyderabad and in 1779 raised a league of the Marāṭhās and Haidar ʿAlī against the English.",
+      "hi": "आसफ़जाही निज़ाम अली ख़ान, जिन्होंने अपनी राजधानी हैदराबाद में बसाई और 1779 में अंग्रेज़ों के विरुद्ध मराठों और हैदर अली का गठबंधन बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "mysore",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.3,
+      "lon": 76.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Haidar ʿAlī's Mysore, grown by the conquest of Bednūr (1763) and Malabar (1766); in 1780 he poured into the Carnatic and destroyed a Company army at Pollilur.",
+      "hi": "हैदर अली का मैसूर, बेदनूर (1763) और मालाबार (1766) की विजय से बढ़ा; 1780 में वह कर्नाटक में घुसे और पोल्लिलूर में कंपनी की एक सेना नष्ट की।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "carnatic",
+    "status": "draft",
+    "name": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "category": "carnatic",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.4,
+      "lon": 78.9
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "Muḥammad ʿAlī Khān Wālājāh, Nawab of the Carnatic, deep in debt to the Company's servants at Madras, whose country Haidar ʿAlī overran in 1780.",
+      "hi": "कर्नाटक के नवाब मुहम्मद अली ख़ान वालाजाह, मद्रास के कंपनी सेवकों के भारी कर्ज़ में, जिनके प्रदेश को 1780 में हैदर अली ने रौंद डाला।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  }
+]

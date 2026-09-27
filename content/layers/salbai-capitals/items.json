@@ -1,0 +1,266 @@
+[
+  {
+    "id": "company-capital",
+    "status": "draft",
+    "name": {
+      "en": "Calcutta (Fort William)",
+      "hi": "कलकत्ता (फ़ोर्ट विलियम)"
+    },
+    "category": "company",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.5553,
+      "lon": 88.3378
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "The East India Company",
+      "hi": "ईस्ट इंडिया कंपनी"
+    },
+    "identified": {
+      "en": "certain, placed at Fort William, Kolkata",
+      "hi": "निश्चित, Fort William, Kolkata पर"
+    },
+    "blurb": {
+      "en": "The capital of The East India Company.",
+      "hi": "ईस्ट इंडिया कंपनी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Fort_William,_India"
+    ]
+  },
+  {
+    "id": "maratha-capital",
+    "status": "draft",
+    "name": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.519075,
+      "lon": 73.85545
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "identified": {
+      "en": "certain, placed at Shaniwar Wada, Pune",
+      "hi": "निश्चित, Shaniwar Wada, Pune पर"
+    },
+    "blurb": {
+      "en": "The capital of Marāṭhā confederacy.",
+      "hi": "मराठा संघ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Shaniwar_Wada"
+    ]
+  },
+  {
+    "id": "mughal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.65583333,
+      "lon": 77.24083333
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "identified": {
+      "en": "certain, placed at Red Fort, Delhi",
+      "hi": "निश्चित, Red Fort, Delhi पर"
+    },
+    "blurb": {
+      "en": "The capital of Delhi.",
+      "hi": "दिल्ली की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Red_Fort"
+    ]
+  },
+  {
+    "id": "awadh-capital",
+    "status": "draft",
+    "name": {
+      "en": "Lucknow",
+      "hi": "लखनऊ"
+    },
+    "category": "awadh",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.8689,
+      "lon": 80.9125
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "identified": {
+      "en": "certain, placed at Bara Imambara, Lucknow",
+      "hi": "निश्चित, Bara Imambara, Lucknow पर"
+    },
+    "blurb": {
+      "en": "The capital of Awadh.",
+      "hi": "अवध की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Bara_Imambara"
+    ]
+  },
+  {
+    "id": "rampur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.8103,
+      "lon": 79.0265
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Rāmpūr",
+      "hi": "रामपुर"
+    },
+    "identified": {
+      "en": "certain, placed at Rampur",
+      "hi": "निश्चित, Rampur पर"
+    },
+    "blurb": {
+      "en": "The capital of Rāmpūr.",
+      "hi": "रामपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Rampur,_Uttar_Pradesh"
+    ]
+  },
+  {
+    "id": "nizam-capital",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "nizam",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.3616,
+      "lon": 78.4747
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "identified": {
+      "en": "certain, placed at Charminar, Hyderabad",
+      "hi": "निश्चित, Charminar, Hyderabad पर"
+    },
+    "blurb": {
+      "en": "The capital of The Niẓām's Deccan.",
+      "hi": "निज़ाम का दक्कन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Charminar"
+    ]
+  },
+  {
+    "id": "mysore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śrīraṅgapaṭṭaṇa",
+      "hi": "श्रीरंगपट्टण"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.414,
+      "lon": 76.704
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "identified": {
+      "en": "certain, placed at Srirangapatna",
+      "hi": "निश्चित, Srirangapatna पर"
+    },
+    "blurb": {
+      "en": "The capital of Mysore.",
+      "hi": "मैसूर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Srirangapatna"
+    ]
+  },
+  {
+    "id": "carnatic-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ārkāṭ",
+      "hi": "आर्काट"
+    },
+    "category": "carnatic",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.9047,
+      "lon": 79.3238
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "identified": {
+      "en": "certain, placed at Arcot",
+      "hi": "निश्चित, Arcot पर"
+    },
+    "blurb": {
+      "en": "The capital of The Carnatic (Arcot).",
+      "hi": "कर्नाटक (आर्काट) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Arcot"
+    ]
+  }
+]

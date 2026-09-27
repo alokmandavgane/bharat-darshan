@@ -1,0 +1,110 @@
+{
+  "id": "salbai-capitals",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Capitals of c. 1780 CE",
+    "hi": "लगभग 1780 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "company",
+      "color": "#b8454f",
+      "title": {
+        "en": "The East India Company",
+        "hi": "ईस्ट इंडिया कंपनी"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "maratha",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Marāṭhā confederacy",
+        "hi": "मराठा संघ"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Delhi",
+        "hi": "दिल्ली"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "awadh",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Awadh",
+        "hi": "अवध"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "rampur",
+      "color": "#8a5a1f",
+      "title": {
+        "en": "Rāmpūr",
+        "hi": "रामपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "nizam",
+      "color": "#5f86a3",
+      "title": {
+        "en": "The Niẓām's Deccan",
+        "hi": "निज़ाम का दक्कन"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "carnatic",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "The Carnatic (Arcot)",
+        "hi": "कर्नाटक (आर्काट)"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Calcutta, Pune, Delhi, Lucknow, Rāmpūr, Hyderabad, Śrīraṅgapaṭṭaṇa and Arcot. The Sikh misls had no single capital.",
+    "hi": "कलकत्ता, पुणे, दिल्ली, लखनऊ, रामपुर, हैदराबाद, श्रीरंगपट्टण और आर्काट। सिख मिसलों की कोई एक राजधानी नहीं थी।"
+  },
+  "sources": [
+    "smith-1919",
+    "wikipedia"
+  ]
+}
