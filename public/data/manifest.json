@@ -6679,6 +6679,550 @@
    "path": "layers/monsoon.json"
   },
   {
+   "id": "panipat-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 1760 CE",
+    "hi": "लगभग 1760 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 10,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "rohilla",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "jat",
+     "color": "#a8544a",
+     "title": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "bengal",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Pune, Delhi, Faizābād, Bareilly, Bharatpur, Jodhpur, Murshidābād, Aurangābād, Arcot and Śrīraṅgapaṭṭaṇa. The Durrānī capital, Kandahar, is outside India.",
+    "hi": "पुणे, दिल्ली, फ़ैज़ाबाद, बरेली, भरतपुर, जोधपुर, मुर्शिदाबाद, औरंगाबाद, आर्काट और श्रीरंगपट्टण। दुर्रानी राजधानी कंधार भारत के बाहर है।"
+   },
+   "sources": [
+    "smith-1919",
+    "wikipedia"
+   ],
+   "path": "layers/panipat-capitals.json",
+   "subgroup": {
+    "id": "panipat",
+    "order": 13,
+    "pos": 2,
+    "title": {
+     "en": "c. 1760 CE · The Marāṭhās and the successor states",
+     "hi": "लगभग 1760 ई. · मराठा और उत्तराधिकारी राज्य"
+    }
+   }
+  },
+  {
+   "id": "panipat-evidence",
+   "type": "points",
+   "title": {
+    "en": "The evidence of c. 1760 CE",
+    "hi": "लगभग 1760 ई. के प्रमाण"
+   },
+   "icon": "temple",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 1,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "battle",
+     "color": "#9e1b32",
+     "icon": "pin",
+     "title": {
+      "en": "Battles",
+      "hi": "युद्ध"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "The third battle of Panipat (14 January 1761).",
+    "hi": "पानीपत का तीसरा युद्ध (14 जनवरी 1761)।"
+   },
+   "sources": [
+    "elliot-dowson-1877-viii",
+    "wikipedia"
+   ],
+   "path": "layers/panipat-evidence.json",
+   "subgroup": {
+    "id": "panipat",
+    "order": 13,
+    "pos": 3,
+    "title": {
+     "en": "c. 1760 CE · The Marāṭhās and the successor states",
+     "hi": "लगभग 1760 ई. · मराठा और उत्तराधिकारी राज्य"
+    }
+   }
+  },
+  {
+   "id": "panipat-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the powers of c. 1760 CE",
+    "hi": "नाम: लगभग 1760 ई. की शक्तियाँ"
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 11,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "durrani",
+     "color": "#4a6a6a",
+     "title": {
+      "en": "Durrānī empire",
+      "hi": "दुर्रानी साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "rohilla",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jat",
+     "color": "#a8544a",
+     "title": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "bengal",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "elliot-dowson-1877-viii",
+    "smith-1919"
+   ],
+   "path": "layers/panipat-names.json",
+   "subgroup": {
+    "id": "panipat",
+    "order": 13,
+    "pos": 1,
+    "title": {
+     "en": "c. 1760 CE · The Marāṭhās and the successor states",
+     "hi": "लगभग 1760 ई. · मराठा और उत्तराधिकारी राज्य"
+    }
+   }
+  },
+  {
+   "id": "panipat",
+   "type": "areas",
+   "title": {
+    "en": "The Marāṭhās and the successor states, c. 1760 CE",
+    "hi": "मराठा और उत्तराधिकारी राज्य, लगभग 1760 ई."
+   },
+   "icon": "map",
+   "group": "history-kingdoms",
+   "default_on": false,
+   "count": 14,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "maratha",
+     "color": "#c46a2f",
+     "title": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+     }
+    },
+    {
+     "id": "durrani",
+     "color": "#4a6a6a",
+     "title": {
+      "en": "Durrānī empire",
+      "hi": "दुर्रानी साम्राज्य"
+     }
+    },
+    {
+     "id": "mughal",
+     "color": "#2f5d50",
+     "title": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+     }
+    },
+    {
+     "id": "awadh",
+     "color": "#3f7a4f",
+     "title": {
+      "en": "Awadh",
+      "hi": "अवध"
+     }
+    },
+    {
+     "id": "rohilla",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+     }
+    },
+    {
+     "id": "jat",
+     "color": "#a8544a",
+     "title": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+     }
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+     }
+    },
+    {
+     "id": "bengal",
+     "color": "#1f5e3f",
+     "title": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+     }
+    },
+    {
+     "id": "nizam",
+     "color": "#5f86a3",
+     "title": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+     }
+    },
+    {
+     "id": "carnatic",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+     }
+    },
+    {
+     "id": "mysore",
+     "color": "#2f7f8a",
+     "title": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. Left blank: the other Rajput states, Tanjore, Travancore and Kerala, the Ahoms and the north-east, and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। खाली छोड़े गए: अन्य राजपूत राज्य, तंजावुर, त्रावणकोर और केरल, अहोम और पूर्वोत्तर, और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+   },
+   "sources": [
+    "elliot-dowson-1877-viii",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/panipat.json",
+   "subgroup": {
+    "id": "panipat",
+    "order": 13,
+    "pos": 0,
+    "title": {
+     "en": "c. 1760 CE · The Marāṭhās and the successor states",
+     "hi": "लगभग 1760 ई. · मराठा और उत्तराधिकारी राज्य"
+    }
+   }
+  },
+  {
    "id": "physiography",
    "type": "areas",
    "title": {
@@ -9640,12 +10184,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 44006,
-   "sha256": "af1ecc9d244e"
+   "size": 44998,
+   "sha256": "fc9f3e8049c8"
   },
   "sources.json": {
-   "size": 52711,
-   "sha256": "7cd58f76cd70"
+   "size": 53738,
+   "sha256": "37e7cf7d2134"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -10110,6 +10654,26 @@
   "layers/monsoon.json": {
    "size": 8463,
    "sha256": "a90d7c2d14b2"
+  },
+  "layers/panipat-areas.bin.gz": {
+   "size": 7819,
+   "sha256": "b613d6ece00e"
+  },
+  "layers/panipat-capitals.json": {
+   "size": 7907,
+   "sha256": "a22eafcc32fb"
+  },
+  "layers/panipat-evidence.json": {
+   "size": 2313,
+   "sha256": "19306968de8a"
+  },
+  "layers/panipat-names.json": {
+   "size": 9147,
+   "sha256": "1962ef4d78a6"
+  },
+  "layers/panipat.json": {
+   "size": 27617,
+   "sha256": "52862c70fa9c"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
