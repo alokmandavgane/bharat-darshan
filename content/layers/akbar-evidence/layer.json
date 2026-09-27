@@ -1,0 +1,76 @@
+{
+  "id": "akbar-evidence",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "The evidence of c. 1605 CE",
+    "hi": "लगभग 1605 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "siege",
+      "color": "#2f7f7a",
+      "icon": "pin",
+      "title": {
+        "en": "Sieges",
+        "hi": "घेरे"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "Akbar's siege of Asīrgaṛh (1600-01), his last conquest.",
+    "hi": "अकबर का असीरगढ़ घेरा (1600-01), उनकी अंतिम विजय।"
+  },
+  "sources": [
+    "jarrett-1891",
+    "smith-1919",
+    "wikipedia"
+  ]
+}

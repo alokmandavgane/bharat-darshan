@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "mughal-held",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      350,
+      351,
+      352,
+      353,
+      362,
+      363,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      407,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494
+    ],
+    "verse": "Dohli (read: Dehli)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 116",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 116"
+    },
+    "identified": {
+      "en": "likely, after Ain-i Akbari 1891",
+      "hi": "संभावित, Ain-i Akbari 1891 के अनुसार"
+    },
+    "blurb": {
+      "en": "Akbar's empire at his death in 1605: fifteen ṣūbas from Kabul to Bengal and the Deccan, ruled from Agra.",
+      "hi": "1605 में अकबर की मृत्यु के समय उनका साम्राज्य: काबुल से बंगाल और दक्कन तक पंद्रह सूबे, आगरा से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ],
+    "color": "#2f5d50",
+    "grade": {
+      "en": "The ṣūbas of Hindustan, from Lahore to Bengal and Orissa, Ajmer to Malwa and Gujarat",
+      "hi": "हिन्दुस्तान के सूबे, लाहौर से बंगाल और उड़ीसा तक, अजमेर से मालवा और गुजरात तक"
+    },
+    "reading": "Tliese were Allahabad, Agra, Oudli, Ajmer, Ahmadabad, Beliar, Bengal, Dohli, Kabul, Labor, Multan, Malwah",
+    "page": {
+      "en": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), p. 116",
+      "hi": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), पृ. 116"
+    },
+    "capital": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    }
+  },
+  {
+    "id": "mughal-kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "verse": "Dohli (read: Dehli)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 116",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 116"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "Akbar's empire at his death in 1605: fifteen ṣūbas from Kabul to Bengal and the Deccan, ruled from Agra.",
+      "hi": "1605 में अकबर की मृत्यु के समय उनका साम्राज्य: काबुल से बंगाल और दक्कन तक पंद्रह सूबे, आगरा से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#4f7f70",
+    "grade": {
+      "en": "Kashmir, counted in the ṣūba of Lahore since 1586",
+      "hi": "कश्मीर, 1586 से लाहौर सूबे में गिना गया"
+    },
+    "reading": "Lahore (Panjab), including Kashmir",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 365",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 365"
+    },
+    "capital": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    }
+  },
+  {
+    "id": "mughal-deccan",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      447,
+      466,
+      467,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510
+    ],
+    "verse": "Dohli (read: Dehli)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 116",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 116"
+    },
+    "identified": {
+      "en": "likely, after Ain-i Akbari 1891",
+      "hi": "संभावित, Ain-i Akbari 1891 के अनुसार"
+    },
+    "blurb": {
+      "en": "Akbar's empire at his death in 1605: fifteen ṣūbas from Kabul to Bengal and the Deccan, ruled from Agra.",
+      "hi": "1605 में अकबर की मृत्यु के समय उनका साम्राज्य: काबुल से बंगाल और दक्कन तक पंद्रह सूबे, आगरा से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ],
+    "color": "#6f9f8a",
+    "grade": {
+      "en": "Khandesh and Berar, conquered 1596-1601",
+      "hi": "ख़ानदेश और बरार, 1596-1601 में जीते"
+    },
+    "reading": "and when Borar, Khaiidcsh and Ahmadnagar were con-",
+    "page": {
+      "en": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), p. 116",
+      "hi": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), पृ. 116"
+    },
+    "capital": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    }
+  },
+  {
+    "id": "mughal-ahmadnagar",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      522
+    ],
+    "verse": "Dohli (read: Dehli)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 116",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 116"
+    },
+    "identified": {
+      "en": "disputed, after Oxford History 1919",
+      "hi": "विवादित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "Akbar's empire at his death in 1605: fifteen ṣūbas from Kabul to Bengal and the Deccan, ruled from Agra.",
+      "hi": "1605 में अकबर की मृत्यु के समय उनका साम्राज्य: काबुल से बंगाल और दक्कन तक पंद्रह सूबे, आगरा से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#a9c7b8",
+    "grade": {
+      "en": "Ahmadnagar, a ṣūba with 'little more than a formal existence'",
+      "hi": "अहमदनगर, एक सूबा जिसका 'औपचारिक अस्तित्व से कुछ अधिक नहीं'"
+    },
+    "reading": "But the Ahmadnagar Suba had little more than a formal existence",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 365",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 365"
+    },
+    "capital": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    }
+  },
+  {
+    "id": "mewar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "rank": 1,
+    "districts": [
+      130,
+      123
+    ],
+    "verse": "Edna (read: Rāna)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 268",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 268"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṇās of Mewār, whom Abū'l-Faḍl files under Ajmer with Chitor held by a Mughal governor; Amar Singh kept the hills free until 1614.",
+      "hi": "मेवाड़ के राणा, जिन्हें अबुल फ़ज़्ल अजमेर के अंतर्गत रखते हैं और चित्तौड़ मुग़ल राज्यपाल के पास; अमर सिंह ने 1614 तक पहाड़ स्वतंत्र रखे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#8a1f2c",
+    "grade": {
+      "en": "The hills of Mewār, where Rāṇā Amar Singh held out until 1614",
+      "hi": "मेवाड़ के पहाड़, जहाँ राणा अमर सिंह 1614 तक डटे रहे"
+    },
+    "reading": "was ended in 1614 by the submission of Rana Amar Singh",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 381",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 381"
+    },
+    "capital": {
+      "en": "Chāvand",
+      "hi": "चावंड"
+    }
+  },
+  {
+    "id": "nizamshahi-held",
+    "status": "draft",
+    "name": {
+      "en": "Niẓām Shāhīs",
+      "hi": "निज़ाम शाही"
+    },
+    "category": "nizamshahi",
+    "rank": 1,
+    "districts": [
+      521,
+      516,
+      515,
+      514,
+      523,
+      513,
+      512,
+      511,
+      520
+    ],
+    "verse": "Ahmadnagar",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 222",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 222"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Niẓām Shāhī kingdom after the fall of Ahmadnagar city (1600), held by a prince of the line and his minister Malik ʿAmbar.",
+      "hi": "अहमदनगर शहर के पतन (1600) के बाद निज़ाम शाही राज्य, वंश के एक राजकुमार और उनके मंत्री मलिक अंबर के हाथ में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "The kingdom of Ahmadnagar, 'the greater part' still in Niẓām Shāhī hands",
+      "hi": "अहमदनगर का राज्य, 'अधिकांश भाग' अभी भी निज़ाम शाही हाथों में"
+    },
+    "reading": "because the greater part of the kingdom remained in the hands of a member of the local royal family",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 365",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 365"
+    },
+    "capital": {
+      "en": "Junnar",
+      "hi": "जुन्नर"
+    }
+  },
+  {
+    "id": "bijapur-held",
+    "status": "draft",
+    "name": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "rank": 1,
+    "districts": [
+      557,
+      556,
+      555,
+      562,
+      561,
+      564,
+      526,
+      527,
+      531,
+      530,
+      528,
+      529,
+      579,
+      580,
+      559,
+      560,
+      565
+    ],
+    "verse": "Bijapir (read: Bijāpūr)",
+    "locus": {
+      "en": "Asad Beg, E&D vi. 167",
+      "hi": "असद बेग, E&D vi. 167"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The ʿĀdil Shāhīs under Ibrāhīm II (1580-1626), whose daughter Asad Beg escorted to Prince Dāniyāl in 1604.",
+      "hi": "इब्राहीम द्वितीय (1580-1626) के अधीन आदिल शाही, जिनकी पुत्री को असद बेग 1604 में राजकुमार दानियाल के पास ले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "The ʿĀdil Shāhī kingdom of Ibrāhīm II",
+      "hi": "इब्राहीम द्वितीय का आदिल शाही राज्य"
+    },
+    "reading": "Ibrahim Adil Shah II survived until 1626",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 296",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 296"
+    },
+    "capital": {
+      "en": "Bijāpur",
+      "hi": "बीजापुर"
+    }
+  },
+  {
+    "id": "bidar-held",
+    "status": "draft",
+    "name": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "rank": 1,
+    "districts": [
+      558,
+      524,
+      525
+    ],
+    "verse": "Bidar",
+    "locus": {
+      "en": "Asad Beg, E&D vi. 167",
+      "hi": "असद बेग, E&D vi. 167"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Barīd Shāhīs of Bidar, whose small kingdom Bijapur annexed soon after 1609.",
+      "hi": "बीदर के बरीद शाही, जिनका छोटा राज्य बीजापुर ने 1609 के कुछ बाद मिला लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#7a6a9e",
+    "grade": {
+      "en": "The Barīd Shāhī remnant round Bidar",
+      "hi": "बीदर के आसपास बरीद शाही अवशेष"
+    },
+    "reading": "The dynasty lasted until about 1609 or a little later",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 288",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 288"
+    },
+    "capital": {
+      "en": "Bīdar",
+      "hi": "बीदर"
+    }
+  },
+  {
+    "id": "golkonda-held",
+    "status": "draft",
+    "name": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "rank": 1,
+    "districts": [
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      545,
+      546,
+      547,
+      548,
+      549,
+      551,
+      552,
+      634
+    ],
+    "verse": "Telingdnnh (read: Telingānah)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 228",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 228"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Quṭb Shāhīs under Muḥammad Qulī (1580-1612), who founded Hyderabad in 1589 and pressed south into Kurnool and Cuddapah.",
+      "hi": "मुहम्मद क़ुली (1580-1612) के अधीन क़ुतुब शाही, जिन्होंने 1589 में हैदराबाद बसाया और दक्षिण में कुर्नूल और कडप्पा तक बढ़े।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#3f7a4f",
+    "grade": {
+      "en": "Telingāna and the coast between the Godavari and the Krishna, with conquests south of the Krishna",
+      "hi": "तेलंगाना और गोदावरी-कृष्णा के बीच का तट, कृष्णा के दक्षिण की विजयों के साथ"
+    },
+    "reading": "lying for the most part between the lower courses of the Godavarl and Krishna rivers",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 289",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 289"
+    },
+    "capital": {
+      "en": "Golkoṇḍa",
+      "hi": "गोलकोंडा"
+    }
+  },
+  {
+    "id": "vijayanagara-core",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "rank": 1,
+    "districts": [
+      550,
+      553,
+      554,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      635
+    ],
+    "verse": "Vencattapatti Rayalu (read: Veṅkaṭapati Rāyalu)",
+    "locus": {
+      "en": "Barradas, Sewell p. 222",
+      "hi": "बर्रादास, Sewell p. 222"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The fourth Vijayanagara dynasty under Veṅkaṭa II (1586-1614), ruling from Chandragiri: 'the Carnatic' to Akbar's envoy.",
+      "hi": "वेंकट द्वितीय (1586-1614) के अधीन विजयनगर का चौथा वंश, चंद्रगिरि से शासन करता: अकबर के दूत के लिए 'कर्नाटक'।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/india.history.resource.107659"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "The kingdom round Chandragiri, where the Raya had retired from Penukonda",
+      "hi": "चंद्रगिरि के आसपास का राज्य, जहाँ राय पेनुकोंडा से हट आए थे"
+    },
+    "reading": "the Raya in terror retired from Penukonda to Chandragiri",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 217",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 217"
+    },
+    "capital": {
+      "en": "Chandragiri",
+      "hi": "चंद्रगिरि"
+    }
+  },
+  {
+    "id": "vijayanagara-mysore",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "rank": 1,
+    "districts": [
+      566,
+      567,
+      570,
+      571,
+      572,
+      573,
+      574,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584
+    ],
+    "verse": "Vencattapatti Rayalu (read: Veṅkaṭapati Rāyalu)",
+    "locus": {
+      "en": "Barradas, Sewell p. 222",
+      "hi": "बर्रादास, Sewell p. 222"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The fourth Vijayanagara dynasty under Veṅkaṭa II (1586-1614), ruling from Chandragiri: 'the Carnatic' to Akbar's envoy.",
+      "hi": "वेंकट द्वितीय (1586-1614) के अधीन विजयनगर का चौथा वंश, चंद्रगिरि से शासन करता: अकबर के दूत के लिए 'कर्नाटक'।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/india.history.resource.107659"
+    ],
+    "color": "#c9785a",
+    "grade": {
+      "en": "Mysore, under a Vijayanagara viceroy until 1610",
+      "hi": "मैसूर, 1610 तक विजयनगर के उपराज के अधीन"
+    },
+    "reading": "A Vijayanagar viceroy ruled over Mysore till 1610",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 220",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 220"
+    },
+    "capital": {
+      "en": "Chandragiri",
+      "hi": "चंद्रगिरि"
+    }
+  },
+  {
+    "id": "madurai-held",
+    "status": "draft",
+    "name": {
+      "en": "Madurai Nāyakas",
+      "hi": "मदुरै के नायक"
+    },
+    "category": "madurai",
+    "rank": 1,
+    "districts": [
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633
+    ],
+    "verse": "Naique of \nMadura (read: Naique of Madura)",
+    "locus": {
+      "en": "Barradas, Sewell p. 230",
+      "hi": "बर्रादास, Sewell p. 230"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nāyakas of Madurai, 'a page of the betel to the King of Bisnaga' but the greatest power of the far south.",
+      "hi": "मदुरै के नायक, 'बिसनगा के राजा के पान-सेवक' पर सुदूर दक्षिण की सबसे बड़ी शक्ति।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#9e6a2f",
+    "grade": {
+      "en": "The Madurai country, independent of Vijayanagara in all but name since 1602",
+      "hi": "मदुरै देश, 1602 से नाम को छोड़ विजयनगर से स्वतंत्र"
+    },
+    "reading": "In Madura and Tanjore the Nayakkas became independent in 1602.",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 220",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 220"
+    },
+    "capital": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    }
+  },
+  {
+    "id": "madurai-travancore",
+    "status": "draft",
+    "name": {
+      "en": "Madurai Nāyakas",
+      "hi": "मदुरै के नायक"
+    },
+    "category": "madurai",
+    "rank": 1,
+    "districts": [
+      601,
+      600
+    ],
+    "verse": "Naique of \nMadura (read: Naique of Madura)",
+    "locus": {
+      "en": "Barradas, Sewell p. 230",
+      "hi": "बर्रादास, Sewell p. 230"
+    },
+    "identified": {
+      "en": "disputed, after A Forgotten Empire 1900",
+      "hi": "विवादित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nāyakas of Madurai, 'a page of the betel to the King of Bisnaga' but the greatest power of the far south.",
+      "hi": "मदुरै के नायक, 'बिसनगा के राजा के पान-सेवक' पर सुदूर दक्षिण की सबसे बड़ी शक्ति।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#d4a870",
+    "grade": {
+      "en": "Travancore, a vassal of the Nāyaka of Madurai",
+      "hi": "त्रावणकोर, मदुरै के नायक का सामंत"
+    },
+    "reading": "has under him many kings and nobles as vassals, such as he of Travancor",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 230",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 230"
+    },
+    "capital": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    }
+  },
+  {
+    "id": "tanjore-held",
+    "status": "draft",
+    "name": {
+      "en": "Tanjore Nāyakas",
+      "hi": "तंजावुर के नायक"
+    },
+    "category": "tanjore",
+    "rank": 1,
+    "districts": [
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      637
+    ],
+    "verse": "Naique of Tanjaor",
+    "locus": {
+      "en": "Barradas, Sewell p. 230",
+      "hi": "बर्रादास, Sewell p. 230"
+    },
+    "identified": {
+      "en": "likely, after A Forgotten Empire 1900",
+      "hi": "संभावित, A Forgotten Empire 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nāyakas of Tañjāvūr, loyal to the young Vijayanagara king in the civil war of 1614-16.",
+      "hi": "तंजावुर के नायक, 1614-16 के गृहयुद्ध में विजयनगर के युवा राजा के प्रति निष्ठावान।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ],
+    "color": "#b8454f",
+    "grade": {
+      "en": "The Kāverī delta round Tañjāvūr",
+      "hi": "तंजावुर के आसपास कावेरी डेल्टा"
+    },
+    "reading": "In Madura and Tanjore the Nayakkas became independent in 1602.",
+    "page": {
+      "en": "Robert Sewell, A Forgotten Empire (1900), p. 220",
+      "hi": "Robert Sewell, A Forgotten Empire (1900), पृ. 220"
+    },
+    "capital": {
+      "en": "Tañjāvūr",
+      "hi": "तंजावुर"
+    }
+  },
+  {
+    "id": "ahom-held",
+    "status": "draft",
+    "name": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "category": "ahom",
+    "rank": 1,
+    "districts": [
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      306,
+      305
+    ],
+    "verse": "Rajah of Asha m (read: Rajah of Asham)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 118",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 118"
+    },
+    "identified": {
+      "en": "likely, after Ain-i Akbari 1891",
+      "hi": "संभावित, Ain-i Akbari 1891 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Ahom kings of Assam, 'whose great pomp and state are subjects of general report'.",
+      "hi": "असम के अहोम राजा, 'जिनकी भव्यता और शान की चर्चा सब ओर है'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ],
+    "color": "#6d4a8a",
+    "grade": {
+      "en": "The upper Brahmaputra, 'the dominions of the Rajah of Asham'",
+      "hi": "ऊपरी ब्रह्मपुत्र, 'असम के राजा के प्रदेश'"
+    },
+    "reading": "Bordering on this country ai-e the dominions of the Rajah of Asha m",
+    "page": {
+      "en": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), p. 118",
+      "hi": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), पृ. 118"
+    },
+    "capital": {
+      "en": "Garhgaon",
+      "hi": "गढ़गाँव"
+    }
+  },
+  {
+    "id": "koch-held",
+    "status": "draft",
+    "name": {
+      "en": "Koch kingdoms",
+      "hi": "कोच राज्य"
+    },
+    "category": "koch",
+    "rank": 1,
+    "districts": [
+      329,
+      328,
+      301,
+      302,
+      300,
+      319,
+      320,
+      303,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      304
+    ],
+    "verse": "Knch (read: Kuch)",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 117",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 117"
+    },
+    "identified": {
+      "en": "likely, after Ain-i Akbari 1891",
+      "hi": "संभावित, Ain-i Akbari 1891 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Koch kings of Kūch Bihār and Kāmrūp, with a thousand horse and a hundred thousand foot, by Abū'l-Faḍl's count.",
+      "hi": "कूच बिहार और कामरूप के कोच राजा, अबुल फ़ज़्ल की गणना से हज़ार घोड़े और लाख पैदल के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ],
+    "color": "#1f5e3f",
+    "grade": {
+      "en": "Kūch, with Kāmrūp 'subject to him'",
+      "hi": "कूच, कामरूप 'उसके अधीन'"
+    },
+    "reading": "To the north is a country called Knch.",
+    "page": {
+      "en": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), p. 117",
+      "hi": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), पृ. 117"
+    },
+    "capital": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    }
+  },
+  {
+    "id": "tripura-held",
+    "status": "draft",
+    "name": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "category": "tripura",
+    "rank": 1,
+    "districts": [
+      289,
+      290,
+      291,
+      292
+    ],
+    "verse": "Tipperah",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 117",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 117"
+    },
+    "identified": {
+      "en": "likely, after Ain-i Akbari 1891",
+      "hi": "संभावित, Ain-i Akbari 1891 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Māṇikya kings of Tripura, whose ruler Abū'l-Faḍl names as Bijay Mānik.",
+      "hi": "त्रिपुरा के माणिक्य राजा, जिनके शासक को अबुल फ़ज़्ल बिजय माणिक बताते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ],
+    "color": "#b07a1a",
+    "grade": {
+      "en": "'The Tipperah tribes' under Bijay Mānik",
+      "hi": "बिजय माणिक के अधीन 'टिपरा जनजातियाँ'"
+    },
+    "reading": "tract of country inhabited by the Tipperah tribes.",
+    "page": {
+      "en": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), p. 117",
+      "hi": "H. S. Jarrett, The Ain i Akbari by Abul Fazl i Allami (1891), पृ. 117"
+    },
+    "capital": {
+      "en": "Udaipur (Rāṅgāmāṭi)",
+      "hi": "उदयपुर (रांगामाटी)"
+    }
+  }
+]

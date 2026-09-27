@@ -54,7 +54,11 @@
     "vijayanagara",
     "vijayanagara-names",
     "vijayanagara-capitals",
-    "vijayanagara-evidence"
+    "vijayanagara-evidence",
+    "akbar",
+    "akbar-names",
+    "akbar-capitals",
+    "akbar-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -287,6 +291,27 @@
         "vijayanagara-names",
         "vijayanagara-capitals",
         "vijayanagara-evidence"
+      ]
+    },
+    {
+      "id": "akbar",
+      "display": {
+        "en": "c. 1605 CE",
+        "hi": "लगभग 1605 ई."
+      },
+      "title": {
+        "en": "Akbar's empire and the Deccan kingdoms",
+        "hi": "अकबर का साम्राज्य और दक्कन के राज्य"
+      },
+      "blurb": {
+        "en": "Akbar's fifteen ṣūbas at his death, and beyond them Mewār, the Deccan sultanates, Vijayanagara, the Nāyakas and the kings of the north-east, from the Āʾīn-i Akbarī, Asad Beg and Barradas.",
+        "hi": "अकबर की मृत्यु के समय उनके पंद्रह सूबे, और उनके परे मेवाड़, दक्कन की सल्तनतें, विजयनगर, नायक और पूर्वोत्तर के राजा, आईन-ए-अकबरी, असद बेग और बर्रादास से।"
+      },
+      "layers": [
+        "akbar",
+        "akbar-names",
+        "akbar-capitals",
+        "akbar-evidence"
       ]
     }
   ],

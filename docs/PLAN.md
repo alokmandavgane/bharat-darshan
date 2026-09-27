@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-first round: Akbar's empire and the Deccan kingdoms, c. 1605 CE. "Kingdoms and empires" gains
+  its twelfth era, from the Āʾīn-i Akbarī (Jarrett, vol. II, 1891), Asad Beg's Wikāya (Elliot and Dowson vol. VI,
+  1875), Barradas's letter of 1616 (Sewell 1900) and Smith's Oxford History (1919).
+  - **The areas:** the Mughal empire in four shades (the ṣūbas of Hindustan; Kashmir; Khandesh and Berar; Ahmadnagar,
+    disputed); Mewār's hills; the Niẓām Shāhīs, Bijapur, Bidar and Golkonda; Vijayanagara at Chandragiri with the
+    Mysore viceroyalty; the Madurai (with Travancore) and Tanjore Nāyakas; the Ahom, Koch and Tripura kingdoms.
+  - **Capitals and pins:** twelve capitals; the siege of Asīrgaṛh (1600-01).
+  - The era filed itself in the catalogue under "c. 1605 CE" with no field of its own. The Golkonda label was moved
+    east to clear Bidar's. All twelve names show at 1280x800; 48 tests and the build pass.
 - 2026-09-27, eightieth round: the layer catalogue folds. The history layers had swollen "People and places" to
   72 rows, so it splits in five groups: People and places (7), Census by district (11), The old texts' India
   (divisions, Kūrma-vibhāga, rivers and mountains; 5), Journeys in the epics (6) and Kingdoms and empires (43).

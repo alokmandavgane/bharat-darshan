@@ -998,8 +998,44 @@
       "licence": "public-domain",
       "retrieved": "2026-09",
       "note": {
-        "en": "Paes and Nuniz on Vijayanagara, quoted for c. 1525 CE.",
-        "hi": "विजयनगर पर पाइस और नुनीज़, लगभग 1525 ई. के लिए उद्धृत।"
+        "en": "Paes and Nuniz on Vijayanagara, quoted for c. 1525 CE; Barradas and Sewell's own account, for c. 1605 CE.",
+        "hi": "विजयनगर पर पाइस और नुनीज़, लगभग 1525 ई. के लिए; बर्रादास और सुएल का अपना विवरण, लगभग 1605 ई. के लिए उद्धृत।"
+      }
+    },
+    "jarrett-1891": {
+      "title": {
+        "en": "H. S. Jarrett, The Ain i Akbari, vol. II (1891)",
+        "hi": "एच. एस. जैरेट, आईन-ए-अकबरी, खंड II (1891)"
+      },
+      "publisher": {
+        "en": "Asiatic Society of Bengal, Calcutta: Abū'l-Faḍl's account of Akbar's ṣūbas in translation",
+        "hi": "एशियाटिक सोसाइटी ऑफ़ बंगाल, कलकत्ता: अकबर के सूबों का अबुल फ़ज़्ल का विवरण, अनुवाद में"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.32527",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Āʾīn-i Akbarī, quoted for Akbar's empire, c. 1605 CE.",
+        "hi": "आईन-ए-अकबरी, लगभग 1605 ई. के अकबर के साम्राज्य के लिए उद्धृत।"
+      }
+    },
+    "elliot-dowson-1875": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VI (1875)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियन्स, खंड VI (1875)"
+      },
+      "publisher": {
+        "en": "Trübner, London: Asad Beg's Wikāya in translation",
+        "hi": "ट्रुब्नर, लंदन: असद बेग का विक़ाया, अनुवाद में"
+      },
+      "url": "https://archive.org/details/india.history.resource.107659",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Asad Beg on the Deccan kingdoms, quoted for c. 1605 CE.",
+        "hi": "दक्कन के राज्यों पर असद बेग, लगभग 1605 ई. के लिए उद्धृत।"
       }
     }
   }

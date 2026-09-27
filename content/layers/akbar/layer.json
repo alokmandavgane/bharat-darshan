@@ -1,0 +1,188 @@
+{
+  "id": "akbar",
+  "type": "areas",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Akbar's empire and the Deccan kingdoms, c. 1605 CE",
+    "hi": "अकबर का साम्राज्य और दक्कन के राज्य, लगभग 1605 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Mughal empire",
+        "hi": "मुग़ल साम्राज्य"
+      }
+    },
+    {
+      "id": "mewar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      }
+    },
+    {
+      "id": "nizamshahi",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Niẓām Shāhīs",
+        "hi": "निज़ाम शाही"
+      }
+    },
+    {
+      "id": "bijapur",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Bijapur",
+        "hi": "बीजापुर"
+      }
+    },
+    {
+      "id": "bidar",
+      "color": "#7a6a9e",
+      "title": {
+        "en": "Bidar",
+        "hi": "बीदर"
+      }
+    },
+    {
+      "id": "golkonda",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Golkonda",
+        "hi": "गोलकोंडा"
+      }
+    },
+    {
+      "id": "vijayanagara",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Vijayanagara",
+        "hi": "विजयनगर"
+      }
+    },
+    {
+      "id": "madurai",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Madurai Nāyakas",
+        "hi": "मदुरै के नायक"
+      }
+    },
+    {
+      "id": "tanjore",
+      "color": "#b8454f",
+      "title": {
+        "en": "Tanjore Nāyakas",
+        "hi": "तंजावुर के नायक"
+      }
+    },
+    {
+      "id": "ahom",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Ahom kingdom",
+        "hi": "अहोम राज्य"
+      }
+    },
+    {
+      "id": "koch",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Koch kingdoms",
+        "hi": "कोच राज्य"
+      }
+    },
+    {
+      "id": "tripura",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Tripura",
+        "hi": "त्रिपुरा"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India at Akbar's death in 1605. The Mughal empire is drawn in four shades: the ṣūbas of Hindustan, which the Āʾīn-i Akbarī lists, from Lahore to Bengal and Orissa and from Ajmer to Malwa and Gujarat; Kashmir, counted under Lahore; Khandesh and Berar, the last conquests; and Ahmadnagar, a ṣūba in name, whose kingdom the Niẓām Shāhīs still mostly held. Beyond it stand the hills of Mewār, where Rāṇā Amar Singh held out until 1614; the Deccan kingdoms Akbar's last envoy was sent to, 'Bijapur, Golconda, Bidar, and the Carnatic'; the Nāyakas of Madurai and Tanjore, nominal vassals of Vijayanagara at Chandragiri, as the Jesuit Barradas found them in 1614; and, from the Āʾīn, the kings of Assam, the Koch country and Tripura. Left blank: the Himalayan hill states, the north-east hills, the forest country of central India, Ikkeri and the Kanara coast, Kerala north of Travancore, and the Portuguese territories, which nothing read here attests. The Āʾīn is quoted in Jarrett's translation (1891), Asad Beg in Elliot and Dowson's (1875), Barradas in Sewell's (1900); extents follow Smith's Oxford History (1919) and Sewell. Drawn on today's districts, to the nearest district.",
+    "hi": "1605 में अकबर की मृत्यु के समय का भारत। मुग़ल साम्राज्य चार छटाओं में दिखाया गया है: हिन्दुस्तान के सूबे, जिन्हें आईन-ए-अकबरी गिनाती है, लाहौर से बंगाल और उड़ीसा तक और अजमेर से मालवा और गुजरात तक; कश्मीर, लाहौर के अंतर्गत गिना गया; ख़ानदेश और बरार, अंतिम विजयें; और अहमदनगर, नाम का सूबा, जिसका राज्य अधिकतर अभी भी निज़ाम शाहियों के पास था। उसके परे मेवाड़ के पहाड़ हैं, जहाँ राणा अमर सिंह 1614 तक डटे रहे; दक्कन के वे राज्य जिनके पास अकबर का अंतिम दूत भेजा गया, 'बीजापुर, गोलकोंडा, बीदर और कर्नाटक'; मदुरै और तंजावुर के नायक, चंद्रगिरि के विजयनगर के नाममात्र के सामंत, जैसा जेसुइट बर्रादास ने 1614 में पाया; और आईन से, असम, कोच देश और त्रिपुरा के राजा। खाली छोड़े गए: हिमालय के पहाड़ी राज्य, पूर्वोत्तर के पहाड़, मध्य भारत का वन प्रदेश, इक्केरी और कनारा तट, त्रावणकोर के उत्तर का केरल, और पुर्तगाली क्षेत्र, जिनके लिए यहाँ पढ़ा कुछ भी प्रमाण नहीं देता। आईन जैरेट के अनुवाद (1891) में, असद बेग इलियट और डाउसन के (1875) में, बर्रादास सुएल के (1900) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) और सुएल के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+  },
+  "sources": [
+    "jarrett-1891",
+    "elliot-dowson-1875",
+    "sewell-1900",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Smith (1914), Sachau's Alberuni (1888) and Hultzsch in Epigraphia Indica IX, all public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

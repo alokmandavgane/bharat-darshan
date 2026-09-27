@@ -1,0 +1,46 @@
+[
+  {
+    "id": "asirgarh",
+    "status": "draft",
+    "name": {
+      "en": "Asīrgaṛh",
+      "hi": "असीरगढ़"
+    },
+    "category": "siege",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.471,
+      "lon": 76.2937
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Siege",
+      "hi": "घेरा"
+    },
+    "identified": {
+      "en": "placed at Asirgarh fort",
+      "hi": "Asirgarh fort पर"
+    },
+    "blurb": {
+      "en": "Akbar's siege of the Khandesh fortress (1600-01), won by bribery: 'the last conquest of Akbar'.",
+      "hi": "अकबर का ख़ानदेश के दुर्ग पर घेरा (1600-01), रिश्वत से जीता: 'अकबर की अंतिम विजय'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Asirgarh_Fort"
+    ],
+    "reading": "was the last conquest of Akbar",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 364",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 364"
+    },
+    "verse": "Asir",
+    "locus": {
+      "en": "Āʾīn-i Akbarī, Jarrett ii. 222",
+      "hi": "आईन-ए-अकबरी, Jarrett ii. 222"
+    }
+  }
+]

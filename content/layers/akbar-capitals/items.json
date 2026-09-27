@@ -1,0 +1,398 @@
+[
+  {
+    "id": "mughal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Āgra",
+      "hi": "आगरा"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.179542,
+      "lon": 78.021101
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Agra Fort",
+      "hi": "निश्चित, Agra Fort पर"
+    },
+    "blurb": {
+      "en": "The capital of Mughal empire.",
+      "hi": "मुग़ल साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Agra_Fort"
+    ]
+  },
+  {
+    "id": "mewar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Chāvand",
+      "hi": "चावंड"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.18,
+      "lon": 73.82
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "identified": {
+      "en": "likely, placed at Chavand (approximate)",
+      "hi": "संभावित, Chavand (approximate) पर"
+    },
+    "blurb": {
+      "en": "The capital of Mewār.",
+      "hi": "मेवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Chavand"
+    ]
+  },
+  {
+    "id": "nizamshahi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Junnar",
+      "hi": "जुन्नर"
+    },
+    "category": "nizamshahi",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.20722222,
+      "lon": 73.87416667
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Niẓām Shāhīs",
+      "hi": "निज़ाम शाही"
+    },
+    "identified": {
+      "en": "likely, placed at Junnar",
+      "hi": "संभावित, Junnar पर"
+    },
+    "blurb": {
+      "en": "The capital of Niẓām Shāhīs.",
+      "hi": "निज़ाम शाही की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Junnar"
+    ]
+  },
+  {
+    "id": "bijapur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bijāpur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.83,
+      "lon": 75.71
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "identified": {
+      "en": "certain, placed at Vijayapura (Bijapur)",
+      "hi": "निश्चित, Vijayapura (Bijapur) पर"
+    },
+    "blurb": {
+      "en": "The capital of Bijapur.",
+      "hi": "बीजापुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Bijapur"
+    ]
+  },
+  {
+    "id": "bidar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bīdar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.912,
+      "lon": 77.52
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "identified": {
+      "en": "certain, placed at Bidar",
+      "hi": "निश्चित, Bidar पर"
+    },
+    "blurb": {
+      "en": "The capital of Bidar.",
+      "hi": "बीदर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Bidar"
+    ]
+  },
+  {
+    "id": "golkonda-capital",
+    "status": "draft",
+    "name": {
+      "en": "Golkoṇḍa",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.38305556,
+      "lon": 78.40111111
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "identified": {
+      "en": "certain, placed at Golconda",
+      "hi": "निश्चित, Golconda पर"
+    },
+    "blurb": {
+      "en": "The capital of Golkonda.",
+      "hi": "गोलकोंडा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "https://en.wikipedia.org/wiki/Golconda"
+    ]
+  },
+  {
+    "id": "vijayanagara-capital",
+    "status": "draft",
+    "name": {
+      "en": "Chandragiri",
+      "hi": "चंद्रगिरि"
+    },
+    "category": "vijayanagara",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.585,
+      "lon": 79.317
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "polity": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "identified": {
+      "en": "likely, placed at Chandragiri fort (approximate)",
+      "hi": "संभावित, Chandragiri fort (approximate) पर"
+    },
+    "blurb": {
+      "en": "The capital of Vijayanagara.",
+      "hi": "विजयनगर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://en.wikipedia.org/wiki/Chandragiri_Fort"
+    ]
+  },
+  {
+    "id": "madurai-capital",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "madurai",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.9252,
+      "lon": 78.1198
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Madurai Nāyakas",
+      "hi": "मदुरै के नायक"
+    },
+    "identified": {
+      "en": "certain, placed at Madurai",
+      "hi": "निश्चित, Madurai पर"
+    },
+    "blurb": {
+      "en": "The capital of Madurai Nāyakas.",
+      "hi": "मदुरै के नायक की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://en.wikipedia.org/wiki/Madurai"
+    ]
+  },
+  {
+    "id": "tanjore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Tañjāvūr",
+      "hi": "तंजावुर"
+    },
+    "category": "tanjore",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.78694444,
+      "lon": 79.13777778
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Tanjore Nāyakas",
+      "hi": "तंजावुर के नायक"
+    },
+    "identified": {
+      "en": "certain, placed at Thanjavur",
+      "hi": "निश्चित, Thanjavur पर"
+    },
+    "blurb": {
+      "en": "The capital of Tanjore Nāyakas.",
+      "hi": "तंजावुर के नायक की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://en.wikipedia.org/wiki/Thanjavur"
+    ]
+  },
+  {
+    "id": "ahom-capital",
+    "status": "draft",
+    "name": {
+      "en": "Garhgaon",
+      "hi": "गढ़गाँव"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.935531,
+      "lon": 94.744257
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Garhgaon",
+      "hi": "निश्चित, Garhgaon पर"
+    },
+    "blurb": {
+      "en": "The capital of Ahom kingdom.",
+      "hi": "अहोम राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://en.wikipedia.org/wiki/Garhgaon"
+    ]
+  },
+  {
+    "id": "koch-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kūch Bihār",
+      "hi": "कूच बिहार"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3269,
+      "lon": 89.4386
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Koch kingdoms",
+      "hi": "कोच राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Cooch Behar",
+      "hi": "निश्चित, Cooch Behar पर"
+    },
+    "blurb": {
+      "en": "The capital of Koch kingdoms.",
+      "hi": "कोच राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://en.wikipedia.org/wiki/Cooch_Behar_Palace"
+    ]
+  },
+  {
+    "id": "tripura-capital",
+    "status": "draft",
+    "name": {
+      "en": "Udaipur (Rāṅgāmāṭi)",
+      "hi": "उदयपुर (रांगामाटी)"
+    },
+    "category": "tripura",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.53888889,
+      "lon": 91.49166667
+    },
+    "regions": [
+      "IN-TR"
+    ],
+    "polity": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "identified": {
+      "en": "certain, placed at Udaipur, Tripura",
+      "hi": "निश्चित, Udaipur, Tripura पर"
+    },
+    "blurb": {
+      "en": "The capital of Tripura.",
+      "hi": "त्रिपुरा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://en.wikipedia.org/wiki/Udaipur,_Tripura"
+    ]
+  }
+]

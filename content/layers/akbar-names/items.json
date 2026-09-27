@@ -1,0 +1,297 @@
+[
+  {
+    "id": "mughal",
+    "status": "draft",
+    "name": {
+      "en": "Mughal empire",
+      "hi": "मुग़ल साम्राज्य"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.4,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Akbar's empire at his death in 1605: fifteen ṣūbas from Kabul to Bengal and the Deccan, ruled from Agra.",
+      "hi": "1605 में अकबर की मृत्यु के समय उनका साम्राज्य: काबुल से बंगाल और दक्कन तक पंद्रह सूबे, आगरा से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ]
+  },
+  {
+    "id": "mewar",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.2,
+      "lon": 73.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṇās of Mewār, whom Abū'l-Faḍl files under Ajmer with Chitor held by a Mughal governor; Amar Singh kept the hills free until 1614.",
+      "hi": "मेवाड़ के राणा, जिन्हें अबुल फ़ज़्ल अजमेर के अंतर्गत रखते हैं और चित्तौड़ मुग़ल राज्यपाल के पास; अमर सिंह ने 1614 तक पहाड़ स्वतंत्र रखे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "nizamshahi",
+    "status": "draft",
+    "name": {
+      "en": "Niẓām Shāhīs",
+      "hi": "निज़ाम शाही"
+    },
+    "category": "nizamshahi",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.9,
+      "lon": 74.3
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Niẓām Shāhī kingdom after the fall of Ahmadnagar city (1600), held by a prince of the line and his minister Malik ʿAmbar.",
+      "hi": "अहमदनगर शहर के पतन (1600) के बाद निज़ाम शाही राज्य, वंश के एक राजकुमार और उनके मंत्री मलिक अंबर के हाथ में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "bijapur",
+    "status": "draft",
+    "name": {
+      "en": "Bijapur",
+      "hi": "बीजापुर"
+    },
+    "category": "bijapur",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.3,
+      "lon": 75.2
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The ʿĀdil Shāhīs under Ibrāhīm II (1580-1626), whose daughter Asad Beg escorted to Prince Dāniyāl in 1604.",
+      "hi": "इब्राहीम द्वितीय (1580-1626) के अधीन आदिल शाही, जिनकी पुत्री को असद बेग 1604 में राजकुमार दानियाल के पास ले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "bidar",
+    "status": "draft",
+    "name": {
+      "en": "Bidar",
+      "hi": "बीदर"
+    },
+    "category": "bidar",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.0,
+      "lon": 77.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Barīd Shāhīs of Bidar, whose small kingdom Bijapur annexed soon after 1609.",
+      "hi": "बीदर के बरीद शाही, जिनका छोटा राज्य बीजापुर ने 1609 के कुछ बाद मिला लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "golkonda",
+    "status": "draft",
+    "name": {
+      "en": "Golkonda",
+      "hi": "गोलकोंडा"
+    },
+    "category": "golkonda",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.3,
+      "lon": 80.3
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Quṭb Shāhīs under Muḥammad Qulī (1580-1612), who founded Hyderabad in 1589 and pressed south into Kurnool and Cuddapah.",
+      "hi": "मुहम्मद क़ुली (1580-1612) के अधीन क़ुतुब शाही, जिन्होंने 1589 में हैदराबाद बसाया और दक्षिण में कुर्नूल और कडप्पा तक बढ़े।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527",
+      "https://archive.org/details/india.history.resource.107659",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  },
+  {
+    "id": "vijayanagara",
+    "status": "draft",
+    "name": {
+      "en": "Vijayanagara",
+      "hi": "विजयनगर"
+    },
+    "category": "vijayanagara",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.3,
+      "lon": 78.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The fourth Vijayanagara dynasty under Veṅkaṭa II (1586-1614), ruling from Chandragiri: 'the Carnatic' to Akbar's envoy.",
+      "hi": "वेंकट द्वितीय (1586-1614) के अधीन विजयनगर का चौथा वंश, चंद्रगिरि से शासन करता: अकबर के दूत के लिए 'कर्नाटक'।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog",
+      "https://archive.org/details/india.history.resource.107659"
+    ]
+  },
+  {
+    "id": "madurai",
+    "status": "draft",
+    "name": {
+      "en": "Madurai Nāyakas",
+      "hi": "मदुरै के नायक"
+    },
+    "category": "madurai",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.2,
+      "lon": 77.9
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Nāyakas of Madurai, 'a page of the betel to the King of Bisnaga' but the greatest power of the far south.",
+      "hi": "मदुरै के नायक, 'बिसनगा के राजा के पान-सेवक' पर सुदूर दक्षिण की सबसे बड़ी शक्ति।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ]
+  },
+  {
+    "id": "tanjore",
+    "status": "draft",
+    "name": {
+      "en": "Tanjore Nāyakas",
+      "hi": "तंजावुर के नायक"
+    },
+    "category": "tanjore",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.95,
+      "lon": 79.5
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Nāyakas of Tañjāvūr, loyal to the young Vijayanagara king in the civil war of 1614-16.",
+      "hi": "तंजावुर के नायक, 1614-16 के गृहयुद्ध में विजयनगर के युवा राजा के प्रति निष्ठावान।"
+    },
+    "sources": [
+      "https://archive.org/details/aforgottenempir00paesgoog"
+    ]
+  },
+  {
+    "id": "ahom",
+    "status": "draft",
+    "name": {
+      "en": "Ahom kingdom",
+      "hi": "अहोम राज्य"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9,
+      "lon": 94.0
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Ahom kings of Assam, 'whose great pomp and state are subjects of general report'.",
+      "hi": "असम के अहोम राजा, 'जिनकी भव्यता और शान की चर्चा सब ओर है'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ]
+  },
+  {
+    "id": "koch",
+    "status": "draft",
+    "name": {
+      "en": "Koch kingdoms",
+      "hi": "कोच राज्य"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 90.6
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Koch kings of Kūch Bihār and Kāmrūp, with a thousand horse and a hundred thousand foot, by Abū'l-Faḍl's count.",
+      "hi": "कूच बिहार और कामरूप के कोच राजा, अबुल फ़ज़्ल की गणना से हज़ार घोड़े और लाख पैदल के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ]
+  },
+  {
+    "id": "tripura",
+    "status": "draft",
+    "name": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "category": "tripura",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.8,
+      "lon": 91.6
+    },
+    "regions": [
+      "IN-TR"
+    ],
+    "blurb": {
+      "en": "The Māṇikya kings of Tripura, whose ruler Abū'l-Faḍl names as Bijay Mānik.",
+      "hi": "त्रिपुरा के माणिक्य राजा, जिनके शासक को अबुल फ़ज़्ल बिजय माणिक बताते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.32527"
+    ]
+  }
+]

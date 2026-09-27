@@ -1,0 +1,133 @@
+{
+  "id": "akbar-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Names: the kingdoms of c. 1605 CE",
+    "hi": "नाम: लगभग 1605 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Mughal empire",
+        "hi": "मुग़ल साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mewar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "nizamshahi",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Niẓām Shāhīs",
+        "hi": "निज़ाम शाही"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bijapur",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Bijapur",
+        "hi": "बीजापुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bidar",
+      "color": "#7a6a9e",
+      "title": {
+        "en": "Bidar",
+        "hi": "बीदर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "golkonda",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Golkonda",
+        "hi": "गोलकोंडा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vijayanagara",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Vijayanagara",
+        "hi": "विजयनगर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "madurai",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Madurai Nāyakas",
+        "hi": "मदुरै के नायक"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "tanjore",
+      "color": "#b8454f",
+      "title": {
+        "en": "Tanjore Nāyakas",
+        "hi": "तंजावुर के नायक"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "ahom",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Ahom kingdom",
+        "hi": "अहोम राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "koch",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Koch kingdoms",
+        "hi": "कोच राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "tripura",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Tripura",
+        "hi": "त्रिपुरा"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "jarrett-1891",
+    "elliot-dowson-1875",
+    "sewell-1900",
+    "smith-1919"
+  ]
+}
