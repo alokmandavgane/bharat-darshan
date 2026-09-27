@@ -280,16 +280,16 @@
       "IN-KL"
     ],
     "polity": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
     },
     "identified": {
       "en": "certain, placed at Kozhikode",
       "hi": "निश्चित, Kozhikode पर"
     },
     "blurb": {
-      "en": "The capital of Calicut (the Sāmūtiri).",
-      "hi": "कालीकट (सामूतिरि) की राजधानी।"
+      "en": "The capital of Calicut.",
+      "hi": "कालीकट की राजधानी।"
     },
     "sources": [
       "https://archive.org/details/b30529190_0001",
@@ -360,6 +360,72 @@
     "sources": [
       "https://archive.org/details/b30529190_0001",
       "https://en.wikipedia.org/wiki/Padmanabhapuram_Palace"
+    ]
+  },
+  {
+    "id": "madurai-capital",
+    "status": "draft",
+    "name": {
+      "en": "Tiruchirāppaḷḷi",
+      "hi": "तिरुचिरापल्ली"
+    },
+    "category": "madurai",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.8078,
+      "lon": 78.6966
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "identified": {
+      "en": "likely, placed at Rock Fort, Tiruchirappalli",
+      "hi": "संभावित, Rock Fort, Tiruchirappalli पर"
+    },
+    "blurb": {
+      "en": "The capital of Madurai.",
+      "hi": "मदुरै की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori00taylgoog",
+      "https://en.wikipedia.org/wiki/Tiruchirappalli_Rock_Fort"
+    ]
+  },
+  {
+    "id": "ramnad-capital",
+    "status": "draft",
+    "name": {
+      "en": "Rāmanāthapuram",
+      "hi": "रामनाथपुरम"
+    },
+    "category": "ramnad",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.3716,
+      "lon": 78.8307
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
+    },
+    "identified": {
+      "en": "certain, placed at Ramalinga Vilasam, Ramanathapuram",
+      "hi": "निश्चित, Ramalinga Vilasam, Ramanathapuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Ramnad.",
+      "hi": "रामनाड की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori01taylgoog",
+      "https://en.wikipedia.org/wiki/Ramanathapuram_Palace"
     ]
   }
 ]

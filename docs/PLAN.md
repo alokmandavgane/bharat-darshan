@@ -2450,6 +2450,12 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-seventh round: the Tamil south of c. 1707. Hamilton's vol. II was fetched and holds nothing on
+  it (it starts at Bengal); William Taylor's Oriental Historical Manuscripts (1835) does: the Tamil chronicle of the
+  Madurai Nāyakas gives Mangammāḷ's regency and the independent Setupatis of Ramnad. The c. 1707 era gains Madurai
+  (Trichinopoly to Tinnevelly) and Ramnad (Ramanathapuram and Sivaganga), with their capitals; "Calicut (the
+  Sāmūtiri)" is now "Calicut" so the Tamil names fit. Tanjore, Mysore and Pudukkottai stay blank. All thirteen names
+  show at 1280x800; 48 tests and the build pass.
 - 2026-09-27, eighty-sixth round: the Company, the Marāṭhās and Mysore, c. 1780 CE. "Kingdoms and empires" gains a
   sixteenth era, between c. 1760 and c. 1857, from Qudratullāh's survey of India in 1779 (the Jām-i Jahān-numā),
   Murtaẓā Ḥusain's Ḥadīqat al-Aqālīm (c. 1782) and the Tārīkh-i Ibrāhīm Khān, all in Elliot and Dowson vol. VIII,

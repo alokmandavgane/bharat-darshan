@@ -197,8 +197,8 @@
     "id": "calicut",
     "status": "draft",
     "name": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
     },
     "category": "calicut",
     "priority": 1,
@@ -263,6 +263,55 @@
     },
     "sources": [
       "https://archive.org/details/b30529190_0001"
+    ]
+  },
+  {
+    "id": "madurai",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "madurai",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.9,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Nāyakas of Madurai under Rāṇi Mangammāḷ, regent for her infant grandson Vijaya Raṅga Chokkanātha; the chronicle gives her eighteen years ending 1713.",
+      "hi": "रानी मंगम्माळ के अधीन मदुरै के नायक, जो अपने शिशु पोते विजय रंग चोक्कनाथ की संरक्षिका थीं; वृत्तांत उन्हें 1713 तक अठारह वर्ष देता है।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori01taylgoog",
+      "https://archive.org/details/orientalhistori00taylgoog"
+    ]
+  },
+  {
+    "id": "ramnad",
+    "status": "draft",
+    "name": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
+    },
+    "category": "ramnad",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.55,
+      "lon": 78.9
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Marava kingdom of the Setupatis of Ramnad, independent of Madurai since Tirumala Nāyaka, under Kiḻavan Setupati (1674-1710).",
+      "hi": "रामनाड के सेतुपतियों का मरव राज्य, तिरुमल नायक के समय से मदुरै से स्वतंत्र, किऴवन सेतुपति (1674-1710) के अधीन।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori01taylgoog"
     ]
   }
 ]

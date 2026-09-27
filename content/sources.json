@@ -1108,6 +1108,42 @@
         "hi": "कनारा और मालाबार का एक जहाज़ी कप्तान का विवरण, लगभग 1707 ई. के लिए उद्धृत।"
       }
     },
+    "taylor-1835-i": {
+      "title": {
+        "en": "W. Taylor, Oriental Historical Manuscripts in the Tamil Language, vol. I (1835)",
+        "hi": "डब्ल्यू. टेलर, ओरिएंटल हिस्टॉरिकल मैनुस्क्रिप्ट्स इन द तमिल लैंग्वेज, खंड I (1835)"
+      },
+      "publisher": {
+        "en": "J. Pharoah, Madras",
+        "hi": "जे. फ़ैरो, मद्रास"
+      },
+      "url": "https://archive.org/details/orientalhistori00taylgoog",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Taylor's introduction to the Madura country, quoted for the Nāyaka kingdom's extent, c. 1707 CE.",
+        "hi": "मदुरा प्रदेश पर टेलर की भूमिका, नायक राज्य के विस्तार के लिए उद्धृत, लगभग 1707 ई."
+      }
+    },
+    "taylor-1835-ii": {
+      "title": {
+        "en": "W. Taylor, Oriental Historical Manuscripts in the Tamil Language, vol. II (1835)",
+        "hi": "डब्ल्यू. टेलर, ओरिएंटल हिस्टॉरिकल मैनुस्क्रिप्ट्स इन द तमिल लैंग्वेज, खंड II (1835)"
+      },
+      "publisher": {
+        "en": "J. Pharoah, Madras",
+        "hi": "जे. फ़ैरो, मद्रास"
+      },
+      "url": "https://archive.org/details/orientalhistori01taylgoog",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Tamil chronicles of the Nāyakas of Madurai and the Setupatis of Ramnad in translation, quoted for c. 1707 CE.",
+        "hi": "मदुरै के नायकों और रामनाड के सेतुपतियों के तमिल वृत्तांत अनुवाद में, लगभग 1707 ई. के लिए उद्धृत।"
+      }
+    },
     "elliot-dowson-1877-viii": {
       "title": {
         "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VIII (1877)",

@@ -87,8 +87,8 @@
       "id": "calicut",
       "color": "#9e6a2f",
       "title": {
-        "en": "Calicut (the Sāmūtiri)",
-        "hi": "कालीकट (सामूतिरि)"
+        "en": "Calicut",
+        "hi": "कालीकट"
       },
       "icon": "map"
     },
@@ -107,6 +107,24 @@
       "title": {
         "en": "Travancore",
         "hi": "त्रावणकोर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "madurai",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Madurai",
+        "hi": "मदुरै"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "ramnad",
+      "color": "#9a4a6a",
+      "title": {
+        "en": "Ramnad",
+        "hi": "रामनाड"
       },
       "icon": "map"
     }

@@ -86,8 +86,8 @@
       "id": "calicut",
       "color": "#9e6a2f",
       "title": {
-        "en": "Calicut (the Sāmūtiri)",
-        "hi": "कालीकट (सामूतिरि)"
+        "en": "Calicut",
+        "hi": "कालीकट"
       },
       "icon": "pin"
     },
@@ -106,6 +106,24 @@
       "title": {
         "en": "Travancore",
         "hi": "त्रावणकोर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "madurai",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Madurai",
+        "hi": "मदुरै"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "ramnad",
+      "color": "#9a4a6a",
+      "title": {
+        "en": "Ramnad",
+        "hi": "रामनाड"
       },
       "icon": "pin"
     }
@@ -127,8 +145,8 @@
     }
   },
   "note": {
-    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi and Padmanābhapuram.",
-    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि और पद्मनाभपुरम।"
+    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi, Padmanābhapuram, Tiruchirāppaḷḷi and Rāmanāthapuram.",
+    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि, पद्मनाभपुरम, तिरुचिरापल्ली और रामनाथपुरम।"
   },
   "sources": [
     "smith-1919",

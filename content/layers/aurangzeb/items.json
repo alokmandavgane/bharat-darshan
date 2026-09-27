@@ -811,8 +811,8 @@
     "id": "calicut-held",
     "status": "draft",
     "name": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
     },
     "category": "calicut",
     "rank": 1,
@@ -938,6 +938,103 @@
     "capital": {
       "en": "Padmanābhapuram",
       "hi": "पद्मनाभपुरम"
+    }
+  },
+  {
+    "id": "madurai-held",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "madurai",
+    "rank": 1,
+    "districts": [
+      614,
+      613,
+      615,
+      616,
+      623,
+      612,
+      624,
+      625,
+      628,
+      627
+    ],
+    "verse": "Mangamala (read: Mangammāḷ)",
+    "locus": {
+      "en": "Carnataca Governors, Taylor ii. 35, Mangamala",
+      "hi": "कर्नाटक शासक वृत्तांत, Taylor ii. 35, Mangamala"
+    },
+    "identified": {
+      "en": "likely, after Oriental Historical Manuscripts 1835",
+      "hi": "संभावित, Oriental Historical Manuscripts 1835 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nāyakas of Madurai under Rāṇi Mangammāḷ, regent for her infant grandson Vijaya Raṅga Chokkanātha; the chronicle gives her eighteen years ending 1713.",
+      "hi": "रानी मंगम्माळ के अधीन मदुरै के नायक, जो अपने शिशु पोते विजय रंग चोक्कनाथ की संरक्षिका थीं; वृत्तांत उन्हें 1713 तक अठारह वर्ष देता है।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori01taylgoog",
+      "https://archive.org/details/orientalhistori00taylgoog"
+    ],
+    "color": "#6a8a3a",
+    "grade": {
+      "en": "The Nāyaka kingdom, from Trichinopoly to Tinnevelly",
+      "hi": "नायक राज्य, त्रिचिनापल्ली से तिन्नेवेली तक"
+    },
+    "reading": "a portion, if not the whole, of the collectorate of Trichinopoly ; together with the coUectorates of Coimbatoor and Tinnevelly.",
+    "page": {
+      "en": "William Taylor, Oriental Historical Manuscripts in the Tamil Language (1835), p. vi",
+      "hi": "William Taylor, Oriental Historical Manuscripts in the Tamil Language (1835), पृ. vi"
+    },
+    "capital": {
+      "en": "Tiruchirāppaḷḷi",
+      "hi": "तिरुचिरापल्ली"
+    }
+  },
+  {
+    "id": "ramnad-held",
+    "status": "draft",
+    "name": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
+    },
+    "category": "ramnad",
+    "rank": 1,
+    "districts": [
+      626,
+      622
+    ],
+    "verse": "Sethopathi (read: Setupati)",
+    "locus": {
+      "en": "Carnataca Governors, Taylor ii. 33",
+      "hi": "कर्नाटक शासक वृत्तांत, Taylor ii. 33"
+    },
+    "identified": {
+      "en": "likely, after Oriental Historical Manuscripts 1835",
+      "hi": "संभावित, Oriental Historical Manuscripts 1835 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marava kingdom of the Setupatis of Ramnad, independent of Madurai since Tirumala Nāyaka, under Kiḻavan Setupati (1674-1710).",
+      "hi": "रामनाड के सेतुपतियों का मरव राज्य, तिरुमल नायक के समय से मदुरै से स्वतंत्र, किऴवन सेतुपति (1674-1710) के अधीन।"
+    },
+    "sources": [
+      "https://archive.org/details/orientalhistori01taylgoog"
+    ],
+    "color": "#9a4a6a",
+    "grade": {
+      "en": "The Marava country of the Setupatis",
+      "hi": "सेतुपतियों का मरव प्रदेश"
+    },
+    "reading": "the Sethopathi ruled, not as a tributary but independently;^ and built for himself a stone fort at Ramnad.",
+    "page": {
+      "en": "William Taylor, Oriental Historical Manuscripts in the Tamil Language (1835), p. 33",
+      "hi": "William Taylor, Oriental Historical Manuscripts in the Tamil Language (1835), पृ. 33"
+    },
+    "capital": {
+      "en": "Rāmanāthapuram",
+      "hi": "रामनाथपुरम"
     }
   }
 ]
