@@ -88,7 +88,9 @@ setLanguage(lang);
 store.subscribe('lang', (l) => setLanguage(l));
 syncUrl(store);
 
-createShell(document, store);
+// The link as opened: syncUrl has already rewritten it by now (?layers waits on the
+// catalogue), and a page opened from it must still honour it.
+createShell(document, store, url);
 createSheet(/** @type {HTMLElement} */ (document.querySelector('.sheet')), store);
 watchActivity(document, store);
 if (poster) store.set('padding', { top: 40, right: 40, bottom: 40, left: 560 }, { source: 'poster' });

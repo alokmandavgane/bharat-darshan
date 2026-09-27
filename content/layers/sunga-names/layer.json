@@ -1,0 +1,85 @@
+{
+  "id": "sunga-names",
+  "type": "points",
+  "marker": "label",
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms after the Mauryas",
+    "hi": "नाम: मौर्यों के बाद के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "sunga",
+      "color": "#7b5aa6",
+      "title": {
+        "en": "The Śuṅga empire",
+        "hi": "शुंग साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "yavana",
+      "color": "#2f7f7a",
+      "title": {
+        "en": "The Yavana (Indo-Greek) kingdom",
+        "hi": "यवन (हिंद-यवन) राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "satavahana",
+      "color": "#a65a12",
+      "title": {
+        "en": "The Sātavāhanas (Āndhras)",
+        "hi": "सातवाहन (आन्ध्र)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kalinga",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Kaliṅga under Khāravela",
+        "hi": "खारवेल का कलिंग"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "coda",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḍa (Cōḻa)",
+        "hi": "चोड (चोल)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kerala",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Kerala (Cēra)",
+        "hi": "केरल (चेर)"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "jayaswal-banerji-1930"
+  ]
+}

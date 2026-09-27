@@ -1,0 +1,177 @@
+[
+  {
+    "id": "sunga",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.9,
+      "lon": 78.6
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "yavana",
+    "status": "draft",
+    "name": {
+      "en": "Yavana (Indo-Greek) kingdom",
+      "hi": "यवन राज्य"
+    },
+    "category": "yavana",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.63,
+      "lon": 74.87
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Greek kings of the Panjab, whose raids Patañjali and Khāravela record; their capital Sāgala is outside today's India.",
+      "hi": "पंजाब के यवन राजा, जिनके आक्रमण पतंजलि और खारवेल दर्ज करते हैं; उनकी राजधानी साकल आज के भारत के बाहर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "satavahana",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.6,
+      "lon": 75.3
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Sātavāhanas, the Purāṇas' Āndhras, risen in the northern Deccan: Simuka, then Sātakarṇi, whom Khāravela defied.",
+      "hi": "सातवाहन, पुराणों के आन्ध्र, उत्तरी दक्कन में उभरे: सिमुक, फिर सातकर्णि, जिनकी खारवेल ने उपेक्षा की।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga under Khāravela",
+      "hi": "खारवेल का कलिंग"
+    },
+    "category": "kalinga",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.8,
+      "lon": 85.0
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "Khāravela's Kaliṅga, which by his own record raided Magadha, the Deccan and the Tamil south. His date is disputed: first half of the 2nd century BCE (EI XX) or c. 25 BCE (Raychaudhuri).",
+      "hi": "खारवेल का कलिंग, जिसने उनके अपने अभिलेख के अनुसार मगध, दक्कन और तमिल दक्षिण पर धावे किए। उनकी तिथि विवादित: ई.पू. दूसरी सदी का पूर्वार्ध (EI XX) या लगभग 25 ई.पू. (रायचौधुरी)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.93,
+      "lon": 78.12
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pāṇḍya kingdom of the far south, whose king, Khāravela says, sent him pearls and gems.",
+      "hi": "सुदूर दक्षिण का पाण्ड्य राज्य, जिसके राजा ने, खारवेल कहते हैं, उन्हें मोती और रत्न भेजे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671"
+    ]
+  },
+  {
+    "id": "coda",
+    "status": "draft",
+    "name": {
+      "en": "Coḍa (Cōḻa)",
+      "hi": "चोड (चोल)"
+    },
+    "category": "coda",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.79,
+      "lon": 79.14
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Coḍa kingdom, which the grammarians name among the kṣatriya peoples, as Aśoka named it.",
+      "hi": "चोड राज्य, जिसे वैयाकरण क्षत्रिय जनों में गिनाते हैं, जैसे अशोक ने इसका नाम लिया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/चतुर्थोऽध्यायः/प्रथमः_पादः?oldid=401923"
+    ]
+  },
+  {
+    "id": "kerala",
+    "status": "draft",
+    "name": {
+      "en": "Kerala (Cēra)",
+      "hi": "केरल (चेर)"
+    },
+    "category": "kerala",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.5,
+      "lon": 76.25
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Kerala kingdom, which the grammarians name beside the Coḍa, as Aśoka named the Keralaputa.",
+      "hi": "केरल राज्य, जिसे वैयाकरण चोड के साथ गिनाते हैं, जैसे अशोक ने केरलपुत्र का नाम लिया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/चतुर्थोऽध्यायः/प्रथमः_पादः?oldid=401923"
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "id": "sunga-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals after the Mauryas",
+    "hi": "मौर्यों के बाद की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "seat",
+      "color": "#3d2358",
+      "icon": "pin",
+      "title": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Role",
+        "hi": "भूमिका"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the inscription has it",
+        "hi": "अभिलेख में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "The capitals the Hāthīgumphā names. Pāṭaliputra is drawn, through its Sugaṅgiya palace. Khāravela's own Kaliṅganagarī is not placed: his editors put it near Kalingapatnam, and others at Śiśupālgarh by Bhubaneswar.",
+    "hi": "हाथीगुम्फा में नामित राजधानियाँ। पाटलिपुत्र दिखाया गया है, अपने सुगंगिय प्रासाद के ज़रिए। खारवेल की अपनी कलिंगनगरी अनिर्धारित है: उनके संपादक इसे कलिंगपट्टनम के पास रखते हैं, और अन्य भुवनेश्वर के पास शिशुपालगढ़ पर।"
+  },
+  "sources": [
+    "jayaswal-banerji-1930",
+    "geonames"
+  ]
+}

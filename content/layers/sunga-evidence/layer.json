@@ -1,0 +1,95 @@
+{
+  "id": "sunga-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence after the Mauryas",
+    "hi": "मौर्यों के बाद के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "inscription",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Inscriptions",
+        "hi": "अभिलेख"
+      }
+    },
+    {
+      "id": "campaign",
+      "color": "#9e1b32",
+      "icon": "pin",
+      "title": {
+        "en": "Khāravela's campaigns",
+        "hi": "खारवेल के अभियान"
+      }
+    },
+    {
+      "id": "siege",
+      "color": "#2f7f7a",
+      "icon": "pin",
+      "title": {
+        "en": "Yavana sieges",
+        "hi": "यवन घेरे"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The evidence the map rests on, in three kinds. The inscriptions: Hāthīgumphā, Nānāghāṭ, Nāsik, Sāñcī, the Heliodorus pillar at Vidiśā, and Bharhut. The places Khāravela says he struck: Goradhagiri and Rājagṛha, and Mathurā, where the Yavana king fell back. And the two cities Patañjali says a Yavana besieged, Sāketa and Madhyamikā. Each pin is at its site or the nearest town.",
+    "hi": "वह प्रमाण जिस पर मानचित्र टिका है, तीन प्रकार का। अभिलेख: हाथीगुम्फा, नानाघाट, नासिक, साँची, विदिशा का हेलियोडोरस स्तंभ, और भरहुत। वे स्थान जिन पर खारवेल कहते हैं उन्होंने प्रहार किया: गोरथगिरि और राजगृह, और मथुरा, जहाँ यवन राजा पीछे हटा। और वे दो नगर जिन्हें पतंजलि के अनुसार एक यवन ने घेरा, साकेत और माध्यमिका। हर पिन अपने स्थल या निकटतम नगर पर है।"
+  },
+  "sources": [
+    "jayaswal-banerji-1930",
+    "raychaudhuri-1923",
+    "sa-wikisource",
+    "wikipedia"
+  ]
+}

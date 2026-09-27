@@ -1,0 +1,879 @@
+[
+  {
+    "id": "sunga-core",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      227,
+      228,
+      229,
+      230,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#3d2358",
+    "grade": {
+      "en": "Core: Magadha, where the emperor stayed at Pāṭaliputra",
+      "hi": "केंद्र: मगध, जहाँ सम्राट पाटलिपुत्र में रहे"
+    },
+    "reading": "that the Emperor himself continued to reside in Pataliputra.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 197",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 197"
+    }
+  },
+  {
+    "id": "sunga-seat",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      427,
+      443,
+      444,
+      445,
+      446,
+      458,
+      459
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#5b3a82",
+    "grade": {
+      "en": "Seat: Vidiśā, governed by the prince Agnimitra, later the Śuṅgas' own",
+      "hi": "केंद्र: विदिशा, राजकुमार अग्निमित्र द्वारा शासित, बाद में शुंगों का अपना"
+    },
+    "reading": "The Malavikagnimitram tells us that Vidisa was governed by",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 197",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 197"
+    }
+  },
+  {
+    "id": "sunga-held",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      200,
+      231,
+      232,
+      233,
+      234,
+      429,
+      430,
+      462,
+      463
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#7b5aa6",
+    "grade": {
+      "en": "Held: Bharhut, whose stūpa rose 'during the supremacy of the Śuṅgas'",
+      "hi": "अधिकृत: भरहुत, जिसका स्तूप 'शुंगों के शासन में' बना"
+    },
+    "reading": "the Buddhist monuments at Bharhut erected",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 210",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 210"
+    }
+  },
+  {
+    "id": "sunga-within",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      350,
+      351,
+      352,
+      353,
+      362,
+      363,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      428,
+      450,
+      451,
+      452,
+      455,
+      456,
+      457
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#a08cc6",
+    "grade": {
+      "en": "Within: between the seats, to the Narmadā, with no evidence of its own",
+      "hi": "भीतर: केंद्रों के बीच, नर्मदा तक, अपने किसी प्रमाण के बिना"
+    },
+    "reading": "The dominions of Pushvamitra extended to the river Narmada, and included the cities of Pataliputra, Vidisi",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 197",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 197"
+    }
+  },
+  {
+    "id": "sunga-coins",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      67,
+      89,
+      105,
+      106,
+      107,
+      134,
+      135,
+      136,
+      137,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      201,
+      202
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#bcaed8",
+    "grade": {
+      "en": "Coins of 'Mitra' kings: Śuṅga, or local lines (disputed)",
+      "hi": "'मित्र' राजाओं के सिक्के: शुंग, या स्थानीय वंश (विवादित)"
+    },
+    "reading": "Mitra coins have been found at Kosambi, Ayodhya and Mathura as well as in Panchala.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 211",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 211"
+    }
+  },
+  {
+    "id": "sunga-sphere",
+    "status": "draft",
+    "name": {
+      "en": "Śuṅga empire",
+      "hi": "शुङ्ग साम्राज्य"
+    },
+    "category": "sunga",
+    "rank": 1,
+    "districts": [
+      447,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510
+    ],
+    "verse": "पुष्यमित्रस्तु सेनानीरुद्धृत्य स बृहद्रथान्",
+    "locus": {
+      "en": "Matsya Purāṇa 272.25-26",
+      "hi": "मत्स्य पुराण 272.25-26"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Puṣyamitra Śuṅga, who overthrew the last Maurya c. 185 BCE, and of his line. The Kāṇvas, 'servants of the Śuṅgas', took the throne c. 73 BCE (Matsya 272.34).",
+      "hi": "पुष्यमित्र शुंग का साम्राज्य, जिन्होंने लगभग 185 ई.पू. अंतिम मौर्य को हटाया, और उनके वंश का। कण्व, 'शुंगों के सेवक', लगभग 73 ई.पू. सिंहासन पर आए (मत्स्य 272.34)।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७२?oldid=45636",
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://sa.wikisource.org/wiki/विष्णुपुराणम्/चतुर्थांशः/अध्यायः_२४?oldid=361785",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#d8cfe9",
+    "grade": {
+      "en": "Vidarbha, divided between two cousins at Agnimitra's order (Kālidāsa)",
+      "hi": "विदर्भ, अग्निमित्र के आदेश से दो चचेरे भाइयों में बँटा (कालिदास)"
+    },
+    "reading": "the kingdom of Vidarbha was divided between the two cousins",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 199",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 199"
+    }
+  },
+  {
+    "id": "yavana-held",
+    "status": "draft",
+    "name": {
+      "en": "Yavana (Indo-Greek) kingdom",
+      "hi": "यवन राज्य"
+    },
+    "category": "yavana",
+    "rank": 1,
+    "districts": [
+      35,
+      49,
+      50
+    ],
+    "verse": "अरुणद्यवनः साकेतम्",
+    "locus": {
+      "en": "Mahābhāṣya 3.2.35.111",
+      "hi": "महाभाष्य 3.2.35.111"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Greek kings of the Panjab, whose raids Patañjali and Khāravela record; their capital Sāgala is outside today's India.",
+      "hi": "पंजाब के यवन राजा, जिनके आक्रमण पतंजलि और खारवेल दर्ज करते हैं; उनकी राजधानी साकल आज के भारत के बाहर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#2f7f7a",
+    "grade": {
+      "en": "Held: the country round Sāgala (Sialkot)",
+      "hi": "अधिकृत: साकल (सियालकोट) के आसपास का देश"
+    },
+    "reading": "one derived from Demetrios holding Sakala (Sialkot) with a considerable portion of the Indian interior",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 225",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 225"
+    }
+  },
+  {
+    "id": "yavana-interior",
+    "status": "draft",
+    "name": {
+      "en": "Yavana (Indo-Greek) kingdom",
+      "hi": "यवन राज्य"
+    },
+    "category": "yavana",
+    "rank": 1,
+    "districts": [
+      23,
+      24,
+      28,
+      29,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      51,
+      52,
+      53,
+      54,
+      55,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      132,
+      133,
+      138,
+      139,
+      140,
+      141,
+      142
+    ],
+    "verse": "अरुणद्यवनः साकेतम्",
+    "locus": {
+      "en": "Mahābhāṣya 3.2.35.111",
+      "hi": "महाभाष्य 3.2.35.111"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Greek kings of the Panjab, whose raids Patañjali and Khāravela record; their capital Sāgala is outside today's India.",
+      "hi": "पंजाब के यवन राजा, जिनके आक्रमण पतंजलि और खारवेल दर्ज करते हैं; उनकी राजधानी साकल आज के भारत के बाहर है।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/तृतीयोऽध्यायः/द्वितीयः_पादः?oldid=85751",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#7fb5b0",
+    "grade": {
+      "en": "The 'Indian interior': how far is not known",
+      "hi": "'भारतीय भीतरी भाग': कितनी दूर, ज्ञात नहीं"
+    },
+    "reading": "defeated them on the Sindhu (in Central India) which probably formed the boundary between the Suriga and Indo-Greek dominions",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 212",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 212"
+    }
+  },
+  {
+    "id": "satavahana-core",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      497,
+      498,
+      499,
+      513,
+      514,
+      515,
+      516,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      530,
+      531
+    ],
+    "verse": "शिशुकोन्ध्रः सजातीयः",
+    "locus": {
+      "en": "Matsya Purāṇa 273.1-3",
+      "hi": "मत्स्य पुराण 273.1-3"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sātavāhanas, the Purāṇas' Āndhras, risen in the northern Deccan: Simuka, then Sātakarṇi, whom Khāravela defied.",
+      "hi": "सातवाहन, पुराणों के आन्ध्र, उत्तरी दक्कन में उभरे: सिमुक, फिर सातकर्णि, जिनकी खारवेल ने उपेक्षा की।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#a65a12",
+    "grade": {
+      "en": "Core: the Nānāghāṭ and Nāsik country, their earliest records",
+      "hi": "केंद्र: नानाघाट और नासिक का देश, उनके प्राचीनतम अभिलेख"
+    },
+    "reading": "that the earliest records of the Satakarnis are found in the Northern Deccan and Central India",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 220",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 220"
+    }
+  },
+  {
+    "id": "satavahana-claimed",
+    "status": "draft",
+    "name": {
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+    },
+    "category": "satavahana",
+    "rank": 1,
+    "districts": [
+      495,
+      496,
+      511,
+      512,
+      517,
+      518,
+      519,
+      520,
+      528,
+      529,
+      532,
+      533,
+      534,
+      585,
+      586
+    ],
+    "verse": "शिशुकोन्ध्रः सजातीयः",
+    "locus": {
+      "en": "Matsya Purāṇa 273.1-3",
+      "hi": "मत्स्य पुराण 273.1-3"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sātavāhanas, the Purāṇas' Āndhras, risen in the northern Deccan: Simuka, then Sātakarṇi, whom Khāravela defied.",
+      "hi": "सातवाहन, पुराणों के आन्ध्र, उत्तरी दक्कन में उभरे: सिमुक, फिर सातकर्णि, जिनकी खारवेल ने उपेक्षा की।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/मत्स्यपुराणम्/अध्यायः_२७३?oldid=45637",
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#d8a262",
+    "grade": {
+      "en": "Claimed: 'lord of the Dakṣiṇāpatha', how far is not said",
+      "hi": "दावा: 'दक्षिणापथ के स्वामी', कितनी दूर, यह नहीं कहा गया"
+    },
+    "reading": "was the sovereign of the whole of Dakshinapatha",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 222",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 222"
+    }
+  },
+  {
+    "id": "kalinga-core",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga under Khāravela",
+      "hi": "खारवेल का कलिंग"
+    },
+    "category": "kalinga",
+    "rank": 1,
+    "districts": [
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      396,
+      542,
+      543,
+      544
+    ],
+    "verse": "Kaliiiig-adliipatina (read: Kaliṃg-ādhipatinā)",
+    "locus": {
+      "en": "Hāthīgumphā, l. 1",
+      "hi": "हाथीगुम्फा, l. 1"
+    },
+    "identified": {
+      "en": "certain, after Jayaswal and Banerji 1930",
+      "hi": "निश्चित, Jayaswal and Banerji 1930 के अनुसार"
+    },
+    "blurb": {
+      "en": "Khāravela's Kaliṅga, which by his own record raided Magadha, the Deccan and the Tamil south. His date is disputed: first half of the 2nd century BCE (EI XX) or c. 25 BCE (Raychaudhuri).",
+      "hi": "खारवेल का कलिंग, जिसने उनके अपने अभिलेख के अनुसार मगध, दक्कन और तमिल दक्षिण पर धावे किए। उनकी तिथि विवादित: ई.पू. दूसरी सदी का पूर्वार्ध (EI XX) या लगभग 25 ई.पू. (रायचौधुरी)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671"
+    ],
+    "color": "#9e1b32",
+    "grade": {
+      "en": "Core: Kaliṅga, round the capital Kaliṅganagarī",
+      "hi": "केंद्र: कलिंग, राजधानी कलिंगनगरी के आसपास"
+    },
+    "reading": "Kalirhganagarl is the ancient capital.",
+    "page": {
+      "en": "K. P. Jayaswal and R. D. Banerji, The Hathigumpha Inscription of Kharavela (1930), p. 77",
+      "hi": "K. P. Jayaswal and R. D. Banerji, The Hathigumpha Inscription of Kharavela (1930), पृ. 77"
+    }
+  },
+  {
+    "id": "kalinga-within",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga under Khāravela",
+      "hi": "खारवेल का कलिंग"
+    },
+    "category": "kalinga",
+    "rank": 1,
+    "districts": [
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384
+    ],
+    "verse": "Kaliiiig-adliipatina (read: Kaliṃg-ādhipatinā)",
+    "locus": {
+      "en": "Hāthīgumphā, l. 1",
+      "hi": "हाथीगुम्फा, l. 1"
+    },
+    "identified": {
+      "en": "likely: drawn by the compiler",
+      "hi": "संभावित: संकलक द्वारा"
+    },
+    "blurb": {
+      "en": "Khāravela's Kaliṅga, which by his own record raided Magadha, the Deccan and the Tamil south. His date is disputed: first half of the 2nd century BCE (EI XX) or c. 25 BCE (Raychaudhuri).",
+      "hi": "खारवेल का कलिंग, जिसने उनके अपने अभिलेख के अनुसार मगध, दक्कन और तमिल दक्षिण पर धावे किए। उनकी तिथि विवादित: ई.पू. दूसरी सदी का पूर्वार्ध (EI XX) या लगभग 25 ई.पू. (रायचौधुरी)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671"
+    ],
+    "color": "#d0707f",
+    "grade": {
+      "en": "Within: the coast north of the capital, with no evidence of its own",
+      "hi": "भीतर: राजधानी के उत्तर का तट, अपने किसी प्रमाण के बिना"
+    }
+  },
+  {
+    "id": "pandya-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "rank": 1,
+    "districts": [
+      612,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629
+    ],
+    "verse": "Pain<Ja”-raja (read: Paṃḍa-rāja)",
+    "locus": {
+      "en": "Hāthīgumphā, ll. 12-13",
+      "hi": "हाथीगुम्फा, ll. 12-13"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा"
+    },
+    "blurb": {
+      "en": "The Pāṇḍya kingdom of the far south, whose king, Khāravela says, sent him pearls and gems.",
+      "hi": "सुदूर दक्षिण का पाण्ड्य राज्य, जिसके राजा ने, खारवेल कहते हैं, उन्हें मोती और रत्न भेजे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671"
+    ],
+    "color": "#4f8a3a",
+    "grade": {
+      "en": "A Tamil kingdom (HG l. 13; the Tramira league, l. 11)",
+      "hi": "एक तमिल राज्य (हाथीगुम्फा पंक्ति 13; त्रमिर संघ, पंक्ति 11)"
+    },
+    "reading": "The Pamda-Raja of this inscription refers to the kings of the southern’",
+    "page": {
+      "en": "K. P. Jayaswal and R. D. Banerji, The Hathigumpha Inscription of Kharavela (1930), p. 78",
+      "hi": "K. P. Jayaswal and R. D. Banerji, The Hathigumpha Inscription of Kharavela (1930), पृ. 78"
+    }
+  },
+  {
+    "id": "coda-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Coḍa (Cōḻa)",
+      "hi": "चोड (चोल)"
+    },
+    "category": "coda",
+    "rank": 1,
+    "districts": [
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      637
+    ],
+    "verse": "चोडः, कडेरः, केरलः",
+    "locus": {
+      "en": "Mahābhāṣya 4.1.37.1",
+      "hi": "महाभाष्य 4.1.37.1"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा"
+    },
+    "blurb": {
+      "en": "The Coḍa kingdom, which the grammarians name among the kṣatriya peoples, as Aśoka named it.",
+      "hi": "चोड राज्य, जिसे वैयाकरण क्षत्रिय जनों में गिनाते हैं, जैसे अशोक ने इसका नाम लिया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/चतुर्थोऽध्यायः/प्रथमः_पादः?oldid=401923"
+    ],
+    "color": "#2f6f9e",
+    "grade": {
+      "en": "A Tamil kingdom (Mahābhāṣya on 4.1.175)",
+      "hi": "एक तमिल राज्य (महाभाष्य 4.1.175 पर)"
+    }
+  },
+  {
+    "id": "kerala-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Kerala (Cēra)",
+      "hi": "केरल (चेर)"
+    },
+    "category": "kerala",
+    "rank": 1,
+    "districts": [
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      636
+    ],
+    "verse": "चोडः, कडेरः, केरलः",
+    "locus": {
+      "en": "Mahābhāṣya 4.1.37.1",
+      "hi": "महाभाष्य 4.1.37.1"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा"
+    },
+    "blurb": {
+      "en": "The Kerala kingdom, which the grammarians name beside the Coḍa, as Aśoka named the Keralaputa.",
+      "hi": "केरल राज्य, जिसे वैयाकरण चोड के साथ गिनाते हैं, जैसे अशोक ने केरलपुत्र का नाम लिया।"
+    },
+    "sources": [
+      "https://sa.wikisource.org/wiki/महाभाष्यम्/चतुर्थोऽध्यायः/प्रथमः_पादः?oldid=401923"
+    ],
+    "color": "#2f8f8a",
+    "grade": {
+      "en": "A Tamil kingdom (Mahābhāṣya on 4.1.175)",
+      "hi": "एक तमिल राज्य (महाभाष्य 4.1.175 पर)"
+    }
+  }
+]

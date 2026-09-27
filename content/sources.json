@@ -731,6 +731,24 @@
         "en": "The standard edition of Aśoka's inscriptions: the texts the kingdoms page quotes, the findspots known by 1925, and Hultzsch's reading of the empire's extent.",
         "hi": "अशोक के अभिलेखों का मानक संस्करण: राज्य पृष्ठ द्वारा उद्धृत पाठ, 1925 तक ज्ञात स्थल, और साम्राज्य के विस्तार का हुल्त्श का पाठ।"
       }
+    },
+    "jayaswal-banerji-1930": {
+      "title": {
+        "en": "K. P. Jayaswal and R. D. Banerji, The Hathigumpha Inscription of Kharavela (1930)",
+        "hi": "के. पी. जायसवाल और आर. डी. बनर्जी, खारवेल का हाथीगुम्फा अभिलेख (1930)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta (Epigraphia Indica, vol. XX, no. 7)",
+        "hi": "भारत सरकार, कलकत्ता (एपिग्राफ़िया इंडिका, खंड XX, सं. 7)"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.56671",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The edition of Khāravela's inscription the kingdoms page quotes, with its editors' identifications of the places it names.",
+        "hi": "खारवेल के अभिलेख का वह संस्करण जिसे राज्य पृष्ठ उद्धृत करता है, उसमें नामित स्थानों की संपादकों द्वारा पहचान के साथ।"
+      }
     }
   }
 }

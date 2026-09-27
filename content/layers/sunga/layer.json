@@ -1,0 +1,140 @@
+{
+  "id": "sunga",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "After the Mauryas, 2nd–1st century BCE",
+    "hi": "मौर्यों के बाद, ई.पू. दूसरी–पहली सदी"
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "sunga",
+      "color": "#7b5aa6",
+      "title": {
+        "en": "The Śuṅga empire",
+        "hi": "शुंग साम्राज्य"
+      }
+    },
+    {
+      "id": "yavana",
+      "color": "#2f7f7a",
+      "title": {
+        "en": "The Yavana (Indo-Greek) kingdom",
+        "hi": "यवन (हिंद-यवन) राज्य"
+      }
+    },
+    {
+      "id": "satavahana",
+      "color": "#a65a12",
+      "title": {
+        "en": "The Sātavāhanas (Āndhras)",
+        "hi": "सातवाहन (आन्ध्र)"
+      }
+    },
+    {
+      "id": "kalinga",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Kaliṅga under Khāravela",
+        "hi": "खारवेल का कलिंग"
+      }
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      }
+    },
+    {
+      "id": "coda",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḍa (Cōḻa)",
+        "hi": "चोड (चोल)"
+      }
+    },
+    {
+      "id": "kerala",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Kerala (Cēra)",
+        "hi": "केरल (चेर)"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "The kingdoms that parted Aśoka's empire, each at the height its evidence shows. They were not all at their height at once, and two dates are disputed. Jayaswal and Banerji put Khāravela in the first half of the 2nd century BCE, with Sātakarṇi, whom he defied. Raychaudhuri (1923) puts both about 25 BCE, after the Śuṅgas (c. 185–73 BCE). The Śuṅgas are shaded like Aśoka's empire, from the core round Pāṭaliputra outwards. Next comes the seat at Vidiśā, then Bharhut, then the land between to the Narmadā. The 'Mitra' kings' coins country is disputed, and so is Vidarbha. The Sātavāhanas' core is where their first records are. Khāravela's Kaliṅga raided far wider than it held: see the campaign pins. The Yavanas' capital Sāgala, and their Taxila, lie in Pakistan. The Tamil south is drawn as the grammarians and Khāravela name it. Toṇḍai, Kongu, the north-east, Avanti and Gujarat are left blank: nothing read places them. Drawn on today's districts, to the nearest district.",
+    "hi": "वे राज्य जिन्होंने अशोक का साम्राज्य बाँटा, हर एक उस शिखर पर जो उसके प्रमाण दिखाते हैं। सब एक साथ अपने शिखर पर नहीं थे, और दो तिथियाँ विवादित हैं। जायसवाल और बनर्जी खारवेल को ई.पू. दूसरी सदी के पूर्वार्ध में रखते हैं, सातकर्णि के साथ, जिनकी खारवेल ने उपेक्षा की। रायचौधुरी (1923) दोनों को लगभग 25 ई.पू. में, शुंगों (लगभग 185–73 ई.पू.) के बाद रखते हैं। शुंग अशोक के साम्राज्य की तरह रंगे गए हैं, पाटलिपुत्र के आसपास के केंद्र से बाहर की ओर। फिर विदिशा का केंद्र, फिर भरहुत, फिर बीच की भूमि नर्मदा तक। 'मित्र' राजाओं के सिक्कों का देश विवादित है, और विदर्भ भी। सातवाहनों का केंद्र वहाँ है जहाँ उनके पहले अभिलेख हैं। खारवेल के कलिंग ने जितना रखा उससे कहीं दूर धावे किए: अभियान के पिन देखें। यवनों की राजधानी साकल, और उनका तक्षशिला, पाकिस्तान में हैं। तमिल दक्षिण वैसा दिखाया गया है जैसा वैयाकरण और खारवेल उसे नाम देते हैं। तोण्डै, कोंगु, पूर्वोत्तर, अवन्ति और गुजरात खाली छोड़े गए हैं: पढ़ा गया कुछ भी उन्हें कहीं नहीं रखता। आज के ज़िलों पर, निकटतम ज़िले तक।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "jayaswal-banerji-1930",
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Raychaudhuri, Political History of Ancient India (1923), and Jayaswal and Banerji, Epigraphia Indica XX (1930), both public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

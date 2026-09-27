@@ -2450,6 +2450,27 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-first round: after the Mauryas, and links that open where they point. "Kingdoms and
+  empires" gains its third era, "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela". It is
+  not a single year: each power is drawn at its attested height, and the blurb says two dates are disputed.
+  - **The areas.** The Śuṅgas are in six shades: Magadha, the Vidiśā seat, Bharhut, the land between to the
+    Narmadā, the disputed 'Mitra' coin country, and Vidarbha. The Yavanas hold Madra, with a disputed interior.
+    The Sātavāhanas have a core and a claimed 'Dakṣiṇāpatha'. Khāravela's Kaliṅga is drawn with Utkala within.
+    The Pāṇḍya, Coḍa and Kerala kingdoms stand apart.
+  - **The pins.** 11 evidence pins in three new kinds: six inscriptions, three of Khāravela's campaign places,
+    and the two Yavana sieges Patañjali names. Pāṭaliputra is the one seat drawn. The cards quote Raychaudhuri
+    1923, Jayaswal and Banerji's EI XX edition of the Hāthīgumphā (a new source), the Purāṇas and the
+    Mahābhāṣya. Where the Hāthīgumphā's OCR mangles a form, the card prints it as printed and then
+    '(read: …)'.
+  - **Fixed: a link to a page now opens where it points.** The seventieth round said a link restores an era,
+    and it did not. On the first load, openPlateById reset the layers to the first era. It also set `home`,
+    which cleared the card, the state and the selection. So `/en/atlas/kingdoms?layers=maurya,…` opened on
+    c. 500 BCE, and `?item=` on any page lost its card. By then syncUrl had already rewritten the address,
+    because `?layers` waits on the catalogue. So main.js now hands the shell the link as opened. On that
+    first load the link's layers, relief and card win, and the page does not 'go home'. Turning to a page
+    from the contents still starts it afresh.
+  - Checked in the browser (era 3 from a link, era 1 without; the Kaliṅga, Śuṅga-coins and Pāṭaliputra cards
+    from `?item=`); 48 tests and the build pass.
 - 2026-09-25, seventieth round: the Mauryas under Aśoka, and eras on one page. "Kingdoms and
   empires" now carries `eras` (07_plates validates them; the page's `layers` is their union) and the
   page shows a stepper, "‹ c. 250 BCE · era 2 of 2 · The Mauryas under Aśoka ›", with the era's blurb;

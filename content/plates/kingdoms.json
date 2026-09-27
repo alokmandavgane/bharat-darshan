@@ -18,7 +18,11 @@
     "maurya",
     "maurya-names",
     "maurya-capitals",
-    "maurya-evidence"
+    "maurya-evidence",
+    "sunga",
+    "sunga-names",
+    "sunga-capitals",
+    "sunga-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -62,6 +66,27 @@
         "maurya-names",
         "maurya-capitals",
         "maurya-evidence"
+      ]
+    },
+    {
+      "id": "sunga",
+      "display": {
+        "en": "2nd–1st century BCE",
+        "hi": "ई.पू. दूसरी–पहली सदी"
+      },
+      "title": {
+        "en": "After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela",
+        "hi": "मौर्यों के बाद: शुंग, सातवाहन, खारवेल"
+      },
+      "blurb": {
+        "en": "The kingdoms that parted Aśoka's empire, each at its attested height and not all at once: Khāravela's and Sātakarṇi's dates are disputed. From the Purāṇas, Patañjali and the Hāthīgumphā.",
+        "hi": "अशोक का साम्राज्य बाँटने वाले राज्य, हर एक अपने प्रमाणित शिखर पर, सब एक साथ नहीं: खारवेल और सातकर्णि की तिथियाँ विवादित हैं। पुराणों, पतंजलि और हाथीगुम्फा से।"
+      },
+      "layers": [
+        "sunga",
+        "sunga-names",
+        "sunga-capitals",
+        "sunga-evidence"
       ]
     }
   ],

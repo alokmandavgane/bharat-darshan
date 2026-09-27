@@ -1,0 +1,40 @@
+[
+  {
+    "id": "pataliputra",
+    "status": "draft",
+    "name": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    },
+    "category": "seat",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.59408,
+      "lon": 85.13563
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "The Magadhan capital",
+      "hi": "मगध की राजधानी"
+    },
+    "verse": "Sugaingiya[m] (read: Sugaṃgiyaṃ)",
+    "locus": {
+      "en": "Hāthīgumphā, ll. 12-13",
+      "hi": "हाथीगुम्फा, ll. 12-13"
+    },
+    "identified": {
+      "en": "likely, placed at Patna",
+      "hi": "संभावित, Patna पर"
+    },
+    "blurb": {
+      "en": "The Magadhan capital, whose Sugaṅgiya palace the Hāthīgumphā names.",
+      "hi": "मगध की राजधानी, जिसके सुगंगिय प्रासाद का नाम हाथीगुम्फा लेता है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56671",
+      "https://www.geonames.org/1260086"
+    ]
+  }
+]

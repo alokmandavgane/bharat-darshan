@@ -22,8 +22,9 @@ const BASE_MARKS = {
 /**
  * @param {Document} root
  * @param {ReturnType<import('../state/store.js').createStore>} store
+ * @param {ReturnType<typeof import('../state/url.js').readUrl> | null} [link]  the URL as opened
  */
-export function createShell(root, store) {
+export function createShell(root, store, link = null) {
   const $ = (sel) => /** @type {HTMLElement} */ (root.querySelector(sel));
 
   /**
@@ -726,14 +727,23 @@ export function createShell(root, store) {
   // it the screen-reader and no-WebGL view of the atlas.
 
   /** Turn to a page: its layers, its relief, and the country framed again. */
-  function openPlateById(id) {
+  /**
+   * Open a page. `link` is the URL the atlas was opened at, on the first load only: what
+   * it says about layers, relief, the open card and the state wins over the page's presets,
+   * so a link to a page's later era (?layers=maurya,...) opens on that era and not the first.
+   */
+  function openPlateById(id, link = null) {
     const plate = (store.get('plates')?.plates || []).find((p) => p.id === id);
     if (!plate) return;
     store.set('plate', id);
-    store.set('item', null);
-    store.set('layers', { active: [...(plate.eras ? plate.eras[0].layers : plate.layers)] });
+    if (!link?.item) store.set('item', null);
+    store.set('layers', { active: link?.layers || [...(plate.eras ? plate.eras[0].layers : plate.layers)] });
     store.set('base', plate.base || 'physical');
-    if (plate.relief !== undefined) store.set('relief', { on: plate.relief > 0, amount: plate.relief || DEFAULT_RELIEF }, { animate: true });
+    const relief = link?.relief ?? plate.relief;
+    if (relief !== undefined) store.set('relief', { on: relief > 0, amount: relief || DEFAULT_RELIEF }, { animate: true });
+    // Turning to a page starts it afresh. Opening the atlas at a link does not: the link's
+    // state, card and camera are where the visitor asked to be (and `home` clears all three).
+    if (link) return;
     if (store.get('level')?.name === 'state') store.set('level', { name: 'country', id: null }, { source: 'ui' });
     store.set('selection', null);
     store.set('home', { t: performance.now() });
@@ -1292,7 +1302,7 @@ export function createShell(root, store) {
     if (!d) return;
     store.set('plates', d);
     const wanted = store.get('plate');
-    if (wanted && d.plates.some((p) => p.id === wanted)) openPlateById(wanted);
+    if (wanted && d.plates.some((p) => p.id === wanted)) openPlateById(wanted, link);
     else if (wanted) store.set('plate', null);
   }).catch(() => {});
   store.subscribe('plates', () => { renderPoster(); queue(renderStrip); });
