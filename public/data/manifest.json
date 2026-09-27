@@ -1904,6 +1904,461 @@
    "path": "layers/gupta.json"
   },
   {
+   "id": "harsha-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 640 CE",
+    "hi": "लगभग 640 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 4,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "harsha",
+     "color": "#a8559a",
+     "title": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "chalukya",
+     "color": "#3a76a8",
+     "title": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "valabhi",
+     "color": "#b0802a",
+     "title": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pallava",
+     "color": "#8a3fa0",
+     "title": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Kānyakubja, Vātāpi, Kāñcī and Valabhī.",
+    "hi": "कान्यकुब्ज, वातापी, काञ्ची और वलभी।"
+   },
+   "sources": [
+    "beal-1884",
+    "wikipedia"
+   ],
+   "path": "layers/harsha-capitals.json"
+  },
+  {
+   "id": "harsha-evidence",
+   "type": "points",
+   "title": {
+    "en": "The evidence of c. 640 CE",
+    "hi": "लगभग 640 ई. के प्रमाण"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 1,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "inscription",
+     "color": "#7a2e1f",
+     "icon": "pin",
+     "title": {
+      "en": "Inscriptions",
+      "hi": "अभिलेख"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "The Aihole inscription, dated 634-35 CE. Xuanzang's record, the era's other witness, is a book, not a place, and has no pin.",
+    "hi": "ऐहोळे अभिलेख, 634-35 ई.। इस युग का दूसरा साक्षी, ह्वेनसांग का वृत्तांत, एक ग्रंथ है, स्थान नहीं, और उसका कोई पिन नहीं।"
+   },
+   "sources": [
+    "epigraphia-indica-vi",
+    "wikipedia"
+   ],
+   "path": "layers/harsha-evidence.json"
+  },
+  {
+   "id": "harsha-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the kingdoms of c. 640 CE",
+    "hi": "नाम: लगभग 640 ई. के राज्य"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 11,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "harsha",
+     "color": "#a8559a",
+     "title": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "chalukya",
+     "color": "#3a76a8",
+     "title": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "magadha-purnavarman",
+     "color": "#8a5a2a",
+     "title": {
+      "en": "Magadha (Pūrṇavarman)",
+      "hi": "मगध (पूर्णवर्मन्)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kamarupa",
+     "color": "#3f6f5a",
+     "title": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "valabhi",
+     "color": "#b0802a",
+     "title": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kosala-south",
+     "color": "#2f5f8f",
+     "title": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kalinga",
+     "color": "#9e1b32",
+     "title": {
+      "en": "Kaliṅga",
+      "hi": "कलिंग"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pallava",
+     "color": "#8a3fa0",
+     "title": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "cola",
+     "color": "#2f6f9e",
+     "title": {
+      "en": "Coḷa",
+      "hi": "चोल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kerala",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Kerala",
+      "hi": "केरल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pandya",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "beal-1884",
+    "epigraphia-indica-vi"
+   ],
+   "path": "layers/harsha-names.json"
+  },
+  {
+   "id": "harsha",
+   "type": "areas",
+   "title": {
+    "en": "Harṣa and Pulakeśin II, c. 640 CE",
+    "hi": "हर्ष और पुलकेशिन् द्वितीय, लगभग 640 ई."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 15,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "harsha",
+     "color": "#a8559a",
+     "title": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+     }
+    },
+    {
+     "id": "chalukya",
+     "color": "#3a76a8",
+     "title": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+     }
+    },
+    {
+     "id": "magadha-purnavarman",
+     "color": "#8a5a2a",
+     "title": {
+      "en": "Magadha (Pūrṇavarman)",
+      "hi": "मगध (पूर्णवर्मन्)"
+     }
+    },
+    {
+     "id": "kamarupa",
+     "color": "#3f6f5a",
+     "title": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+     }
+    },
+    {
+     "id": "valabhi",
+     "color": "#b0802a",
+     "title": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+     }
+    },
+    {
+     "id": "kosala-south",
+     "color": "#2f5f8f",
+     "title": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+     }
+    },
+    {
+     "id": "kalinga",
+     "color": "#9e1b32",
+     "title": {
+      "en": "Kaliṅga",
+      "hi": "कलिंग"
+     }
+    },
+    {
+     "id": "pallava",
+     "color": "#8a3fa0",
+     "title": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+     }
+    },
+    {
+     "id": "cola",
+     "color": "#2f6f9e",
+     "title": {
+      "en": "Coḷa",
+      "hi": "चोल"
+     }
+    },
+    {
+     "id": "kerala",
+     "color": "#2f8f8a",
+     "title": {
+      "en": "Kerala",
+      "hi": "केरल"
+     }
+    },
+    {
+     "id": "pandya",
+     "color": "#4f8a3a",
+     "title": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Left blank: Kashmir, Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। खाली छोड़े गए: कश्मीर, सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
+   },
+   "sources": [
+    "beal-1884",
+    "epigraphia-indica-vi",
+    "fleet-1888",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/harsha.json"
+  },
+  {
    "id": "kula-parvatas",
    "type": "points",
    "marker": "label",
@@ -5723,12 +6178,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 35811,
-   "sha256": "e6df233294ab"
+   "size": 36850,
+   "sha256": "ef1190ddb7fc"
   },
   "sources.json": {
-   "size": 37297,
-   "sha256": "66b87248990d"
+   "size": 39266,
+   "sha256": "0ecd33ca93fe"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -6009,6 +6464,26 @@
   "layers/gupta.json": {
    "size": 38276,
    "sha256": "5f9591c8e7ac"
+  },
+  "layers/harsha-areas.bin.gz": {
+   "size": 7331,
+   "sha256": "253ff39ff005"
+  },
+  "layers/harsha-capitals.json": {
+   "size": 3527,
+   "sha256": "70fbc003d570"
+  },
+  "layers/harsha-evidence.json": {
+   "size": 2502,
+   "sha256": "22612ce12485"
+  },
+  "layers/harsha-names.json": {
+   "size": 8349,
+   "sha256": "8c863cd28aa7"
+  },
+  "layers/harsha.json": {
+   "size": 28138,
+   "sha256": "514298ccc5d1"
   },
   "layers/kula-parvatas.json": {
    "size": 8304,
