@@ -1,0 +1,809 @@
+[
+  {
+    "id": "pratihara-core",
+    "status": "draft",
+    "name": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "category": "pratihara",
+    "rank": 1,
+    "districts": [
+      143,
+      144,
+      147,
+      148,
+      156,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      201,
+      202
+    ],
+    "verse": "Anartta-MSlava-EorSta-Turuebka-VatBa- Matsy-5di (read: Ānartta-Mālava-Kirāta-Turushka-Vatsa-Matsy-ādi)",
+    "locus": {
+      "en": "Gwalior praśasti, vv. 8-11",
+      "hi": "ग्वालियर प्रशस्ति, vv. 8-11"
+    },
+    "identified": {
+      "en": "certain, after Smith 1914",
+      "hi": "निश्चित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Mihira Bhoja of Kanauj (c. 836-885), Sulaimān's 'king of Jurz', with 'so fine a cavalry' and the Arabs' fiercest foe.",
+      "hi": "कन्नौज के मिहिर भोज (लगभग 836-885) का साम्राज्य, सुलेमान का 'जुर्ज़ का राजा', 'इतनी उत्तम घुड़सेना' वाला और अरबों का सबसे कड़ा शत्रु।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#8a2c1c",
+    "grade": {
+      "en": "Core: Kanauj, the capital from Nāgabhaṭa II on",
+      "hi": "केंद्र: कन्नौज, नागभट द्वितीय से राजधानी"
+    },
+    "reading": "which certainly was the capital of his",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 379",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 379"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "pratihara-held",
+    "status": "draft",
+    "name": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "category": "pratihara",
+    "rank": 1,
+    "districts": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      51,
+      52,
+      53,
+      54,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      122,
+      123,
+      124,
+      125,
+      126,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      145,
+      146,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      157,
+      158,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423
+    ],
+    "verse": "Anartta-MSlava-EorSta-Turuebka-VatBa- Matsy-5di (read: Ānartta-Mālava-Kirāta-Turushka-Vatsa-Matsy-ādi)",
+    "locus": {
+      "en": "Gwalior praśasti, vv. 8-11",
+      "hi": "ग्वालियर प्रशस्ति, vv. 8-11"
+    },
+    "identified": {
+      "en": "likely, after Smith 1914",
+      "hi": "संभावित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Mihira Bhoja of Kanauj (c. 836-885), Sulaimān's 'king of Jurz', with 'so fine a cavalry' and the Arabs' fiercest foe.",
+      "hi": "कन्नौज के मिहिर भोज (लगभग 836-885) का साम्राज्य, सुलेमान का 'जुर्ज़ का राजा', 'इतनी उत्तम घुड़सेना' वाला और अरबों का सबसे कड़ा शत्रु।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#b04a32",
+    "grade": {
+      "en": "Held: the Cis-Sutlej Panjab, most of Rajputana, the United Provinces and Gwalior",
+      "hi": "अधिकृत: सतलुज के इस पार का पंजाब, अधिकांश राजपूताना, संयुक्त प्रांत और ग्वालियर"
+    },
+    "reading": "They certainly included the Cis-Sutlaj districts of the Panjab, most of Rajputana, the greater part, if not the whole, of the present United Provinces of Agra and Oudh, and the Gwalior territory.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 379",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 379"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "pratihara-probable",
+    "status": "draft",
+    "name": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "category": "pratihara",
+    "rank": 1,
+    "districts": [
+      121,
+      127,
+      128,
+      129,
+      427,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      442,
+      443,
+      444,
+      445,
+      446,
+      458,
+      459,
+      464,
+      465,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      494
+    ],
+    "verse": "Anartta-MSlava-EorSta-Turuebka-VatBa- Matsy-5di (read: Ānartta-Mālava-Kirāta-Turushka-Vatsa-Matsy-ādi)",
+    "locus": {
+      "en": "Gwalior praśasti, vv. 8-11",
+      "hi": "ग्वालियर प्रशस्ति, vv. 8-11"
+    },
+    "identified": {
+      "en": "disputed, after Smith 1914",
+      "hi": "विवादित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Mihira Bhoja of Kanauj (c. 836-885), Sulaimān's 'king of Jurz', with 'so fine a cavalry' and the Arabs' fiercest foe.",
+      "hi": "कन्नौज के मिहिर भोज (लगभग 836-885) का साम्राज्य, सुलेमान का 'जुर्ज़ का राजा', 'इतनी उत्तम घुड़सेना' वाला और अरबों का सबसे कड़ा शत्रु।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#d27d5e",
+    "grade": {
+      "en": "Probable: Kathiawar, Gujarat and Malwa, held by his sons",
+      "hi": "संभावित: काठियावाड़, गुजरात और मालवा, उनके पुत्रों के अधीन"
+    },
+    "reading": "it is highly probable that these distant regions also were subject to the sway of Bhoja.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 379",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 379"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "pratihara-suzerainty",
+    "status": "draft",
+    "name": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "category": "pratihara",
+    "rank": 1,
+    "districts": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      424,
+      425,
+      426,
+      428
+    ],
+    "verse": "Anartta-MSlava-EorSta-Turuebka-VatBa- Matsy-5di (read: Ānartta-Mālava-Kirāta-Turushka-Vatsa-Matsy-ādi)",
+    "locus": {
+      "en": "Gwalior praśasti, vv. 8-11",
+      "hi": "ग्वालियर प्रशस्ति, vv. 8-11"
+    },
+    "identified": {
+      "en": "disputed, after Smith 1914",
+      "hi": "विवादित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Mihira Bhoja of Kanauj (c. 836-885), Sulaimān's 'king of Jurz', with 'so fine a cavalry' and the Arabs' fiercest foe.",
+      "hi": "कन्नौज के मिहिर भोज (लगभग 836-885) का साम्राज्य, सुलेमान का 'जुर्ज़ का राजा', 'इतनी उत्तम घुड़सेना' वाला और अरबों का सबसे कड़ा शत्रु।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#e8b09a",
+    "grade": {
+      "en": "Jejākabhukti (Bundelkhand), the Chandels', probably under his suzerainty",
+      "hi": "जेजाकभुक्ति (बुंदेलखंड), चंदेलों का, संभवतः उनकी अधिराजता में"
+    },
+    "reading": "the growing Chandél kingdom of Jejakabhukti, the modern Bundelkhand, which probably acknowledged his suzerainty.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 379",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 379"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "pala-core",
+    "status": "draft",
+    "name": {
+      "en": "Pāla empire",
+      "hi": "पाल साम्राज्य"
+    },
+    "category": "pala",
+    "rank": 1,
+    "districts": [
+      187,
+      188,
+      189,
+      190,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      350,
+      351,
+      352,
+      353,
+      362,
+      363
+    ],
+    "verse": "a kingdom called Buhmi (read: a kingdom called Ruhmī)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 5",
+      "hi": "सुलेमान, E&D i. 5"
+    },
+    "identified": {
+      "en": "certain, after Smith 1914",
+      "hi": "निश्चित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pālas of Bengal and Bihar under Devapāla, Sulaimān's Ruhmī, at war with both the Pratihāra and the Rāṣṭrakūṭa and richest in elephants.",
+      "hi": "देवपाल के अधीन बंगाल और बिहार के पाल, सुलेमान का रुह्मी, प्रतिहार और राष्ट्रकूट दोनों से युद्धरत और हाथियों में सबसे धनी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#1f5e3f",
+    "grade": {
+      "en": "Core: Bengal and Bihar",
+      "hi": "केंद्र: बंगाल और बिहार"
+    },
+    "reading": "the realm of Devapala, king of Bengal and Bihar",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 379",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 379"
+    },
+    "capital": {
+      "en": "Mudgagiri",
+      "hi": "मुद्गगिरि"
+    }
+  },
+  {
+    "id": "pala-claimed",
+    "status": "draft",
+    "name": {
+      "en": "Pāla empire",
+      "hi": "पाल साम्राज्य"
+    },
+    "category": "pala",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      396,
+      542,
+      543,
+      544
+    ],
+    "verse": "a kingdom called Buhmi (read: a kingdom called Ruhmī)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 5",
+      "hi": "सुलेमान, E&D i. 5"
+    },
+    "identified": {
+      "en": "disputed, after Smith 1914",
+      "hi": "विवादित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pālas of Bengal and Bihar under Devapāla, Sulaimān's Ruhmī, at war with both the Pratihāra and the Rāṣṭrakūṭa and richest in elephants.",
+      "hi": "देवपाल के अधीन बंगाल और बिहार के पाल, सुलेमान का रुह्मी, प्रतिहार और राष्ट्रकूट दोनों से युद्धरत और हाथियों में सबसे धनी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#7fb89a",
+    "grade": {
+      "en": "Claimed: Assam and Kaliṅga, said to be conquered by his general Lausena",
+      "hi": "दावा: असम और कलिंग, कहा जाता है कि उनके सेनापति लउसेन ने जीते"
+    },
+    "reading": "His general, Lausena, is said to have conquered Assam and Kalinga.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 399",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 399"
+    },
+    "capital": {
+      "en": "Mudgagiri",
+      "hi": "मुद्गगिरि"
+    }
+  },
+  {
+    "id": "rashtrakuta-core",
+    "status": "draft",
+    "name": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "category": "rashtrakuta",
+    "rank": 1,
+    "districts": [
+      552,
+      553,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      564,
+      565,
+      579,
+      580
+    ],
+    "verse": "Tlie Balhara’ is the most eminent of the princes of India (read: The Balharā is the most eminent of the princes of India)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 3",
+      "hi": "सुलेमान, E&D i. 3"
+    },
+    "identified": {
+      "en": "certain, after Smith 1914",
+      "hi": "निश्चित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I, the Arabs' 'Balharā', whom 'all pay homage to' as the greatest prince of India. Balharā is the title Vallabha-rāja (Smith p. 430).",
+      "hi": "मान्यखेट के अमोघवर्ष प्रथम के अधीन राष्ट्रकूट, अरबों के 'बलहरा', जिन्हें भारत का सबसे बड़ा राजा मानकर 'सब नमन करते हैं'। बलहरा उपाधि वल्लभ-राज है (स्मिथ पृ. 430)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#2a3f8a",
+    "grade": {
+      "en": "Core: round Mānyakheṭa (Malkhed), the new capital",
+      "hi": "केंद्र: मान्यखेट (मालखेड) के आसपास, नई राजधानी"
+    },
+    "reading": "He transferred his capital from Nasik to",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 429",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 429"
+    },
+    "capital": {
+      "en": "Mānyakheṭa",
+      "hi": "मान्यखेट"
+    }
+  },
+  {
+    "id": "rashtrakuta-held",
+    "status": "draft",
+    "name": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "category": "rashtrakuta",
+    "rank": 1,
+    "districts": [
+      447,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      585,
+      586
+    ],
+    "verse": "Tlie Balhara’ is the most eminent of the princes of India (read: The Balharā is the most eminent of the princes of India)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 3",
+      "hi": "सुलेमान, E&D i. 3"
+    },
+    "identified": {
+      "en": "likely, after Smith 1914",
+      "hi": "संभावित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I, the Arabs' 'Balharā', whom 'all pay homage to' as the greatest prince of India. Balharā is the title Vallabha-rāja (Smith p. 430).",
+      "hi": "मान्यखेट के अमोघवर्ष प्रथम के अधीन राष्ट्रकूट, अरबों के 'बलहरा', जिन्हें भारत का सबसे बड़ा राजा मानकर 'सब नमन करते हैं'। बलहरा उपाधि वल्लभ-राज है (स्मिथ पृ. 430)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#4f68b8",
+    "grade": {
+      "en": "Held: the Deccan to the Tuṅgabhadrā, and the coast from the Konkan",
+      "hi": "अधिकृत: तुंगभद्रा तक दक्कन, और कोंकण से तट"
+    },
+    "reading": "carried at least as far as the Tungabhadra.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 429",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 429"
+    },
+    "capital": {
+      "en": "Mānyakheṭa",
+      "hi": "मान्यखेट"
+    }
+  },
+  {
+    "id": "rashtrakuta-lata",
+    "status": "draft",
+    "name": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "category": "rashtrakuta",
+    "rank": 1,
+    "districts": [
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493
+    ],
+    "verse": "Tlie Balhara’ is the most eminent of the princes of India (read: The Balharā is the most eminent of the princes of India)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 3",
+      "hi": "सुलेमान, E&D i. 3"
+    },
+    "identified": {
+      "en": "likely, after Smith 1914",
+      "hi": "संभावित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I, the Arabs' 'Balharā', whom 'all pay homage to' as the greatest prince of India. Balharā is the title Vallabha-rāja (Smith p. 430).",
+      "hi": "मान्यखेट के अमोघवर्ष प्रथम के अधीन राष्ट्रकूट, अरबों के 'बलहरा', जिन्हें भारत का सबसे बड़ा राजा मानकर 'सब नमन करते हैं'। बलहरा उपाधि वल्लभ-राज है (स्मिथ पृ. 430)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#8497d4",
+    "grade": {
+      "en": "Lāṭa (south Gujarat), a viceroyalty of the family",
+      "hi": "लाट (दक्षिण गुजरात), परिवार का एक उप-राज्य"
+    },
+    "reading": "He created his brother Indraraja viceroy of Lata, or Southern Gujarat.",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 429",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 429"
+    },
+    "capital": {
+      "en": "Mānyakheṭa",
+      "hi": "मान्यखेट"
+    }
+  },
+  {
+    "id": "rashtrakuta-sphere",
+    "status": "draft",
+    "name": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "category": "rashtrakuta",
+    "rank": 1,
+    "districts": [
+      563,
+      566,
+      567,
+      568,
+      570,
+      571,
+      572,
+      573,
+      574,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584
+    ],
+    "verse": "Tlie Balhara’ is the most eminent of the princes of India (read: The Balharā is the most eminent of the princes of India)",
+    "locus": {
+      "en": "Sulaimān, E&D i. 3",
+      "hi": "सुलेमान, E&D i. 3"
+    },
+    "identified": {
+      "en": "disputed, after Smith 1914",
+      "hi": "विवादित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I, the Arabs' 'Balharā', whom 'all pay homage to' as the greatest prince of India. Balharā is the title Vallabha-rāja (Smith p. 430).",
+      "hi": "मान्यखेट के अमोघवर्ष प्रथम के अधीन राष्ट्रकूट, अरबों के 'बलहरा', जिन्हें भारत का सबसे बड़ा राजा मानकर 'सब नमन करते हैं'। बलहरा उपाधि वल्लभ-राज है (स्मिथ पृ. 430)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#bcc7ea",
+    "grade": {
+      "en": "Their sphere to the south, 'to Kanchi', over the Gaṅgas (disputed)",
+      "hi": "दक्षिण में उनका प्रभाव-क्षेत्र, 'कांची तक', गंगों पर (विवादित)"
+    },
+    "reading": "north to Kanchi on the south;",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 429",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 429"
+    },
+    "capital": {
+      "en": "Mānyakheṭa",
+      "hi": "मान्यखेट"
+    }
+  }
+]

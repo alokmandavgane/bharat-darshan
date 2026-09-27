@@ -1,0 +1,101 @@
+[
+  {
+    "id": "pratihara-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    },
+    "category": "pratihara",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.07,
+      "lon": 79.92
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Kannauj",
+      "hi": "निश्चित, Kannauj पर"
+    },
+    "blurb": {
+      "en": "The capital of Gurjara-Pratihāra empire.",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Kannauj"
+    ]
+  },
+  {
+    "id": "pala-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mudgagiri",
+      "hi": "मुद्गगिरि"
+    },
+    "category": "pala",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.381,
+      "lon": 86.465
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "Pāla empire",
+      "hi": "पाल साम्राज्य"
+    },
+    "identified": {
+      "en": "likely, placed at Munger",
+      "hi": "संभावित, Munger पर"
+    },
+    "blurb": {
+      "en": "The capital of Pāla empire.",
+      "hi": "पाल साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Munger"
+    ]
+  },
+  {
+    "id": "rashtrakuta-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mānyakheṭa",
+      "hi": "मान्यखेट"
+    },
+    "category": "rashtrakuta",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.195,
+      "lon": 77.16083
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Malkhed",
+      "hi": "निश्चित, Malkhed पर"
+    },
+    "blurb": {
+      "en": "The capital of Rāṣṭrakūṭa empire.",
+      "hi": "राष्ट्रकूट साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Manyakheta"
+    ]
+  }
+]

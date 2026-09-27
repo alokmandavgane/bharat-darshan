@@ -1,0 +1,50 @@
+{
+  "id": "pratihara-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 850 CE",
+    "hi": "नाम: लगभग 850 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "pratihara",
+      "color": "#b04a32",
+      "title": {
+        "en": "The Gurjara-Pratihāra empire",
+        "hi": "गुर्जर-प्रतिहार साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pala",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "The Pāla empire",
+        "hi": "पाल साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rashtrakuta",
+      "color": "#4f68b8",
+      "title": {
+        "en": "The Rāṣṭrakūṭa empire",
+        "hi": "राष्ट्रकूट साम्राज्य"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The empires' names, laid on the map.",
+    "hi": "साम्राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "smith-1914",
+    "elliot-dowson-1867"
+  ]
+}

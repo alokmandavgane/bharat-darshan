@@ -1,0 +1,115 @@
+{
+  "id": "pratihara",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "Pratihāras, Pālas and Rāṣṭrakūṭas, c. 850 CE",
+    "hi": "प्रतिहार, पाल और राष्ट्रकूट, लगभग 850 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "pratihara",
+      "color": "#b04a32",
+      "title": {
+        "en": "The Gurjara-Pratihāra empire",
+        "hi": "गुर्जर-प्रतिहार साम्राज्य"
+      }
+    },
+    {
+      "id": "pala",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "The Pāla empire",
+        "hi": "पाल साम्राज्य"
+      }
+    },
+    {
+      "id": "rashtrakuta",
+      "color": "#4f68b8",
+      "title": {
+        "en": "The Rāṣṭrakūṭa empire",
+        "hi": "राष्ट्रकूट साम्राज्य"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Left blank: the Pallavas, Pāṇḍyas and Colas, the Eastern Cālukyas of Veṅgī, and Kashmir. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। खाली छोड़े गए: पल्लव, पाण्ड्य और चोल, वेंगी के पूर्वी चालुक्य, और कश्मीर। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
+  },
+  "sources": [
+    "smith-1914",
+    "elliot-dowson-1867",
+    "epigraphia-indica-xviii",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Smith, The Early History of India (1914), with Sulaimān in Elliot and Dowson (1867) and Epigraphia Indica XVIII, all public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

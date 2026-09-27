@@ -1,0 +1,65 @@
+{
+  "id": "pratihara-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 850 CE",
+    "hi": "लगभग 850 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "pratihara",
+      "color": "#b04a32",
+      "title": {
+        "en": "The Gurjara-Pratihāra empire",
+        "hi": "गुर्जर-प्रतिहार साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pala",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "The Pāla empire",
+        "hi": "पाल साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "rashtrakuta",
+      "color": "#4f68b8",
+      "title": {
+        "en": "The Rāṣṭrakūṭa empire",
+        "hi": "राष्ट्रकूट साम्राज्य"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Kānyakubja, Mudgagiri (Monghyr, where Devapāla held court) and Mānyakheṭa.",
+    "hi": "कान्यकुब्ज, मुद्गगिरि (मुंगेर, जहाँ देवपाल का दरबार था) और मान्यखेट।"
+  },
+  "sources": [
+    "smith-1914",
+    "wikipedia"
+  ]
+}

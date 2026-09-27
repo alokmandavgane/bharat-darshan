@@ -2450,6 +2450,13 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-fifth round: Pratihāras, Pālas and Rāṣṭrakūṭas, c. 850 CE. "Kingdoms and empires" gains its
+  seventh era. It shows the three powers the merchant Sulaimān found in 851, drawn from the Gwalior praśasti
+  (Epigraphia Indica XVIII), Sulaimān in Elliot and Dowson (1867), and Smith's Early History of India (1914).
+  - **The areas:** the Pratihāras in four shades, the Pālas in two and the Rāṣṭrakūṭas in four.
+  - **Capitals and pins:** three capitals and two pins.
+  - **Left blank:** the south and Kashmir, whose records the OCR could not read.
+  - Checked in the browser at 1280x800; 48 tests and the build pass.
 - 2026-09-27, seventy-fourth round: Harṣa and Pulakeśin II, c. 640 CE. "Kingdoms and empires" gains its sixth era,
   drawn from Pulakeśin II's Aihole inscription (Epigraphia Indica VI) and from Xuanzang in Beal's translation
   (1884).

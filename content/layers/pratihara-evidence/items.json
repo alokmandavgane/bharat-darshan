@@ -1,0 +1,83 @@
+[
+  {
+    "id": "gwalior-prasasti",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior (Sagar Tal)",
+      "hi": "ग्वालियर (सागर ताल)"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2125,
+      "lon": 78.1775
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Gwalior (compiler's placement)",
+      "hi": "Gwalior (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "The Pratihāra line's praśasti under Bhoja: Nāgabhaṭa II's conquests, and the Pāla 'lord of Vaṅga' defeated.",
+      "hi": "भोज के अधीन प्रतिहार वंश की प्रशस्ति: नागभट द्वितीय की विजयें, और पाल 'वंगपति' की हार।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://en.wikipedia.org/wiki/Gwalior"
+    ],
+    "reading": "Nagabhata II defeated Chakrayudha and also con- quered kings of the Anartta, Turushka, Malavo, Vatsa, Matsya and other countries",
+    "page": {
+      "en": "Epigraphia Indica XVIII, Epigraphia Indica (1926), p. 101",
+      "hi": "Epigraphia Indica XVIII, Epigraphia Indica (1926), पृ. 101"
+    },
+    "verse": "Chakrayudham",
+    "locus": {
+      "en": "Gwalior praśasti, vv. 8-11",
+      "hi": "ग्वालियर प्रशस्ति, vv. 8-11"
+    }
+  },
+  {
+    "id": "sanjan",
+    "status": "draft",
+    "name": {
+      "en": "Sanjan",
+      "hi": "संजान"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.20111,
+      "lon": 72.80111
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Sanjan, Valsad district",
+      "hi": "Sanjan, Valsad district पर"
+    },
+    "blurb": {
+      "en": "Amoghavarṣa I's copper plates of 871 CE, recounting his father Govinda III's wars from the Himalaya to Kāñcī. Their Sanskrit is not quoted here; the OCR garbles it.",
+      "hi": "अमोघवर्ष प्रथम के 871 ई. के ताम्रपत्र, उनके पिता गोविन्द तृतीय के हिमालय से कांची तक के युद्धों का वर्णन। उनका संस्कृत यहाँ उद्धृत नहीं; ओसीआर उसे बिगाड़ देता है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://en.wikipedia.org/wiki/Sanjan,_Gujarat"
+    ],
+    "reading": "The water of the springs of the Himalaya mountains was drunk by whose horses",
+    "page": {
+      "en": "Epigraphia Indica XVIII, Epigraphia Indica (1926), p. 253",
+      "hi": "Epigraphia Indica XVIII, Epigraphia Indica (1926), पृ. 253"
+    }
+  }
+]

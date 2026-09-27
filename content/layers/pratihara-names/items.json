@@ -1,0 +1,79 @@
+[
+  {
+    "id": "pratihara",
+    "status": "draft",
+    "name": {
+      "en": "Gurjara-Pratihāra empire",
+      "hi": "गुर्जर-प्रतिहार साम्राज्य"
+    },
+    "category": "pratihara",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3,
+      "lon": 76.0
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The empire of Mihira Bhoja of Kanauj (c. 836-885), Sulaimān's 'king of Jurz', with 'so fine a cavalry' and the Arabs' fiercest foe.",
+      "hi": "कन्नौज के मिहिर भोज (लगभग 836-885) का साम्राज्य, सुलेमान का 'जुर्ज़ का राजा', 'इतनी उत्तम घुड़सेना' वाला और अरबों का सबसे कड़ा शत्रु।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "pala",
+    "status": "draft",
+    "name": {
+      "en": "Pāla empire",
+      "hi": "पाल साम्राज्य"
+    },
+    "category": "pala",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.2,
+      "lon": 87.9
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Pālas of Bengal and Bihar under Devapāla, Sulaimān's Ruhmī, at war with both the Pratihāra and the Rāṣṭrakūṭa and richest in elephants.",
+      "hi": "देवपाल के अधीन बंगाल और बिहार के पाल, सुलेमान का रुह्मी, प्रतिहार और राष्ट्रकूट दोनों से युद्धरत और हाथियों में सबसे धनी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/in.ernet.dli.2015.70159",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "rashtrakuta",
+    "status": "draft",
+    "name": {
+      "en": "Rāṣṭrakūṭa empire",
+      "hi": "राष्ट्रकूट साम्राज्य"
+    },
+    "category": "rashtrakuta",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.3,
+      "lon": 76.4
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I, the Arabs' 'Balharā', whom 'all pay homage to' as the greatest prince of India. Balharā is the title Vallabha-rāja (Smith p. 430).",
+      "hi": "मान्यखेट के अमोघवर्ष प्रथम के अधीन राष्ट्रकूट, अरबों के 'बलहरा', जिन्हें भारत का सबसे बड़ा राजा मानकर 'सब नमन करते हैं'। बलहरा उपाधि वल्लभ-राज है (स्मिथ पृ. 430)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.65858",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  }
+]

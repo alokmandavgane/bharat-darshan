@@ -821,6 +821,60 @@
         "en": "The edition of Pulakeśin II's Aihole inscription that the kingdoms page quotes for c. 640 CE.",
         "hi": "पुलकेशिन् द्वितीय के ऐहोळे अभिलेख का संस्करण जिसे राज्य पृष्ठ लगभग 640 ई. के लिए उद्धृत करता है।"
       }
+    },
+    "smith-1914": {
+      "title": {
+        "en": "V. A. Smith, The Early History of India, 3rd ed. (1914)",
+        "hi": "वी. ए. स्मिथ, द अर्ली हिस्ट्री ऑफ़ इंडिया, तीसरा संस्करण (1914)"
+      },
+      "publisher": {
+        "en": "Clarendon Press, Oxford",
+        "hi": "क्लैरेंडन प्रेस, ऑक्सफ़ोर्ड"
+      },
+      "url": "https://archive.org/details/bwb_KV-350-852",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The survey the kingdoms page quotes for the extents of c. 850 CE.",
+        "hi": "वह सर्वेक्षण जिसे राज्य पृष्ठ लगभग 850 ई. के विस्तार के लिए उद्धृत करता है।"
+      }
+    },
+    "elliot-dowson-1867": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. I (1867)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियंस, खंड I (1867)"
+      },
+      "publisher": {
+        "en": "Trübner, London",
+        "hi": "ट्रूबनर, लंदन"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.65858",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The translation of the merchant Sulaimān's account of 851 that the kingdoms page quotes.",
+        "hi": "व्यापारी सुलेमान के 851 के वृत्तांत का अनुवाद जिसे राज्य पृष्ठ उद्धृत करता है।"
+      }
+    },
+    "epigraphia-indica-xviii": {
+      "title": {
+        "en": "Epigraphia Indica, vol. XVIII (1925-26)",
+        "hi": "एपिग्राफ़िया इंडिका, खंड XVIII (1925-26)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta: the Gwalior praśasti of Bhoja and the Sanjan plates of Amoghavarṣa I",
+        "hi": "भारत सरकार, कलकत्ता: भोज की ग्वालियर प्रशस्ति और अमोघवर्ष प्रथम के संजान ताम्रपत्र"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.70159",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The editions the kingdoms page quotes and cites for c. 850 CE.",
+        "hi": "वे संस्करण जिन्हें राज्य पृष्ठ लगभग 850 ई. के लिए उद्धृत करता है।"
+      }
     }
   }
 }

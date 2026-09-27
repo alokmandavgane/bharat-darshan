@@ -34,7 +34,11 @@
     "harsha",
     "harsha-names",
     "harsha-capitals",
-    "harsha-evidence"
+    "harsha-evidence",
+    "pratihara",
+    "pratihara-names",
+    "pratihara-capitals",
+    "pratihara-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -162,6 +166,27 @@
         "harsha-names",
         "harsha-capitals",
         "harsha-evidence"
+      ]
+    },
+    {
+      "id": "pratihara",
+      "display": {
+        "en": "c. 850 CE",
+        "hi": "लगभग 850 ई."
+      },
+      "title": {
+        "en": "Pratihāras, Pālas and Rāṣṭrakūṭas",
+        "hi": "प्रतिहार, पाल और राष्ट्रकूट"
+      },
+      "blurb": {
+        "en": "The three great powers the merchant Sulaimān found in 851: the Balharā (Rāṣṭrakūṭa), the king of Jurz (Pratihāra) and Ruhmī (Pāla). From the Gwalior praśasti, Sulaimān and Smith (1914).",
+        "hi": "वे तीन बड़ी शक्तियाँ जो व्यापारी सुलेमान ने 851 में पाईं: बलहरा (राष्ट्रकूट), जुर्ज़ का राजा (प्रतिहार) और रुह्मी (पाल)। ग्वालियर प्रशस्ति, सुलेमान और स्मिथ (1914) से।"
+      },
+      "layers": [
+        "pratihara",
+        "pratihara-names",
+        "pratihara-capitals",
+        "pratihara-evidence"
       ]
     }
   ],
