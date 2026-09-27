@@ -254,7 +254,7 @@ export function createShell(root, store, link = null) {
 
   // The catalogue's sections, in the order the menu shows them (pipeline/04_layers.py
   // GROUPS says the same); a group not listed here follows them.
-  const GROUP_ORDER = ['physical', 'political', 'network', 'industry', 'resources', 'culture', 'census',
+  const GROUP_ORDER = ['physical', 'political', 'network', 'industry', 'resources', 'wildlife', 'culture', 'census',
     'history-texts', 'history-journeys', 'history-kingdoms'];
   // Which sections are open. A section with a layer on opens by itself; once the reader
   // opens or closes one, that choice is kept across every rebuild of the list.

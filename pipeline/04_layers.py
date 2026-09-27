@@ -61,7 +61,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
 # The catalogue's sections, in the order the menu shows them; each heading is the string
 # `layer.group.<id>` in src/i18n. A layer names one, or lands in 'other'.
-GROUPS = ('physical', 'political', 'network', 'industry', 'resources', 'culture', 'census',
+GROUPS = ('physical', 'political', 'network', 'industry', 'resources', 'wildlife', 'culture', 'census',
           'history-texts', 'history-journeys', 'history-kingdoms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 DISTRICTS = 'districts'     # a layer the build makes from India's district polygons
@@ -176,8 +176,10 @@ def validate_layer(layer, folder, registry):
         p.append('names_first is `true` on a label layer, or absent')
     if layer.get('type') == 'points':
         src = layer.get('source') or {}
-        if src and src.get('format') not in ('geonames', DISTRICTS):
-            p.append(f'a points layer can only be generated from source.format "geonames" or "{DISTRICTS}"')
+        if src and src.get('format') not in ('geonames', DISTRICTS, WIKIDATA):
+            p.append(f'a points layer can only be generated from source.format "geonames", "{DISTRICTS}" or "{WIKIDATA}"')
+        elif src.get('format') == WIKIDATA:
+            p += validate_wikidata_source(src, {c['id'] for c in cats or []}, folder)
         elif src.get('format') == 'geonames' and src.get('dump', 'cities15000') not in GEONAMES_DUMPS:
             p.append(f"source.dump must be one of {GEONAMES_DUMPS}")
     if layer.get('type') == 'areas':
@@ -1203,6 +1205,177 @@ def build_geonames(layer, curated, cats, fields, ids, by_id, out_items):
     return out_items, []
 
 
+# --- Points from one Wikidata query: every item of a kind in India, sorted by rules
+WIKIDATA = 'wikidata'
+WIKIDATA_SNAP = 3      # pixels a coastal or island item may be moved to land on its region
+
+
+def validate_wikidata_source(src, cats, folder):
+    p = []
+    if not re.match(r'^Q\d+$', str(src.get('root', ''))):
+        p.append('source.root must be the Wikidata class every item is an instance of (a subclass of), e.g. "Q473972"')
+    rules = src.get('rules')
+    if not isinstance(rules, list) or not rules:
+        p.append('source.rules must list how an item finds its category')
+    for i, r in enumerate(rules or []):
+        if not (r.get('label') or r.get('classes')):
+            p.append(f'source.rules[{i}]: needs label words or classes to match')
+        if not r.get('skip') and r.get('category') not in cats:
+            p.append(f"source.rules[{i}]: category {r.get('category')!r} is not one of the layer's")
+        if not r.get('skip') and r.get('priority', 3) not in (1, 2, 3):
+            p.append(f'source.rules[{i}]: priority must be 1, 2 or 3')
+    if src.get('hindi') and not os.path.exists(os.path.join(folder, src['hindi'])):
+        p.append(f"source.hindi names {src['hindi']}, which is not in the layer's folder")
+    return p
+
+
+def wikidata_rows(src, raw):
+    """Every instance of the root class (or a subclass of it) in the country, one row each."""
+    query = ('SELECT ?i ?en ?hi (GROUP_CONCAT(DISTINCT ?k; separator="|") AS ?cls) (SAMPLE(?c) AS ?coord) '
+             '(MAX(?m2) AS ?area) (MIN(?inc) AS ?inception) (SAMPLE(?art) AS ?enwiki) WHERE { '
+             f"?i wdt:P17 wd:{src.get('country', 'Q668')} ; wdt:P31 ?k . ?k wdt:P279* wd:{src['root']} . "
+             'FILTER NOT EXISTS { ?i wdt:P576 [] } '
+             'OPTIONAL { ?i rdfs:label ?en FILTER(LANG(?en)="en") } '
+             'OPTIONAL { ?i rdfs:label ?hi FILTER(LANG(?hi)="hi") } '
+             'OPTIONAL { ?i wdt:P625 ?c } '
+             'OPTIONAL { ?i p:P2046/psn:P2046/wikibase:quantityAmount ?m2 } '
+             'OPTIONAL { ?i wdt:P571 ?inc } '
+             'OPTIONAL { ?art schema:about ?i ; schema:isPartOf <https://en.wikipedia.org/> } '
+             '} GROUP BY ?i ?en ?hi')
+    os.makedirs(raw, exist_ok=True)
+    path = os.path.join(raw, f"query-{hashlib.sha1(query.encode()).hexdigest()[:16]}.json")
+    if not os.path.exists(path):
+        got = wikidata.ask(query, timeout=300)
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(got, f, ensure_ascii=False, separators=(',', ':'))
+    with open(path, encoding='utf-8') as f:
+        got = json.load(f)
+    rows = {}
+    for b in got:
+        v = {k: x['value'] for k, x in b.items()}
+        qid = v['i'].rsplit('/', 1)[-1]
+        # An item with two English or two Hindi labels comes back once per pair; keep the first.
+        if qid in rows:
+            continue
+        m = re.match(r'Point\(([-\d.]+) ([-\d.]+)\)', v.get('coord', ''))
+        rows[qid] = {
+            'qid': qid, 'en': v.get('en'), 'hi': v.get('hi'),
+            'classes': [c.rsplit('/', 1)[-1] for c in v.get('cls', '').split('|') if c],
+            'lon': float(m.group(1)) if m else None, 'lat': float(m.group(2)) if m else None,
+            'km2': float(v['area']) / 1e6 if v.get('area') else None,
+            'year': int(re.match(r'^[+]?(\d{4})', v['inception']).group(1)) if re.match(r'^[+]?\d{4}', v.get('inception', '')) else None,
+            'enwiki': v.get('enwiki'),
+        }
+    return [rows[k] for k in sorted(rows, key=lambda q: int(q[1:]))]
+
+
+def wikidata_rule(row, rules):
+    """
+    Which rule an item falls under. Its name is asked first, because it is the most specific
+    thing Wikidata holds about it -- a tiger reserve is often filed as a plain "protected
+    area" and named for what it is -- and its classes only when no rule's words are in the name.
+    """
+    name = (row['en'] or '').lower()
+    for r in rules:
+        if any(w.lower() in name for w in r.get('label', [])):
+            return r
+    for r in rules:
+        if any(c in row['classes'] for c in r.get('classes', [])):
+            return r
+    return None
+
+
+def build_wikidata(layer, folder, cats, fields, ids, by_id, out_items):
+    """
+    Items generated from Wikidata: every instance of a class in India, each placed by its
+    coordinates, sorted into the layer's categories by `source.rules`, and named in Hindi by
+    Wikidata or, where Wikidata has no Hindi name or a poor one, by the layer's own
+    `source.hindi` file. Curated items and `source.exclude` win over what is generated.
+    Returns (out_items, problems).
+    """
+    src = layer['source']
+    rows = wikidata_rows(src, os.path.join(fetch.RAW, 'wikidata', layer['id']))
+    hindi = {}
+    if src.get('hindi'):
+        with open(os.path.join(folder, src['hindi']), encoding='utf-8') as f:
+            hindi = {k: v for k, v in json.load(f).items() if not k.startswith('_')}
+    exclude = set(src.get('exclude', []))
+    height, width = ids.shape
+    seen_ids = {it['id'] for it in out_items}
+    taken = {fold(it['name']['en']) for it in out_items}
+    dropped = {'excluded': 0, 'no rule': 0, 'skipped by rule': 0, 'no coordinates': 0,
+               'outside India': 0, 'no hindi name': 0, 'duplicate': 0}
+    unnamed = []
+    added = {}
+    for row in rows:
+        if row['qid'] in exclude:
+            dropped['excluded'] += 1
+            continue
+        rule = wikidata_rule(row, src['rules'])
+        if rule is None:
+            dropped['no rule'] += 1
+            continue
+        if rule.get('skip'):
+            dropped['skipped by rule'] += 1
+            continue
+        if row['lat'] is None:
+            dropped['no coordinates'] += 1
+            continue
+        col, r = grid.lonlat_to_pixel(row['lon'], row['lat'], width, height)
+        c, r = int(col), int(r)
+        region = int(ids[r, c]) if 0 <= r < height and 0 <= c < width else 0
+        if not region:
+            # A coastal marsh or a small island can fall just off the land at the raster's
+            # resolution; it is moved to the nearest land pixel of its own coast, never further.
+            best = None
+            for dr in range(-WIKIDATA_SNAP, WIKIDATA_SNAP + 1):
+                for dc in range(-WIKIDATA_SNAP, WIKIDATA_SNAP + 1):
+                    rr, cc = r + dr, c + dc
+                    if 0 <= rr < height and 0 <= cc < width and ids[rr, cc]:
+                        d = dr * dr + dc * dc
+                        if best is None or d < best[0]:
+                            best = (d, int(ids[rr, cc]))
+            if best is None:
+                dropped['outside India'] += 1
+                continue
+            region = best[1]
+        hi = hindi.get(row['qid']) or row['hi']
+        if not hi:
+            dropped['no hindi name'] += 1
+            unnamed.append(f"{row['qid']} {row['en']}")
+            continue
+        name = row['en'] or row['qid']
+        if fold(name) in taken:
+            dropped['duplicate'] += 1
+            continue
+        taken.add(fold(name))
+        slug = slugify(name)
+        if slug in seen_ids:
+            slug = f"{slug}-{by_id[region]['slug']}"
+        if slug in seen_ids:
+            slug = f"{slug}-{row['qid'].lower()}"
+        seen_ids.add(slug)
+        x, z = grid.lonlat_to_scene(row['lon'], row['lat'])
+        entry = {
+            'id': slug, 'name': {'en': name, 'hi': hi}, 'category': rule['category'],
+            'priority': rule.get('priority', 3),
+            'x': round(float(x), 1), 'z': round(float(z), 1), 'region': region, 'regionSlug': by_id[region]['slug'],
+            'sources': [f"https://www.wikidata.org/wiki/{row['qid']}"] + ([row['enwiki']] if row['enwiki'] else []),
+            'status': 'draft',
+        }
+        if 'area_km2' in fields and row['km2'] and row['km2'] >= 1:
+            entry['area_km2'] = int(round(row['km2']))
+        if 'established' in fields and row['year'] and 1800 <= row['year'] <= 2100:
+            entry['established'] = row['year']
+        out_items.append(entry)
+        added[rule['category']] = added.get(rule['category'], 0) + 1
+    print(f"    wikidata: {len(rows)} items, added " + ', '.join(f'{v} {k}' for k, v in sorted(added.items()))
+          + '; dropped ' + ', '.join(f'{v} {k}' for k, v in dropped.items() if v))
+    if unnamed:
+        print(f'    wikidata: {len(unnamed)} without a Hindi name, e.g. ' + '; '.join(unnamed[:5]))
+    return out_items, []
+
+
 # --- India's districts: two drawings from one source (PLAN.md section 7, "District boundaries")
 DISTRICT_CACHE = {}
 
@@ -1475,6 +1648,8 @@ def build_layer(folder, states, ids, heights, out, registry, models):
     if layer.get('source') and not problems:
         if layer['source'].get('format') == DISTRICTS:
             out_items, gen_problems = build_district_points(layer, items, cats, fields, ids, by_id, out_items)
+        elif layer['source'].get('format') == WIKIDATA:
+            out_items, gen_problems = build_wikidata(layer, folder, cats, fields, ids, by_id, out_items)
         else:
             out_items, gen_problems = build_geonames(layer, items, cats, fields, ids, by_id, out_items)
         problems += gen_problems
