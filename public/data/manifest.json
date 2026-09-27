@@ -1615,6 +1615,344 @@
    "path": "layers/kurma-vibhaga.json"
   },
   {
+   "id": "kushana-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 150 CE",
+    "hi": "लगभग 150 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 2,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "kushana",
+     "color": "#5b6b1e",
+     "title": {
+      "en": "The Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kshatrapa",
+     "color": "#2e6f86",
+     "title": {
+      "en": "The Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "satavahana",
+     "color": "#b8691f",
+     "title": {
+      "en": "The Sātavāhanas",
+      "hi": "सातवाहन"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "yaudheya",
+     "color": "#9e3b6b",
+     "title": {
+      "en": "The Yaudheyas",
+      "hi": "यौधेय"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Rudradāman's Ujjayinī and the Sātavāhanas' Pratiṣṭhāna. The Kuṣāṇa capital, Puruṣapura (Peshawar), lies in Pakistan.",
+    "hi": "रुद्रदामन् की उज्जयिनी और सातवाहनों का प्रतिष्ठान। कुषाण राजधानी पुरुषपुर (पेशावर) पाकिस्तान में है।"
+   },
+   "sources": [
+    "raychaudhuri-1923",
+    "geonames",
+    "wikipedia"
+   ],
+   "path": "layers/kushana-capitals.json"
+  },
+  {
+   "id": "kushana-evidence",
+   "type": "points",
+   "title": {
+    "en": "The evidence of c. 150 CE",
+    "hi": "लगभग 150 ई. के प्रमाण"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 8,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "inscription",
+     "color": "#7a2e1f",
+     "icon": "pin",
+     "title": {
+      "en": "Inscriptions",
+      "hi": "अभिलेख"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "The inscriptions the map rests on. Junāgaḍh is the Kṣatrapas'. Nāsik, Kārle and Kānherī are the Sātavāhanas', Kānherī recording their marriage with Rudradāman's house. Sārnāth, Mathurā and Śrāvastī are the Kuṣāṇas', and Bijayagaḍh is the Yaudheyas'. Each pin is at its site or the nearest town.",
+    "hi": "वे अभिलेख जिन पर मानचित्र टिका है। जूनागढ़ क्षत्रपों का है। नासिक, कार्ले और कान्हेरी सातवाहनों के हैं, कान्हेरी रुद्रदामन् के घराने के साथ उनके विवाह को दर्ज करता है। सारनाथ, मथुरा और श्रावस्ती कुषाणों के हैं, और बिजयगढ़ यौधेयों का है। हर पिन अपने स्थल या निकटतम नगर पर है।"
+   },
+   "sources": [
+    "epigraphia-indica-viii",
+    "raychaudhuri-1923",
+    "wikipedia"
+   ],
+   "path": "layers/kushana-evidence.json"
+  },
+  {
+   "id": "kushana-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the kingdoms of c. 150 CE",
+    "hi": "नाम: लगभग 150 ई. के राज्य"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 4,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "kushana",
+     "color": "#5b6b1e",
+     "title": {
+      "en": "The Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kshatrapa",
+     "color": "#2e6f86",
+     "title": {
+      "en": "The Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "satavahana",
+     "color": "#b8691f",
+     "title": {
+      "en": "The Sātavāhanas",
+      "hi": "सातवाहन"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "yaudheya",
+     "color": "#9e3b6b",
+     "title": {
+      "en": "The Yaudheyas",
+      "hi": "यौधेय"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "raychaudhuri-1923",
+    "epigraphia-indica-viii"
+   ],
+   "path": "layers/kushana-names.json"
+  },
+  {
+   "id": "kushana",
+   "type": "areas",
+   "title": {
+    "en": "Kuṣāṇas, Kṣatrapas and Sātavāhanas, c. 150 CE",
+    "hi": "कुषाण, क्षत्रप और सातवाहन, लगभग 150 ई."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 14,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "kushana",
+     "color": "#5b6b1e",
+     "title": {
+      "en": "The Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
+     }
+    },
+    {
+     "id": "kshatrapa",
+     "color": "#2e6f86",
+     "title": {
+      "en": "The Western Kṣatrapas",
+      "hi": "पश्चिमी क्षत्रप"
+     }
+    },
+    {
+     "id": "satavahana",
+     "color": "#b8691f",
+     "title": {
+      "en": "The Sātavāhanas",
+      "hi": "सातवाहन"
+     }
+    },
+    {
+     "id": "yaudheya",
+     "color": "#9e3b6b",
+     "title": {
+      "en": "The Yaudheyas",
+      "hi": "यौधेय"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 150 CE, when Rudradāman's Junāgaḍh inscription was cut. The Western Kṣatrapas are drawn by that record's list of countries. Five of them (Surāṣṭra, Kukura, Aparānta, Anūpa and Ākarāvanti) had been Gautamīputra Sātakarṇi's by the Nāsik praśasti; the map gives them to the later record. The Sātavāhanas keep their capital, Pratiṣṭhāna, with Mahārāṣṭra, the Krishna country, and the Asaka and Vidarbha of the praśasti. The Kuṣāṇas are drawn by Raychaudhuri's 'from Gandhāra and Kaśmīr to Benares'. Their dated records at Mathurā and Śrāvastī are the held core; the east is disputed, since Vogel doubts Sārnāth proves rule. The Yaudheyas are drawn only at Bijayagaḍh. Left blank: the Himalaya, Rajasthan's Matsya country, the Gangetic east, Kaliṅga, the forest belt and the Tamil south. Nothing read places them this century (Ptolemy names the Tamil kings, and is not in the kosha). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 150 ई. का भारत, जब रुद्रदामन् का जूनागढ़ अभिलेख उत्कीर्ण हुआ। पश्चिमी क्षत्रप उस अभिलेख की देश-सूची से दिखाए गए हैं। इनमें से पाँच (सुराष्ट्र, कुकुर, अपरान्त, अनूप और आकरावन्ति) नासिक प्रशस्ति के अनुसार गौतमीपुत्र सातकर्णि के थे; मानचित्र उन्हें बाद के अभिलेख को देता है। सातवाहनों के पास उनकी राजधानी प्रतिष्ठान है, महाराष्ट्र, कृष्णा देश, और प्रशस्ति के असक और विदर्भ के साथ। कुषाण रायचौधुरी के 'गांधार और कश्मीर से बनारस तक' से दिखाए गए हैं। मथुरा और श्रावस्ती के उनके तिथियुक्त अभिलेख अधिकृत केंद्र हैं; पूर्व विवादित है, क्योंकि फ़ोगल को संदेह है कि सारनाथ शासन सिद्ध करता है। यौधेय केवल बिजयगढ़ पर दिखाए गए हैं। खाली छोड़े गए: हिमालय, राजस्थान का मत्स्य देश, गंगा का पूर्व, कलिंग, वन-पट्टी और तमिल दक्षिण। पढ़ा गया कुछ भी उन्हें इस सदी में कहीं नहीं रखता (टॉलेमी तमिल राजाओं के नाम लेते हैं, और वे कोश में नहीं हैं)। आज के ज़िलों पर, निकटतम ज़िले तक।"
+   },
+   "sources": [
+    "raychaudhuri-1923",
+    "epigraphia-indica-viii",
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/kushana.json"
+  },
+  {
    "id": "language-families",
    "type": "choropleth",
    "title": {
@@ -4895,12 +5233,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 33836,
-   "sha256": "d8d2a52f10f8"
+   "size": 34823,
+   "sha256": "4b1d09c6a00e"
   },
   "sources.json": {
-   "size": 35115,
-   "sha256": "5705252a4159"
+   "size": 36222,
+   "sha256": "9c2ed71ec8ac"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -5170,6 +5508,26 @@
    "size": 55381,
    "sha256": "4dd2d3e02e81"
   },
+  "layers/kushana-areas.bin.gz": {
+   "size": 6968,
+   "sha256": "7f668e46aebb"
+  },
+  "layers/kushana-capitals.json": {
+   "size": 2632,
+   "sha256": "28fee2642d25"
+  },
+  "layers/kushana-evidence.json": {
+   "size": 10946,
+   "sha256": "0991c6d180a9"
+  },
+  "layers/kushana-names.json": {
+   "size": 5123,
+   "sha256": "7eb062df35bb"
+  },
+  "layers/kushana.json": {
+   "size": 30448,
+   "sha256": "75e14fe994dd"
+  },
   "layers/language-families.json": {
    "size": 2453,
    "sha256": "0d756f2da7ce"
@@ -5195,8 +5553,8 @@
    "sha256": "198d115e2fe5"
   },
   "layers/mahajanapadas-names.json": {
-   "size": 11295,
-   "sha256": "a5db2a161d25"
+   "size": 11314,
+   "sha256": "1db8906632d7"
   },
   "layers/mahajanapadas.json": {
    "size": 21699,
@@ -5215,8 +5573,8 @@
    "sha256": "de9dd0ea0f6d"
   },
   "layers/maurya-names.json": {
-   "size": 4128,
-   "sha256": "6e9371699500"
+   "size": 4147,
+   "sha256": "9b0788ec9eff"
   },
   "layers/maurya.json": {
    "size": 16731,
@@ -5311,20 +5669,20 @@
    "sha256": "026646519d6c"
   },
   "layers/sunga-capitals.json": {
-   "size": 2428,
-   "sha256": "d2cce97cfbdc"
+   "size": 2451,
+   "sha256": "1f00ed099aac"
   },
   "layers/sunga-evidence.json": {
-   "size": 15127,
-   "sha256": "1943d62d592b"
+   "size": 15215,
+   "sha256": "65eef15f5793"
   },
   "layers/sunga-names.json": {
-   "size": 7316,
-   "sha256": "92a476871439"
+   "size": 7333,
+   "sha256": "cd9be6818e0a"
   },
   "layers/sunga.json": {
-   "size": 31439,
-   "sha256": "da6d9979d068"
+   "size": 31523,
+   "sha256": "cac286c09403"
   },
   "layers/zones.json": {
    "size": 2516,
