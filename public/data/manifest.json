@@ -228,7 +228,7 @@
     "hi": "लगभग 1030 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 3,
    "reviewed": 0,
@@ -285,7 +285,16 @@
     "smith-1914",
     "wikipedia"
    ],
-   "path": "layers/cola-capitals.json"
+   "path": "layers/cola-capitals.json",
+   "subgroup": {
+    "id": "cola",
+    "order": 7,
+    "pos": 2,
+    "title": {
+     "en": "c. 1030 CE · Colas, Paramāras and Cālukyas",
+     "hi": "लगभग 1030 ई. · चोल, परमार और चालुक्य"
+    }
+   }
   },
   {
    "id": "cola-evidence",
@@ -295,7 +304,7 @@
     "hi": "लगभग 1030 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 1,
    "reviewed": 0,
@@ -362,7 +371,16 @@
     "epigraphia-indica-ix",
     "wikipedia"
    ],
-   "path": "layers/cola-evidence.json"
+   "path": "layers/cola-evidence.json",
+   "subgroup": {
+    "id": "cola",
+    "order": 7,
+    "pos": 3,
+    "title": {
+     "en": "c. 1030 CE · Colas, Paramāras and Cālukyas",
+     "hi": "लगभग 1030 ई. · चोल, परमार और चालुक्य"
+    }
+   }
   },
   {
    "id": "cola-names",
@@ -373,7 +391,7 @@
     "hi": "नाम: लगभग 1030 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 7,
    "reviewed": 0,
@@ -450,7 +468,16 @@
     "smith-1914",
     "sachau-1888"
    ],
-   "path": "layers/cola-names.json"
+   "path": "layers/cola-names.json",
+   "subgroup": {
+    "id": "cola",
+    "order": 7,
+    "pos": 1,
+    "title": {
+     "en": "c. 1030 CE · Colas, Paramāras and Cālukyas",
+     "hi": "लगभग 1030 ई. · चोल, परमार और चालुक्य"
+    }
+   }
   },
   {
    "id": "cola",
@@ -460,7 +487,7 @@
     "hi": "चोल, परमार और चालुक्य, लगभग 1030 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 11,
    "reviewed": 0,
@@ -596,7 +623,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/cola.json"
+   "path": "layers/cola.json",
+   "subgroup": {
+    "id": "cola",
+    "order": 7,
+    "pos": 0,
+    "title": {
+     "en": "c. 1030 CE · Colas, Paramāras and Cālukyas",
+     "hi": "लगभग 1030 ई. · चोल, परमार और चालुक्य"
+    }
+   }
   },
   {
    "id": "district-child-sex-ratio",
@@ -606,7 +642,7 @@
     "hi": "प्रति 1,000 लड़कों पर लड़कियाँ"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -678,7 +714,7 @@
     "hi": "ज़िलेवार खेती का काम"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -792,7 +828,7 @@
     "hi": "ज़िलेवार साक्षरता"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -864,7 +900,7 @@
     "hi": "ज़िलेवार अनुसूचित जातियाँ"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -940,7 +976,7 @@
     "hi": "ज़िलेवार प्रति 1,000 पुरुषों पर महिलाएँ"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -1012,7 +1048,7 @@
     "hi": "ज़िलेवार अनुसूचित जनजातियाँ"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -1084,7 +1120,7 @@
     "hi": "ज़िलेवार नगरवासी"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -1156,7 +1192,7 @@
     "hi": "ज़िलेवार कामकाजी महिलाएँ"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -1228,7 +1264,7 @@
     "hi": "ज़िलेवार सात वर्ष से छोटे बच्चे"
    },
    "icon": "district",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 640,
    "reviewed": 0,
@@ -1378,7 +1414,7 @@
     "hi": "प्राचीन विभागों के नाम"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-texts",
    "default_on": false,
    "count": 59,
    "reviewed": 0,
@@ -1466,7 +1502,7 @@
     "hi": "भारत के प्राचीन विभाग"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-texts",
    "default_on": false,
    "count": 63,
    "reviewed": 0,
@@ -1596,7 +1632,7 @@
     "hi": "महाकाव्य के नामों से नदियाँ"
    },
    "icon": "wave",
-   "group": "culture",
+   "group": "history-texts",
    "default_on": false,
    "count": 21,
    "reviewed": 0,
@@ -1729,7 +1765,7 @@
     "hi": "लगभग 1200 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 10,
    "reviewed": 0,
@@ -1850,7 +1886,16 @@
     "elliot-dowson-1869",
     "wikipedia"
    ],
-   "path": "layers/ghurid-capitals.json"
+   "path": "layers/ghurid-capitals.json",
+   "subgroup": {
+    "id": "ghurid",
+    "order": 8,
+    "pos": 2,
+    "title": {
+     "en": "c. 1200 CE · The Ghurid conquest and the southern kingdoms",
+     "hi": "लगभग 1200 ई. · ग़ोरी विजय और दक्षिण के राज्य"
+    }
+   }
   },
   {
    "id": "ghurid-evidence",
@@ -1860,7 +1905,7 @@
     "hi": "लगभग 1200 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 6,
    "reviewed": 0,
@@ -1948,7 +1993,16 @@
     "smith-1914",
     "wikipedia"
    ],
-   "path": "layers/ghurid-evidence.json"
+   "path": "layers/ghurid-evidence.json",
+   "subgroup": {
+    "id": "ghurid",
+    "order": 8,
+    "pos": 3,
+    "title": {
+     "en": "c. 1200 CE · The Ghurid conquest and the southern kingdoms",
+     "hi": "लगभग 1200 ई. · ग़ोरी विजय और दक्षिण के राज्य"
+    }
+   }
   },
   {
    "id": "ghurid-names",
@@ -1959,7 +2013,7 @@
     "hi": "नाम: लगभग 1200 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 10,
    "reviewed": 0,
@@ -2063,7 +2117,16 @@
     "elliot-dowson-1869",
     "smith-1914"
    ],
-   "path": "layers/ghurid-names.json"
+   "path": "layers/ghurid-names.json",
+   "subgroup": {
+    "id": "ghurid",
+    "order": 8,
+    "pos": 1,
+    "title": {
+     "en": "c. 1200 CE · The Ghurid conquest and the southern kingdoms",
+     "hi": "लगभग 1200 ई. · ग़ोरी विजय और दक्षिण के राज्य"
+    }
+   }
   },
   {
    "id": "ghurid",
@@ -2073,7 +2136,7 @@
     "hi": "ग़ोरी विजय और दक्षिण के राज्य, लगभग 1200 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 16,
    "reviewed": 0,
@@ -2234,7 +2297,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/ghurid.json"
+   "path": "layers/ghurid.json",
+   "subgroup": {
+    "id": "ghurid",
+    "order": 8,
+    "pos": 0,
+    "title": {
+     "en": "c. 1200 CE · The Ghurid conquest and the southern kingdoms",
+     "hi": "लगभग 1200 ई. · ग़ोरी विजय और दक्षिण के राज्य"
+    }
+   }
   },
   {
    "id": "gi-tags",
@@ -2314,7 +2386,7 @@
     "hi": "लगभग 400 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 2,
    "reviewed": 0,
@@ -2363,7 +2435,16 @@
     "geonames",
     "wikipedia"
    ],
-   "path": "layers/gupta-capitals.json"
+   "path": "layers/gupta-capitals.json",
+   "subgroup": {
+    "id": "gupta",
+    "order": 4,
+    "pos": 2,
+    "title": {
+     "en": "c. 400 CE · The Guptas",
+     "hi": "लगभग 400 ई. · गुप्त"
+    }
+   }
   },
   {
    "id": "gupta-evidence",
@@ -2373,7 +2454,7 @@
     "hi": "लगभग 400 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 6,
    "reviewed": 0,
@@ -2441,7 +2522,16 @@
     "raychaudhuri-1923",
     "wikipedia"
    ],
-   "path": "layers/gupta-evidence.json"
+   "path": "layers/gupta-evidence.json",
+   "subgroup": {
+    "id": "gupta",
+    "order": 4,
+    "pos": 3,
+    "title": {
+     "en": "c. 400 CE · The Guptas",
+     "hi": "लगभग 400 ई. · गुप्त"
+    }
+   }
   },
   {
    "id": "gupta-names",
@@ -2452,7 +2542,7 @@
     "hi": "नाम: लगभग 400 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 14,
    "reviewed": 0,
@@ -2592,7 +2682,16 @@
     "raychaudhuri-1923",
     "fleet-1888"
    ],
-   "path": "layers/gupta-names.json"
+   "path": "layers/gupta-names.json",
+   "subgroup": {
+    "id": "gupta",
+    "order": 4,
+    "pos": 1,
+    "title": {
+     "en": "c. 400 CE · The Guptas",
+     "hi": "लगभग 400 ई. · गुप्त"
+    }
+   }
   },
   {
    "id": "gupta",
@@ -2602,7 +2701,7 @@
     "hi": "गुप्त, लगभग 400 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 19,
    "reviewed": 0,
@@ -2794,7 +2893,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/gupta.json"
+   "path": "layers/gupta.json",
+   "subgroup": {
+    "id": "gupta",
+    "order": 4,
+    "pos": 0,
+    "title": {
+     "en": "c. 400 CE · The Guptas",
+     "hi": "लगभग 400 ई. · गुप्त"
+    }
+   }
   },
   {
    "id": "harsha-capitals",
@@ -2804,7 +2912,7 @@
     "hi": "लगभग 640 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 4,
    "reviewed": 0,
@@ -2870,7 +2978,16 @@
     "beal-1884",
     "wikipedia"
    ],
-   "path": "layers/harsha-capitals.json"
+   "path": "layers/harsha-capitals.json",
+   "subgroup": {
+    "id": "harsha",
+    "order": 5,
+    "pos": 2,
+    "title": {
+     "en": "c. 640 CE · Harṣa and Pulakeśin II",
+     "hi": "लगभग 640 ई. · हर्ष और पुलकेशिन् द्वितीय"
+    }
+   }
   },
   {
    "id": "harsha-evidence",
@@ -2880,7 +2997,7 @@
     "hi": "लगभग 640 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 1,
    "reviewed": 0,
@@ -2947,7 +3064,16 @@
     "epigraphia-indica-vi",
     "wikipedia"
    ],
-   "path": "layers/harsha-evidence.json"
+   "path": "layers/harsha-evidence.json",
+   "subgroup": {
+    "id": "harsha",
+    "order": 5,
+    "pos": 3,
+    "title": {
+     "en": "c. 640 CE · Harṣa and Pulakeśin II",
+     "hi": "लगभग 640 ई. · हर्ष और पुलकेशिन् द्वितीय"
+    }
+   }
   },
   {
    "id": "harsha-names",
@@ -2958,7 +3084,7 @@
     "hi": "नाम: लगभग 640 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 11,
    "reviewed": 0,
@@ -3071,7 +3197,16 @@
     "beal-1884",
     "epigraphia-indica-vi"
    ],
-   "path": "layers/harsha-names.json"
+   "path": "layers/harsha-names.json",
+   "subgroup": {
+    "id": "harsha",
+    "order": 5,
+    "pos": 1,
+    "title": {
+     "en": "c. 640 CE · Harṣa and Pulakeśin II",
+     "hi": "लगभग 640 ई. · हर्ष और पुलकेशिन् द्वितीय"
+    }
+   }
   },
   {
    "id": "harsha",
@@ -3081,7 +3216,7 @@
     "hi": "हर्ष और पुलकेशिन् द्वितीय, लगभग 640 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 15,
    "reviewed": 0,
@@ -3249,7 +3384,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/harsha.json"
+   "path": "layers/harsha.json",
+   "subgroup": {
+    "id": "harsha",
+    "order": 5,
+    "pos": 0,
+    "title": {
+     "en": "c. 640 CE · Harṣa and Pulakeśin II",
+     "hi": "लगभग 640 ई. · हर्ष और पुलकेशिन् द्वितीय"
+    }
+   }
   },
   {
    "id": "kula-parvatas",
@@ -3260,7 +3404,7 @@
     "hi": "सात कुलपर्वत"
    },
    "icon": "mountain",
-   "group": "culture",
+   "group": "history-texts",
    "default_on": false,
    "count": 6,
    "reviewed": 0,
@@ -3324,7 +3468,7 @@
     "hi": "प्राचीन ग्रंथों के देश"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-texts",
    "default_on": false,
    "count": 50,
    "reviewed": 0,
@@ -3460,7 +3604,7 @@
     "hi": "लगभग 150 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 2,
    "reviewed": 0,
@@ -3527,7 +3671,16 @@
     "geonames",
     "wikipedia"
    ],
-   "path": "layers/kushana-capitals.json"
+   "path": "layers/kushana-capitals.json",
+   "subgroup": {
+    "id": "kushana",
+    "order": 3,
+    "pos": 2,
+    "title": {
+     "en": "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas",
+     "hi": "लगभग 150 ई. · कुषाण, क्षत्रप और सातवाहन"
+    }
+   }
   },
   {
    "id": "kushana-evidence",
@@ -3537,7 +3690,7 @@
     "hi": "लगभग 150 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 8,
    "reviewed": 0,
@@ -3605,7 +3758,16 @@
     "raychaudhuri-1923",
     "wikipedia"
    ],
-   "path": "layers/kushana-evidence.json"
+   "path": "layers/kushana-evidence.json",
+   "subgroup": {
+    "id": "kushana",
+    "order": 3,
+    "pos": 3,
+    "title": {
+     "en": "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas",
+     "hi": "लगभग 150 ई. · कुषाण, क्षत्रप और सातवाहन"
+    }
+   }
   },
   {
    "id": "kushana-names",
@@ -3616,7 +3778,7 @@
     "hi": "नाम: लगभग 150 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 4,
    "reviewed": 0,
@@ -3666,7 +3828,16 @@
     "raychaudhuri-1923",
     "epigraphia-indica-viii"
    ],
-   "path": "layers/kushana-names.json"
+   "path": "layers/kushana-names.json",
+   "subgroup": {
+    "id": "kushana",
+    "order": 3,
+    "pos": 1,
+    "title": {
+     "en": "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas",
+     "hi": "लगभग 150 ई. · कुषाण, क्षत्रप और सातवाहन"
+    }
+   }
   },
   {
    "id": "kushana",
@@ -3676,7 +3847,7 @@
     "hi": "कुषाण, क्षत्रप और सातवाहन, लगभग 150 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 14,
    "reviewed": 0,
@@ -3788,7 +3959,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/kushana.json"
+   "path": "layers/kushana.json",
+   "subgroup": {
+    "id": "kushana",
+    "order": 3,
+    "pos": 0,
+    "title": {
+     "en": "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas",
+     "hi": "लगभग 150 ई. · कुषाण, क्षत्रप और सातवाहन"
+    }
+   }
   },
   {
    "id": "language-families",
@@ -3929,7 +4109,7 @@
     "hi": "पाण्डवों का मार्ग"
    },
    "icon": "road",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 131,
    "reviewed": 0,
@@ -4112,7 +4292,7 @@
     "hi": "पाण्डवों के पड़ाव, वर्ष के क्रम से"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 92,
    "reviewed": 0,
@@ -4343,7 +4523,7 @@
     "hi": "महाजनपदों की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 13,
    "reviewed": 0,
@@ -4500,7 +4680,16 @@
     "geonames",
     "wikipedia"
    ],
-   "path": "layers/mahajanapadas-capitals.json"
+   "path": "layers/mahajanapadas-capitals.json",
+   "subgroup": {
+    "id": "mahajanapadas",
+    "order": 0,
+    "pos": 2,
+    "title": {
+     "en": "c. 500 BCE · The sixteen great countries",
+     "hi": "लगभग 500 ई.पू. · सोलह महाजनपद"
+    }
+   }
   },
   {
    "id": "mahajanapadas-names",
@@ -4511,7 +4700,7 @@
     "hi": "महाजनपदों के नाम"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 14,
    "reviewed": 0,
@@ -4653,7 +4842,16 @@
     "census-2011",
     "datameet-maps"
    ],
-   "path": "layers/mahajanapadas-names.json"
+   "path": "layers/mahajanapadas-names.json",
+   "subgroup": {
+    "id": "mahajanapadas",
+    "order": 0,
+    "pos": 1,
+    "title": {
+     "en": "c. 500 BCE · The sixteen great countries",
+     "hi": "लगभग 500 ई.पू. · सोलह महाजनपद"
+    }
+   }
   },
   {
    "id": "mahajanapadas",
@@ -4663,7 +4861,7 @@
     "hi": "सोलह महाजनपद, लगभग 500 ई.पू."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 14,
    "reviewed": 0,
@@ -4846,7 +5044,16 @@
     "census-2011",
     "datameet-maps"
    ],
-   "path": "layers/mahajanapadas.json"
+   "path": "layers/mahajanapadas.json",
+   "subgroup": {
+    "id": "mahajanapadas",
+    "order": 0,
+    "pos": 0,
+    "title": {
+     "en": "c. 500 BCE · The sixteen great countries",
+     "hi": "लगभग 500 ई.पू. · सोलह महाजनपद"
+    }
+   }
   },
   {
    "id": "maurya-capitals",
@@ -4856,7 +5063,7 @@
     "hi": "मौर्य प्रांतों के केंद्र"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 3,
    "reviewed": 0,
@@ -4909,7 +5116,16 @@
     "hultzsch-1925",
     "geonames"
    ],
-   "path": "layers/maurya-capitals.json"
+   "path": "layers/maurya-capitals.json",
+   "subgroup": {
+    "id": "maurya",
+    "order": 1,
+    "pos": 2,
+    "title": {
+     "en": "c. 250 BCE · The Mauryas under Aśoka",
+     "hi": "लगभग 250 ई.पू. · अशोक के समय मौर्य"
+    }
+   }
   },
   {
    "id": "maurya-evidence",
@@ -4919,7 +5135,7 @@
     "hi": "अशोक के अभिलेख कहाँ हैं"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 27,
    "reviewed": 0,
@@ -4993,7 +5209,16 @@
     "geonames",
     "wikipedia"
    ],
-   "path": "layers/maurya-evidence.json"
+   "path": "layers/maurya-evidence.json",
+   "subgroup": {
+    "id": "maurya",
+    "order": 1,
+    "pos": 3,
+    "title": {
+     "en": "c. 250 BCE · The Mauryas under Aśoka",
+     "hi": "लगभग 250 ई.पू. · अशोक के समय मौर्य"
+    }
+   }
   },
   {
    "id": "maurya-names",
@@ -5004,7 +5229,7 @@
     "hi": "नाम: मौर्य और उनके पड़ोसी"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 5,
    "reviewed": 0,
@@ -5062,7 +5287,16 @@
    "sources": [
     "hultzsch-1925"
    ],
-   "path": "layers/maurya-names.json"
+   "path": "layers/maurya-names.json",
+   "subgroup": {
+    "id": "maurya",
+    "order": 1,
+    "pos": 1,
+    "title": {
+     "en": "c. 250 BCE · The Mauryas under Aśoka",
+     "hi": "लगभग 250 ई.पू. · अशोक के समय मौर्य"
+    }
+   }
   },
   {
    "id": "maurya",
@@ -5072,7 +5306,7 @@
     "hi": "अशोक के समय मौर्य, लगभग 250 ई.पू."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 9,
    "reviewed": 0,
@@ -5190,7 +5424,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/maurya.json"
+   "path": "layers/maurya.json",
+   "subgroup": {
+    "id": "maurya",
+    "order": 1,
+    "pos": 0,
+    "title": {
+     "en": "c. 250 BCE · The Mauryas under Aśoka",
+     "hi": "लगभग 250 ई.पू. · अशोक के समय मौर्य"
+    }
+   }
   },
   {
    "id": "minerals",
@@ -5548,7 +5791,7 @@
     "hi": "जनसंख्या घनत्व"
    },
    "icon": "city",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 34,
    "reviewed": 0,
@@ -5599,7 +5842,7 @@
     "hi": "जनसंख्या"
    },
    "icon": "city",
-   "group": "culture",
+   "group": "census",
    "default_on": false,
    "count": 36,
    "reviewed": 0,
@@ -5745,7 +5988,7 @@
     "hi": "लगभग 850 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 3,
    "reviewed": 0,
@@ -5802,7 +6045,16 @@
     "smith-1914",
     "wikipedia"
    ],
-   "path": "layers/pratihara-capitals.json"
+   "path": "layers/pratihara-capitals.json",
+   "subgroup": {
+    "id": "pratihara",
+    "order": 6,
+    "pos": 2,
+    "title": {
+     "en": "c. 850 CE · Pratihāras, Pālas and Rāṣṭrakūṭas",
+     "hi": "लगभग 850 ई. · प्रतिहार, पाल और राष्ट्रकूट"
+    }
+   }
   },
   {
    "id": "pratihara-evidence",
@@ -5812,7 +6064,7 @@
     "hi": "लगभग 850 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 2,
    "reviewed": 0,
@@ -5879,7 +6131,16 @@
     "epigraphia-indica-xviii",
     "wikipedia"
    ],
-   "path": "layers/pratihara-evidence.json"
+   "path": "layers/pratihara-evidence.json",
+   "subgroup": {
+    "id": "pratihara",
+    "order": 6,
+    "pos": 3,
+    "title": {
+     "en": "c. 850 CE · Pratihāras, Pālas and Rāṣṭrakūṭas",
+     "hi": "लगभग 850 ई. · प्रतिहार, पाल और राष्ट्रकूट"
+    }
+   }
   },
   {
    "id": "pratihara-names",
@@ -5890,7 +6151,7 @@
     "hi": "नाम: लगभग 850 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 3,
    "reviewed": 0,
@@ -5931,7 +6192,16 @@
     "smith-1914",
     "elliot-dowson-1867"
    ],
-   "path": "layers/pratihara-names.json"
+   "path": "layers/pratihara-names.json",
+   "subgroup": {
+    "id": "pratihara",
+    "order": 6,
+    "pos": 1,
+    "title": {
+     "en": "c. 850 CE · Pratihāras, Pālas and Rāṣṭrakūṭas",
+     "hi": "लगभग 850 ई. · प्रतिहार, पाल और राष्ट्रकूट"
+    }
+   }
   },
   {
    "id": "pratihara",
@@ -5941,7 +6211,7 @@
     "hi": "प्रतिहार, पाल और राष्ट्रकूट, लगभग 850 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 10,
    "reviewed": 0,
@@ -6045,7 +6315,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/pratihara.json"
+   "path": "layers/pratihara.json",
+   "subgroup": {
+    "id": "pratihara",
+    "order": 6,
+    "pos": 0,
+    "title": {
+     "en": "c. 850 CE · Pratihāras, Pālas and Rāṣṭrakūṭas",
+     "hi": "लगभग 850 ई. · प्रतिहार, पाल और राष्ट्रकूट"
+    }
+   }
   },
   {
    "id": "rail",
@@ -6121,7 +6400,7 @@
     "hi": "राम का मार्ग, जाना और लौटना"
    },
    "icon": "road",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 22,
    "reviewed": 0,
@@ -6240,7 +6519,7 @@
     "hi": "राम के पड़ाव, अयोध्या से लंका और वापसी"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 12,
    "reviewed": 0,
@@ -6706,7 +6985,7 @@
     "hi": "दल कहाँ जाते हैं"
    },
    "icon": "road",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 11,
    "reviewed": 0,
@@ -6777,7 +7056,7 @@
     "hi": "सुग्रीव के खोजी दल"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-journeys",
    "default_on": false,
    "count": 25,
    "reviewed": 0,
@@ -6920,7 +7199,7 @@
     "hi": "मौर्यों के बाद की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 1,
    "reviewed": 0,
@@ -6973,7 +7252,16 @@
     "jayaswal-banerji-1930",
     "geonames"
    ],
-   "path": "layers/sunga-capitals.json"
+   "path": "layers/sunga-capitals.json",
+   "subgroup": {
+    "id": "sunga",
+    "order": 2,
+    "pos": 2,
+    "title": {
+     "en": "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela",
+     "hi": "ई.पू. दूसरी–पहली सदी · मौर्यों के बाद: शुंग, सातवाहन, खारवेल"
+    }
+   }
   },
   {
    "id": "sunga-evidence",
@@ -6983,7 +7271,7 @@
     "hi": "मौर्यों के बाद के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 11,
    "reviewed": 0,
@@ -7070,7 +7358,16 @@
     "sa-wikisource",
     "wikipedia"
    ],
-   "path": "layers/sunga-evidence.json"
+   "path": "layers/sunga-evidence.json",
+   "subgroup": {
+    "id": "sunga",
+    "order": 2,
+    "pos": 3,
+    "title": {
+     "en": "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela",
+     "hi": "ई.पू. दूसरी–पहली सदी · मौर्यों के बाद: शुंग, सातवाहन, खारवेल"
+    }
+   }
   },
   {
    "id": "sunga-names",
@@ -7081,7 +7378,7 @@
     "hi": "नाम: मौर्यों के बाद के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 7,
    "reviewed": 0,
@@ -7158,7 +7455,16 @@
     "raychaudhuri-1923",
     "jayaswal-banerji-1930"
    ],
-   "path": "layers/sunga-names.json"
+   "path": "layers/sunga-names.json",
+   "subgroup": {
+    "id": "sunga",
+    "order": 2,
+    "pos": 1,
+    "title": {
+     "en": "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela",
+     "hi": "ई.पू. दूसरी–पहली सदी · मौर्यों के बाद: शुंग, सातवाहन, खारवेल"
+    }
+   }
   },
   {
    "id": "sunga",
@@ -7168,7 +7474,7 @@
     "hi": "मौर्यों के बाद, ई.पू. दूसरी–पहली सदी"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 15,
    "reviewed": 0,
@@ -7297,7 +7603,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/sunga.json"
+   "path": "layers/sunga.json",
+   "subgroup": {
+    "id": "sunga",
+    "order": 2,
+    "pos": 0,
+    "title": {
+     "en": "2nd–1st century BCE · After the Mauryas: Śuṅgas, Sātavāhanas, Khāravela",
+     "hi": "ई.पू. दूसरी–पहली सदी · मौर्यों के बाद: शुंग, सातवाहन, खारवेल"
+    }
+   }
   },
   {
    "id": "tughluq-capitals",
@@ -7307,7 +7622,7 @@
     "hi": "लगभग 1330 ई. की राजधानियाँ और प्रांतीय केंद्र"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 4,
    "reviewed": 0,
@@ -7360,7 +7675,16 @@
     "elliot-dowson-1871",
     "wikipedia"
    ],
-   "path": "layers/tughluq-capitals.json"
+   "path": "layers/tughluq-capitals.json",
+   "subgroup": {
+    "id": "tughluq",
+    "order": 9,
+    "pos": 2,
+    "title": {
+     "en": "c. 1330 CE · The Tughluq empire at its height",
+     "hi": "लगभग 1330 ई. · अपने चरम पर तुग़लक़ साम्राज्य"
+    }
+   }
   },
   {
    "id": "tughluq-evidence",
@@ -7370,7 +7694,7 @@
     "hi": "लगभग 1330 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 1,
    "reviewed": 0,
@@ -7437,7 +7761,16 @@
     "elliot-dowson-1871",
     "wikipedia"
    ],
-   "path": "layers/tughluq-evidence.json"
+   "path": "layers/tughluq-evidence.json",
+   "subgroup": {
+    "id": "tughluq",
+    "order": 9,
+    "pos": 3,
+    "title": {
+     "en": "c. 1330 CE · The Tughluq empire at its height",
+     "hi": "लगभग 1330 ई. · अपने चरम पर तुग़लक़ साम्राज्य"
+    }
+   }
   },
   {
    "id": "tughluq-names",
@@ -7448,7 +7781,7 @@
     "hi": "नाम: लगभग 1330 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 1,
    "reviewed": 0,
@@ -7471,7 +7804,16 @@
     "smith-1919",
     "elliot-dowson-1871"
    ],
-   "path": "layers/tughluq-names.json"
+   "path": "layers/tughluq-names.json",
+   "subgroup": {
+    "id": "tughluq",
+    "order": 9,
+    "pos": 1,
+    "title": {
+     "en": "c. 1330 CE · The Tughluq empire at its height",
+     "hi": "लगभग 1330 ई. · अपने चरम पर तुग़लक़ साम्राज्य"
+    }
+   }
   },
   {
    "id": "tughluq",
@@ -7481,7 +7823,7 @@
     "hi": "अपने चरम पर तुग़लक़ साम्राज्य, लगभग 1330 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 5,
    "reviewed": 0,
@@ -7568,7 +7910,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/tughluq.json"
+   "path": "layers/tughluq.json",
+   "subgroup": {
+    "id": "tughluq",
+    "order": 9,
+    "pos": 0,
+    "title": {
+     "en": "c. 1330 CE · The Tughluq empire at its height",
+     "hi": "लगभग 1330 ई. · अपने चरम पर तुग़लक़ साम्राज्य"
+    }
+   }
   },
   {
    "id": "vijayanagara-capitals",
@@ -7578,7 +7929,7 @@
     "hi": "लगभग 1525 ई. की राजधानियाँ"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 12,
    "reviewed": 0,
@@ -7716,7 +8067,16 @@
     "smith-1919",
     "wikipedia"
    ],
-   "path": "layers/vijayanagara-capitals.json"
+   "path": "layers/vijayanagara-capitals.json",
+   "subgroup": {
+    "id": "vijayanagara",
+    "order": 10,
+    "pos": 2,
+    "title": {
+     "en": "c. 1525 CE · Vijayanagara, the sultanates and Rana Sanga",
+     "hi": "लगभग 1525 ई. · विजयनगर, सल्तनतें और राणा साँगा"
+    }
+   }
   },
   {
    "id": "vijayanagara-evidence",
@@ -7726,7 +8086,7 @@
     "hi": "लगभग 1525 ई. के प्रमाण"
    },
    "icon": "temple",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 2,
    "reviewed": 0,
@@ -7795,7 +8155,16 @@
     "smith-1919",
     "wikipedia"
    ],
-   "path": "layers/vijayanagara-evidence.json"
+   "path": "layers/vijayanagara-evidence.json",
+   "subgroup": {
+    "id": "vijayanagara",
+    "order": 10,
+    "pos": 3,
+    "title": {
+     "en": "c. 1525 CE · Vijayanagara, the sultanates and Rana Sanga",
+     "hi": "लगभग 1525 ई. · विजयनगर, सल्तनतें और राणा साँगा"
+    }
+   }
   },
   {
    "id": "vijayanagara-names",
@@ -7806,7 +8175,7 @@
     "hi": "नाम: लगभग 1525 ई. के राज्य"
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 12,
    "reviewed": 0,
@@ -7929,7 +8298,16 @@
     "sewell-1900",
     "smith-1919"
    ],
-   "path": "layers/vijayanagara-names.json"
+   "path": "layers/vijayanagara-names.json",
+   "subgroup": {
+    "id": "vijayanagara",
+    "order": 10,
+    "pos": 1,
+    "title": {
+     "en": "c. 1525 CE · Vijayanagara, the sultanates and Rana Sanga",
+     "hi": "लगभग 1525 ई. · विजयनगर, सल्तनतें और राणा साँगा"
+    }
+   }
   },
   {
    "id": "vijayanagara",
@@ -7939,7 +8317,7 @@
     "hi": "विजयनगर, सल्तनतें और राणा साँगा, लगभग 1525 ई."
    },
    "icon": "map",
-   "group": "culture",
+   "group": "history-kingdoms",
    "default_on": false,
    "count": 14,
    "reviewed": 0,
@@ -8115,7 +8493,16 @@
     "datameet-maps",
     "wikipedia"
    ],
-   "path": "layers/vijayanagara.json"
+   "path": "layers/vijayanagara.json",
+   "subgroup": {
+    "id": "vijayanagara",
+    "order": 10,
+    "pos": 0,
+    "title": {
+     "en": "c. 1525 CE · Vijayanagara, the sultanates and Rana Sanga",
+     "hi": "लगभग 1525 ई. · विजयनगर, सल्तनतें और राणा साँगा"
+    }
+   }
   },
   {
    "id": "zones",
@@ -8399,60 +8786,60 @@
    "sha256": "19d0b6169163"
   },
   "layers/cola-capitals.json": {
-   "size": 2975,
-   "sha256": "b21dee99037e"
+   "size": 2984,
+   "sha256": "f11c196b9c8a"
   },
   "layers/cola-evidence.json": {
-   "size": 2531,
-   "sha256": "234b8b3c1850"
+   "size": 2540,
+   "sha256": "fff1594423ec"
   },
   "layers/cola-names.json": {
-   "size": 6329,
-   "sha256": "931dd989d9c4"
+   "size": 6338,
+   "sha256": "d6ecb8da1955"
   },
   "layers/cola.json": {
-   "size": 20913,
-   "sha256": "236a27c90fbe"
+   "size": 20922,
+   "sha256": "04f951331233"
   },
   "layers/district-child-sex-ratio.json": {
-   "size": 182736,
-   "sha256": "f924da206710"
+   "size": 182735,
+   "sha256": "e1dc06d463fa"
   },
   "layers/district-farm-work.json": {
-   "size": 182975,
-   "sha256": "8b47d51be811"
+   "size": 182974,
+   "sha256": "923f0216f416"
   },
   "layers/district-lines.json": {
    "size": 408657,
    "sha256": "94d699540189"
   },
   "layers/district-literacy.json": {
-   "size": 182861,
-   "sha256": "ad7b254d0749"
+   "size": 182860,
+   "sha256": "2bed01145bce"
   },
   "layers/district-scheduled-castes.json": {
-   "size": 183259,
-   "sha256": "ecf7aaa39545"
+   "size": 183258,
+   "sha256": "5f7c4f0bb567"
   },
   "layers/district-sex-ratio.json": {
-   "size": 182857,
-   "sha256": "e822d8b24075"
+   "size": 182856,
+   "sha256": "d3b752a531e8"
   },
   "layers/district-tribes.json": {
-   "size": 183041,
-   "sha256": "cfbc8fed0674"
+   "size": 183040,
+   "sha256": "c03d3aac042d"
   },
   "layers/district-urban.json": {
-   "size": 183027,
-   "sha256": "ba01f8bddf8e"
+   "size": 183026,
+   "sha256": "f9559088cd0e"
   },
   "layers/district-women-at-work.json": {
-   "size": 183114,
-   "sha256": "f20726150eaf"
+   "size": 183113,
+   "sha256": "3847373b36d3"
   },
   "layers/district-young-children.json": {
-   "size": 182989,
-   "sha256": "9fd540fa56d2"
+   "size": 182988,
+   "sha256": "798f04ba6110"
   },
   "layers/districts-2011.bin.gz": {
    "size": 82791,
@@ -8467,16 +8854,16 @@
    "sha256": "c35a449cddcb"
   },
   "layers/divisions-names.json": {
-   "size": 42033,
-   "sha256": "54cc77c85016"
+   "size": 42039,
+   "sha256": "6c82161a339a"
   },
   "layers/divisions.json": {
-   "size": 74892,
-   "sha256": "baaf10fd8377"
+   "size": 74898,
+   "sha256": "9b4895947e53"
   },
   "layers/epic-rivers.json": {
-   "size": 81983,
-   "sha256": "7906e1556bdb"
+   "size": 81989,
+   "sha256": "096561ff8635"
   },
   "layers/festivals.json": {
    "size": 27590,
@@ -8487,20 +8874,20 @@
    "sha256": "69ad693d0531"
   },
   "layers/ghurid-capitals.json": {
-   "size": 9003,
-   "sha256": "2172ebf30c9c"
+   "size": 9012,
+   "sha256": "64d67a360553"
   },
   "layers/ghurid-evidence.json": {
-   "size": 8912,
-   "sha256": "86525939aea5"
+   "size": 8921,
+   "sha256": "7a1c8fe35d13"
   },
   "layers/ghurid-names.json": {
-   "size": 9996,
-   "sha256": "41366b3a2938"
+   "size": 10005,
+   "sha256": "6675796ed7c0"
   },
   "layers/ghurid.json": {
-   "size": 32031,
-   "sha256": "e89c829d610c"
+   "size": 32040,
+   "sha256": "f576edc4edc1"
   },
   "layers/gi-tags.json": {
    "size": 157505,
@@ -8511,68 +8898,68 @@
    "sha256": "85ca0196a18a"
   },
   "layers/gupta-capitals.json": {
-   "size": 2441,
-   "sha256": "4087aaebb729"
+   "size": 2450,
+   "sha256": "704d0849f4f8"
   },
   "layers/gupta-evidence.json": {
-   "size": 9389,
-   "sha256": "44f56f6051dc"
+   "size": 9398,
+   "sha256": "2a8f4a10371d"
   },
   "layers/gupta-names.json": {
-   "size": 12234,
-   "sha256": "3c88afb9ea3e"
+   "size": 12243,
+   "sha256": "b38a9fe4b409"
   },
   "layers/gupta.json": {
-   "size": 38276,
-   "sha256": "5f9591c8e7ac"
+   "size": 38285,
+   "sha256": "7b62b83d98aa"
   },
   "layers/harsha-areas.bin.gz": {
    "size": 7331,
    "sha256": "253ff39ff005"
   },
   "layers/harsha-capitals.json": {
-   "size": 3527,
-   "sha256": "70fbc003d570"
+   "size": 3536,
+   "sha256": "2a4b18fc755e"
   },
   "layers/harsha-evidence.json": {
-   "size": 2502,
-   "sha256": "22612ce12485"
+   "size": 2511,
+   "sha256": "39bfe57d85a2"
   },
   "layers/harsha-names.json": {
-   "size": 8349,
-   "sha256": "8c863cd28aa7"
+   "size": 8358,
+   "sha256": "2e2ce76facee"
   },
   "layers/harsha.json": {
-   "size": 28138,
-   "sha256": "514298ccc5d1"
+   "size": 28147,
+   "sha256": "efd82fc34474"
   },
   "layers/kula-parvatas.json": {
-   "size": 8304,
-   "sha256": "3619abf08589"
+   "size": 8310,
+   "sha256": "37d30a0a3243"
   },
   "layers/kurma-vibhaga.json": {
-   "size": 55381,
-   "sha256": "4dd2d3e02e81"
+   "size": 55387,
+   "sha256": "9039b5cf6dc7"
   },
   "layers/kushana-areas.bin.gz": {
    "size": 6968,
    "sha256": "7f668e46aebb"
   },
   "layers/kushana-capitals.json": {
-   "size": 2632,
-   "sha256": "28fee2642d25"
+   "size": 2641,
+   "sha256": "510bd1549196"
   },
   "layers/kushana-evidence.json": {
-   "size": 10946,
-   "sha256": "0991c6d180a9"
+   "size": 10955,
+   "sha256": "8f82e9677787"
   },
   "layers/kushana-names.json": {
-   "size": 5123,
-   "sha256": "7eb062df35bb"
+   "size": 5132,
+   "sha256": "05f9b27d3abb"
   },
   "layers/kushana.json": {
-   "size": 30448,
-   "sha256": "75e14fe994dd"
+   "size": 30457,
+   "sha256": "c0fddff627f6"
   },
   "layers/language-families.json": {
    "size": 2453,
@@ -8583,48 +8970,48 @@
    "sha256": "a2e7bc340827"
   },
   "layers/mahabharata-route.json": {
-   "size": 125982,
-   "sha256": "913777264c50"
+   "size": 125991,
+   "sha256": "ff57fb109e2b"
   },
   "layers/mahabharata-stops.json": {
-   "size": 135727,
-   "sha256": "8ec99bd1e531"
+   "size": 135736,
+   "sha256": "45f6ebc7d76e"
   },
   "layers/mahajanapadas-areas.bin.gz": {
    "size": 4333,
    "sha256": "2bce3fe8f4e4"
   },
   "layers/mahajanapadas-capitals.json": {
-   "size": 9351,
-   "sha256": "198d115e2fe5"
+   "size": 9360,
+   "sha256": "a89e59fc31b4"
   },
   "layers/mahajanapadas-names.json": {
-   "size": 11314,
-   "sha256": "1db8906632d7"
+   "size": 11323,
+   "sha256": "531097a6d371"
   },
   "layers/mahajanapadas.json": {
-   "size": 21699,
-   "sha256": "3720fc483356"
+   "size": 21708,
+   "sha256": "9147d8e0b8b6"
   },
   "layers/maurya-areas.bin.gz": {
    "size": 8399,
    "sha256": "779b766956af"
   },
   "layers/maurya-capitals.json": {
-   "size": 3882,
-   "sha256": "f52128502111"
+   "size": 3891,
+   "sha256": "476bba157ecd"
   },
   "layers/maurya-evidence.json": {
-   "size": 22891,
-   "sha256": "de9dd0ea0f6d"
+   "size": 22900,
+   "sha256": "ec1c8f53509e"
   },
   "layers/maurya-names.json": {
-   "size": 4147,
-   "sha256": "9b0788ec9eff"
+   "size": 4156,
+   "sha256": "36719ffe121e"
   },
   "layers/maurya.json": {
-   "size": 16731,
-   "sha256": "748a7f9cd70e"
+   "size": 16740,
+   "sha256": "316df7cfab12"
   },
   "layers/minerals.json": {
    "size": 38276,
@@ -8647,12 +9034,12 @@
    "sha256": "ad20604e4e3b"
   },
   "layers/population-density.json": {
-   "size": 1528,
-   "sha256": "723dabb1bc70"
+   "size": 1527,
+   "sha256": "400ea3827c97"
   },
   "layers/population.json": {
-   "size": 1765,
-   "sha256": "a9f908c04dcc"
+   "size": 1764,
+   "sha256": "6a5cdb36f735"
   },
   "layers/power.json": {
    "size": 54290,
@@ -8663,32 +9050,32 @@
    "sha256": "1c906fb8f0f9"
   },
   "layers/pratihara-capitals.json": {
-   "size": 3155,
-   "sha256": "71ccb0449db8"
+   "size": 3164,
+   "sha256": "ef8c9916d013"
   },
   "layers/pratihara-evidence.json": {
-   "size": 3991,
-   "sha256": "689b9286f997"
+   "size": 4000,
+   "sha256": "89cd3cbf2385"
   },
   "layers/pratihara-names.json": {
-   "size": 3685,
-   "sha256": "e6e9113be34b"
+   "size": 3694,
+   "sha256": "9a1b4bacdecb"
   },
   "layers/pratihara.json": {
-   "size": 22190,
-   "sha256": "0352064c5606"
+   "size": 22199,
+   "sha256": "fd5758563b3a"
   },
   "layers/rail.json": {
    "size": 509505,
    "sha256": "6b4f926e2030"
   },
   "layers/rama-exile-route.json": {
-   "size": 28629,
-   "sha256": "040f24411f1a"
+   "size": 28638,
+   "sha256": "348e8d62a993"
   },
   "layers/rama-exile-stops.json": {
-   "size": 18403,
-   "sha256": "a151b1b24d6f"
+   "size": 18412,
+   "sha256": "ff787d250b95"
   },
   "layers/ranges.json": {
    "size": 13461,
@@ -8719,12 +9106,12 @@
    "sha256": "b0efb6a35b22"
   },
   "layers/sugriva-routes.json": {
-   "size": 13839,
-   "sha256": "ab14050fe24c"
+   "size": 13848,
+   "sha256": "10562d876764"
   },
   "layers/sugriva-search.json": {
-   "size": 31477,
-   "sha256": "b9c9eed1dc87"
+   "size": 31486,
+   "sha256": "0b2c56740108"
   },
   "layers/summits.json": {
    "size": 19314,
@@ -8735,60 +9122,60 @@
    "sha256": "026646519d6c"
   },
   "layers/sunga-capitals.json": {
-   "size": 2451,
-   "sha256": "1f00ed099aac"
+   "size": 2460,
+   "sha256": "a3a4b77ae434"
   },
   "layers/sunga-evidence.json": {
-   "size": 15215,
-   "sha256": "65eef15f5793"
+   "size": 15224,
+   "sha256": "ed780e4c5304"
   },
   "layers/sunga-names.json": {
-   "size": 7333,
-   "sha256": "cd9be6818e0a"
+   "size": 7342,
+   "sha256": "83d9d4993c8a"
   },
   "layers/sunga.json": {
-   "size": 31523,
-   "sha256": "cac286c09403"
+   "size": 31532,
+   "sha256": "10cb4aea6135"
   },
   "layers/tughluq-areas.bin.gz": {
    "size": 6675,
    "sha256": "34b448b6b9e8"
   },
   "layers/tughluq-capitals.json": {
-   "size": 5231,
-   "sha256": "6a29bd5eae93"
+   "size": 5240,
+   "sha256": "dc53d9ed3ae4"
   },
   "layers/tughluq-evidence.json": {
-   "size": 2295,
-   "sha256": "594c63b78087"
+   "size": 2304,
+   "sha256": "d5fb505598cf"
   },
   "layers/tughluq-names.json": {
-   "size": 1807,
-   "sha256": "cacb0cccfeb0"
+   "size": 1816,
+   "sha256": "712951101b75"
   },
   "layers/tughluq.json": {
-   "size": 14242,
-   "sha256": "7d43a12fb0f8"
+   "size": 14251,
+   "sha256": "466c0ca8bfef"
   },
   "layers/vijayanagara-areas.bin.gz": {
    "size": 7830,
    "sha256": "fb7650ff342d"
   },
   "layers/vijayanagara-capitals.json": {
-   "size": 8765,
-   "sha256": "b2c2eeacfcd7"
+   "size": 8774,
+   "sha256": "f098120a1f35"
   },
   "layers/vijayanagara-evidence.json": {
-   "size": 3236,
-   "sha256": "e6499a6d774d"
+   "size": 3245,
+   "sha256": "581a11beb1f0"
   },
   "layers/vijayanagara-names.json": {
-   "size": 9711,
-   "sha256": "5f1dc6144671"
+   "size": 9720,
+   "sha256": "5a56d70931f4"
   },
   "layers/vijayanagara.json": {
-   "size": 25754,
-   "sha256": "a92afea9d694"
+   "size": 25763,
+   "sha256": "b661d68be409"
   },
   "layers/zones.json": {
    "size": 2516,
