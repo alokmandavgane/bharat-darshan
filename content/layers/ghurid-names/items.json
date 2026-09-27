@@ -1,0 +1,248 @@
+[
+  {
+    "id": "ghurid",
+    "status": "draft",
+    "name": {
+      "en": "Ghurid conquests in Hindustan",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय"
+    },
+    "category": "ghurid",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.6,
+      "lon": 78.6
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The conquests of Muʿizz al-Dīn Muḥammad of Ghūr, held from Delhi by Quṭb al-Dīn Aibak: Ajmer and Delhi (1192-93), Kanauj and Benares (1194), Gwalior (1196); Ghazni, the capital, lies in Afghanistan.",
+      "hi": "ग़ोर के मुइज़्ज़ुद्दीन मुहम्मद की विजयें, जिन्हें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता था: अजमेर और दिल्ली (1192-93), कन्नौज और बनारस (1194), ग्वालियर (1196); राजधानी ग़ज़नी अफ़ग़ानिस्तान में है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "sena",
+    "status": "draft",
+    "name": {
+      "en": "Sena kingdom",
+      "hi": "सेन राज्य"
+    },
+    "category": "sena",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.2,
+      "lon": 87.9
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Senas of Bengal under Lakṣmaṇasena, the 'Rāi Lakhmaniya' whom Bakhtiyār surprised at Nudiyā; his sons held east Bengal after him.",
+      "hi": "लक्ष्मणसेन के अधीन बंगाल के सेन, वे 'राय लखमनिया' जिन्हें बख़्तियार ने नुदिया में अचानक आ घेरा; उनके पुत्रों ने बाद में पूर्वी बंगाल रखा।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668"
+    ]
+  },
+  {
+    "id": "candella",
+    "status": "draft",
+    "name": {
+      "en": "Candellas of Jejākabhukti",
+      "hi": "जेजाकभुक्ति के चन्देल"
+    },
+    "category": "candella",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.0,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Candellas under Paramardi (Parmāl, 1165-1203), whose fort of Kālinjar Aibak took in 1203; Mahoba, Kālinjar and Khajuraho were their chief towns.",
+      "hi": "परमर्दि (परमाल, 1165-1203) के अधीन चन्देल, जिनका कालिंजर दुर्ग ऐबक ने 1203 में लिया; महोबा, कालिंजर और खजुराहो उनके प्रमुख नगर थे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "caulukya",
+    "status": "draft",
+    "name": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+    },
+    "category": "caulukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.0,
+      "lon": 71.0
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Caulukya kingdom of Gujarat under Bhīma II, whose capital Aibak sacked in 1197 and who reigned on for four decades.",
+      "hi": "भीम द्वितीय के अधीन गुजरात का चौलुक्य राज्य, जिसकी राजधानी ऐबक ने 1197 में लूटी और जिसने चार दशक और राज किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "paramara",
+    "status": "draft",
+    "name": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+    },
+    "category": "paramara",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.0,
+      "lon": 76.6
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Paramāras restored under Subhaṭavarman (c. 1194-1209), whose raid on the Caulukya capital his grandson's grant still remembered; Mālava was outside the Ghurid conquest.",
+      "hi": "सुभटवर्मन (लगभग 1194-1209) के अधीन पुनर्स्थापित परमार, जिनका चौलुक्य राजधानी पर धावा उनके पोते का दानपत्र याद रखता है; मालव ग़ोरी विजय से बाहर था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657"
+    ]
+  },
+  {
+    "id": "yadava",
+    "status": "draft",
+    "name": {
+      "en": "Yādavas of Devagiri",
+      "hi": "देवगिरि के यादव"
+    },
+    "category": "yadava",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.6,
+      "lon": 75.4
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Yādavas of Devagiri, whose king Bhillama lost Kuntala to the Hoysaḷa in 1191-92; his son Jaitugi reigned c. 1191-1210.",
+      "hi": "देवगिरि के यादव, जिनके राजा भिल्लम ने 1191-92 में कुन्तल होयसल के हाथ खोया; उनके पुत्र जैतुगि ने लगभग 1191-1210 राज किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "hoysala",
+    "status": "draft",
+    "name": {
+      "en": "Hoysaḷas of Dorasamudra",
+      "hi": "द्वारसमुद्र के होयसल"
+    },
+    "category": "hoysala",
+    "priority": 1,
+    "anchor": {
+      "lat": 14.3,
+      "lon": 75.9
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Hoysaḷas under Vīra-Ballāḷa II (1173-1220), 'the dominant power in Southern India', who took Kuntala from the Yādavas and camped at Lokkigundi.",
+      "hi": "वीर-बल्लाळ द्वितीय (1173-1220) के अधीन होयसल, 'दक्षिण भारत की प्रधान शक्ति', जिन्होंने यादवों से कुन्तल लिया और लोक्किगुण्डि में डेरा डाला।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "kakatiya",
+    "status": "draft",
+    "name": {
+      "en": "Kākatīyas of Anumakoṇḍa",
+      "hi": "अनुमकोण्ड के काकतीय"
+    },
+    "category": "kakatiya",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.6,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Kākatīyas under Rudra (c. 1162-1199) and Gaṇapati (from 1199), independent of the fallen Cālukyas; the dynasty and its seat are attested from 1117.",
+      "hi": "रुद्र (लगभग 1162-1199) और गणपति (1199 से) के अधीन काकतीय, पतित चालुक्यों से स्वतंत्र; वंश और उसका आसन 1117 से प्रमाणित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657"
+    ]
+  },
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Cola kingdom",
+      "hi": "चोल राज्य"
+    },
+    "category": "cola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.9,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Colas under Kulottuṅga III (1178-1218), the last strong king of the line, who claimed Madurai and the Pāṇḍya's crowned head.",
+      "hi": "कुलोत्तुंग तृतीय (1178-1218) के अधीन चोल, वंश के अंतिम सशक्त राजा, जिन्होंने मदुरै और पाण्ड्य के मुकुटधारी सिर का दावा किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas of Madurai",
+      "hi": "मदुरै के पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.4,
+      "lon": 78.0
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pāṇḍyas of Madurai, under Cola overlordship since Rājarāja's time; their revival came in the thirteenth century.",
+      "hi": "मदुरै के पाण्ड्य, राजराज के समय से चोल अधिराजत्व में; उनका पुनरुत्थान तेरहवीं शताब्दी में हुआ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  }
+]

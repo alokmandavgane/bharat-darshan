@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-seventh round: the Ghurid conquest and the southern kingdoms, c. 1200 CE. "Kingdoms and
+  empires" gains its ninth era. It is drawn from Hasan Niẓāmī and Minhāj in Elliot and Dowson's vol. II (1869),
+  four inscriptions in Epigraphia Indica VI and IX (Gadag, Tirukkaḍaiyūr, Anmakoṇḍa, Māndhātā) and Smith (1914).
+  - **The areas:** the Ghurid conquests held from Delhi, with Bihar newly overrun; the Senas, Candellas, Caulukyas
+    and Paramāras; the Hoysaḷas and Yādavas in two shades each, the Kākatīyas in two, the Colas and the Pāṇḍyas
+    under them. Ten polities: more than the fill lookup's eight bands, so the areas take per-area colours.
+  - **Capitals and pins:** ten capitals; four inscription pins, the siege of Kālinjar and the raid on Behār.
+  - The Paramāra label was moved east (Rajgarh) to clear the Caulukya one. All ten names show at 1280x800; 48
+    tests and the build pass. `07_plates.py` must run after an export, or the plates index keeps the old eras.
 - 2026-09-27, seventy-sixth round: Colas, Paramāras and Cālukyas, c. 1030 CE. "Kingdoms and empires" gains its eighth
   era. It is drawn from Rājendra Cola I's Tirumalai inscription (Epigraphia Indica IX, Roman text), al-Bīrūnī in
   Sachau's translation (1888) and Smith (1914).

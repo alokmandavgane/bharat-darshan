@@ -1,0 +1,129 @@
+{
+  "id": "ghurid-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 1200 CE",
+    "hi": "लगभग 1200 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "ghurid",
+      "color": "#86a88f",
+      "title": {
+        "en": "Ghurid conquests in Hindustan",
+        "hi": "हिन्दुस्तान में ग़ोरी विजय"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "sena",
+      "color": "#b86a96",
+      "title": {
+        "en": "Sena kingdom",
+        "hi": "सेन राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "candella",
+      "color": "#8a5a1f",
+      "title": {
+        "en": "Candellas of Jejākabhukti",
+        "hi": "जेजाकभुक्ति के चन्देल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "caulukya",
+      "color": "#d7ad62",
+      "title": {
+        "en": "Caulukyas of Anhilvāra",
+        "hi": "अणहिलवाड के चौलुक्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "paramara",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Paramāras of Mālava",
+        "hi": "मालव के परमार"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "yadava",
+      "color": "#6199c4",
+      "title": {
+        "en": "Yādavas of Devagiri",
+        "hi": "देवगिरि के यादव"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "hoysala",
+      "color": "#b8454f",
+      "title": {
+        "en": "Hoysaḷas of Dorasamudra",
+        "hi": "द्वारसमुद्र के होयसल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kakatiya",
+      "color": "#7fb3a4",
+      "title": {
+        "en": "Kākatīyas of Anumakoṇḍa",
+        "hi": "अनुमकोण्ड के काकतीय"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "cola",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Cola kingdom",
+        "hi": "चोल राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pandya",
+      "color": "#d08a6a",
+      "title": {
+        "en": "Pāṇḍyas of Madurai",
+        "hi": "मदुरै के पाण्ड्य"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Delhi, Nudiyā, Mahoba, Aṇahilapāṭaka, Dhārā, Devagiri, Dorasamudra, Anumakoṇḍa, Gaṅgaikoṇḍacoḻapuram and Madurai. Ghazni, the Ghurid capital, is outside India.",
+    "hi": "दिल्ली, नुदिया, महोबा, अणहिलपाटक, धारा, देवगिरि, द्वारसमुद्र, अनुमकोण्ड, गंगैकोण्डचोलपुरम् और मदुरै। ग़ोरी राजधानी ग़ज़नी भारत के बाहर है।"
+  },
+  "sources": [
+    "smith-1914",
+    "elliot-dowson-1869",
+    "wikipedia"
+  ]
+}

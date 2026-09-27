@@ -810,16 +810,16 @@
         "hi": "एपिग्राफ़िया इंडिका, खंड VI (1900-01)"
       },
       "publisher": {
-        "en": "Government of India, Calcutta: Kielhorn on the Aihole inscription",
-        "hi": "भारत सरकार, कलकत्ता: ऐहोळे अभिलेख पर कीलहॉर्न"
+        "en": "Government of India, Calcutta: Kielhorn on the Aihole inscription; Lüders on the Gadag inscription of Vīra-Ballāḷa II",
+        "hi": "भारत सरकार, कलकत्ता: ऐहोळे अभिलेख पर कीलहॉर्न; वीर-बल्लाळ द्वितीय के गदग अभिलेख पर ल्यूडर्स"
       },
       "url": "https://archive.org/details/EpigraphiaIndicaVol6",
       "use": "facts",
       "licence": "public-domain",
       "retrieved": "2026-09",
       "note": {
-        "en": "The edition of Pulakeśin II's Aihole inscription that the kingdoms page quotes for c. 640 CE.",
-        "hi": "पुलकेशिन् द्वितीय के ऐहोळे अभिलेख का संस्करण जिसे राज्य पृष्ठ लगभग 640 ई. के लिए उद्धृत करता है।"
+        "en": "The edition the kingdoms page quotes for Pulakeśin II's Aihole inscription (c. 640 CE) and for the Hoysaḷas and Yādavas of c. 1200 CE.",
+        "hi": "वह संस्करण जिसे राज्य पृष्ठ पुलकेशिन् द्वितीय के ऐहोळे अभिलेख (लगभग 640 ई.) और लगभग 1200 ई. के होयसल और यादवों के लिए उद्धृत करता है।"
       }
     },
     "smith-1914": {
@@ -900,16 +900,34 @@
         "hi": "एपिग्राफ़िया इंडिका, खंड IX (1907-08)"
       },
       "publisher": {
-        "en": "Government of India, Calcutta: Hultzsch on the Tirumalai inscription of Rājendra Cola I",
-        "hi": "भारत सरकार, कलकत्ता: राजेन्द्र चोल प्रथम के तिरुमलै अभिलेख पर हुल्त्श"
+        "en": "Government of India, Calcutta: Hultzsch on the Tirumalai inscription of Rājendra Cola I; Kielhorn on Cola dates and the Māndhātā plates; Krishna Sastri on the Anmakoṇḍa inscription",
+        "hi": "भारत सरकार, कलकत्ता: राजेन्द्र चोल प्रथम के तिरुमलै अभिलेख पर हुल्त्श; चोल तिथियों और मान्धाता ताम्रपत्रों पर कीलहॉर्न; अनमकोण्ड अभिलेख पर कृष्ण शास्त्री"
       },
       "url": "https://archive.org/details/in.ernet.dli.2015.56657",
       "use": "facts",
       "licence": "public-domain",
       "retrieved": "2026-09",
       "note": {
-        "en": "The edition the kingdoms page quotes for the Colas of c. 1030 CE.",
-        "hi": "वह संस्करण जिसे राज्य पृष्ठ लगभग 1030 ई. के चोलों के लिए उद्धृत करता है।"
+        "en": "The edition the kingdoms page quotes for the Colas of c. 1030 CE, and for the Colas, Paramāras and Kākatīyas of c. 1200 CE.",
+        "hi": "वह संस्करण जिसे राज्य पृष्ठ लगभग 1030 ई. के चोलों, और लगभग 1200 ई. के चोलों, परमारों और काकतीयों के लिए उद्धृत करता है।"
+      }
+    },
+    "elliot-dowson-1869": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. II (1869)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियन्स, खंड II (1869)"
+      },
+      "publisher": {
+        "en": "Trübner, London: Hasan Niẓāmī's Tāju-l Ma'āsir and Minhāj's Ṭabaqāt-i Nāṣirī in translation",
+        "hi": "ट्रुब्नर, लंदन: हसन निज़ामी का ताजुल मआसिर और मिन्हाज का तबक़ात-ए-नासिरी, अनुवाद में"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.62668",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The chronicles the kingdoms page quotes for the Ghurid conquest, c. 1200 CE.",
+        "hi": "वे इतिवृत्त जिन्हें राज्य पृष्ठ लगभग 1200 ई. की ग़ोरी विजय के लिए उद्धृत करता है।"
       }
     }
   }

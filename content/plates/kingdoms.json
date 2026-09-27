@@ -42,7 +42,11 @@
     "cola",
     "cola-names",
     "cola-capitals",
-    "cola-evidence"
+    "cola-evidence",
+    "ghurid",
+    "ghurid-names",
+    "ghurid-capitals",
+    "ghurid-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -212,6 +216,27 @@
         "cola-names",
         "cola-capitals",
         "cola-evidence"
+      ]
+    },
+    {
+      "id": "ghurid",
+      "display": {
+        "en": "c. 1200 CE",
+        "hi": "लगभग 1200 ई."
+      },
+      "title": {
+        "en": "The Ghurid conquest and the southern kingdoms",
+        "hi": "ग़ोरी विजय और दक्षिण के राज्य"
+      },
+      "blurb": {
+        "en": "Aibak's Hindustan from Delhi, the Senas, Candellas, Caulukyas and Paramāras, and in the south the Hoysaḷas, Yādavas, Kākatīyas and Colas, from Hasan Niẓāmī, Minhāj, four inscriptions and Smith.",
+        "hi": "दिल्ली से ऐबक का हिन्दुस्तान, सेन, चन्देल, चौलुक्य और परमार, और दक्षिण में होयसल, यादव, काकतीय और चोल, हसन निज़ामी, मिन्हाज, चार अभिलेखों और स्मिथ से।"
+      },
+      "layers": [
+        "ghurid",
+        "ghurid-names",
+        "ghurid-capitals",
+        "ghurid-evidence"
       ]
     }
   ],

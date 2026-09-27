@@ -1,0 +1,332 @@
+[
+  {
+    "id": "ghurid-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dehli",
+      "hi": "देहली"
+    },
+    "category": "ghurid",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.52,
+      "lon": 77.18
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "Ghurid conquests in Hindustan",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय"
+    },
+    "identified": {
+      "en": "certain, placed at Qila Rai Pithora, Mehrauli",
+      "hi": "निश्चित, Qila Rai Pithora, Mehrauli पर"
+    },
+    "blurb": {
+      "en": "The capital of Ghurid conquests in Hindustan.",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668",
+      "https://en.wikipedia.org/wiki/Qila_Rai_Pithora"
+    ]
+  },
+  {
+    "id": "sena-capital",
+    "status": "draft",
+    "name": {
+      "en": "Nudiyā (Navadvīpa)",
+      "hi": "नुदिया (नवद्वीप)"
+    },
+    "category": "sena",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.42,
+      "lon": 88.37
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Sena kingdom",
+      "hi": "सेन राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Nabadwip",
+      "hi": "निश्चित, Nabadwip पर"
+    },
+    "blurb": {
+      "en": "The capital of Sena kingdom.",
+      "hi": "सेन राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Nabadwip"
+    ]
+  },
+  {
+    "id": "candella-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mahoba",
+      "hi": "महोबा"
+    },
+    "category": "candella",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.28,
+      "lon": 79.872885
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Candellas of Jejākabhukti",
+      "hi": "जेजाकभुक्ति के चन्देल"
+    },
+    "identified": {
+      "en": "certain, placed at Mahoba",
+      "hi": "निश्चित, Mahoba पर"
+    },
+    "blurb": {
+      "en": "The capital of Candellas of Jejākabhukti.",
+      "hi": "जेजाकभुक्ति के चन्देल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Mahoba"
+    ]
+  },
+  {
+    "id": "caulukya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Aṇahilapāṭaka",
+      "hi": "अणहिलपाटक"
+    },
+    "category": "caulukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.85,
+      "lon": 72.125
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+    },
+    "identified": {
+      "en": "certain, placed at Patan",
+      "hi": "निश्चित, Patan पर"
+    },
+    "blurb": {
+      "en": "The capital of Caulukyas of Anhilvāra.",
+      "hi": "अणहिलवाड के चौलुक्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.62668",
+      "https://en.wikipedia.org/wiki/Patan,_Gujarat"
+    ]
+  },
+  {
+    "id": "paramara-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dhārā",
+      "hi": "धारा"
+    },
+    "category": "paramara",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.59722,
+      "lon": 75.30417
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+    },
+    "identified": {
+      "en": "certain, placed at Dhar",
+      "hi": "निश्चित, Dhar पर"
+    },
+    "blurb": {
+      "en": "The capital of Paramāras of Mālava.",
+      "hi": "मालव के परमार की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://en.wikipedia.org/wiki/Dhar"
+    ]
+  },
+  {
+    "id": "yadava-capital",
+    "status": "draft",
+    "name": {
+      "en": "Devagiri",
+      "hi": "देवगिरि"
+    },
+    "category": "yadava",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.942724,
+      "lon": 75.213164
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Yādavas of Devagiri",
+      "hi": "देवगिरि के यादव"
+    },
+    "identified": {
+      "en": "certain, placed at Daulatabad Fort",
+      "hi": "निश्चित, Daulatabad Fort पर"
+    },
+    "blurb": {
+      "en": "The capital of Yādavas of Devagiri.",
+      "hi": "देवगिरि के यादव की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Daulatabad_Fort"
+    ]
+  },
+  {
+    "id": "hoysala-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dorasamudra (Dvāravatī)",
+      "hi": "द्वारसमुद्र (द्वारवती)"
+    },
+    "category": "hoysala",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.2157,
+      "lon": 75.9914
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Hoysaḷas of Dorasamudra",
+      "hi": "द्वारसमुद्र के होयसल"
+    },
+    "identified": {
+      "en": "certain, placed at Halebidu",
+      "hi": "निश्चित, Halebidu पर"
+    },
+    "blurb": {
+      "en": "The capital of Hoysaḷas of Dorasamudra.",
+      "hi": "द्वारसमुद्र के होयसल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Halebidu"
+    ]
+  },
+  {
+    "id": "kakatiya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Anumakoṇḍa",
+      "hi": "अनुमकोण्ड"
+    },
+    "category": "kakatiya",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.9979519,
+      "lon": 79.5669959
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "Kākatīyas of Anumakoṇḍa",
+      "hi": "अनुमकोण्ड के काकतीय"
+    },
+    "identified": {
+      "en": "certain, placed at Padmakshi temple hill, Hanamkonda",
+      "hi": "निश्चित, Padmakshi temple hill, Hanamkonda पर"
+    },
+    "blurb": {
+      "en": "The capital of Kākatīyas of Anumakoṇḍa.",
+      "hi": "अनुमकोण्ड के काकतीय की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://en.wikipedia.org/wiki/Hanamkonda"
+    ]
+  },
+  {
+    "id": "cola-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gaṅgaikoṇḍacoḻapuram",
+      "hi": "गंगैकोण्डचोलपुरम्"
+    },
+    "category": "cola",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.20644,
+      "lon": 79.44833
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Cola kingdom",
+      "hi": "चोल राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Gangaikonda Cholapuram",
+      "hi": "निश्चित, Gangaikonda Cholapuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Cola kingdom.",
+      "hi": "चोल राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.56657",
+      "https://en.wikipedia.org/wiki/Gangaikonda_Cholapuram"
+    ]
+  },
+  {
+    "id": "pandya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.9252,
+      "lon": 78.1198
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pāṇḍyas of Madurai",
+      "hi": "मदुरै के पाण्ड्य"
+    },
+    "identified": {
+      "en": "certain, placed at Madurai",
+      "hi": "निश्चित, Madurai पर"
+    },
+    "blurb": {
+      "en": "The capital of Pāṇḍyas of Madurai.",
+      "hi": "मदुरै के पाण्ड्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Madurai"
+    ]
+  }
+]
