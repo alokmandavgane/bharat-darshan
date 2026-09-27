@@ -142,7 +142,8 @@
       "hi": "रुद्र सिंह के अधीन असम के अहोम राजा, जिन्होंने 1682 में मुग़लों को गुवाहाटी से खदेड़ा था।"
     },
     "sources": [
-      "https://archive.org/details/india.history.resource.309"
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/in.ernet.dli.2015.22964"
     ]
   },
   {
@@ -312,6 +313,56 @@
     },
     "sources": [
       "https://archive.org/details/orientalhistori01taylgoog"
+    ]
+  },
+  {
+    "id": "kachari",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.35,
+      "lon": 92.45
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Kachari kingdom, whose king (Jai Singha in the chronicle, Tāmradhvaj in Gait) claimed land 'up to Mahang'; Rudra Siṃha's armies took Maibong in 1706 and made him a tributary in 1708.",
+      "hi": "कछारी राज्य, जिसके राजा (वृत्तांत में जय सिंह, गेट में ताम्रध्वज) ने 'महांग तक' भूमि का दावा किया; रुद्र सिंह की सेनाओं ने 1706 में माईबोंग लिया और 1708 में उन्हें करद बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "jaintia",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.6,
+      "lon": 91.5
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "blurb": {
+      "en": "Jaintia under Rāma Siṃha, who seized the fleeing Kachari king; the Ahoms took Jaintiapur in 1708, and his heir was set 'on the masnad of Jayantia' as their tributary.",
+      "hi": "राम सिंह के अधीन जयंतिया, जिन्होंने भागते कछारी राजा को पकड़ लिया; अहोमों ने 1708 में जयंतियापुर लिया, और उनके उत्तराधिकारी को करद के रूप में 'जयंतिया की मसनद' पर बैठाया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
     ]
   }
 ]

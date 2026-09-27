@@ -232,8 +232,8 @@
     "category": "ahom",
     "priority": 1,
     "anchor": {
-      "lat": 26.9,
-      "lon": 94.0
+      "lat": 27.4,
+      "lon": 94.6
     },
     "regions": [
       "IN-AS"
@@ -256,11 +256,11 @@
     "category": "koch",
     "priority": 1,
     "anchor": {
-      "lat": 26.3,
-      "lon": 90.6
+      "lat": 26.5,
+      "lon": 88.4
     },
     "regions": [
-      "IN-AS"
+      "IN-WB"
     ],
     "blurb": {
       "en": "The Koch kings of Kūch Bihār and Kāmrūp, with a thousand horse and a hundred thousand foot, by Abū'l-Faḍl's count.",
@@ -292,6 +292,56 @@
     },
     "sources": [
       "https://archive.org/details/in.ernet.dli.2015.32527"
+    ]
+  },
+  {
+    "id": "kachari",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.5,
+      "lon": 92.85
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Kachari kingdom in the hills, ruling from Maibong since Dimapur fell; in 1606, says the Ahom Buranji, the Ahoms marched on its 'brick town' over a Jaintia princess.",
+      "hi": "पहाड़ों में कछारी राज्य, दीमापुर के पतन के बाद से माईबोंग से शासित; अहोम बुरंजी के अनुसार 1606 में अहोमों ने एक जयंतिया राजकुमारी को लेकर इसके 'ईंटों के नगर' पर चढ़ाई की।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "jaintia",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.72,
+      "lon": 92.25
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "blurb": {
+      "en": "The Jaintia kings, of the Khasi-speaking Syntengs, ruling the hills and the plains below from Jaintiapur (now in Bangladesh); in about 1606 they offered a princess to the Ahom king.",
+      "hi": "जयंतिया राजा, खासी-भाषी सिंतेंग, जो पहाड़ियों और नीचे के मैदानों पर जयंतियापुर (अब बांग्लादेश में) से शासन करते थे; लगभग 1606 में उन्होंने अहोम राजा को एक राजकुमारी दी।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
     ]
   }
 ]

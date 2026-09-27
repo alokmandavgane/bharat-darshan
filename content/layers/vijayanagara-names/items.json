@@ -328,7 +328,7 @@
     "priority": 1,
     "anchor": {
       "lat": 27.0,
-      "lon": 94.4
+      "lon": 94.8
     },
     "regions": [
       "IN-AS"
@@ -338,6 +338,81 @@
       "hi": "सुहुंगमुंग, दिहिंगिया राजा (1497-1539), के अधीन अहोम राज्य, जिन्होंने चुटिया प्रदेश मिलाया और बंगाल से हुसैन शाह के आक्रमण को पीछे धकेला।"
     },
     "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "kachari",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.6,
+      "lon": 93.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Kachari kingdom, its capital Dimapur on the Dhansiri — the Ahom Buranji's 'brick town' — which the Ahoms took in 1531 and sacked in 1536, when the Kacharis moved to Maibong.",
+      "hi": "कछारी राज्य, जिसकी राजधानी धनसिरी पर दीमापुर — अहोम बुरंजी का 'ईंटों का नगर' — थी, जिसे अहोमों ने 1531 में लिया और 1536 में लूटा, जब कछारी माईबोंग चले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "koch",
+    "status": "draft",
+    "name": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.5,
+      "lon": 88.4
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Koch kingdom of Bisva Siṃha, who rose about 1515 on the ruins of Kāmatā and moved his capital from Chikangram to Koch Bihar; the Ahom Buranji first mentions 'the Koch king' about 1531.",
+      "hi": "विश्वसिंह का कोच राज्य, जो लगभग 1515 में कामता के खंडहरों पर उभरे और अपनी राजधानी चिकनग्राम से कोच बिहार ले गए; अहोम बुरंजी 'कोच राजा' का पहला उल्लेख लगभग 1531 में करती है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "manipur",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.1,
+      "lon": 93.85
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "blurb": {
+      "en": "Manipur, the 'Keshe' of the Ahom Buranji, whose Raja Chaomen exchanged princesses with Suhungmung in the 1530s; its own records before 1714 are legendary (Gait).",
+      "hi": "मणिपुर, अहोम बुरंजी का 'केशे', जिसके राजा चाओमेन ने 1530 के दशक में सुहुंगमुंग के साथ राजकुमारियों का आदान-प्रदान किया; 1714 से पहले के इसके अपने अभिलेख किंवदंती हैं (गेट)।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
       "https://archive.org/details/historyofassam00gait"
     ]
   }

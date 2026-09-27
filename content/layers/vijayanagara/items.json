@@ -1049,5 +1049,150 @@
       "en": "Bakata",
       "hi": "बकता"
     }
+  },
+  {
+    "id": "kachari-held",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "rank": 1,
+    "districts": [
+      265,
+      305,
+      314,
+      315
+    ],
+    "verse": "Kachari",
+    "locus": {
+      "en": "Ahom Buranji, Barua 65",
+      "hi": "अहोम बुरंजी, Barua 65"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachari kingdom, its capital Dimapur on the Dhansiri — the Ahom Buranji's 'brick town' — which the Ahoms took in 1531 and sacked in 1536, when the Kacharis moved to Maibong.",
+      "hi": "कछारी राज्य, जिसकी राजधानी धनसिरी पर दीमापुर — अहोम बुरंजी का 'ईंटों का नगर' — थी, जिसे अहोमों ने 1531 में लिया और 1536 में लूटा, जब कछारी माईबोंग चले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#8a6a3a",
+    "grade": {
+      "en": "The Kachari kingdom beyond the Dhansiri",
+      "hi": "धनसिरी के पार कछारी राज्य"
+    },
+    "reading": "gradually thrust the Kachari boundary back to the Dhansiri river.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 244",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 244"
+    },
+    "capital": {
+      "en": "Dimapur",
+      "hi": "दीमापुर"
+    }
+  },
+  {
+    "id": "koch-held",
+    "status": "draft",
+    "name": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
+    },
+    "category": "koch",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      328,
+      329
+    ],
+    "verse": "Koch",
+    "locus": {
+      "en": "Ahom Buranji, Barua 67",
+      "hi": "अहोम बुरंजी, Barua 67"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Koch kingdom of Bisva Siṃha, who rose about 1515 on the ruins of Kāmatā and moved his capital from Chikangram to Koch Bihar; the Ahom Buranji first mentions 'the Koch king' about 1531.",
+      "hi": "विश्वसिंह का कोच राज्य, जो लगभग 1515 में कामता के खंडहरों पर उभरे और अपनी राजधानी चिकनग्राम से कोच बिहार ले गए; अहोम बुरंजी 'कोच राजा' का पहला उल्लेख लगभग 1531 में करती है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#4a7a8a",
+    "grade": {
+      "en": "Bisva Siṃha's Koch kingdom, from the Karatoya to the Bar Nadi",
+      "hi": "करतोया से बड़ नदी तक विश्वसिंह का कोच राज्य"
+    },
+    "reading": "extended his rule as far as the Karatoya in the west and the Bar Nadi in the east. He rose to power about 1515 A.D.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 47",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 47"
+    },
+    "capital": {
+      "en": "Koch Bihar",
+      "hi": "कोच बिहार"
+    }
+  },
+  {
+    "id": "manipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "rank": 1,
+    "districts": [
+      275,
+      276,
+      277,
+      278
+    ],
+    "verse": "Keshe (read: Ka-se (Manipur))",
+    "locus": {
+      "en": "Ahom Buranji, Barua 77",
+      "hi": "अहोम बुरंजी, Barua 77"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Manipur, the 'Keshe' of the Ahom Buranji, whose Raja Chaomen exchanged princesses with Suhungmung in the 1530s; its own records before 1714 are legendary (Gait).",
+      "hi": "मणिपुर, अहोम बुरंजी का 'केशे', जिसके राजा चाओमेन ने 1530 के दशक में सुहुंगमुंग के साथ राजकुमारियों का आदान-प्रदान किया; 1714 से पहले के इसके अपने अभिलेख किंवदंती हैं (गेट)।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#7a5a8a",
+    "grade": {
+      "en": "The Manipur valley",
+      "hi": "मणिपुर घाटी"
+    },
+    "reading": "inhabited by wild and warlike tribes, has long had an inde- pendent existence.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 263",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 263"
+    }
   }
 ]

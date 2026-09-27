@@ -163,6 +163,22 @@
         "en": "Kacharis",
         "hi": "कछारी"
       }
+    },
+    {
+      "id": "manipur",
+      "color": "#7a5a8a",
+      "title": {
+        "en": "Manipur",
+        "hi": "मणिपुर"
+      }
+    },
+    {
+      "id": "jaintia",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Jaintia",
+        "hi": "जयंतिया"
+      }
     }
   ],
   "fields": {
@@ -228,8 +244,8 @@
     }
   },
   "note": {
-    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. The Rajput states of Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Tanjore, Travancore and Kerala, Manipur, Jaintia and the rest of the north-east (the Ahoms and Kacharis are added from the sources quoted in Gait's History of Assam (1906)), and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। मेवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। खाली छोड़े गए: तंजावुर, त्रावणकोर और केरल, मणिपुर, जयंतिया और शेष पूर्वोत्तर (अहोम और कछारी गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. The Rajput states of Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). In the north-east: the Ahoms and Kacharis, from the sources quoted in Gait's History of Assam (1906); Manipur and Jaintia from the Tungkhungia and Ahom Buranjis (Bhuyan's and Barua's translations). Left blank: Tanjore, Travancore and Kerala, Tripura and the north-east hills, and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। मेवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। पूर्वोत्तर में: अहोम और कछारी, गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से; मणिपुर और जयंतिया तुंगखुंगिया और अहोम बुरंजियों (भुइयाँ और बरुआ के अनुवाद) से। खाली छोड़े गए: तंजावुर, त्रावणकोर और केरल, त्रिपुरा और पूर्वोत्तर के पहाड़, और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "elliot-dowson-1877-viii",
@@ -237,6 +253,8 @@
     "tod-1829",
     "tod-1832",
     "gait-1906",
+    "bhuyan-1933",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"

@@ -1377,7 +1377,8 @@
       "hi": "हिडिम्बा के कछारी (दिमासा) राजा, अहोमों के करद, जिन्होंने 1771 तक अपनी राजधानी पहाड़ों में माईबोंग से कछार के मैदानों में खासपुर ले गए।"
     },
     "sources": [
-      "https://archive.org/details/historyofassam00gait"
+      "https://archive.org/details/historyofassam00gait",
+      "https://archive.org/details/dli.csl.4028"
     ],
     "color": "#8a6a3a",
     "grade": {
@@ -1392,6 +1393,90 @@
     "capital": {
       "en": "Maibong",
       "hi": "माईबोंग"
+    }
+  },
+  {
+    "id": "manipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "rank": 1,
+    "districts": [
+      275,
+      276,
+      277,
+      278
+    ],
+    "verse": "Manipur",
+    "locus": {
+      "en": "Tungkhungia Buranji, Bhuyan 52",
+      "hi": "तुंगखुंगिया बुरंजी, Bhuyan 52"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Manipur under Jai Siṃha (Bhāgyacandra), driven out by the Burmese in 1764; he sheltered with the Kacharis and the Ahoms, who restored him in 1768. The Ahoms called Manipur Mekhelī.",
+      "hi": "जय सिंह (भाग्यचंद्र) के अधीन मणिपुर, जिन्हें 1764 में बर्मियों ने निकाल दिया; उन्होंने कछारियों और अहोमों के यहाँ शरण ली, जिन्होंने 1768 में उन्हें पुनः स्थापित किया। अहोम मणिपुर को मेखेली कहते थे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#7a5a8a",
+    "grade": {
+      "en": "The Manipur valley",
+      "hi": "मणिपुर घाटी"
+    },
+    "reading": "inhabited by wild and warlike tribes, has long had an inde- pendent existence.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 263",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 263"
+    }
+  },
+  {
+    "id": "jaintia-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "rank": 1,
+    "districts": [
+      299
+    ],
+    "verse": "Jayantia (read: Jaintia)",
+    "locus": {
+      "en": "Tungkhungia Buranji, Bhuyan 47",
+      "hi": "तुंगखुंगिया बुरंजी, Bhuyan 47"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Jaintia, 'recognised and protected' by the Ahom kings since Rudra Siṃha's day (Tungkhungia Buranji, 1745), still sending envoys to the Ahom court in 1771.",
+      "hi": "जयंतिया, रुद्र सिंह के समय से अहोम राजाओं द्वारा 'मान्य और संरक्षित' (तुंगखुंगिया बुरंजी, 1745), जो 1771 में भी अहोम दरबार में दूत भेजता था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#6a7a4a",
+    "grade": {
+      "en": "The Jaintia hills (the Jaintia parganas of Sylhet lie outside the map)",
+      "hi": "जयंतिया पहाड़ियाँ (सिलहट के जयंतिया परगने मानचित्र से बाहर हैं)"
+    },
+    "reading": "the Jaintia hills, which are inhabited by a Khasi tribe called Synteng, and the plains country, south of these hills and north of the Barak river, in the Sylhet district",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 253",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 253"
     }
   }
 ]

@@ -1520,7 +1520,8 @@
       "hi": "हिडिम्बा के कछारी (दिमासा) राजा, अहोमों के करद, जिन्होंने 1771 तक अपनी राजधानी पहाड़ों में माईबोंग से कछार के मैदानों में खासपुर ले गए।"
     },
     "sources": [
-      "https://archive.org/details/historyofassam00gait"
+      "https://archive.org/details/historyofassam00gait",
+      "https://archive.org/details/in.ernet.dli.2015.22964"
     ],
     "color": "#8a6a3a",
     "grade": {
@@ -1535,6 +1536,90 @@
     "capital": {
       "en": "Khaspur",
       "hi": "खासपुर"
+    }
+  },
+  {
+    "id": "manipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "rank": 1,
+    "districts": [
+      275,
+      276,
+      277,
+      278
+    ],
+    "verse": "Manipur",
+    "locus": {
+      "en": "Ahom Buranji, Barua 314",
+      "hi": "अहोम बुरंजी, Barua 314"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Manipur under Jai Siṃha, restored in 1768, allied to the Ahoms by marriage, and sending troops to help Gaurīnāth against the Moamarias about 1789.",
+      "hi": "जय सिंह के अधीन मणिपुर, 1768 में पुनः स्थापित, विवाह द्वारा अहोमों का सहयोगी, जिसने लगभग 1789 में मोआमरियों के विरुद्ध गौरीनाथ की सहायता को सेना भेजी।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#7a5a8a",
+    "grade": {
+      "en": "The Manipur valley",
+      "hi": "मणिपुर घाटी"
+    },
+    "reading": "inhabited by wild and warlike tribes, has long had an inde- pendent existence.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 263",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 263"
+    }
+  },
+  {
+    "id": "jaintia-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "rank": 1,
+    "districts": [
+      299
+    ],
+    "verse": "Jayantia (read: Jaintia)",
+    "locus": {
+      "en": "Tungkhungia Buranji, Bhuyan 81",
+      "hi": "तुंगखुंगिया बुरंजी, Bhuyan 81"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Jaintia, which sent envoys to the Ahom court in 1771 and in 1783 sheltered Moamaria rebels fleeing the Ahom armies.",
+      "hi": "जयंतिया, जिसने 1771 में अहोम दरबार में दूत भेजे और 1783 में अहोम सेनाओं से भागते मोआमरिया विद्रोहियों को शरण दी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#6a7a4a",
+    "grade": {
+      "en": "The Jaintia hills (the Jaintia parganas of Sylhet lie outside the map)",
+      "hi": "जयंतिया पहाड़ियाँ (सिलहट के जयंतिया परगने मानचित्र से बाहर हैं)"
+    },
+    "reading": "the Jaintia hills, which are inhabited by a Khasi tribe called Synteng, and the plains country, south of these hills and north of the Barak river, in the Sylhet district",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 253",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 253"
     }
   }
 ]

@@ -700,7 +700,8 @@
       "hi": "रुद्र सिंह के अधीन असम के अहोम राजा, जिन्होंने 1682 में मुग़लों को गुवाहाटी से खदेड़ा था।"
     },
     "sources": [
-      "https://archive.org/details/india.history.resource.309"
+      "https://archive.org/details/india.history.resource.309",
+      "https://archive.org/details/in.ernet.dli.2015.22964"
     ],
     "color": "#6d4a8a",
     "grade": {
@@ -1035,6 +1036,92 @@
     "capital": {
       "en": "Rāmanāthapuram",
       "hi": "रामनाथपुरम"
+    }
+  },
+  {
+    "id": "kachari-held",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "rank": 1,
+    "districts": [
+      315,
+      316,
+      318
+    ],
+    "verse": "Mai hang (read: Maibong)",
+    "locus": {
+      "en": "Tungkhungia Buranji, Bhuyan 34",
+      "hi": "तुंगखुंगिया बुरंजी, Bhuyan 34"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachari kingdom, whose king (Jai Singha in the chronicle, Tāmradhvaj in Gait) claimed land 'up to Mahang'; Rudra Siṃha's armies took Maibong in 1706 and made him a tributary in 1708.",
+      "hi": "कछारी राज्य, जिसके राजा (वृत्तांत में जय सिंह, गेट में ताम्रध्वज) ने 'महांग तक' भूमि का दावा किया; रुद्र सिंह की सेनाओं ने 1706 में माईबोंग लिया और 1708 में उन्हें करद बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#8a6a3a",
+    "grade": {
+      "en": "The Kachari kingdom, from Maibong to the plains of Cachar",
+      "hi": "माईबोंग से कछार के मैदानों तक कछारी राज्य"
+    },
+    "reading": "Tamradhvaj fled to Khaspur in the plains of Cachar",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 249",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 249"
+    },
+    "capital": {
+      "en": "Maibong",
+      "hi": "माईबोंग"
+    }
+  },
+  {
+    "id": "jaintia-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "rank": 1,
+    "districts": [
+      299
+    ],
+    "verse": "Jayantia (read: Jaintia)",
+    "locus": {
+      "en": "Tungkhungia Buranji, Bhuyan 35",
+      "hi": "तुंगखुंगिया बुरंजी, Bhuyan 35"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Jaintia under Rāma Siṃha, who seized the fleeing Kachari king; the Ahoms took Jaintiapur in 1708, and his heir was set 'on the masnad of Jayantia' as their tributary.",
+      "hi": "राम सिंह के अधीन जयंतिया, जिन्होंने भागते कछारी राजा को पकड़ लिया; अहोमों ने 1708 में जयंतियापुर लिया, और उनके उत्तराधिकारी को करद के रूप में 'जयंतिया की मसनद' पर बैठाया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#6a7a4a",
+    "grade": {
+      "en": "The Jaintia hills (the Jaintia parganas of Sylhet lie outside the map)",
+      "hi": "जयंतिया पहाड़ियाँ (सिलहट के जयंतिया परगने मानचित्र से बाहर हैं)"
+    },
+    "reading": "the Jaintia hills, which are inhabited by a Khasi tribe called Synteng, and the plains country, south of these hills and north of the Barak river, in the Sylhet district",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 253",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 253"
     }
   }
 ]

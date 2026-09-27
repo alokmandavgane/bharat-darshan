@@ -1341,6 +1341,42 @@
         "en": "The gazetteer quoted for the Company's India and the princely states, c. 1857 CE.",
         "hi": "लगभग 1857 ई. के कंपनी के भारत और रियासतों के लिए उद्धृत गज़ेटियर।"
       }
+    },
+    "bhuyan-1933": {
+      "title": {
+        "en": "S. K. Bhuyan, Tungkhungia Buranji or A History of Assam, 1681-1826 (1933)",
+        "hi": "एस. के. भुइयाँ, तुंगखुंगिया बुरंजी या असम का इतिहास, 1681-1826 (1933)"
+      },
+      "publisher": {
+        "en": "Oxford University Press for the Government of Assam",
+        "hi": "असम सरकार के लिए ऑक्सफ़र्ड यूनिवर्सिटी प्रेस"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.22964",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "An Assamese chronicle of the Ahom kings in English translation, for the Kacharis, Jaintia and Manipur in c. 1707, 1760 and 1780 CE. Public domain in India (Bhuyan d. 1964).",
+        "hi": "अहोम राजाओं का एक असमिया वृत्तांत, अंग्रेज़ी अनुवाद में, लगभग 1707, 1760 और 1780 ई. के कछारी, जयंतिया और मणिपुर के लिए। भारत में सार्वजनिक (भुइयाँ का निधन 1964)।"
+      }
+    },
+    "barua-1930": {
+      "title": {
+        "en": "Golap Chandra Barua, Ahom-Buranji from the earliest time to the end of Ahom rule (1930)",
+        "hi": "गोलाप चंद्र बरुआ, अहोम-बुरंजी, आरंभ से अहोम शासन के अंत तक (1930)"
+      },
+      "publisher": {
+        "en": "Baptist Mission Press, Calcutta, for the Assam Administration",
+        "hi": "बैपटिस्ट मिशन प्रेस, कलकत्ता, असम प्रशासन के लिए"
+      },
+      "url": "https://archive.org/details/dli.csl.4028",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Ahom chronicle with a parallel English translation, for Kāmatā, the Chutiyas and the Kacharis in c. 1330, the Kacharis, the Koch and Manipur in c. 1525, the Kacharis and Jaintia in c. 1605, and Manipur in c. 1760 and 1780 CE. Published by the Assam Administration.",
+        "hi": "अहोम वृत्तांत, समानांतर अंग्रेज़ी अनुवाद सहित, लगभग 1330 ई. के कामता, चुटिया और कछारी, लगभग 1525 के कछारी, कोच और मणिपुर, लगभग 1605 के कछारी और जयंतिया, और लगभग 1760 और 1780 ई. के मणिपुर के लिए। असम प्रशासन द्वारा प्रकाशित।"
+      }
     }
   }
 }

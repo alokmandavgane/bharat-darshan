@@ -107,6 +107,22 @@
         "en": "Tripura",
         "hi": "त्रिपुरा"
       }
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      }
+    },
+    {
+      "id": "jaintia",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Jaintia",
+        "hi": "जयंतिया"
+      }
     }
   ],
   "fields": {
@@ -172,14 +188,16 @@
     }
   },
   "note": {
-    "en": "India at Akbar's death in 1605. The Mughal empire is drawn in four shades: the ṣūbas of Hindustan, which the Āʾīn-i Akbarī lists, from Lahore to Bengal and Orissa and from Ajmer to Malwa and Gujarat; Kashmir, counted under Lahore; Khandesh and Berar, the last conquests; and Ahmadnagar, a ṣūba in name, whose kingdom the Niẓām Shāhīs still mostly held. Beyond it stand the hills of Mewār, where Rāṇā Amar Singh held out until 1614; the Deccan kingdoms Akbar's last envoy was sent to, 'Bijapur, Golconda, Bidar, and the Carnatic'; the Nāyakas of Madurai and Tanjore, nominal vassals of Vijayanagara at Chandragiri, as the Jesuit Barradas found them in 1614; and, from the Āʾīn, the kings of Assam, the Koch country and Tripura. Left blank: the Himalayan hill states, the north-east hills, the forest country of central India, Ikkeri and the Kanara coast, Kerala north of Travancore, and the Portuguese territories, which nothing read here attests. The Āʾīn is quoted in Jarrett's translation (1891), Asad Beg in Elliot and Dowson's (1875), Barradas in Sewell's (1900); extents follow Smith's Oxford History (1919) and Sewell. Drawn on today's districts, to the nearest district.",
-    "hi": "1605 में अकबर की मृत्यु के समय का भारत। मुग़ल साम्राज्य चार छटाओं में दिखाया गया है: हिन्दुस्तान के सूबे, जिन्हें आईन-ए-अकबरी गिनाती है, लाहौर से बंगाल और उड़ीसा तक और अजमेर से मालवा और गुजरात तक; कश्मीर, लाहौर के अंतर्गत गिना गया; ख़ानदेश और बरार, अंतिम विजयें; और अहमदनगर, नाम का सूबा, जिसका राज्य अधिकतर अभी भी निज़ाम शाहियों के पास था। उसके परे मेवाड़ के पहाड़ हैं, जहाँ राणा अमर सिंह 1614 तक डटे रहे; दक्कन के वे राज्य जिनके पास अकबर का अंतिम दूत भेजा गया, 'बीजापुर, गोलकोंडा, बीदर और कर्नाटक'; मदुरै और तंजावुर के नायक, चंद्रगिरि के विजयनगर के नाममात्र के सामंत, जैसा जेसुइट बर्रादास ने 1614 में पाया; और आईन से, असम, कोच देश और त्रिपुरा के राजा। खाली छोड़े गए: हिमालय के पहाड़ी राज्य, पूर्वोत्तर के पहाड़, मध्य भारत का वन प्रदेश, इक्केरी और कनारा तट, त्रावणकोर के उत्तर का केरल, और पुर्तगाली क्षेत्र, जिनके लिए यहाँ पढ़ा कुछ भी प्रमाण नहीं देता। आईन जैरेट के अनुवाद (1891) में, असद बेग इलियट और डाउसन के (1875) में, बर्रादास सुएल के (1900) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) और सुएल के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India at Akbar's death in 1605. The Mughal empire is drawn in four shades: the ṣūbas of Hindustan, which the Āʾīn-i Akbarī lists, from Lahore to Bengal and Orissa and from Ajmer to Malwa and Gujarat; Kashmir, counted under Lahore; Khandesh and Berar, the last conquests; and Ahmadnagar, a ṣūba in name, whose kingdom the Niẓām Shāhīs still mostly held. Beyond it stand the hills of Mewār, where Rāṇā Amar Singh held out until 1614; the Deccan kingdoms Akbar's last envoy was sent to, 'Bijapur, Golconda, Bidar, and the Carnatic'; the Nāyakas of Madurai and Tanjore, nominal vassals of Vijayanagara at Chandragiri, as the Jesuit Barradas found them in 1614; and, from the Āʾīn, the kings of Assam, the Koch country and Tripura. The Kacharis of Maibong and Jaintia are added from the Ahom Buranji (Barua's translation, 1930), with extents from Gait's History of Assam (1906). Left blank: the Himalayan hill states, the Naga and Mizo hills, the forest country of central India, Ikkeri and the Kanara coast, Kerala north of Travancore, and the Portuguese territories, which nothing read here attests. The Āʾīn is quoted in Jarrett's translation (1891), Asad Beg in Elliot and Dowson's (1875), Barradas in Sewell's (1900); extents follow Smith's Oxford History (1919) and Sewell. Drawn on today's districts, to the nearest district.",
+    "hi": "1605 में अकबर की मृत्यु के समय का भारत। मुग़ल साम्राज्य चार छटाओं में दिखाया गया है: हिन्दुस्तान के सूबे, जिन्हें आईन-ए-अकबरी गिनाती है, लाहौर से बंगाल और उड़ीसा तक और अजमेर से मालवा और गुजरात तक; कश्मीर, लाहौर के अंतर्गत गिना गया; ख़ानदेश और बरार, अंतिम विजयें; और अहमदनगर, नाम का सूबा, जिसका राज्य अधिकतर अभी भी निज़ाम शाहियों के पास था। उसके परे मेवाड़ के पहाड़ हैं, जहाँ राणा अमर सिंह 1614 तक डटे रहे; दक्कन के वे राज्य जिनके पास अकबर का अंतिम दूत भेजा गया, 'बीजापुर, गोलकोंडा, बीदर और कर्नाटक'; मदुरै और तंजावुर के नायक, चंद्रगिरि के विजयनगर के नाममात्र के सामंत, जैसा जेसुइट बर्रादास ने 1614 में पाया; और आईन से, असम, कोच देश और त्रिपुरा के राजा। माईबोंग के कछारी और जयंतिया अहोम बुरंजी (बरुआ का अनुवाद, 1930) से जोड़े गए, विस्तार गेट की हिस्ट्री ऑफ़ असम (1906) से। खाली छोड़े गए: हिमालय के पहाड़ी राज्य, नगा और मिज़ो पहाड़, मध्य भारत का वन प्रदेश, इक्केरी और कनारा तट, त्रावणकोर के उत्तर का केरल, और पुर्तगाली क्षेत्र, जिनके लिए यहाँ पढ़ा कुछ भी प्रमाण नहीं देता। आईन जैरेट के अनुवाद (1891) में, असद बेग इलियट और डाउसन के (1875) में, बर्रादास सुएल के (1900) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) और सुएल के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "jarrett-1891",
     "elliot-dowson-1875",
     "sewell-1900",
     "smith-1919",
+    "gait-1906",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"

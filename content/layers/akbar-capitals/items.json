@@ -394,5 +394,38 @@
       "https://archive.org/details/in.ernet.dli.2015.32527",
       "https://en.wikipedia.org/wiki/Udaipur,_Tripura"
     ]
+  },
+  {
+    "id": "kachari-capital",
+    "status": "draft",
+    "name": {
+      "en": "Maibong",
+      "hi": "माईबोंग"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.3017,
+      "lon": 93.17
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "identified": {
+      "en": "certain, placed at Maibong",
+      "hi": "निश्चित, Maibong पर"
+    },
+    "blurb": {
+      "en": "The capital of Kacharis.",
+      "hi": "कछारी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Maibang"
+    ]
   }
 ]

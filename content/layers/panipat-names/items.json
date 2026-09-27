@@ -441,8 +441,8 @@
     "category": "kachari",
     "priority": 1,
     "anchor": {
-      "lat": 25.2,
-      "lon": 93.0
+      "lat": 24.35,
+      "lon": 92.45
     },
     "regions": [
       "IN-AS"
@@ -452,6 +452,58 @@
       "hi": "हिडिम्बा के कछारी (दिमासा) राजा, अहोमों के करद, जिन्होंने 1771 तक अपनी राजधानी पहाड़ों में माईबोंग से कछार के मैदानों में खासपुर ले गए।"
     },
     "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://archive.org/details/dli.csl.4028"
+    ]
+  },
+  {
+    "id": "manipur",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.4,
+      "lon": 94.6
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "blurb": {
+      "en": "Manipur under Jai Siṃha (Bhāgyacandra), driven out by the Burmese in 1764; he sheltered with the Kacharis and the Ahoms, who restored him in 1768. The Ahoms called Manipur Mekhelī.",
+      "hi": "जय सिंह (भाग्यचंद्र) के अधीन मणिपुर, जिन्हें 1764 में बर्मियों ने निकाल दिया; उन्होंने कछारियों और अहोमों के यहाँ शरण ली, जिन्होंने 1768 में उन्हें पुनः स्थापित किया। अहोम मणिपुर को मेखेली कहते थे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "jaintia",
+    "status": "draft",
+    "name": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
+    },
+    "category": "jaintia",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.6,
+      "lon": 91.5
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "blurb": {
+      "en": "Jaintia, 'recognised and protected' by the Ahom kings since Rudra Siṃha's day (Tungkhungia Buranji, 1745), still sending envoys to the Ahom court in 1771.",
+      "hi": "जयंतिया, रुद्र सिंह के समय से अहोम राजाओं द्वारा 'मान्य और संरक्षित' (तुंगखुंगिया बुरंजी, 1745), जो 1771 में भी अहोम दरबार में दूत भेजता था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.22964",
       "https://archive.org/details/historyofassam00gait"
     ]
   }

@@ -117,6 +117,15 @@
         "hi": "त्रिपुरा"
       },
       "icon": "pin"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {

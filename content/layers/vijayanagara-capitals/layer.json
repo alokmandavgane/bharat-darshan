@@ -135,6 +135,24 @@
         "hi": "अहोम"
       },
       "icon": "pin"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "koch",
+      "color": "#4a7a8a",
+      "title": {
+        "en": "Koch kingdom",
+        "hi": "कोच राज्य"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {

@@ -136,6 +136,33 @@
         "hi": "अहोम"
       },
       "icon": "map"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "koch",
+      "color": "#4a7a8a",
+      "title": {
+        "en": "Koch kingdom",
+        "hi": "कोच राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "manipur",
+      "color": "#7a5a8a",
+      "title": {
+        "en": "Manipur",
+        "hi": "मणिपुर"
+      },
+      "icon": "map"
     }
   ],
   "note": {

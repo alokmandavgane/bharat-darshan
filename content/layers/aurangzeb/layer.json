@@ -115,6 +115,22 @@
         "en": "Ramnad",
         "hi": "रामनाड"
       }
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      }
+    },
+    {
+      "id": "jaintia",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Jaintia",
+        "hi": "जयंतिया"
+      }
     }
   ],
   "fields": {
@@ -180,8 +196,8 @@
     }
   },
   "note": {
-    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore; and in the Tamil south, from a Tamil chronicle of the Madurai Nāyakas in Taylor's translation (1835), Rāṇi Mangammāḷ's Madurai and the Setupatis' Ramnad. Left blank: Mysore, the Marāṭhās of Tanjore, the Tondaimān of Pudukkottai, the Himalayan hill states and the north-east hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य; और तमिल दक्षिण में, टेलर के अनुवाद (1835) में मदुरै के नायकों के एक तमिल वृत्तांत से, रानी मंगम्माळ का मदुरै और सेतुपतियों का रामनाड। खाली छोड़े गए: मैसूर, तंजावुर के मराठा, पुदुक्कोट्टै के तोंडैमान, हिमालय के पहाड़ी राज्य और पूर्वोत्तर के पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore; and in the Tamil south, from a Tamil chronicle of the Madurai Nāyakas in Taylor's translation (1835), Rāṇi Mangammāḷ's Madurai and the Setupatis' Ramnad. The Kacharis and Jaintia, both made Ahom tributaries by Rudra Siṃha in 1706-08, are added from the Tungkhungia Buranji (Bhuyan's translation, 1933), with extents from Gait's History of Assam (1906). Left blank: Mysore, the Marāṭhās of Tanjore, the Tondaimān of Pudukkottai, the Himalayan hill states, Manipur, Tripura and the Naga and Mizo hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य; और तमिल दक्षिण में, टेलर के अनुवाद (1835) में मदुरै के नायकों के एक तमिल वृत्तांत से, रानी मंगम्माळ का मदुरै और सेतुपतियों का रामनाड। कछारी और जयंतिया, जिन्हें रुद्र सिंह ने 1706-08 में अहोमों का करद बनाया, तुंगखुंगिया बुरंजी (भुइयाँ का अनुवाद, 1933) से जोड़े गए, विस्तार गेट की हिस्ट्री ऑफ़ असम (1906) से। खाली छोड़े गए: मैसूर, तंजावुर के मराठा, पुदुक्कोट्टै के तोंडैमान, हिमालय के पहाड़ी राज्य, मणिपुर, त्रिपुरा और नगा और मिज़ो पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "elliot-dowson-1877",
@@ -189,6 +205,8 @@
     "taylor-1835-ii",
     "taylor-1835-i",
     "smith-1919",
+    "gait-1906",
+    "bhuyan-1933",
     "census-2011",
     "datameet-maps",
     "wikipedia"

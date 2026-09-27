@@ -181,6 +181,24 @@
         "hi": "कछारी"
       },
       "icon": "map"
+    },
+    {
+      "id": "manipur",
+      "color": "#7a5a8a",
+      "title": {
+        "en": "Manipur",
+        "hi": "मणिपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jaintia",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Jaintia",
+        "hi": "जयंतिया"
+      },
+      "icon": "map"
     }
   ],
   "note": {

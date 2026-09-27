@@ -82,8 +82,8 @@
     "category": "ahom",
     "priority": 1,
     "anchor": {
-      "lat": 27.2,
-      "lon": 94.9
+      "lat": 26.9,
+      "lon": 94.6
     },
     "regions": [
       "IN-AS"
@@ -93,6 +93,81 @@
       "hi": "सुखांगफा (1293-1332) के अधीन पूर्वी असम के अहोम, जिनके विरुद्ध, एक परवर्ती वृत्तांत कहता है, 1337 में भेजी गई दिल्ली की सेना 'उस जादू-टोने की भूमि में नष्ट हो गई'।"
     },
     "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "kamata",
+    "status": "draft",
+    "name": {
+      "en": "Kāmatā",
+      "hi": "कामता"
+    },
+    "category": "kamata",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.35,
+      "lon": 90.1
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "Kāmatā, the western successor of Kāmarūpa, whose king made peace with the Ahom Sukhangpha and sent the princess Rajanī to him (Ahom Buranji); its extent rests on a Bhuiyā legend.",
+      "hi": "कामता, कामरूप का पश्चिमी उत्तराधिकारी, जिसके राजा ने अहोम सुखांगफा से संधि की और राजकुमारी रजनी को उनके पास भेजा (अहोम बुरंजी); इसका विस्तार एक भुइयाँ किंवदंती पर आधारित है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "chutiya",
+    "status": "draft",
+    "name": {
+      "en": "Chutiyās",
+      "hi": "चुटिया"
+    },
+    "category": "chutiya",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.85,
+      "lon": 95.65
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Chutiya kings of Sadiya, north and east of the Ahoms; a Chutiya king killed the Ahom king Sutupha in 1376 (Ahom Buranji), and the Ahoms annexed the kingdom in 1523.",
+      "hi": "सदिया के चुटिया राजा, अहोमों के उत्तर और पूर्व में; एक चुटिया राजा ने 1376 में अहोम राजा सुतुफा को मारा (अहोम बुरंजी), और अहोमों ने 1523 में राज्य मिला लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "kachari",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.95,
+      "lon": 93.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Kachari (Dimasa) kingdom on the south bank of the Brahmaputra, west of the Ahoms, who had pushed it back to the Dikhu; the Ahom Buranji's legend lists the Kacharis among Sukapha's tributaries.",
+      "hi": "ब्रह्मपुत्र के दक्षिणी तट पर कछारी (दिमासा) राज्य, अहोमों के पश्चिम में, जिन्होंने इसे दिखौ तक पीछे धकेला था; अहोम बुरंजी की किंवदंती कछारियों को सुकफा के करदों में गिनती है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
       "https://archive.org/details/historyofassam00gait"
     ]
   }

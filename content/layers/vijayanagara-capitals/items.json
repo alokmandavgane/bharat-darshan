@@ -460,5 +460,71 @@
       "https://archive.org/details/historyofassam00gait",
       "https://en.wikipedia.org/wiki/Suhungmung"
     ]
+  },
+  {
+    "id": "kachari-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dimapur",
+      "hi": "दीमापुर"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.9063,
+      "lon": 93.727
+    },
+    "regions": [
+      "IN-NL"
+    ],
+    "polity": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "identified": {
+      "en": "certain, placed at Dimapur (Kachari ruins)",
+      "hi": "निश्चित, Dimapur (Kachari ruins) पर"
+    },
+    "blurb": {
+      "en": "The capital of Kacharis.",
+      "hi": "कछारी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Dimapur"
+    ]
+  },
+  {
+    "id": "koch-capital",
+    "status": "draft",
+    "name": {
+      "en": "Koch Bihar",
+      "hi": "कोच बिहार"
+    },
+    "category": "koch",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.324,
+      "lon": 89.451
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
+    },
+    "identified": {
+      "en": "disputed, placed at Cooch Behar (Chikangram earlier)",
+      "hi": "विवादित, Cooch Behar (Chikangram earlier) पर"
+    },
+    "blurb": {
+      "en": "The capital of Koch kingdom.",
+      "hi": "कोच राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Cooch_Behar"
+    ]
   }
 ]

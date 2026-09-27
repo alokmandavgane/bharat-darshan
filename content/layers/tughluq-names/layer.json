@@ -46,6 +46,33 @@
         "hi": "अहोम"
       },
       "icon": "map"
+    },
+    {
+      "id": "kamata",
+      "color": "#5a6a9a",
+      "title": {
+        "en": "Kāmatā",
+        "hi": "कामता"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "chutiya",
+      "color": "#9a7a5a",
+      "title": {
+        "en": "Chutiyās",
+        "hi": "चुटिया"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "map"
     }
   ],
   "note": {

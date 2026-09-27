@@ -2450,6 +2450,13 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-28, ninetieth round: the north-east from two Buranjis in English (Bhuyan's Tungkhungia Buranji, 1933;
+  Barua's Ahom-Buranji, 1930), fetched on approval. 14 polities: Kāmatā, the Chutiyās and the Kacharis in c. 1330;
+  the Kacharis of Dimapur, Bisva Siṃha's Koch kingdom and Manipur in c. 1525; the Kacharis of Maibong and Jaintia in
+  c. 1605 and c. 1707; Manipur and Jaintia in c. 1760 and c. 1780. Extents follow Gait. Tripura stays blank after
+  c. 1605 (neither chronicle names it), c. 1200 stays blank (the Ahom Buranji starts with Sukapha). bhuyan-1933 and
+  barua-1930 registered; six era notes updated. North-east labels hand-placed in rows (the region is ~70 px tall at
+  1280x800); every new name shows. 48 tests and the build pass.
 - 2026-09-27, eighty-ninth round: the north-east. From the sources quoted in Gait's History of Assam (1906):
   Kāmarūpa in c. 850 (the Assam districts move out of the Pālas' "claimed" part) and c. 1030, the Ahoms in c. 1330,
   1525, 1760 and 1780, and the Kacharis in c. 1760 and 1780, with their capitals. c. 1200, the Koch, Jaintia and

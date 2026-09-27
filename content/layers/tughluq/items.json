@@ -652,5 +652,147 @@
       "en": "Charaideo",
       "hi": "चराइदेव"
     }
+  },
+  {
+    "id": "kamata-held",
+    "status": "draft",
+    "name": {
+      "en": "Kāmatā",
+      "hi": "कामता"
+    },
+    "category": "kamata",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      328,
+      329
+    ],
+    "verse": "Khun Kamta (read: Kamatā)",
+    "locus": {
+      "en": "Ahom Buranji, Barua 47",
+      "hi": "अहोम बुरंजी, Barua 47"
+    },
+    "identified": {
+      "en": "disputed, after History of Assam 1906",
+      "hi": "विवादित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kāmatā, the western successor of Kāmarūpa, whose king made peace with the Ahom Sukhangpha and sent the princess Rajanī to him (Ahom Buranji); its extent rests on a Bhuiyā legend.",
+      "hi": "कामता, कामरूप का पश्चिमी उत्तराधिकारी, जिसके राजा ने अहोम सुखांगफा से संधि की और राजकुमारी रजनी को उनके पास भेजा (अहोम बुरंजी); इसका विस्तार एक भुइयाँ किंवदंती पर आधारित है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#5a6a9a",
+    "grade": {
+      "en": "Kāmatā, between the Bar Nadi and the Karatoya",
+      "hi": "बड़ नदी और करतोया के बीच कामता"
+    },
+    "reading": "would seem to have ruled at the end of the thirteenth century over the country between the Bar Nadi and the Karatoya.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 41",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 41"
+    }
+  },
+  {
+    "id": "chutiya-held",
+    "status": "draft",
+    "name": {
+      "en": "Chutiyās",
+      "hi": "चुटिया"
+    },
+    "category": "chutiya",
+    "rank": 1,
+    "districts": [
+      307,
+      308,
+      309
+    ],
+    "verse": "Chutia (read: Chutiyā)",
+    "locus": {
+      "en": "Ahom Buranji, Barua 49",
+      "hi": "अहोम बुरंजी, Barua 49"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Chutiya kings of Sadiya, north and east of the Ahoms; a Chutiya king killed the Ahom king Sutupha in 1376 (Ahom Buranji), and the Ahoms annexed the kingdom in 1523.",
+      "hi": "सदिया के चुटिया राजा, अहोमों के उत्तर और पूर्व में; एक चुटिया राजा ने 1376 में अहोम राजा सुतुफा को मारा (अहोम बुरंजी), और अहोमों ने 1523 में राज्य मिला लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#9a7a5a",
+    "grade": {
+      "en": "The Chutiya kingdom of Sadiya",
+      "hi": "सदिया का चुटिया राज्य"
+    },
+    "reading": "Chutiya kings were reigning at Sadiya at the beginning of the thirteenth century,",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 40",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 40"
+    },
+    "capital": {
+      "en": "Sadiya",
+      "hi": "सदिया"
+    }
+  },
+  {
+    "id": "kachari-held",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "rank": 1,
+    "districts": [
+      265,
+      305,
+      312,
+      313,
+      314,
+      315
+    ],
+    "verse": "Kucharis (read: Kachārīs)",
+    "locus": {
+      "en": "Ahom Buranji, Barua 38",
+      "hi": "अहोम बुरंजी, Barua 38"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachari (Dimasa) kingdom on the south bank of the Brahmaputra, west of the Ahoms, who had pushed it back to the Dikhu; the Ahom Buranji's legend lists the Kacharis among Sukapha's tributaries.",
+      "hi": "ब्रह्मपुत्र के दक्षिणी तट पर कछारी (दिमासा) राज्य, अहोमों के पश्चिम में, जिन्होंने इसे दिखौ तक पीछे धकेला था; अहोम बुरंजी की किंवदंती कछारियों को सुकफा के करदों में गिनती है।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.4028",
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#8a6a3a",
+    "grade": {
+      "en": "The Kachari kingdom from the Dikhu to the Kalang, with the Dhansiri valley and North Cachar",
+      "hi": "दिखौ से कलंग तक कछारी राज्य, धनसिरी घाटी और उत्तरी कछार सहित"
+    },
+    "reading": "from the Dikhu to the Kallang, or beyond, and included also",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 243",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 243"
+    }
   }
 ]

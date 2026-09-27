@@ -118,6 +118,24 @@
         "hi": "त्रिपुरा"
       },
       "icon": "map"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jaintia",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Jaintia",
+        "hi": "जयंतिया"
+      },
+      "icon": "map"
     }
   ],
   "note": {
