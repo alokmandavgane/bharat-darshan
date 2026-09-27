@@ -1,0 +1,27 @@
+[
+  {
+    "id": "tughluq",
+    "status": "draft",
+    "name": {
+      "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
+      "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
+    },
+    "category": "tughluq",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.6,
+      "lon": 80.0
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "Muḥammad bin Tughluq's empire, 'far larger than that under the rule of any of his Muhammadan predecessors', from the Panjab to Bengal and Ma'bar. After 1338-40 Bengal, Ma'bar and Tilang broke away; Vijayanagara and the Bahmanīs rose.",
+      "hi": "मुहम्मद बिन तुग़लक़ का साम्राज्य, 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा', पंजाब से बंगाल और मअबर तक। 1338-40 के बाद बंगाल, मअबर और तिलंग अलग हो गए; विजयनगर और बहमनी उठे।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.458719",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "id": "tughluq-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals and provincial seats of c. 1330 CE",
+    "hi": "लगभग 1330 ई. की राजधानियाँ और प्रांतीय केंद्र"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "seat",
+      "color": "#6e2c1a",
+      "icon": "pin",
+      "title": {
+        "en": "Capital or provincial seat",
+        "hi": "राजधानी या प्रांतीय केंद्र"
+      }
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Role",
+        "hi": "भूमिका"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Delhi and Daulatābād, the two capitals, and the provincial seats of Lakhnautī and Arangal (Sulṭānpur), each named in Baranī or al-ʿUmarī.",
+    "hi": "दिल्ली और दौलताबाद, दो राजधानियाँ, और लखनौती और अरंगल (सुल्तानपुर) के प्रांतीय केंद्र, हर एक बरनी या अल-उमरी में नामित।"
+  },
+  "sources": [
+    "elliot-dowson-1871",
+    "wikipedia"
+  ]
+}

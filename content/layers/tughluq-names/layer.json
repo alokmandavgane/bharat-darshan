@@ -1,0 +1,32 @@
+{
+  "id": "tughluq-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: c. 1330 CE",
+    "hi": "नाम: लगभग 1330 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "tughluq",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
+        "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The empire's name, laid on the map.",
+    "hi": "साम्राज्य का नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "smith-1919",
+    "elliot-dowson-1871"
+  ]
+}

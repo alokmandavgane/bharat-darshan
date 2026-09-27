@@ -46,7 +46,11 @@
     "ghurid",
     "ghurid-names",
     "ghurid-capitals",
-    "ghurid-evidence"
+    "ghurid-evidence",
+    "tughluq",
+    "tughluq-names",
+    "tughluq-capitals",
+    "tughluq-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -237,6 +241,27 @@
         "ghurid-names",
         "ghurid-capitals",
         "ghurid-evidence"
+      ]
+    },
+    {
+      "id": "tughluq",
+      "display": {
+        "en": "c. 1330 CE",
+        "hi": "लगभग 1330 ई."
+      },
+      "title": {
+        "en": "The Tughluq empire at its height",
+        "hi": "अपने चरम पर तुग़लक़ साम्राज्य"
+      },
+      "blurb": {
+        "en": "Muḥammad bin Tughluq's provinces, from the Panjab to Bengal, the Deccan and Ma'bar, graded by how firmly they were held, from Baranī, al-ʿUmarī and Smith's Oxford History (1919).",
+        "hi": "मुहम्मद बिन तुग़लक़ के प्रांत, पंजाब से बंगाल, दक्कन और मअबर तक, इस आधार पर श्रेणीबद्ध कि वे कितनी दृढ़ता से सँभाले गए, बरनी, अल-उमरी और स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) से।"
+      },
+      "layers": [
+        "tughluq",
+        "tughluq-names",
+        "tughluq-capitals",
+        "tughluq-evidence"
       ]
     }
   ],

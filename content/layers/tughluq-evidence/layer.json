@@ -1,0 +1,75 @@
+{
+  "id": "tughluq-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 1330 CE",
+    "hi": "लगभग 1330 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "campaign",
+      "color": "#9e1b32",
+      "icon": "pin",
+      "title": {
+        "en": "Raids",
+        "hi": "धावे"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "Ulugh Khān's raid on Jājnagar (Orissa) in 1324.",
+    "hi": "1324 में उलुग़ ख़ान का जाजनगर (ओडिशा) पर धावा।"
+  },
+  "sources": [
+    "elliot-dowson-1871",
+    "wikipedia"
+  ]
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "jajnagar",
+    "status": "draft",
+    "name": {
+      "en": "Jājnagar",
+      "hi": "जाजनगर"
+    },
+    "category": "campaign",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.48463056,
+      "lon": 85.864425
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "kind": {
+      "en": "Campaign",
+      "hi": "अभियान"
+    },
+    "identified": {
+      "en": "placed at Cuttack, the Gaṅga capital (approximate)",
+      "hi": "Cuttack, the Gaṅga capital (approximate) पर"
+    },
+    "blurb": {
+      "en": "Ulugh Khān's raid from Tilang on the Gaṅga kingdom of Orissa (1324), which brought back forty elephants.",
+      "hi": "तिलंग से उलुग़ ख़ान का ओडिशा के गंग राज्य पर धावा (1324), जो चालीस हाथी ले आया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.458719",
+      "https://en.wikipedia.org/wiki/Barabati_fort"
+    ],
+    "reading": "there took forty elephants, with which he returned to JTilang.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), p. 234",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), पृ. 234"
+    },
+    "verse": "J4jnagar (read: Jājnagar)",
+    "locus": {
+      "en": "Baranī, E&D iii. 234, Jajnagar",
+      "hi": "बरनी, E&D iii. 234, Jajnagar"
+    }
+  }
+]

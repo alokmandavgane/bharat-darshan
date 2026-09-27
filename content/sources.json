@@ -929,6 +929,42 @@
         "en": "The chronicles the kingdoms page quotes for the Ghurid conquest, c. 1200 CE.",
         "hi": "वे इतिवृत्त जिन्हें राज्य पृष्ठ लगभग 1200 ई. की ग़ोरी विजय के लिए उद्धृत करता है।"
       }
+    },
+    "smith-1919": {
+      "title": {
+        "en": "V. A. Smith, The Oxford History of India (1919)",
+        "hi": "वी. ए. स्मिथ, द ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919)"
+      },
+      "publisher": {
+        "en": "Clarendon Press, Oxford",
+        "hi": "क्लैरेंडन प्रेस, ऑक्सफ़र्ड"
+      },
+      "url": "https://archive.org/details/oxfordhistoryofi00smituoft",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The history the kingdoms page follows for the extents of the eras from c. 1330 CE.",
+        "hi": "वह इतिहास जिसका राज्य पृष्ठ लगभग 1330 ई. से युगों के विस्तार के लिए अनुसरण करता है।"
+      }
+    },
+    "elliot-dowson-1871": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. III (1871)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियन्स, खंड III (1871)"
+      },
+      "publisher": {
+        "en": "Trübner, London: Baranī's Tārīkh-i Fīrūz Shāhī and al-ʿUmarī's Masālik al-abṣār in translation",
+        "hi": "ट्रुब्नर, लंदन: बरनी का तारीख़-ए-फ़ीरोज़शाही और अल-उमरी का मसालिक उल-अबसार, अनुवाद में"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.458719",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The chronicles the kingdoms page quotes for the Tughluq empire, c. 1330 CE.",
+        "hi": "वे इतिवृत्त जिन्हें राज्य पृष्ठ लगभग 1330 ई. के तुग़लक़ साम्राज्य के लिए उद्धृत करता है।"
+      }
     }
   }
 }

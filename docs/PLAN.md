@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-eighth round: the Tughluq empire at its height, c. 1330 CE. "Kingdoms and empires" gains its
+  tenth era, the first drawn mainly from secondary scholarship: extents from Smith's Oxford History of India (1919),
+  attested by Baranī and al-ʿUmarī in Elliot and Dowson's vol. III (1871).
+  - **The areas:** one polity in five shades (Maurya-style): Hindustan, Malwa and Gujarat; Bengal; the Deccan;
+    Dvārasamudra and Ma'bar (disputed); Jājnagar, Orissa (disputed, only raided). Jājnagar's first shade was too
+    close to the base map's beige and was changed to a pale mauve.
+  - **Capitals and pins:** the era uses `seats` (category `seat`): Delhi, Daulatābād, Lakhnautī and Arangal; one
+    campaign pin, Jājnagar. The seats layer's quote field says "As the text has it", not "As the inscription".
+  - Checked at 1280x800; 48 tests and the build pass.
 - 2026-09-27, seventy-seventh round: the Ghurid conquest and the southern kingdoms, c. 1200 CE. "Kingdoms and
   empires" gains its ninth era. It is drawn from Hasan Niẓāmī and Minhāj in Elliot and Dowson's vol. II (1869),
   four inscriptions in Epigraphia Indica VI and IX (Gadag, Tirukkaḍaiyūr, Anmakoṇḍa, Māndhātā) and Smith (1914).
