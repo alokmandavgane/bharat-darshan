@@ -1195,6 +1195,131 @@
    "path": "layers/basins.json"
   },
   {
+   "id": "biosphere-reserves",
+   "type": "points",
+   "marker": "symbol",
+   "size": {
+    "field": "area_km2",
+    "domain": [
+     750,
+     12500
+    ],
+    "range": [
+     10,
+     34
+    ],
+    "legend": [
+     1000,
+     5000,
+     10000
+    ]
+   },
+   "title": {
+    "en": "Biosphere reserves",
+    "hi": "जैवमंडल आरक्षित क्षेत्र"
+   },
+   "icon": "leaf",
+   "group": "wildlife",
+   "default_on": false,
+   "count": 18,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "himalaya",
+     "color": "#7f95a3",
+     "title": {
+      "en": "Himalaya",
+      "hi": "हिमालय"
+     }
+    },
+    {
+     "id": "northeast",
+     "color": "#3f7f9c",
+     "title": {
+      "en": "North-east",
+      "hi": "पूर्वोत्तर"
+     }
+    },
+    {
+     "id": "central",
+     "color": "#b04a26",
+     "title": {
+      "en": "Central India and the Eastern Ghats",
+      "hi": "मध्य भारत और पूर्वी घाट"
+     }
+    },
+    {
+     "id": "western-ghats",
+     "color": "#3f7f52",
+     "title": {
+      "en": "Western Ghats",
+      "hi": "पश्चिमी घाट"
+     }
+    },
+    {
+     "id": "desert",
+     "color": "#8f6f35",
+     "title": {
+      "en": "Desert",
+      "hi": "मरुस्थल"
+     }
+    },
+    {
+     "id": "coast",
+     "color": "#5fa3a0",
+     "title": {
+      "en": "Coast and delta",
+      "hi": "तट और डेल्टा"
+     }
+    },
+    {
+     "id": "islands",
+     "color": "#7a5a9c",
+     "title": {
+      "en": "Islands",
+      "hi": "द्वीप"
+     }
+    }
+   ],
+   "fields": {
+    "area_km2": {
+     "type": "number",
+     "required": true,
+     "label": {
+      "en": "Area",
+      "hi": "क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "designated": {
+     "type": "year",
+     "label": {
+      "en": "Designated",
+      "hi": "घोषित"
+     }
+    },
+    "unesco": {
+     "type": "year",
+     "label": {
+      "en": "In UNESCO's world network since",
+      "hi": "यूनेस्को के विश्व नेटवर्क में"
+     }
+    }
+   },
+   "note": {
+    "en": "All eighteen biosphere reserves India has designated, thirteen of them in UNESCO's World Network. A biosphere reserve is a whole landscape rather than a park: a protected core, often a national park or tiger reserve, inside a much larger area where people live and farm. A circle stands at its heart and cannot show its shape, which can span three states.",
+    "hi": "भारत के घोषित सभी अठारह जैवमंडल आरक्षित क्षेत्र, जिनमें से तेरह यूनेस्को के विश्व नेटवर्क में हैं। जैवमंडल आरक्षित क्षेत्र उद्यान नहीं, पूरा भूदृश्य है: एक संरक्षित कोर, प्रायः कोई राष्ट्रीय उद्यान या बाघ अभयारण्य, एक कहीं बड़े क्षेत्र के भीतर जहाँ लोग रहते और खेती करते हैं। वृत्त उसके केंद्र पर है और उसका आकार नहीं दिखा सकता, जो तीन राज्यों तक फैला हो सकता है।"
+   },
+   "sources": [
+    "wikipedia",
+    "unesco-mab"
+   ],
+   "path": "layers/biosphere-reserves.json"
+  },
+  {
    "id": "cities",
    "type": "points",
    "marker": "dot",
@@ -8391,6 +8516,82 @@
    }
   },
   {
+   "id": "protected-areas",
+   "type": "points",
+   "marker": "dot",
+   "title": {
+    "en": "National parks and sanctuaries",
+    "hi": "राष्ट्रीय उद्यान और अभयारण्य"
+   },
+   "icon": "leaf",
+   "group": "wildlife",
+   "default_on": false,
+   "count": 524,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "national-park",
+     "color": "#2f6b3f",
+     "title": {
+      "en": "National park",
+      "hi": "राष्ट्रीय उद्यान"
+     }
+    },
+    {
+     "id": "sanctuary",
+     "color": "#8a9a3c",
+     "title": {
+      "en": "Wildlife sanctuary",
+      "hi": "वन्यजीव अभयारण्य"
+     }
+    },
+    {
+     "id": "bird",
+     "color": "#3f8fa8",
+     "title": {
+      "en": "Bird sanctuary",
+      "hi": "पक्षी अभयारण्य"
+     }
+    },
+    {
+     "id": "reserve",
+     "color": "#a88a5a",
+     "title": {
+      "en": "Conservation or community reserve",
+      "hi": "संरक्षण या सामुदायिक आरक्षित क्षेत्र"
+     }
+    }
+   ],
+   "fields": {
+    "area_km2": {
+     "type": "int",
+     "label": {
+      "en": "Area",
+      "hi": "क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "established": {
+     "type": "year",
+     "label": {
+      "en": "Established",
+      "hi": "स्थापना"
+     }
+    }
+   },
+   "note": {
+    "en": "India's national parks and wildlife sanctuaries as Wikidata records them, a bead each at the point it gives. Wikidata is not the official register: it has almost all of the 106 national parks but only about three in four of the 570-odd sanctuaries, and few of the conservation and community reserves. Tiger and biosphere reserves have layers of their own.",
+    "hi": "भारत के राष्ट्रीय उद्यान और वन्यजीव अभयारण्य, जैसे विकिडेटा उन्हें दर्ज करता है, हर एक उसके दिए बिंदु पर एक मनका। विकिडेटा आधिकारिक रजिस्टर नहीं है: इसमें 106 राष्ट्रीय उद्यानों में से लगभग सभी हैं, पर 570 के आसपास अभयारण्यों में से केवल लगभग तीन-चौथाई, और संरक्षण तथा सामुदायिक आरक्षित क्षेत्र बहुत कम। बाघ और जैवमंडल आरक्षित क्षेत्रों की अपनी परतें हैं।"
+   },
+   "sources": [
+    "wikidata"
+   ],
+   "path": "layers/protected-areas.json"
+  },
+  {
    "id": "rail",
    "type": "lines",
    "title": {
@@ -9679,6 +9880,130 @@
    }
   },
   {
+   "id": "tiger-reserves",
+   "type": "points",
+   "marker": "symbol",
+   "size": {
+    "field": "area_km2",
+    "domain": [
+     450,
+     3300
+    ],
+    "range": [
+     12,
+     32
+    ],
+    "legend": [
+     500,
+     1500,
+     3000
+    ]
+   },
+   "title": {
+    "en": "Tiger reserves",
+    "hi": "बाघ अभयारण्य"
+   },
+   "icon": "paw",
+   "group": "wildlife",
+   "default_on": false,
+   "count": 58,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "shivalik-gangetic",
+     "color": "#8a9a3c",
+     "title": {
+      "en": "Shivalik hills and Gangetic plain",
+      "hi": "शिवालिक पहाड़ियाँ और गंगा मैदान"
+     }
+    },
+    {
+     "id": "central-eastern-ghats",
+     "color": "#b04a26",
+     "title": {
+      "en": "Central India and Eastern Ghats",
+      "hi": "मध्य भारत और पूर्वी घाट"
+     }
+    },
+    {
+     "id": "western-ghats",
+     "color": "#3f7f52",
+     "title": {
+      "en": "Western Ghats",
+      "hi": "पश्चिमी घाट"
+     }
+    },
+    {
+     "id": "northeast-brahmaputra",
+     "color": "#3f7f9c",
+     "title": {
+      "en": "North-east hills and Brahmaputra plains",
+      "hi": "पूर्वोत्तर पहाड़ियाँ और ब्रह्मपुत्र मैदान"
+     }
+    },
+    {
+     "id": "sundarbans",
+     "color": "#7a5a9c",
+     "title": {
+      "en": "Sundarbans",
+      "hi": "सुंदरबन"
+     }
+    }
+   ],
+   "fields": {
+    "area_km2": {
+     "type": "number",
+     "required": true,
+     "label": {
+      "en": "Area",
+      "hi": "क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "core_km2": {
+     "type": "number",
+     "label": {
+      "en": "Core (critical tiger habitat)",
+      "hi": "कोर (महत्वपूर्ण बाघ पर्यावास)"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "buffer_km2": {
+     "type": "number",
+     "label": {
+      "en": "Buffer",
+      "hi": "बफ़र"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    },
+    "notified": {
+     "type": "year",
+     "label": {
+      "en": "Notified as a tiger reserve",
+      "hi": "बाघ अभयारण्य के रूप में अधिसूचित"
+     }
+    }
+   },
+   "note": {
+    "en": "All 58 tiger reserves the National Tiger Conservation Authority lists, each a circle at the heart of the reserve, its area the reserve's. A reserve is a core kept free of people and a buffer around it where people live and work; the colour is the tiger landscape it belongs to. The year is the latest notification, not when the reserve began: most of the first nine date from Project Tiger in 1973.",
+    "hi": "राष्ट्रीय बाघ संरक्षण प्राधिकरण द्वारा सूचीबद्ध सभी 58 बाघ अभयारण्य, हर एक अपने केंद्र पर एक वृत्त, जिसका क्षेत्रफल अभयारण्य का है। अभयारण्य में एक कोर होता है जहाँ लोग नहीं बसते, और उसके चारों ओर बफ़र जहाँ लोग रहते और काम करते हैं; रंग उस बाघ-भूदृश्य का है जिसका यह भाग है। वर्ष सबसे नई अधिसूचना का है, अभयारण्य की शुरुआत का नहीं: पहले नौ में से अधिकांश 1973 के प्रोजेक्ट टाइगर से हैं।"
+   },
+   "sources": [
+    "ntca",
+    "wikipedia"
+   ],
+   "path": "layers/tiger-reserves.json"
+  },
+  {
    "id": "tughluq-capitals",
    "type": "points",
    "title": {
@@ -10650,12 +10975,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 45966,
-   "sha256": "777db92089bd"
+   "size": 48051,
+   "sha256": "732a1bfe033b"
   },
   "sources.json": {
-   "size": 54601,
-   "sha256": "7b12e35c1073"
+   "size": 56735,
+   "sha256": "069686485934"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -10876,6 +11201,10 @@
   "layers/basins.json": {
    "size": 23719,
    "sha256": "509f311ab425"
+  },
+  "layers/biosphere-reserves.json": {
+   "size": 19138,
+   "sha256": "5366b5138ae9"
   },
   "layers/cities.json": {
    "size": 308980,
@@ -11201,6 +11530,10 @@
    "size": 22199,
    "sha256": "fd5758563b3a"
   },
+  "layers/protected-areas.json": {
+   "size": 208611,
+   "sha256": "67d6c6bf3128"
+  },
   "layers/rail.json": {
    "size": 509505,
    "sha256": "6b4f926e2030"
@@ -11272,6 +11605,10 @@
   "layers/sunga.json": {
    "size": 31532,
    "sha256": "10cb4aea6135"
+  },
+  "layers/tiger-reserves.json": {
+   "size": 53703,
+   "sha256": "93775ea4d0b8"
   },
   "layers/tughluq-areas.bin.gz": {
    "size": 6675,
