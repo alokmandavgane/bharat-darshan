@@ -642,7 +642,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 11,
+   "count": 13,
    "reviewed": 0,
    "categories": [
     {
@@ -721,8 +721,8 @@
      "id": "calicut",
      "color": "#9e6a2f",
      "title": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
      },
      "icon": "pin"
     },
@@ -741,6 +741,24 @@
      "title": {
       "en": "Travancore",
       "hi": "त्रावणकोर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "madurai",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "ramnad",
+     "color": "#9a4a6a",
+     "title": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
      },
      "icon": "pin"
     }
@@ -762,8 +780,8 @@
     }
    },
    "note": {
-    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi and Padmanābhapuram.",
-    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि और पद्मनाभपुरम।"
+    "en": "Delhi, Satara, Udaipur, Jodhpur, Āmer, Garhgaon, Kūch Bihār, Bednūr, Kozhikode, Kochi, Padmanābhapuram, Tiruchirāppaḷḷi and Rāmanāthapuram.",
+    "hi": "दिल्ली, सातारा, उदयपुर, जोधपुर, आमेर, गढ़गाँव, कूच बिहार, बेदनूर, कोझिकोड, कोच्चि, पद्मनाभपुरम, तिरुचिरापल्ली और रामनाथपुरम।"
    },
    "sources": [
     "smith-1919",
@@ -791,7 +809,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 11,
+   "count": 13,
    "reviewed": 0,
    "categories": [
     {
@@ -870,8 +888,8 @@
      "id": "calicut",
      "color": "#9e6a2f",
      "title": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
      },
      "icon": "map"
     },
@@ -890,6 +908,24 @@
      "title": {
       "en": "Travancore",
       "hi": "त्रावणकोर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "madurai",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "ramnad",
+     "color": "#9a4a6a",
+     "title": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
      },
      "icon": "map"
     }
@@ -924,7 +960,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 12,
+   "count": 14,
    "reviewed": 0,
    "categories": [
     {
@@ -995,8 +1031,8 @@
      "id": "calicut",
      "color": "#9e6a2f",
      "title": {
-      "en": "Calicut (the Sāmūtiri)",
-      "hi": "कालीकट (सामूतिरि)"
+      "en": "Calicut",
+      "hi": "कालीकट"
      }
     },
     {
@@ -1013,6 +1049,22 @@
      "title": {
       "en": "Travancore",
       "hi": "त्रावणकोर"
+     }
+    },
+    {
+     "id": "madurai",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+     }
+    },
+    {
+     "id": "ramnad",
+     "color": "#9a4a6a",
+     "title": {
+      "en": "Ramnad",
+      "hi": "रामनाड"
      }
     }
    ],
@@ -1079,12 +1131,14 @@
     }
    },
    "note": {
-    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore. Left blank: Mysore, the Nāyakas of Madurai, the Marāṭhās of Tanjore, the Setupatis, the Himalayan hill states and the north-east hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य। खाली छोड़े गए: मैसूर, मदुरै के नायक, तंजावुर के मराठा, सेतुपति, हिमालय के पहाड़ी राज्य और पूर्वोत्तर के पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore; and in the Tamil south, from a Tamil chronicle of the Madurai Nāyakas in Taylor's translation (1835), Rāṇi Mangammāḷ's Madurai and the Setupatis' Ramnad. Left blank: Mysore, the Marāṭhās of Tanjore, the Tondaimān of Pudukkottai, the Himalayan hill states and the north-east hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य; और तमिल दक्षिण में, टेलर के अनुवाद (1835) में मदुरै के नायकों के एक तमिल वृत्तांत से, रानी मंगम्माळ का मदुरै और सेतुपतियों का रामनाड। खाली छोड़े गए: मैसूर, तंजावुर के मराठा, पुदुक्कोट्टै के तोंडैमान, हिमालय के पहाड़ी राज्य और पूर्वोत्तर के पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877",
     "hamilton-1727",
+    "taylor-1835-ii",
+    "taylor-1835-i",
     "smith-1919",
     "census-2011",
     "datameet-maps",
@@ -11381,12 +11435,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 49037,
-   "sha256": "36d1414436df"
+   "size": 49087,
+   "sha256": "b6d96c2fa4b7"
   },
   "sources.json": {
-   "size": 56735,
-   "sha256": "069686485934"
+   "size": 58520,
+   "sha256": "0d68f83c8292"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -11585,20 +11639,20 @@
    "sha256": "37634bef52db"
   },
   "layers/aurangzeb-areas.bin.gz": {
-   "size": 7275,
-   "sha256": "9e4e5575daaf"
+   "size": 7680,
+   "sha256": "df13814e9cc4"
   },
   "layers/aurangzeb-capitals.json": {
-   "size": 8634,
-   "sha256": "8de323c06216"
+   "size": 10052,
+   "sha256": "4511e3f74729"
   },
   "layers/aurangzeb-names.json": {
-   "size": 8445,
-   "sha256": "a77f62683538"
+   "size": 10048,
+   "sha256": "fdd3655b4523"
   },
   "layers/aurangzeb.json": {
-   "size": 23250,
-   "sha256": "59f63fd042bb"
+   "size": 27155,
+   "sha256": "962817538878"
   },
   "layers/basins-areas.bin.gz": {
    "size": 10351,
