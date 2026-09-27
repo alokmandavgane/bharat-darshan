@@ -37,6 +37,15 @@
         "hi": "कश्मीर"
       },
       "icon": "map"
+    },
+    {
+      "id": "ahom",
+      "color": "#5a8a3a",
+      "title": {
+        "en": "Ahoms",
+        "hi": "अहोम"
+      },
+      "icon": "map"
     }
   ],
   "note": {

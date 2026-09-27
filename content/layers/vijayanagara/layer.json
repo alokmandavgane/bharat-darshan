@@ -115,6 +115,14 @@
         "en": "Kashmir",
         "hi": "कश्मीर"
       }
+    },
+    {
+      "id": "ahom",
+      "color": "#5a8a3a",
+      "title": {
+        "en": "Ahoms",
+        "hi": "अहोम"
+      }
     }
   ],
   "fields": {
@@ -180,14 +188,15 @@
     }
   },
   "note": {
-    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. The Shāh Mīrī sultanate of Kashmir is added from Prājyabhaṭṭa and Śuka's chronicle (Dutt, 1898). Left blank: Khandesh, the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, Assam and the north-east, and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। कश्मीर की शाह मीरी सल्तनत प्राज्यभट्ट और शुक के वृत्तांत (दत्त, 1898) से जोड़ी गई। खाली छोड़े गए: ख़ानदेश, पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, असम और पूर्वोत्तर, और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. The Shāh Mīrī sultanate of Kashmir is added from Prājyabhaṭṭa and Śuka's chronicle (Dutt, 1898). Left blank: Khandesh, the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, the Koch and the rest of the north-east (the Ahoms are added from the sources quoted in Gait's History of Assam (1906)), and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। कश्मीर की शाह मीरी सल्तनत प्राज्यभट्ट और शुक के वृत्तांत (दत्त, 1898) से जोड़ी गई। खाली छोड़े गए: ख़ानदेश, पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, कोच और शेष पूर्वोत्तर (अहोम गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "leyden-erskine-1826",
     "sewell-1900",
     "smith-1919",
     "dutt-1898-iii",
+    "gait-1906",
     "census-2011",
     "datameet-maps",
     "wikipedia"

@@ -97,5 +97,38 @@
       "https://archive.org/details/bwb_KV-350-852",
       "https://en.wikipedia.org/wiki/Patan,_Gujarat"
     ]
+  },
+  {
+    "id": "kamarupa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Durjayā",
+      "hi": "दुर्जया"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.1445,
+      "lon": 91.7362
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "identified": {
+      "en": "disputed, placed at near Guwahati (the site is disputed)",
+      "hi": "विवादित, near Guwahati (the site is disputed) पर"
+    },
+    "blurb": {
+      "en": "The capital of Kāmarūpa.",
+      "hi": "कामरूप की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Guwahati"
+    ]
   }
 ]

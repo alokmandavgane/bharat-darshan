@@ -229,5 +229,38 @@
       "https://archive.org/details/RajataranginiVol1",
       "https://en.wikipedia.org/wiki/Srinagar"
     ]
+  },
+  {
+    "id": "kamarupa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Hāruppeśvara",
+      "hi": "हारुप्पेश्वर"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.6338,
+      "lon": 92.8
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "identified": {
+      "en": "disputed, placed at Tezpur (approximate)",
+      "hi": "विवादित, Tezpur (approximate) पर"
+    },
+    "blurb": {
+      "en": "The capital of Kāmarūpa.",
+      "hi": "कामरूप की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Tezpur"
+    ]
   }
 ]

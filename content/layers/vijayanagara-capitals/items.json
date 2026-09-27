@@ -427,5 +427,38 @@
       "https://archive.org/details/kingsofkashmira03kalhuoft",
       "https://en.wikipedia.org/wiki/Srinagar"
     ]
+  },
+  {
+    "id": "ahom-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bakata",
+      "hi": "बकता"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3,
+      "lon": 95.0
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "identified": {
+      "en": "disputed, placed at Bakata on the Dihing (approximate)",
+      "hi": "विवादित, Bakata on the Dihing (approximate) पर"
+    },
+    "blurb": {
+      "en": "The capital of Ahoms.",
+      "hi": "अहोम की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Suhungmung"
+    ]
   }
 ]

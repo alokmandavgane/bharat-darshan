@@ -73,6 +73,15 @@
         "hi": "कश्मीर"
       },
       "icon": "map"
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f8a7a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      },
+      "icon": "map"
     }
   ],
   "note": {

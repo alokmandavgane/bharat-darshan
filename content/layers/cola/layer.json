@@ -67,6 +67,14 @@
         "en": "Kashmir",
         "hi": "कश्मीर"
       }
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f8a7a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      }
     }
   ],
   "fields": {
@@ -132,13 +140,14 @@
     }
   },
   "note": {
-    "en": "India about 1030 CE. In the south is Rājendra Cola I's empire: the Kāverī core round his new capital, the lands Smith calls held from the Madras Presidency to Mysore, and Veṅgī under Cola sway. His northern expedition to the Gaṅgā was a raid, not a conquest, and is not drawn as held. Beside it are the Cālukyas of Kalyāṇi under Jayasiṃha II, whom Rājendra drove off at Muyaṅgi, and Bhoja's Mālava, which al-Bīrūnī names 'in our days'. Then Mahīpāla's Pāla kingdom of Bihar and Bengal, the Caulukyas of Anhilvāra, and Kashmir, closed to strangers. The Panjab is drawn as Mahmūd of Ghazni had taken it. Left blank: the Gangetic doab after Mahmūd's sack of Kanauj, the Chandels, the Kalacuris, Orissa, Lāṭa, the Deccan's east and Rajasthan, where nothing read here speaks for this date. Al-Bīrūnī is quoted in Sachau's 1888 translation. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1030 ई. का भारत। दक्षिण में राजेन्द्र चोल प्रथम का साम्राज्य है: उनकी नई राजधानी के आसपास कावेरी केंद्र, वे भूमियाँ जिन्हें स्मिथ मद्रास प्रेसीडेंसी से मैसूर तक अधिकृत बताते हैं, और चोल प्रभुत्व में वेंगी। गंगा तक उनका उत्तरी अभियान एक धावा था, विजय नहीं, और अधिकृत नहीं दिखाया गया। उसके पास जयसिंह द्वितीय के अधीन कल्याणी के चालुक्य हैं, जिन्हें राजेन्द्र ने मुयंगि में भगाया, और भोज का मालव, जिसे अल-बीरूनी 'हमारे दिनों में' बताते हैं। फिर महीपाल का बिहार और बंगाल का पाल राज्य, अणहिलवाड के चौलुक्य, और अजनबियों के लिए बंद कश्मीर। पंजाब वैसा दिखाया गया है जैसा ग़ज़नी के महमूद ने उसे लिया था। खाली छोड़े गए: महमूद की कन्नौज-लूट के बाद का गंगा दोआब, चंदेल, कलचुरि, ओडिशा, लाट, दक्कन का पूर्व और राजस्थान, जहाँ यहाँ पढ़ा गया कुछ भी इस समय के लिए नहीं बोलता। अल-बीरूनी साख़ाउ के 1888 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 1030 CE. In the south is Rājendra Cola I's empire: the Kāverī core round his new capital, the lands Smith calls held from the Madras Presidency to Mysore, and Veṅgī under Cola sway. His northern expedition to the Gaṅgā was a raid, not a conquest, and is not drawn as held. Beside it are the Cālukyas of Kalyāṇi under Jayasiṃha II, whom Rājendra drove off at Muyaṅgi, and Bhoja's Mālava, which al-Bīrūnī names 'in our days'. Then Mahīpāla's Pāla kingdom of Bihar and Bengal, the Caulukyas of Anhilvāra, and Kashmir, closed to strangers. The Panjab is drawn as Mahmūd of Ghazni had taken it. Ratnapāla's Kāmarūpa is added from his Bargaon copper-plate, in Hoernle's translation printed by Gait (1906). Left blank: the Gangetic doab after Mahmūd's sack of Kanauj, the Chandels, the Kalacuris, Orissa, Lāṭa, the Deccan's east and Rajasthan, where nothing read here speaks for this date. Al-Bīrūnī is quoted in Sachau's 1888 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1030 ई. का भारत। दक्षिण में राजेन्द्र चोल प्रथम का साम्राज्य है: उनकी नई राजधानी के आसपास कावेरी केंद्र, वे भूमियाँ जिन्हें स्मिथ मद्रास प्रेसीडेंसी से मैसूर तक अधिकृत बताते हैं, और चोल प्रभुत्व में वेंगी। गंगा तक उनका उत्तरी अभियान एक धावा था, विजय नहीं, और अधिकृत नहीं दिखाया गया। उसके पास जयसिंह द्वितीय के अधीन कल्याणी के चालुक्य हैं, जिन्हें राजेन्द्र ने मुयंगि में भगाया, और भोज का मालव, जिसे अल-बीरूनी 'हमारे दिनों में' बताते हैं। फिर महीपाल का बिहार और बंगाल का पाल राज्य, अणहिलवाड के चौलुक्य, और अजनबियों के लिए बंद कश्मीर। पंजाब वैसा दिखाया गया है जैसा ग़ज़नी के महमूद ने उसे लिया था। रत्नपाल का कामरूप उनके बरगाँव ताम्रपत्र से, गेट (1906) द्वारा छापे हॉर्नले के अनुवाद में, जोड़ा गया। खाली छोड़े गए: महमूद की कन्नौज-लूट के बाद का गंगा दोआब, चंदेल, कलचुरि, ओडिशा, लाट, दक्कन का पूर्व और राजस्थान, जहाँ यहाँ पढ़ा गया कुछ भी इस समय के लिए नहीं बोलता। अल-बीरूनी साख़ाउ के 1888 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
   },
   "sources": [
     "smith-1914",
     "sachau-1888",
     "epigraphia-indica-ix",
+    "gait-1906",
     "census-2011",
     "datameet-maps",
     "wikipedia"

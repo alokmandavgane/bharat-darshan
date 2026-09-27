@@ -1288,6 +1288,24 @@
         "hi": "मारवाड़, बीकानेर, जैसलमेर, आमेर, बूंदी और कोटा का इतिहास, लगभग 1760 और 1780 ई. के लिए उद्धृत।"
       }
     },
+    "gait-1906": {
+      "title": {
+        "en": "E. A. Gait, A History of Assam (1906)",
+        "hi": "ई. ए. गेट, ए हिस्ट्री ऑफ़ असम (1906)"
+      },
+      "publisher": {
+        "en": "Thacker, Spink and Co., Calcutta",
+        "hi": "थैकर, स्पिंक एंड कंपनी, कलकत्ता"
+      },
+      "url": "https://archive.org/details/historyofassam00gait",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The history of Assam, with the inscriptions and Persian accounts it quotes, for the north-east in c. 850, 1030, 1330, 1525, 1760 and 1780 CE.",
+        "hi": "असम का इतिहास, उसमें उद्धृत अभिलेखों और फ़ारसी विवरणों सहित, लगभग 850, 1030, 1330, 1525, 1760 और 1780 ई. के पूर्वोत्तर के लिए।"
+      }
+    },
     "elliot-dowson-1877-viii": {
       "title": {
         "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VIII (1877)",

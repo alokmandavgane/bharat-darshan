@@ -476,35 +476,6 @@
     "category": "pala",
     "rank": 1,
     "districts": [
-      300,
-      301,
-      302,
-      303,
-      304,
-      305,
-      306,
-      307,
-      308,
-      309,
-      310,
-      311,
-      312,
-      313,
-      314,
-      315,
-      316,
-      317,
-      318,
-      319,
-      320,
-      321,
-      322,
-      323,
-      324,
-      325,
-      326,
-      328,
-      329,
       385,
       386,
       387,
@@ -536,8 +507,8 @@
     ],
     "color": "#7fb89a",
     "grade": {
-      "en": "Claimed: Assam and Kaliṅga, said to be conquered by his general Lausena",
-      "hi": "दावा: असम और कलिंग, कहा जाता है कि उनके सेनापति लउसेन ने जीते"
+      "en": "Claimed: Kaliṅga, said to be conquered by his general Lausena (Assam, also claimed, is drawn as Kāmarūpa)",
+      "hi": "दावा: कलिंग, जिसे उनके सेनापति लौसेन द्वारा जीता कहा जाता है (असम, जिस पर भी दावा था, कामरूप के रूप में दिखाया गया है)"
     },
     "reading": "His general, Lausena, is said to have conquered Assam and Kalinga.",
     "page": {
@@ -1003,6 +974,77 @@
     "capital": {
       "en": "Śrīnagara",
       "hi": "श्रीनगर"
+    }
+  },
+  {
+    "id": "kamarupa-held",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329
+    ],
+    "verse": "Pragjyotisha (read: Prāgjyotiṣa)",
+    "locus": {
+      "en": "Kāmarūpa plates, Gait 27",
+      "hi": "कामरूप ताम्रपत्र, Gait 27"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kāmarūpa (Prāgjyotiṣa) under the Mleccha line of Sālastambha and then Pralambha's, ruling from Hāruppeśvara near Tezpur; the Pālas' inscriptions claim its conquest.",
+      "hi": "सालस्तंभ के म्लेच्छ वंश और फिर प्रलंभ के वंश के अधीन कामरूप (प्राग्ज्योतिष), तेज़पुर के पास हारुप्पेश्वर से शासित; पालों के अभिलेख इसकी विजय का दावा करते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#3f8a7a",
+    "grade": {
+      "en": "Kāmarūpa under Sālastambha's and Pralambha's lines",
+      "hi": "सालस्तंभ और प्रलंभ के वंशों के अधीन कामरूप"
+    },
+    "reading": "His kingdom is said to have extended as far as the sea-shore.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 30",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 30"
+    },
+    "capital": {
+      "en": "Hāruppeśvara",
+      "hi": "हारुप्पेश्वर"
     }
   }
 ]

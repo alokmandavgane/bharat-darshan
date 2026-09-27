@@ -316,5 +316,29 @@
     "sources": [
       "https://archive.org/details/kingsofkashmira03kalhuoft"
     ]
+  },
+  {
+    "id": "ahom",
+    "status": "draft",
+    "name": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.0,
+      "lon": 94.4
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Ahom kingdom under Suhungmung, the Dihingia Raja (1497-1539), who annexed the Chutiya country and threw back Ḥusain Shāh's invasion from Bengal.",
+      "hi": "सुहुंगमुंग, दिहिंगिया राजा (1497-1539), के अधीन अहोम राज्य, जिन्होंने चुटिया प्रदेश मिलाया और बंगाल से हुसैन शाह के आक्रमण को पीछे धकेला।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
   }
 ]

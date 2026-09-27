@@ -608,5 +608,49 @@
       "en": "Śrīnagara",
       "hi": "श्रीनगर"
     }
+  },
+  {
+    "id": "ahom-held",
+    "status": "draft",
+    "name": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "category": "ahom",
+    "rank": 1,
+    "districts": [
+      311,
+      310
+    ],
+    "verse": "Assam",
+    "locus": {
+      "en": "ʿĀlamgīrnāma, Gait 35",
+      "hi": "आलमगीरनामा, Gait 35"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Ahoms of eastern Assam under Sukhangpha (1293-1332), against whom, a later chronicle says, a Delhi army sent in 1337 'perished in that land of witchcraft'.",
+      "hi": "सुखांगफा (1293-1332) के अधीन पूर्वी असम के अहोम, जिनके विरुद्ध, एक परवर्ती वृत्तांत कहता है, 1337 में भेजी गई दिल्ली की सेना 'उस जादू-टोने की भूमि में नष्ट हो गई'।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#5a8a3a",
+    "grade": {
+      "en": "The early Ahom kingdom east of the Dikhu",
+      "hi": "दिखौ के पूर्व प्रारंभिक अहोम राज्य"
+    },
+    "reading": "In his reign the Kacharis abandoned to the Ahoms the country east of the Dikhu river.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 76",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 76"
+    },
+    "capital": {
+      "en": "Charaideo",
+      "hi": "चराइदेव"
+    }
   }
 ]

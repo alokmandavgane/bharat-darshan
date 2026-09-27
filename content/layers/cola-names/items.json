@@ -171,5 +171,29 @@
     "sources": [
       "https://archive.org/details/alberunisindiaac01brnm"
     ]
+  },
+  {
+    "id": "kamarupa",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 92.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "Kāmarūpa under Ratnapāla, son of Brahmapāla, whom the subjects chose king when Sālastambha's line died out; his capital was Durjayā, 'the Impregnable'.",
+      "hi": "ब्रह्मपाल के पुत्र रत्नपाल के अधीन कामरूप, जिन्हें सालस्तंभ का वंश समाप्त होने पर प्रजा ने राजा चुना; उनकी राजधानी दुर्जया, 'अजेय', थी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
   }
 ]

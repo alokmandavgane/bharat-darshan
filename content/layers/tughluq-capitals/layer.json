@@ -36,6 +36,15 @@
         "en": "Capital or provincial seat",
         "hi": "राजधानी या प्रांतीय केंद्र"
       }
+    },
+    {
+      "id": "ahom",
+      "color": "#5a8a3a",
+      "title": {
+        "en": "Ahoms",
+        "hi": "अहोम"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {

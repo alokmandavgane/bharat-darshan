@@ -153,6 +153,24 @@
         "hi": "कोटा"
       },
       "icon": "pin"
+    },
+    {
+      "id": "ahom",
+      "color": "#5a8a3a",
+      "title": {
+        "en": "Ahoms",
+        "hi": "अहोम"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kachari",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Kacharis",
+        "hi": "कछारी"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {

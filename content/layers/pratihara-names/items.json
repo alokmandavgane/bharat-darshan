@@ -172,5 +172,29 @@
     "sources": [
       "https://archive.org/details/RajataranginiVol1"
     ]
+  },
+  {
+    "id": "kamarupa",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 92.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "Kāmarūpa (Prāgjyotiṣa) under the Mleccha line of Sālastambha and then Pralambha's, ruling from Hāruppeśvara near Tezpur; the Pālas' inscriptions claim its conquest.",
+      "hi": "सालस्तंभ के म्लेच्छ वंश और फिर प्रलंभ के वंश के अधीन कामरूप (प्राग्ज्योतिष), तेज़पुर के पास हारुप्पेश्वर से शासित; पालों के अभिलेख इसकी विजय का दावा करते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
   }
 ]

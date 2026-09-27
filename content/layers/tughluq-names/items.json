@@ -71,5 +71,29 @@
     "sources": [
       "https://archive.org/details/kingsofkashmira03kalhuoft"
     ]
+  },
+  {
+    "id": "ahom",
+    "status": "draft",
+    "name": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.2,
+      "lon": 94.9
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Ahoms of eastern Assam under Sukhangpha (1293-1332), against whom, a later chronicle says, a Delhi army sent in 1337 'perished in that land of witchcraft'.",
+      "hi": "सुखांगफा (1293-1332) के अधीन पूर्वी असम के अहोम, जिनके विरुद्ध, एक परवर्ती वृत्तांत कहता है, 1337 में भेजी गई दिल्ली की सेना 'उस जादू-टोने की भूमि में नष्ट हो गई'।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
   }
 ]

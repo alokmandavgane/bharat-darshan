@@ -382,5 +382,53 @@
     "sources": [
       "https://archive.org/details/annalsantiquitie02todj_0"
     ]
+  },
+  {
+    "id": "ahom",
+    "status": "draft",
+    "name": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9,
+      "lon": 94.0
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Ahom kingdom under Lakṣmī Siṃha (1769-80) and Gaurīnāth, shaken by the Moamaria risings that took Rangpur in 1769 and again in the 1780s.",
+      "hi": "लक्ष्मी सिंह (1769-80) और गौरीनाथ के अधीन अहोम राज्य, मोआमरिया विद्रोहों से हिला, जिन्होंने 1769 में और फिर 1780 के दशक में रंगपुर लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
+  },
+  {
+    "id": "kachari",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.2,
+      "lon": 93.0
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "The Kachari (Dimasa) kings of Hiḍimbā, tributary to the Ahoms, who moved their capital from Maibong in the hills to Khaspur in the Cachar plains by 1771.",
+      "hi": "हिडिम्बा के कछारी (दिमासा) राजा, अहोमों के करद, जिन्होंने 1771 तक अपनी राजधानी पहाड़ों में माईबोंग से कछार के मैदानों में खासपुर ले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ]
   }
 ]

@@ -526,5 +526,71 @@
       "https://archive.org/details/annalsantiquitie01todj_0",
       "https://en.wikipedia.org/wiki/Kota_Garh_Palace"
     ]
+  },
+  {
+    "id": "ahom-capital",
+    "status": "draft",
+    "name": {
+      "en": "Rangpur",
+      "hi": "रंगपुर"
+    },
+    "category": "ahom",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9747,
+      "lon": 94.62
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "identified": {
+      "en": "certain, placed at Talatal Ghar, Rangpur (Sivasagar)",
+      "hi": "निश्चित, Talatal Ghar, Rangpur (Sivasagar) पर"
+    },
+    "blurb": {
+      "en": "The capital of Ahoms.",
+      "hi": "अहोम की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Talatal_Ghar"
+    ]
+  },
+  {
+    "id": "kachari-capital",
+    "status": "draft",
+    "name": {
+      "en": "Maibong",
+      "hi": "माईबोंग"
+    },
+    "category": "kachari",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.3017,
+      "lon": 93.17
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "polity": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "identified": {
+      "en": "certain, placed at Maibong",
+      "hi": "निश्चित, Maibong पर"
+    },
+    "blurb": {
+      "en": "The capital of Kacharis.",
+      "hi": "कछारी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait",
+      "https://en.wikipedia.org/wiki/Maibang"
+    ]
   }
 ]

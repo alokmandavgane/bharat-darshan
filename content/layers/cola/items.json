@@ -689,5 +689,76 @@
       "en": "Edward C. Sachau, Alberuni's India (1888), p. xliv",
       "hi": "Edward C. Sachau, Alberuni's India (1888), पृ. xliv"
     }
+  },
+  {
+    "id": "kamarupa-held",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329
+    ],
+    "verse": "Kamariipa (read: Kāmarūpa)",
+    "locus": {
+      "en": "Bargaon plate, Gait 367",
+      "hi": "बरगाँव ताम्रपत्र, Gait 367"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kāmarūpa under Ratnapāla, son of Brahmapāla, whom the subjects chose king when Sālastambha's line died out; his capital was Durjayā, 'the Impregnable'.",
+      "hi": "ब्रह्मपाल के पुत्र रत्नपाल के अधीन कामरूप, जिन्हें सालस्तंभ का वंश समाप्त होने पर प्रजा ने राजा चुना; उनकी राजधानी दुर्जया, 'अजेय', थी।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#3f8a7a",
+    "grade": {
+      "en": "Ratnapāla's Kāmarūpa, from Durjayā on the Brahmaputra",
+      "hi": "ब्रह्मपुत्र पर दुर्जया से रत्नपाल का कामरूप"
+    },
+    "reading": "his capital on the bank of the Brahmaputra and surrounded it with a rampart and strong palisade",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 32",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 32"
+    },
+    "capital": {
+      "en": "Durjayā",
+      "hi": "दुर्जया"
+    }
   }
 ]

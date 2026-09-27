@@ -1289,5 +1289,109 @@
       "en": "Kota",
       "hi": "कोटा"
     }
+  },
+  {
+    "id": "ahom-held",
+    "status": "draft",
+    "name": {
+      "en": "Ahoms",
+      "hi": "अहोम"
+    },
+    "category": "ahom",
+    "rank": 1,
+    "districts": [
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326
+    ],
+    "verse": "Gadadhar Singh (read: Gadādhar Siṃha)",
+    "locus": {
+      "en": "Gadādhar Siṃha cannon, Gait 160",
+      "hi": "गदाधर सिंह तोप, Gait 160"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Ahom kingdom under Rājeśvar Siṃha (1751-69), from Sadiya to the Manas, ruled from Rangpur near Sibsagar.",
+      "hi": "राजेश्वर सिंह (1751-69) के अधीन अहोम राज्य, सदिया से मानस तक, शिवसागर के पास रंगपुर से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#5a8a3a",
+    "grade": {
+      "en": "The Ahom kingdom from Sadiya to the Manas",
+      "hi": "सदिया से मानस तक अहोम राज्य"
+    },
+    "reading": "Henceforward the Monas was accepted by both sides as the boundary.",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 160",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 160"
+    },
+    "capital": {
+      "en": "Rangpur",
+      "hi": "रंगपुर"
+    }
+  },
+  {
+    "id": "kachari-held",
+    "status": "draft",
+    "name": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+    },
+    "category": "kachari",
+    "rank": 1,
+    "districts": [
+      315,
+      316,
+      318
+    ],
+    "verse": "Hidimba (read: Hiḍimbā)",
+    "locus": {
+      "en": "Maibong inscription, Gait 250",
+      "hi": "माईबोंग अभिलेख, Gait 250"
+    },
+    "identified": {
+      "en": "likely, after History of Assam 1906",
+      "hi": "संभावित, History of Assam 1906 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachari (Dimasa) kings of Hiḍimbā, tributary to the Ahoms, who moved their capital from Maibong in the hills to Khaspur in the Cachar plains by 1771.",
+      "hi": "हिडिम्बा के कछारी (दिमासा) राजा, अहोमों के करद, जिन्होंने 1771 तक अपनी राजधानी पहाड़ों में माईबोंग से कछार के मैदानों में खासपुर ले गए।"
+    },
+    "sources": [
+      "https://archive.org/details/historyofassam00gait"
+    ],
+    "color": "#8a6a3a",
+    "grade": {
+      "en": "The Kachari kingdom of Hiḍimbā, in the North Cachar hills and the Cachar plains",
+      "hi": "उत्तरी कछार की पहाड़ियों और कछार के मैदानों में हिडिम्बा का कछारी राज्य"
+    },
+    "reading": "Sandhikari surrendered himself to the Bar Barua and was taken before Rajesvar,",
+    "page": {
+      "en": "E. A. Gait, A History of Assam (1906), p. 250",
+      "hi": "E. A. Gait, A History of Assam (1906), पृ. 250"
+    },
+    "capital": {
+      "en": "Maibong",
+      "hi": "माईबोंग"
+    }
   }
 ]

@@ -2450,6 +2450,11 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-ninth round: the north-east. From the sources quoted in Gait's History of Assam (1906):
+  Kāmarūpa in c. 850 (the Assam districts move out of the Pālas' "claimed" part) and c. 1030, the Ahoms in c. 1330,
+  1525, 1760 and 1780, and the Kacharis in c. 1760 and 1780, with their capitals. c. 1200, the Koch, Jaintia and
+  Manipur stay blank (no primary source quoted). Six era notes updated; gait-1906 registered. All names show at
+  1280x800; 48 tests and the build pass.
 - 2026-09-27, eighty-eighth round: "Kingdoms and empires" fills its blanks, at the owner's "do all". 25 polities in
   eight eras, from nine public-domain texts fetched on approval (see the kosha ROADMAP):
   - **c. 150:** the Pāṇḍyas, Cheras, Cholas and Āy (Ptolemy, the Periplus).

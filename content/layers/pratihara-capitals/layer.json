@@ -72,6 +72,15 @@
         "hi": "कश्मीर"
       },
       "icon": "pin"
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f8a7a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {
