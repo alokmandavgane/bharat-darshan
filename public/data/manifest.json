@@ -1722,6 +1722,521 @@
    "path": "layers/festivals.json"
   },
   {
+   "id": "ghurid-capitals",
+   "type": "points",
+   "title": {
+    "en": "Capitals of c. 1200 CE",
+    "hi": "लगभग 1200 ई. की राजधानियाँ"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 10,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "ghurid",
+     "color": "#86a88f",
+     "title": {
+      "en": "Ghurid conquests in Hindustan",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "sena",
+     "color": "#b86a96",
+     "title": {
+      "en": "Sena kingdom",
+      "hi": "सेन राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "candella",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Candellas of Jejākabhukti",
+      "hi": "जेजाकभुक्ति के चन्देल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "caulukya",
+     "color": "#d7ad62",
+     "title": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "paramara",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "yadava",
+     "color": "#6199c4",
+     "title": {
+      "en": "Yādavas of Devagiri",
+      "hi": "देवगिरि के यादव"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "hoysala",
+     "color": "#b8454f",
+     "title": {
+      "en": "Hoysaḷas of Dorasamudra",
+      "hi": "द्वारसमुद्र के होयसल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kakatiya",
+     "color": "#7fb3a4",
+     "title": {
+      "en": "Kākatīyas of Anumakoṇḍa",
+      "hi": "अनुमकोण्ड के काकतीय"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "cola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cola kingdom",
+      "hi": "चोल राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pandya",
+     "color": "#d08a6a",
+     "title": {
+      "en": "Pāṇḍyas of Madurai",
+      "hi": "मदुरै के पाण्ड्य"
+     },
+     "icon": "pin"
+    }
+   ],
+   "fields": {
+    "polity": {
+     "type": "name",
+     "label": {
+      "en": "Capital of",
+      "hi": "किसकी राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Identification",
+      "hi": "पहचान"
+     }
+    }
+   },
+   "note": {
+    "en": "Delhi, Nudiyā, Mahoba, Aṇahilapāṭaka, Dhārā, Devagiri, Dorasamudra, Anumakoṇḍa, Gaṅgaikoṇḍacoḻapuram and Madurai. Ghazni, the Ghurid capital, is outside India.",
+    "hi": "दिल्ली, नुदिया, महोबा, अणहिलपाटक, धारा, देवगिरि, द्वारसमुद्र, अनुमकोण्ड, गंगैकोण्डचोलपुरम् और मदुरै। ग़ोरी राजधानी ग़ज़नी भारत के बाहर है।"
+   },
+   "sources": [
+    "smith-1914",
+    "elliot-dowson-1869",
+    "wikipedia"
+   ],
+   "path": "layers/ghurid-capitals.json"
+  },
+  {
+   "id": "ghurid-evidence",
+   "type": "points",
+   "title": {
+    "en": "The evidence of c. 1200 CE",
+    "hi": "लगभग 1200 ई. के प्रमाण"
+   },
+   "icon": "temple",
+   "group": "culture",
+   "default_on": false,
+   "count": 6,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "inscription",
+     "color": "#7a2e1f",
+     "icon": "pin",
+     "title": {
+      "en": "Inscriptions",
+      "hi": "अभिलेख"
+     }
+    },
+    {
+     "id": "siege",
+     "color": "#2f7f7a",
+     "icon": "pin",
+     "title": {
+      "en": "Sieges",
+      "hi": "घेरे"
+     }
+    },
+    {
+     "id": "campaign",
+     "color": "#9e1b32",
+     "icon": "pin",
+     "title": {
+      "en": "Raids",
+      "hi": "धावे"
+     }
+    }
+   ],
+   "fields": {
+    "kind": {
+     "type": "name",
+     "label": {
+      "en": "Kind",
+      "hi": "प्रकार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Pin",
+      "hi": "पिन"
+     }
+    }
+   },
+   "note": {
+    "en": "Four inscriptions (Gadag, Tirukkaḍaiyūr, Anmakoṇḍa, Māndhātā), Aibak's siege of Kālinjar (1202-03) and Bakhtiyār's storming of Behār (c. 1200).",
+    "hi": "चार अभिलेख (गदग, तिरुक्कडैयूर, अनमकोण्ड, मान्धाता), ऐबक का कालिंजर घेरा (1202-03) और बख़्तियार का बिहार पर धावा (लगभग 1200)।"
+   },
+   "sources": [
+    "epigraphia-indica-vi",
+    "epigraphia-indica-ix",
+    "elliot-dowson-1869",
+    "smith-1914",
+    "wikipedia"
+   ],
+   "path": "layers/ghurid-evidence.json"
+  },
+  {
+   "id": "ghurid-names",
+   "type": "points",
+   "marker": "label",
+   "title": {
+    "en": "Names: the kingdoms of c. 1200 CE",
+    "hi": "नाम: लगभग 1200 ई. के राज्य"
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 10,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "ghurid",
+     "color": "#86a88f",
+     "title": {
+      "en": "Ghurid conquests in Hindustan",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "sena",
+     "color": "#b86a96",
+     "title": {
+      "en": "Sena kingdom",
+      "hi": "सेन राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "candella",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Candellas of Jejākabhukti",
+      "hi": "जेजाकभुक्ति के चन्देल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "caulukya",
+     "color": "#d7ad62",
+     "title": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "paramara",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "yadava",
+     "color": "#6199c4",
+     "title": {
+      "en": "Yādavas of Devagiri",
+      "hi": "देवगिरि के यादव"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "hoysala",
+     "color": "#b8454f",
+     "title": {
+      "en": "Hoysaḷas of Dorasamudra",
+      "hi": "द्वारसमुद्र के होयसल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kakatiya",
+     "color": "#7fb3a4",
+     "title": {
+      "en": "Kākatīyas of Anumakoṇḍa",
+      "hi": "अनुमकोण्ड के काकतीय"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "cola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cola kingdom",
+      "hi": "चोल राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pandya",
+     "color": "#d08a6a",
+     "title": {
+      "en": "Pāṇḍyas of Madurai",
+      "hi": "मदुरै के पाण्ड्य"
+     },
+     "icon": "map"
+    }
+   ],
+   "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+   },
+   "sources": [
+    "elliot-dowson-1869",
+    "smith-1914"
+   ],
+   "path": "layers/ghurid-names.json"
+  },
+  {
+   "id": "ghurid",
+   "type": "areas",
+   "title": {
+    "en": "The Ghurid conquest and the southern kingdoms, c. 1200 CE",
+    "hi": "ग़ोरी विजय और दक्षिण के राज्य, लगभग 1200 ई."
+   },
+   "icon": "map",
+   "group": "culture",
+   "default_on": false,
+   "count": 16,
+   "reviewed": 0,
+   "categories": [
+    {
+     "id": "ghurid",
+     "color": "#86a88f",
+     "title": {
+      "en": "Ghurid conquests in Hindustan",
+      "hi": "हिन्दुस्तान में ग़ोरी विजय"
+     }
+    },
+    {
+     "id": "sena",
+     "color": "#b86a96",
+     "title": {
+      "en": "Sena kingdom",
+      "hi": "सेन राज्य"
+     }
+    },
+    {
+     "id": "candella",
+     "color": "#8a5a1f",
+     "title": {
+      "en": "Candellas of Jejākabhukti",
+      "hi": "जेजाकभुक्ति के चन्देल"
+     }
+    },
+    {
+     "id": "caulukya",
+     "color": "#d7ad62",
+     "title": {
+      "en": "Caulukyas of Anhilvāra",
+      "hi": "अणहिलवाड के चौलुक्य"
+     }
+    },
+    {
+     "id": "paramara",
+     "color": "#6d4a8a",
+     "title": {
+      "en": "Paramāras of Mālava",
+      "hi": "मालव के परमार"
+     }
+    },
+    {
+     "id": "yadava",
+     "color": "#6199c4",
+     "title": {
+      "en": "Yādavas of Devagiri",
+      "hi": "देवगिरि के यादव"
+     }
+    },
+    {
+     "id": "hoysala",
+     "color": "#b8454f",
+     "title": {
+      "en": "Hoysaḷas of Dorasamudra",
+      "hi": "द्वारसमुद्र के होयसल"
+     }
+    },
+    {
+     "id": "kakatiya",
+     "color": "#7fb3a4",
+     "title": {
+      "en": "Kākatīyas of Anumakoṇḍa",
+      "hi": "अनुमकोण्ड के काकतीय"
+     }
+    },
+    {
+     "id": "cola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cola kingdom",
+      "hi": "चोल राज्य"
+     }
+    },
+    {
+     "id": "pandya",
+     "color": "#d08a6a",
+     "title": {
+      "en": "Pāṇḍyas of Madurai",
+      "hi": "मदुरै के पाण्ड्य"
+     }
+    }
+   ],
+   "fields": {
+    "grade": {
+     "type": "name",
+     "label": {
+      "en": "How it is known",
+      "hi": "प्रमाण"
+     }
+    },
+    "capital": {
+     "type": "name",
+     "label": {
+      "en": "Capital",
+      "hi": "राजधानी"
+     }
+    },
+    "identified": {
+     "type": "name",
+     "label": {
+      "en": "Extent",
+      "hi": "विस्तार"
+     }
+    },
+    "reading": {
+     "type": "text",
+     "label": {
+      "en": "As the scholar puts it",
+      "hi": "विद्वान के शब्दों में"
+     }
+    },
+    "page": {
+     "type": "name",
+     "label": {
+      "en": "Cited from",
+      "hi": "स्रोत"
+     }
+    },
+    "verse": {
+     "type": "text",
+     "label": {
+      "en": "As the text has it",
+      "hi": "पाठ में"
+     }
+    },
+    "locus": {
+     "type": "name",
+     "label": {
+      "en": "Where",
+      "hi": "स्थान"
+     }
+    },
+    "km2": {
+     "type": "int",
+     "label": {
+      "en": "Area in India",
+      "hi": "भारत में क्षेत्रफल"
+     },
+     "unit": {
+      "en": "{n} km²",
+      "hi": "{n} वर्ग किमी"
+     }
+    }
+   },
+   "note": {
+    "en": "India about 1200 CE, a few years after the Ghurid victories of 1192-94. The conquests of Muʿizz al-Dīn of Ghūr are held from Delhi by Quṭb al-Dīn Aibak: the Panjab, Ajmer, the doab, Benares and Gwalior, 'the whole of Hindustan Proper, except Malwa', as Smith quotes Elliot, and Bihar, newly overrun by Muḥammad Bakhtiyār. Around them stand the Senas of Bengal under Lakṣmaṇasena, the Candellas of Bundelkhand, whose Kālinjar fell in 1203, the Caulukyas of Gujarat, whose capital Aibak sacked in 1197, and the Paramāras of Mālava, restored under Subhaṭavarman. In the south the Hoysaḷas under Vīra-Ballāḷa II hold Mysore and Kuntala, won from the Yādavas of Devagiri in 1191-92; the Kākatīyas rule Telangana from Anumakoṇḍa; Kulottuṅga III's Colas hold the Kāverī country and claim the Pāṇḍyas as subjects. Left blank: Marwar, Mewar and south Gujarat, Orissa, the Kalacuris, Mithilā, Assam, Kashmir, Kerala and Toṇḍai-maṇḍalam, where nothing read here speaks for this date. The chronicles are quoted in Elliot and Dowson's 1869 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1200 ई. का भारत, 1192-94 की ग़ोरी विजयों के कुछ वर्ष बाद। ग़ोर के मुइज़्ज़ुद्दीन की विजयें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता है: पंजाब, अजमेर, दोआब, बनारस और ग्वालियर, 'मालवा को छोड़ पूरा हिन्दुस्तान खास', जैसा स्मिथ इलियट को उद्धृत करते हैं, और बिहार, जिसे मुहम्मद बख़्तियार ने अभी-अभी रौंदा। उनके चारों ओर लक्ष्मणसेन के अधीन बंगाल के सेन, बुंदेलखंड के चन्देल, जिनका कालिंजर 1203 में गिरा, गुजरात के चौलुक्य, जिनकी राजधानी ऐबक ने 1197 में लूटी, और सुभटवर्मन के अधीन पुनर्स्थापित मालव के परमार हैं। दक्षिण में वीर-बल्लाळ द्वितीय के अधीन होयसल मैसूर और कुन्तल रखते हैं, जो 1191-92 में देवगिरि के यादवों से जीता; काकतीय अनुमकोण्ड से तेलंगाना पर राज करते हैं; कुलोत्तुंग तृतीय के चोल कावेरी देश रखते हैं और पाण्ड्यों को अधीन बताते हैं। खाली छोड़े गए: मारवाड़, मेवाड़ और दक्षिण गुजरात, ओडिशा, कलचुरि, मिथिला, असम, कश्मीर, केरल और तोण्डै-मण्डलम्, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। इतिवृत्त इलियट और डाउसन के 1869 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+   },
+   "sources": [
+    "elliot-dowson-1869",
+    "smith-1914",
+    "epigraphia-indica-vi",
+    "epigraphia-indica-ix",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+   ],
+   "path": "layers/ghurid.json"
+  },
+  {
    "id": "gi-tags",
    "type": "points",
    "marker": "model",
@@ -6866,12 +7381,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 38909,
-   "sha256": "53630b336f41"
+   "size": 39897,
+   "sha256": "61d69021187d"
   },
   "sources.json": {
-   "size": 43414,
-   "sha256": "e0cd0355119a"
+   "size": 45368,
+   "sha256": "104d59ceb45c"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -7148,6 +7663,26 @@
   "layers/festivals.json": {
    "size": 27590,
    "sha256": "f377ba648c53"
+  },
+  "layers/ghurid-areas.bin.gz": {
+   "size": 7299,
+   "sha256": "69ad693d0531"
+  },
+  "layers/ghurid-capitals.json": {
+   "size": 9003,
+   "sha256": "2172ebf30c9c"
+  },
+  "layers/ghurid-evidence.json": {
+   "size": 8912,
+   "sha256": "86525939aea5"
+  },
+  "layers/ghurid-names.json": {
+   "size": 9996,
+   "sha256": "41366b3a2938"
+  },
+  "layers/ghurid.json": {
+   "size": 32031,
+   "sha256": "e89c829d610c"
   },
   "layers/gi-tags.json": {
    "size": 157505,
