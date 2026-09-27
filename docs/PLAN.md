@@ -2450,6 +2450,18 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-eighth round: "Kingdoms and empires" fills its blanks, at the owner's "do all". 25 polities in
+  eight eras, from nine public-domain texts fetched on approval (see the kosha ROADMAP):
+  - **c. 150:** the Pāṇḍyas, Cheras, Cholas and Āy (Ptolemy, the Periplus).
+  - **c. 850:** the Pāṇḍyas, Pallavas and the Cholas of Tanjore (the Sinnamanur and Tiruvālaṅgāḍu plates), and Kashmir.
+  - **Kashmir** also in c. 640 (with its tributary hill states), c. 1200, c. 1330 and c. 1525 (Kalhaṇa, Jonarāja).
+  - **c. 1330:** Orissa ("Jājnagar") drawn as its own kingdom, not a grade of the Tughluq empire.
+  - **c. 1760 and c. 1780:** Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota (and Mārwār in c. 1780) from Tod;
+    Ajmer as a Marāṭhā part.
+  - Eight era notes and four era summaries updated; 16 new work entries in content/sources.json. The kosha export
+    needed locus words for the new sources (it failed silently behind a grep the first time).
+  - All names show at 1280x800 after anchor moves (Jaipur, Bundi, Kota) and one short name ("Cheras"). 48 tests and
+    the build pass.
 - 2026-09-27, eighty-seventh round: the Tamil south of c. 1707. Hamilton's vol. II was fetched and holds nothing on
   it (it starts at Bengal); William Taylor's Oriental Historical Manuscripts (1835) does: the Tamil chronicle of the
   Madurai Nāyakas gives Mangammāḷ's regency and the independent Setupatis of Ramnad. The c. 1707 era gains Madurai

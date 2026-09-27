@@ -14,7 +14,7 @@
   "categories": [
     {
       "id": "harsha",
-      "color": "#a8559a",
+      "color": "#6d1f5e",
       "title": {
         "en": "Harṣa's empire",
         "hi": "हर्ष का साम्राज्य"
@@ -22,7 +22,7 @@
     },
     {
       "id": "chalukya",
-      "color": "#3a76a8",
+      "color": "#1f4f7a",
       "title": {
         "en": "Cālukyas of Vātāpi",
         "hi": "वातापी के चालुक्य"
@@ -99,6 +99,14 @@
         "en": "Pāṇḍya",
         "hi": "पाण्ड्य"
       }
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
+      }
     }
   ],
   "fields": {
@@ -164,13 +172,14 @@
     }
   },
   "note": {
-    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Left blank: Kashmir, Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। खाली छोड़े गए: कश्मीर, सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Kashmir under Durlabhavardhana is added from Kalhaṇa's Rājataraṅgiṇī (Stein, 1900). Left blank: Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। दुर्लभवर्धन के अधीन कश्मीर कल्हण की राजतरंगिणी (स्टाइन, 1900) से जोड़ा गया। खाली छोड़े गए: सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
   },
   "sources": [
     "beal-1884",
     "epigraphia-indica-vi",
     "fleet-1888",
+    "stein-1900-i",
     "census-2011",
     "datameet-maps",
     "wikipedia"

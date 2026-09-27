@@ -19,6 +19,22 @@
         "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
         "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
       }
+    },
+    {
+      "id": "orissa",
+      "color": "#8a6aa8",
+      "title": {
+        "en": "Jājnagar (Orissa)",
+        "hi": "जाजनगर (ओडिशा)"
+      }
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
+      }
     }
   ],
   "fields": {
@@ -84,12 +100,13 @@
     }
   },
   "note": {
-    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Left blank: Rajasthan, the Himalaya, Kashmir, Assam and the north-east, Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। खाली छोड़े गए: राजस्थान, हिमालय, कश्मीर, असम और पूर्वोत्तर, केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Jājnagar (Orissa) is drawn as the Eastern Gaṅga kingdom it was, from Baranī and ʿAfīf, and Kashmir under Udayanadeva and Koṭā from Jonarāja (Dutt, 1898). Left blank: Rajasthan, the Himalaya, Assam and the north-east, Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। जाजनगर (ओडिशा) को बरनी और अफ़ीफ़ से पूर्वी गंग राज्य के रूप में, और उदयनदेव तथा कोटा के अधीन कश्मीर को जोनराज (दत्त, 1898) से दिखाया गया है। खाली छोड़े गए: राजस्थान, हिमालय, असम और पूर्वोत्तर, केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "smith-1919",
     "elliot-dowson-1871",
+    "dutt-1898-iii",
     "census-2011",
     "datameet-maps",
     "wikipedia"

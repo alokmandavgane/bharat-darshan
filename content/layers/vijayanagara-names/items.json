@@ -292,5 +292,29 @@
     "sources": [
       "https://archive.org/details/aforgottenempir00paesgoog"
     ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.2,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "The Shāh Mīrī sultanate of Kashmir under Muḥammad Shāh, in his third reign (1516-28), torn by its ministers' feuds.",
+      "hi": "मुहम्मद शाह के तीसरे शासन (1516-28) में कश्मीर की शाह मीरी सल्तनत, मंत्रियों के झगड़ों से जर्जर।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ]
   }
 ]

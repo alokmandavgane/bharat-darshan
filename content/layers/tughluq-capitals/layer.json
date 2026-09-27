@@ -11,6 +11,24 @@
   "country_view": "markers",
   "categories": [
     {
+      "id": "orissa",
+      "color": "#8a6aa8",
+      "title": {
+        "en": "Jājnagar (Orissa)",
+        "hi": "जाजनगर (ओडिशा)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
+      },
+      "icon": "pin"
+    },
+    {
       "id": "seat",
       "color": "#6e2c1a",
       "icon": "pin",

@@ -75,10 +75,6 @@
     "category": "maratha",
     "rank": 1,
     "districts": [
-      121,
-      127,
-      128,
-      129,
       165,
       166,
       167,
@@ -222,6 +218,50 @@
     "page": {
       "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
       "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "maratha-ajmer",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      119
+    ],
+    "verse": "Mahratta",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148, Attock",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148, Attock"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1832",
+      "hi": "संभावित, Annals of Rajast'han 1832 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy at its height under the Peshwa Bālājī Bājī Rāo, its sway 'as far as the river Attock' on the eve of Panipat (1761).",
+      "hi": "पेशवा बालाजी बाजीराव के अधीन अपने चरम पर मराठा संघ, पानीपत (1761) की पूर्वसंध्या पर उसका प्रभाव 'अटक नदी तक'।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ],
+    "color": "#e8b878",
+    "grade": {
+      "en": "Ajmer, ceded to the Marāṭhās after Jayappa Sindhia's death (1755)",
+      "hi": "अजमेर, जयप्पा सिंधिया की मृत्यु (1755) के बाद मराठों को सौंपा गया"
+    },
+    "reading": "the cession of Ajm6r, and a fixed triennial tribute on all the lands of Maroo",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1832), p. 124",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1832), पृ. 124"
     },
     "capital": {
       "en": "Puṇe",
@@ -977,6 +1017,277 @@
     "capital": {
       "en": "Śrīraṅgapaṭṭaṇa",
       "hi": "श्रीरंगपट्टण"
+    }
+  },
+  {
+    "id": "mewar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "rank": 1,
+    "districts": [
+      130,
+      123,
+      126,
+      122,
+      131
+    ],
+    "verse": "Rana Ursi (read: Rāṇā Ari Singh)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod i. 426, Ursi",
+      "hi": "राजस्थान का इतिहास, Tod i. 426, Ursi"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1829",
+      "hi": "संभावित, Annals of Rajast'han 1829 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṇās of Mewār under Ari Singh II (1761-73), with Holkar already master of much of the country.",
+      "hi": "मेवाड़ के राणा: Ari Singh II (1761-73), with Holkar already master of much of the country।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ],
+    "color": "#b03a48",
+    "grade": {
+      "en": "The Sisodia kingdom of Udaipur",
+      "hi": "उदयपुर का सिसोदिया राज्य"
+    },
+    "reading": "Rana Ursi, in S. 1818, A.D. 1762.",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1829), p. 426",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1829), पृ. 426"
+    },
+    "capital": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    }
+  },
+  {
+    "id": "jaipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "rank": 1,
+    "districts": [
+      110,
+      109,
+      111,
+      103,
+      108
+    ],
+    "verse": "Madhu Sing (read: Mādho Singh)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod i. 424",
+      "hi": "राजस्थान का इतिहास, Tod i. 424"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1829",
+      "hi": "संभावित, Annals of Rajast'han 1829 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachhwāhās of Amber and Jaipur under Mādho Singh I (1750-68), set on the throne with Holkar's help.",
+      "hi": "आमेर और जयपुर के कछवाहा: Mādho Singh I (1750-68), set on the throne with Holkar's help।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ],
+    "color": "#d4798a",
+    "grade": {
+      "en": "The Kachhwāhā kingdom of Amber and Jaipur",
+      "hi": "आमेर और जयपुर का कछवाहा राज्य"
+    },
+    "reading": "a dose of poison gave Madhu Sing the gadiy",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1829), p. 424",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1829), पृ. 424"
+    },
+    "capital": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    }
+  },
+  {
+    "id": "bikaner-held",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "rank": 1,
+    "districts": [
+      101,
+      102,
+      100,
+      99
+    ],
+    "verse": "Guj Sing (read: Gaj Singh)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod ii. 189",
+      "hi": "राजस्थान का इतिहास, Tod ii. 189"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1832",
+      "hi": "संभावित, Annals of Rajast'han 1832 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṭhoṛs of Bikaner under Gaj Singh (1746-87), who took border villages from the Bhāṭīs and Anūpgaṛh from Bahawalpur.",
+      "hi": "गज सिंह (1746-87) के अधीन बीकानेर के राठौड़, जिन्होंने भाटियों से सीमा के गाँव और बहावलपुर से अनूपगढ़ लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ],
+    "color": "#c9a36a",
+    "grade": {
+      "en": "The Rāṭhoṛ kingdom of Bikaner",
+      "hi": "बीकानेर का राठौड़ राज्य"
+    },
+    "reading": "Guj Sing succeeded in S. 1802 (A.D. 1746).",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1832), p. 189",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1832), पृ. 189"
+    },
+    "capital": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    }
+  },
+  {
+    "id": "jaisalmer-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "rank": 1,
+    "districts": [
+      114
+    ],
+    "verse": "MooJraj (read: Mūlrāj)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod ii. 264",
+      "hi": "राजस्थान का इतिहास, Tod ii. 264"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1832",
+      "hi": "संभावित, Annals of Rajast'han 1832 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Bhāṭīs of Jaisalmer under Rāwal Mūlrāj (1762-1820).",
+      "hi": "रावल मूलराज (1762-1820) के अधीन जैसलमेर के भाटी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ],
+    "color": "#b8905a",
+    "grade": {
+      "en": "The Bhāṭī kingdom of Jaisalmer",
+      "hi": "जैसलमेर का भाटी राज्य"
+    },
+    "reading": "MooJraj succeeded in S. 1818 (A. D. 1762).",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1832), p. 264",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1832), पृ. 264"
+    },
+    "capital": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    }
+  },
+  {
+    "id": "bundi-held",
+    "status": "draft",
+    "name": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    },
+    "category": "bundi",
+    "rank": 1,
+    "districts": [
+      121
+    ],
+    "verse": "Boondi (read: Bundi)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod i. 424",
+      "hi": "राजस्थान का इतिहास, Tod i. 424"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1829",
+      "hi": "संभावित, Annals of Rajast'han 1829 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Hāṛās of Bundi under Umed Singh, who recovered his capital through the Marāṭhās and paid them tribute.",
+      "hi": "बूंदी के हाड़ा: Umed Singh, who recovered his capital through the Marāṭhās and paid them tribute।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ],
+    "color": "#7a4a6a",
+    "grade": {
+      "en": "The Hāṛā kingdom of Bundi",
+      "hi": "बूंदी का हाड़ा राज्य"
+    },
+    "reading": "against the Haras of Kotah and Boondi",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1829), p. 424",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1829), पृ. 424"
+    },
+    "capital": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    }
+  },
+  {
+    "id": "kota-held",
+    "status": "draft",
+    "name": {
+      "en": "Kota",
+      "hi": "कोटा"
+    },
+    "category": "kota",
+    "rank": 1,
+    "districts": [
+      127,
+      128,
+      129
+    ],
+    "verse": "Kotah (read: Kota)",
+    "locus": {
+      "en": "Annals of Rajast'han, Tod i. 424",
+      "hi": "राजस्थान का इतिहास, Tod i. 424"
+    },
+    "identified": {
+      "en": "likely, after Annals of Rajast'han 1829",
+      "hi": "संभावित, Annals of Rajast'han 1829 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Hāṛās of Kota under Durjan Sal, whose victory at Bhatwara (1761) ended Jaipur's claims; tributary to Sindhia.",
+      "hi": "कोटा के हाड़ा: Durjan Sal, whose victory at Bhatwara (1761) ended Jaipur's claims; tributary to Sindhia।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ],
+    "color": "#9a5a8a",
+    "grade": {
+      "en": "The Hāṛā kingdom of Kota",
+      "hi": "कोटा का हाड़ा राज्य"
+    },
+    "reading": "Kotah stood a seige and was gallantly defended",
+    "page": {
+      "en": "James Tod, Annals and Antiquities of Rajast'han (1829), p. 424",
+      "hi": "James Tod, Annals and Antiquities of Rajast'han (1829), पृ. 424"
+    },
+    "capital": {
+      "en": "Kota",
+      "hi": "कोटा"
     }
   }
 ]

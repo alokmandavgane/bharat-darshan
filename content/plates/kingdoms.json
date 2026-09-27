@@ -149,8 +149,8 @@
         "hi": "कुषाण, क्षत्रप और सातवाहन"
       },
       "blurb": {
-        "en": "The Kuṣāṇas in the north, Rudradāman's Western Kṣatrapas and the restored Sātavāhanas, when the Junāgaḍh inscription was cut (150 CE). From their own records and Raychaudhuri (1923).",
-        "hi": "उत्तर में कुषाण, रुद्रदामन् के पश्चिमी क्षत्रप और पुनर्स्थापित सातवाहन, जब जूनागढ़ अभिलेख उत्कीर्ण हुआ (150 ई.)। उनके अपने अभिलेखों और रायचौधुरी (1923) से।"
+        "en": "The Kuṣāṇas in the north, Rudradāman's Western Kṣatrapas, the restored Sātavāhanas, and the Tamil kingdoms of the Pāṇḍyas, Cheras and Cholas, from their own records, Ptolemy and the Periplus.",
+        "hi": "उत्तर में कुषाण, रुद्रदामन् के पश्चिमी क्षत्रप, पुनर्स्थापित सातवाहन, और पाण्ड्यों, चेरों तथा चोलों के तमिल राज्य, उनके अपने अभिलेखों, टॉलेमी और पेरिप्लस से।"
       },
       "layers": [
         "kushana",
@@ -212,8 +212,8 @@
         "hi": "प्रतिहार, पाल और राष्ट्रकूट"
       },
       "blurb": {
-        "en": "The three great powers the merchant Sulaimān found in 851: the Balharā (Rāṣṭrakūṭa), the king of Jurz (Pratihāra) and Ruhmī (Pāla). From the Gwalior praśasti, Sulaimān and Smith (1914).",
-        "hi": "वे तीन बड़ी शक्तियाँ जो व्यापारी सुलेमान ने 851 में पाईं: बलहरा (राष्ट्रकूट), जुर्ज़ का राजा (प्रतिहार) और रुह्मी (पाल)। ग्वालियर प्रशस्ति, सुलेमान और स्मिथ (1914) से।"
+        "en": "The three great powers Sulaimān found in 851, the Rāṣṭrakūṭas, Pratihāras and Pālas; in the south the Pallavas, Pāṇḍyas and rising Cholas; and Avantivarman's Kashmir.",
+        "hi": "सुलेमान को 851 में मिलीं तीन बड़ी शक्तियाँ, राष्ट्रकूट, प्रतिहार और पाल; दक्षिण में पल्लव, पाण्ड्य और उभरते चोल; और अवंतिवर्मन का कश्मीर।"
       },
       "layers": [
         "pratihara",
@@ -275,8 +275,8 @@
         "hi": "अपने चरम पर तुग़लक़ साम्राज्य"
       },
       "blurb": {
-        "en": "Muḥammad bin Tughluq's provinces, from the Panjab to Bengal, the Deccan and Ma'bar, graded by how firmly they were held, from Baranī, al-ʿUmarī and Smith's Oxford History (1919).",
-        "hi": "मुहम्मद बिन तुग़लक़ के प्रांत, पंजाब से बंगाल, दक्कन और मअबर तक, इस आधार पर श्रेणीबद्ध कि वे कितनी दृढ़ता से सँभाले गए, बरनी, अल-उमरी और स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) से।"
+        "en": "Muḥammad bin Tughluq's provinces, from the Panjab to Bengal, the Deccan and Ma'bar, graded by how firmly they were held; beside them Jājnagar (Orissa) and Kashmir.",
+        "hi": "मुहम्मद बिन तुग़लक़ के प्रांत, पंजाब से बंगाल, दक्कन और मअबर तक, इस आधार पर श्रेणीबद्ध कि वे कितनी दृढ़ता से सँभाले गए; उनके साथ जाजनगर (ओडिशा) और कश्मीर।"
       },
       "layers": [
         "tughluq",
@@ -358,8 +358,8 @@
         "hi": "मराठा और उत्तराधिकारी राज्य"
       },
       "blurb": {
-        "en": "The eve of Panipat: the Marāṭhā confederacy to the Attock, the Durrānīs in the Panjab, Mughal Delhi, Awadh, the Rohillas, the Jāṭs, the Niẓām, Bengal and Arcot under the English, and Mysore.",
-        "hi": "पानीपत की पूर्वसंध्या: अटक तक मराठा संघ, पंजाब में दुर्रानी, मुग़ल दिल्ली, अवध, रोहिल्ला, जाट, निज़ाम, अंग्रेज़ों के अधीन बंगाल और आर्काट, और मैसूर।"
+        "en": "The eve of Panipat: the Marāṭhās to the Attock, the Durrānīs in the Panjab, Delhi, Awadh, the Rohillas, the Jāṭs, the Rajput states, the Niẓām, Bengal and Arcot under the English, and Mysore.",
+        "hi": "पानीपत की पूर्वसंध्या: अटक तक मराठे, पंजाब में दुर्रानी, दिल्ली, अवध, रोहिल्ला, जाट, राजपूत राज्य, निज़ाम, अंग्रेज़ों के अधीन बंगाल और आर्काट, और मैसूर।"
       },
       "layers": [
         "panipat",
@@ -379,8 +379,8 @@
         "hi": "कंपनी, मराठा और मैसूर"
       },
       "blurb": {
-        "en": "India in 1779 as Qudratullāh saw it: Bengal under the Firingīs, Awadh with the Rohilla country, Najaf Khān's Delhi, the Sikhs in the Panjab, and the Deccan shared by the Niẓām, the Marāṭhās, Haidar and Arcot.",
-        "hi": "1779 का भारत, जैसा क़ुदरतुल्लाह ने देखा: फ़िरंगियों के अधीन बंगाल, रोहिल्ला प्रदेश सहित अवध, नजफ़ ख़ान की दिल्ली, पंजाब में सिख, और निज़ाम, मराठों, हैदर और आर्काट में बँटा दक्कन।"
+        "en": "India in 1779 as Qudratullāh saw it: Bengal under the Firingīs, Awadh with the Rohilla country, Najaf Khān's Delhi, the Sikhs, the Rajput states, and the Deccan shared by the Niẓām, the Marāṭhās, Haidar and Arcot.",
+        "hi": "1779 का भारत, जैसा क़ुदरतुल्लाह ने देखा: फ़िरंगियों के अधीन बंगाल, रोहिल्ला प्रदेश सहित अवध, नजफ़ ख़ान की दिल्ली, सिख, राजपूत राज्य, और निज़ाम, मराठों, हैदर और आर्काट में बँटा दक्कन।"
       },
       "layers": [
         "salbai",

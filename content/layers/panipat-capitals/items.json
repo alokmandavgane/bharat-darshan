@@ -28,7 +28,7 @@
       "hi": "मराठा संघ की राजधानी।"
     },
     "sources": [
-      "https://archive.org/details/india.history.resource.310",
+      "https://archive.org/details/annalsantiquitie02todj_0",
       "https://en.wikipedia.org/wiki/Shaniwar_Wada"
     ]
   },
@@ -327,6 +327,204 @@
     "sources": [
       "https://archive.org/details/india.history.resource.310",
       "https://en.wikipedia.org/wiki/Srirangapatna"
+    ]
+  },
+  {
+    "id": "mewar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.5764,
+      "lon": 73.6835
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at City Palace, Udaipur",
+      "hi": "निश्चित, City Palace, Udaipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Mewār.",
+      "hi": "मेवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0",
+      "https://en.wikipedia.org/wiki/City_Palace,_Udaipur"
+    ]
+  },
+  {
+    "id": "jaipur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9258,
+      "lon": 75.8237
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "identified": {
+      "en": "certain, placed at City Palace, Jaipur",
+      "hi": "निश्चित, City Palace, Jaipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Jaipur.",
+      "hi": "जयपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0",
+      "https://en.wikipedia.org/wiki/City_Palace,_Jaipur"
+    ]
+  },
+  {
+    "id": "bikaner-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.0229,
+      "lon": 73.3187
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "identified": {
+      "en": "certain, placed at Junagarh Fort, Bikaner",
+      "hi": "निश्चित, Junagarh Fort, Bikaner पर"
+    },
+    "blurb": {
+      "en": "The capital of Bikaner.",
+      "hi": "बीकानेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0",
+      "https://en.wikipedia.org/wiki/Junagarh_Fort"
+    ]
+  },
+  {
+    "id": "jaisalmer-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9124,
+      "lon": 70.9127
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "identified": {
+      "en": "certain, placed at Jaisalmer Fort",
+      "hi": "निश्चित, Jaisalmer Fort पर"
+    },
+    "blurb": {
+      "en": "The capital of Jaisalmer.",
+      "hi": "जैसलमेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0",
+      "https://en.wikipedia.org/wiki/Jaisalmer_Fort"
+    ]
+  },
+  {
+    "id": "bundi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    },
+    "category": "bundi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.4442,
+      "lon": 75.6376
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    },
+    "identified": {
+      "en": "certain, placed at Taragarh, Bundi",
+      "hi": "निश्चित, Taragarh, Bundi पर"
+    },
+    "blurb": {
+      "en": "The capital of Bundi.",
+      "hi": "बूंदी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0",
+      "https://en.wikipedia.org/wiki/Taragarh_Fort,_Bundi"
+    ]
+  },
+  {
+    "id": "kota-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kota",
+      "hi": "कोटा"
+    },
+    "category": "kota",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.1735,
+      "lon": 75.8458
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Kota",
+      "hi": "कोटा"
+    },
+    "identified": {
+      "en": "certain, placed at Garh Palace, Kota",
+      "hi": "निश्चित, Garh Palace, Kota पर"
+    },
+    "blurb": {
+      "en": "The capital of Kota.",
+      "hi": "कोटा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0",
+      "https://en.wikipedia.org/wiki/Kota_Garh_Palace"
     ]
   }
 ]

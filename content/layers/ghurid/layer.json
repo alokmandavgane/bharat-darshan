@@ -14,7 +14,7 @@
   "categories": [
     {
       "id": "ghurid",
-      "color": "#86a88f",
+      "color": "#3f5f4a",
       "title": {
         "en": "Ghurid conquests in Hindustan",
         "hi": "हिन्दुस्तान में ग़ोरी विजय"
@@ -22,7 +22,7 @@
     },
     {
       "id": "sena",
-      "color": "#b86a96",
+      "color": "#7a2f5a",
       "title": {
         "en": "Sena kingdom",
         "hi": "सेन राज्य"
@@ -38,7 +38,7 @@
     },
     {
       "id": "caulukya",
-      "color": "#d7ad62",
+      "color": "#b07a1a",
       "title": {
         "en": "Caulukyas of Anhilvāra",
         "hi": "अणहिलवाड के चौलुक्य"
@@ -54,7 +54,7 @@
     },
     {
       "id": "yadava",
-      "color": "#6199c4",
+      "color": "#1f4f7a",
       "title": {
         "en": "Yādavas of Devagiri",
         "hi": "देवगिरि के यादव"
@@ -62,7 +62,7 @@
     },
     {
       "id": "hoysala",
-      "color": "#b8454f",
+      "color": "#8a1f2c",
       "title": {
         "en": "Hoysaḷas of Dorasamudra",
         "hi": "द्वारसमुद्र के होयसल"
@@ -70,7 +70,7 @@
     },
     {
       "id": "kakatiya",
-      "color": "#7fb3a4",
+      "color": "#2f6a5a",
       "title": {
         "en": "Kākatīyas of Anumakoṇḍa",
         "hi": "अनुमकोण्ड के काकतीय"
@@ -90,6 +90,14 @@
       "title": {
         "en": "Pāṇḍyas of Madurai",
         "hi": "मदुरै के पाण्ड्य"
+      }
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       }
     }
   ],
@@ -156,14 +164,15 @@
     }
   },
   "note": {
-    "en": "India about 1200 CE, a few years after the Ghurid victories of 1192-94. The conquests of Muʿizz al-Dīn of Ghūr are held from Delhi by Quṭb al-Dīn Aibak: the Panjab, Ajmer, the doab, Benares and Gwalior, 'the whole of Hindustan Proper, except Malwa', as Smith quotes Elliot, and Bihar, newly overrun by Muḥammad Bakhtiyār. Around them stand the Senas of Bengal under Lakṣmaṇasena, the Candellas of Bundelkhand, whose Kālinjar fell in 1203, the Caulukyas of Gujarat, whose capital Aibak sacked in 1197, and the Paramāras of Mālava, restored under Subhaṭavarman. In the south the Hoysaḷas under Vīra-Ballāḷa II hold Mysore and Kuntala, won from the Yādavas of Devagiri in 1191-92; the Kākatīyas rule Telangana from Anumakoṇḍa; Kulottuṅga III's Colas hold the Kāverī country and claim the Pāṇḍyas as subjects. Left blank: Marwar, Mewar and south Gujarat, Orissa, the Kalacuris, Mithilā, Assam, Kashmir, Kerala and Toṇḍai-maṇḍalam, where nothing read here speaks for this date. The chronicles are quoted in Elliot and Dowson's 1869 translation. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1200 ई. का भारत, 1192-94 की ग़ोरी विजयों के कुछ वर्ष बाद। ग़ोर के मुइज़्ज़ुद्दीन की विजयें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता है: पंजाब, अजमेर, दोआब, बनारस और ग्वालियर, 'मालवा को छोड़ पूरा हिन्दुस्तान खास', जैसा स्मिथ इलियट को उद्धृत करते हैं, और बिहार, जिसे मुहम्मद बख़्तियार ने अभी-अभी रौंदा। उनके चारों ओर लक्ष्मणसेन के अधीन बंगाल के सेन, बुंदेलखंड के चन्देल, जिनका कालिंजर 1203 में गिरा, गुजरात के चौलुक्य, जिनकी राजधानी ऐबक ने 1197 में लूटी, और सुभटवर्मन के अधीन पुनर्स्थापित मालव के परमार हैं। दक्षिण में वीर-बल्लाळ द्वितीय के अधीन होयसल मैसूर और कुन्तल रखते हैं, जो 1191-92 में देवगिरि के यादवों से जीता; काकतीय अनुमकोण्ड से तेलंगाना पर राज करते हैं; कुलोत्तुंग तृतीय के चोल कावेरी देश रखते हैं और पाण्ड्यों को अधीन बताते हैं। खाली छोड़े गए: मारवाड़, मेवाड़ और दक्षिण गुजरात, ओडिशा, कलचुरि, मिथिला, असम, कश्मीर, केरल और तोण्डै-मण्डलम्, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। इतिवृत्त इलियट और डाउसन के 1869 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1200 CE, a few years after the Ghurid victories of 1192-94. The conquests of Muʿizz al-Dīn of Ghūr are held from Delhi by Quṭb al-Dīn Aibak: the Panjab, Ajmer, the doab, Benares and Gwalior, 'the whole of Hindustan Proper, except Malwa', as Smith quotes Elliot, and Bihar, newly overrun by Muḥammad Bakhtiyār. Around them stand the Senas of Bengal under Lakṣmaṇasena, the Candellas of Bundelkhand, whose Kālinjar fell in 1203, the Caulukyas of Gujarat, whose capital Aibak sacked in 1197, and the Paramāras of Mālava, restored under Subhaṭavarman. In the south the Hoysaḷas under Vīra-Ballāḷa II hold Mysore and Kuntala, won from the Yādavas of Devagiri in 1191-92; the Kākatīyas rule Telangana from Anumakoṇḍa; Kulottuṅga III's Colas hold the Kāverī country and claim the Pāṇḍyas as subjects. Left blank: Marwar, Mewar and south Gujarat, Orissa, the Kalacuris, Mithilā, Assam, Kerala and Toṇḍai-maṇḍalam, where nothing read here speaks for this date. Kashmir under Jagadeva is added from Jonarāja's chronicle (Dutt, 1898). The chronicles are quoted in Elliot and Dowson's 1869 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1200 ई. का भारत, 1192-94 की ग़ोरी विजयों के कुछ वर्ष बाद। ग़ोर के मुइज़्ज़ुद्दीन की विजयें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता है: पंजाब, अजमेर, दोआब, बनारस और ग्वालियर, 'मालवा को छोड़ पूरा हिन्दुस्तान खास', जैसा स्मिथ इलियट को उद्धृत करते हैं, और बिहार, जिसे मुहम्मद बख़्तियार ने अभी-अभी रौंदा। उनके चारों ओर लक्ष्मणसेन के अधीन बंगाल के सेन, बुंदेलखंड के चन्देल, जिनका कालिंजर 1203 में गिरा, गुजरात के चौलुक्य, जिनकी राजधानी ऐबक ने 1197 में लूटी, और सुभटवर्मन के अधीन पुनर्स्थापित मालव के परमार हैं। दक्षिण में वीर-बल्लाळ द्वितीय के अधीन होयसल मैसूर और कुन्तल रखते हैं, जो 1191-92 में देवगिरि के यादवों से जीता; काकतीय अनुमकोण्ड से तेलंगाना पर राज करते हैं; कुलोत्तुंग तृतीय के चोल कावेरी देश रखते हैं और पाण्ड्यों को अधीन बताते हैं। खाली छोड़े गए: मारवाड़, मेवाड़ और दक्षिण गुजरात, ओडिशा, कलचुरि, मिथिला, असम, केरल और तोण्डै-मण्डलम्, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। जगदेव के अधीन कश्मीर जोनराज के वृत्तांत (दत्त, 1898) से जोड़ा गया। इतिवृत्त इलियट और डाउसन के 1869 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "elliot-dowson-1869",
     "smith-1914",
     "epigraphia-indica-vi",
     "epigraphia-indica-ix",
+    "dutt-1898-iii",
     "census-2011",
     "datameet-maps",
     "wikipedia"

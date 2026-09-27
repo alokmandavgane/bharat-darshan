@@ -328,5 +328,38 @@
       "https://archive.org/details/bwb_KV-350-852",
       "https://en.wikipedia.org/wiki/Madurai"
     ]
+  },
+  {
+    "id": "kashmir-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.0837,
+      "lon": 74.7973
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "polity": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "identified": {
+      "en": "likely, placed at Srinagar",
+      "hi": "संभावित, Srinagar पर"
+    },
+    "blurb": {
+      "en": "The capital of Kashmir.",
+      "hi": "कश्मीर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft",
+      "https://en.wikipedia.org/wiki/Srinagar"
+    ]
   }
 ]

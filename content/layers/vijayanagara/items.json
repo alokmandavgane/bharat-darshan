@@ -948,5 +948,57 @@
       "en": "Kaṭaka (Cuttack)",
       "hi": "कटक"
     }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      10,
+      14,
+      2,
+      9,
+      8,
+      11,
+      15,
+      1,
+      12,
+      13
+    ],
+    "verse": "Mahammada (read: Muḥammad)",
+    "locus": {
+      "en": "Later Rājataraṅgiṇīs, Dutt iii. 363",
+      "hi": "परवर्ती राजतरंगिणियाँ, Dutt iii. 363"
+    },
+    "identified": {
+      "en": "likely, after Kings of Kashmira 1898",
+      "hi": "संभावित, Kings of Kashmira 1898 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Shāh Mīrī sultanate of Kashmir under Muḥammad Shāh, in his third reign (1516-28), torn by its ministers' feuds.",
+      "hi": "मुहम्मद शाह के तीसरे शासन (1516-28) में कश्मीर की शाह मीरी सल्तनत, मंत्रियों के झगड़ों से जर्जर।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "The Valley under the Shāh Mīrī sultan Muḥammad Shāh",
+      "hi": "शाह मीरी सुल्तान मुहम्मद शाह के अधीन घाटी"
+    },
+    "reading": "dethroned after reigning in Kashmira for eleven years",
+    "page": {
+      "en": "J. C. Dutt, Kings of Kashmira (1898), p. 363",
+      "hi": "J. C. Dutt, Kings of Kashmira (1898), पृ. 363"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    }
   }
 ]

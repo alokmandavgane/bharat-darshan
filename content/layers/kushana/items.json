@@ -859,5 +859,295 @@
       "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 268",
       "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 268"
     }
+  },
+  {
+    "id": "pandya-held",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "rank": 1,
+    "districts": [
+      623,
+      624,
+      612,
+      625,
+      622,
+      626,
+      628,
+      627,
+      621
+    ],
+    "verse": "Pandion (read: Pāṇḍya)",
+    "locus": {
+      "en": "Ptolemy vii.1.89",
+      "hi": "टॉलेमी vii.1.89"
+    },
+    "identified": {
+      "en": "likely, after Ancient India as described by Ptolemy 1885",
+      "hi": "संभावित, Ancient India as described by Ptolemy 1885 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pāṇḍyas of Madurai, whom Ptolemy knows as 'Pandion' and the Periplus as the Pandian kingdom from Cape Comorin to the pearl fishery at Korkai.",
+      "hi": "मदुरै के पाण्ड्य, जिन्हें टॉलेमी 'पांडियन' और पेरिप्लस कन्याकुमारी से कोरकै के मोती-तट तक का पाण्ड्य राज्य कहते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ],
+    "color": "#6a8a3a",
+    "grade": {
+      "en": "The Pāṇḍya kingdom, from Madurai to the pearl coast of Korkai",
+      "hi": "पाण्ड्य राज्य, मदुरै से कोरकै के मोती-तट तक"
+    },
+    "reading": "Modoura, the royal city of Pandion",
+    "page": {
+      "en": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), p. 183",
+      "hi": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), पृ. 183"
+    },
+    "capital": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    }
+  },
+  {
+    "id": "pandya-nelkynda",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "rank": 1,
+    "districts": [
+      597,
+      598,
+      599
+    ],
+    "verse": "Pandion (read: Pāṇḍya)",
+    "locus": {
+      "en": "Ptolemy vii.1.89",
+      "hi": "टॉलेमी vii.1.89"
+    },
+    "identified": {
+      "en": "disputed, after Periplus 1912",
+      "hi": "विवादित, Periplus 1912 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pāṇḍyas of Madurai, whom Ptolemy knows as 'Pandion' and the Periplus as the Pandian kingdom from Cape Comorin to the pearl fishery at Korkai.",
+      "hi": "मदुरै के पाण्ड्य, जिन्हें टॉलेमी 'पांडियन' और पेरिप्लस कन्याकुमारी से कोरकै के मोती-तट तक का पाण्ड्य राज्य कहते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ],
+    "color": "#9fb86a",
+    "grade": {
+      "en": "Nelcynda on the Malabar coast, 'of another Kingdom, the Pandian'",
+      "hi": "मालाबार तट पर नेलकिंडा, 'दूसरे राज्य, पाण्ड्य का'"
+    },
+    "reading": "is of another King- dom, the Pandian.",
+    "page": {
+      "en": "W. H. Schoff, The Periplus of the Erythraean Sea (1912), p. 44",
+      "hi": "W. H. Schoff, The Periplus of the Erythraean Sea (1912), पृ. 44"
+    },
+    "capital": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    }
+  },
+  {
+    "id": "chera-coast",
+    "status": "draft",
+    "name": {
+      "en": "Cheras",
+      "hi": "चेर"
+    },
+    "category": "chera",
+    "rank": 1,
+    "districts": [
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596
+    ],
+    "verse": "Kerobothros (read: Keralaputra)",
+    "locus": {
+      "en": "Ptolemy vii.1.86",
+      "hi": "टॉलेमी vii.1.86"
+    },
+    "identified": {
+      "en": "likely, after Periplus 1912",
+      "hi": "संभावित, Periplus 1912 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Cheras (Keralaputra), 'Kerobothros' to Ptolemy and 'Cerobothra' to the Periplus, whose ports Muziris and Tyndis shipped pepper to Rome.",
+      "hi": "चेर (केरलपुत्र), टॉलेमी के 'केरोबोथ्रोस' और पेरिप्लस के 'सेरोबोथ्रा', जिनके बंदरगाह मुज़िरिस और टिंडिस से रोम को काली मिर्च जाती थी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ],
+    "color": "#c9785a",
+    "grade": {
+      "en": "The Malabar coast, with the ports of Tyndis and Muziris",
+      "hi": "मालाबार तट, टिंडिस और मुज़िरिस बंदरगाहों सहित"
+    },
+    "reading": "Tyndis is of the Kingdom of Cerobothra",
+    "page": {
+      "en": "W. H. Schoff, The Periplus of the Erythraean Sea (1912), p. 44",
+      "hi": "W. H. Schoff, The Periplus of the Erythraean Sea (1912), पृ. 44"
+    },
+    "capital": {
+      "en": "Karoura (Karūr?)",
+      "hi": "करौरा (करूर?)"
+    }
+  },
+  {
+    "id": "chera-kongu",
+    "status": "draft",
+    "name": {
+      "en": "Cheras",
+      "hi": "चेर"
+    },
+    "category": "chera",
+    "rank": 1,
+    "districts": [
+      613,
+      632,
+      633,
+      610
+    ],
+    "verse": "Kerobothros (read: Keralaputra)",
+    "locus": {
+      "en": "Ptolemy vii.1.86",
+      "hi": "टॉलेमी vii.1.86"
+    },
+    "identified": {
+      "en": "disputed, after Ancient India as described by Ptolemy 1885",
+      "hi": "विवादित, Ancient India as described by Ptolemy 1885 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Cheras (Keralaputra), 'Kerobothros' to Ptolemy and 'Cerobothra' to the Periplus, whose ports Muziris and Tyndis shipped pepper to Rome.",
+      "hi": "चेर (केरलपुत्र), टॉलेमी के 'केरोबोथ्रोस' और पेरिप्लस के 'सेरोबोथ्रा', जिनके बंदरगाह मुज़िरिस और टिंडिस से रोम को काली मिर्च जाती थी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ],
+    "color": "#e0a88a",
+    "grade": {
+      "en": "Karūr and the Kongu country, if Karoura is Karūr",
+      "hi": "करूर और कोंगु प्रदेश, यदि करौरा करूर है"
+    },
+    "reading": "generally identified with Kartb:, an important town in the Koimbatar district",
+    "page": {
+      "en": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), p. 182",
+      "hi": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), पृ. 182"
+    },
+    "capital": {
+      "en": "Karoura (Karūr?)",
+      "hi": "करौरा (करूर?)"
+    }
+  },
+  {
+    "id": "chola-held",
+    "status": "draft",
+    "name": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "category": "chola",
+    "rank": 1,
+    "districts": [
+      614,
+      615,
+      616,
+      620,
+      619,
+      618
+    ],
+    "verse": "S6rnagos (read: Sōrnagos)",
+    "locus": {
+      "en": "Ptolemy vii.1.91",
+      "hi": "टॉलेमी vii.1.91"
+    },
+    "identified": {
+      "en": "likely, after Ancient India as described by Ptolemy 1885",
+      "hi": "संभावित, Ancient India as described by Ptolemy 1885 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Cholas of the Kaveri delta, whose royal city Ptolemy calls Orthoura (Uraiyūr); the Periplus calls their land the Coast Country, with Argaru inland.",
+      "hi": "कावेरी डेल्टा के चोल, जिनके राजनगर को टॉलेमी ऑर्थौरा (उरैयूर) कहते हैं; पेरिप्लस उनके देश को तटीय देश कहता है, भीतर अर्गरु के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "The Chola country on the Kaveri, the Periplus's 'Coast Country'",
+      "hi": "कावेरी पर चोल प्रदेश, पेरिप्लस का 'तटीय देश'"
+    },
+    "reading": "Orthoura, the royal city of S6rnagos",
+    "page": {
+      "en": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), p. 184",
+      "hi": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), पृ. 184"
+    },
+    "capital": {
+      "en": "Uraiyūr",
+      "hi": "उरैयूर"
+    }
+  },
+  {
+    "id": "ay-held",
+    "status": "draft",
+    "name": {
+      "en": "Āy",
+      "hi": "आय"
+    },
+    "category": "ay",
+    "rank": 1,
+    "districts": [
+      601,
+      600,
+      629
+    ],
+    "verse": "Aio i (read: Aioi)",
+    "locus": {
+      "en": "Ptolemy vii.1.9",
+      "hi": "टॉलेमी vii.1.9"
+    },
+    "identified": {
+      "en": "disputed, after Ancient India as described by Ptolemy 1885",
+      "hi": "विवादित, Ancient India as described by Ptolemy 1885 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Āy chiefs of the far south-west, Ptolemy's Aioi, with their metropolis at Kottiara (Kōṭṭār, near Nagercoil).",
+      "hi": "सुदूर दक्षिण-पश्चिम के आय सरदार, टॉलेमी के आयोई, जिनकी राजधानी कोट्टियारा (कोट्टार, नागरकोइल के पास) थी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog"
+    ],
+    "color": "#b8854a",
+    "grade": {
+      "en": "The country of the Aioi, from Quilon to Cape Comorin",
+      "hi": "आयोई का देश, क्विलोन से कन्याकुमारी तक"
+    },
+    "reading": "9. Country of the Aio i.",
+    "page": {
+      "en": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), p. 53",
+      "hi": "J. W. McCrindle, Ancient India as described by Ptolemy (1885), पृ. 53"
+    },
+    "capital": {
+      "en": "Kōṭṭār",
+      "hi": "कोट्टार"
+    }
   }
 ]

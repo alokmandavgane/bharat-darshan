@@ -805,5 +805,204 @@
       "en": "Mānyakheṭa",
       "hi": "मान्यखेट"
     }
+  },
+  {
+    "id": "pandya-held",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "rank": 1,
+    "districts": [
+      623,
+      624,
+      612,
+      625,
+      622,
+      626,
+      628,
+      627,
+      621,
+      629
+    ],
+    "verse": "klri-M&ra (read: Śrī-Māra)",
+    "locus": {
+      "en": "Sinnamanur plates, v. 10",
+      "hi": "सिन्नमनूर ताम्रपत्र, v. 10"
+    },
+    "identified": {
+      "en": "likely, after South Indian Inscriptions 1929",
+      "hi": "संभावित, South Indian Inscriptions 1929 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pāṇḍyas under Śrīmāra Śrīvallabha (c. 815-862), who claimed victories over the Pallava, the Kerala, Siṃhala and the Vallabha, and fought at Kuḍamūkku.",
+      "hi": "श्रीमार श्रीवल्लभ (लगभग 815-862) के अधीन पाण्ड्य, जिन्होंने पल्लव, केरल, सिंहल और वल्लभ पर विजय का दावा किया और कुडमूक्कु में लड़े।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.7342"
+    ],
+    "color": "#6a8a3a",
+    "grade": {
+      "en": "Śrīmāra Śrīvallabha's kingdom from Madurai",
+      "hi": "मदुरै से श्रीमार श्रीवल्लभ का राज्य"
+    },
+    "reading": "protected the earth under (his) one umbrella.",
+    "page": {
+      "en": "Archaeological Survey of India, South Indian Inscriptions (1929), p. 457",
+      "hi": "Archaeological Survey of India, South Indian Inscriptions (1929), पृ. 457"
+    },
+    "capital": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    }
+  },
+  {
+    "id": "pallava-held",
+    "status": "draft",
+    "name": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+    },
+    "category": "pallava",
+    "rank": 1,
+    "districts": [
+      604,
+      603,
+      602,
+      605,
+      606,
+      607,
+      617
+    ],
+    "verse": "Pallava",
+    "locus": {
+      "en": "Sinnamanur plates, ll. 104-113",
+      "hi": "सिन्नमनूर ताम्रपत्र, ll. 104-113"
+    },
+    "identified": {
+      "en": "likely, after Smith 1914",
+      "hi": "संभावित, Smith 1914 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pallavas of Kāñcī in their last century (Nandivarman III, c. 846-869), at war with the Pāṇḍyas; the Cholas ended the line late in the ninth century.",
+      "hi": "अपनी अंतिम सदी में कांची के पल्लव (नंदिवर्मन तृतीय, लगभग 846-869), पाण्ड्यों से युद्धरत; नौवीं सदी के अंत में चोलों ने इस वंश को समाप्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.7342",
+      "https://archive.org/details/bwb_KV-350-852"
+    ],
+    "color": "#5f7fa8",
+    "grade": {
+      "en": "Toṇḍaimaṇḍalam, round the Pallava capital Kāñcī",
+      "hi": "तोंडैमंडलम, पल्लव राजधानी कांची के चारों ओर"
+    },
+    "reading": "the Pallava supremacy, which had been severely shaken by the Chalukya successes in 740, finally passed away and was transferred to the Cholas",
+    "page": {
+      "en": "Vincent A. Smith, The Early History of India (1914), p. 45",
+      "hi": "Vincent A. Smith, The Early History of India (1914), पृ. 45"
+    },
+    "capital": {
+      "en": "Kāñcīpuram",
+      "hi": "कांचीपुरम"
+    }
+  },
+  {
+    "id": "chola-held",
+    "status": "draft",
+    "name": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "category": "chola",
+    "rank": 1,
+    "districts": [
+      620,
+      619,
+      618
+    ],
+    "verse": "Tab ch^ pur! (read: Tañjāpurī)",
+    "locus": {
+      "en": "Tiruvālaṅgāḍu plates, vv. 44-45",
+      "hi": "तिरुवालंगाडु ताम्रपत्र, vv. 44-45"
+    },
+    "identified": {
+      "en": "disputed, after South Indian Inscriptions 1920",
+      "hi": "विवादित, South Indian Inscriptions 1920 के अनुसार"
+    },
+    "blurb": {
+      "en": "Vijayālaya, founder of the imperial Cholas, who took Tanjore from the Muttaraiyar about 850 (the inscription's editor puts it later in the century).",
+      "hi": "शाही चोलों के संस्थापक विजयालय, जिन्होंने लगभग 850 में मुत्तरैयरों से तंजौर लिया (अभिलेख के संपादक इसे सदी में बाद का मानते हैं)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.61183"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "Tanjore, taken by Vijayālaya",
+      "hi": "तंजौर, विजयालय द्वारा लिया गया"
+    },
+    "reading": "He, the light of the Solar race, took posse.'ision of (the towny Tab ch^ pur!",
+    "page": {
+      "en": "H. Krishna Sastri, South Indian Inscriptions (1920), p. 418",
+      "hi": "H. Krishna Sastri, South Indian Inscriptions (1920), पृ. 418"
+    },
+    "capital": {
+      "en": "Tañjāvūr",
+      "hi": "तंजावुर"
+    }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      10,
+      14,
+      2,
+      9,
+      8,
+      11,
+      15,
+      1,
+      12,
+      13
+    ],
+    "verse": "Avantivarman",
+    "locus": {
+      "en": "Rājataraṅgiṇī iv. 715-716",
+      "hi": "राजतरंगिणी iv. 715-716"
+    },
+    "identified": {
+      "en": "likely, after Kalhaṇa's Rājataraṅgiṇī 1900",
+      "hi": "संभावित, Kalhaṇa's Rājataraṅgiṇī 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kashmir under Avantivarman (855/6-883), founder of the Utpala dynasty, made king by his minister Śūra.",
+      "hi": "उत्पल वंश के संस्थापक अवंतिवर्मन (855/6-883) के अधीन कश्मीर, जिन्हें उनके मंत्री शूर ने राजा बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "The Valley under Avantivarman",
+      "hi": "अवंतिवर्मन के अधीन घाटी"
+    },
+    "reading": "716. Ousting Utjjalapida, he made him king in the year",
+    "page": {
+      "en": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), p. 185",
+      "hi": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), पृ. 185"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    }
   }
 ]

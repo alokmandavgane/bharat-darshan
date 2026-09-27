@@ -83,6 +83,62 @@
         "en": "The Carnatic (Arcot)",
         "hi": "कर्नाटक (आर्काट)"
       }
+    },
+    {
+      "id": "mewar",
+      "color": "#b03a48",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      }
+    },
+    {
+      "id": "jaipur",
+      "color": "#d4798a",
+      "title": {
+        "en": "Jaipur",
+        "hi": "जयपुर"
+      }
+    },
+    {
+      "id": "bikaner",
+      "color": "#c9a36a",
+      "title": {
+        "en": "Bikaner",
+        "hi": "बीकानेर"
+      }
+    },
+    {
+      "id": "jaisalmer",
+      "color": "#b8905a",
+      "title": {
+        "en": "Jaisalmer",
+        "hi": "जैसलमेर"
+      }
+    },
+    {
+      "id": "bundi",
+      "color": "#7a4a6a",
+      "title": {
+        "en": "Bundi",
+        "hi": "बूंदी"
+      }
+    },
+    {
+      "id": "kota",
+      "color": "#9a5a8a",
+      "title": {
+        "en": "Kota",
+        "hi": "कोटा"
+      }
+    },
+    {
+      "id": "marwar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mārwār",
+        "hi": "मारवाड़"
+      }
     }
   ],
   "fields": {
@@ -148,12 +204,14 @@
     }
   },
   "note": {
-    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. Left blank: the Rajput states, Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states and the north-east, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। ख़ाली छोड़े गए: राजपूत राज्य, फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य और पूर्वोत्तर, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. The Rajput states of Mewār, Mārwār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states and the north-east, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। मेवाड़, मारवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। ख़ाली छोड़े गए: फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य और पूर्वोत्तर, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
   },
   "sources": [
     "elliot-dowson-1877-viii",
     "smith-1919",
+    "tod-1829",
+    "tod-1832",
     "census-2011",
     "datameet-maps",
     "wikipedia"

@@ -13,7 +13,7 @@
   "categories": [
     {
       "id": "harsha",
-      "color": "#a8559a",
+      "color": "#6d1f5e",
       "title": {
         "en": "Harṣa's empire",
         "hi": "हर्ष का साम्राज्य"
@@ -22,7 +22,7 @@
     },
     {
       "id": "chalukya",
-      "color": "#3a76a8",
+      "color": "#1f4f7a",
       "title": {
         "en": "Cālukyas of Vātāpi",
         "hi": "वातापी के चालुक्य"
@@ -107,6 +107,15 @@
       "title": {
         "en": "Pāṇḍya",
         "hi": "पाण्ड्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       },
       "icon": "map"
     }

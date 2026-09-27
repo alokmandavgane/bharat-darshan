@@ -14,9 +14,9 @@
   "categories": [
     {
       "id": "pratihara",
-      "color": "#b04a32",
+      "color": "#8a2c1c",
       "title": {
-        "en": "The Gurjara-Pratihāra empire",
+        "en": "Gurjara-Pratihāra empire",
         "hi": "गुर्जर-प्रतिहार साम्राज्य"
       }
     },
@@ -24,16 +24,48 @@
       "id": "pala",
       "color": "#1f5e3f",
       "title": {
-        "en": "The Pāla empire",
+        "en": "Pāla empire",
         "hi": "पाल साम्राज्य"
       }
     },
     {
       "id": "rashtrakuta",
-      "color": "#4f68b8",
+      "color": "#2a3f8a",
       "title": {
-        "en": "The Rāṣṭrakūṭa empire",
+        "en": "Rāṣṭrakūṭa empire",
         "hi": "राष्ट्रकूट साम्राज्य"
+      }
+    },
+    {
+      "id": "pandya",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Pāṇḍyas",
+        "hi": "पाण्ड्य"
+      }
+    },
+    {
+      "id": "pallava",
+      "color": "#5f7fa8",
+      "title": {
+        "en": "Pallavas",
+        "hi": "पल्लव"
+      }
+    },
+    {
+      "id": "chola",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Cholas",
+        "hi": "चोल"
+      }
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       }
     }
   ],
@@ -100,13 +132,16 @@
     }
   },
   "note": {
-    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Left blank: the Pallavas, Pāṇḍyas and Colas, the Eastern Cālukyas of Veṅgī, and Kashmir. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। खाली छोड़े गए: पल्लव, पाण्ड्य और चोल, वेंगी के पूर्वी चालुक्य, और कश्मीर। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Added: the Pāṇḍyas of Śrīmāra and the Pallavas from the Sinnamanur plates, Vijayālaya's Tanjore from the Tiruvālaṅgāḍu plates (both in South Indian Inscriptions), and Kashmir under Avantivarman from the Rājataraṅgiṇī. Left blank: the Eastern Cālukyas of Veṅgī. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। जोड़े गए: सिन्नमनूर ताम्रपत्रों से श्रीमार के पाण्ड्य और पल्लव, तिरुवालंगाडु ताम्रपत्रों से विजयालय का तंजौर (दोनों साउथ इंडियन इंस्क्रिप्शंस में), और राजतरंगिणी से अवंतिवर्मन के अधीन कश्मीर। खाली छोड़े गए: वेंगी के पूर्वी चालुक्य। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
   },
   "sources": [
     "smith-1914",
     "elliot-dowson-1867",
     "epigraphia-indica-xviii",
+    "sii-1920-iii-3",
+    "sii-1929-iii-4",
+    "stein-1900-i",
     "census-2011",
     "datameet-maps",
     "wikipedia"

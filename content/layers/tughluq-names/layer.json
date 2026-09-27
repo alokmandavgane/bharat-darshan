@@ -19,6 +19,24 @@
         "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
       },
       "icon": "map"
+    },
+    {
+      "id": "orissa",
+      "color": "#8a6aa8",
+      "title": {
+        "en": "Jājnagar (Orissa)",
+        "hi": "जाजनगर (ओडिशा)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
+      },
+      "icon": "map"
     }
   ],
   "note": {

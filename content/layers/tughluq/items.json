@@ -495,13 +495,13 @@
     }
   },
   {
-    "id": "tughluq-jajnagar",
+    "id": "orissa-held",
     "status": "draft",
     "name": {
-      "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
-      "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
+      "en": "Jājnagar (Orissa)",
+      "hi": "जाजनगर (ओडिशा)"
     },
-    "category": "tughluq",
+    "category": "orissa",
     "rank": 1,
     "districts": [
       374,
@@ -526,31 +526,87 @@
       543,
       544
     ],
-    "verse": "Hindustan",
+    "verse": "J4jnagar (read: Jājnagar)",
     "locus": {
-      "en": "Baranī, E&D iii. 236",
-      "hi": "बरनी, E&D iii. 236"
+      "en": "Baranī, E&D iii. 234, Jajnagar",
+      "hi": "बरनी, E&D iii. 234, Jajnagar"
     },
     "identified": {
-      "en": "disputed, after Elliot and Dowson 1871",
-      "hi": "विवादित, Elliot and Dowson 1871 के अनुसार"
+      "en": "likely, after Elliot and Dowson 1871",
+      "hi": "संभावित, Elliot and Dowson 1871 के अनुसार"
     },
     "blurb": {
-      "en": "Muḥammad bin Tughluq's empire, 'far larger than that under the rule of any of his Muhammadan predecessors', from the Panjab to Bengal and Ma'bar. After 1338-40 Bengal, Ma'bar and Tilang broke away; Vijayanagara and the Bahmanīs rose.",
-      "hi": "मुहम्मद बिन तुग़लक़ का साम्राज्य, 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा', पंजाब से बंगाल और मअबर तक। 1338-40 के बाद बंगाल, मअबर और तिलंग अलग हो गए; विजयनगर और बहमनी उठे।"
+      "en": "The Eastern Gaṅga kingdom of Orissa, 'Jājnagar' to the Delhi chroniclers: raided for elephants in 1324 and invaded in 1360, but never held. Al-ʿUmarī's informant counted it among the Sultan's provinces.",
+      "hi": "ओडिशा का पूर्वी गंग राज्य, दिल्ली के इतिहासकारों का 'जाजनगर': 1324 में हाथियों के लिए उस पर धावा हुआ और 1360 में आक्रमण, पर वह कभी अधीन नहीं रहा। अल-उमरी के सूचक ने उसे सुल्तान के प्रांतों में गिना।"
     },
     "sources": [
       "https://archive.org/details/in.ernet.dli.2015.458719"
     ],
-    "color": "#c3a6c6",
+    "color": "#8a6aa8",
     "grade": {
-      "en": "Jājnagar (Orissa), counted a province, but only raided for elephants (1324)",
-      "hi": "जाजनगर (ओडिशा), प्रांत गिना गया, पर केवल हाथियों के लिए धावा (1324)"
+      "en": "The Gaṅga kingdom, from its capital at Cuttack",
+      "hi": "गंग राज्य, कटक की राजधानी से"
     },
-    "reading": "22. Jdjnagar.",
+    "reading": "The prince then marched towards J4jnagar,^ and there took forty elephants",
     "page": {
-      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), p. 575",
-      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), पृ. 575"
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), p. 234",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1871), पृ. 234"
+    },
+    "capital": {
+      "en": "Kaṭaka (Bārāṇasī Kaṭaka)",
+      "hi": "कटक (बाराणसी कटक)"
+    }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      10,
+      14,
+      2,
+      9,
+      8,
+      11,
+      15,
+      1,
+      12,
+      13
+    ],
+    "verse": "Udayanadeva",
+    "locus": {
+      "en": "Later Rājataraṅgiṇīs, Dutt iii. 24",
+      "hi": "परवर्ती राजतरंगिणियाँ, Dutt iii. 24"
+    },
+    "identified": {
+      "en": "likely, after Kings of Kashmira 1898",
+      "hi": "संभावित, Kings of Kashmira 1898 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kashmir under Udayanadeva and queen Koṭā (1323-39), the last Hindu rulers before Shāh Mīr took the throne in 1339.",
+      "hi": "उदयनदेव और रानी कोटा (1323-39) के अधीन कश्मीर, 1339 में शाह मीर के सिंहासन लेने से पहले के अंतिम हिंदू शासक।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "The Valley under Udayanadeva and Koṭā, with Shāh Mīr's sons in Kramarājya",
+      "hi": "उदयनदेव और कोटा के अधीन घाटी, क्रमराज्य में शाह मीर के पुत्रों के साथ"
+    },
+    "reading": "Shahamera bestowed on Udayanadeva the country of Kashmlra, together with queen ShriKota",
+    "page": {
+      "en": "J. C. Dutt, Kings of Kashmira (1898), p. 24",
+      "hi": "J. C. Dutt, Kings of Kashmira (1898), पृ. 24"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
     }
   }
 ]

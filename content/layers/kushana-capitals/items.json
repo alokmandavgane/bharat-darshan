@@ -63,5 +63,137 @@
       "https://archive.org/details/politicalhistory00raycuoft",
       "https://en.wikipedia.org/wiki/Paithan"
     ]
+  },
+  {
+    "id": "pandya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.9195,
+      "lon": 78.1193
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "identified": {
+      "en": "certain, placed at Madurai",
+      "hi": "निश्चित, Madurai पर"
+    },
+    "blurb": {
+      "en": "The capital of Pāṇḍyas.",
+      "hi": "पाण्ड्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/cu31924030139236",
+      "https://en.wikipedia.org/wiki/Madurai"
+    ]
+  },
+  {
+    "id": "chera-capital",
+    "status": "draft",
+    "name": {
+      "en": "Karoura (Karūr?)",
+      "hi": "करौरा (करूर?)"
+    },
+    "category": "chera",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.9601,
+      "lon": 78.0766
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Cheras",
+      "hi": "चेर"
+    },
+    "identified": {
+      "en": "disputed, placed at Karur (the site is disputed)",
+      "hi": "विवादित, Karur (the site is disputed) पर"
+    },
+    "blurb": {
+      "en": "The capital of Cheras.",
+      "hi": "चेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://en.wikipedia.org/wiki/Karur"
+    ]
+  },
+  {
+    "id": "chola-capital",
+    "status": "draft",
+    "name": {
+      "en": "Uraiyūr",
+      "hi": "उरैयूर"
+    },
+    "category": "chola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.825,
+      "lon": 78.68
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "identified": {
+      "en": "certain, placed at Uraiyur, Tiruchirappalli",
+      "hi": "निश्चित, Uraiyur, Tiruchirappalli पर"
+    },
+    "blurb": {
+      "en": "The capital of Cholas.",
+      "hi": "चोल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://en.wikipedia.org/wiki/Uraiyur"
+    ]
+  },
+  {
+    "id": "ay-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kōṭṭār",
+      "hi": "कोट्टार"
+    },
+    "category": "ay",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.1833,
+      "lon": 77.4119
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Āy",
+      "hi": "आय"
+    },
+    "identified": {
+      "en": "likely, placed at Kottar, Nagercoil",
+      "hi": "संभावित, Kottar, Nagercoil पर"
+    },
+    "blurb": {
+      "en": "The capital of Āy.",
+      "hi": "आय की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://en.wikipedia.org/wiki/Kottar"
+    ]
   }
 ]

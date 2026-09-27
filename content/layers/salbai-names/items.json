@@ -214,5 +214,173 @@
     "sources": [
       "https://archive.org/details/india.history.resource.310"
     ]
+  },
+  {
+    "id": "mewar",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.6,
+      "lon": 74.1
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṇās of Mewār under Bhīm Singh (1778-1828), a minor, the fourth in forty years.",
+      "hi": "मेवाड़ के राणा: Bhīm Singh (1778-1828), a minor, the fourth in forty years।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.55,
+      "lon": 75.8
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Kachhwāhās of Amber and Jaipur under Pratāp Singh (1778-1803), placed on the throne as a boy by the queen regent.",
+      "hi": "आमेर और जयपुर के कछवाहा: Pratāp Singh (1778-1803), placed on the throne as a boy by the queen regent।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "bikaner",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.4,
+      "lon": 73.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṭhoṛs of Bikaner under Gaj Singh (1746-87), who took border villages from the Bhāṭīs and Anūpgaṛh from Bahawalpur.",
+      "hi": "गज सिंह (1746-87) के अधीन बीकानेर के राठौड़, जिन्होंने भाटियों से सीमा के गाँव और बहावलपुर से अनूपगढ़ लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "jaisalmer",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3,
+      "lon": 70.8
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Bhāṭīs of Jaisalmer under Rāwal Mūlrāj (1762-1820).",
+      "hi": "रावल मूलराज (1762-1820) के अधीन जैसलमेर के भाटी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "bundi",
+    "status": "draft",
+    "name": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    },
+    "category": "bundi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.35,
+      "lon": 75.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Hāṛās of Bundi under Ajīt Singh (1771-73) and his infant son Bishen Singh.",
+      "hi": "बूंदी के हाड़ा: Ajīt Singh (1771-73) and his infant son Bishen Singh।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "kota",
+    "status": "draft",
+    "name": {
+      "en": "Kota",
+      "hi": "कोटा"
+    },
+    "category": "kota",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.35,
+      "lon": 76.2
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Hāṛās of Kota under Umed Singh (1771-1819), ruled for him by the regent Zālim Singh.",
+      "hi": "कोटा के हाड़ा: Umed Singh (1771-1819), ruled for him by the regent Zālim Singh।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "marwar",
+    "status": "draft",
+    "name": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "category": "marwar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.0,
+      "lon": 72.3
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṭhoṛs of Mārwār under Vijay Singh (1752-93), who took Amarkot on the Indus side and Godwār from Mewār, and paid the Marāṭhās a fixed tribute.",
+      "hi": "विजय सिंह (1752-93) के अधीन मारवाड़ के राठौड़, जिन्होंने सिंधु की ओर अमरकोट और मेवाड़ से गोडवाड़ लिया, और मराठों को निश्चित कर दिया।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
   }
 ]

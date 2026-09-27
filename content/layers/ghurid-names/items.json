@@ -244,5 +244,29 @@
       "https://archive.org/details/in.ernet.dli.2015.56657",
       "https://archive.org/details/bwb_KV-350-852"
     ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.2,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Kashmir under Jagadeva (1198-1213), son of Jassaka, in Jonarāja's continuation of Kalhaṇa.",
+      "hi": "जस्सक के पुत्र जगदेव (1198-1213) के अधीन कश्मीर, कल्हण के जोनराज-कृत क्रम में।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ]
   }
 ]

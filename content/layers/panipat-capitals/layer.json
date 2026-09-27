@@ -99,6 +99,60 @@
         "hi": "मैसूर"
       },
       "icon": "pin"
+    },
+    {
+      "id": "mewar",
+      "color": "#b03a48",
+      "title": {
+        "en": "Mewār",
+        "hi": "मेवाड़"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "jaipur",
+      "color": "#d4798a",
+      "title": {
+        "en": "Jaipur",
+        "hi": "जयपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bikaner",
+      "color": "#c9a36a",
+      "title": {
+        "en": "Bikaner",
+        "hi": "बीकानेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "jaisalmer",
+      "color": "#b8905a",
+      "title": {
+        "en": "Jaisalmer",
+        "hi": "जैसलमेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bundi",
+      "color": "#7a4a6a",
+      "title": {
+        "en": "Bundi",
+        "hi": "बूंदी"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kota",
+      "color": "#9a5a8a",
+      "title": {
+        "en": "Kota",
+        "hi": "कोटा"
+      },
+      "icon": "pin"
     }
   ],
   "fields": {

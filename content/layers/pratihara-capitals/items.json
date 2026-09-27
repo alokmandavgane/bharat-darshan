@@ -97,5 +97,137 @@
       "https://archive.org/details/bwb_KV-350-852",
       "https://en.wikipedia.org/wiki/Manyakheta"
     ]
+  },
+  {
+    "id": "pandya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Madurai",
+      "hi": "मदुरै"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.9195,
+      "lon": 78.1193
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "identified": {
+      "en": "certain, placed at Madurai",
+      "hi": "निश्चित, Madurai पर"
+    },
+    "blurb": {
+      "en": "The capital of Pāṇḍyas.",
+      "hi": "पाण्ड्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.7342",
+      "https://en.wikipedia.org/wiki/Madurai"
+    ]
+  },
+  {
+    "id": "pallava-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcīpuram",
+      "hi": "कांचीपुरम"
+    },
+    "category": "pallava",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.8342,
+      "lon": 79.7036
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+    },
+    "identified": {
+      "en": "certain, placed at Kanchipuram",
+      "hi": "निश्चित, Kanchipuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Pallavas.",
+      "hi": "पल्लव की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/bwb_KV-350-852",
+      "https://en.wikipedia.org/wiki/Kanchipuram"
+    ]
+  },
+  {
+    "id": "chola-capital",
+    "status": "draft",
+    "name": {
+      "en": "Tañjāvūr",
+      "hi": "तंजावुर"
+    },
+    "category": "chola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.7828,
+      "lon": 79.1318
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "identified": {
+      "en": "likely, placed at Thanjavur",
+      "hi": "संभावित, Thanjavur पर"
+    },
+    "blurb": {
+      "en": "The capital of Cholas.",
+      "hi": "चोल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.61183",
+      "https://en.wikipedia.org/wiki/Thanjavur"
+    ]
+  },
+  {
+    "id": "kashmir-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.0837,
+      "lon": 74.7973
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "polity": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "identified": {
+      "en": "likely, placed at Srinagar",
+      "hi": "संभावित, Srinagar पर"
+    },
+    "blurb": {
+      "en": "The capital of Kashmir.",
+      "hi": "कश्मीर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1",
+      "https://en.wikipedia.org/wiki/Srinagar"
+    ]
   }
 ]

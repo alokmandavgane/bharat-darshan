@@ -262,5 +262,149 @@
     "sources": [
       "https://archive.org/details/india.history.resource.310"
     ]
+  },
+  {
+    "id": "mewar",
+    "status": "draft",
+    "name": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+    },
+    "category": "mewar",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.6,
+      "lon": 74.1
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṇās of Mewār under Ari Singh II (1761-73), with Holkar already master of much of the country.",
+      "hi": "मेवाड़ के राणा: Ari Singh II (1761-73), with Holkar already master of much of the country।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.55,
+      "lon": 75.8
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Kachhwāhās of Amber and Jaipur under Mādho Singh I (1750-68), set on the throne with Holkar's help.",
+      "hi": "आमेर और जयपुर के कछवाहा: Mādho Singh I (1750-68), set on the throne with Holkar's help।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ]
+  },
+  {
+    "id": "bikaner",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.4,
+      "lon": 73.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṭhoṛs of Bikaner under Gaj Singh (1746-87), who took border villages from the Bhāṭīs and Anūpgaṛh from Bahawalpur.",
+      "hi": "गज सिंह (1746-87) के अधीन बीकानेर के राठौड़, जिन्होंने भाटियों से सीमा के गाँव और बहावलपुर से अनूपगढ़ लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "jaisalmer",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3,
+      "lon": 70.8
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Bhāṭīs of Jaisalmer under Rāwal Mūlrāj (1762-1820).",
+      "hi": "रावल मूलराज (1762-1820) के अधीन जैसलमेर के भाटी।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie02todj_0"
+    ]
+  },
+  {
+    "id": "bundi",
+    "status": "draft",
+    "name": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+    },
+    "category": "bundi",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.35,
+      "lon": 75.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Hāṛās of Bundi under Umed Singh, who recovered his capital through the Marāṭhās and paid them tribute.",
+      "hi": "बूंदी के हाड़ा: Umed Singh, who recovered his capital through the Marāṭhās and paid them tribute।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ]
+  },
+  {
+    "id": "kota",
+    "status": "draft",
+    "name": {
+      "en": "Kota",
+      "hi": "कोटा"
+    },
+    "category": "kota",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.35,
+      "lon": 76.2
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Hāṛās of Kota under Durjan Sal, whose victory at Bhatwara (1761) ended Jaipur's claims; tributary to Sindhia.",
+      "hi": "कोटा के हाड़ा: Durjan Sal, whose victory at Bhatwara (1761) ended Jaipur's claims; tributary to Sindhia।"
+    },
+    "sources": [
+      "https://archive.org/details/annalsantiquitie01todj_0"
+    ]
   }
 ]

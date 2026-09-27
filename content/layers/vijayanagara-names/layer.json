@@ -40,7 +40,7 @@
     },
     {
       "id": "mewar",
-      "color": "#c46a6a",
+      "color": "#8a1f2c",
       "title": {
         "en": "Mewār",
         "hi": "मेवाड़"
@@ -103,7 +103,7 @@
     },
     {
       "id": "vijayanagara",
-      "color": "#c9785a",
+      "color": "#8a3a1f",
       "title": {
         "en": "Vijayanagara",
         "hi": "विजयनगर"
@@ -116,6 +116,15 @@
       "title": {
         "en": "Orissa",
         "hi": "ओडिशा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       },
       "icon": "map"
     }

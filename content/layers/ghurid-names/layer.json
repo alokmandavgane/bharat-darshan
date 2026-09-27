@@ -13,7 +13,7 @@
   "categories": [
     {
       "id": "ghurid",
-      "color": "#86a88f",
+      "color": "#3f5f4a",
       "title": {
         "en": "Ghurid conquests in Hindustan",
         "hi": "हिन्दुस्तान में ग़ोरी विजय"
@@ -22,7 +22,7 @@
     },
     {
       "id": "sena",
-      "color": "#b86a96",
+      "color": "#7a2f5a",
       "title": {
         "en": "Sena kingdom",
         "hi": "सेन राज्य"
@@ -40,7 +40,7 @@
     },
     {
       "id": "caulukya",
-      "color": "#d7ad62",
+      "color": "#b07a1a",
       "title": {
         "en": "Caulukyas of Anhilvāra",
         "hi": "अणहिलवाड के चौलुक्य"
@@ -58,7 +58,7 @@
     },
     {
       "id": "yadava",
-      "color": "#6199c4",
+      "color": "#1f4f7a",
       "title": {
         "en": "Yādavas of Devagiri",
         "hi": "देवगिरि के यादव"
@@ -67,7 +67,7 @@
     },
     {
       "id": "hoysala",
-      "color": "#b8454f",
+      "color": "#8a1f2c",
       "title": {
         "en": "Hoysaḷas of Dorasamudra",
         "hi": "द्वारसमुद्र के होयसल"
@@ -76,7 +76,7 @@
     },
     {
       "id": "kakatiya",
-      "color": "#7fb3a4",
+      "color": "#2f6a5a",
       "title": {
         "en": "Kākatīyas of Anumakoṇḍa",
         "hi": "अनुमकोण्ड के काकतीय"
@@ -98,6 +98,15 @@
       "title": {
         "en": "Pāṇḍyas of Madurai",
         "hi": "मदुरै के पाण्ड्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       },
       "icon": "map"
     }

@@ -100,5 +100,104 @@
       "https://archive.org/details/in.ernet.dli.2015.56654",
       "https://archive.org/details/politicalhistory00raycuoft"
     ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.95,
+      "lon": 78.3
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pāṇḍyas of Madurai, whom Ptolemy knows as 'Pandion' and the Periplus as the Pandian kingdom from Cape Comorin to the pearl fishery at Korkai.",
+      "hi": "मदुरै के पाण्ड्य, जिन्हें टॉलेमी 'पांडियन' और पेरिप्लस कन्याकुमारी से कोरकै के मोती-तट तक का पाण्ड्य राज्य कहते हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ]
+  },
+  {
+    "id": "chera",
+    "status": "draft",
+    "name": {
+      "en": "Cheras",
+      "hi": "चेर"
+    },
+    "category": "chera",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.1,
+      "lon": 76.2
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Cheras (Keralaputra), 'Kerobothros' to Ptolemy and 'Cerobothra' to the Periplus, whose ports Muziris and Tyndis shipped pepper to Rome.",
+      "hi": "चेर (केरलपुत्र), टॉलेमी के 'केरोबोथ्रोस' और पेरिप्लस के 'सेरोबोथ्रा', जिनके बंदरगाह मुज़िरिस और टिंडिस से रोम को काली मिर्च जाती थी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ]
+  },
+  {
+    "id": "chola",
+    "status": "draft",
+    "name": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "category": "chola",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.1,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Cholas of the Kaveri delta, whose royal city Ptolemy calls Orthoura (Uraiyūr); the Periplus calls their land the Coast Country, with Argaru inland.",
+      "hi": "कावेरी डेल्टा के चोल, जिनके राजनगर को टॉलेमी ऑर्थौरा (उरैयूर) कहते हैं; पेरिप्लस उनके देश को तटीय देश कहता है, भीतर अर्गरु के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "https://archive.org/details/cu31924030139236"
+    ]
+  },
+  {
+    "id": "ay",
+    "status": "draft",
+    "name": {
+      "en": "Āy",
+      "hi": "आय"
+    },
+    "category": "ay",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.5,
+      "lon": 77.0
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Āy chiefs of the far south-west, Ptolemy's Aioi, with their metropolis at Kottiara (Kōṭṭār, near Nagercoil).",
+      "hi": "सुदूर दक्षिण-पश्चिम के आय सरदार, टॉलेमी के आयोई, जिनकी राजधानी कोट्टियारा (कोट्टार, नागरकोइल के पास) थी।"
+    },
+    "sources": [
+      "https://archive.org/details/ancientindiaasd00mccrgoog"
+    ]
   }
 ]

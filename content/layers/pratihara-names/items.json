@@ -75,5 +75,102 @@
       "https://archive.org/details/in.ernet.dli.2015.65858",
       "https://archive.org/details/bwb_KV-350-852"
     ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.6,
+      "lon": 78.0
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pāṇḍyas under Śrīmāra Śrīvallabha (c. 815-862), who claimed victories over the Pallava, the Kerala, Siṃhala and the Vallabha, and fought at Kuḍamūkku.",
+      "hi": "श्रीमार श्रीवल्लभ (लगभग 815-862) के अधीन पाण्ड्य, जिन्होंने पल्लव, केरल, सिंहल और वल्लभ पर विजय का दावा किया और कुडमूक्कु में लड़े।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.7342"
+    ]
+  },
+  {
+    "id": "pallava",
+    "status": "draft",
+    "name": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+    },
+    "category": "pallava",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.5,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pallavas of Kāñcī in their last century (Nandivarman III, c. 846-869), at war with the Pāṇḍyas; the Cholas ended the line late in the ninth century.",
+      "hi": "अपनी अंतिम सदी में कांची के पल्लव (नंदिवर्मन तृतीय, लगभग 846-869), पाण्ड्यों से युद्धरत; नौवीं सदी के अंत में चोलों ने इस वंश को समाप्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/dli.csl.7342",
+      "https://archive.org/details/bwb_KV-350-852"
+    ]
+  },
+  {
+    "id": "chola",
+    "status": "draft",
+    "name": {
+      "en": "Cholas",
+      "hi": "चोल"
+    },
+    "category": "chola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.8,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "Vijayālaya, founder of the imperial Cholas, who took Tanjore from the Muttaraiyar about 850 (the inscription's editor puts it later in the century).",
+      "hi": "शाही चोलों के संस्थापक विजयालय, जिन्होंने लगभग 850 में मुत्तरैयरों से तंजौर लिया (अभिलेख के संपादक इसे सदी में बाद का मानते हैं)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.61183"
+    ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.2,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Kashmir under Avantivarman (855/6-883), founder of the Utpala dynasty, made king by his minister Śūra.",
+      "hi": "उत्पल वंश के संस्थापक अवंतिवर्मन (855/6-883) के अधीन कश्मीर, जिन्हें उनके मंत्री शूर ने राजा बनाया।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1"
+    ]
   }
 ]

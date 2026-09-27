@@ -266,5 +266,29 @@
     "sources": [
       "https://archive.org/details/EpigraphiaIndicaVol6"
     ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.2,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Kashmir under Durlabhavardhana, first of the Kārkoṭa kings, who ruled thirty-six years; Xuanzang, there c. 631, found the hill states to the west and south tributary to it.",
+      "hi": "प्रथम कार्कोट राजा दुर्लभवर्धन के अधीन कश्मीर, जिन्होंने छत्तीस वर्ष राज किया; लगभग 631 में वहाँ आए ह्वेनसांग ने पश्चिम और दक्षिण के पहाड़ी राज्यों को उसका करद पाया।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1"
+    ]
   }
 ]

@@ -1144,6 +1144,150 @@
         "hi": "मदुरै के नायकों और रामनाड के सेतुपतियों के तमिल वृत्तांत अनुवाद में, लगभग 1707 ई. के लिए उद्धृत।"
       }
     },
+    "mccrindle-1885": {
+      "title": {
+        "en": "J. W. McCrindle, Ancient India as described by Ptolemy (1885)",
+        "hi": "जे. डब्ल्यू. मैकक्रिंडल, एन्शिएंट इंडिया ऐज़ डिस्क्राइब्ड बाय टॉलेमी (1885)"
+      },
+      "publisher": {
+        "en": "Thacker, Spink and Co., Calcutta",
+        "hi": "Thacker, Spink and Co., Calcutta"
+      },
+      "url": "https://archive.org/details/ancientindiaasd00mccrgoog",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Ptolemy's list of the Tamil kingdoms' royal cities, quoted for c. 150 CE.",
+        "hi": "टॉलेमी की तमिल राज्यों के राजनगरों की सूची, लगभग 150 ई. के लिए उद्धृत।"
+      }
+    },
+    "schoff-1912": {
+      "title": {
+        "en": "W. H. Schoff, The Periplus of the Erythraean Sea (1912)",
+        "hi": "डब्ल्यू. एच. शॉफ़, द पेरिप्लस ऑफ़ द एरिथ्रियन सी (1912)"
+      },
+      "publisher": {
+        "en": "Longmans, Green and Co., New York",
+        "hi": "Longmans, Green and Co., New York"
+      },
+      "url": "https://archive.org/details/cu31924030139236",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "A Greek merchant's guide to the Chera and Pāṇḍya ports, quoted for c. 150 CE.",
+        "hi": "चेर और पाण्ड्य बंदरगाहों की एक यूनानी व्यापारी की मार्गदर्शिका, लगभग 150 ई. के लिए उद्धृत।"
+      }
+    },
+    "stein-1900-i": {
+      "title": {
+        "en": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī, vol. I (1900)",
+        "hi": "एम. ए. स्टाइन, कल्हण की राजतरंगिणी, खंड I (1900)"
+      },
+      "publisher": {
+        "en": "Archibald Constable, Westminster",
+        "hi": "Archibald Constable, Westminster"
+      },
+      "url": "https://archive.org/details/RajataranginiVol1",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Kalhaṇa's chronicle of Kashmir in translation, quoted for c. 640 and c. 850 CE.",
+        "hi": "कल्हण का कश्मीर वृत्तांत अनुवाद में, लगभग 640 और 850 ई. के लिए उद्धृत।"
+      }
+    },
+    "dutt-1898-iii": {
+      "title": {
+        "en": "J. C. Dutt, Kings of Kashmira, vol. III (1898)",
+        "hi": "जे. सी. दत्त, किंग्स ऑफ़ कश्मीरा, खंड III (1898)"
+      },
+      "publisher": {
+        "en": "J. C. Dutt, Calcutta",
+        "hi": "J. C. Dutt, Calcutta"
+      },
+      "url": "https://archive.org/details/kingsofkashmira03kalhuoft",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The later chronicles of Kashmir (Jonarāja, Prājyabhaṭṭa and Śuka) in translation, quoted for c. 1200, 1330 and 1525 CE.",
+        "hi": "कश्मीर के परवर्ती वृत्तांत (जोनराज, प्राज्यभट्ट और शुक) अनुवाद में, लगभग 1200, 1330 और 1525 ई. के लिए उद्धृत।"
+      }
+    },
+    "sii-1929-iii-4": {
+      "title": {
+        "en": "South Indian Inscriptions, vol. III part IV (1929)",
+        "hi": "साउथ इंडियन इंस्क्रिप्शंस, खंड III भाग IV (1929)"
+      },
+      "publisher": {
+        "en": "Government Press, Madras",
+        "hi": "Government Press, Madras"
+      },
+      "url": "https://archive.org/details/dli.csl.7342",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Sinnamanur plates of the Pāṇḍyas, quoted for c. 850 CE.",
+        "hi": "पाण्ड्यों के सिन्नमनूर ताम्रपत्र, लगभग 850 ई. के लिए उद्धृत।"
+      }
+    },
+    "sii-1920-iii-3": {
+      "title": {
+        "en": "South Indian Inscriptions, vol. III part III (1920)",
+        "hi": "साउथ इंडियन इंस्क्रिप्शंस, खंड III भाग III (1920)"
+      },
+      "publisher": {
+        "en": "Government Press, Madras",
+        "hi": "Government Press, Madras"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.61183",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Tiruvālaṅgāḍu plates of Rājendra I, quoted for Vijayālaya's Tanjore, c. 850 CE.",
+        "hi": "राजेंद्र प्रथम के तिरुवालंगाडु ताम्रपत्र, विजयालय के तंजौर के लिए, लगभग 850 ई."
+      }
+    },
+    "tod-1829": {
+      "title": {
+        "en": "J. Tod, Annals and Antiquities of Rajast'han, vol. I (1829)",
+        "hi": "जे. टॉड, एनल्स एंड एंटिक्विटीज़ ऑफ़ राजस्थान, खंड I (1829)"
+      },
+      "publisher": {
+        "en": "Smith, Elder and Co., London",
+        "hi": "Smith, Elder and Co., London"
+      },
+      "url": "https://archive.org/details/annalsantiquitie01todj_0",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "Mewār's annals, quoted for the Rajput states of c. 1760 and c. 1780 CE.",
+        "hi": "मेवाड़ का इतिहास, लगभग 1760 और 1780 ई. के राजपूत राज्यों के लिए उद्धृत।"
+      }
+    },
+    "tod-1832": {
+      "title": {
+        "en": "J. Tod, Annals and Antiquities of Rajast'han, vol. II (1832)",
+        "hi": "जे. टॉड, एनल्स एंड एंटिक्विटीज़ ऑफ़ राजस्थान, खंड II (1832)"
+      },
+      "publisher": {
+        "en": "Smith, Elder and Co., London",
+        "hi": "Smith, Elder and Co., London"
+      },
+      "url": "https://archive.org/details/annalsantiquitie02todj_0",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The annals of Mārwār, Bikaner, Jaisalmer, Amber, Bundi and Kota, quoted for c. 1760 and c. 1780 CE.",
+        "hi": "मारवाड़, बीकानेर, जैसलमेर, आमेर, बूंदी और कोटा का इतिहास, लगभग 1760 और 1780 ई. के लिए उद्धृत।"
+      }
+    },
     "elliot-dowson-1877-viii": {
       "title": {
         "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VIII (1877)",

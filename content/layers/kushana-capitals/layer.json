@@ -11,29 +11,65 @@
   "country_view": "markers",
   "categories": [
     {
-      "id": "kushana",
-      "color": "#5b6b1e",
-      "title": {
-        "en": "The Kuṣāṇa empire",
-        "hi": "कुषाण साम्राज्य"
-      },
-      "icon": "pin"
-    },
-    {
       "id": "kshatrapa",
-      "color": "#2e6f86",
+      "color": "#1f4e5f",
       "title": {
-        "en": "The Western Kṣatrapas",
+        "en": "Western Kṣatrapas",
         "hi": "पश्चिमी क्षत्रप"
       },
       "icon": "pin"
     },
     {
       "id": "satavahana",
-      "color": "#b8691f",
+      "color": "#8a4a0e",
       "title": {
-        "en": "The Sātavāhanas",
-        "hi": "सातवाहन"
+        "en": "Sātavāhana (Āndhra)",
+        "hi": "सातवाहन (आन्ध्र)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pandya",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Pāṇḍyas",
+        "hi": "पाण्ड्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "chera",
+      "color": "#c9785a",
+      "title": {
+        "en": "Cheras",
+        "hi": "चेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "chola",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Cholas",
+        "hi": "चोल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "ay",
+      "color": "#b8854a",
+      "title": {
+        "en": "Āy",
+        "hi": "आय"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kushana",
+      "color": "#5b6b1e",
+      "title": {
+        "en": "The Kuṣāṇa empire",
+        "hi": "कुषाण साम्राज्य"
       },
       "icon": "pin"
     },

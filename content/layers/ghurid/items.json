@@ -953,5 +953,57 @@
       "en": "Madurai",
       "hi": "मदुरै"
     }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      10,
+      14,
+      2,
+      9,
+      8,
+      11,
+      15,
+      1,
+      12,
+      13
+    ],
+    "verse": "Shrljagadeva (read: Śrī Jagadeva)",
+    "locus": {
+      "en": "Later Rājataraṅgiṇīs, Dutt iii. 8",
+      "hi": "परवर्ती राजतरंगिणियाँ, Dutt iii. 8"
+    },
+    "identified": {
+      "en": "likely, after Kings of Kashmira 1898",
+      "hi": "संभावित, Kings of Kashmira 1898 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kashmir under Jagadeva (1198-1213), son of Jassaka, in Jonarāja's continuation of Kalhaṇa.",
+      "hi": "जस्सक के पुत्र जगदेव (1198-1213) के अधीन कश्मीर, कल्हण के जोनराज-कृत क्रम में।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "The Valley under Jagadeva",
+      "hi": "जगदेव के अधीन घाटी"
+    },
+    "reading": "Then his son Shrljagadeva, who was powerful, yet humble",
+    "page": {
+      "en": "J. C. Dutt, Kings of Kashmira (1898), p. 8",
+      "hi": "J. C. Dutt, Kings of Kashmira (1898), पृ. 8"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    }
   }
 ]

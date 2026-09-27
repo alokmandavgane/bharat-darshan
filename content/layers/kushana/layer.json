@@ -16,32 +16,64 @@
       "id": "kushana",
       "color": "#5b6b1e",
       "title": {
-        "en": "The Kuṣāṇa empire",
+        "en": "Kuṣāṇa empire",
         "hi": "कुषाण साम्राज्य"
       }
     },
     {
       "id": "kshatrapa",
-      "color": "#2e6f86",
+      "color": "#1f4e5f",
       "title": {
-        "en": "The Western Kṣatrapas",
+        "en": "Western Kṣatrapas",
         "hi": "पश्चिमी क्षत्रप"
       }
     },
     {
       "id": "satavahana",
-      "color": "#b8691f",
+      "color": "#8a4a0e",
       "title": {
-        "en": "The Sātavāhanas",
-        "hi": "सातवाहन"
+        "en": "Sātavāhana (Āndhra)",
+        "hi": "सातवाहन (आन्ध्र)"
       }
     },
     {
       "id": "yaudheya",
       "color": "#9e3b6b",
       "title": {
-        "en": "The Yaudheyas",
+        "en": "Yaudheya",
         "hi": "यौधेय"
+      }
+    },
+    {
+      "id": "pandya",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Pāṇḍyas",
+        "hi": "पाण्ड्य"
+      }
+    },
+    {
+      "id": "chera",
+      "color": "#c9785a",
+      "title": {
+        "en": "Cheras",
+        "hi": "चेर"
+      }
+    },
+    {
+      "id": "chola",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Cholas",
+        "hi": "चोल"
+      }
+    },
+    {
+      "id": "ay",
+      "color": "#b8854a",
+      "title": {
+        "en": "Āy",
+        "hi": "आय"
       }
     }
   ],
@@ -108,13 +140,15 @@
     }
   },
   "note": {
-    "en": "India about 150 CE, when Rudradāman's Junāgaḍh inscription was cut. The Western Kṣatrapas are drawn by that record's list of countries. Five of them (Surāṣṭra, Kukura, Aparānta, Anūpa and Ākarāvanti) had been Gautamīputra Sātakarṇi's by the Nāsik praśasti; the map gives them to the later record. The Sātavāhanas keep their capital, Pratiṣṭhāna, with Mahārāṣṭra, the Krishna country, and the Asaka and Vidarbha of the praśasti. The Kuṣāṇas are drawn by Raychaudhuri's 'from Gandhāra and Kaśmīr to Benares'. Their dated records at Mathurā and Śrāvastī are the held core; the east is disputed, since Vogel doubts Sārnāth proves rule. The Yaudheyas are drawn only at Bijayagaḍh. Left blank: the Himalaya, Rajasthan's Matsya country, the Gangetic east, Kaliṅga, the forest belt and the Tamil south. Nothing read places them this century (Ptolemy names the Tamil kings, and is not in the kosha). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 150 ई. का भारत, जब रुद्रदामन् का जूनागढ़ अभिलेख उत्कीर्ण हुआ। पश्चिमी क्षत्रप उस अभिलेख की देश-सूची से दिखाए गए हैं। इनमें से पाँच (सुराष्ट्र, कुकुर, अपरान्त, अनूप और आकरावन्ति) नासिक प्रशस्ति के अनुसार गौतमीपुत्र सातकर्णि के थे; मानचित्र उन्हें बाद के अभिलेख को देता है। सातवाहनों के पास उनकी राजधानी प्रतिष्ठान है, महाराष्ट्र, कृष्णा देश, और प्रशस्ति के असक और विदर्भ के साथ। कुषाण रायचौधुरी के 'गांधार और कश्मीर से बनारस तक' से दिखाए गए हैं। मथुरा और श्रावस्ती के उनके तिथियुक्त अभिलेख अधिकृत केंद्र हैं; पूर्व विवादित है, क्योंकि फ़ोगल को संदेह है कि सारनाथ शासन सिद्ध करता है। यौधेय केवल बिजयगढ़ पर दिखाए गए हैं। खाली छोड़े गए: हिमालय, राजस्थान का मत्स्य देश, गंगा का पूर्व, कलिंग, वन-पट्टी और तमिल दक्षिण। पढ़ा गया कुछ भी उन्हें इस सदी में कहीं नहीं रखता (टॉलेमी तमिल राजाओं के नाम लेते हैं, और वे कोश में नहीं हैं)। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 150 CE, when Rudradāman's Junāgaḍh inscription was cut. The Western Kṣatrapas are drawn by that record's list of countries. Five of them (Surāṣṭra, Kukura, Aparānta, Anūpa and Ākarāvanti) had been Gautamīputra Sātakarṇi's by the Nāsik praśasti; the map gives them to the later record. The Sātavāhanas keep their capital, Pratiṣṭhāna, with Mahārāṣṭra, the Krishna country, and the Asaka and Vidarbha of the praśasti. The Kuṣāṇas are drawn by Raychaudhuri's 'from Gandhāra and Kaśmīr to Benares'. Their dated records at Mathurā and Śrāvastī are the held core; the east is disputed, since Vogel doubts Sārnāth proves rule. The Yaudheyas are drawn only at Bijayagaḍh. Left blank: the Himalaya, Rajasthan's Matsya country, the Gangetic east, Kaliṅga, and the forest belt. Added from Ptolemy (McCrindle, 1885) and the Periplus (Schoff, 1912): the Tamil kingdoms of the Pāṇḍyas, Cheras and Cholas, and the Āy country. Nothing read places them this century (Ptolemy names the Tamil kings, and is not in the kosha). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 150 ई. का भारत, जब रुद्रदामन् का जूनागढ़ अभिलेख उत्कीर्ण हुआ। पश्चिमी क्षत्रप उस अभिलेख की देश-सूची से दिखाए गए हैं। इनमें से पाँच (सुराष्ट्र, कुकुर, अपरान्त, अनूप और आकरावन्ति) नासिक प्रशस्ति के अनुसार गौतमीपुत्र सातकर्णि के थे; मानचित्र उन्हें बाद के अभिलेख को देता है। सातवाहनों के पास उनकी राजधानी प्रतिष्ठान है, महाराष्ट्र, कृष्णा देश, और प्रशस्ति के असक और विदर्भ के साथ। कुषाण रायचौधुरी के 'गांधार और कश्मीर से बनारस तक' से दिखाए गए हैं। मथुरा और श्रावस्ती के उनके तिथियुक्त अभिलेख अधिकृत केंद्र हैं; पूर्व विवादित है, क्योंकि फ़ोगल को संदेह है कि सारनाथ शासन सिद्ध करता है। यौधेय केवल बिजयगढ़ पर दिखाए गए हैं। खाली छोड़े गए: हिमालय, राजस्थान का मत्स्य देश, गंगा का पूर्व, कलिंग, और वन-पट्टी। टॉलेमी (मैकक्रिंडल, 1885) और पेरिप्लस (शॉफ़, 1912) से जोड़े गए: पाण्ड्यों, चेरों और चोलों के तमिल राज्य, और आय देश। पढ़ा गया कुछ भी उन्हें इस सदी में कहीं नहीं रखता (टॉलेमी तमिल राजाओं के नाम लेते हैं, और वे कोश में नहीं हैं)। आज के ज़िलों पर, निकटतम ज़िले तक।"
   },
   "sources": [
     "raychaudhuri-1923",
     "epigraphia-indica-viii",
     "sa-wikisource",
+    "mccrindle-1885",
+    "schoff-1912",
     "census-2011",
     "datameet-maps",
     "wikipedia"

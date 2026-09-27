@@ -23,5 +23,53 @@
       "https://archive.org/details/in.ernet.dli.2015.458719",
       "https://archive.org/details/oxfordhistoryofi00smituoft"
     ]
+  },
+  {
+    "id": "orissa",
+    "status": "draft",
+    "name": {
+      "en": "Jājnagar (Orissa)",
+      "hi": "जाजनगर (ओडिशा)"
+    },
+    "category": "orissa",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.3,
+      "lon": 84.6
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The Eastern Gaṅga kingdom of Orissa, 'Jājnagar' to the Delhi chroniclers: raided for elephants in 1324 and invaded in 1360, but never held. Al-ʿUmarī's informant counted it among the Sultan's provinces.",
+      "hi": "ओडिशा का पूर्वी गंग राज्य, दिल्ली के इतिहासकारों का 'जाजनगर': 1324 में हाथियों के लिए उस पर धावा हुआ और 1360 में आक्रमण, पर वह कभी अधीन नहीं रहा। अल-उमरी के सूचक ने उसे सुल्तान के प्रांतों में गिना।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.458719"
+    ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.2,
+      "lon": 74.6
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Kashmir under Udayanadeva and queen Koṭā (1323-39), the last Hindu rulers before Shāh Mīr took the throne in 1339.",
+      "hi": "उदयनदेव और रानी कोटा (1323-39) के अधीन कश्मीर, 1339 में शाह मीर के सिंहासन लेने से पहले के अंतिम हिंदू शासक।"
+    },
+    "sources": [
+      "https://archive.org/details/kingsofkashmira03kalhuoft"
+    ]
   }
 ]

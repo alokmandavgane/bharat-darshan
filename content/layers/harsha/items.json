@@ -881,5 +881,101 @@
       "en": "Made prosperous by Pulakeśin, 'the sun to the Pallava hoar-frost' (Aihole v. 31)",
       "hi": "पुलकेशिन् द्वारा समृद्ध किए गए, 'पल्लव हिम के लिए सूर्य' (ऐहोळे श्लोक 31)"
     }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      10,
+      14,
+      2,
+      9,
+      8,
+      11,
+      15,
+      1,
+      12,
+      13
+    ],
+    "verse": "Kdrhta Naga (read: Kārkoṭa Nāga)",
+    "locus": {
+      "en": "Rājataraṅgiṇī iii. 530",
+      "hi": "राजतरंगिणी iii. 530"
+    },
+    "identified": {
+      "en": "likely, after Kalhaṇa's Rājataraṅgiṇī 1900",
+      "hi": "संभावित, Kalhaṇa's Rājataraṅgiṇī 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kashmir under Durlabhavardhana, first of the Kārkoṭa kings, who ruled thirty-six years; Xuanzang, there c. 631, found the hill states to the west and south tributary to it.",
+      "hi": "प्रथम कार्कोट राजा दुर्लभवर्धन के अधीन कश्मीर, जिन्होंने छत्तीस वर्ष राज किया; लगभग 631 में वहाँ आए ह्वेनसांग ने पश्चिम और दक्षिण के पहाड़ी राज्यों को उसका करद पाया।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "The Valley under Durlabhavardhana, founder of the Kārkoṭas",
+      "hi": "कार्कोट वंश के संस्थापक दुर्लभवर्धन के अधीन घाटी"
+    },
+    "reading": "this lord of the earth died after [a rule of] thirty-six years.",
+    "page": {
+      "en": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), p. 120",
+      "hi": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), पृ. 120"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    }
+  },
+  {
+    "id": "kashmir-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      6,
+      5
+    ],
+    "verse": "Kdrhta Naga (read: Kārkoṭa Nāga)",
+    "locus": {
+      "en": "Rājataraṅgiṇī iii. 530",
+      "hi": "राजतरंगिणी iii. 530"
+    },
+    "identified": {
+      "en": "likely, after Kalhaṇa's Rājataraṅgiṇī 1900",
+      "hi": "संभावित, Kalhaṇa's Rājataraṅgiṇī 1900 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kashmir under Durlabhavardhana, first of the Kārkoṭa kings, who ruled thirty-six years; Xuanzang, there c. 631, found the hill states to the west and south tributary to it.",
+      "hi": "प्रथम कार्कोट राजा दुर्लभवर्धन के अधीन कश्मीर, जिन्होंने छत्तीस वर्ष राज किया; लगभग 631 में वहाँ आए ह्वेनसांग ने पश्चिम और दक्षिण के पहाड़ी राज्यों को उसका करद पाया।"
+    },
+    "sources": [
+      "https://archive.org/details/RajataranginiVol1"
+    ],
+    "color": "#8aa8bf",
+    "grade": {
+      "en": "Rājapurī and Parṇotsa, hill states tributary to Kashmir when Xuanzang came",
+      "hi": "राजपुरी और पर्णोत्स, ह्वेनसांग के आने पर कश्मीर के करद पहाड़ी राज्य"
+    },
+    "reading": "with the smaller hill-states of Rajapuri and Farnotsa, had no independent rulers, but were tributary to Ka.smir.",
+    "page": {
+      "en": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), p. 87",
+      "hi": "M. A. Stein, Kalhaṇa's Rājataraṅgiṇī (1900), पृ. 87"
+    },
+    "capital": {
+      "en": "Śrīnagara",
+      "hi": "श्रीनगर"
+    }
   }
 ]

@@ -12,9 +12,9 @@
   "categories": [
     {
       "id": "pratihara",
-      "color": "#b04a32",
+      "color": "#8a2c1c",
       "title": {
-        "en": "The Gurjara-Pratihāra empire",
+        "en": "Gurjara-Pratihāra empire",
         "hi": "गुर्जर-प्रतिहार साम्राज्य"
       },
       "icon": "pin"
@@ -23,17 +23,53 @@
       "id": "pala",
       "color": "#1f5e3f",
       "title": {
-        "en": "The Pāla empire",
+        "en": "Pāla empire",
         "hi": "पाल साम्राज्य"
       },
       "icon": "pin"
     },
     {
       "id": "rashtrakuta",
-      "color": "#4f68b8",
+      "color": "#2a3f8a",
       "title": {
-        "en": "The Rāṣṭrakūṭa empire",
+        "en": "Rāṣṭrakūṭa empire",
         "hi": "राष्ट्रकूट साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pandya",
+      "color": "#6a8a3a",
+      "title": {
+        "en": "Pāṇḍyas",
+        "hi": "पाण्ड्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pallava",
+      "color": "#5f7fa8",
+      "title": {
+        "en": "Pallavas",
+        "hi": "पल्लव"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "chola",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "Cholas",
+        "hi": "चोल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Kashmir",
+        "hi": "कश्मीर"
       },
       "icon": "pin"
     }
