@@ -1,0 +1,74 @@
+{
+  "id": "harsha-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 640 CE",
+    "hi": "लगभग 640 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "harsha",
+      "color": "#a8559a",
+      "title": {
+        "en": "Harṣa's empire",
+        "hi": "हर्ष का साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "chalukya",
+      "color": "#3a76a8",
+      "title": {
+        "en": "Cālukyas of Vātāpi",
+        "hi": "वातापी के चालुक्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "valabhi",
+      "color": "#b0802a",
+      "title": {
+        "en": "Valabhī (Maitraka)",
+        "hi": "वलभी (मैत्रक)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pallava",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Pallava",
+        "hi": "पल्लव"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Kānyakubja, Vātāpi, Kāñcī and Valabhī.",
+    "hi": "कान्यकुब्ज, वातापी, काञ्ची और वलभी।"
+  },
+  "sources": [
+    "beal-1884",
+    "wikipedia"
+  ]
+}

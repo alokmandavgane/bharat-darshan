@@ -1,0 +1,270 @@
+[
+  {
+    "id": "harsha",
+    "status": "draft",
+    "name": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+    },
+    "category": "harsha",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.6,
+      "lon": 79.4
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The empire of Harṣa Śīlāditya of Kanyākubja, who 'subdued the Five Indies' in six years but was turned back at the Revā by Pulakeśin II.",
+      "hi": "कान्यकुब्ज के हर्ष शीलादित्य का साम्राज्य, जिन्होंने छह वर्षों में 'पाँचों इंडीज़' को जीता पर रेवा पर पुलकेशिन् द्वितीय ने उन्हें लौटा दिया।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre01hsua",
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  },
+  {
+    "id": "chalukya",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "category": "chalukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.9,
+      "lon": 75.9
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Western Cālukya Pulakeśin II of Vātāpi, lord of the three Mahārāṣṭrakas, whom Harṣa could not subdue. The Aihole inscription dates his court poet's praise to 634-35 CE.",
+      "hi": "वातापी के पश्चिमी चालुक्य पुलकेशिन् द्वितीय, तीन महाराष्ट्रकों के स्वामी, जिन्हें हर्ष जीत न सके। ऐहोळे अभिलेख उनके राजकवि की प्रशस्ति को 634-35 ई. का बताता है।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft",
+      "https://archive.org/details/in.ernet.dli.2015.49403"
+    ]
+  },
+  {
+    "id": "magadha-purnavarman",
+    "status": "draft",
+    "name": {
+      "en": "Magadha (Pūrṇavarman)",
+      "hi": "मगध (पूर्णवर्मन्)"
+    },
+    "category": "magadha-purnavarman",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.0,
+      "lon": 85.4
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "Magadha under Pūrṇavarman, 'the last of the race of Aśoka', who restored the Bodhi tree.",
+      "hi": "पूर्णवर्मन् के अधीन मगध, 'अशोक के वंश के अंतिम', जिन्होंने बोधि वृक्ष को पुनर्जीवित किया।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ]
+  },
+  {
+    "id": "kamarupa",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2,
+      "lon": 92.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "Kāmarūpa under Bhāskaravarman, 'Kumāra', of the line of Nārāyaṇa-deva.",
+      "hi": "भास्करवर्मन् 'कुमार' के अधीन कामरूप, नारायणदेव के वंश का।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ]
+  },
+  {
+    "id": "valabhi",
+    "status": "draft",
+    "name": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+    },
+    "category": "valabhi",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.9,
+      "lon": 70.9
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "Valabhī under the Maitraka Dhruvapaṭa (Dhruvasena II), son-in-law of Harṣa's son.",
+      "hi": "मैत्रक ध्रुवपट (ध्रुवसेन द्वितीय) के अधीन वलभी, हर्ष के पुत्र के दामाद।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ]
+  },
+  {
+    "id": "kosala-south",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+    },
+    "category": "kosala-south",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.5,
+      "lon": 82.4
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "blurb": {
+      "en": "South Kosala, awed by Pulakeśin II's armies.",
+      "hi": "दक्षिण कोसल, पुलकेशिन् द्वितीय की सेनाओं से भयभीत।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  },
+  {
+    "id": "kalinga",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिंग"
+    },
+    "category": "kalinga",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.6,
+      "lon": 84.6
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "Kaliṅga, awed by Pulakeśin II's armies.",
+      "hi": "कलिंग, पुलकेशिन् द्वितीय की सेनाओं से भयभीत।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  },
+  {
+    "id": "pallava",
+    "status": "draft",
+    "name": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+    },
+    "category": "pallava",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.6,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pallavas of Kāñcīpura, Pulakeśin II's great rivals in the south.",
+      "hi": "कांचीपुर के पल्लव, दक्षिण में पुलकेशिन् द्वितीय के बड़े प्रतिद्वंद्वी।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ]
+  },
+  {
+    "id": "cola",
+    "status": "draft",
+    "name": {
+      "en": "Coḷa",
+      "hi": "चोल"
+    },
+    "category": "cola",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.79,
+      "lon": 79.14
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Colas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "चोल, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  },
+  {
+    "id": "kerala",
+    "status": "draft",
+    "name": {
+      "en": "Kerala",
+      "hi": "केरल"
+    },
+    "category": "kerala",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.25,
+      "lon": 75.78
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The Keralas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "केरल, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  },
+  {
+    "id": "pandya",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.93,
+      "lon": 78.12
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Pāṇḍyas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "पाण्ड्य, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ]
+  }
+]

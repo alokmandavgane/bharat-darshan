@@ -1,0 +1,45 @@
+[
+  {
+    "id": "aihole",
+    "status": "draft",
+    "name": {
+      "en": "Aihole (Meguti temple)",
+      "hi": "ऐहोळे (मेगुटी मंदिर)"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.01889,
+      "lon": 75.88194
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Aihole, Bagalkot district",
+      "hi": "Aihole, Bagalkot district पर"
+    },
+    "blurb": {
+      "en": "Ravikīrti's praśasti of Pulakeśin II, dated 634-35 CE: his conquests, and Harṣa turned back.",
+      "hi": "पुलकेशिन् द्वितीय की रविकीर्ति-रचित प्रशस्ति, 634-35 ई.: उनकी विजयें, और हर्ष का लौटना।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://en.wikipedia.org/wiki/Aihole"
+    ],
+    "reading": "for Saka-Samvat 556 expired, to A.D. 634-35",
+    "page": {
+      "en": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), p. 3",
+      "hi": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), पृ. 3"
+    },
+    "verse": "yena cb=akari Harshah (read: yena chākāri Harshaḥ)",
+    "locus": {
+      "en": "Aihole, vv. 23-25",
+      "hi": "ऐहोळे, vv. 23-25"
+    }
+  }
+]

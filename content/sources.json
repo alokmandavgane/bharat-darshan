@@ -785,6 +785,42 @@
         "en": "The edition of the Allahabad pillar, the Udayagiri, Mehrauli and Chammak records that the kingdoms page quotes for c. 400 CE.",
         "hi": "प्रयाग स्तंभ, उदयगिरि, महरौली और चम्मक अभिलेखों का संस्करण जिसे राज्य पृष्ठ लगभग 400 ई. के लिए उद्धृत करता है।"
       }
+    },
+    "beal-1884": {
+      "title": {
+        "en": "S. Beal, Si-yu-ki: Buddhist Records of the Western World (1884)",
+        "hi": "एस. बील, सि-यू-की: बुद्धिस्ट रिकॉर्ड्स ऑफ़ द वेस्टर्न वर्ल्ड (1884)"
+      },
+      "publisher": {
+        "en": "Trübner, London: Xuanzang's Records of the Western Regions in English",
+        "hi": "ट्रूबनर, लंदन: ह्वेनसांग के पश्चिमी क्षेत्रों के वृत्तांत अंग्रेज़ी में"
+      },
+      "url": "https://archive.org/details/siyukibuddhistre01hsua",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The translation of the Chinese pilgrim's survey of India's kingdoms in the 630s and 640s that the kingdoms page quotes.",
+        "hi": "630 और 640 के दशक में भारत के राज्यों के चीनी तीर्थयात्री के सर्वेक्षण का अनुवाद जिसे राज्य पृष्ठ उद्धृत करता है।"
+      }
+    },
+    "epigraphia-indica-vi": {
+      "title": {
+        "en": "Epigraphia Indica, vol. VI (1900-01)",
+        "hi": "एपिग्राफ़िया इंडिका, खंड VI (1900-01)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta: Kielhorn on the Aihole inscription",
+        "hi": "भारत सरकार, कलकत्ता: ऐहोळे अभिलेख पर कीलहॉर्न"
+      },
+      "url": "https://archive.org/details/EpigraphiaIndicaVol6",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The edition of Pulakeśin II's Aihole inscription that the kingdoms page quotes for c. 640 CE.",
+        "hi": "पुलकेशिन् द्वितीय के ऐहोळे अभिलेख का संस्करण जिसे राज्य पृष्ठ लगभग 640 ई. के लिए उद्धृत करता है।"
+      }
     }
   }
 }

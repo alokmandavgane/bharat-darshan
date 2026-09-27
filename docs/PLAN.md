@@ -2450,6 +2450,14 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-fourth round: Harṣa and Pulakeśin II, c. 640 CE. "Kingdoms and empires" gains its sixth era,
+  drawn from Pulakeśin II's Aihole inscription (Epigraphia Indica VI) and from Xuanzang in Beal's translation
+  (1884).
+  - **The areas:** Harṣa in two shades and the Cālukyas in four. Around them are Harṣa's allies Kāmarūpa and
+    Valabhī, Magadha, South Kosala and Kaliṅga, the Pallavas, and the Colas, Keralas and Pāṇḍyas.
+  - **Capitals and pins:** four capitals and the Aihole pin.
+  - All 11 names show at country zoom (1280x800), and the Cālukya card reads right. 48 tests and the build
+    pass.
 - 2026-09-27, seventy-third round: the Guptas, c. 400 CE. "Kingdoms and empires" gains its fifth era, drawn from
   Fleet's Gupta inscriptions (1888) with Raychaudhuri 1923. The Allahabad pillar's grades are the map's.
   - **The Gupta empire, in five shades:** core, annexed Āryāvarta, Puṇḍravardhana, Malwa and Surāṣṭra won from

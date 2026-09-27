@@ -1,0 +1,75 @@
+{
+  "id": "harsha-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 640 CE",
+    "hi": "लगभग 640 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "inscription",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Inscriptions",
+        "hi": "अभिलेख"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The Aihole inscription, dated 634-35 CE. Xuanzang's record, the era's other witness, is a book, not a place, and has no pin.",
+    "hi": "ऐहोळे अभिलेख, 634-35 ई.। इस युग का दूसरा साक्षी, ह्वेनसांग का वृत्तांत, एक ग्रंथ है, स्थान नहीं, और उसका कोई पिन नहीं।"
+  },
+  "sources": [
+    "epigraphia-indica-vi",
+    "wikipedia"
+  ]
+}

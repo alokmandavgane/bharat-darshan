@@ -1,0 +1,885 @@
+[
+  {
+    "id": "harsha-core",
+    "status": "draft",
+    "name": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+    },
+    "category": "harsha",
+    "rank": 1,
+    "districts": [
+      143,
+      144,
+      147,
+      148,
+      156,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      201,
+      202
+    ],
+    "verse": "After six years he had subdued the Five Indies.",
+    "locus": {
+      "en": "Xuanzang, Book V, Kanyākubja",
+      "hi": "ह्वेनसांग, Book V, Kanyākubja"
+    },
+    "identified": {
+      "en": "certain, after Beal 1884",
+      "hi": "निश्चित, Beal 1884 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Harṣa Śīlāditya of Kanyākubja, who 'subdued the Five Indies' in six years but was turned back at the Revā by Pulakeśin II.",
+      "hi": "कान्यकुब्ज के हर्ष शीलादित्य का साम्राज्य, जिन्होंने छह वर्षों में 'पाँचों इंडीज़' को जीता पर रेवा पर पुलकेशिन् द्वितीय ने उन्हें लौटा दिया।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre01hsua",
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#6d1f5e",
+    "grade": {
+      "en": "Core: Kanyākubja (Kanauj), the capital",
+      "hi": "केंद्र: कान्यकुब्ज (कन्नौज), राजधानी"
+    },
+    "reading": "The capital, Kanyakubja (Kie-jo- kio-she-kwo), now called Kanauj.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 206",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 206"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "harsha-subdued",
+    "status": "draft",
+    "name": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+    },
+    "category": "harsha",
+    "rank": 1,
+    "districts": [
+      40,
+      41,
+      48,
+      51,
+      52,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      82,
+      83,
+      86,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      105,
+      106,
+      107,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      145,
+      146,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      157,
+      158,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222
+    ],
+    "verse": "After six years he had subdued the Five Indies.",
+    "locus": {
+      "en": "Xuanzang, Book V, Kanyākubja",
+      "hi": "ह्वेनसांग, Book V, Kanyākubja"
+    },
+    "identified": {
+      "en": "likely, after Beal 1884",
+      "hi": "संभावित, Beal 1884 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Harṣa Śīlāditya of Kanyākubja, who 'subdued the Five Indies' in six years but was turned back at the Revā by Pulakeśin II.",
+      "hi": "कान्यकुब्ज के हर्ष शीलादित्य का साम्राज्य, जिन्होंने छह वर्षों में 'पाँचों इंडीज़' को जीता पर रेवा पर पुलकेशिन् द्वितीय ने उन्हें लौटा दिया।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre01hsua",
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#a8559a",
+    "grade": {
+      "en": "The Gangetic north he 'subdued' in six years' war (Xuanzang)",
+      "hi": "गंगा का उत्तर जिसे उन्होंने छह वर्षों के युद्ध में 'जीता' (ह्वेनसांग)"
+    },
+    "reading": "After six years he had subdued the Five Indies.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 213",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 213"
+    },
+    "capital": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    }
+  },
+  {
+    "id": "chalukya-core",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "category": "chalukya",
+    "rank": 1,
+    "districts": [
+      552,
+      553,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      564,
+      565,
+      579,
+      580
+    ],
+    "verse": "MaharfishtraM^am navanavatiHsabasra-grama-bbajam trayanam (read: Mahārāshṭrakāṇāṃ navanavati-sahasra-grāma-bhājāṃ trayāṇāṃ)",
+    "locus": {
+      "en": "Aihole, vv. 23-25",
+      "hi": "ऐहोळे, vv. 23-25"
+    },
+    "identified": {
+      "en": "certain, after Fleet 1888",
+      "hi": "निश्चित, Fleet 1888 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Western Cālukya Pulakeśin II of Vātāpi, lord of the three Mahārāṣṭrakas, whom Harṣa could not subdue. The Aihole inscription dates his court poet's praise to 634-35 CE.",
+      "hi": "वातापी के पश्चिमी चालुक्य पुलकेशिन् द्वितीय, तीन महाराष्ट्रकों के स्वामी, जिन्हें हर्ष जीत न सके। ऐहोळे अभिलेख उनके राजकवि की प्रशस्ति को 634-35 ई. का बताता है।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft",
+      "https://archive.org/details/in.ernet.dli.2015.49403"
+    ],
+    "color": "#1f4f7a",
+    "grade": {
+      "en": "Core: Kuntala, round Vātāpi (Badami)",
+      "hi": "केंद्र: कुन्तल, वातापी (बादामी) के आसपास"
+    },
+    "reading": "the king of the greater part, if not of the whole, of Southern India, was Pulik^Sin II., of the Western Chalukya dynasty",
+    "page": {
+      "en": "J. F. Fleet, Inscriptions of the Early Gupta Kings and their Successors (1888), p. 40",
+      "hi": "J. F. Fleet, Inscriptions of the Early Gupta Kings and their Successors (1888), पृ. 40"
+    },
+    "capital": {
+      "en": "Vātāpi",
+      "hi": "वातापी"
+    }
+  },
+  {
+    "id": "chalukya-held",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "category": "chalukya",
+    "rank": 1,
+    "districts": [
+      495,
+      496,
+      497,
+      498,
+      499,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      563,
+      568,
+      585,
+      586
+    ],
+    "verse": "MaharfishtraM^am navanavatiHsabasra-grama-bbajam trayanam (read: Mahārāshṭrakāṇāṃ navanavati-sahasra-grāma-bhājāṃ trayāṇāṃ)",
+    "locus": {
+      "en": "Aihole, vv. 23-25",
+      "hi": "ऐहोळे, vv. 23-25"
+    },
+    "identified": {
+      "en": "likely, after Beal 1884",
+      "hi": "संभावित, Beal 1884 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Western Cālukya Pulakeśin II of Vātāpi, lord of the three Mahārāṣṭrakas, whom Harṣa could not subdue. The Aihole inscription dates his court poet's praise to 634-35 CE.",
+      "hi": "वातापी के पश्चिमी चालुक्य पुलकेशिन् द्वितीय, तीन महाराष्ट्रकों के स्वामी, जिन्हें हर्ष जीत न सके। ऐहोळे अभिलेख उनके राजकवि की प्रशस्ति को 634-35 ई. का बताता है।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#3a76a8",
+    "grade": {
+      "en": "Held: the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ",
+      "hi": "अधिकृत: तीन महाराष्ट्रक, वनवासी और कोंकण"
+    },
+    "reading": "His subjects obey him with perfect submission.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 256",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 256"
+    },
+    "capital": {
+      "en": "Vātāpi",
+      "hi": "वातापी"
+    }
+  },
+  {
+    "id": "chalukya-east",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "category": "chalukya",
+    "rank": 1,
+    "districts": [
+      545,
+      546,
+      547
+    ],
+    "verse": "MaharfishtraM^am navanavatiHsabasra-grama-bbajam trayanam (read: Mahārāshṭrakāṇāṃ navanavati-sahasra-grāma-bhājāṃ trayāṇāṃ)",
+    "locus": {
+      "en": "Aihole, vv. 23-25",
+      "hi": "ऐहोळे, vv. 23-25"
+    },
+    "identified": {
+      "en": "likely, after Kielhorn 1901",
+      "hi": "संभावित, Kielhorn 1901 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Western Cālukya Pulakeśin II of Vātāpi, lord of the three Mahārāṣṭrakas, whom Harṣa could not subdue. The Aihole inscription dates his court poet's praise to 634-35 CE.",
+      "hi": "वातापी के पश्चिमी चालुक्य पुलकेशिन् द्वितीय, तीन महाराष्ट्रकों के स्वामी, जिन्हें हर्ष जीत न सके। ऐहोळे अभिलेख उनके राजकवि की प्रशस्ति को 634-35 ई. का बताता है।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#6199c4",
+    "grade": {
+      "en": "Taken in the east: Piṣṭapura and the Kuṇāla water (Kolleru)",
+      "hi": "पूर्व में जीते: पिष्टपुर और कुणाल जल (कोल्लेरु)"
+    },
+    "reading": "he then according to verse 27 took the fortress of Pishtapura, the modern Pithapuram",
+    "page": {
+      "en": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), p. 2",
+      "hi": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), पृ. 2"
+    },
+    "capital": {
+      "en": "Vātāpi",
+      "hi": "वातापी"
+    }
+  },
+  {
+    "id": "chalukya-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "category": "chalukya",
+    "rank": 1,
+    "districts": [
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493
+    ],
+    "verse": "MaharfishtraM^am navanavatiHsabasra-grama-bbajam trayanam (read: Mahārāshṭrakāṇāṃ navanavati-sahasra-grāma-bhājāṃ trayāṇāṃ)",
+    "locus": {
+      "en": "Aihole, vv. 23-25",
+      "hi": "ऐहोळे, vv. 23-25"
+    },
+    "identified": {
+      "en": "likely, after Kielhorn 1901",
+      "hi": "संभावित, Kielhorn 1901 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Western Cālukya Pulakeśin II of Vātāpi, lord of the three Mahārāṣṭrakas, whom Harṣa could not subdue. The Aihole inscription dates his court poet's praise to 634-35 CE.",
+      "hi": "वातापी के पश्चिमी चालुक्य पुलकेशिन् द्वितीय, तीन महाराष्ट्रकों के स्वामी, जिन्हें हर्ष जीत न सके। ऐहोळे अभिलेख उनके राजकवि की प्रशस्ति को 634-35 ई. का बताता है।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#a3c3de",
+    "grade": {
+      "en": "The Lāṭas, who submitted of their own accord (with the unplaced Mālavas and Gūrjaras)",
+      "hi": "लाट, जिन्होंने स्वयं अधीनता मानी (अनिर्धारित मालवों और गूर्जरों के साथ)"
+    },
+    "reading": "Latas, Malavas and G-urjaras were not conquered by force, but submitted to, or sought the protection of, Pulikesin of their own accord",
+    "page": {
+      "en": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), p. 2",
+      "hi": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), पृ. 2"
+    },
+    "capital": {
+      "en": "Vātāpi",
+      "hi": "वातापी"
+    }
+  },
+  {
+    "id": "magadha-purnavarman-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Magadha (Pūrṇavarman)",
+      "hi": "मगध (पूर्णवर्मन्)"
+    },
+    "category": "magadha-purnavarman",
+    "rank": 1,
+    "districts": [
+      227,
+      228,
+      229,
+      230,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "verse": "Purnavarma  (Pu-la-na-fa-mo)",
+    "locus": {
+      "en": "Xuanzang, Book VIII, Magadha",
+      "hi": "ह्वेनसांग, Book VIII, Magadha"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Magadha under Pūrṇavarman, 'the last of the race of Aśoka', who restored the Bodhi tree.",
+      "hi": "पूर्णवर्मन् के अधीन मगध, 'अशोक के वंश के अंतिम', जिन्होंने बोधि वृक्ष को पुनर्जीवित किया।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#8a5a2a",
+    "grade": {
+      "en": "A king of Magadha in the pilgrim's time; how he stood to Harṣa is not said",
+      "hi": "तीर्थयात्री के समय मगध का एक राजा; हर्ष से उसका संबंध नहीं कहा गया"
+    },
+    "reading": "the king of Magadha, called Purnavarma (Pu-la-na-fa-mo)",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 118",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 118"
+    }
+  },
+  {
+    "id": "kamarupa-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329
+    ],
+    "verse": "Hi$ name is Bha^kara- varman (read: His name is Bhāskaravarman)",
+    "locus": {
+      "en": "Xuanzang, Book X, Kāmarūpa",
+      "hi": "ह्वेनसांग, Book X, Kāmarūpa"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Kāmarūpa under Bhāskaravarman, 'Kumāra', of the line of Nārāyaṇa-deva.",
+      "hi": "भास्करवर्मन् 'कुमार' के अधीन कामरूप, नारायणदेव के वंश का।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#3f6f5a",
+    "grade": {
+      "en": "Bhāskaravarman's kingdom, Harṣa's ally",
+      "hi": "भास्करवर्मन् का राज्य, हर्ष का सहयोगी"
+    },
+    "reading": "The country of Kamarupa24 is about 10,000 li in cir- cuit.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 195",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 195"
+    }
+  },
+  {
+    "id": "valabhi-kingdom",
+    "status": "draft",
+    "name": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+    },
+    "category": "valabhi",
+    "rank": 1,
+    "districts": [
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      494
+    ],
+    "verse": "His name is Dhruvapata (read: Dhruvapaṭa)",
+    "locus": {
+      "en": "Xuanzang, Book XI, Valabhī",
+      "hi": "ह्वेनसांग, Book XI, Valabhī"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Valabhī under the Maitraka Dhruvapaṭa (Dhruvasena II), son-in-law of Harṣa's son.",
+      "hi": "मैत्रक ध्रुवपट (ध्रुवसेन द्वितीय) के अधीन वलभी, हर्ष के पुत्र के दामाद।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#b0802a",
+    "grade": {
+      "en": "Dhruvapaṭa's kingdom, bound to Harṣa by marriage",
+      "hi": "ध्रुवपट का राज्य, विवाह से हर्ष से जुड़ा"
+    },
+    "reading": "son-in-law of the son of Siladitya, the present king of Kanyakubja.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 267",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 267"
+    },
+    "capital": {
+      "en": "Valabhī",
+      "hi": "वलभी"
+    }
+  },
+  {
+    "id": "kosala-south-awed",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+    },
+    "category": "kosala-south",
+    "rank": 1,
+    "districts": [
+      370,
+      371,
+      372,
+      373,
+      391,
+      392,
+      393,
+      394,
+      403,
+      404,
+      405,
+      406,
+      408,
+      409,
+      410,
+      411,
+      412
+    ],
+    "verse": "K6[sa*]l&li-Kaling&[h (read: Kosal-āli-Kaliṅgāḥ)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "South Kosala, awed by Pulakeśin II's armies.",
+      "hi": "दक्षिण कोसल, पुलकेशिन् द्वितीय की सेनाओं से भयभीत।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#2f5f8f",
+    "grade": {
+      "en": "'Showed signs of fear' at Pulakeśin's armies (Aihole v. 26)",
+      "hi": "पुलकेशिन् की सेनाओं से 'भय के लक्षण दिखाए' (ऐहोळे श्लोक 26)"
+    },
+    "reading": "Pulikefiin according to verse 26 subdued the Kalingas and Kdsalas",
+    "page": {
+      "en": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), p. 2",
+      "hi": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), पृ. 2"
+    }
+  },
+  {
+    "id": "kalinga-awed",
+    "status": "draft",
+    "name": {
+      "en": "Kaliṅga",
+      "hi": "कलिंग"
+    },
+    "category": "kalinga",
+    "rank": 1,
+    "districts": [
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      396,
+      542,
+      543,
+      544
+    ],
+    "verse": "K6[sa*]l&li-Kaling&[h (read: Kosal-āli-Kaliṅgāḥ)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Kaliṅga, awed by Pulakeśin II's armies.",
+      "hi": "कलिंग, पुलकेशिन् द्वितीय की सेनाओं से भयभीत।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#9e1b32",
+    "grade": {
+      "en": "'Showed signs of fear' at Pulakeśin's armies (Aihole v. 26)",
+      "hi": "पुलकेशिन् की सेनाओं से 'भय के लक्षण दिखाए' (ऐहोळे श्लोक 26)"
+    },
+    "reading": "Pulikefiin according to verse 26 subdued the Kalingas and Kdsalas",
+    "page": {
+      "en": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), p. 2",
+      "hi": "F. Kielhorn, Aihole Inscription of Pulikesin II (1901), पृ. 2"
+    }
+  },
+  {
+    "id": "pallava-core",
+    "status": "draft",
+    "name": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+    },
+    "category": "pallava",
+    "rank": 1,
+    "districts": [
+      554,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      635
+    ],
+    "verse": "Pallav&nftm-patim (read: Pallavānāṃ patim)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely, after Beal 1884",
+      "hi": "संभावित, Beal 1884 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Pallavas of Kāñcīpura, Pulakeśin II's great rivals in the south.",
+      "hi": "कांचीपुर के पल्लव, दक्षिण में पुलकेशिन् द्वितीय के बड़े प्रतिद्वंद्वी।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://archive.org/details/siyukibuddhistre02hsuoft"
+    ],
+    "color": "#8a3fa0",
+    "grade": {
+      "en": "The Pallava country round Kāñcīpura, whose king Pulakeśin shut in his city",
+      "hi": "कांचीपुर के आसपास का पल्लव देश, जिसके राजा को पुलकेशिन् ने उनके नगर में बंद किया"
+    },
+    "reading": "This must be Conjiverain.",
+    "page": {
+      "en": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), p. 228",
+      "hi": "Samuel Beal, Si-yu-ki: Buddhist Records of the Western World (1884), पृ. 228"
+    },
+    "capital": {
+      "en": "Kāñcī",
+      "hi": "काञ्ची"
+    }
+  },
+  {
+    "id": "cola-ally",
+    "status": "draft",
+    "name": {
+      "en": "Coḷa",
+      "hi": "चोल"
+    },
+    "category": "cola",
+    "rank": 1,
+    "districts": [
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      637
+    ],
+    "verse": "Ch6Ja- (read: Choḷa-)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Colas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "चोल, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#2f6f9e",
+    "grade": {
+      "en": "Made prosperous by Pulakeśin, 'the sun to the Pallava hoar-frost' (Aihole v. 31)",
+      "hi": "पुलकेशिन् द्वारा समृद्ध किए गए, 'पल्लव हिम के लिए सूर्य' (ऐहोळे श्लोक 31)"
+    }
+  },
+  {
+    "id": "kerala-ally",
+    "status": "draft",
+    "name": {
+      "en": "Kerala",
+      "hi": "केरल"
+    },
+    "category": "kerala",
+    "rank": 1,
+    "districts": [
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      636
+    ],
+    "verse": "K$ra}a (read: Keraḷa)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Keralas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "केरल, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#2f8f8a",
+    "grade": {
+      "en": "Made prosperous by Pulakeśin, 'the sun to the Pallava hoar-frost' (Aihole v. 31)",
+      "hi": "पुलकेशिन् द्वारा समृद्ध किए गए, 'पल्लव हिम के लिए सूर्य' (ऐहोळे श्लोक 31)"
+    }
+  },
+  {
+    "id": "pandya-ally",
+    "status": "draft",
+    "name": {
+      "en": "Pāṇḍya",
+      "hi": "पाण्ड्य"
+    },
+    "category": "pandya",
+    "rank": 1,
+    "districts": [
+      612,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629
+    ],
+    "verse": "P&ndy&n&m (read: Pāṇḍyānāṃ)",
+    "locus": {
+      "en": "Aihole, vv. 26-31",
+      "hi": "ऐहोळे, vv. 26-31"
+    },
+    "identified": {
+      "en": "likely: the region of the people named, drawn on whole districts by the compiler",
+      "hi": "संभावित: नामित जन का क्षेत्र, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Pāṇḍyas, whom Pulakeśin II made prosperous against the Pallavas.",
+      "hi": "पाण्ड्य, जिन्हें पुलकेशिन् द्वितीय ने पल्लवों के विरुद्ध समृद्ध किया।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6"
+    ],
+    "color": "#4f8a3a",
+    "grade": {
+      "en": "Made prosperous by Pulakeśin, 'the sun to the Pallava hoar-frost' (Aihole v. 31)",
+      "hi": "पुलकेशिन् द्वारा समृद्ध किए गए, 'पल्लव हिम के लिए सूर्य' (ऐहोळे श्लोक 31)"
+    }
+  }
+]

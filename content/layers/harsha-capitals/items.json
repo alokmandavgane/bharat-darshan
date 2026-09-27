@@ -1,0 +1,134 @@
+[
+  {
+    "id": "harsha-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kānyakubja",
+      "hi": "कान्यकुब्ज"
+    },
+    "category": "harsha",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.07,
+      "lon": 79.92
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Harṣa's empire",
+      "hi": "हर्ष का साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Kannauj",
+      "hi": "निश्चित, Kannauj पर"
+    },
+    "blurb": {
+      "en": "The capital of Harṣa's empire.",
+      "hi": "हर्ष का साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre01hsua",
+      "https://en.wikipedia.org/wiki/Kannauj"
+    ]
+  },
+  {
+    "id": "chalukya-capital",
+    "status": "draft",
+    "name": {
+      "en": "Vātāpi",
+      "hi": "वातापी"
+    },
+    "category": "chalukya",
+    "priority": 1,
+    "anchor": {
+      "lat": 15.92,
+      "lon": 75.68028
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Cālukyas of Vātāpi",
+      "hi": "वातापी के चालुक्य"
+    },
+    "identified": {
+      "en": "certain, placed at Badami",
+      "hi": "निश्चित, Badami पर"
+    },
+    "blurb": {
+      "en": "The capital of Cālukyas of Vātāpi.",
+      "hi": "वातापी के चालुक्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/EpigraphiaIndicaVol6",
+      "https://en.wikipedia.org/wiki/Badami"
+    ]
+  },
+  {
+    "id": "valabhi-capital",
+    "status": "draft",
+    "name": {
+      "en": "Valabhī",
+      "hi": "वलभी"
+    },
+    "category": "valabhi",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.8878,
+      "lon": 71.8795
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Valabhī (Maitraka)",
+      "hi": "वलभी (मैत्रक)"
+    },
+    "identified": {
+      "en": "certain, placed at Vallabhipur",
+      "hi": "निश्चित, Vallabhipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Valabhī (Maitraka).",
+      "hi": "वलभी (मैत्रक) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft",
+      "https://en.wikipedia.org/wiki/Vallabhipur"
+    ]
+  },
+  {
+    "id": "pallava-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī",
+      "hi": "काञ्ची"
+    },
+    "category": "pallava",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.83201,
+      "lon": 79.70366
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pallava",
+      "hi": "पल्लव"
+    },
+    "identified": {
+      "en": "certain, placed at Kanchipuram",
+      "hi": "निश्चित, Kanchipuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Pallava.",
+      "hi": "पल्लव की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/siyukibuddhistre02hsuoft",
+      "https://en.wikipedia.org/wiki/Kanchipuram"
+    ]
+  }
+]

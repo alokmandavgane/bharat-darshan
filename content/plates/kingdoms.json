@@ -30,7 +30,11 @@
     "gupta",
     "gupta-names",
     "gupta-capitals",
-    "gupta-evidence"
+    "gupta-evidence",
+    "harsha",
+    "harsha-names",
+    "harsha-capitals",
+    "harsha-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -137,6 +141,27 @@
         "gupta-names",
         "gupta-capitals",
         "gupta-evidence"
+      ]
+    },
+    {
+      "id": "harsha",
+      "display": {
+        "en": "c. 640 CE",
+        "hi": "लगभग 640 ई."
+      },
+      "title": {
+        "en": "Harṣa and Pulakeśin II",
+        "hi": "हर्ष और पुलकेशिन् द्वितीय"
+      },
+      "blurb": {
+        "en": "Harṣa of Kanyākubja in the north and Pulakeśin II of Vātāpi in the south, the Narmadā between them, as the Aihole inscription (634) and Xuanzang, who travelled India c. 630-644, describe them.",
+        "hi": "उत्तर में कान्यकुब्ज के हर्ष और दक्षिण में वातापी के पुलकेशिन् द्वितीय, बीच में नर्मदा, जैसा ऐहोळे अभिलेख (634) और ह्वेनसांग, जिन्होंने लगभग 630-644 में भारत की यात्रा की, बताते हैं।"
+      },
+      "layers": [
+        "harsha",
+        "harsha-names",
+        "harsha-capitals",
+        "harsha-evidence"
       ]
     }
   ],

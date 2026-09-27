@@ -1,0 +1,122 @@
+{
+  "id": "harsha-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 640 CE",
+    "hi": "नाम: लगभग 640 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "harsha",
+      "color": "#a8559a",
+      "title": {
+        "en": "Harṣa's empire",
+        "hi": "हर्ष का साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "chalukya",
+      "color": "#3a76a8",
+      "title": {
+        "en": "Cālukyas of Vātāpi",
+        "hi": "वातापी के चालुक्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "magadha-purnavarman",
+      "color": "#8a5a2a",
+      "title": {
+        "en": "Magadha (Pūrṇavarman)",
+        "hi": "मगध (पूर्णवर्मन्)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f6f5a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "valabhi",
+      "color": "#b0802a",
+      "title": {
+        "en": "Valabhī (Maitraka)",
+        "hi": "वलभी (मैत्रक)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kosala-south",
+      "color": "#2f5f8f",
+      "title": {
+        "en": "Kosala (Dakṣiṇa)",
+        "hi": "दक्षिण कोसल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kalinga",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Kaliṅga",
+        "hi": "कलिंग"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pallava",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Pallava",
+        "hi": "पल्लव"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cola",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḷa",
+        "hi": "चोल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kerala",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Kerala",
+        "hi": "केरल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "beal-1884",
+    "epigraphia-indica-vi"
+  ]
+}

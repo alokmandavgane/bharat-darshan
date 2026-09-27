@@ -1,0 +1,179 @@
+{
+  "id": "harsha",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "Harṣa and Pulakeśin II, c. 640 CE",
+    "hi": "हर्ष और पुलकेशिन् द्वितीय, लगभग 640 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "harsha",
+      "color": "#a8559a",
+      "title": {
+        "en": "Harṣa's empire",
+        "hi": "हर्ष का साम्राज्य"
+      }
+    },
+    {
+      "id": "chalukya",
+      "color": "#3a76a8",
+      "title": {
+        "en": "Cālukyas of Vātāpi",
+        "hi": "वातापी के चालुक्य"
+      }
+    },
+    {
+      "id": "magadha-purnavarman",
+      "color": "#8a5a2a",
+      "title": {
+        "en": "Magadha (Pūrṇavarman)",
+        "hi": "मगध (पूर्णवर्मन्)"
+      }
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f6f5a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      }
+    },
+    {
+      "id": "valabhi",
+      "color": "#b0802a",
+      "title": {
+        "en": "Valabhī (Maitraka)",
+        "hi": "वलभी (मैत्रक)"
+      }
+    },
+    {
+      "id": "kosala-south",
+      "color": "#2f5f8f",
+      "title": {
+        "en": "Kosala (Dakṣiṇa)",
+        "hi": "दक्षिण कोसल"
+      }
+    },
+    {
+      "id": "kalinga",
+      "color": "#9e1b32",
+      "title": {
+        "en": "Kaliṅga",
+        "hi": "कलिंग"
+      }
+    },
+    {
+      "id": "pallava",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Pallava",
+        "hi": "पल्लव"
+      }
+    },
+    {
+      "id": "cola",
+      "color": "#2f6f9e",
+      "title": {
+        "en": "Coḷa",
+        "hi": "चोल"
+      }
+    },
+    {
+      "id": "kerala",
+      "color": "#2f8f8a",
+      "title": {
+        "en": "Kerala",
+        "hi": "केरल"
+      }
+    },
+    {
+      "id": "pandya",
+      "color": "#4f8a3a",
+      "title": {
+        "en": "Pāṇḍya",
+        "hi": "पाण्ड्य"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Left blank: Kashmir, Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। खाली छोड़े गए: कश्मीर, सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
+  },
+  "sources": [
+    "beal-1884",
+    "epigraphia-indica-vi",
+    "fleet-1888",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Xuanzang in Beal's translation (1884), Kielhorn's Aihole inscription (Epigraphia Indica VI) and Fleet (1888), all public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}
