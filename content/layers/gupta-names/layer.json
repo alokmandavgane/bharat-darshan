@@ -1,0 +1,149 @@
+{
+  "id": "gupta-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "culture",
+  "title": {
+    "en": "Names: the kingdoms of c. 400 CE",
+    "hi": "नाम: लगभग 400 ई. के राज्य"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "gupta",
+      "color": "#a33a5c",
+      "title": {
+        "en": "Gupta empire",
+        "hi": "गुप्त साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f6f5a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kartripura",
+      "color": "#5e8a4a",
+      "title": {
+        "en": "Kartṛpura",
+        "hi": "कर्तृपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "yaudheya",
+      "color": "#9e3b6b",
+      "title": {
+        "en": "Yaudheya",
+        "hi": "यौधेय"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "madraka",
+      "color": "#6b8f2e",
+      "title": {
+        "en": "Mādraka",
+        "hi": "माद्रक"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "abhira",
+      "color": "#8a6d2f",
+      "title": {
+        "en": "Ābhīra",
+        "hi": "आभीर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kosala-south",
+      "color": "#2f5f8f",
+      "title": {
+        "en": "Kosala (Dakṣiṇa)",
+        "hi": "दक्षिण कोसल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pistapura",
+      "color": "#3d7fa8",
+      "title": {
+        "en": "Piṣṭapura",
+        "hi": "पिष्टपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vengi",
+      "color": "#4f93b8",
+      "title": {
+        "en": "Veṅgī",
+        "hi": "वेंगी"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "devarashtra",
+      "color": "#6aa7c8",
+      "title": {
+        "en": "Devarāṣṭra",
+        "hi": "देवराष्ट्र"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kottura",
+      "color": "#85b7d2",
+      "title": {
+        "en": "Koṭṭūra",
+        "hi": "कोट्टूर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "erandapalla",
+      "color": "#a2c8dc",
+      "title": {
+        "en": "Eraṇḍapalla",
+        "hi": "एरण्डपल्ल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kanci",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Kāñcī (Pallava)",
+        "hi": "काञ्ची (पल्लव)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "vakataka",
+      "color": "#b06a1a",
+      "title": {
+        "en": "Vākāṭaka",
+        "hi": "वाकाटक"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "fleet-1888"
+  ]
+}

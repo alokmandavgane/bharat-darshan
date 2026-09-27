@@ -1,0 +1,57 @@
+{
+  "id": "gupta-capitals",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "Capitals of c. 400 CE",
+    "hi": "लगभग 400 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "gupta",
+      "color": "#a33a5c",
+      "title": {
+        "en": "Gupta empire",
+        "hi": "गुप्त साम्राज्य"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kanci",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Kāñcī (Pallava)",
+        "hi": "काञ्ची (पल्लव)"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Pāṭaliputra, the Gupta capital, and Viṣṇugopa's Kāñcī. Ujjain, Candragupta II's second capital, is noted on the Gupta card.",
+    "hi": "पाटलिपुत्र, गुप्त राजधानी, और विष्णुगोप की काञ्ची। उज्जैन, चन्द्रगुप्त द्वितीय की दूसरी राजधानी, गुप्त कार्ड पर उल्लिखित है।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "geonames",
+    "wikipedia"
+  ]
+}

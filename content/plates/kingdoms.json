@@ -26,7 +26,11 @@
     "kushana",
     "kushana-names",
     "kushana-capitals",
-    "kushana-evidence"
+    "kushana-evidence",
+    "gupta",
+    "gupta-names",
+    "gupta-capitals",
+    "gupta-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -112,6 +116,27 @@
         "kushana-names",
         "kushana-capitals",
         "kushana-evidence"
+      ]
+    },
+    {
+      "id": "gupta",
+      "display": {
+        "en": "c. 400 CE",
+        "hi": "लगभग 400 ई."
+      },
+      "title": {
+        "en": "The Guptas",
+        "hi": "गुप्त"
+      },
+      "blurb": {
+        "en": "Samudragupta's empire and its rim, as the Allahabad pillar describes them, under Candragupta II, who took Malwa and Surāṣṭra from the Śakas. From Fleet's Gupta inscriptions (1888) and Raychaudhuri (1923).",
+        "hi": "समुद्रगुप्त का साम्राज्य और उसकी परिधि, जैसा प्रयाग स्तंभ बताता है, चन्द्रगुप्त द्वितीय के अधीन, जिन्होंने मालवा और सुराष्ट्र शकों से लिए। फ़्लीट के गुप्त अभिलेखों (1888) और रायचौधुरी (1923) से।"
+      },
+      "layers": [
+        "gupta",
+        "gupta-names",
+        "gupta-capitals",
+        "gupta-evidence"
       ]
     }
   ],

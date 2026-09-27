@@ -1,0 +1,68 @@
+[
+  {
+    "id": "gupta-capital",
+    "status": "draft",
+    "name": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    },
+    "category": "gupta",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.59408,
+      "lon": 85.13563
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "polity": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "identified": {
+      "en": "certain, placed at Patna",
+      "hi": "निश्चित, Patna पर"
+    },
+    "blurb": {
+      "en": "The capital of Gupta empire.",
+      "hi": "गुप्त साम्राज्य की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://www.geonames.org/1260086"
+    ]
+  },
+  {
+    "id": "kanci-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī",
+      "hi": "काञ्ची"
+    },
+    "category": "kanci",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.83201,
+      "lon": 79.70366
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Kāñcī (Pallava)",
+      "hi": "काञ्ची (पल्लव)"
+    },
+    "identified": {
+      "en": "certain, placed at Kanchipuram",
+      "hi": "निश्चित, Kanchipuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Kāñcī (Pallava).",
+      "hi": "काञ्ची (पल्लव) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Kanchipuram"
+    ]
+  }
+]

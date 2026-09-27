@@ -1,0 +1,203 @@
+{
+  "id": "gupta",
+  "type": "areas",
+  "group": "culture",
+  "title": {
+    "en": "The Guptas, c. 400 CE",
+    "hi": "गुप्त, लगभग 400 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "gupta",
+      "color": "#a33a5c",
+      "title": {
+        "en": "Gupta empire",
+        "hi": "गुप्त साम्राज्य"
+      }
+    },
+    {
+      "id": "kamarupa",
+      "color": "#3f6f5a",
+      "title": {
+        "en": "Kāmarūpa",
+        "hi": "कामरूप"
+      }
+    },
+    {
+      "id": "kartripura",
+      "color": "#5e8a4a",
+      "title": {
+        "en": "Kartṛpura",
+        "hi": "कर्तृपुर"
+      }
+    },
+    {
+      "id": "yaudheya",
+      "color": "#9e3b6b",
+      "title": {
+        "en": "Yaudheya",
+        "hi": "यौधेय"
+      }
+    },
+    {
+      "id": "madraka",
+      "color": "#6b8f2e",
+      "title": {
+        "en": "Mādraka",
+        "hi": "माद्रक"
+      }
+    },
+    {
+      "id": "abhira",
+      "color": "#8a6d2f",
+      "title": {
+        "en": "Ābhīra",
+        "hi": "आभीर"
+      }
+    },
+    {
+      "id": "kosala-south",
+      "color": "#2f5f8f",
+      "title": {
+        "en": "Kosala (Dakṣiṇa)",
+        "hi": "दक्षिण कोसल"
+      }
+    },
+    {
+      "id": "pistapura",
+      "color": "#3d7fa8",
+      "title": {
+        "en": "Piṣṭapura",
+        "hi": "पिष्टपुर"
+      }
+    },
+    {
+      "id": "vengi",
+      "color": "#4f93b8",
+      "title": {
+        "en": "Veṅgī",
+        "hi": "वेंगी"
+      }
+    },
+    {
+      "id": "devarashtra",
+      "color": "#6aa7c8",
+      "title": {
+        "en": "Devarāṣṭra",
+        "hi": "देवराष्ट्र"
+      }
+    },
+    {
+      "id": "kottura",
+      "color": "#85b7d2",
+      "title": {
+        "en": "Koṭṭūra",
+        "hi": "कोट्टूर"
+      }
+    },
+    {
+      "id": "erandapalla",
+      "color": "#a2c8dc",
+      "title": {
+        "en": "Eraṇḍapalla",
+        "hi": "एरण्डपल्ल"
+      }
+    },
+    {
+      "id": "kanci",
+      "color": "#8a3fa0",
+      "title": {
+        "en": "Kāñcī (Pallava)",
+        "hi": "काञ्ची (पल्लव)"
+      }
+    },
+    {
+      "id": "vakataka",
+      "color": "#b06a1a",
+      "title": {
+        "en": "Vākāṭaka",
+        "hi": "वाकाटक"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India about 400 CE, drawn as the Allahabad pillar grades Samudragupta's power. The Gupta empire is in five shades. The core is the Purāṇas' Gupta lands along the Gaṅgā, and the annexed kingdoms of Āryāvarta come next. Then Puṇḍravardhana in north Bengal. Then Malwa and Surāṣṭra, which Candragupta II won from the Śaka satraps. Last, the forest kingdoms round Ḍabhāla (Jabalpur), whose kings were made servants. Around the empire, each in its own colour, are the tributaries: the frontier kingdoms of Kāmarūpa and Kartṛpura, and the Yaudheya, Mādraka and Ābhīra gaṇas. The southern kings Samudragupta captured and set free follow: Kosala, Piṣṭapura, Veṅgī, Devarāṣṭra, Koṭṭūra, Eraṇḍapalla, and Viṣṇugopa's Kāñcī, the Pallavas'. Then the Vākāṭakas, allied by Candragupta II's daughter. Not drawn: the Mālavas, whose place 'cannot be determined', and the unplaced gaṇas and southern kings. Samataṭa and Nepāla lie outside today's India. Also blank: Gujarat's plain, the Kanarese country, Kerala and the Tamil south, where nothing read speaks. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 400 ई. का भारत, जैसे प्रयाग स्तंभ समुद्रगुप्त की शक्ति को श्रेणीबद्ध करता है। गुप्त साम्राज्य पाँच रंगों में है। केंद्र गंगा के साथ पुराणों की गुप्त भूमि है, फिर आर्यावर्त के मिलाए गए राज्य। फिर उत्तर बंगाल में पुण्ड्रवर्धन। फिर मालवा और सुराष्ट्र, जो चन्द्रगुप्त द्वितीय ने शक क्षत्रपों से जीते। अंत में डभाला (जबलपुर) के आसपास के वन-राज्य, जिनके राजा सेवक बनाए गए। साम्राज्य के चारों ओर, हर एक अपने रंग में, करद हैं: कामरूप और कर्तृपुर के सीमावर्ती राज्य, और यौधेय, माद्रक और आभीर गण। फिर वे दक्षिणी राजा जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया: कोसल, पिष्टपुर, वेंगी, देवराष्ट्र, कोट्टूर, एरण्डपल्ल, और विष्णुगोप की काञ्ची, पल्लवों की। फिर वाकाटक, चन्द्रगुप्त द्वितीय की पुत्री के द्वारा सहयोगी। नहीं दिखाए गए: मालव, जिनका स्थान 'निर्धारित नहीं किया जा सकता', और अनिर्धारित गण और दक्षिणी राजा। समतट और नेपाल आज के भारत के बाहर हैं। ये भी खाली हैं: गुजरात का मैदान, कन्नड़ देश, केरल और तमिल दक्षिण, जहाँ पढ़ा गया कुछ नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक।"
+  },
+  "sources": [
+    "raychaudhuri-1923",
+    "fleet-1888",
+    "sa-wikisource",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Raychaudhuri, Political History of Ancient India (1923), reading Fleet's Gupta inscriptions (1888), both public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

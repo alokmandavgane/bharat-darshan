@@ -767,6 +767,24 @@
         "en": "The editions of Rudradāman's, Gautamī Balaśrī's and Kaniṣka's inscriptions that the kingdoms page quotes for c. 150 CE.",
         "hi": "रुद्रदामन्, गौतमी बलश्री और कनिष्क के अभिलेखों के संस्करण जिन्हें राज्य पृष्ठ लगभग 150 ई. के लिए उद्धृत करता है।"
       }
+    },
+    "fleet-1888": {
+      "title": {
+        "en": "J. F. Fleet, Inscriptions of the Early Gupta Kings and their Successors (1888)",
+        "hi": "जे. एफ़. फ़्लीट, इंस्क्रिप्शंस ऑफ़ द अर्ली गुप्त किंग्स (1888)"
+      },
+      "publisher": {
+        "en": "Government of India, Calcutta (Corpus Inscriptionum Indicarum, vol. III)",
+        "hi": "भारत सरकार, कलकत्ता (कॉर्पस इंस्क्रिप्शनम इंडिकारम, खंड III)"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.49403",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The edition of the Allahabad pillar, the Udayagiri, Mehrauli and Chammak records that the kingdoms page quotes for c. 400 CE.",
+        "hi": "प्रयाग स्तंभ, उदयगिरि, महरौली और चम्मक अभिलेखों का संस्करण जिसे राज्य पृष्ठ लगभग 400 ई. के लिए उद्धृत करता है।"
+      }
     }
   }
 }

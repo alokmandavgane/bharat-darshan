@@ -1,0 +1,353 @@
+[
+  {
+    "id": "gupta",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 80.3
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kamarupa",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2,
+      "lon": 92.3
+    },
+    "regions": [
+      "IN-AS"
+    ],
+    "blurb": {
+      "en": "Kāmarūpa in Assam, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "असम में कामरूप, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kartripura",
+    "status": "draft",
+    "name": {
+      "en": "Kartṛpura",
+      "hi": "कर्तृपुर"
+    },
+    "category": "kartripura",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.0,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "blurb": {
+      "en": "Kartṛpura in the Himalaya, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "हिमालय में कर्तृपुर, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "yaudheya",
+    "status": "draft",
+    "name": {
+      "en": "Yaudheya",
+      "hi": "यौधेय"
+    },
+    "category": "yaudheya",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.1,
+      "lon": 77.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Yaudheya gaṇa, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "यौधेय गण, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "madraka",
+    "status": "draft",
+    "name": {
+      "en": "Mādraka",
+      "hi": "माद्रक"
+    },
+    "category": "madraka",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.7,
+      "lon": 74.9
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Mādraka gaṇa, whose capital Sākala (Sialkot) is in Pakistan, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "माद्रक गण, जिसकी राजधानी साकल (सियालकोट) पाकिस्तान में है, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "abhira",
+    "status": "draft",
+    "name": {
+      "en": "Ābhīra",
+      "hi": "आभीर"
+    },
+    "category": "abhira",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.53,
+      "lon": 75.03
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "blurb": {
+      "en": "The Ābhīras, near Vinaśana where the Sarasvatī is lost, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "आभीर, विनशन के पास जहाँ सरस्वती लुप्त होती है, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kosala-south",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+    },
+    "category": "kosala-south",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.5,
+      "lon": 82.4
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "blurb": {
+      "en": "The kingdom of Mahendra of Kosala, one of the southern kings Samudragupta captured and set free.",
+      "hi": "कोसल के महेन्द्र का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "pistapura",
+    "status": "draft",
+    "name": {
+      "en": "Piṣṭapura",
+      "hi": "पिष्टपुर"
+    },
+    "category": "pistapura",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.2,
+      "lon": 82.0
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "blurb": {
+      "en": "The kingdom of Mahendra of Piṣṭapura, one of the southern kings Samudragupta captured and set free.",
+      "hi": "पिष्टपुर के महेन्द्र का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "vengi",
+    "status": "draft",
+    "name": {
+      "en": "Veṅgī",
+      "hi": "वेंगी"
+    },
+    "category": "vengi",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.6,
+      "lon": 81.0
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "blurb": {
+      "en": "The kingdom of Hastivarman of Veṅgī, one of the southern kings Samudragupta captured and set free.",
+      "hi": "वेंगी के हस्तिवर्मन् का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "devarashtra",
+    "status": "draft",
+    "name": {
+      "en": "Devarāṣṭra",
+      "hi": "देवराष्ट्र"
+    },
+    "category": "devarashtra",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.0,
+      "lon": 82.9
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "blurb": {
+      "en": "The kingdom of Kubera of Devarāṣṭra, one of the southern kings Samudragupta captured and set free.",
+      "hi": "देवराष्ट्र के कुबेर का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kottura",
+    "status": "draft",
+    "name": {
+      "en": "Koṭṭūra",
+      "hi": "कोट्टूर"
+    },
+    "category": "kottura",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.4,
+      "lon": 84.6
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The kingdom of Svāmidatta of Koṭṭūra on the hill, one of the southern kings Samudragupta captured and set free.",
+      "hi": "पहाड़ी पर कोट्टूर के स्वामिदत्त का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "erandapalla",
+    "status": "draft",
+    "name": {
+      "en": "Eraṇḍapalla",
+      "hi": "एरण्डपल्ल"
+    },
+    "category": "erandapalla",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.5,
+      "lon": 83.9
+    },
+    "regions": [
+      "IN-AP"
+    ],
+    "blurb": {
+      "en": "The kingdom of Damana of Eraṇḍapalla, one of the southern kings Samudragupta captured and set free.",
+      "hi": "एरण्डपल्ल के दमन का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "kanci",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī (Pallava)",
+      "hi": "काञ्ची (पल्लव)"
+    },
+    "category": "kanci",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.6,
+      "lon": 79.3
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The kingdom of Viṣṇugopa of Kāñcī, a Pallava, one of the southern kings Samudragupta captured and set free.",
+      "hi": "काञ्ची के विष्णुगोप, एक पल्लव का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  },
+  {
+    "id": "vakataka",
+    "status": "draft",
+    "name": {
+      "en": "Vākāṭaka",
+      "hi": "वाकाटक"
+    },
+    "category": "vakataka",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.4,
+      "lon": 77.9
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Vākāṭakas of the Deccan, allied to the Guptas by Prabhāvatīguptā, Candragupta II's daughter, queen of Rudrasena II.",
+      "hi": "दक्कन के वाकाटक, चन्द्रगुप्त द्वितीय की पुत्री और रुद्रसेन द्वितीय की रानी प्रभावतीगुप्ता के द्वारा गुप्तों से जुड़े।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ]
+  }
+]

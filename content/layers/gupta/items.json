@@ -1,0 +1,1080 @@
+[
+  {
+    "id": "gupta-core",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "rank": 1,
+    "districts": [
+      153,
+      154,
+      157,
+      158,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      227,
+      228,
+      229,
+      230,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#7a1f3d",
+    "grade": {
+      "en": "Core: the Purāṇas' Gupta lands, along the Gaṅgā, Prayāga, Sāketa, Magadha",
+      "hi": "केंद्र: पुराणों की गुप्त भूमि, गंगा के साथ, प्रयाग, साकेत, मगध"
+    },
+    "reading": "AnuGanga Prayagamcha $aketam Magadharhstatha",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 273",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 273"
+    },
+    "capital": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    }
+  },
+  {
+    "id": "gupta-annexed",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "rank": 1,
+    "districts": [
+      40,
+      41,
+      48,
+      51,
+      52,
+      55,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      82,
+      83,
+      86,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      106,
+      107,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      155,
+      156,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      187,
+      188,
+      189,
+      190,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      350,
+      351,
+      352,
+      353,
+      362,
+      363,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      443,
+      444,
+      445,
+      446,
+      458,
+      459,
+      200,
+      231,
+      232,
+      233,
+      234
+    ],
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#a33a5c",
+    "grade": {
+      "en": "Annexed: the kingdoms of Āryāvarta Samudragupta uprooted",
+      "hi": "मिलाया गया: आर्यावर्त के राज्य जिन्हें समुद्रगुप्त ने उखाड़ा"
+    },
+    "reading": "his only permanent annexation was that of portions of Aryavarta",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 273",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 273"
+    },
+    "capital": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    }
+  },
+  {
+    "id": "gupta-bengal",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "rank": 1,
+    "districts": [
+      209,
+      210,
+      330,
+      331,
+      332
+    ],
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#bd5c7b",
+    "grade": {
+      "en": "Puṇḍravardhana, governed by the emperor's uparikas",
+      "hi": "पुण्ड्रवर्धन, सम्राट के उपरिकों द्वारा शासित"
+    },
+    "reading": "Pundravardhana or North Bengal formed an integral part of the Gupta Empire",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 279",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 279"
+    },
+    "capital": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    }
+  },
+  {
+    "id": "gupta-west",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "rank": 1,
+    "districts": [
+      121,
+      127,
+      128,
+      129,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      442,
+      464,
+      465,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      494
+    ],
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#cf7f98",
+    "grade": {
+      "en": "Won from the Śaka satraps by Candragupta II: Malwa and Surāṣṭra",
+      "hi": "चन्द्रगुप्त द्वितीय द्वारा शक क्षत्रपों से जीते गए: मालवा और सुराष्ट्र"
+    },
+    "reading": "the war with the Saka Satraps which added Malwa and Surashtra to the Gupta dominions.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 282",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 282"
+    },
+    "capital": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    }
+  },
+  {
+    "id": "gupta-forest",
+    "status": "draft",
+    "name": {
+      "en": "Gupta empire",
+      "hi": "गुप्त साम्राज्य"
+    },
+    "category": "gupta",
+    "rank": 1,
+    "districts": [
+      429,
+      430,
+      450,
+      451,
+      452,
+      462,
+      463
+    ],
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    },
+    "identified": {
+      "en": "likely, after Raychaudhuri 1923",
+      "hi": "संभावित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The empire of Samudragupta and Candragupta II: Āryāvarta annexed, Malwa and Surāṣṭra won from the Śakas, the forest kings made servants. Ujjain became a second capital (Raychaudhuri p. 283).",
+      "hi": "समुद्रगुप्त और चन्द्रगुप्त द्वितीय का साम्राज्य: आर्यावर्त मिलाया गया, मालवा और सुराष्ट्र शकों से जीते गए, वन-राजा सेवक बनाए गए। उज्जैन दूसरी राजधानी बना (रायचौधुरी पृ. 283)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://sa.wikisource.org/wiki/वायुपुराणम्/उत्तरार्धम्/अध्यायः_३७?oldid=402335",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#e2afc0",
+    "grade": {
+      "en": "The forest kingdoms round Ḍabhāla, whose kings he made servants",
+      "hi": "डभाला के आसपास के वन-राज्य, जिनके राजाओं को उन्होंने सेवक बनाया"
+    },
+    "reading": "The Atavika rajyas were closely connected with Dabhala (Fleet, CII, p. 114), i.e., the Jabbalpur region",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 275",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 275"
+    },
+    "capital": {
+      "en": "Pāṭaliputra",
+      "hi": "पाटलिपुत्र"
+    }
+  },
+  {
+    "id": "kamarupa-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Kāmarūpa",
+      "hi": "कामरूप"
+    },
+    "category": "kamarupa",
+    "rank": 1,
+    "districts": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329
+    ],
+    "verse": "Kamardpa (read: Kāmarūpa)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 22-23",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 22-23"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Kāmarūpa in Assam, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "असम में कामरूप, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#3f6f5a",
+    "grade": {
+      "en": "Tributary: 'gave all taxes, obeyed his orders, came to do obeisance'",
+      "hi": "करद: 'सब कर दिए, आदेश माने, प्रणाम करने आए'"
+    },
+    "reading": "Kamarupa (in Assam)",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 278",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 278"
+    }
+  },
+  {
+    "id": "kartripura-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Kartṛpura",
+      "hi": "कर्तृपुर"
+    },
+    "category": "kartripura",
+    "rank": 1,
+    "districts": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      68
+    ],
+    "verse": "Karttripw^Adi • pratyanta (read: Karttṛipur-ādi pratyanta)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 22-23",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 22-23"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "Kartṛpura in the Himalaya, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "हिमालय में कर्तृपुर, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#5e8a4a",
+    "grade": {
+      "en": "Tributary: 'gave all taxes, obeyed his orders, came to do obeisance'",
+      "hi": "करद: 'सब कर दिए, आदेश माने, प्रणाम करने आए'"
+    },
+    "reading": "the territory of the Katur, Katuria or Katyur rajas of Kumaun, Garhwal and Rohilkhand",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 279",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 279"
+    }
+  },
+  {
+    "id": "yaudheya-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Yaudheya",
+      "hi": "यौधेय"
+    },
+    "category": "yaudheya",
+    "rank": 1,
+    "districts": [
+      105
+    ],
+    "verse": "Yaudhgya (read: Yaudheya)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 22-23",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 22-23"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Yaudheya gaṇa, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "यौधेय गण, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#9e3b6b",
+    "grade": {
+      "en": "Tributary: 'gave all taxes, obeyed his orders, came to do obeisance'",
+      "hi": "करद: 'सब कर दिए, आदेश माने, प्रणाम करने आए'"
+    },
+    "reading": "A clue to the locality of the Yaudheyas is given by the Bijayagadh inscription (Fleet, CII, p. 251).",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 279",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 279"
+    }
+  },
+  {
+    "id": "madraka-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Mādraka",
+      "hi": "माद्रक"
+    },
+    "category": "madraka",
+    "rank": 1,
+    "districts": [
+      35,
+      49,
+      50
+    ],
+    "verse": "Mldrak (read: Mādraka)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 22-23",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 22-23"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Mādraka gaṇa, whose capital Sākala (Sialkot) is in Pakistan, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "माद्रक गण, जिसकी राजधानी साकल (सियालकोट) पाकिस्तान में है, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#6b8f2e",
+    "grade": {
+      "en": "Tributary: 'gave all taxes, obeyed his orders, came to do obeisance'",
+      "hi": "करद: 'सब कर दिए, आदेश माने, प्रणाम करने आए'"
+    },
+    "reading": "The Madrakas had their capital at Sakala or Sialkot",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 280",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 280"
+    }
+  },
+  {
+    "id": "abhira-tributary",
+    "status": "draft",
+    "name": {
+      "en": "Ābhīra",
+      "hi": "आभीर"
+    },
+    "category": "abhira",
+    "rank": 1,
+    "districts": [
+      79,
+      100
+    ],
+    "verse": "Abhira",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 22-23",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 22-23"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The Ābhīras, near Vinaśana where the Sarasvatī is lost, among the frontier kings and gaṇas who paid Samudragupta tribute.",
+      "hi": "आभीर, विनशन के पास जहाँ सरस्वती लुप्त होती है, समुद्रगुप्त को कर देने वाले सीमावर्ती राजाओं और गणों में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#8a6d2f",
+    "grade": {
+      "en": "Tributary: 'gave all taxes, obeyed his orders, came to do obeisance'",
+      "hi": "करद: 'सब कर दिए, आदेश माने, प्रणाम करने आए'"
+    },
+    "reading": "The Abhiras occupied the tract near Vioasana",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 280",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 280"
+    }
+  },
+  {
+    "id": "kosala-south-released",
+    "status": "draft",
+    "name": {
+      "en": "Kosala (Dakṣiṇa)",
+      "hi": "दक्षिण कोसल"
+    },
+    "category": "kosala-south",
+    "rank": 1,
+    "districts": [
+      370,
+      371,
+      372,
+      373,
+      391,
+      392,
+      393,
+      394,
+      403,
+      404,
+      405,
+      406,
+      408,
+      409,
+      410,
+      411,
+      412
+    ],
+    "verse": "ps.ausaIakijiMahtodra (read: Kausalaka-Mahendra)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Mahendra of Kosala, one of the southern kings Samudragupta captured and set free.",
+      "hi": "कोसल के महेन्द्र का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#2f5f8f",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Kosala is South Kosala which comprised the modern Raipur and Sambalpur districts.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 275",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 275"
+    }
+  },
+  {
+    "id": "pistapura-released",
+    "status": "draft",
+    "name": {
+      "en": "Piṣṭapura",
+      "hi": "पिष्टपुर"
+    },
+    "category": "pistapura",
+    "rank": 1,
+    "districts": [
+      545
+    ],
+    "verse": "Paishtapuraka (read: Paishṭapuraka)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Mahendra of Piṣṭapura, one of the southern kings Samudragupta captured and set free.",
+      "hi": "पिष्टपुर के महेन्द्र का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#3d7fa8",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Pishtapura is Pithapuram in the Godavart district.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    }
+  },
+  {
+    "id": "vengi-released",
+    "status": "draft",
+    "name": {
+      "en": "Veṅgī",
+      "hi": "वेंगी"
+    },
+    "category": "vengi",
+    "rank": 1,
+    "districts": [
+      546,
+      547
+    ],
+    "verse": "V aidgSyaklifHaativarfflma (read: Vaiṅgeyaka-Hastivarma)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Hastivarman of Veṅgī, one of the southern kings Samudragupta captured and set free.",
+      "hi": "वेंगी के हस्तिवर्मन् का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#4f93b8",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Vengi has been identified with Vegi or Pedda-Vegi 7 miles north of Ellore",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    }
+  },
+  {
+    "id": "devarashtra-released",
+    "status": "draft",
+    "name": {
+      "en": "Devarāṣṭra",
+      "hi": "देवराष्ट्र"
+    },
+    "category": "devarashtra",
+    "rank": 1,
+    "districts": [
+      544
+    ],
+    "verse": "Daivarashtraka (read: Daivarāshṭraka)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Kubera of Devarāṣṭra, one of the southern kings Samudragupta captured and set free.",
+      "hi": "देवराष्ट्र के कुबेर का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#6aa7c8",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Devarashtra is the Yellamanchili tract in the Vizagapatam district",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    }
+  },
+  {
+    "id": "kottura-released",
+    "status": "draft",
+    "name": {
+      "en": "Koṭṭūra",
+      "hi": "कोट्टूर"
+    },
+    "category": "kottura",
+    "rank": 1,
+    "districts": [
+      388
+    ],
+    "verse": "giriKautturaka (read: giri-Kauṭṭūraka)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Svāmidatta of Koṭṭūra on the hill, one of the southern kings Samudragupta captured and set free.",
+      "hi": "पहाड़ी पर कोट्टूर के स्वामिदत्त का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#85b7d2",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Kottura has been identified with Kothoor, 12 miles south- south-east of Mahendragiri in Gafijam",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    }
+  },
+  {
+    "id": "erandapalla-released",
+    "status": "draft",
+    "name": {
+      "en": "Eraṇḍapalla",
+      "hi": "एरण्डपल्ल"
+    },
+    "category": "erandapalla",
+    "rank": 1,
+    "districts": [
+      542
+    ],
+    "verse": "pallaka-DamaoarKAfich^yaka (read: (Airaṇḍa)pallaka-Damana-Kāñcheyaka)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Damana of Eraṇḍapalla, one of the southern kings Samudragupta captured and set free.",
+      "hi": "एरण्डपल्ल के दमन का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#a2c8dc",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Erandapalla with Erandapali",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    }
+  },
+  {
+    "id": "kanci-released",
+    "status": "draft",
+    "name": {
+      "en": "Kāñcī (Pallava)",
+      "hi": "काञ्ची (पल्लव)"
+    },
+    "category": "kanci",
+    "rank": 1,
+    "districts": [
+      554,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      635
+    ],
+    "verse": "Vishnugdp (read: Vishṇugopa)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 ll. 19-20",
+      "hi": "फ़्लीट, CII III, No. 1 ll. 19-20"
+    },
+    "identified": {
+      "en": "likely: the place Raychaudhuri identifies, drawn on whole districts by the compiler",
+      "hi": "संभावित: रायचौधुरी द्वारा पहचाना स्थान, संकलक द्वारा पूरे ज़िलों पर"
+    },
+    "blurb": {
+      "en": "The kingdom of Viṣṇugopa of Kāñcī, a Pallava, one of the southern kings Samudragupta captured and set free.",
+      "hi": "काञ्ची के विष्णुगोप, एक पल्लव का राज्य, उन दक्षिणी राजाओं में जिन्हें समुद्रगुप्त ने पकड़ा और मुक्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#8a3fa0",
+    "grade": {
+      "en": "Captured and released by Samudragupta, not annexed",
+      "hi": "समुद्रगुप्त द्वारा पकड़ा और छोड़ा गया, मिलाया नहीं गया"
+    },
+    "reading": "Kanchi is Conjeeveram near Madras.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 276",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 276"
+    },
+    "capital": {
+      "en": "Kāñcī",
+      "hi": "काञ्ची"
+    }
+  },
+  {
+    "id": "vakataka-core",
+    "status": "draft",
+    "name": {
+      "en": "Vākāṭaka",
+      "hi": "वाकाटक"
+    },
+    "category": "vakataka",
+    "rank": 1,
+    "districts": [
+      447,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510
+    ],
+    "verse": "BA6jakata-r%4* (read: Bhojakaṭa-rājye)",
+    "locus": {
+      "en": "Fleet, CII III, No. 55 ll. 14-18",
+      "hi": "फ़्लीट, CII III, No. 55 ll. 14-18"
+    },
+    "identified": {
+      "en": "certain, after Raychaudhuri 1923",
+      "hi": "निश्चित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Vākāṭakas of the Deccan, allied to the Guptas by Prabhāvatīguptā, Candragupta II's daughter, queen of Rudrasena II.",
+      "hi": "दक्कन के वाकाटक, चन्द्रगुप्त द्वितीय की पुत्री और रुद्रसेन द्वितीय की रानी प्रभावतीगुप्ता के द्वारा गुप्तों से जुड़े।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#b06a1a",
+    "grade": {
+      "en": "Core: Vidarbha, the Bhojakaṭa kingdom of their grants",
+      "hi": "केंद्र: विदर्भ, उनके दानपत्रों का भोजकट राज्य"
+    },
+    "reading": "Henceforth the Vakatakas appear as a purely southern power.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 278",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 278"
+    }
+  },
+  {
+    "id": "vakataka-sphere",
+    "status": "draft",
+    "name": {
+      "en": "Vākāṭaka",
+      "hi": "वाकाटक"
+    },
+    "category": "vakataka",
+    "rank": 1,
+    "districts": [
+      497,
+      498,
+      499,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      530,
+      531,
+      532,
+      533,
+      534
+    ],
+    "verse": "BA6jakata-r%4* (read: Bhojakaṭa-rājye)",
+    "locus": {
+      "en": "Fleet, CII III, No. 55 ll. 14-18",
+      "hi": "फ़्लीट, CII III, No. 55 ll. 14-18"
+    },
+    "identified": {
+      "en": "disputed, after Raychaudhuri 1923",
+      "hi": "विवादित, Raychaudhuri 1923 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Vākāṭakas of the Deccan, allied to the Guptas by Prabhāvatīguptā, Candragupta II's daughter, queen of Rudrasena II.",
+      "hi": "दक्कन के वाकाटक, चन्द्रगुप्त द्वितीय की पुत्री और रुद्रसेन द्वितीय की रानी प्रभावतीगुप्ता के द्वारा गुप्तों से जुड़े।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft"
+    ],
+    "color": "#e0ab6a",
+    "grade": {
+      "en": "Their sphere in the Deccan, 'to the borders of Kuntala' (disputed)",
+      "hi": "दक्कन में उनका प्रभाव-क्षेत्र, 'कुन्तल की सीमाओं तक' (विवादित)"
+    },
+    "reading": "to the borders of Kuntala (or Karnata",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 277",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 277"
+    }
+  }
+]

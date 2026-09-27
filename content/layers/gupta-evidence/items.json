@@ -1,0 +1,254 @@
+[
+  {
+    "id": "allahabad",
+    "status": "draft",
+    "name": {
+      "en": "Allahabad pillar",
+      "hi": "प्रयाग स्तंभ"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.43,
+      "lon": 81.87667
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Allahabad Fort, Prayagraj",
+      "hi": "the Allahabad Fort, Prayagraj पर"
+    },
+    "blurb": {
+      "en": "Hariṣeṇa's praśasti of Samudragupta, cut on an Aśokan pillar: the kings he uprooted, released and took tribute from.",
+      "hi": "समुद्रगुप्त की हरिषेण-रचित प्रशस्ति, अशोक के स्तंभ पर: जिन राजाओं को उन्होंने उखाड़ा, छोड़ा और जिनसे कर लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Allahabad_pillar"
+    ],
+    "reading": "his only permanent annexation was that of portions of Aryavarta",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 273",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 273"
+    },
+    "verse": "Aryyavartta -r4ia (read: Āryāvartta-rāja)",
+    "locus": {
+      "en": "Fleet, CII III, No. 1 l. 21",
+      "hi": "फ़्लीट, CII III, No. 1 l. 21"
+    }
+  },
+  {
+    "id": "eran",
+    "status": "draft",
+    "name": {
+      "en": "Eran",
+      "hi": "एरण"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.09385,
+      "lon": 78.1727
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Eran, Sagar district",
+      "hi": "Eran, Sagar district पर"
+    },
+    "blurb": {
+      "en": "Samudragupta's own inscription in central India, the proof of his conquest there.",
+      "hi": "मध्य भारत में समुद्रगुप्त का अपना अभिलेख, वहाँ उनकी विजय का प्रमाण।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Eran"
+    ],
+    "reading": "The conquest of this region by Samudra Gupta is proved also by his Eran inscription.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 275",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 275"
+    }
+  },
+  {
+    "id": "udayagiri",
+    "status": "draft",
+    "name": {
+      "en": "Udayagiri",
+      "hi": "उदयगिरि"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.53639,
+      "lon": 77.77222
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Udayagiri caves, Vidisha",
+      "hi": "the Udayagiri caves, Vidisha पर"
+    },
+    "blurb": {
+      "en": "Candragupta II's caves: a Sanakānīka feudatory's gift of 401 CE, and his minister Śāba 'come with the king to conquer the whole earth'.",
+      "hi": "चन्द्रगुप्त द्वितीय की गुफाएँ: 401 ई. का एक सनकानीक सामन्त का दान, और उनके मंत्री शाब 'पृथ्वी जीतने राजा के साथ आए'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Udayagiri_Caves"
+    ],
+    "reading": "The campaign against the western Satraps is apparently alluded to in the Udayagiri Cave Inscription",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 283",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 283"
+    },
+    "verse": "mahjLrii4dhi*-§rf-Chandrarg1uDta (read: mahārājādhirāja-śrī-Chandragupta)",
+    "locus": {
+      "en": "Fleet, CII III, No. 3 ll. 1-4",
+      "hi": "फ़्लीट, CII III, No. 3 ll. 1-4"
+    }
+  },
+  {
+    "id": "sanchi-gupta",
+    "status": "draft",
+    "name": {
+      "en": "Sāñcī",
+      "hi": "साँची"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.47922,
+      "lon": 77.73968
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Great Stūpa, Sanchi",
+      "hi": "the Great Stūpa, Sanchi पर"
+    },
+    "blurb": {
+      "en": "The gift of Amrakārdava, Candragupta II's general, dated 412 CE.",
+      "hi": "चन्द्रगुप्त द्वितीय के सेनापति आम्रकार्दव का दान, 412 ई.।"
+    },
+    "sources": [
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Sanchi"
+    ],
+    "reading": "the Sanchi inscription of A.D. 412",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 282",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 282"
+    }
+  },
+  {
+    "id": "mehrauli",
+    "status": "draft",
+    "name": {
+      "en": "Mehrauli iron pillar",
+      "hi": "महरौली लौह स्तंभ"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.52466,
+      "lon": 77.18507
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at the Qutb complex, Delhi",
+      "hi": "the Qutb complex, Delhi पर"
+    },
+    "blurb": {
+      "en": "King Candra's pillar: war in the Vaṅga countries and across the seven mouths of the Sindhu. Which Candra is disputed.",
+      "hi": "राजा चन्द्र का स्तंभ: वंग देशों में और सिंधु के सात मुखों के पार युद्ध। कौन-से चन्द्र, यह विवादित है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi"
+    ],
+    "reading": "the mighty sovereign Chandra of the Meharauli Iron Pillar Inscription",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 274",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 274"
+    },
+    "verse": "Vahg^hv>Ahava- (read: Vaṅgeshv-āhava-)",
+    "locus": {
+      "en": "Fleet, CII III, No. 32 ll. 1-2",
+      "hi": "फ़्लीट, CII III, No. 32 ll. 1-2"
+    }
+  },
+  {
+    "id": "chammak",
+    "status": "draft",
+    "name": {
+      "en": "Chammak",
+      "hi": "चम्मक"
+    },
+    "category": "inscription",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.25722,
+      "lon": 77.50861
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "kind": {
+      "en": "Inscription",
+      "hi": "अभिलेख"
+    },
+    "identified": {
+      "en": "placed at Achalpur, Amravati district (compiler's placement)",
+      "hi": "Achalpur, Amravati district (compiler's placement) पर"
+    },
+    "blurb": {
+      "en": "Pravarasena II's grant of Carmāṅka in the Bhojakaṭa kingdom; his mother was Prabhāvatīguptā, the daughter of Devagupta (Candragupta II).",
+      "hi": "प्रवरसेन द्वितीय का भोजकट राज्य में चर्मांक का दान; उनकी माता देवगुप्त (चन्द्रगुप्त द्वितीय) की पुत्री प्रभावतीगुप्ता थीं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.49403",
+      "https://archive.org/details/politicalhistory00raycuoft",
+      "https://en.wikipedia.org/wiki/Achalpur"
+    ],
+    "reading": "Henceforth the Vakatakas appear as a purely southern power.",
+    "page": {
+      "en": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), p. 278",
+      "hi": "Hemchandra Raychaudhuri, Political History of Ancient India (1923), पृ. 278"
+    },
+    "verse": "BA6jakata-r%4* (read: Bhojakaṭa-rājye)",
+    "locus": {
+      "en": "Fleet, CII III, No. 55 ll. 14-18",
+      "hi": "फ़्लीट, CII III, No. 55 ll. 14-18"
+    }
+  }
+]

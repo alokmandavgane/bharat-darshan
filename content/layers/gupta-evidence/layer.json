@@ -1,0 +1,76 @@
+{
+  "id": "gupta-evidence",
+  "type": "points",
+  "group": "culture",
+  "title": {
+    "en": "The evidence of c. 400 CE",
+    "hi": "लगभग 400 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "inscription",
+      "color": "#7a2e1f",
+      "icon": "pin",
+      "title": {
+        "en": "Inscriptions",
+        "hi": "अभिलेख"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The inscriptions the map rests on. The Allahabad pillar and Eran are Samudragupta's. Udayagiri and Sāñcī are Candragupta II's in Malwa, and the Mehrauli iron pillar is Candra's. The Chammak plates are the Vākāṭaka Pravarasena II's. Each pin is at its site or the nearest town.",
+    "hi": "वे अभिलेख जिन पर मानचित्र टिका है। प्रयाग स्तंभ और एरण समुद्रगुप्त के हैं। उदयगिरि और साँची मालवा में चन्द्रगुप्त द्वितीय के हैं, और महरौली लौह स्तंभ चन्द्र का है। चम्मक दानपत्र वाकाटक प्रवरसेन द्वितीय का है। हर पिन अपने स्थल या निकटतम नगर पर है।"
+  },
+  "sources": [
+    "fleet-1888",
+    "raychaudhuri-1923",
+    "wikipedia"
+  ]
+}

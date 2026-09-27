@@ -2450,6 +2450,17 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, seventy-third round: the Guptas, c. 400 CE. "Kingdoms and empires" gains its fifth era, drawn from
+  Fleet's Gupta inscriptions (1888) with Raychaudhuri 1923. The Allahabad pillar's grades are the map's.
+  - **The Gupta empire, in five shades:** core, annexed Āryāvarta, Puṇḍravardhana, Malwa and Surāṣṭra won from
+    the Śakas, and the forest kingdoms.
+  - **Around it:** five tributaries, seven southern kingdoms Samudragupta captured and released (among them the
+    Pallavas' Kāñcī), and the Vākāṭakas.
+  - **Capitals and pins:** two capitals and six inscription pins.
+  - 14 polities: every item carries its own colour, and the names layer is `names_first`. At country zoom a few
+    small coastal names give way to one another.
+  - Checked in the browser at 1280x800 and at the pane's phone width (the Kāñcī and Udayagiri cards); 48 tests
+    and the build pass.
 - 2026-09-27, seventy-second round: c. 150 CE, and names before pins. "Kingdoms and empires" gains its fourth era,
   "c. 150 CE · Kuṣāṇas, Kṣatrapas and Sātavāhanas". It is drawn from Rudradāman's Junāgaḍh inscription (dated 150
   CE), Gautamī Balaśrī's Nāsik praśasti and Kaniṣka's Sārnāth record (Epigraphia Indica VIII), with Raychaudhuri
