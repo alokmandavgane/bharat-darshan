@@ -3466,12 +3466,12 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 10,
+   "count": 11,
    "reviewed": 0,
    "categories": [
     {
      "id": "ghurid",
-     "color": "#86a88f",
+     "color": "#3f5f4a",
      "title": {
       "en": "Ghurid conquests in Hindustan",
       "hi": "हिन्दुस्तान में ग़ोरी विजय"
@@ -3480,7 +3480,7 @@
     },
     {
      "id": "sena",
-     "color": "#b86a96",
+     "color": "#7a2f5a",
      "title": {
       "en": "Sena kingdom",
       "hi": "सेन राज्य"
@@ -3498,7 +3498,7 @@
     },
     {
      "id": "caulukya",
-     "color": "#d7ad62",
+     "color": "#b07a1a",
      "title": {
       "en": "Caulukyas of Anhilvāra",
       "hi": "अणहिलवाड के चौलुक्य"
@@ -3516,7 +3516,7 @@
     },
     {
      "id": "yadava",
-     "color": "#6199c4",
+     "color": "#1f4f7a",
      "title": {
       "en": "Yādavas of Devagiri",
       "hi": "देवगिरि के यादव"
@@ -3525,7 +3525,7 @@
     },
     {
      "id": "hoysala",
-     "color": "#b8454f",
+     "color": "#8a1f2c",
      "title": {
       "en": "Hoysaḷas of Dorasamudra",
       "hi": "द्वारसमुद्र के होयसल"
@@ -3534,7 +3534,7 @@
     },
     {
      "id": "kakatiya",
-     "color": "#7fb3a4",
+     "color": "#2f6a5a",
      "title": {
       "en": "Kākatīyas of Anumakoṇḍa",
       "hi": "अनुमकोण्ड के काकतीय"
@@ -3556,6 +3556,15 @@
      "title": {
       "en": "Pāṇḍyas of Madurai",
       "hi": "मदुरै के पाण्ड्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "pin"
     }
@@ -3714,12 +3723,12 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 10,
+   "count": 11,
    "reviewed": 0,
    "categories": [
     {
      "id": "ghurid",
-     "color": "#86a88f",
+     "color": "#3f5f4a",
      "title": {
       "en": "Ghurid conquests in Hindustan",
       "hi": "हिन्दुस्तान में ग़ोरी विजय"
@@ -3728,7 +3737,7 @@
     },
     {
      "id": "sena",
-     "color": "#b86a96",
+     "color": "#7a2f5a",
      "title": {
       "en": "Sena kingdom",
       "hi": "सेन राज्य"
@@ -3746,7 +3755,7 @@
     },
     {
      "id": "caulukya",
-     "color": "#d7ad62",
+     "color": "#b07a1a",
      "title": {
       "en": "Caulukyas of Anhilvāra",
       "hi": "अणहिलवाड के चौलुक्य"
@@ -3764,7 +3773,7 @@
     },
     {
      "id": "yadava",
-     "color": "#6199c4",
+     "color": "#1f4f7a",
      "title": {
       "en": "Yādavas of Devagiri",
       "hi": "देवगिरि के यादव"
@@ -3773,7 +3782,7 @@
     },
     {
      "id": "hoysala",
-     "color": "#b8454f",
+     "color": "#8a1f2c",
      "title": {
       "en": "Hoysaḷas of Dorasamudra",
       "hi": "द्वारसमुद्र के होयसल"
@@ -3782,7 +3791,7 @@
     },
     {
      "id": "kakatiya",
-     "color": "#7fb3a4",
+     "color": "#2f6a5a",
      "title": {
       "en": "Kākatīyas of Anumakoṇḍa",
       "hi": "अनुमकोण्ड के काकतीय"
@@ -3804,6 +3813,15 @@
      "title": {
       "en": "Pāṇḍyas of Madurai",
       "hi": "मदुरै के पाण्ड्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "map"
     }
@@ -3837,12 +3855,12 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 16,
+   "count": 17,
    "reviewed": 0,
    "categories": [
     {
      "id": "ghurid",
-     "color": "#86a88f",
+     "color": "#3f5f4a",
      "title": {
       "en": "Ghurid conquests in Hindustan",
       "hi": "हिन्दुस्तान में ग़ोरी विजय"
@@ -3850,7 +3868,7 @@
     },
     {
      "id": "sena",
-     "color": "#b86a96",
+     "color": "#7a2f5a",
      "title": {
       "en": "Sena kingdom",
       "hi": "सेन राज्य"
@@ -3866,7 +3884,7 @@
     },
     {
      "id": "caulukya",
-     "color": "#d7ad62",
+     "color": "#b07a1a",
      "title": {
       "en": "Caulukyas of Anhilvāra",
       "hi": "अणहिलवाड के चौलुक्य"
@@ -3882,7 +3900,7 @@
     },
     {
      "id": "yadava",
-     "color": "#6199c4",
+     "color": "#1f4f7a",
      "title": {
       "en": "Yādavas of Devagiri",
       "hi": "देवगिरि के यादव"
@@ -3890,7 +3908,7 @@
     },
     {
      "id": "hoysala",
-     "color": "#b8454f",
+     "color": "#8a1f2c",
      "title": {
       "en": "Hoysaḷas of Dorasamudra",
       "hi": "द्वारसमुद्र के होयसल"
@@ -3898,7 +3916,7 @@
     },
     {
      "id": "kakatiya",
-     "color": "#7fb3a4",
+     "color": "#2f6a5a",
      "title": {
       "en": "Kākatīyas of Anumakoṇḍa",
       "hi": "अनुमकोण्ड के काकतीय"
@@ -3918,6 +3936,14 @@
      "title": {
       "en": "Pāṇḍyas of Madurai",
       "hi": "मदुरै के पाण्ड्य"
+     }
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      }
     }
    ],
@@ -3984,14 +4010,15 @@
     }
    },
    "note": {
-    "en": "India about 1200 CE, a few years after the Ghurid victories of 1192-94. The conquests of Muʿizz al-Dīn of Ghūr are held from Delhi by Quṭb al-Dīn Aibak: the Panjab, Ajmer, the doab, Benares and Gwalior, 'the whole of Hindustan Proper, except Malwa', as Smith quotes Elliot, and Bihar, newly overrun by Muḥammad Bakhtiyār. Around them stand the Senas of Bengal under Lakṣmaṇasena, the Candellas of Bundelkhand, whose Kālinjar fell in 1203, the Caulukyas of Gujarat, whose capital Aibak sacked in 1197, and the Paramāras of Mālava, restored under Subhaṭavarman. In the south the Hoysaḷas under Vīra-Ballāḷa II hold Mysore and Kuntala, won from the Yādavas of Devagiri in 1191-92; the Kākatīyas rule Telangana from Anumakoṇḍa; Kulottuṅga III's Colas hold the Kāverī country and claim the Pāṇḍyas as subjects. Left blank: Marwar, Mewar and south Gujarat, Orissa, the Kalacuris, Mithilā, Assam, Kashmir, Kerala and Toṇḍai-maṇḍalam, where nothing read here speaks for this date. The chronicles are quoted in Elliot and Dowson's 1869 translation. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1200 ई. का भारत, 1192-94 की ग़ोरी विजयों के कुछ वर्ष बाद। ग़ोर के मुइज़्ज़ुद्दीन की विजयें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता है: पंजाब, अजमेर, दोआब, बनारस और ग्वालियर, 'मालवा को छोड़ पूरा हिन्दुस्तान खास', जैसा स्मिथ इलियट को उद्धृत करते हैं, और बिहार, जिसे मुहम्मद बख़्तियार ने अभी-अभी रौंदा। उनके चारों ओर लक्ष्मणसेन के अधीन बंगाल के सेन, बुंदेलखंड के चन्देल, जिनका कालिंजर 1203 में गिरा, गुजरात के चौलुक्य, जिनकी राजधानी ऐबक ने 1197 में लूटी, और सुभटवर्मन के अधीन पुनर्स्थापित मालव के परमार हैं। दक्षिण में वीर-बल्लाळ द्वितीय के अधीन होयसल मैसूर और कुन्तल रखते हैं, जो 1191-92 में देवगिरि के यादवों से जीता; काकतीय अनुमकोण्ड से तेलंगाना पर राज करते हैं; कुलोत्तुंग तृतीय के चोल कावेरी देश रखते हैं और पाण्ड्यों को अधीन बताते हैं। खाली छोड़े गए: मारवाड़, मेवाड़ और दक्षिण गुजरात, ओडिशा, कलचुरि, मिथिला, असम, कश्मीर, केरल और तोण्डै-मण्डलम्, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। इतिवृत्त इलियट और डाउसन के 1869 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1200 CE, a few years after the Ghurid victories of 1192-94. The conquests of Muʿizz al-Dīn of Ghūr are held from Delhi by Quṭb al-Dīn Aibak: the Panjab, Ajmer, the doab, Benares and Gwalior, 'the whole of Hindustan Proper, except Malwa', as Smith quotes Elliot, and Bihar, newly overrun by Muḥammad Bakhtiyār. Around them stand the Senas of Bengal under Lakṣmaṇasena, the Candellas of Bundelkhand, whose Kālinjar fell in 1203, the Caulukyas of Gujarat, whose capital Aibak sacked in 1197, and the Paramāras of Mālava, restored under Subhaṭavarman. In the south the Hoysaḷas under Vīra-Ballāḷa II hold Mysore and Kuntala, won from the Yādavas of Devagiri in 1191-92; the Kākatīyas rule Telangana from Anumakoṇḍa; Kulottuṅga III's Colas hold the Kāverī country and claim the Pāṇḍyas as subjects. Left blank: Marwar, Mewar and south Gujarat, Orissa, the Kalacuris, Mithilā, Assam, Kerala and Toṇḍai-maṇḍalam, where nothing read here speaks for this date. Kashmir under Jagadeva is added from Jonarāja's chronicle (Dutt, 1898). The chronicles are quoted in Elliot and Dowson's 1869 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1200 ई. का भारत, 1192-94 की ग़ोरी विजयों के कुछ वर्ष बाद। ग़ोर के मुइज़्ज़ुद्दीन की विजयें दिल्ली से क़ुतुबुद्दीन ऐबक सँभालता है: पंजाब, अजमेर, दोआब, बनारस और ग्वालियर, 'मालवा को छोड़ पूरा हिन्दुस्तान खास', जैसा स्मिथ इलियट को उद्धृत करते हैं, और बिहार, जिसे मुहम्मद बख़्तियार ने अभी-अभी रौंदा। उनके चारों ओर लक्ष्मणसेन के अधीन बंगाल के सेन, बुंदेलखंड के चन्देल, जिनका कालिंजर 1203 में गिरा, गुजरात के चौलुक्य, जिनकी राजधानी ऐबक ने 1197 में लूटी, और सुभटवर्मन के अधीन पुनर्स्थापित मालव के परमार हैं। दक्षिण में वीर-बल्लाळ द्वितीय के अधीन होयसल मैसूर और कुन्तल रखते हैं, जो 1191-92 में देवगिरि के यादवों से जीता; काकतीय अनुमकोण्ड से तेलंगाना पर राज करते हैं; कुलोत्तुंग तृतीय के चोल कावेरी देश रखते हैं और पाण्ड्यों को अधीन बताते हैं। खाली छोड़े गए: मारवाड़, मेवाड़ और दक्षिण गुजरात, ओडिशा, कलचुरि, मिथिला, असम, केरल और तोण्डै-मण्डलम्, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। जगदेव के अधीन कश्मीर जोनराज के वृत्तांत (दत्त, 1898) से जोड़ा गया। इतिवृत्त इलियट और डाउसन के 1869 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1869",
     "smith-1914",
     "epigraphia-indica-vi",
     "epigraphia-indica-ix",
+    "dutt-1898-iii",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -4613,12 +4640,12 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 4,
+   "count": 5,
    "reviewed": 0,
    "categories": [
     {
      "id": "harsha",
-     "color": "#a8559a",
+     "color": "#6d1f5e",
      "title": {
       "en": "Harṣa's empire",
       "hi": "हर्ष का साम्राज्य"
@@ -4627,7 +4654,7 @@
     },
     {
      "id": "chalukya",
-     "color": "#3a76a8",
+     "color": "#1f4f7a",
      "title": {
       "en": "Cālukyas of Vātāpi",
       "hi": "वातापी के चालुक्य"
@@ -4649,6 +4676,15 @@
      "title": {
       "en": "Pallava",
       "hi": "पल्लव"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "pin"
     }
@@ -4785,12 +4821,12 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 11,
+   "count": 12,
    "reviewed": 0,
    "categories": [
     {
      "id": "harsha",
-     "color": "#a8559a",
+     "color": "#6d1f5e",
      "title": {
       "en": "Harṣa's empire",
       "hi": "हर्ष का साम्राज्य"
@@ -4799,7 +4835,7 @@
     },
     {
      "id": "chalukya",
-     "color": "#3a76a8",
+     "color": "#1f4f7a",
      "title": {
       "en": "Cālukyas of Vātāpi",
       "hi": "वातापी के चालुक्य"
@@ -4884,6 +4920,15 @@
      "title": {
       "en": "Pāṇḍya",
       "hi": "पाण्ड्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "map"
     }
@@ -4917,12 +4962,12 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 15,
+   "count": 17,
    "reviewed": 0,
    "categories": [
     {
      "id": "harsha",
-     "color": "#a8559a",
+     "color": "#6d1f5e",
      "title": {
       "en": "Harṣa's empire",
       "hi": "हर्ष का साम्राज्य"
@@ -4930,7 +4975,7 @@
     },
     {
      "id": "chalukya",
-     "color": "#3a76a8",
+     "color": "#1f4f7a",
      "title": {
       "en": "Cālukyas of Vātāpi",
       "hi": "वातापी के चालुक्य"
@@ -5006,6 +5051,14 @@
      "title": {
       "en": "Pāṇḍya",
       "hi": "पाण्ड्य"
+     }
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      }
     }
    ],
@@ -5072,13 +5125,14 @@
     }
    },
    "note": {
-    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Left blank: Kashmir, Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। खाली छोड़े गए: कश्मीर, सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 640 CE, between two great kings. Harṣa of Kanyākubja is drawn in two shades: his capital's country, and the Gangetic north that Xuanzang says he 'subdued' in six years. Pulakeśin II of Vātāpi is drawn by his Aihole inscription (634), and it is he who turned Harṣa back at the Revā. His core round Vātāpi comes first, then the three Mahārāṣṭrakas, Vanavāsī and the Koṅkaṇ. Then the east coast he took, and the Lāṭas who submitted. Round them, each in its own colour: Kāmarūpa under Bhāskaravarman and Valabhī under Dhruvapaṭa, Harṣa's allies. Magadha under Pūrṇavarman comes next. Then South Kosala and Kaliṅga, awed by Pulakeśin, and the Pallavas of Kāñcī, his rivals. Last, the Colas, Keralas and Pāṇḍyas, whom he befriended. Kashmir under Durlabhavardhana is added from Kalhaṇa's Rājataraṅgiṇī (Stein, 1900). Left blank: Sindh, the Himalaya, Malwa and Rajasthan, the forest belt and Bengal. The Mālavas and Gūrjaras of Aihole are not placed. Xuanzang is quoted in Beal's 1884 translation. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 640 ई. का भारत, दो महान राजाओं के बीच। कान्यकुब्ज के हर्ष दो रंगों में हैं: उनकी राजधानी का देश, और गंगा का उत्तर जिसे ह्वेनसांग के अनुसार उन्होंने छह वर्षों में 'जीता'। वातापी के पुलकेशिन् द्वितीय उनके ऐहोळे अभिलेख (634) से दिखाए गए हैं, और उन्होंने ही रेवा पर हर्ष को लौटाया। पहले वातापी के आसपास उनका केंद्र, फिर तीन महाराष्ट्रक, वनवासी और कोंकण। फिर उनका जीता पूर्वी तट, और अधीनता मानने वाले लाट। उनके चारों ओर, अपने रंगों में: भास्करवर्मन् के अधीन कामरूप और ध्रुवपट के अधीन वलभी, हर्ष के सहयोगी। फिर पूर्णवर्मन् के अधीन मगध। फिर दक्षिण कोसल और कलिंग, पुलकेशिन् से भयभीत, और कांची के पल्लव, उनके प्रतिद्वंद्वी। अंत में चोल, केरल और पाण्ड्य, जिनसे उन्होंने मित्रता की। दुर्लभवर्धन के अधीन कश्मीर कल्हण की राजतरंगिणी (स्टाइन, 1900) से जोड़ा गया। खाली छोड़े गए: सिंध, हिमालय, मालवा और राजस्थान, वन-पट्टी और बंगाल। ऐहोळे के मालव और गूर्जर अनिर्धारित हैं। ह्वेनसांग बील के 1884 के अनुवाद में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक।"
    },
    "sources": [
     "beal-1884",
     "epigraphia-indica-vi",
     "fleet-1888",
+    "stein-1900-i",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -5305,33 +5359,69 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 2,
+   "count": 6,
    "reviewed": 0,
    "categories": [
     {
-     "id": "kushana",
-     "color": "#5b6b1e",
-     "title": {
-      "en": "The Kuṣāṇa empire",
-      "hi": "कुषाण साम्राज्य"
-     },
-     "icon": "pin"
-    },
-    {
      "id": "kshatrapa",
-     "color": "#2e6f86",
+     "color": "#1f4e5f",
      "title": {
-      "en": "The Western Kṣatrapas",
+      "en": "Western Kṣatrapas",
       "hi": "पश्चिमी क्षत्रप"
      },
      "icon": "pin"
     },
     {
      "id": "satavahana",
-     "color": "#b8691f",
+     "color": "#8a4a0e",
      "title": {
-      "en": "The Sātavāhanas",
-      "hi": "सातवाहन"
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "chera",
+     "color": "#c9785a",
+     "title": {
+      "en": "Cheras",
+      "hi": "चेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "ay",
+     "color": "#b8854a",
+     "title": {
+      "en": "Āy",
+      "hi": "आय"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kushana",
+     "color": "#5b6b1e",
+     "title": {
+      "en": "The Kuṣāṇa empire",
+      "hi": "कुषाण साम्राज्य"
      },
      "icon": "pin"
     },
@@ -5479,33 +5569,33 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 4,
+   "count": 8,
    "reviewed": 0,
    "categories": [
     {
      "id": "kushana",
      "color": "#5b6b1e",
      "title": {
-      "en": "The Kuṣāṇa empire",
+      "en": "Kuṣāṇa empire",
       "hi": "कुषाण साम्राज्य"
      },
      "icon": "map"
     },
     {
      "id": "kshatrapa",
-     "color": "#2e6f86",
+     "color": "#1f4e5f",
      "title": {
-      "en": "The Western Kṣatrapas",
+      "en": "Western Kṣatrapas",
       "hi": "पश्चिमी क्षत्रप"
      },
      "icon": "map"
     },
     {
      "id": "satavahana",
-     "color": "#b8691f",
+     "color": "#8a4a0e",
      "title": {
-      "en": "The Sātavāhanas",
-      "hi": "सातवाहन"
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
      },
      "icon": "map"
     },
@@ -5513,8 +5603,44 @@
      "id": "yaudheya",
      "color": "#9e3b6b",
      "title": {
-      "en": "The Yaudheyas",
+      "en": "Yaudheya",
       "hi": "यौधेय"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "chera",
+     "color": "#c9785a",
+     "title": {
+      "en": "Cheras",
+      "hi": "चेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "ay",
+     "color": "#b8854a",
+     "title": {
+      "en": "Āy",
+      "hi": "आय"
      },
      "icon": "map"
     }
@@ -5548,39 +5674,71 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 20,
    "reviewed": 0,
    "categories": [
     {
      "id": "kushana",
      "color": "#5b6b1e",
      "title": {
-      "en": "The Kuṣāṇa empire",
+      "en": "Kuṣāṇa empire",
       "hi": "कुषाण साम्राज्य"
      }
     },
     {
      "id": "kshatrapa",
-     "color": "#2e6f86",
+     "color": "#1f4e5f",
      "title": {
-      "en": "The Western Kṣatrapas",
+      "en": "Western Kṣatrapas",
       "hi": "पश्चिमी क्षत्रप"
      }
     },
     {
      "id": "satavahana",
-     "color": "#b8691f",
+     "color": "#8a4a0e",
      "title": {
-      "en": "The Sātavāhanas",
-      "hi": "सातवाहन"
+      "en": "Sātavāhana (Āndhra)",
+      "hi": "सातवाहन (आन्ध्र)"
      }
     },
     {
      "id": "yaudheya",
      "color": "#9e3b6b",
      "title": {
-      "en": "The Yaudheyas",
+      "en": "Yaudheya",
       "hi": "यौधेय"
+     }
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     }
+    },
+    {
+     "id": "chera",
+     "color": "#c9785a",
+     "title": {
+      "en": "Cheras",
+      "hi": "चेर"
+     }
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     }
+    },
+    {
+     "id": "ay",
+     "color": "#b8854a",
+     "title": {
+      "en": "Āy",
+      "hi": "आय"
      }
     }
    ],
@@ -5647,13 +5805,15 @@
     }
    },
    "note": {
-    "en": "India about 150 CE, when Rudradāman's Junāgaḍh inscription was cut. The Western Kṣatrapas are drawn by that record's list of countries. Five of them (Surāṣṭra, Kukura, Aparānta, Anūpa and Ākarāvanti) had been Gautamīputra Sātakarṇi's by the Nāsik praśasti; the map gives them to the later record. The Sātavāhanas keep their capital, Pratiṣṭhāna, with Mahārāṣṭra, the Krishna country, and the Asaka and Vidarbha of the praśasti. The Kuṣāṇas are drawn by Raychaudhuri's 'from Gandhāra and Kaśmīr to Benares'. Their dated records at Mathurā and Śrāvastī are the held core; the east is disputed, since Vogel doubts Sārnāth proves rule. The Yaudheyas are drawn only at Bijayagaḍh. Left blank: the Himalaya, Rajasthan's Matsya country, the Gangetic east, Kaliṅga, the forest belt and the Tamil south. Nothing read places them this century (Ptolemy names the Tamil kings, and is not in the kosha). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 150 ई. का भारत, जब रुद्रदामन् का जूनागढ़ अभिलेख उत्कीर्ण हुआ। पश्चिमी क्षत्रप उस अभिलेख की देश-सूची से दिखाए गए हैं। इनमें से पाँच (सुराष्ट्र, कुकुर, अपरान्त, अनूप और आकरावन्ति) नासिक प्रशस्ति के अनुसार गौतमीपुत्र सातकर्णि के थे; मानचित्र उन्हें बाद के अभिलेख को देता है। सातवाहनों के पास उनकी राजधानी प्रतिष्ठान है, महाराष्ट्र, कृष्णा देश, और प्रशस्ति के असक और विदर्भ के साथ। कुषाण रायचौधुरी के 'गांधार और कश्मीर से बनारस तक' से दिखाए गए हैं। मथुरा और श्रावस्ती के उनके तिथियुक्त अभिलेख अधिकृत केंद्र हैं; पूर्व विवादित है, क्योंकि फ़ोगल को संदेह है कि सारनाथ शासन सिद्ध करता है। यौधेय केवल बिजयगढ़ पर दिखाए गए हैं। खाली छोड़े गए: हिमालय, राजस्थान का मत्स्य देश, गंगा का पूर्व, कलिंग, वन-पट्टी और तमिल दक्षिण। पढ़ा गया कुछ भी उन्हें इस सदी में कहीं नहीं रखता (टॉलेमी तमिल राजाओं के नाम लेते हैं, और वे कोश में नहीं हैं)। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 150 CE, when Rudradāman's Junāgaḍh inscription was cut. The Western Kṣatrapas are drawn by that record's list of countries. Five of them (Surāṣṭra, Kukura, Aparānta, Anūpa and Ākarāvanti) had been Gautamīputra Sātakarṇi's by the Nāsik praśasti; the map gives them to the later record. The Sātavāhanas keep their capital, Pratiṣṭhāna, with Mahārāṣṭra, the Krishna country, and the Asaka and Vidarbha of the praśasti. The Kuṣāṇas are drawn by Raychaudhuri's 'from Gandhāra and Kaśmīr to Benares'. Their dated records at Mathurā and Śrāvastī are the held core; the east is disputed, since Vogel doubts Sārnāth proves rule. The Yaudheyas are drawn only at Bijayagaḍh. Left blank: the Himalaya, Rajasthan's Matsya country, the Gangetic east, Kaliṅga, and the forest belt. Added from Ptolemy (McCrindle, 1885) and the Periplus (Schoff, 1912): the Tamil kingdoms of the Pāṇḍyas, Cheras and Cholas, and the Āy country. Nothing read places them this century (Ptolemy names the Tamil kings, and is not in the kosha). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 150 ई. का भारत, जब रुद्रदामन् का जूनागढ़ अभिलेख उत्कीर्ण हुआ। पश्चिमी क्षत्रप उस अभिलेख की देश-सूची से दिखाए गए हैं। इनमें से पाँच (सुराष्ट्र, कुकुर, अपरान्त, अनूप और आकरावन्ति) नासिक प्रशस्ति के अनुसार गौतमीपुत्र सातकर्णि के थे; मानचित्र उन्हें बाद के अभिलेख को देता है। सातवाहनों के पास उनकी राजधानी प्रतिष्ठान है, महाराष्ट्र, कृष्णा देश, और प्रशस्ति के असक और विदर्भ के साथ। कुषाण रायचौधुरी के 'गांधार और कश्मीर से बनारस तक' से दिखाए गए हैं। मथुरा और श्रावस्ती के उनके तिथियुक्त अभिलेख अधिकृत केंद्र हैं; पूर्व विवादित है, क्योंकि फ़ोगल को संदेह है कि सारनाथ शासन सिद्ध करता है। यौधेय केवल बिजयगढ़ पर दिखाए गए हैं। खाली छोड़े गए: हिमालय, राजस्थान का मत्स्य देश, गंगा का पूर्व, कलिंग, और वन-पट्टी। टॉलेमी (मैकक्रिंडल, 1885) और पेरिप्लस (शॉफ़, 1912) से जोड़े गए: पाण्ड्यों, चेरों और चोलों के तमिल राज्य, और आय देश। पढ़ा गया कुछ भी उन्हें इस सदी में कहीं नहीं रखता (टॉलेमी तमिल राजाओं के नाम लेते हैं, और वे कोश में नहीं हैं)। आज के ज़िलों पर, निकटतम ज़िले तक।"
    },
    "sources": [
     "raychaudhuri-1923",
     "epigraphia-indica-viii",
     "sa-wikisource",
+    "mccrindle-1885",
+    "schoff-1912",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -7333,7 +7493,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 10,
+   "count": 16,
    "reviewed": 0,
    "categories": [
     {
@@ -7423,6 +7583,60 @@
      "title": {
       "en": "Mysore",
       "hi": "मैसूर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
      },
      "icon": "pin"
     }
@@ -7559,7 +7773,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 11,
+   "count": 17,
    "reviewed": 0,
    "categories": [
     {
@@ -7658,6 +7872,60 @@
      "title": {
       "en": "Mysore",
       "hi": "मैसूर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
      },
      "icon": "map"
     }
@@ -7691,7 +7959,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 21,
    "reviewed": 0,
    "categories": [
     {
@@ -7780,6 +8048,54 @@
      "title": {
       "en": "Mysore",
       "hi": "मैसूर"
+     }
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     }
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     }
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     }
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     }
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     }
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
      }
     }
    ],
@@ -7846,12 +8162,14 @@
     }
    },
    "note": {
-    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. Left blank: the other Rajput states, Tanjore, Travancore and Kerala, the Ahoms and the north-east, and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। खाली छोड़े गए: अन्य राजपूत राज्य, तंजावुर, त्रावणकोर और केरल, अहोम और पूर्वोत्तर, और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. The Rajput states of Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Tanjore, Travancore and Kerala, the Ahoms and the north-east, and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। मेवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। खाली छोड़े गए: तंजावुर, त्रावणकोर और केरल, अहोम और पूर्वोत्तर, और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877-viii",
     "smith-1919",
+    "tod-1829",
+    "tod-1832",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -8233,14 +8551,14 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 3,
+   "count": 7,
    "reviewed": 0,
    "categories": [
     {
      "id": "pratihara",
-     "color": "#b04a32",
+     "color": "#8a2c1c",
      "title": {
-      "en": "The Gurjara-Pratihāra empire",
+      "en": "Gurjara-Pratihāra empire",
       "hi": "गुर्जर-प्रतिहार साम्राज्य"
      },
      "icon": "pin"
@@ -8249,17 +8567,53 @@
      "id": "pala",
      "color": "#1f5e3f",
      "title": {
-      "en": "The Pāla empire",
+      "en": "Pāla empire",
       "hi": "पाल साम्राज्य"
      },
      "icon": "pin"
     },
     {
      "id": "rashtrakuta",
-     "color": "#4f68b8",
+     "color": "#2a3f8a",
      "title": {
-      "en": "The Rāṣṭrakūṭa empire",
+      "en": "Rāṣṭrakūṭa empire",
       "hi": "राष्ट्रकूट साम्राज्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "pallava",
+     "color": "#5f7fa8",
+     "title": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "pin"
     }
@@ -8396,14 +8750,14 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 3,
+   "count": 7,
    "reviewed": 0,
    "categories": [
     {
      "id": "pratihara",
-     "color": "#b04a32",
+     "color": "#8a2c1c",
      "title": {
-      "en": "The Gurjara-Pratihāra empire",
+      "en": "Gurjara-Pratihāra empire",
       "hi": "गुर्जर-प्रतिहार साम्राज्य"
      },
      "icon": "map"
@@ -8412,17 +8766,53 @@
      "id": "pala",
      "color": "#1f5e3f",
      "title": {
-      "en": "The Pāla empire",
+      "en": "Pāla empire",
       "hi": "पाल साम्राज्य"
      },
      "icon": "map"
     },
     {
      "id": "rashtrakuta",
-     "color": "#4f68b8",
+     "color": "#2a3f8a",
      "title": {
-      "en": "The Rāṣṭrakūṭa empire",
+      "en": "Rāṣṭrakūṭa empire",
       "hi": "राष्ट्रकूट साम्राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "pallava",
+     "color": "#5f7fa8",
+     "title": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "map"
     }
@@ -8456,14 +8846,14 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 10,
+   "count": 14,
    "reviewed": 0,
    "categories": [
     {
      "id": "pratihara",
-     "color": "#b04a32",
+     "color": "#8a2c1c",
      "title": {
-      "en": "The Gurjara-Pratihāra empire",
+      "en": "Gurjara-Pratihāra empire",
       "hi": "गुर्जर-प्रतिहार साम्राज्य"
      }
     },
@@ -8471,16 +8861,48 @@
      "id": "pala",
      "color": "#1f5e3f",
      "title": {
-      "en": "The Pāla empire",
+      "en": "Pāla empire",
       "hi": "पाल साम्राज्य"
      }
     },
     {
      "id": "rashtrakuta",
-     "color": "#4f68b8",
+     "color": "#2a3f8a",
      "title": {
-      "en": "The Rāṣṭrakūṭa empire",
+      "en": "Rāṣṭrakūṭa empire",
       "hi": "राष्ट्रकूट साम्राज्य"
+     }
+    },
+    {
+     "id": "pandya",
+     "color": "#6a8a3a",
+     "title": {
+      "en": "Pāṇḍyas",
+      "hi": "पाण्ड्य"
+     }
+    },
+    {
+     "id": "pallava",
+     "color": "#5f7fa8",
+     "title": {
+      "en": "Pallavas",
+      "hi": "पल्लव"
+     }
+    },
+    {
+     "id": "chola",
+     "color": "#8a3a1f",
+     "title": {
+      "en": "Cholas",
+      "hi": "चोल"
+     }
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      }
     }
    ],
@@ -8547,13 +8969,16 @@
     }
    },
    "note": {
-    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Left blank: the Pallavas, Pāṇḍyas and Colas, the Eastern Cālukyas of Veṅgī, and Kashmir. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। खाली छोड़े गए: पल्लव, पाण्ड्य और चोल, वेंगी के पूर्वी चालुक्य, और कश्मीर। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
+    "en": "India about 850 CE, as the merchant Sulaimān found it in 851: three great powers always at war. The Gurjara-Pratihāras of Kanauj under Mihira Bhoja are drawn in four shades: Kanauj itself, the lands Smith says 'certainly' were his, the western provinces 'highly probable', and the Chandels' Bundelkhand under his suzerainty. The Pālas of Bengal and Bihar under Devapāla are drawn with the Assam and Kaliṅga their general is said to have won. The Rāṣṭrakūṭas of Mānyakheṭa under Amoghavarṣa I are drawn in four: the capital's country, the Deccan to the Tuṅgabhadrā, Lāṭa, and a southern sphere. Added: the Pāṇḍyas of Śrīmāra and the Pallavas from the Sinnamanur plates, Vijayālaya's Tanjore from the Tiruvālaṅgāḍu plates (both in South Indian Inscriptions), and Kashmir under Avantivarman from the Rājataraṅgiṇī. Left blank: the Eastern Cālukyas of Veṅgī. Their records of this date are in Indian scripts the OCR read here garbles, so nothing attests them in this pass. Sindh, under the Arabs, lies outside. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 850 ई. का भारत, जैसा व्यापारी सुलेमान ने 851 में पाया: तीन बड़ी शक्तियाँ, सदा युद्धरत। मिहिर भोज के अधीन कन्नौज के गुर्जर-प्रतिहार चार रंगों में हैं: स्वयं कन्नौज, वे भूमियाँ जो स्मिथ के अनुसार 'निश्चित रूप से' उनकी थीं, पश्चिमी प्रांत 'अत्यंत संभावित', और उनकी अधिराजता में चंदेलों का बुंदेलखंड। देवपाल के अधीन बंगाल और बिहार के पाल उस असम और कलिंग के साथ हैं जो कहा जाता है उनके सेनापति ने जीते। अमोघवर्ष प्रथम के अधीन मान्यखेट के राष्ट्रकूट चार रंगों में हैं: राजधानी का देश, तुंगभद्रा तक दक्कन, लाट, और एक दक्षिणी प्रभाव-क्षेत्र। जोड़े गए: सिन्नमनूर ताम्रपत्रों से श्रीमार के पाण्ड्य और पल्लव, तिरुवालंगाडु ताम्रपत्रों से विजयालय का तंजौर (दोनों साउथ इंडियन इंस्क्रिप्शंस में), और राजतरंगिणी से अवंतिवर्मन के अधीन कश्मीर। खाली छोड़े गए: वेंगी के पूर्वी चालुक्य। इस समय के उनके अभिलेख भारतीय लिपियों में हैं जिन्हें यहाँ पढ़ा गया ओसीआर बिगाड़ देता है, इसलिए इस चरण में कुछ भी उन्हें प्रमाणित नहीं करता। अरबों के अधीन सिंध बाहर है। आज के ज़िलों पर, निकटतम ज़िले तक।"
    },
    "sources": [
     "smith-1914",
     "elliot-dowson-1867",
     "epigraphia-indica-xviii",
+    "sii-1920-iii-3",
+    "sii-1929-iii-4",
+    "stein-1900-i",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -9175,7 +9600,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 8,
+   "count": 15,
    "reviewed": 0,
    "categories": [
     {
@@ -9247,6 +9672,69 @@
      "title": {
       "en": "The Carnatic (Arcot)",
       "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
      },
      "icon": "pin"
     }
@@ -9297,7 +9785,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 9,
+   "count": 16,
    "reviewed": 0,
    "categories": [
     {
@@ -9378,6 +9866,69 @@
      "title": {
       "en": "The Carnatic (Arcot)",
       "hi": "कर्नाटक (आर्काट)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
      },
      "icon": "map"
     }
@@ -9411,7 +9962,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 17,
+   "count": 25,
    "reviewed": 0,
    "categories": [
     {
@@ -9484,6 +10035,62 @@
      "title": {
       "en": "The Carnatic (Arcot)",
       "hi": "कर्नाटक (आर्काट)"
+     }
+    },
+    {
+     "id": "mewar",
+     "color": "#b03a48",
+     "title": {
+      "en": "Mewār",
+      "hi": "मेवाड़"
+     }
+    },
+    {
+     "id": "jaipur",
+     "color": "#d4798a",
+     "title": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+     }
+    },
+    {
+     "id": "bikaner",
+     "color": "#c9a36a",
+     "title": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+     }
+    },
+    {
+     "id": "jaisalmer",
+     "color": "#b8905a",
+     "title": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+     }
+    },
+    {
+     "id": "bundi",
+     "color": "#7a4a6a",
+     "title": {
+      "en": "Bundi",
+      "hi": "बूंदी"
+     }
+    },
+    {
+     "id": "kota",
+     "color": "#9a5a8a",
+     "title": {
+      "en": "Kota",
+      "hi": "कोटा"
+     }
+    },
+    {
+     "id": "marwar",
+     "color": "#8a1f2c",
+     "title": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
      }
     }
    ],
@@ -9550,12 +10157,14 @@
     }
    },
    "note": {
-    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. Left blank: the Rajput states, Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states and the north-east, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। ख़ाली छोड़े गए: राजपूत राज्य, फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य और पूर्वोत्तर, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. The Rajput states of Mewār, Mārwār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states and the north-east, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। मेवाड़, मारवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। ख़ाली छोड़े गए: फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य और पूर्वोत्तर, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877-viii",
     "smith-1919",
+    "tod-1829",
+    "tod-1832",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -10477,6 +11086,24 @@
    "reviewed": 0,
    "categories": [
     {
+     "id": "orissa",
+     "color": "#8a6aa8",
+     "title": {
+      "en": "Jājnagar (Orissa)",
+      "hi": "जाजनगर (ओडिशा)"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
+     },
+     "icon": "pin"
+    },
+    {
      "id": "seat",
      "color": "#6e2c1a",
      "icon": "pin",
@@ -10632,7 +11259,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 1,
+   "count": 3,
    "reviewed": 0,
    "categories": [
     {
@@ -10641,6 +11268,24 @@
      "title": {
       "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
       "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "orissa",
+     "color": "#8a6aa8",
+     "title": {
+      "en": "Jājnagar (Orissa)",
+      "hi": "जाजनगर (ओडिशा)"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "map"
     }
@@ -10674,7 +11319,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 5,
+   "count": 6,
    "reviewed": 0,
    "categories": [
     {
@@ -10683,6 +11328,22 @@
      "title": {
       "en": "Sultanate of Delhi under Muḥammad bin Tughluq",
       "hi": "मुहम्मद बिन तुग़लक़ के अधीन दिल्ली सल्तनत"
+     }
+    },
+    {
+     "id": "orissa",
+     "color": "#8a6aa8",
+     "title": {
+      "en": "Jājnagar (Orissa)",
+      "hi": "जाजनगर (ओडिशा)"
+     }
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      }
     }
    ],
@@ -10749,12 +11410,13 @@
     }
    },
    "note": {
-    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Left blank: Rajasthan, the Himalaya, Kashmir, Assam and the north-east, Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। खाली छोड़े गए: राजस्थान, हिमालय, कश्मीर, असम और पूर्वोत्तर, केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Jājnagar (Orissa) is drawn as the Eastern Gaṅga kingdom it was, from Baranī and ʿAfīf, and Kashmir under Udayanadeva and Koṭā from Jonarāja (Dutt, 1898). Left blank: Rajasthan, the Himalaya, Assam and the north-east, Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। जाजनगर (ओडिशा) को बरनी और अफ़ीफ़ से पूर्वी गंग राज्य के रूप में, और उदयनदेव तथा कोटा के अधीन कश्मीर को जोनराज (दत्त, 1898) से दिखाया गया है। खाली छोड़े गए: राजस्थान, हिमालय, असम और पूर्वोत्तर, केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "smith-1919",
     "elliot-dowson-1871",
+    "dutt-1898-iii",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -10780,7 +11442,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 12,
+   "count": 13,
    "reviewed": 0,
    "categories": [
     {
@@ -10812,7 +11474,7 @@
     },
     {
      "id": "mewar",
-     "color": "#c46a6a",
+     "color": "#8a1f2c",
      "title": {
       "en": "Mewār",
       "hi": "मेवाड़"
@@ -10875,7 +11537,7 @@
     },
     {
      "id": "vijayanagara",
-     "color": "#c9785a",
+     "color": "#8a3a1f",
      "title": {
       "en": "Vijayanagara",
       "hi": "विजयनगर"
@@ -10888,6 +11550,15 @@
      "title": {
       "en": "Orissa",
       "hi": "ओडिशा"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "pin"
     }
@@ -11026,7 +11697,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 12,
+   "count": 13,
    "reviewed": 0,
    "categories": [
     {
@@ -11058,7 +11729,7 @@
     },
     {
      "id": "mewar",
-     "color": "#c46a6a",
+     "color": "#8a1f2c",
      "title": {
       "en": "Mewār",
       "hi": "मेवाड़"
@@ -11121,7 +11792,7 @@
     },
     {
      "id": "vijayanagara",
-     "color": "#c9785a",
+     "color": "#8a3a1f",
      "title": {
       "en": "Vijayanagara",
       "hi": "विजयनगर"
@@ -11134,6 +11805,15 @@
      "title": {
       "en": "Orissa",
       "hi": "ओडिशा"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      },
      "icon": "map"
     }
@@ -11168,7 +11848,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 15,
    "reviewed": 0,
    "categories": [
     {
@@ -11197,7 +11877,7 @@
     },
     {
      "id": "mewar",
-     "color": "#c46a6a",
+     "color": "#8a1f2c",
      "title": {
       "en": "Mewār",
       "hi": "मेवाड़"
@@ -11253,7 +11933,7 @@
     },
     {
      "id": "vijayanagara",
-     "color": "#c9785a",
+     "color": "#8a3a1f",
      "title": {
       "en": "Vijayanagara",
       "hi": "विजयनगर"
@@ -11265,6 +11945,14 @@
      "title": {
       "en": "Orissa",
       "hi": "ओडिशा"
+     }
+    },
+    {
+     "id": "kashmir",
+     "color": "#3f6f8a",
+     "title": {
+      "en": "Kashmir",
+      "hi": "कश्मीर"
      }
     }
    ],
@@ -11331,13 +12019,14 @@
     }
    },
    "note": {
-    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. Left blank: Khandesh, Kashmir and the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, Assam and the north-east, and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। खाली छोड़े गए: ख़ानदेश, कश्मीर और पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, असम और पूर्वोत्तर, और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. The Shāh Mīrī sultanate of Kashmir is added from Prājyabhaṭṭa and Śuka's chronicle (Dutt, 1898). Left blank: Khandesh, the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, Assam and the north-east, and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। कश्मीर की शाह मीरी सल्तनत प्राज्यभट्ट और शुक के वृत्तांत (दत्त, 1898) से जोड़ी गई। खाली छोड़े गए: ख़ानदेश, पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, असम और पूर्वोत्तर, और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "leyden-erskine-1826",
     "sewell-1900",
     "smith-1919",
+    "dutt-1898-iii",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -11435,12 +12124,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 49087,
-   "sha256": "b6d96c2fa4b7"
+   "size": 49122,
+   "sha256": "9d06f0236d3f"
   },
   "sources.json": {
-   "size": 58520,
-   "sha256": "0d68f83c8292"
+   "size": 64408,
+   "sha256": "fd6804df315c"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -11775,24 +12464,24 @@
    "sha256": "f377ba648c53"
   },
   "layers/ghurid-areas.bin.gz": {
-   "size": 7299,
-   "sha256": "69ad693d0531"
+   "size": 7457,
+   "sha256": "6afb578cadfc"
   },
   "layers/ghurid-capitals.json": {
-   "size": 9012,
-   "sha256": "64d67a360553"
+   "size": 9667,
+   "sha256": "82ec99f077e5"
   },
   "layers/ghurid-evidence.json": {
    "size": 8921,
    "sha256": "7a1c8fe35d13"
   },
   "layers/ghurid-names.json": {
-   "size": 10005,
-   "sha256": "6675796ed7c0"
+   "size": 10661,
+   "sha256": "0ea7cc9a03b5"
   },
   "layers/ghurid.json": {
-   "size": 32040,
-   "sha256": "f576edc4edc1"
+   "size": 33546,
+   "sha256": "498a146465d0"
   },
   "layers/gi-tags.json": {
    "size": 157505,
@@ -11819,24 +12508,24 @@
    "sha256": "7b62b83d98aa"
   },
   "layers/harsha-areas.bin.gz": {
-   "size": 7331,
-   "sha256": "253ff39ff005"
+   "size": 7556,
+   "sha256": "a60582294583"
   },
   "layers/harsha-capitals.json": {
-   "size": 3536,
-   "sha256": "2a4b18fc755e"
+   "size": 4183,
+   "sha256": "e949a37fd9b6"
   },
   "layers/harsha-evidence.json": {
    "size": 2511,
    "sha256": "39bfe57d85a2"
   },
   "layers/harsha-names.json": {
-   "size": 8358,
-   "sha256": "2e2ce76facee"
+   "size": 9333,
+   "sha256": "e368c6d56a2f"
   },
   "layers/harsha.json": {
-   "size": 28147,
-   "sha256": "efd82fc34474"
+   "size": 31934,
+   "sha256": "c4ea85abb3c8"
   },
   "layers/kula-parvatas.json": {
    "size": 8310,
@@ -11847,24 +12536,24 @@
    "sha256": "9039b5cf6dc7"
   },
   "layers/kushana-areas.bin.gz": {
-   "size": 6968,
-   "sha256": "7f668e46aebb"
+   "size": 7926,
+   "sha256": "db898770f7c2"
   },
   "layers/kushana-capitals.json": {
-   "size": 2641,
-   "sha256": "510bd1549196"
+   "size": 5214,
+   "sha256": "870db802b02d"
   },
   "layers/kushana-evidence.json": {
    "size": 10955,
    "sha256": "8f82e9677787"
   },
   "layers/kushana-names.json": {
-   "size": 5132,
-   "sha256": "05f9b27d3abb"
+   "size": 8484,
+   "sha256": "c1b7b9d3f19e"
   },
   "layers/kushana.json": {
-   "size": 30457,
-   "sha256": "c0fddff627f6"
+   "size": 40084,
+   "sha256": "dadf88ded593"
   },
   "layers/language-families.json": {
    "size": 2453,
@@ -11927,24 +12616,24 @@
    "sha256": "a90d7c2d14b2"
   },
   "layers/panipat-areas.bin.gz": {
-   "size": 7819,
-   "sha256": "b613d6ece00e"
+   "size": 8858,
+   "sha256": "df9382523149"
   },
   "layers/panipat-capitals.json": {
-   "size": 7907,
-   "sha256": "a22eafcc32fb"
+   "size": 11851,
+   "sha256": "9251677ec949"
   },
   "layers/panipat-evidence.json": {
    "size": 2313,
    "sha256": "19306968de8a"
   },
   "layers/panipat-names.json": {
-   "size": 9147,
-   "sha256": "1962ef4d78a6"
+   "size": 12829,
+   "sha256": "5449f1e7d957"
   },
   "layers/panipat.json": {
-   "size": 27617,
-   "sha256": "fea8e608b73f"
+   "size": 37202,
+   "sha256": "294719061e10"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
@@ -11971,24 +12660,24 @@
    "sha256": "ce327c1c1317"
   },
   "layers/pratihara-areas.bin.gz": {
-   "size": 7172,
-   "sha256": "1c906fb8f0f9"
+   "size": 7995,
+   "sha256": "d399def348b2"
   },
   "layers/pratihara-capitals.json": {
-   "size": 3164,
-   "sha256": "ef8c9916d013"
+   "size": 5702,
+   "sha256": "fd68875b8389"
   },
   "layers/pratihara-evidence.json": {
    "size": 4000,
    "sha256": "89cd3cbf2385"
   },
   "layers/pratihara-names.json": {
-   "size": 3694,
-   "sha256": "9a1b4bacdecb"
+   "size": 6998,
+   "sha256": "c6811756f2c8"
   },
   "layers/pratihara.json": {
-   "size": 22199,
-   "sha256": "fd5758563b3a"
+   "size": 29072,
+   "sha256": "9ac1ba1e384a"
   },
   "layers/protected-areas.json": {
    "size": 208611,
@@ -12023,20 +12712,20 @@
    "sha256": "e0691be257a8"
   },
   "layers/salbai-areas.bin.gz": {
-   "size": 8174,
-   "sha256": "d0392fec42a5"
+   "size": 9507,
+   "sha256": "8606c781199d"
   },
   "layers/salbai-capitals.json": {
-   "size": 6707,
-   "sha256": "0308400bd13f"
+   "size": 11324,
+   "sha256": "d75b3e5a2d50"
   },
   "layers/salbai-names.json": {
-   "size": 8820,
-   "sha256": "b7803a486948"
+   "size": 13256,
+   "sha256": "247fad5ccb19"
   },
   "layers/salbai.json": {
-   "size": 34358,
-   "sha256": "f075e7301b3e"
+   "size": 45867,
+   "sha256": "c98e29d26ce9"
   },
   "layers/steel.json": {
    "size": 15080,
@@ -12087,44 +12776,44 @@
    "sha256": "93775ea4d0b8"
   },
   "layers/tughluq-areas.bin.gz": {
-   "size": 6675,
-   "sha256": "34b448b6b9e8"
+   "size": 6836,
+   "sha256": "c07882fd1b86"
   },
   "layers/tughluq-capitals.json": {
-   "size": 5240,
-   "sha256": "dc53d9ed3ae4"
+   "size": 5466,
+   "sha256": "c24fed57aaab"
   },
   "layers/tughluq-evidence.json": {
    "size": 2304,
    "sha256": "d5fb505598cf"
   },
   "layers/tughluq-names.json": {
-   "size": 1816,
-   "sha256": "712951101b75"
+   "size": 3686,
+   "sha256": "0783075fbe80"
   },
   "layers/tughluq.json": {
-   "size": 14251,
-   "sha256": "466c0ca8bfef"
+   "size": 16434,
+   "sha256": "2f566cee10e7"
   },
   "layers/vijayanagara-areas.bin.gz": {
-   "size": 7830,
-   "sha256": "fb7650ff342d"
+   "size": 7990,
+   "sha256": "732c058f5074"
   },
   "layers/vijayanagara-capitals.json": {
-   "size": 8774,
-   "sha256": "f098120a1f35"
+   "size": 9429,
+   "sha256": "d7cff53534cb"
   },
   "layers/vijayanagara-evidence.json": {
    "size": 3245,
    "sha256": "581a11beb1f0"
   },
   "layers/vijayanagara-names.json": {
-   "size": 9720,
-   "sha256": "5a56d70931f4"
+   "size": 10456,
+   "sha256": "e3264eda26a9"
   },
   "layers/vijayanagara.json": {
-   "size": 25763,
-   "sha256": "b661d68be409"
+   "size": 27507,
+   "sha256": "ca15dd51a313"
   },
   "layers/zones.json": {
    "size": 2516,
