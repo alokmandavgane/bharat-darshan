@@ -61,7 +61,11 @@
     "akbar-evidence",
     "aurangzeb",
     "aurangzeb-names",
-    "aurangzeb-capitals"
+    "aurangzeb-capitals",
+    "panipat",
+    "panipat-names",
+    "panipat-capitals",
+    "panipat-evidence"
   ],
   "relief": 10,
   "status": "draft",
@@ -335,6 +339,27 @@
         "aurangzeb",
         "aurangzeb-names",
         "aurangzeb-capitals"
+      ]
+    },
+    {
+      "id": "panipat",
+      "display": {
+        "en": "c. 1760 CE",
+        "hi": "लगभग 1760 ई."
+      },
+      "title": {
+        "en": "The Marāṭhās and the successor states",
+        "hi": "मराठा और उत्तराधिकारी राज्य"
+      },
+      "blurb": {
+        "en": "The eve of Panipat: the Marāṭhā confederacy to the Attock, the Durrānīs in the Panjab, Mughal Delhi, Awadh, the Rohillas, the Jāṭs, the Niẓām, Bengal and Arcot under the English, and Mysore.",
+        "hi": "पानीपत की पूर्वसंध्या: अटक तक मराठा संघ, पंजाब में दुर्रानी, मुग़ल दिल्ली, अवध, रोहिल्ला, जाट, निज़ाम, अंग्रेज़ों के अधीन बंगाल और आर्काट, और मैसूर।"
+      },
+      "layers": [
+        "panipat",
+        "panipat-names",
+        "panipat-capitals",
+        "panipat-evidence"
       ]
     }
   ],

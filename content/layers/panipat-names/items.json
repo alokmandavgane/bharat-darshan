@@ -1,0 +1,266 @@
+[
+  {
+    "id": "maratha",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.0,
+      "lon": 75.2
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The Marāṭhā confederacy at its height under the Peshwa Bālājī Bājī Rāo, its sway 'as far as the river Attock' on the eve of Panipat (1761).",
+      "hi": "पेशवा बालाजी बाजीराव के अधीन अपने चरम पर मराठा संघ, पानीपत (1761) की पूर्वसंध्या पर उसका प्रभाव 'अटक नदी तक'।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "durrani",
+    "status": "draft",
+    "name": {
+      "en": "Durrānī empire",
+      "hi": "दुर्रानी साम्राज्य"
+    },
+    "category": "durrani",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.2,
+      "lon": 75.3
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "Aḥmad Shāh Abdālī's conquests east of the Indus, lost to the Marāṭhās in 1758 and retaken in 1759-60; his capital, Kandahar, is in Afghanistan.",
+      "hi": "सिंधु के पूर्व अहमद शाह अब्दाली की विजयें, 1758 में मराठों से खोई और 1759-60 में फिर ली गईं; उनकी राजधानी कंधार अफ़ग़ानिस्तान में है।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "mughal",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.62,
+      "lon": 76.95
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "blurb": {
+      "en": "The Mughal emperor's Delhi, the throne at its lowest: ʿĀlamgīr II killed by his wazīr in 1759, a puppet in his place, the heir Shāh ʿĀlam II in the east.",
+      "hi": "मुग़ल सम्राट की दिल्ली, सिंहासन अपने निम्नतम पर: 1759 में वज़ीर द्वारा आलमगीर द्वितीय की हत्या, उनकी जगह एक कठपुतली, उत्तराधिकारी शाह आलम द्वितीय पूर्व में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "awadh",
+    "status": "draft",
+    "name": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "category": "awadh",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.4,
+      "lon": 81.8
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Nawab-wazīrs of Awadh under Shujāʿ ud-Daula, who joined Aḥmad Shāh at Panipat with 80,000 horse and foot.",
+      "hi": "शुजाउद्दौला के अधीन अवध के नवाब-वज़ीर, जो 80,000 घुड़सवार और पैदल के साथ पानीपत में अहमद शाह से मिले।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "rohilla",
+    "status": "draft",
+    "name": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+    },
+    "category": "rohilla",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.4,
+      "lon": 79.9
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Afghan Rohillas of Rohilkhand and Najīb ud-Daula's Doab, with the allied Bangash of Farrukhābād: Aḥmad Shāh's firmest allies at Panipat.",
+      "hi": "रोहिलखंड के अफ़ग़ान रोहिल्ला और नजीबुद्दौला का दोआब, मित्र फ़र्रुख़ाबाद के बंगश के साथ: पानीपत में अहमद शाह के सबसे दृढ़ मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "jat",
+    "status": "draft",
+    "name": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+    },
+    "category": "jat",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.0,
+      "lon": 77.4
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Jāṭ kingdom of Sūraj Mal at Bharatpur, against whom the Marāṭhās could not stand at Kumher (1754).",
+      "hi": "भरतपुर में सूरजमल का जाट राज्य, जिसके सामने मराठे कुम्हेर (1754) में टिक न सके।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "marwar",
+    "status": "draft",
+    "name": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "category": "marwar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.0,
+      "lon": 72.3
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rāṭhoṛs of Mārwār, from whom the Marāṭhās demanded tribute in the 1750s.",
+      "hi": "मारवाड़ के राठौड़, जिनसे मराठों ने 1750 के दशक में कर माँगा।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "bengal",
+    "status": "draft",
+    "name": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "category": "bengal",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.2,
+      "lon": 86.4
+    },
+    "regions": [
+      "IN-JH"
+    ],
+    "blurb": {
+      "en": "Bengal and Bihar after Plassey (1757): the East India Company made Mīr Jaʿfar Nawab, then, in 1760, Mīr Qāsim.",
+      "hi": "प्लासी (1757) के बाद बंगाल और बिहार: ईस्ट इंडिया कंपनी ने मीर जाफ़र को नवाब बनाया, फिर 1760 में मीर क़ासिम को।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "nizam",
+    "status": "draft",
+    "name": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "category": "nizam",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.0,
+      "lon": 79.8
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Āṣaf Jāhī Niẓāms, under Ṣalābat Jang and his brother Niẓām ʿAlī, who lost Daulatābād to the Peshwa at Udgir (1760).",
+      "hi": "सलाबत जंग और उनके भाई निज़ाम अली के अधीन आसफ़जाही निज़ाम, जिन्होंने उदगीर (1760) में दौलताबाद पेशवा को खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "carnatic",
+    "status": "draft",
+    "name": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "category": "carnatic",
+    "priority": 1,
+    "anchor": {
+      "lat": 11.4,
+      "lon": 78.9
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Nawabs of the Carnatic: Muḥammad ʿAlī, set up by the English, who took Pondicherry from the French in 1760-61.",
+      "hi": "कर्नाटक के नवाब: मुहम्मद अली, अंग्रेज़ों द्वारा स्थापित, जिन्होंने 1760-61 में फ़्रांसीसियों से पांडिचेरी ली।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  },
+  {
+    "id": "mysore",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.3,
+      "lon": 76.4
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "The Wodeyar kingdom of Mysore, which Haidar ʿAlī took over in 1761 and led against the Marāṭhās.",
+      "hi": "मैसूर का वोडेयार राज्य, जिसे हैदर अली ने 1761 में अपने हाथ लिया और मराठों के विरुद्ध लड़ाया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ]
+  }
+]

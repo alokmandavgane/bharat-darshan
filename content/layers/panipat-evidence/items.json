@@ -1,0 +1,45 @@
+[
+  {
+    "id": "panipat-1761",
+    "status": "draft",
+    "name": {
+      "en": "Pānīpat",
+      "hi": "पानीपत"
+    },
+    "category": "battle",
+    "priority": 1,
+    "anchor": {
+      "lat": 29.3875,
+      "lon": 76.97
+    },
+    "regions": [
+      "IN-HR"
+    ],
+    "kind": {
+      "en": "Battle",
+      "hi": "युद्ध"
+    },
+    "identified": {
+      "en": "placed at Panipat",
+      "hi": "Panipat पर"
+    },
+    "blurb": {
+      "en": "Aḥmad Shāh Durrānī's victory over the Marāṭhās, 14 January 1761, which ended their northern sway for a decade.",
+      "hi": "14 जनवरी 1761 को मराठों पर अहमद शाह दुर्रानी की विजय, जिसने उनके उत्तरी प्रभाव को एक दशक के लिए समाप्त किया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Panipat"
+    ],
+    "reading": "arriving at the town of Panipat, encamped there.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "verse": "Panipat",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148, Attock",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148, Attock"
+    }
+  }
+]

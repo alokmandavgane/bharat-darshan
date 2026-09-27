@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-third round: the Marāṭhās and the successor states, c. 1760 CE. "Kingdoms and empires" gains its
+  fourteenth era, from four chronicles in Elliot and Dowson vol. VIII (1877) and Smith's Oxford History (1919).
+  - **The areas:** the Marāṭhā confederacy in two shades (the Peshwa's Deccan; the Sindhia, Holkar, Gaekwad and Bhonsle
+    lands); the Durrānī Panjab and Kashmir; Delhi; Awadh; the Rohillas with Najīb ud-Daula and the Bangash of
+    Farrukhābād; the Jāṭs; Mārwār; Bengal; the Niẓām; the Carnatic; Mysore.
+  - **Capitals and pins:** ten capitals (the Durrānī one is outside India); the battle of Panipat (1761).
+  - **Names:** the Doab was too crowded at country zoom, so the Bangash became a part of the Rohilla polity and
+    "Mughal Delhi" and "Jāṭs of Bharatpur" took short names (the detail is on the cards). All eleven names show
+    at 1280x800; 48 tests and the build pass.
 - 2026-09-27, eighty-second round: the Mughal maximum and the Marāṭhās, c. 1707 CE. "Kingdoms and empires" gains its
   thirteenth era, from Khāfī Khān (Elliot and Dowson vol. VII, 1877), Alexander Hamilton's New Account of the East
   Indies (1727) and Smith's Oxford History (1919).

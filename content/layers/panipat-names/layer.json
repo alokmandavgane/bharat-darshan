@@ -1,0 +1,122 @@
+{
+  "id": "panipat-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Names: the powers of c. 1760 CE",
+    "hi": "नाम: लगभग 1760 ई. की शक्तियाँ"
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "maratha",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Marāṭhā confederacy",
+        "hi": "मराठा संघ"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "durrani",
+      "color": "#4a6a6a",
+      "title": {
+        "en": "Durrānī empire",
+        "hi": "दुर्रानी साम्राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mughal",
+      "color": "#2f5d50",
+      "title": {
+        "en": "Delhi",
+        "hi": "दिल्ली"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "awadh",
+      "color": "#3f7a4f",
+      "title": {
+        "en": "Awadh",
+        "hi": "अवध"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rohilla",
+      "color": "#8a5a1f",
+      "title": {
+        "en": "Rohillas",
+        "hi": "रोहिल्ला"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jat",
+      "color": "#a8544a",
+      "title": {
+        "en": "Jāṭs",
+        "hi": "जाट"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "marwar",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Mārwār",
+        "hi": "मारवाड़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bengal",
+      "color": "#1f5e3f",
+      "title": {
+        "en": "Bengal",
+        "hi": "बंगाल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "nizam",
+      "color": "#5f86a3",
+      "title": {
+        "en": "The Niẓām's Deccan",
+        "hi": "निज़ाम का दक्कन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "carnatic",
+      "color": "#8a3a1f",
+      "title": {
+        "en": "The Carnatic (Arcot)",
+        "hi": "कर्नाटक (आर्काट)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "elliot-dowson-1877-viii",
+    "smith-1919"
+  ]
+}

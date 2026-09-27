@@ -1,0 +1,75 @@
+{
+  "id": "panipat-evidence",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "The evidence of c. 1760 CE",
+    "hi": "लगभग 1760 ई. के प्रमाण"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "battle",
+      "color": "#9e1b32",
+      "icon": "pin",
+      "title": {
+        "en": "Battles",
+        "hi": "युद्ध"
+      }
+    }
+  ],
+  "fields": {
+    "kind": {
+      "type": "name",
+      "label": {
+        "en": "Kind",
+        "hi": "प्रकार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Pin",
+        "hi": "पिन"
+      }
+    }
+  },
+  "note": {
+    "en": "The third battle of Panipat (14 January 1761).",
+    "hi": "पानीपत का तीसरा युद्ध (14 जनवरी 1761)।"
+  },
+  "sources": [
+    "elliot-dowson-1877-viii",
+    "wikipedia"
+  ]
+}

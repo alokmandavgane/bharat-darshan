@@ -1073,6 +1073,24 @@
         "en": "A sea-captain's account of Kanara and Malabar, quoted for c. 1707 CE.",
         "hi": "कनारा और मालाबार का एक जहाज़ी कप्तान का विवरण, लगभग 1707 ई. के लिए उद्धृत।"
       }
+    },
+    "elliot-dowson-1877-viii": {
+      "title": {
+        "en": "H. M. Elliot and J. Dowson, The History of India as told by its own Historians, vol. VIII (1877)",
+        "hi": "एच. एम. इलियट और जे. डाउसन, द हिस्ट्री ऑफ़ इंडिया ऐज़ टोल्ड बाय इट्स ओन हिस्टोरियन्स, खंड VIII (1877)"
+      },
+      "publisher": {
+        "en": "Trübner, London: the eighteenth-century chronicles in translation",
+        "hi": "ट्रुब्नर, लंदन: अठारहवीं सदी के इतिवृत्त, अनुवाद में"
+      },
+      "url": "https://archive.org/details/india.history.resource.310",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The chronicles quoted for the Marāṭhās and the successor states, c. 1760 CE.",
+        "hi": "लगभग 1760 ई. के मराठों और उत्तराधिकारी राज्यों के लिए उद्धृत इतिवृत्त।"
+      }
     }
   }
 }

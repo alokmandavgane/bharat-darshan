@@ -1,0 +1,982 @@
+[
+  {
+    "id": "maratha-core",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      497,
+      498,
+      499,
+      513,
+      514,
+      515,
+      516,
+      517,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      555,
+      556,
+      557,
+      562
+    ],
+    "verse": "Mahratta",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148, Attock",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148, Attock"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy at its height under the Peshwa Bālājī Bājī Rāo, its sway 'as far as the river Attock' on the eve of Panipat (1761).",
+      "hi": "पेशवा बालाजी बाजीराव के अधीन अपने चरम पर मराठा संघ, पानीपत (1761) की पूर्वसंध्या पर उसका प्रभाव 'अटक नदी तक'।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#c46a2f",
+    "grade": {
+      "en": "The Peshwa's Deccan, with Bijapur and the Daulatābād districts won from the Niẓām in 1760",
+      "hi": "पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से जीते दौलताबाद के ज़िलों के साथ"
+    },
+    "reading": "besides holding the fortress of Bijapur, he took possession anew of Daulatibad",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 264",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 264"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "maratha-north",
+    "status": "draft",
+    "name": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "category": "maratha",
+    "rank": 1,
+    "districts": [
+      121,
+      127,
+      128,
+      129,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      391,
+      392,
+      393,
+      394,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      464,
+      465,
+      466,
+      467,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509
+    ],
+    "verse": "Mahratta",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148, Attock",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148, Attock"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Marāṭhā confederacy at its height under the Peshwa Bālājī Bājī Rāo, its sway 'as far as the river Attock' on the eve of Panipat (1761).",
+      "hi": "पेशवा बालाजी बाजीराव के अधीन अपने चरम पर मराठा संघ, पानीपत (1761) की पूर्वसंध्या पर उसका प्रभाव 'अटक नदी तक'।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#e0a060",
+    "grade": {
+      "en": "Malwa, Gujarat, Bundelkhand, Nagpur and Orissa, under the Sindhias, Holkars, Gaekwads and Bhonsles",
+      "hi": "मालवा, गुजरात, बुंदेलखंड, नागपुर और उड़ीसा, सिंधिया, होल्कर, गायकवाड़ और भोंसले के अधीन"
+    },
+    "reading": "the Mahratta power had reached to such a pitch, that they had brought all the country as far as the river Attock under their subjection.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "capital": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    }
+  },
+  {
+    "id": "durrani-held",
+    "status": "draft",
+    "name": {
+      "en": "Durrānī empire",
+      "hi": "दुर्रानी साम्राज्य"
+    },
+    "category": "durrani",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "verse": "Abdali Shah (read: Abdālī Shāh)",
+    "locus": {
+      "en": "Tārīkh-i Ibrāhīm Khān, E&D viii. 267, Sirhind",
+      "hi": "तारीख़-ए-इब्राहीम ख़ान, E&D viii. 267, Sirhind"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Aḥmad Shāh Abdālī's conquests east of the Indus, lost to the Marāṭhās in 1758 and retaken in 1759-60; his capital, Kandahar, is in Afghanistan.",
+      "hi": "सिंधु के पूर्व अहमद शाह अब्दाली की विजयें, 1758 में मराठों से खोई और 1759-60 में फिर ली गईं; उनकी राजधानी कंधार अफ़ग़ानिस्तान में है।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#4a6a6a",
+    "grade": {
+      "en": "The Panjab, Sirhind and Kashmir, under Aḥmad Shāh's governors",
+      "hi": "पंजाब, सरहिंद और कश्मीर, अहमद शाह के राज्यपालों के अधीन"
+    },
+    "reading": "who had been installed in the government of that place by the Abdali Shah",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 267",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 267"
+    }
+  },
+  {
+    "id": "mughal-held",
+    "status": "draft",
+    "name": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "category": "mughal",
+    "rank": 1,
+    "districts": [
+      95,
+      93,
+      94,
+      91,
+      92,
+      90,
+      98,
+      97,
+      96
+    ],
+    "verse": "Dehli",
+    "locus": {
+      "en": "Tārīkh-i Ibrāhīm Khān, E&D viii. 268",
+      "hi": "तारीख़-ए-इब्राहीम ख़ान, E&D viii. 268"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Mughal emperor's Delhi, the throne at its lowest: ʿĀlamgīr II killed by his wazīr in 1759, a puppet in his place, the heir Shāh ʿĀlam II in the east.",
+      "hi": "मुग़ल सम्राट की दिल्ली, सिंहासन अपने निम्नतम पर: 1759 में वज़ीर द्वारा आलमगीर द्वितीय की हत्या, उनकी जगह एक कठपुतली, उत्तराधिकारी शाह आलम द्वितीय पूर्व में।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#2f5d50",
+    "grade": {
+      "en": "Delhi, the emperor's city and little more",
+      "hi": "दिल्ली, सम्राट का नगर और थोड़ा ही अधिक"
+    },
+    "reading": "on the throne of Dehli.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 268",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 268"
+    },
+    "capital": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    }
+  },
+  {
+    "id": "awadh-held",
+    "status": "draft",
+    "name": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "category": "awadh",
+    "rank": 1,
+    "districts": [
+      153,
+      154,
+      156,
+      157,
+      158,
+      163,
+      164,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    "verse": "Shujé’u-d daula (read: Shujāʿu-d daula)",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148-149",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148-149"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawab-wazīrs of Awadh under Shujāʿ ud-Daula, who joined Aḥmad Shāh at Panipat with 80,000 horse and foot.",
+      "hi": "शुजाउद्दौला के अधीन अवध के नवाब-वज़ीर, जो 80,000 घुड़सवार और पैदल के साथ पानीपत में अहमद शाह से मिले।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#3f7a4f",
+    "grade": {
+      "en": "Awadh, with Allahabad and Benares",
+      "hi": "अवध, इलाहाबाद और बनारस के साथ"
+    },
+    "reading": "Nawab Woaziru-l mamalik Shujé’u-d daula Bahddur",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "capital": {
+      "en": "Faizābād",
+      "hi": "फ़ैज़ाबाद"
+    }
+  },
+  {
+    "id": "rohilla-rohilkhand",
+    "status": "draft",
+    "name": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+    },
+    "category": "rohilla",
+    "rank": 1,
+    "districts": [
+      67,
+      135,
+      136,
+      137,
+      149,
+      150,
+      151,
+      152
+    ],
+    "verse": "Rohilla",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148-149",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148-149"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Afghan Rohillas of Rohilkhand and Najīb ud-Daula's Doab, with the allied Bangash of Farrukhābād: Aḥmad Shāh's firmest allies at Panipat.",
+      "hi": "रोहिलखंड के अफ़ग़ान रोहिल्ला और नजीबुद्दौला का दोआब, मित्र फ़र्रुख़ाबाद के बंगश के साथ: पानीपत में अहमद शाह के सबसे दृढ़ मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#8a5a1f",
+    "grade": {
+      "en": "Rohilkhand, under Ḥāfiẓ Raḥmat Khān and the Rohilla chiefs",
+      "hi": "रोहिलखंड, हाफ़िज़ रहमत ख़ान और रोहिल्ला सरदारों के अधीन"
+    },
+    "reading": "Rahmat Khan Afghan Rohilla, with 25,000 horse, and 25 guns",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 149",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 149"
+    },
+    "capital": {
+      "en": "Bareilly",
+      "hi": "बरेली"
+    }
+  },
+  {
+    "id": "rohilla-najib",
+    "status": "draft",
+    "name": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+    },
+    "category": "rohilla",
+    "rank": 1,
+    "districts": [
+      132,
+      133,
+      134
+    ],
+    "verse": "Rohilla",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148-149",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148-149"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Afghan Rohillas of Rohilkhand and Najīb ud-Daula's Doab, with the allied Bangash of Farrukhābād: Aḥmad Shāh's firmest allies at Panipat.",
+      "hi": "रोहिलखंड के अफ़ग़ान रोहिल्ला और नजीबुद्दौला का दोआब, मित्र फ़र्रुख़ाबाद के बंगश के साथ: पानीपत में अहमद शाह के सबसे दृढ़ मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#b8854a",
+    "grade": {
+      "en": "Najīb ud-Daula's upper Doab",
+      "hi": "नजीबुद्दौला का ऊपरी दोआब"
+    },
+    "reading": "Najib Khan, with 30,000 horse and foot, and 30 guns",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "capital": {
+      "en": "Bareilly",
+      "hi": "बरेली"
+    }
+  },
+  {
+    "id": "rohilla-bangash",
+    "status": "draft",
+    "name": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+    },
+    "category": "rohilla",
+    "rank": 1,
+    "districts": [
+      159,
+      160,
+      201,
+      202
+    ],
+    "verse": "Rohilla",
+    "locus": {
+      "en": "Manāzil al-Futūḥ, E&D viii. 148-149",
+      "hi": "मनाज़िल उल-फ़ुतूह, E&D viii. 148-149"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Afghan Rohillas of Rohilkhand and Najīb ud-Daula's Doab, with the allied Bangash of Farrukhābād: Aḥmad Shāh's firmest allies at Panipat.",
+      "hi": "रोहिलखंड के अफ़ग़ान रोहिल्ला और नजीबुद्दौला का दोआब, मित्र फ़र्रुख़ाबाद के बंगश के साथ: पानीपत में अहमद शाह के सबसे दृढ़ मित्र।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#d4b07a",
+    "grade": {
+      "en": "Farrukhābād, under the allied Bangash Nawab Aḥmad Khān",
+      "hi": "फ़र्रुख़ाबाद, मित्र बंगश नवाब अहमद ख़ान के अधीन"
+    },
+    "reading": "Khan Bangash, with 15,000 horse and foot, and 60 guns",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 148",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 148"
+    },
+    "capital": {
+      "en": "Bareilly",
+      "hi": "बरेली"
+    }
+  },
+  {
+    "id": "jat-held",
+    "status": "draft",
+    "name": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+    },
+    "category": "jat",
+    "rank": 1,
+    "districts": [
+      105,
+      145,
+      87,
+      89,
+      144,
+      143,
+      106
+    ],
+    "verse": "Suraj Mal",
+    "locus": {
+      "en": "Chahār Gulzār, E&D viii. 209",
+      "hi": "चहार गुलज़ार, E&D viii. 209"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Jāṭ kingdom of Sūraj Mal at Bharatpur, against whom the Marāṭhās could not stand at Kumher (1754).",
+      "hi": "भरतपुर में सूरजमल का जाट राज्य, जिसके सामने मराठे कुम्हेर (1754) में टिक न सके।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#a8544a",
+    "grade": {
+      "en": "Sūraj Mal's country, from Bharatpur to Mathura and Aligarh",
+      "hi": "सूरजमल का देश, भरतपुर से मथुरा और अलीगढ़ तक"
+    },
+    "reading": "finding them- selves unable to stand against the Jats",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 209",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 209"
+    },
+    "capital": {
+      "en": "Bharatpur",
+      "hi": "भरतपुर"
+    }
+  },
+  {
+    "id": "marwar-held",
+    "status": "draft",
+    "name": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "category": "marwar",
+    "rank": 1,
+    "districts": [
+      113,
+      112,
+      118,
+      115,
+      116
+    ],
+    "verse": "R4ja Bakht Singh (read: Rāja Bakht Singh)",
+    "locus": {
+      "en": "Chahār Gulzār, E&D viii. 209",
+      "hi": "चहार गुलज़ार, E&D viii. 209"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rāṭhoṛs of Mārwār, from whom the Marāṭhās demanded tribute in the 1750s.",
+      "hi": "मारवाड़ के राठौड़, जिनसे मराठों ने 1750 के दशक में कर माँगा।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#8a1f2c",
+    "grade": {
+      "en": "The Rāṭhoṛ kingdom of Jodhpur, pressed for Marāṭhā tribute",
+      "hi": "जोधपुर का राठौड़ राज्य, मराठा कर के लिए दबाया गया"
+    },
+    "reading": "the country of R4ja Bakht Singh and other Rathor chiefs",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 209",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 209"
+    },
+    "capital": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    }
+  },
+  {
+    "id": "bengal-held",
+    "status": "draft",
+    "name": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "category": "bengal",
+    "rank": 1,
+    "districts": [
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369
+    ],
+    "verse": "Bengal",
+    "locus": {
+      "en": "Chahār Gulzār, E&D viii. 214",
+      "hi": "चहार गुलज़ार, E&D viii. 214"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "Bengal and Bihar after Plassey (1757): the East India Company made Mīr Jaʿfar Nawab, then, in 1760, Mīr Qāsim.",
+      "hi": "प्लासी (1757) के बाद बंगाल और बिहार: ईस्ट इंडिया कंपनी ने मीर जाफ़र को नवाब बनाया, फिर 1760 में मीर क़ासिम को।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#1f5e3f",
+    "grade": {
+      "en": "Bengal and Bihar, under Nawabs made by the English",
+      "hi": "बंगाल और बिहार, अंग्रेज़ों द्वारा बनाए नवाबों के अधीन"
+    },
+    "reading": "The English made K4sim ’Ali Khan governor of Bengal and ’Azim4bad Patna",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 214",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 214"
+    },
+    "capital": {
+      "en": "Murshidābād",
+      "hi": "मुर्शिदाबाद"
+    }
+  },
+  {
+    "id": "nizam-held",
+    "status": "draft",
+    "name": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "category": "nizam",
+    "rank": 1,
+    "districts": [
+      500,
+      501,
+      502,
+      503,
+      510,
+      511,
+      512,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      545,
+      546,
+      547,
+      548,
+      549,
+      551,
+      552,
+      558,
+      559,
+      579,
+      580,
+      634
+    ],
+    "verse": "Niz4m ’Ali Khén (read: Nizām ʿAli Khān)",
+    "locus": {
+      "en": "Tārīkh-i Ibrāhīm Khān, E&D viii. 264",
+      "hi": "तारीख़-ए-इब्राहीम ख़ान, E&D viii. 264"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Āṣaf Jāhī Niẓāms, under Ṣalābat Jang and his brother Niẓām ʿAlī, who lost Daulatābād to the Peshwa at Udgir (1760).",
+      "hi": "सलाबत जंग और उनके भाई निज़ाम अली के अधीन आसफ़जाही निज़ाम, जिन्होंने उदगीर (1760) में दौलताबाद पेशवा को खोया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "Hyderabad, Telingāna and Berar, less the districts ceded to the Peshwa in 1760",
+      "hi": "हैदराबाद, तेलिंगाना और बरार, 1760 में पेशवा को सौंपे ज़िलों के बिना"
+    },
+    "reading": "after forcibly wresting it out of the hands of Nizamu-l Mulk Niz4m ’Ali Khén Bahadur.",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 264",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 264"
+    },
+    "capital": {
+      "en": "Aurangābād",
+      "hi": "औरंगाबाद"
+    }
+  },
+  {
+    "id": "carnatic-held",
+    "status": "draft",
+    "name": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "category": "carnatic",
+    "rank": 1,
+    "districts": [
+      550,
+      554,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      612,
+      614,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      635
+    ],
+    "verse": "Arkat (read: Arkāt)",
+    "locus": {
+      "en": "Akhbār-i Muḥabbat, E&D viii. 392-393",
+      "hi": "अख़बार-ए-मुहब्बत, E&D viii. 392-393"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawabs of the Carnatic: Muḥammad ʿAlī, set up by the English, who took Pondicherry from the French in 1760-61.",
+      "hi": "कर्नाटक के नवाब: मुहम्मद अली, अंग्रेज़ों द्वारा स्थापित, जिन्होंने 1760-61 में फ़्रांसीसियों से पांडिचेरी ली।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#8a3a1f",
+    "grade": {
+      "en": "The Nawab of Arcot's Carnatic, under the English",
+      "hi": "आर्काट के नवाब का कर्नाटक, अंग्रेज़ों के अधीन"
+    },
+    "reading": "became governor of Arkat, under the title of Waljéh",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 393",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 393"
+    },
+    "capital": {
+      "en": "Ārkāṭ",
+      "hi": "आर्काट"
+    }
+  },
+  {
+    "id": "mysore-held",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "rank": 1,
+    "districts": [
+      566,
+      567,
+      570,
+      571,
+      572,
+      573,
+      574,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584
+    ],
+    "verse": "Haidar Naik",
+    "locus": {
+      "en": "Tārīkh-i Ibrāhīm Khān, E&D viii. 287",
+      "hi": "तारीख़-ए-इब्राहीम ख़ान, E&D viii. 287"
+    },
+    "identified": {
+      "en": "likely, after Elliot and Dowson 1877",
+      "hi": "संभावित, Elliot and Dowson 1877 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Wodeyar kingdom of Mysore, which Haidar ʿAlī took over in 1761 and led against the Marāṭhās.",
+      "hi": "मैसूर का वोडेयार राज्य, जिसे हैदर अली ने 1761 में अपने हाथ लिया और मराठों के विरुद्ध लड़ाया।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "Mysore, soon to be Haidar ʿAlī's",
+      "hi": "मैसूर, शीघ्र ही हैदर अली का"
+    },
+    "reading": "Haidar Naik refrained from hostilities, and returned to his own territory",
+    "page": {
+      "en": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), p. 287",
+      "hi": "H. M. Elliot and John Dowson, The History of India as told by its own Historians (1877), पृ. 287"
+    },
+    "capital": {
+      "en": "Śrīraṅgapaṭṭaṇa",
+      "hi": "श्रीरंगपट्टण"
+    }
+  }
+]

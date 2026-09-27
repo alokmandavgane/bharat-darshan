@@ -1,0 +1,332 @@
+[
+  {
+    "id": "maratha-capital",
+    "status": "draft",
+    "name": {
+      "en": "Puṇe",
+      "hi": "पुणे"
+    },
+    "category": "maratha",
+    "priority": 1,
+    "anchor": {
+      "lat": 18.519075,
+      "lon": 73.85545
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Marāṭhā confederacy",
+      "hi": "मराठा संघ"
+    },
+    "identified": {
+      "en": "certain, placed at Shaniwar Wada, Pune",
+      "hi": "निश्चित, Shaniwar Wada, Pune पर"
+    },
+    "blurb": {
+      "en": "The capital of Marāṭhā confederacy.",
+      "hi": "मराठा संघ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Shaniwar_Wada"
+    ]
+  },
+  {
+    "id": "mughal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Dehli (Shāhjahānābād)",
+      "hi": "दिल्ली (शाहजहानाबाद)"
+    },
+    "category": "mughal",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.65583333,
+      "lon": 77.24083333
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "Delhi",
+      "hi": "दिल्ली"
+    },
+    "identified": {
+      "en": "certain, placed at Red Fort, Delhi",
+      "hi": "निश्चित, Red Fort, Delhi पर"
+    },
+    "blurb": {
+      "en": "The capital of Delhi.",
+      "hi": "दिल्ली की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Red_Fort"
+    ]
+  },
+  {
+    "id": "awadh-capital",
+    "status": "draft",
+    "name": {
+      "en": "Faizābād",
+      "hi": "फ़ैज़ाबाद"
+    },
+    "category": "awadh",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.77222222,
+      "lon": 82.14583333
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Awadh",
+      "hi": "अवध"
+    },
+    "identified": {
+      "en": "certain, placed at Faizabad",
+      "hi": "निश्चित, Faizabad पर"
+    },
+    "blurb": {
+      "en": "The capital of Awadh.",
+      "hi": "अवध की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Faizabad"
+    ]
+  },
+  {
+    "id": "rohilla-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bareilly",
+      "hi": "बरेली"
+    },
+    "category": "rohilla",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.367,
+      "lon": 79.43
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Rohillas",
+      "hi": "रोहिल्ला"
+    },
+    "identified": {
+      "en": "likely, placed at Bareilly",
+      "hi": "संभावित, Bareilly पर"
+    },
+    "blurb": {
+      "en": "The capital of Rohillas.",
+      "hi": "रोहिल्ला की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Bareilly"
+    ]
+  },
+  {
+    "id": "jat-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bharatpur",
+      "hi": "भरतपुर"
+    },
+    "category": "jat",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.22041944,
+      "lon": 77.49526056
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jāṭs",
+      "hi": "जाट"
+    },
+    "identified": {
+      "en": "certain, placed at Lohagarh Fort, Bharatpur",
+      "hi": "निश्चित, Lohagarh Fort, Bharatpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Jāṭs.",
+      "hi": "जाट की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Lohagarh_Fort"
+    ]
+  },
+  {
+    "id": "marwar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "category": "marwar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.29805556,
+      "lon": 73.01888889
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mārwār",
+      "hi": "मारवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at Mehrangarh, Jodhpur",
+      "hi": "निश्चित, Mehrangarh, Jodhpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Mārwār.",
+      "hi": "मारवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Mehrangarh"
+    ]
+  },
+  {
+    "id": "bengal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Murshidābād",
+      "hi": "मुर्शिदाबाद"
+    },
+    "category": "bengal",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.18,
+      "lon": 88.27
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Bengal",
+      "hi": "बंगाल"
+    },
+    "identified": {
+      "en": "certain, placed at Murshidabad",
+      "hi": "निश्चित, Murshidabad पर"
+    },
+    "blurb": {
+      "en": "The capital of Bengal.",
+      "hi": "बंगाल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Murshidabad"
+    ]
+  },
+  {
+    "id": "nizam-capital",
+    "status": "draft",
+    "name": {
+      "en": "Aurangābād",
+      "hi": "औरंगाबाद"
+    },
+    "category": "nizam",
+    "priority": 1,
+    "anchor": {
+      "lat": 19.88,
+      "lon": 75.32
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "The Niẓām's Deccan",
+      "hi": "निज़ाम का दक्कन"
+    },
+    "identified": {
+      "en": "certain, placed at Aurangabad",
+      "hi": "निश्चित, Aurangabad पर"
+    },
+    "blurb": {
+      "en": "The capital of The Niẓām's Deccan.",
+      "hi": "निज़ाम का दक्कन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Aurangabad"
+    ]
+  },
+  {
+    "id": "carnatic-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ārkāṭ",
+      "hi": "आर्काट"
+    },
+    "category": "carnatic",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.9047,
+      "lon": 79.3238
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "The Carnatic (Arcot)",
+      "hi": "कर्नाटक (आर्काट)"
+    },
+    "identified": {
+      "en": "certain, placed at Arcot",
+      "hi": "निश्चित, Arcot पर"
+    },
+    "blurb": {
+      "en": "The capital of The Carnatic (Arcot).",
+      "hi": "कर्नाटक (आर्काट) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Arcot"
+    ]
+  },
+  {
+    "id": "mysore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Śrīraṅgapaṭṭaṇa",
+      "hi": "श्रीरंगपट्टण"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.414,
+      "lon": 76.704
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "identified": {
+      "en": "certain, placed at Srirangapatna",
+      "hi": "निश्चित, Srirangapatna पर"
+    },
+    "blurb": {
+      "en": "The capital of Mysore.",
+      "hi": "मैसूर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/india.history.resource.310",
+      "https://en.wikipedia.org/wiki/Srirangapatna"
+    ]
+  }
+]
