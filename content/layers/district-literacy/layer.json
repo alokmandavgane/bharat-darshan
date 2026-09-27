@@ -1,7 +1,7 @@
 {
   "id": "district-literacy",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Literacy by district",
     "hi": "ज़िलेवार साक्षरता"

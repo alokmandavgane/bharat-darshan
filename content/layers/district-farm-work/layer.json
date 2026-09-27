@@ -1,7 +1,7 @@
 {
   "id": "district-farm-work",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Work on the land by district",
     "hi": "ज़िलेवार खेती का काम"

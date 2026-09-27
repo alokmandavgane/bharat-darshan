@@ -1,7 +1,7 @@
 {
   "id": "district-urban",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Town dwellers by district",
     "hi": "ज़िलेवार नगरवासी"

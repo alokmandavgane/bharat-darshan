@@ -73,6 +73,17 @@ def main():
                 tiers.setdefault(h, {})[key] = rel
     with open(os.path.join(out, 'regions', 'states.json'), encoding='utf-8') as f:
         states = json.load(f)
+    # A page told in eras (the kingdoms page) lists each era's layers; the catalogue files
+    # them under that era, in the era's own order, so a new era needs no field of its own.
+    eras = {}
+    plates_dir = os.path.join(ROOT, 'content', 'plates')
+    for n in sorted(os.listdir(plates_dir)) if os.path.isdir(plates_dir) else []:
+        with open(os.path.join(plates_dir, n), encoding='utf-8') as f:
+            plate = json.load(f)
+        for order, era in enumerate(plate.get('eras') or []):
+            title = {k: f"{era['display'][k]} · {era['title'][k]}" for k in ('en', 'hi')}
+            for pos, lid in enumerate(era['layers']):
+                eras.setdefault(lid, {'id': era['id'], 'order': order, 'pos': pos, 'title': title})
     layers = []
     layers_dir = os.path.join(out, 'layers')
     if os.path.isdir(layers_dir):
@@ -86,7 +97,8 @@ def main():
             layers.append({k: L[k] for k in ('id', 'type', 'marker', 'size', 'title', 'icon', 'group',
                                              'default_on', 'count', 'reviewed', 'categories', 'anchored',
                                              'fields', 'scale', 'height', 'unit', 'note', 'sources') if k in L}
-                          | {'path': f'layers/{n}'})
+                          | {'path': f'layers/{n}'}
+                          | ({'subgroup': eras[L['id']]} if L['id'] in eras else {}))
     world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')
              if os.path.exists(os.path.join(out, 'terrain', f'world-{k}.bin.gz'))}
     manifest = {

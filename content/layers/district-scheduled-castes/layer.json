@@ -1,7 +1,7 @@
 {
   "id": "district-scheduled-castes",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Scheduled Castes by district",
     "hi": "ज़िलेवार अनुसूचित जातियाँ"

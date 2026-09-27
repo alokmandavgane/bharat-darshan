@@ -1,7 +1,7 @@
 {
   "id": "district-tribes",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Scheduled Tribes by district",
     "hi": "ज़िलेवार अनुसूचित जनजातियाँ"

@@ -1,7 +1,7 @@
 {
   "id": "district-young-children",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Children under seven by district",
     "hi": "ज़िलेवार सात वर्ष से छोटे बच्चे"

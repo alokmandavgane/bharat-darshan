@@ -1,7 +1,7 @@
 {
   "id": "population",
   "type": "prisms",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Population",
     "hi": "जनसंख्या"

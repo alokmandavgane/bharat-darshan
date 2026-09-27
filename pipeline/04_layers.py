@@ -59,6 +59,10 @@ from pipeline.lib import sources as sources_lib  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES = ('points', 'lines', 'choropleth', 'regional', 'areas', 'prisms')
+# The catalogue's sections, in the order the menu shows them; each heading is the string
+# `layer.group.<id>` in src/i18n. A layer names one, or lands in 'other'.
+GROUPS = ('physical', 'political', 'network', 'industry', 'resources', 'culture', 'census',
+          'history-texts', 'history-journeys', 'history-kingdoms')
 GENERATED = 'generated'     # ...or from the item's own description of a line that is defined, not surveyed
 DISTRICTS = 'districts'     # a layer the build makes from India's district polygons
 JOINS = ('name', 'route', 'corridor', GENERATED)   # how a lines item finds its geometry
@@ -122,6 +126,8 @@ def validate_layer(layer, folder, registry):
             p.append('layer.sources cites only URLs: at least one must be an id from content/sources.json')
     if layer.get('type') not in TYPES:
         p.append(f"layer.type must be one of {TYPES}")
+    if layer.get('group') is not None and layer['group'] not in GROUPS:
+        p.append(f"layer.group must be one of {GROUPS}")
     if not bilingual(layer.get('title')):
         p.append('layer.title needs en and hi')
     cats = layer.get('categories') or []

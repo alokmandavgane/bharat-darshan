@@ -252,21 +252,52 @@ export function createShell(root, store, link = null) {
     return b;
   }
 
+  // The catalogue's sections, in the order the menu shows them (pipeline/04_layers.py
+  // GROUPS says the same); a group not listed here follows them.
+  const GROUP_ORDER = ['physical', 'political', 'network', 'industry', 'resources', 'culture', 'census',
+    'history-texts', 'history-journeys', 'history-kingdoms'];
+  // Which sections are open. A section with a layer on opens by itself; once the reader
+  // opens or closes one, that choice is kept across every rebuild of the list.
+  const openSections = new Map();
+  let searching = false;
+
+  /**
+   * One folding section of the catalogue: a heading with how many of its layers are on,
+   * then its rows. `level` is 'layer-group' for a group, 'layer-subgroup' for an era in it.
+   */
+  function catalogueSection(key, heading, rows, on, total, level) {
+    const d = document.createElement('details');
+    d.className = level;
+    d.dataset.section = key;
+    d.open = openSections.has(key) ? openSections.get(key) : on > 0;
+    const s = document.createElement('summary');
+    const h = document.createElement(level === 'layer-group' ? 'h4' : 'h5');
+    h.textContent = heading;
+    const c = document.createElement('span');
+    c.className = 'layer-count';
+    c.textContent = on
+      ? t('layer.group.count', { on: formatNumber(on), n: formatNumber(total) })
+      : t('layer.group.total', { n: formatNumber(total) });
+    s.append(h, c);
+    // The click, not the toggle event: setting `open` while building would also fire
+    // `toggle`, and that is not the reader's choice.
+    s.addEventListener('click', () => { if (!searching) openSections.set(key, !d.open); });
+    d.append(s, ...rows);
+    return d;
+  }
+
   /**
    * The catalogue: the base first, then every layer, grouped as the catalogue groups
    * them -- the group is a field on the layer and its heading a string keyed by that
-   * field. No layer id appears here.
+   * field -- and, inside a group, by the era a page files it under (`subgroup`, which the
+   * manifest reads off the kingdoms page). Each group and era folds. No layer id appears here.
    */
   function renderLayerList() {
     layerList.replaceChildren();
     const active = new Set(store.get('layers')?.active || []);
     const relief = store.get('relief') || {};
-    const base = document.createElement('div');
-    base.className = 'layer-group';
-    const bh = document.createElement('h4');
-    bh.textContent = t('layer.group.base');
-    base.appendChild(bh);
-    base.appendChild(baseRow('relief', !!relief.on, relief.on ? t('relief.hint', { n: formatNumber(relief.amount || DEFAULT_RELIEF) }) : ''));
+    const baseRows = [];
+    baseRows.push(baseRow('relief', !!relief.on, relief.on ? t('relief.hint', { n: formatNumber(relief.amount || DEFAULT_RELIEF) }) : ''));
     // The slider under its row: how much the relief is exaggerated by, while it is on.
     const row = document.createElement('div');
     row.className = 'relief';
@@ -289,46 +320,77 @@ export function createShell(root, store, link = null) {
       store.set('relief', { amount: Number(slider.value), on: true }, { source: 'slider' });
     });
     row.append(label, slider, value);
-    base.appendChild(row);
-    base.appendChild(baseRow('surroundings', !!store.get('surroundings'), t('chip.surroundings.hint')));
-    base.appendChild(baseRow('graticule', !!store.get('graticule'), t('chip.graticule.hint')));
-    layerList.appendChild(base);
+    baseRows.push(row);
+    baseRows.push(baseRow('surroundings', !!store.get('surroundings'), t('chip.surroundings.hint')));
+    baseRows.push(baseRow('graticule', !!store.get('graticule'), t('chip.graticule.hint')));
+    const baseOn = [relief.on, store.get('surroundings'), store.get('graticule')].filter(Boolean).length;
+    layerList.appendChild(catalogueSection('base', t('layer.group.base'), baseRows, baseOn, 3, 'layer-group'));
     const byGroup = new Map();
     for (const layer of store.get('catalog') || []) {
       const g = layer.group || 'other';
       if (!byGroup.has(g)) byGroup.set(g, []);
       byGroup.get(g).push(layer);
     }
-    for (const [group, layers] of byGroup) {
-      const section = document.createElement('div');
-      section.className = 'layer-group';
-      const h = document.createElement('h4');
-      h.textContent = t(`layer.group.${group}`, {}, group);
-      section.appendChild(h);
-      for (const layer of layers) section.appendChild(layerRow(layer, active.has(layer.id)));
-      layerList.appendChild(section);
+    const rank = (g) => (GROUP_ORDER.includes(g) ? GROUP_ORDER.indexOf(g) : GROUP_ORDER.length);
+    for (const group of [...byGroup.keys()].sort((a, b) => rank(a) - rank(b))) {
+      const layers = byGroup.get(group);
+      const rows = [];
+      const subs = new Map();
+      for (const layer of layers) {
+        if (!layer.subgroup) { rows.push(layerRow(layer, active.has(layer.id))); continue; }
+        if (!subs.has(layer.subgroup.id)) subs.set(layer.subgroup.id, { sub: layer.subgroup, layers: [] });
+        subs.get(layer.subgroup.id).layers.push(layer);
+      }
+      for (const { sub, layers: ls } of [...subs.values()].sort((a, b) => a.sub.order - b.sub.order)) {
+        ls.sort((a, b) => a.subgroup.pos - b.subgroup.pos);
+        const on = ls.filter((l) => active.has(l.id)).length;
+        rows.push(catalogueSection(`${group}/${sub.id}`, pick(sub.title), ls.map((l) => layerRow(l, active.has(l.id))), on, ls.length, 'layer-subgroup'));
+      }
+      const on = layers.filter((l) => active.has(l.id)).length;
+      layerList.appendChild(catalogueSection(group, t(`layer.group.${group}`, {}, group), rows, on, layers.length, 'layer-group'));
     }
-    if (catalogueSearch.value) filterCatalogue();
+    if (catalogueSearch.value.trim()) filterCatalogue();
   }
 
-  /** The catalogue's own search: typing narrows the rows to those whose names, keys or group headings match. */
+  /**
+   * The catalogue's own search: typing narrows the rows to those whose names, keys or
+   * section headings match, and opens every section that still has a row. Clearing it
+   * rebuilds the list, which puts every section back as the reader left it.
+   */
   function filterCatalogue() {
     const q = catalogueSearch.value.trim().toLowerCase();
-    let shown = 0;
-    for (const group of layerList.querySelectorAll('.layer-group')) {
-      const heading = group.querySelector('h4')?.textContent?.toLowerCase() || '';
+    if (!q) {
+      catalogueNone.hidden = true;
+      if (searching) { searching = false; renderLayerList(); }
+      return;
+    }
+    searching = true;
+    const text = (el) => (el?.textContent || '').toLowerCase();
+    const filterRows = (parent, headings) => {
       let any = false;
-      for (const row of group.querySelectorAll('.layer-row')) {
-        const hit = !q || heading.includes(q) || (row.textContent || '').toLowerCase().includes(q);
+      for (const row of parent.querySelectorAll(':scope > .layer-row')) {
+        const hit = headings.some((h) => h.includes(q)) || text(row).includes(q);
         /** @type {HTMLElement} */ (row).hidden = !hit;
         any = any || hit;
       }
+      return any;
+    };
+    let shown = 0;
+    for (const group of /** @type {NodeListOf<HTMLDetailsElement>} */ (layerList.querySelectorAll('.layer-group'))) {
+      const gh = text(group.querySelector(':scope > summary h4'));
+      let any = filterRows(group, [gh]);
+      for (const sub of /** @type {NodeListOf<HTMLDetailsElement>} */ (group.querySelectorAll(':scope > .layer-subgroup'))) {
+        const hit = filterRows(sub, [gh, text(sub.querySelector(':scope > summary h5'))]);
+        sub.hidden = !hit;
+        if (hit) sub.open = true;
+        any = any || hit;
+      }
       const relief = /** @type {HTMLElement | null} */ (group.querySelector('.relief'));
-      if (relief) relief.hidden = !!q || !store.get('relief')?.on;
-      /** @type {HTMLElement} */ (group).hidden = !any;
-      if (any) shown++;
+      if (relief) relief.hidden = true;
+      group.hidden = !any;
+      if (any) { group.open = true; shown++; }
     }
-    catalogueNone.hidden = !q || !!shown;
+    catalogueNone.hidden = !!shown;
   }
   catalogueSearch.addEventListener('input', filterCatalogue);
   catalogueSearch.addEventListener('keydown', (e) => {

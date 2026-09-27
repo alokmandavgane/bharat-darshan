@@ -1,7 +1,7 @@
 {
   "id": "district-women-at-work",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Women at work by district",
     "hi": "ज़िलेवार कामकाजी महिलाएँ"

@@ -1,7 +1,7 @@
 {
   "id": "population-density",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Population density",
     "hi": "जनसंख्या घनत्व"

@@ -1,7 +1,7 @@
 {
   "id": "district-child-sex-ratio",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Girls per 1,000 boys",
     "hi": "प्रति 1,000 लड़कों पर लड़कियाँ"

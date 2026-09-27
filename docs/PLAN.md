@@ -2450,6 +2450,18 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eightieth round: the layer catalogue folds. The history layers had swollen "People and places" to
+  72 rows, so it splits in five groups: People and places (7), Census by district (11), The old texts' India
+  (divisions, Kūrma-vibhāga, rivers and mountains; 5), Journeys in the epics (6) and Kingdoms and empires (43).
+  - **Groups** are declared in `pipeline/04_layers.py` GROUPS (a layer naming another fails the build) and shown in
+    that order; their headings are `layer.group.<id>` in src/i18n.
+  - **Eras:** `05_manifest.py` reads every page with `eras` and files each era's layers under it as `subgroup`
+    ({id, order, pos, title}), so a new era needs no field of its own.
+  - **The accordion:** every group, and every era inside one, is a `<details>` with a count ("3 of 43 on"). A
+    section with a layer on opens by itself; once the reader opens or closes one, that choice holds across
+    rebuilds (the summary's click, not `toggle`, records it). A search opens every section with a hit; clearing
+    it restores the reader's own state.
+  - Checked at 1280x800 and at phone width; 48 tests and the build pass.
 - 2026-09-27, seventy-ninth round: Vijayanagara, the sultanates and Rana Sanga, c. 1525 CE. "Kingdoms and empires"
   gains its eleventh era: Hindustan as Bābur found it in 1526, from his Memoirs (Leyden and Erskine, 1826), Paes
   and Nuniz in Sewell's A Forgotten Empire (1900) and Smith's Oxford History (1919).

@@ -1,7 +1,7 @@
 {
   "id": "district-sex-ratio",
   "type": "choropleth",
-  "group": "culture",
+  "group": "census",
   "title": {
     "en": "Women per 1,000 men by district",
     "hi": "ज़िलेवार प्रति 1,000 पुरुषों पर महिलाएँ"
