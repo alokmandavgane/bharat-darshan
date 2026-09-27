@@ -57,7 +57,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 12,
+   "count": 13,
    "reviewed": 0,
    "categories": [
     {
@@ -165,6 +165,15 @@
      "title": {
       "en": "Tripura",
       "hi": "त्रिपुरा"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
      },
      "icon": "pin"
     }
@@ -303,7 +312,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 12,
+   "count": 14,
    "reviewed": 0,
    "categories": [
     {
@@ -411,6 +420,24 @@
      "title": {
       "en": "Tripura",
       "hi": "त्रिपुरा"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      },
      "icon": "map"
     }
@@ -446,7 +473,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 17,
+   "count": 19,
    "reviewed": 0,
    "categories": [
     {
@@ -543,6 +570,22 @@
      "title": {
       "en": "Tripura",
       "hi": "त्रिपुरा"
+     }
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     }
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      }
     }
    ],
@@ -609,14 +652,16 @@
     }
    },
    "note": {
-    "en": "India at Akbar's death in 1605. The Mughal empire is drawn in four shades: the ṣūbas of Hindustan, which the Āʾīn-i Akbarī lists, from Lahore to Bengal and Orissa and from Ajmer to Malwa and Gujarat; Kashmir, counted under Lahore; Khandesh and Berar, the last conquests; and Ahmadnagar, a ṣūba in name, whose kingdom the Niẓām Shāhīs still mostly held. Beyond it stand the hills of Mewār, where Rāṇā Amar Singh held out until 1614; the Deccan kingdoms Akbar's last envoy was sent to, 'Bijapur, Golconda, Bidar, and the Carnatic'; the Nāyakas of Madurai and Tanjore, nominal vassals of Vijayanagara at Chandragiri, as the Jesuit Barradas found them in 1614; and, from the Āʾīn, the kings of Assam, the Koch country and Tripura. Left blank: the Himalayan hill states, the north-east hills, the forest country of central India, Ikkeri and the Kanara coast, Kerala north of Travancore, and the Portuguese territories, which nothing read here attests. The Āʾīn is quoted in Jarrett's translation (1891), Asad Beg in Elliot and Dowson's (1875), Barradas in Sewell's (1900); extents follow Smith's Oxford History (1919) and Sewell. Drawn on today's districts, to the nearest district.",
-    "hi": "1605 में अकबर की मृत्यु के समय का भारत। मुग़ल साम्राज्य चार छटाओं में दिखाया गया है: हिन्दुस्तान के सूबे, जिन्हें आईन-ए-अकबरी गिनाती है, लाहौर से बंगाल और उड़ीसा तक और अजमेर से मालवा और गुजरात तक; कश्मीर, लाहौर के अंतर्गत गिना गया; ख़ानदेश और बरार, अंतिम विजयें; और अहमदनगर, नाम का सूबा, जिसका राज्य अधिकतर अभी भी निज़ाम शाहियों के पास था। उसके परे मेवाड़ के पहाड़ हैं, जहाँ राणा अमर सिंह 1614 तक डटे रहे; दक्कन के वे राज्य जिनके पास अकबर का अंतिम दूत भेजा गया, 'बीजापुर, गोलकोंडा, बीदर और कर्नाटक'; मदुरै और तंजावुर के नायक, चंद्रगिरि के विजयनगर के नाममात्र के सामंत, जैसा जेसुइट बर्रादास ने 1614 में पाया; और आईन से, असम, कोच देश और त्रिपुरा के राजा। खाली छोड़े गए: हिमालय के पहाड़ी राज्य, पूर्वोत्तर के पहाड़, मध्य भारत का वन प्रदेश, इक्केरी और कनारा तट, त्रावणकोर के उत्तर का केरल, और पुर्तगाली क्षेत्र, जिनके लिए यहाँ पढ़ा कुछ भी प्रमाण नहीं देता। आईन जैरेट के अनुवाद (1891) में, असद बेग इलियट और डाउसन के (1875) में, बर्रादास सुएल के (1900) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) और सुएल के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India at Akbar's death in 1605. The Mughal empire is drawn in four shades: the ṣūbas of Hindustan, which the Āʾīn-i Akbarī lists, from Lahore to Bengal and Orissa and from Ajmer to Malwa and Gujarat; Kashmir, counted under Lahore; Khandesh and Berar, the last conquests; and Ahmadnagar, a ṣūba in name, whose kingdom the Niẓām Shāhīs still mostly held. Beyond it stand the hills of Mewār, where Rāṇā Amar Singh held out until 1614; the Deccan kingdoms Akbar's last envoy was sent to, 'Bijapur, Golconda, Bidar, and the Carnatic'; the Nāyakas of Madurai and Tanjore, nominal vassals of Vijayanagara at Chandragiri, as the Jesuit Barradas found them in 1614; and, from the Āʾīn, the kings of Assam, the Koch country and Tripura. The Kacharis of Maibong and Jaintia are added from the Ahom Buranji (Barua's translation, 1930), with extents from Gait's History of Assam (1906). Left blank: the Himalayan hill states, the Naga and Mizo hills, the forest country of central India, Ikkeri and the Kanara coast, Kerala north of Travancore, and the Portuguese territories, which nothing read here attests. The Āʾīn is quoted in Jarrett's translation (1891), Asad Beg in Elliot and Dowson's (1875), Barradas in Sewell's (1900); extents follow Smith's Oxford History (1919) and Sewell. Drawn on today's districts, to the nearest district.",
+    "hi": "1605 में अकबर की मृत्यु के समय का भारत। मुग़ल साम्राज्य चार छटाओं में दिखाया गया है: हिन्दुस्तान के सूबे, जिन्हें आईन-ए-अकबरी गिनाती है, लाहौर से बंगाल और उड़ीसा तक और अजमेर से मालवा और गुजरात तक; कश्मीर, लाहौर के अंतर्गत गिना गया; ख़ानदेश और बरार, अंतिम विजयें; और अहमदनगर, नाम का सूबा, जिसका राज्य अधिकतर अभी भी निज़ाम शाहियों के पास था। उसके परे मेवाड़ के पहाड़ हैं, जहाँ राणा अमर सिंह 1614 तक डटे रहे; दक्कन के वे राज्य जिनके पास अकबर का अंतिम दूत भेजा गया, 'बीजापुर, गोलकोंडा, बीदर और कर्नाटक'; मदुरै और तंजावुर के नायक, चंद्रगिरि के विजयनगर के नाममात्र के सामंत, जैसा जेसुइट बर्रादास ने 1614 में पाया; और आईन से, असम, कोच देश और त्रिपुरा के राजा। माईबोंग के कछारी और जयंतिया अहोम बुरंजी (बरुआ का अनुवाद, 1930) से जोड़े गए, विस्तार गेट की हिस्ट्री ऑफ़ असम (1906) से। खाली छोड़े गए: हिमालय के पहाड़ी राज्य, नगा और मिज़ो पहाड़, मध्य भारत का वन प्रदेश, इक्केरी और कनारा तट, त्रावणकोर के उत्तर का केरल, और पुर्तगाली क्षेत्र, जिनके लिए यहाँ पढ़ा कुछ भी प्रमाण नहीं देता। आईन जैरेट के अनुवाद (1891) में, असद बेग इलियट और डाउसन के (1875) में, बर्रादास सुएल के (1900) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) और सुएल के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "jarrett-1891",
     "elliot-dowson-1875",
     "sewell-1900",
     "smith-1919",
+    "gait-1906",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -642,7 +687,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 13,
+   "count": 14,
    "reviewed": 0,
    "categories": [
     {
@@ -759,6 +804,15 @@
      "title": {
       "en": "Ramnad",
       "hi": "रामनाड"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
      },
      "icon": "pin"
     }
@@ -809,7 +863,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 13,
+   "count": 15,
    "reviewed": 0,
    "categories": [
     {
@@ -926,6 +980,24 @@
      "title": {
       "en": "Ramnad",
       "hi": "रामनाड"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      },
      "icon": "map"
     }
@@ -960,7 +1032,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 16,
    "reviewed": 0,
    "categories": [
     {
@@ -1065,6 +1137,22 @@
      "title": {
       "en": "Ramnad",
       "hi": "रामनाड"
+     }
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     }
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      }
     }
    ],
@@ -1131,8 +1219,8 @@
     }
    },
    "note": {
-    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore; and in the Tamil south, from a Tamil chronicle of the Madurai Nāyakas in Taylor's translation (1835), Rāṇi Mangammāḷ's Madurai and the Setupatis' Ramnad. Left blank: Mysore, the Marāṭhās of Tanjore, the Tondaimān of Pudukkottai, the Himalayan hill states and the north-east hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य; और तमिल दक्षिण में, टेलर के अनुवाद (1835) में मदुरै के नायकों के एक तमिल वृत्तांत से, रानी मंगम्माळ का मदुरै और सेतुपतियों का रामनाड। खाली छोड़े गए: मैसूर, तंजावुर के मराठा, पुदुक्कोट्टै के तोंडैमान, हिमालय के पहाड़ी राज्य और पूर्वोत्तर के पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India at Aurangzeb's death in 1707. The Mughal empire, twenty-one ṣūbas in all, is at its widest on paper, but its six Deccan ṣūbas are drawn pale and disputed: Khāfī Khān writes that Tārā Bāī's Marāṭhā armies plundered them 'as far as Sironj, Mandisor, and the suba of Malwa' and named their own governors and collectors. The Marāṭhā state itself, ruled from Satara by the regent Tārā Bāī, holds the hill forts and the coast. Mewār, Mārwār and Amber are drawn apart from the empire: after Aurangzeb's death Ajit Singh took Jodhpur back and the three Rajput houses stood together against Bahādur Shāh. East of Bengal are the Ahom kingdom, which had taken Gauhati back from the Mughals, and the tributary Kūch Bihār; on the west coast Hamilton's Kanara, ruled from Bednūr, and the Malabar kingdoms of the Zamorin, Cochin and Travancore; and in the Tamil south, from a Tamil chronicle of the Madurai Nāyakas in Taylor's translation (1835), Rāṇi Mangammāḷ's Madurai and the Setupatis' Ramnad. The Kacharis and Jaintia, both made Ahom tributaries by Rudra Siṃha in 1706-08, are added from the Tungkhungia Buranji (Bhuyan's translation, 1933), with extents from Gait's History of Assam (1906). Left blank: Mysore, the Marāṭhās of Tanjore, the Tondaimān of Pudukkottai, the Himalayan hill states, Manipur, Tripura and the Naga and Mizo hills, which nothing read here attests for this date. Khāfī Khān is quoted in Elliot and Dowson's translation (1877); Hamilton wrote in English (1727). Extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "1707 में औरंगज़ेब की मृत्यु के समय का भारत। मुग़ल साम्राज्य, कुल इक्कीस सूबे, काग़ज़ पर सबसे विस्तृत है, पर उसके दक्कन के छह सूबे हल्के और विवादित दिखाए गए हैं: ख़ाफ़ी ख़ान लिखते हैं कि ताराबाई की मराठा सेनाओं ने उन्हें 'सिरोंज, मंदसौर और मालवा सूबे तक' लूटा और अपने राज्यपाल और वसूलीदार नियुक्त किए। मराठा राज्य स्वयं, सतारा से संरक्षिका ताराबाई द्वारा शासित, पहाड़ी किले और तट रखता है। मेवाड़, मारवाड़ और आमेर साम्राज्य से अलग दिखाए गए हैं: औरंगज़ेब की मृत्यु के बाद अजीत सिंह ने जोधपुर फिर लिया और तीनों राजपूत घराने बहादुर शाह के विरुद्ध एक साथ खड़े हुए। बंगाल के पूर्व में अहोम राज्य है, जिसने मुग़लों से गुवाहाटी वापस ले ली थी, और करद कूच बिहार; पश्चिमी तट पर हैमिल्टन का कनारा, बेदनूर से शासित, और ज़मोरिन, कोचीन और त्रावणकोर के मालाबार राज्य; और तमिल दक्षिण में, टेलर के अनुवाद (1835) में मदुरै के नायकों के एक तमिल वृत्तांत से, रानी मंगम्माळ का मदुरै और सेतुपतियों का रामनाड। कछारी और जयंतिया, जिन्हें रुद्र सिंह ने 1706-08 में अहोमों का करद बनाया, तुंगखुंगिया बुरंजी (भुइयाँ का अनुवाद, 1933) से जोड़े गए, विस्तार गेट की हिस्ट्री ऑफ़ असम (1906) से। खाली छोड़े गए: मैसूर, तंजावुर के मराठा, पुदुक्कोट्टै के तोंडैमान, हिमालय के पहाड़ी राज्य, मणिपुर, त्रिपुरा और नगा और मिज़ो पहाड़, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। ख़ाफ़ी ख़ान इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; हैमिल्टन ने अंग्रेज़ी में लिखा (1727)। विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877",
@@ -1140,6 +1228,8 @@
     "taylor-1835-ii",
     "taylor-1835-i",
     "smith-1919",
+    "gait-1906",
+    "bhuyan-1933",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -7818,7 +7908,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 19,
+   "count": 21,
    "reviewed": 0,
    "categories": [
     {
@@ -7989,6 +8079,24 @@
      "title": {
       "en": "Kacharis",
       "hi": "कछारी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      },
      "icon": "map"
     }
@@ -8022,7 +8130,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 23,
+   "count": 25,
    "reviewed": 0,
    "categories": [
     {
@@ -8175,6 +8283,22 @@
      "title": {
       "en": "Kacharis",
       "hi": "कछारी"
+     }
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+     }
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      }
     }
    ],
@@ -8241,8 +8365,8 @@
     }
    },
    "note": {
-    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. The Rajput states of Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Tanjore, Travancore and Kerala, Manipur, Jaintia and the rest of the north-east (the Ahoms and Kacharis are added from the sources quoted in Gait's History of Assam (1906)), and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। मेवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। खाली छोड़े गए: तंजावुर, त्रावणकोर और केरल, मणिपुर, जयंतिया और शेष पूर्वोत्तर (अहोम और कछारी गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1760 CE, on the eve of the third battle of Panipat. The Marāṭhā confederacy is at its height, in two shades: the Peshwa's Deccan, with Bijapur and the Daulatābād districts taken from the Niẓām in 1760; and the lands of the Sindhias, Holkars, Gaekwads and Bhonsles, from Malwa and Gujarat to Nagpur and Orissa. A chronicler of Aḥmad Shāh wrote that their power had 'brought all the country as far as the river Attock under their subjection'. Around them: the Durrānī Panjab, Sirhind and Kashmir; Mughal Delhi, with a puppet on the throne; the Nawabs of Awadh; the Rohillas and Najīb ud-Daula; the Bangash of Farrukhābād; Sūraj Mal's Jāṭs; Rāṭhoṛ Mārwār; the Niẓām's Deccan; Bengal and the Carnatic, whose Nawabs the English now made and unmade; and Mysore, which Haidar ʿAlī was taking over. The Rajput states of Mewār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). In the north-east: the Ahoms and Kacharis, from the sources quoted in Gait's History of Assam (1906); Manipur and Jaintia from the Tungkhungia and Ahom Buranjis (Bhuyan's and Barua's translations). Left blank: Tanjore, Travancore and Kerala, Tripura and the north-east hills, and the hill states, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1760 ई. का भारत, पानीपत के तीसरे युद्ध की पूर्वसंध्या पर। मराठा संघ अपने चरम पर है, दो छटाओं में: पेशवा का दक्कन, बीजापुर और 1760 में निज़ाम से लिए दौलताबाद के ज़िलों के साथ; और सिंधिया, होल्कर, गायकवाड़ और भोंसले की भूमि, मालवा और गुजरात से नागपुर और उड़ीसा तक। अहमद शाह के एक इतिवृत्तकार ने लिखा कि उनकी शक्ति ने 'अटक नदी तक का सारा देश अपने अधीन कर लिया था'। उनके चारों ओर: दुर्रानी पंजाब, सरहिंद और कश्मीर; मुग़ल दिल्ली, सिंहासन पर एक कठपुतली के साथ; अवध के नवाब; रोहिल्ला और नजीबुद्दौला; फ़र्रुख़ाबाद के बंगश; सूरजमल के जाट; राठौड़ मारवाड़; निज़ाम का दक्कन; बंगाल और कर्नाटक, जिनके नवाबों को अब अंग्रेज़ बनाते और हटाते थे; और मैसूर, जिसे हैदर अली अपने हाथ ले रहे थे। मेवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। पूर्वोत्तर में: अहोम और कछारी, गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से; मणिपुर और जयंतिया तुंगखुंगिया और अहोम बुरंजियों (भुइयाँ और बरुआ के अनुवाद) से। खाली छोड़े गए: तंजावुर, त्रावणकोर और केरल, त्रिपुरा और पूर्वोत्तर के पहाड़, और पहाड़ी राज्य, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। इतिवृत्त इलियट और डाउसन के अनुवाद (1877) में उद्धृत हैं; विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877-viii",
@@ -8250,6 +8374,8 @@
     "tod-1829",
     "tod-1832",
     "gait-1906",
+    "bhuyan-1933",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -9910,7 +10036,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 18,
+   "count": 20,
    "reviewed": 0,
    "categories": [
     {
@@ -10072,6 +10198,24 @@
      "title": {
       "en": "Kacharis",
       "hi": "कछारी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      },
      "icon": "map"
     }
@@ -10105,7 +10249,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 27,
+   "count": 29,
    "reviewed": 0,
    "categories": [
     {
@@ -10250,6 +10394,22 @@
      "title": {
       "en": "Kacharis",
       "hi": "कछारी"
+     }
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+     }
+    },
+    {
+     "id": "jaintia",
+     "color": "#6a7a4a",
+     "title": {
+      "en": "Jaintia",
+      "hi": "जयंतिया"
      }
     }
    ],
@@ -10316,8 +10476,8 @@
     }
    },
    "note": {
-    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. The Rajput states of Mewār, Mārwār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). Left blank: Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states, and Manipur and Jaintia in the north-east (the Ahoms and Kacharis are added from the sources quoted in Gait's History of Assam (1906)), which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। मेवाड़, मारवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। ख़ाली छोड़े गए: फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य, और पूर्वोत्तर में मणिपुर और जयंतिया (अहोम और कछारी गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1780 CE, as the Rohilkhand scholar Qudratullāh surveyed it in 1779: 'the whole country of Bengal has been subjected by the strong arm of the Firingis', Awadh holds Allahabad, Etawah and the Rohilla country, the Jāṭ country is under Najaf Khān, the Sikhs hold the Panjab, and the Dakhin is shared between the Niẓām, the Marāṭhās, Haidar Naik and the Nawab of Arcot. The Company is drawn in four shades (Bengal and Bihar; Benares, ceded in 1775; the Northern Sarkars; Bombay and Salsette) and the Marāṭhās in four (the Peshwa's Deccan; Sindhia's and Holkar's north; the Bhonsles of Nagpur; the Gaekwad's Gujarat). Rāmpūr is the one Rohilla state left. The Rajput states of Mewār, Mārwār, Jaipur, Bikaner, Jaisalmer, Bundi and Kota, and the Marāṭhās' Ajmer, are added from Tod's Annals (1829-32). In the north-east: the Ahoms and Kacharis, from the sources quoted in Gait's History of Assam (1906); Manipur and Jaintia from the Tungkhungia and Ahom Buranjis (Bhuyan's and Barua's translations). Left blank: Farrukhābād and Zābita Khān's upper Doab, Tanjore, Travancore and Cochin, Kashmir, the hill states, and Tripura and the north-east hills, which nothing read here attests for this date. The chronicles are quoted in Elliot and Dowson's translation (1877); extents follow Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1780 ई. का भारत, जैसा रोहिलखंड के विद्वान क़ुदरतुल्लाह ने 1779 में देखा: 'पूरा बंगाल फ़िरंगियों की मज़बूत भुजा के अधीन हो गया है', अवध के पास इलाहाबाद, इटावा और रोहिल्ला प्रदेश हैं, जाट प्रदेश नजफ़ ख़ान के अधीन है, पंजाब सिखों के पास है, और दक्कन निज़ाम, मराठों, हैदर नायक और आर्काट के नवाब में बँटा है। कंपनी चार रंगों में है (बंगाल और बिहार; 1775 में मिला बनारस; उत्तरी सरकार; बंबई और सालसेट) और मराठे चार में (पेशवा का दक्कन; सिंधिया और होल्कर का उत्तर; नागपुर के भोंसले; गायकवाड़ का गुजरात)। रामपुर बचा हुआ एकमात्र रोहिल्ला राज्य है। मेवाड़, मारवाड़, जयपुर, बीकानेर, जैसलमेर, बूंदी और कोटा के राजपूत राज्य, और मराठों का अजमेर, टॉड के एनल्स (1829-32) से जोड़े गए। पूर्वोत्तर में: अहोम और कछारी, गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से; मणिपुर और जयंतिया तुंगखुंगिया और अहोम बुरंजियों (भुइयाँ और बरुआ के अनुवाद) से। ख़ाली छोड़े गए: फ़र्रुख़ाबाद और ज़ाबिता ख़ान का ऊपरी दोआब, तंजौर, त्रावणकोर और कोचीन, कश्मीर, पहाड़ी राज्य, और पूर्वोत्तर में त्रिपुरा और पहाड़, जिनका इस तिथि के लिए यहाँ पढ़े किसी स्रोत में प्रमाण नहीं। वृत्तांत इलियट और डाउसन के अनुवाद (1877) से उद्धृत हैं; विस्तार स्मिथ के ऑक्सफ़र्ड इतिहास (1919) के अनुसार। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "elliot-dowson-1877-viii",
@@ -10325,6 +10485,8 @@
     "tod-1829",
     "tod-1832",
     "gait-1906",
+    "bhuyan-1933",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -11428,7 +11590,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 4,
+   "count": 7,
    "reviewed": 0,
    "categories": [
     {
@@ -11464,6 +11626,33 @@
      "title": {
       "en": "Ahoms",
       "hi": "अहोम"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kamata",
+     "color": "#5a6a9a",
+     "title": {
+      "en": "Kāmatā",
+      "hi": "कामता"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "chutiya",
+     "color": "#9a7a5a",
+     "title": {
+      "en": "Chutiyās",
+      "hi": "चुटिया"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
      },
      "icon": "map"
     }
@@ -11497,7 +11686,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 7,
+   "count": 10,
    "reviewed": 0,
    "categories": [
     {
@@ -11530,6 +11719,30 @@
      "title": {
       "en": "Ahoms",
       "hi": "अहोम"
+     }
+    },
+    {
+     "id": "kamata",
+     "color": "#5a6a9a",
+     "title": {
+      "en": "Kāmatā",
+      "hi": "कामता"
+     }
+    },
+    {
+     "id": "chutiya",
+     "color": "#9a7a5a",
+     "title": {
+      "en": "Chutiyās",
+      "hi": "चुटिया"
+     }
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
      }
     }
    ],
@@ -11596,14 +11809,15 @@
     }
    },
    "note": {
-    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Jājnagar (Orissa) is drawn as the Eastern Gaṅga kingdom it was, from Baranī and ʿAfīf, and Kashmir under Udayanadeva and Koṭā from Jonarāja (Dutt, 1898). Left blank: Rajasthan, the Himalaya, the north-east beyond the Ahoms (who are added from the sources quoted in Gait's History of Assam (1906)), Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। जाजनगर (ओडिशा) को बरनी और अफ़ीफ़ से पूर्वी गंग राज्य के रूप में, और उदयनदेव तथा कोटा के अधीन कश्मीर को जोनराज (दत्त, 1898) से दिखाया गया है। खाली छोड़े गए: राजस्थान, हिमालय, अहोमों के परे का पूर्वोत्तर (अहोम गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1330 CE, when Muḥammad bin Tughluq ruled an empire 'far larger than that under the rule of any of his Muhammadan predecessors'. It is drawn as one polity in five shades, by how firmly each part was held: Hindustan, Malwa and Gujarat, governed from Delhi; Bengal, under governors who broke away in 1338; the Deccan, from Deogir (renamed Daulatābād and made a second capital in 1327) to Tilang, taken from the Kākatīyas in 1323, and Kampila; Dvārasamudra and Ma'bar, held loosely until Ma'bar revolted; and Jājnagar (Orissa), which al-ʿUmarī's informant counted a province but which was only raided. This is the first era drawn mainly from secondary scholarship: the extents follow Smith's Oxford History of India (1919), and the chronicles of Baranī and al-ʿUmarī, in Elliot and Dowson's 1871 translation, attest them. Jājnagar (Orissa) is drawn as the Eastern Gaṅga kingdom it was, from Baranī and ʿAfīf, and Kashmir under Udayanadeva and Koṭā from Jonarāja (Dutt, 1898). In the north-east: the Ahoms, from the sources quoted in Gait's History of Assam (1906); Kāmatā, the Chutiyās and the Kacharis from the Ahom Buranji (Barua's translation, 1930), with Gait's extents. Left blank: Rajasthan, the Himalaya, the north-east hills, Kerala and the forest country of central India, where nothing read here speaks for this date. Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1330 ई. का भारत, जब मुहम्मद बिन तुग़लक़ का साम्राज्य 'उनके किसी भी मुसलमान पूर्ववर्ती से कहीं बड़ा' था। इसे एक राज्य के रूप में पाँच छटाओं में दिखाया गया है, इस आधार पर कि हर भाग कितनी दृढ़ता से सँभाला गया: दिल्ली से शासित हिन्दुस्तान, मालवा और गुजरात; बंगाल, राज्यपालों के अधीन जो 1338 में अलग हो गए; दक्कन, देवगिरि (दौलताबाद नाम देकर 1327 में दूसरी राजधानी बनाया गया) से तिलंग तक, जो 1323 में काकतीयों से लिया गया, और कम्पिल; द्वारसमुद्र और मअबर, ढीले अधिकार में जब तक मअबर ने विद्रोह न किया; और जाजनगर (ओडिशा), जिसे अल-उमरी के सूचक ने प्रांत गिना पर जिस पर केवल धावा हुआ। यह पहला युग है जो मुख्यतः आधुनिक विद्वत्ता से खींचा गया: विस्तार स्मिथ की ऑक्सफ़र्ड हिस्ट्री ऑफ़ इंडिया (1919) के अनुसार हैं, और बरनी और अल-उमरी के इतिवृत्त, इलियट और डाउसन के 1871 के अनुवाद में, उन्हें प्रमाणित करते हैं। जाजनगर (ओडिशा) को बरनी और अफ़ीफ़ से पूर्वी गंग राज्य के रूप में, और उदयनदेव तथा कोटा के अधीन कश्मीर को जोनराज (दत्त, 1898) से दिखाया गया है। पूर्वोत्तर में: अहोम, गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से; कामता, चुटिया और कछारी अहोम बुरंजी (बरुआ का अनुवाद, 1930) से, गेट के विस्तारों के साथ। खाली छोड़े गए: राजस्थान, हिमालय, पूर्वोत्तर के पहाड़, केरल और मध्य भारत का वन प्रदेश, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर नहीं बोलता। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "smith-1919",
     "elliot-dowson-1871",
     "dutt-1898-iii",
     "gait-1906",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -11629,7 +11843,7 @@
    "icon": "temple",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 16,
    "reviewed": 0,
    "categories": [
     {
@@ -11755,6 +11969,24 @@
      "title": {
       "en": "Ahoms",
       "hi": "अहोम"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     },
+     "icon": "pin"
+    },
+    {
+     "id": "koch",
+     "color": "#4a7a8a",
+     "title": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
      },
      "icon": "pin"
     }
@@ -11893,7 +12125,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 14,
+   "count": 17,
    "reviewed": 0,
    "categories": [
     {
@@ -12019,6 +12251,33 @@
      "title": {
       "en": "Ahoms",
       "hi": "अहोम"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "koch",
+     "color": "#4a7a8a",
+     "title": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
+     },
+     "icon": "map"
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
      },
      "icon": "map"
     }
@@ -12053,7 +12312,7 @@
    "icon": "map",
    "group": "history-kingdoms",
    "default_on": false,
-   "count": 16,
+   "count": 19,
    "reviewed": 0,
    "categories": [
     {
@@ -12166,6 +12425,30 @@
      "title": {
       "en": "Ahoms",
       "hi": "अहोम"
+     }
+    },
+    {
+     "id": "kachari",
+     "color": "#8a6a3a",
+     "title": {
+      "en": "Kacharis",
+      "hi": "कछारी"
+     }
+    },
+    {
+     "id": "koch",
+     "color": "#4a7a8a",
+     "title": {
+      "en": "Koch kingdom",
+      "hi": "कोच राज्य"
+     }
+    },
+    {
+     "id": "manipur",
+     "color": "#7a5a8a",
+     "title": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
      }
     }
    ],
@@ -12232,8 +12515,8 @@
     }
    },
    "note": {
-    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. The Shāh Mīrī sultanate of Kashmir is added from Prājyabhaṭṭa and Śuka's chronicle (Dutt, 1898). Left blank: Khandesh, the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, the Koch and the rest of the north-east (the Ahoms are added from the sources quoted in Gait's History of Assam (1906)), and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
-    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। कश्मीर की शाह मीरी सल्तनत प्राज्यभट्ट और शुक के वृत्तांत (दत्त, 1898) से जोड़ी गई। खाली छोड़े गए: ख़ानदेश, पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, कोच और शेष पूर्वोत्तर (अहोम गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से जोड़े गए), और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+    "en": "India about 1525 CE, as Bābur found it when he came in 1526: 'five Musulman Kings and two Pagans exercised royal authority'. The Afghans of the Lodī line held the capital and the country 'from Behreh to Behar'; the sultans of Gujarat, Malwa and Bengal ruled their kingdoms; the Bahmanī kingdom of the Deccan had broken into five sultanates, drawn here separately (Berar, Ahmadnagar, Bijapur, Bidar and Golkonda) after Smith's Oxford History (1919). Of the two Pagan powers, Rana Sanga of Mewār had taken Ranthambhor, Sarangpur, Bhilsa and Chanderi from Malwa, and Kṛṣṇadevarāya's Vijayanagara, 'the most powerful', held the south from Bhatkal to Coromandel and took the Raichur doab in 1520, as the Portuguese Paes and Nuniz record; the Gajapatis of Orissa lay to its east. The Shāh Mīrī sultanate of Kashmir is added from Prājyabhaṭṭa and Śuka's chronicle (Dutt, 1898). In the north-east: the Ahoms, from the sources quoted in Gait's History of Assam (1906); the Kacharis of Dimapur, Bisva Siṃha's Koch kingdom and Manipur from the Ahom Buranji (Barua's translation, 1930), with Gait's extents. Left blank: Khandesh, the hills, the Rajput states beyond Mewār, the Gond and Haihaya kingdoms of central India, the north-east hills and Tripura, and Kerala, which nothing read here attests for this date. Bābur is quoted in Leyden and Erskine's translation (1826), Paes and Nuniz in Sewell's (1900). Drawn on today's districts, to the nearest district.",
+    "hi": "लगभग 1525 ई. का भारत, जैसा बाबर ने 1526 में आकर पाया: 'पाँच मुसलमान बादशाह और दो मूर्तिपूजक राजसत्ता चलाते थे'। लोदी वंश के अफ़ग़ानों के पास राजधानी और 'भेरा से बिहार तक' का देश था; गुजरात, मालवा और बंगाल के सुल्तान अपने राज्यों पर राज करते थे; दक्कन का बहमनी राज्य पाँच सल्तनतों में टूट चुका था, जिन्हें यहाँ स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार अलग-अलग दिखाया गया है (बरार, अहमदनगर, बीजापुर, बीदर और गोलकोंडा)। दो मूर्तिपूजक शक्तियों में, मेवाड़ के राणा साँगा ने मालवा से रणथंभौर, सारंगपुर, भिलसा और चंदेरी ले लिए थे, और कृष्णदेवराय का विजयनगर, 'सबसे शक्तिशाली', भटकल से कोरोमंडल तक दक्षिण रखता था और 1520 में रायचूर दोआब लिया, जैसा पुर्तगाली पाइस और नुनीज़ दर्ज करते हैं; उसके पूर्व में ओडिशा के गजपति थे। कश्मीर की शाह मीरी सल्तनत प्राज्यभट्ट और शुक के वृत्तांत (दत्त, 1898) से जोड़ी गई। पूर्वोत्तर में: अहोम, गेट की हिस्ट्री ऑफ़ असम (1906) में उद्धृत स्रोतों से; दीमापुर के कछारी, विश्वसिंह का कोच राज्य और मणिपुर अहोम बुरंजी (बरुआ का अनुवाद, 1930) से, गेट के विस्तारों के साथ। खाली छोड़े गए: ख़ानदेश, पहाड़, मेवाड़ के परे के राजपूत राज्य, मध्य भारत के गोंड और हैहय राज्य, पूर्वोत्तर के पहाड़ और त्रिपुरा, और केरल, जिनके लिए यहाँ पढ़ा कुछ भी इस तिथि पर प्रमाण नहीं देता। बाबर लेडन और एर्स्किन के अनुवाद (1826) में, पाइस और नुनीज़ सुएल के (1900) में उद्धृत हैं। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
    },
    "sources": [
     "leyden-erskine-1826",
@@ -12241,6 +12524,7 @@
     "smith-1919",
     "dutt-1898-iii",
     "gait-1906",
+    "barua-1930",
     "census-2011",
     "datameet-maps",
     "wikipedia"
@@ -12338,12 +12622,12 @@
    "sha256": "f96275621d48"
   },
   "plates.json": {
-   "size": 49134,
-   "sha256": "935cbd039ad6"
+   "size": 49161,
+   "sha256": "584d93b52bb4"
   },
   "sources.json": {
-   "size": 65263,
-   "sha256": "b685faf2c08d"
+   "size": 67865,
+   "sha256": "87f3430ac0f5"
   },
   "regions/india-edge-1024.bin.gz": {
    "size": 44836,
@@ -12522,40 +12806,40 @@
    "sha256": "e66f945fbc8e"
   },
   "layers/akbar-areas.bin.gz": {
-   "size": 7788,
-   "sha256": "524cb4c0f281"
+   "size": 7947,
+   "sha256": "d6d46d4cc03b"
   },
   "layers/akbar-capitals.json": {
-   "size": 9294,
-   "sha256": "f0b5323f2e50"
+   "size": 9917,
+   "sha256": "59305f85da4f"
   },
   "layers/akbar-evidence.json": {
    "size": 2190,
    "sha256": "5d1b6a75ebd3"
   },
   "layers/akbar-names.json": {
-   "size": 9782,
-   "sha256": "daacaa80eb69"
+   "size": 11807,
+   "sha256": "7d519c44875d"
   },
   "layers/akbar.json": {
-   "size": 30144,
-   "sha256": "37634bef52db"
+   "size": 34110,
+   "sha256": "12b151ae0bd3"
   },
   "layers/aurangzeb-areas.bin.gz": {
-   "size": 7680,
-   "sha256": "df13814e9cc4"
+   "size": 7882,
+   "sha256": "2d39b5819bc1"
   },
   "layers/aurangzeb-capitals.json": {
-   "size": 10052,
-   "sha256": "4511e3f74729"
+   "size": 10675,
+   "sha256": "c3ff21f44b52"
   },
   "layers/aurangzeb-names.json": {
-   "size": 10048,
-   "sha256": "fdd3655b4523"
+   "size": 12153,
+   "sha256": "90474792397c"
   },
   "layers/aurangzeb.json": {
-   "size": 27155,
-   "sha256": "962817538878"
+   "size": 31487,
+   "sha256": "3ae4d94502a8"
   },
   "layers/basins-areas.bin.gz": {
    "size": 10351,
@@ -12830,8 +13114,8 @@
    "sha256": "a90d7c2d14b2"
   },
   "layers/panipat-areas.bin.gz": {
-   "size": 9362,
-   "sha256": "227dab15e94d"
+   "size": 9486,
+   "sha256": "1adc30a3363c"
   },
   "layers/panipat-capitals.json": {
    "size": 13125,
@@ -12842,12 +13126,12 @@
    "sha256": "19306968de8a"
   },
   "layers/panipat-names.json": {
-   "size": 14355,
-   "sha256": "8f08bc7b7c96"
+   "size": 16463,
+   "sha256": "84ca39556739"
   },
   "layers/panipat.json": {
-   "size": 40560,
-   "sha256": "dd48ae2a5782"
+   "size": 44366,
+   "sha256": "77068a525480"
   },
   "layers/physiography-areas.bin.gz": {
    "size": 7773,
@@ -12926,20 +13210,20 @@
    "sha256": "e0691be257a8"
   },
   "layers/salbai-areas.bin.gz": {
-   "size": 10018,
-   "sha256": "87cd24d8082b"
+   "size": 10143,
+   "sha256": "da42475f127b"
   },
   "layers/salbai-capitals.json": {
    "size": 12610,
    "sha256": "bb1671e4535a"
   },
   "layers/salbai-names.json": {
-   "size": 14917,
-   "sha256": "6a52c3ee8233"
+   "size": 16774,
+   "sha256": "eea786853da5"
   },
   "layers/salbai.json": {
-   "size": 49405,
-   "sha256": "bba64874d8ed"
+   "size": 52946,
+   "sha256": "89c8a5939884"
   },
   "layers/steel.json": {
    "size": 15080,
@@ -12990,8 +13274,8 @@
    "sha256": "93775ea4d0b8"
   },
   "layers/tughluq-areas.bin.gz": {
-   "size": 6943,
-   "sha256": "ad887b671d82"
+   "size": 7562,
+   "sha256": "c5321bc24dad"
   },
   "layers/tughluq-capitals.json": {
    "size": 5554,
@@ -13002,32 +13286,32 @@
    "sha256": "d5fb505598cf"
   },
   "layers/tughluq-names.json": {
-   "size": 4569,
-   "sha256": "888e6eba1ae8"
+   "size": 7605,
+   "sha256": "28ebe46c9191"
   },
   "layers/tughluq.json": {
-   "size": 18250,
-   "sha256": "0b0f27f83471"
+   "size": 23580,
+   "sha256": "b5019d98ae0d"
   },
   "layers/vijayanagara-areas.bin.gz": {
-   "size": 8205,
-   "sha256": "f0cb48203ae5"
+   "size": 8711,
+   "sha256": "f39042f96b2e"
   },
   "layers/vijayanagara-capitals.json": {
-   "size": 10074,
-   "sha256": "2a3653873dd9"
+   "size": 11459,
+   "sha256": "537ef3a5b27a"
   },
   "layers/vijayanagara-evidence.json": {
    "size": 3245,
    "sha256": "581a11beb1f0"
   },
   "layers/vijayanagara-names.json": {
-   "size": 11283,
-   "sha256": "b7d6d4668d4c"
+   "size": 14273,
+   "sha256": "28c281c4c30f"
   },
   "layers/vijayanagara.json": {
-   "size": 29318,
-   "sha256": "6a498c4b23e1"
+   "size": 34646,
+   "sha256": "34f41b8545a8"
   },
   "layers/zones.json": {
    "size": 2516,
