@@ -1,0 +1,131 @@
+{
+  "id": "company-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Names: c. 1857 CE",
+    "hi": "नाम: लगभग 1857 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "british",
+      "color": "#b8454f",
+      "title": {
+        "en": "British India (the Company)",
+        "hi": "ब्रिटिश भारत (कंपनी)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "hyderabad",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Hyderabad",
+        "hi": "हैदराबाद"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "travancore",
+      "color": "#c9785a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cochin",
+      "color": "#b8854a",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "gwalior",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "indore",
+      "color": "#e0a060",
+      "title": {
+        "en": "Indore",
+        "hi": "इंदौर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "baroda",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Baroda",
+        "hi": "बड़ौदा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Jammu and Kashmir",
+        "hi": "जम्मू और कश्मीर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rajputana",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Rājputāna states",
+        "hi": "राजपूताना के राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "central",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Central India states",
+        "hi": "मध्य भारत के राज्य"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "gujarat-states",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Kathiawar and Kutch",
+        "hi": "काठियावाड़ और कच्छ"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "thornton-1857",
+    "smith-1919"
+  ]
+}

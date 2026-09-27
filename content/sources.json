@@ -1091,6 +1091,24 @@
         "en": "The chronicles quoted for the Marāṭhās and the successor states, c. 1760 CE.",
         "hi": "लगभग 1760 ई. के मराठों और उत्तराधिकारी राज्यों के लिए उद्धृत इतिवृत्त।"
       }
+    },
+    "thornton-1857": {
+      "title": {
+        "en": "E. Thornton, A Gazetteer of the Territories under the Government of the East-India Company, and of the Native States (1857)",
+        "hi": "ई. थॉर्नटन, ईस्ट इंडिया कंपनी के शासनाधीन क्षेत्रों और देशी राज्यों का गज़ेटियर (1857)"
+      },
+      "publisher": {
+        "en": "W. H. Allen, London",
+        "hi": "डब्ल्यू. एच. एलन, लंदन"
+      },
+      "url": "https://archive.org/details/10433796bsb",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The gazetteer quoted for the Company's India and the princely states, c. 1857 CE.",
+        "hi": "लगभग 1857 ई. के कंपनी के भारत और रियासतों के लिए उद्धृत गज़ेटियर।"
+      }
     }
   }
 }

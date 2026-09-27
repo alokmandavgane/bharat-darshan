@@ -65,7 +65,10 @@
     "panipat",
     "panipat-names",
     "panipat-capitals",
-    "panipat-evidence"
+    "panipat-evidence",
+    "company",
+    "company-names",
+    "company-capitals"
   ],
   "relief": 10,
   "status": "draft",
@@ -360,6 +363,26 @@
         "panipat-names",
         "panipat-capitals",
         "panipat-evidence"
+      ]
+    },
+    {
+      "id": "company",
+      "display": {
+        "en": "c. 1857 CE",
+        "hi": "लगभग 1857 ई."
+      },
+      "title": {
+        "en": "The Company's India and the princely states",
+        "hi": "कंपनी का भारत और रियासतें"
+      },
+      "blurb": {
+        "en": "The East India Company's India in 1857, its presidencies and annexed provinces, and the protected states around them, from Thornton's Gazetteer of 1857 and Smith's Oxford History.",
+        "hi": "1857 में ईस्ट इंडिया कंपनी का भारत, उसकी प्रेसीडेंसियाँ और मिलाए गए प्रांत, और उनके चारों ओर संरक्षित राज्य, थॉर्नटन के 1857 के गज़ेटियर और स्मिथ की ऑक्सफ़र्ड हिस्ट्री से।"
+      },
+      "layers": [
+        "company",
+        "company-names",
+        "company-capitals"
       ]
     }
   ],

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "british",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.6,
+      "lon": 85.4
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "hyderabad",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.6,
+      "lon": 78.6
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Niẓām's dominions, the largest of the protected states; its Berar districts were under British management from 1853.",
+      "hi": "निज़ाम के प्रदेश, संरक्षित राज्यों में सबसे बड़े; इसके बरार ज़िले 1853 से ब्रिटिश प्रबंध में थे।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "mysore",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.4,
+      "lon": 76.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Mysore under British commissioners since 1831, its Wodeyar Rāja on the throne in name.",
+      "hi": "1831 से ब्रिटिश आयुक्तों के अधीन मैसूर, उसके वोडेयार राजा नाम मात्र के लिए सिंहासन पर।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "travancore",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.0,
+      "lon": 76.9
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The kingdom of Travancore, a protected state in the far south-west.",
+      "hi": "त्रावणकोर का राज्य, सुदूर दक्षिण-पश्चिम में एक संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "cochin",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.4,
+      "lon": 76.3
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "The kings of Cochin, whose old capital had passed to the British.",
+      "hi": "कोचीन के राजा, जिनकी पुरानी राजधानी अंग्रेज़ों के हाथ जा चुकी थी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "gwalior",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "category": "gwalior",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.9,
+      "lon": 77.9
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Sindhias of Gwalior, the greatest of the Marāṭhā houses left, now a protected state.",
+      "hi": "ग्वालियर के सिंधिया, बचे मराठा घरानों में सबसे बड़े, अब एक संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "indore",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.3,
+      "lon": 75.9
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Holkars of Indore, a protected Marāṭhā state in Malwa.",
+      "hi": "इंदौर के होल्कर, मालवा में एक संरक्षित मराठा राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "baroda",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.4,
+      "lon": 72.5
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Gaekwads of Baroda, whose scattered territories lay among the British districts of Gujarat.",
+      "hi": "बड़ौदा के गायकवाड़, जिनके बिखरे क्षेत्र गुजरात के ब्रिटिश ज़िलों के बीच थे।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 33.6,
+      "lon": 75.8
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "blurb": {
+      "en": "Gulāb Singh's Jammu and Kashmir, sold to him by the Company in 1846.",
+      "hi": "गुलाब सिंह का जम्मू और कश्मीर, 1846 में कंपनी द्वारा उन्हें बेचा गया।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "rajputana",
+    "status": "draft",
+    "name": {
+      "en": "Rājputāna states",
+      "hi": "राजपूताना के राज्य"
+    },
+    "category": "rajputana",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.4,
+      "lon": 72.8
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rajput and other protected states of Rājputāna, under the Governor-General's Agent; Ajmer was British.",
+      "hi": "राजपूताना के राजपूत और अन्य संरक्षित राज्य, गवर्नर-जनरल के एजेंट के अधीन; अजमेर ब्रिटिश था।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "central",
+    "status": "draft",
+    "name": {
+      "en": "Central India states",
+      "hi": "मध्य भारत के राज्य"
+    },
+    "category": "central",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.2,
+      "lon": 80.3
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "Bhopal, the Bundela states and Rewa, protected states under the Governor-General.",
+      "hi": "भोपाल, बुंदेला राज्य और रीवा, गवर्नर-जनरल के अधीन संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  },
+  {
+    "id": "gujarat-states",
+    "status": "draft",
+    "name": {
+      "en": "Kathiawar and Kutch",
+      "hi": "काठियावाड़ और कच्छ"
+    },
+    "category": "gujarat-states",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.0,
+      "lon": 70.4
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The peninsula's many small states and the kingdom of Kutch, under the political superintendence of Bombay.",
+      "hi": "प्रायद्वीप के अनेक छोटे राज्य और कच्छ का राज्य, बंबई के राजनीतिक अधीक्षण में।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ]
+  }
+]

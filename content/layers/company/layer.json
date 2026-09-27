@@ -1,0 +1,186 @@
+{
+  "id": "company",
+  "type": "areas",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "The Company's India and the princely states, c. 1857 CE",
+    "hi": "कंपनी का भारत और रियासतें, लगभग 1857 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "source": {
+    "format": "districts-2011"
+  },
+  "categories": [
+    {
+      "id": "british",
+      "color": "#b8454f",
+      "title": {
+        "en": "British India (the Company)",
+        "hi": "ब्रिटिश भारत (कंपनी)"
+      }
+    },
+    {
+      "id": "hyderabad",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Hyderabad",
+        "hi": "हैदराबाद"
+      }
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      }
+    },
+    {
+      "id": "travancore",
+      "color": "#c9785a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      }
+    },
+    {
+      "id": "cochin",
+      "color": "#b8854a",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      }
+    },
+    {
+      "id": "gwalior",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      }
+    },
+    {
+      "id": "indore",
+      "color": "#e0a060",
+      "title": {
+        "en": "Indore",
+        "hi": "इंदौर"
+      }
+    },
+    {
+      "id": "baroda",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Baroda",
+        "hi": "बड़ौदा"
+      }
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Jammu and Kashmir",
+        "hi": "जम्मू और कश्मीर"
+      }
+    },
+    {
+      "id": "rajputana",
+      "color": "#8a1f2c",
+      "title": {
+        "en": "Rājputāna states",
+        "hi": "राजपूताना के राज्य"
+      }
+    },
+    {
+      "id": "central",
+      "color": "#6d4a8a",
+      "title": {
+        "en": "Central India states",
+        "hi": "मध्य भारत के राज्य"
+      }
+    },
+    {
+      "id": "gujarat-states",
+      "color": "#b07a1a",
+      "title": {
+        "en": "Kathiawar and Kutch",
+        "hi": "काठियावाड़ और कच्छ"
+      }
+    }
+  ],
+  "fields": {
+    "grade": {
+      "type": "name",
+      "label": {
+        "en": "How it is known",
+        "hi": "प्रमाण"
+      }
+    },
+    "capital": {
+      "type": "name",
+      "label": {
+        "en": "Capital",
+        "hi": "राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Extent",
+        "hi": "विस्तार"
+      }
+    },
+    "reading": {
+      "type": "text",
+      "label": {
+        "en": "As the scholar puts it",
+        "hi": "विद्वान के शब्दों में"
+      }
+    },
+    "page": {
+      "type": "name",
+      "label": {
+        "en": "Cited from",
+        "hi": "स्रोत"
+      }
+    },
+    "verse": {
+      "type": "text",
+      "label": {
+        "en": "As the text has it",
+        "hi": "पाठ में"
+      }
+    },
+    "locus": {
+      "type": "name",
+      "label": {
+        "en": "Where",
+        "hi": "स्थान"
+      }
+    },
+    "km2": {
+      "type": "int",
+      "label": {
+        "en": "Area in India",
+        "hi": "भारत में क्षेत्रफल"
+      },
+      "unit": {
+        "en": "{n} km²",
+        "hi": "{n} वर्ग किमी"
+      }
+    }
+  },
+  "note": {
+    "en": "India in 1857, the last year of the East India Company's rule and the year of the great revolt, as Edward Thornton's Gazetteer of that year describes it. British India is drawn as one polity in seven shades: the three presidencies of Bengal, Madras and Bombay; the North-Western Provinces with Delhi and the Saugor and Nerbudda territories; the Panjab, annexed in 1849; Nagpur, lapsed in 1853-54; and Oudh, annexed in 1856. Around it are the protected states: the Niẓām's Hyderabad (its Berar districts under British management), Mysore (managed by British commissioners), Travancore and Cochin, Sindhia's Gwalior, Holkar's Indore, the Gaekwad's Baroda, Gulāb Singh's Jammu and Kashmir, and the grouped states of Rājputāna, Central India, and Kāṭhiāwāṛ with Kutch. The smaller states (the Panjab hill and Cis-Sutlej states, Tehri, Rampur, Kolhapur, the Orissa and Chota Nagpur tributaries, Koch Bihar, Sikkim, Manipur, Tripura, Pudukkottai) are in Thornton but not drawn at this scale, and the French and Portuguese settlements are left blank. Thornton's entry for Oudh predates its annexation, which follows Smith's Oxford History (1919). Drawn on today's districts, to the nearest district.",
+    "hi": "1857 का भारत, ईस्ट इंडिया कंपनी के शासन का अंतिम वर्ष और महाविद्रोह का वर्ष, जैसा उसी वर्ष का एडवर्ड थॉर्नटन का गज़ेटियर उसका वर्णन करता है। ब्रिटिश भारत एक राज्य के रूप में सात छटाओं में दिखाया गया है: बंगाल, मद्रास और बंबई की तीन प्रेसीडेंसियाँ; दिल्ली और सागर-नर्मदा क्षेत्रों के साथ उत्तर-पश्चिमी प्रांत; पंजाब, 1849 में मिलाया गया; नागपुर, 1853-54 में व्यपगत; और अवध, 1856 में मिलाया गया। उसके चारों ओर संरक्षित राज्य हैं: निज़ाम का हैदराबाद (उसके बरार ज़िले ब्रिटिश प्रबंध में), मैसूर (ब्रिटिश आयुक्तों द्वारा प्रबंधित), त्रावणकोर और कोचीन, सिंधिया का ग्वालियर, होल्कर का इंदौर, गायकवाड़ का बड़ौदा, गुलाब सिंह का जम्मू और कश्मीर, और राजपूताना, मध्य भारत, और कच्छ सहित काठियावाड़ के समूहीकृत राज्य। छोटे राज्य (पंजाब के पहाड़ी और सतलुज-पार राज्य, टिहरी, रामपुर, कोल्हापुर, उड़ीसा और छोटा नागपुर के करद, कूच बिहार, सिक्किम, मणिपुर, त्रिपुरा, पुदुक्कोट्टई) थॉर्नटन में हैं पर इस पैमाने पर नहीं दिखाए गए, और फ़्रांसीसी और पुर्तगाली बस्तियाँ खाली छोड़ी गई हैं। अवध के लिए थॉर्नटन की प्रविष्टि उसके विलय से पहले की है, जो स्मिथ की ऑक्सफ़र्ड हिस्ट्री (1919) के अनुसार है। आज के ज़िलों पर, निकटतम ज़िले तक खींचा गया।"
+  },
+  "sources": [
+    "thornton-1857",
+    "smith-1919",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ],
+  "attribution": "Extents after Smith (1914), Sachau's Alberuni (1888) and Hultzsch in Epigraphia Indica IX, all public domain; drawn on the 2011 census districts (DataMeet, CC BY 4.0)."
+}

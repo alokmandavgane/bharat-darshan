@@ -1,0 +1,119 @@
+{
+  "id": "company-capitals",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Capitals of c. 1857 CE",
+    "hi": "लगभग 1857 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "british",
+      "color": "#b8454f",
+      "title": {
+        "en": "British India (the Company)",
+        "hi": "ब्रिटिश भारत (कंपनी)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "hyderabad",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Hyderabad",
+        "hi": "हैदराबाद"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "travancore",
+      "color": "#c9785a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "cochin",
+      "color": "#b8854a",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "gwalior",
+      "color": "#c46a2f",
+      "title": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "indore",
+      "color": "#e0a060",
+      "title": {
+        "en": "Indore",
+        "hi": "इंदौर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "baroda",
+      "color": "#9e6a2f",
+      "title": {
+        "en": "Baroda",
+        "hi": "बड़ौदा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kashmir",
+      "color": "#3f6f8a",
+      "title": {
+        "en": "Jammu and Kashmir",
+        "hi": "जम्मू और कश्मीर"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "Calcutta, Hyderabad, Mysore, Trivandrum, Tṛppūṇittuṟa, Gwalior, Indore, Baroda and Jammu. The grouped states have no single capital.",
+    "hi": "कलकत्ता, हैदराबाद, मैसूर, त्रिवेंद्रम, त्रिपुणितुरा, ग्वालियर, इंदौर, बड़ौदा और जम्मू। समूहीकृत राज्यों की कोई एक राजधानी नहीं।"
+  },
+  "sources": [
+    "thornton-1857",
+    "wikipedia"
+  ]
+}

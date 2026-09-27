@@ -1,0 +1,299 @@
+[
+  {
+    "id": "british-capital",
+    "status": "draft",
+    "name": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    },
+    "category": "british",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.5697,
+      "lon": 88.3469
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "identified": {
+      "en": "certain, placed at Government House, Calcutta",
+      "hi": "निश्चित, Government House, Calcutta पर"
+    },
+    "blurb": {
+      "en": "The capital of British India (the Company).",
+      "hi": "ब्रिटिश भारत (कंपनी) की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Raj_Bhavan,_Kolkata"
+    ]
+  },
+  {
+    "id": "hyderabad-capital",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.358247,
+      "lon": 78.471701
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "identified": {
+      "en": "certain, placed at Chowmahalla Palace",
+      "hi": "निश्चित, Chowmahalla Palace पर"
+    },
+    "blurb": {
+      "en": "The capital of Hyderabad.",
+      "hi": "हैदराबाद की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Chowmahalla_Palace"
+    ]
+  },
+  {
+    "id": "mysore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.30388889,
+      "lon": 76.65444444
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "identified": {
+      "en": "certain, placed at Mysore Palace",
+      "hi": "निश्चित, Mysore Palace पर"
+    },
+    "blurb": {
+      "en": "The capital of Mysore.",
+      "hi": "मैसूर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Mysore_Palace"
+    ]
+  },
+  {
+    "id": "travancore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Trivandrum",
+      "hi": "त्रिवेंद्रम"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.5241,
+      "lon": 76.9366
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "identified": {
+      "en": "certain, placed at Thiruvananthapuram",
+      "hi": "निश्चित, Thiruvananthapuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Travancore.",
+      "hi": "त्रावणकोर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Thiruvananthapuram"
+    ]
+  },
+  {
+    "id": "cochin-capital",
+    "status": "draft",
+    "name": {
+      "en": "Tṛppūṇittuṟa",
+      "hi": "त्रिपुणितुरा"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.95263889,
+      "lon": 76.36416667
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "identified": {
+      "en": "certain, placed at Hill Palace, Tripunithura",
+      "hi": "निश्चित, Hill Palace, Tripunithura पर"
+    },
+    "blurb": {
+      "en": "The capital of Cochin.",
+      "hi": "कोचीन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Hill_Palace"
+    ]
+  },
+  {
+    "id": "gwalior-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior (Lashkar)",
+      "hi": "ग्वालियर (लश्कर)"
+    },
+    "category": "gwalior",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2047,
+      "lon": 78.1686
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "identified": {
+      "en": "certain, placed at Jai Vilas, Gwalior",
+      "hi": "निश्चित, Jai Vilas, Gwalior पर"
+    },
+    "blurb": {
+      "en": "The capital of Gwalior.",
+      "hi": "ग्वालियर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Jai_Vilas_Mahal"
+    ]
+  },
+  {
+    "id": "indore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.7184,
+      "lon": 75.8552
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "identified": {
+      "en": "certain, placed at Rajwada, Indore",
+      "hi": "निश्चित, Rajwada, Indore पर"
+    },
+    "blurb": {
+      "en": "The capital of Indore.",
+      "hi": "इंदौर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Rajwada"
+    ]
+  },
+  {
+    "id": "baroda-capital",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.2939,
+      "lon": 73.1914
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "identified": {
+      "en": "certain, placed at Baroda",
+      "hi": "निश्चित, Baroda पर"
+    },
+    "blurb": {
+      "en": "The capital of Baroda.",
+      "hi": "बड़ौदा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Lakshmi_Vilas_Palace,_Vadodara"
+    ]
+  },
+  {
+    "id": "kashmir-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jammu",
+      "hi": "जम्मू"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 32.7389,
+      "lon": 74.8742
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "polity": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "identified": {
+      "en": "certain, placed at Mubarak Mandi, Jammu",
+      "hi": "निश्चित, Mubarak Mandi, Jammu पर"
+    },
+    "blurb": {
+      "en": "The capital of Jammu and Kashmir.",
+      "hi": "जम्मू और कश्मीर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://en.wikipedia.org/wiki/Mubarak_Mandi_Palace"
+    ]
+  }
+]

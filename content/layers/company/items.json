@@ -1,0 +1,1300 @@
+[
+  {
+    "id": "british-bengal",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      372,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      386,
+      387
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#b8454f",
+    "grade": {
+      "en": "The Bengal Presidency: Bengal, Bihar, coastal Orissa and Assam",
+      "hi": "बंगाल प्रेसीडेंसी: बंगाल, बिहार, तटीय उड़ीसा और असम"
+    },
+    "reading": "BENGAL.—The chief presidency of British India, containing Calcutta, the seat of the supreme government,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bengal",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bengal"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-nwp",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      72,
+      73,
+      74,
+      75,
+      76,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      119,
+      132,
+      133,
+      134,
+      135,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      174,
+      175,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      201,
+      202,
+      427,
+      428,
+      447,
+      448,
+      449,
+      451,
+      452,
+      454,
+      456
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#cf6a73",
+    "grade": {
+      "en": "The North-Western Provinces, with Delhi, Saugor and Nerbudda, and Jhansi (lapsed 1853)",
+      "hi": "उत्तर-पश्चिमी प्रांत, दिल्ली, सागर-नर्मदा और झाँसी (1853 में व्यपगत) के साथ"
+    },
+    "reading": "sort of vice-presidency, under chief go- vernment of India.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. North-Western Provinces",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. North-Western Provinces"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-oudh",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      153,
+      154,
+      157,
+      158,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      155,
+      156,
+      173
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Oxford History 1919",
+      "hi": "संभावित, Oxford History 1919 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb",
+      "https://archive.org/details/oxfordhistoryofi00smituoft"
+    ],
+    "color": "#e09aa0",
+    "grade": {
+      "en": "Oudh, annexed in February 1856",
+      "hi": "अवध, फ़रवरी 1856 में मिलाया गया"
+    },
+    "reading": "The annexation of Oudh in 1856",
+    "page": {
+      "en": "Vincent A. Smith, The Oxford History of India (1919), p. 705",
+      "hi": "Vincent A. Smith, The Oxford History of India (1919), पृ. 705"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-punjab",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      49,
+      50,
+      51,
+      52,
+      55,
+      69,
+      70,
+      71
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#a0303c",
+    "grade": {
+      "en": "The Panjab, annexed in 1849",
+      "hi": "पंजाब, 1849 में मिलाया गया"
+    },
+    "reading": "the country of the Five Rivers was incorporated with the British empire.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Punjab",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Punjab"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-nagpur",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      505,
+      504,
+      506,
+      507,
+      509,
+      508,
+      410,
+      409,
+      408,
+      411,
+      412,
+      405,
+      404,
+      407,
+      455,
+      457,
+      406
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#e8b8bb",
+    "grade": {
+      "en": "Nagpur, lapsed to the Company in 1853-54",
+      "hi": "नागपुर, 1853-54 में कंपनी को व्यपगत"
+    },
+    "reading": "NAGPORE.—A British province in South- ern India",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Nagpore",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Nagpore"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-madras",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      388,
+      389,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      565,
+      569,
+      575,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      630,
+      631,
+      632,
+      633
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#8a2a36",
+    "grade": {
+      "en": "The Madras Presidency",
+      "hi": "मद्रास प्रेसीडेंसी"
+    },
+    "reading": "MADRAS.—One of the three presidencies of British India",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Madras",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Madras"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "british-bombay",
+    "status": "draft",
+    "name": {
+      "en": "British India (the Company)",
+      "hi": "ब्रिटिश भारत (कंपनी)"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      466,
+      467,
+      473,
+      474,
+      482,
+      483,
+      488,
+      491,
+      492,
+      493,
+      497,
+      498,
+      499,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      526,
+      527,
+      528,
+      529,
+      531,
+      555,
+      556,
+      557,
+      561,
+      562,
+      563,
+      564
+    ],
+    "verse": "BENGAL",
+    "locus": {
+      "en": "Thornton, s.v. Bengal",
+      "hi": "थॉर्नटन, s.v. Bengal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The East India Company's India in its last year: three presidencies and the provinces won by conquest or lapse, the year the great revolt broke out.",
+      "hi": "अपने अंतिम वर्ष में ईस्ट इंडिया कंपनी का भारत: तीन प्रेसीडेंसियाँ और विजय या व्यपगत से जीते प्रांत, जिस वर्ष महाविद्रोह फूटा।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#c4808a",
+    "grade": {
+      "en": "The Bombay Presidency",
+      "hi": "बंबई प्रेसीडेंसी"
+    },
+    "reading": "BOMBAY.—One of the three British pre- sidencies of India",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bombay",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bombay"
+    },
+    "capital": {
+      "en": "Calcutta",
+      "hi": "कलकत्ता"
+    }
+  },
+  {
+    "id": "hyderabad-held",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "rank": 1,
+    "districts": [
+      536,
+      537,
+      535,
+      538,
+      539,
+      540,
+      541,
+      534,
+      532,
+      533,
+      514,
+      523,
+      513,
+      511,
+      512,
+      524,
+      525,
+      558,
+      579,
+      580,
+      559,
+      560,
+      515
+    ],
+    "verse": "Nizam",
+    "locus": {
+      "en": "Thornton, s.v. Hyderabad",
+      "hi": "थॉर्नटन, s.v. Hyderabad"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Niẓām's dominions, the largest of the protected states; its Berar districts were under British management from 1853.",
+      "hi": "निज़ाम के प्रदेश, संरक्षित राज्यों में सबसे बड़े; इसके बरार ज़िले 1853 से ब्रिटिश प्रबंध में थे।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "'The territory of the Nizam, an extensive realm of Southern India'",
+      "hi": "'निज़ाम का क्षेत्र, दक्षिण भारत का एक विस्तृत राज्य'"
+    },
+    "reading": "HYDERABAD, or the territory of the Nizam, an extensive realm of Southern Indi",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Hyderabad",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Hyderabad"
+    },
+    "capital": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    }
+  },
+  {
+    "id": "hyderabad-berar",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "rank": 1,
+    "districts": [
+      500,
+      501,
+      502,
+      503,
+      510
+    ],
+    "verse": "Nizam",
+    "locus": {
+      "en": "Thornton, s.v. Hyderabad",
+      "hi": "थॉर्नटन, s.v. Hyderabad"
+    },
+    "identified": {
+      "en": "disputed, after Gazetteer 1857",
+      "hi": "विवादित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Niẓām's dominions, the largest of the protected states; its Berar districts were under British management from 1853.",
+      "hi": "निज़ाम के प्रदेश, संरक्षित राज्यों में सबसे बड़े; इसके बरार ज़िले 1853 से ब्रिटिश प्रबंध में थे।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#a9c0d3",
+    "grade": {
+      "en": "Berar, assigned to the Company in 1853 for the Nizam's debts",
+      "hi": "बरार, निज़ाम के ऋणों के लिए 1853 में कंपनी को सौंपा गया"
+    },
+    "reading": "the territory of the Nizam, that of Berar,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Madras",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Madras"
+    },
+    "capital": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    }
+  },
+  {
+    "id": "mysore-managed",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "rank": 1,
+    "districts": [
+      566,
+      567,
+      570,
+      571,
+      572,
+      573,
+      574,
+      576,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584
+    ],
+    "verse": "principality",
+    "locus": {
+      "en": "Thornton, s.v. Mysore",
+      "hi": "थॉर्नटन, s.v. Mysore"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "Mysore under British commissioners since 1831, its Wodeyar Rāja on the throne in name.",
+      "hi": "1831 से ब्रिटिश आयुक्तों के अधीन मैसूर, उसके वोडेयार राजा नाम मात्र के लिए सिंहासन पर।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "A principality whose 'entire management' the Company exercised",
+      "hi": "एक रियासत जिसका 'पूरा प्रबंध' कंपनी करती थी"
+    },
+    "reading": "by whom, indeed, the entire management of its affairs is at present exer- cised.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Mysore",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Mysore"
+    },
+    "capital": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    }
+  },
+  {
+    "id": "travancore-held",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "rank": 1,
+    "districts": [
+      601,
+      600,
+      599,
+      598,
+      597,
+      596,
+      629
+    ],
+    "verse": "TRAVANCORE",
+    "locus": {
+      "en": "Thornton, s.v. Travancore",
+      "hi": "थॉर्नटन, s.v. Travancore"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The kingdom of Travancore, a protected state in the far south-west.",
+      "hi": "त्रावणकोर का राज्य, सुदूर दक्षिण-पश्चिम में एक संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#c9785a",
+    "grade": {
+      "en": "Travancore, under the political superintendence of Madras",
+      "hi": "त्रावणकोर, मद्रास के राजनीतिक अधीक्षण में"
+    },
+    "reading": "TRAVANCORE. — A native state in the",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Travancore",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Travancore"
+    },
+    "capital": {
+      "en": "Trivandrum",
+      "hi": "त्रिवेंद्रम"
+    }
+  },
+  {
+    "id": "cochin-held",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "rank": 1,
+    "districts": [
+      595,
+      594
+    ],
+    "verse": "COCHIN",
+    "locus": {
+      "en": "Thornton, s.v. Cochin",
+      "hi": "थॉर्नटन, s.v. Cochin"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The kings of Cochin, whose old capital had passed to the British.",
+      "hi": "कोचीन के राजा, जिनकी पुरानी राजधानी अंग्रेज़ों के हाथ जा चुकी थी।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#b8854a",
+    "grade": {
+      "en": "The raj of Cochin, 'politically connected with the presidency of Madras'",
+      "hi": "कोचीन का राज, 'मद्रास प्रेसीडेंसी से राजनीतिक रूप से जुड़ा'"
+    },
+    "reading": "COCHIN.—A raj, or native state, politi- cally connected with the presidency of Madras,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Cochin",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Cochin"
+    },
+    "capital": {
+      "en": "Tṛppūṇittuṟa",
+      "hi": "त्रिपुणितुरा"
+    }
+  },
+  {
+    "id": "gwalior-held",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "category": "gwalior",
+    "rank": 1,
+    "districts": [
+      421,
+      419,
+      420,
+      423,
+      458,
+      459,
+      435,
+      436,
+      433,
+      432,
+      443,
+      418,
+      484,
+      485
+    ],
+    "verse": "Gwalior, or possessions of Scindia",
+    "locus": {
+      "en": "Thornton, s.v. Baroda (Gwalior)",
+      "hi": "थॉर्नटन, s.v. Baroda (Gwalior)"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sindhias of Gwalior, the greatest of the Marāṭhā houses left, now a protected state.",
+      "hi": "ग्वालियर के सिंधिया, बचे मराठा घरानों में सबसे बड़े, अब एक संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#c46a2f",
+    "grade": {
+      "en": "'The possessions of Scindia'",
+      "hi": "'सिंधिया की संपत्ति'"
+    },
+    "reading": "Gwalior, or possessions of Scindia,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Baroda (Gwalior)",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Baroda (Gwalior)"
+    },
+    "capital": {
+      "en": "Gwalior (Lashkar)",
+      "hi": "ग्वालियर (लश्कर)"
+    }
+  },
+  {
+    "id": "indore-held",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "rank": 1,
+    "districts": [
+      439,
+      440
+    ],
+    "verse": "Indore, or possessions of Holkar",
+    "locus": {
+      "en": "Thornton, s.v. Amba",
+      "hi": "थॉर्नटन, s.v. Amba"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Holkars of Indore, a protected Marāṭhā state in Malwa.",
+      "hi": "इंदौर के होल्कर, मालवा में एक संरक्षित मराठा राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#e0a060",
+    "grade": {
+      "en": "'The possessions of Holkar'",
+      "hi": "'होल्कर की संपत्ति'"
+    },
+    "reading": "Indore, or possessions of Holkar,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Amba",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Amba"
+    },
+    "capital": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    }
+  },
+  {
+    "id": "baroda-held",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "rank": 1,
+    "districts": [
+      486,
+      471,
+      480,
+      490
+    ],
+    "verse": "Gui- \ncowar (read: Guicowar)",
+    "locus": {
+      "en": "Thornton, s.v. Baroda (Guzerat)",
+      "hi": "थॉर्नटन, s.v. Baroda (Guzerat)"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Gaekwads of Baroda, whose scattered territories lay among the British districts of Gujarat.",
+      "hi": "बड़ौदा के गायकवाड़, जिनके बिखरे क्षेत्र गुजरात के ब्रिटिश ज़िलों के बीच थे।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#9e6a2f",
+    "grade": {
+      "en": "The Gaekwad's territory in Gujarat",
+      "hi": "गुजरात में गायकवाड़ का क्षेत्र"
+    },
+    "reading": "the capital of the territory of the prince called the Gui- cowar,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Baroda (Guzerat)",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Baroda (Guzerat)"
+    },
+    "capital": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "verse": "Kashmere, or the dominions of Gholab Singh",
+    "locus": {
+      "en": "Thornton, s.v. Abrang",
+      "hi": "थॉर्नटन, s.v. Abrang"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "Gulāb Singh's Jammu and Kashmir, sold to him by the Company in 1846.",
+      "hi": "गुलाब सिंह का जम्मू और कश्मीर, 1846 में कंपनी द्वारा उन्हें बेचा गया।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#3f6f8a",
+    "grade": {
+      "en": "'The dominions of Gholab Singh'",
+      "hi": "'गुलाब सिंह के प्रदेश'"
+    },
+    "reading": "Kashmere, or the dominions of Gholab Singh,",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Abrang",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Abrang"
+    },
+    "capital": {
+      "en": "Jammu",
+      "hi": "जम्मू"
+    }
+  },
+  {
+    "id": "rajputana-held",
+    "status": "draft",
+    "name": {
+      "en": "Rājputāna states",
+      "hi": "राजपूताना के राज्य"
+    },
+    "category": "rajputana",
+    "rank": 1,
+    "districts": [
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "verse": "RAJPOOTANA",
+    "locus": {
+      "en": "Thornton, s.v. Rajpootana",
+      "hi": "थॉर्नटन, s.v. Rajpootana"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rajput and other protected states of Rājputāna, under the Governor-General's Agent; Ajmer was British.",
+      "hi": "राजपूताना के राजपूत और अन्य संरक्षित राज्य, गवर्नर-जनरल के एजेंट के अधीन; अजमेर ब्रिटिश था।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#8a1f2c",
+    "grade": {
+      "en": "Rājputāna, 'so denominated from its prevailing population, the Rajpoots'",
+      "hi": "राजपूताना, 'अपनी प्रमुख आबादी, राजपूतों, के नाम से'"
+    },
+    "reading": "so denominated from its pre- vailing population, the Rajpoots.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Rajpootana",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Rajpootana"
+    }
+  },
+  {
+    "id": "central-held",
+    "status": "draft",
+    "name": {
+      "en": "Central India states",
+      "hi": "मध्य भारत के राज्य"
+    },
+    "category": "central",
+    "rank": 1,
+    "districts": [
+      444,
+      445,
+      446,
+      437,
+      438,
+      434,
+      464,
+      465,
+      441,
+      422,
+      424,
+      425,
+      426,
+      430,
+      429,
+      462,
+      463,
+      431,
+      460,
+      461,
+      453,
+      442
+    ],
+    "verse": "BHOPAL",
+    "locus": {
+      "en": "Thornton, s.v. Bhopal",
+      "hi": "थॉर्नटन, s.v. Bhopal"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "Bhopal, the Bundela states and Rewa, protected states under the Governor-General.",
+      "hi": "भोपाल, बुंदेला राज्य और रीवा, गवर्नर-जनरल के अधीन संरक्षित राज्य।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#6d4a8a",
+    "grade": {
+      "en": "Bhopal, the Bundelkhand states, Rewa and the lesser Malwa states",
+      "hi": "भोपाल, बुंदेलखंड के राज्य, रीवा और मालवा के छोटे राज्य"
+    },
+    "reading": "BHOPAL.—A native state in Malwa, pre- sidency of Bengal, under the political superin- tendence of the Governor-General.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bhopal",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Bhopal"
+    }
+  },
+  {
+    "id": "gujarat-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Kathiawar and Kutch",
+      "hi": "काठियावाड़ और कच्छ"
+    },
+    "category": "gujarat-states",
+    "rank": 1,
+    "districts": [
+      468,
+      469,
+      470,
+      472,
+      475,
+      476,
+      477,
+      478,
+      479,
+      481,
+      487,
+      489
+    ],
+    "verse": "KATTYWAR",
+    "locus": {
+      "en": "Thornton, s.v. Kattywar",
+      "hi": "थॉर्नटन, s.v. Kattywar"
+    },
+    "identified": {
+      "en": "likely, after Gazetteer 1857",
+      "hi": "संभावित, Gazetteer 1857 के अनुसार"
+    },
+    "blurb": {
+      "en": "The peninsula's many small states and the kingdom of Kutch, under the political superintendence of Bombay.",
+      "hi": "प्रायद्वीप के अनेक छोटे राज्य और कच्छ का राज्य, बंबई के राजनीतिक अधीक्षण में।"
+    },
+    "sources": [
+      "https://archive.org/details/10433796bsb"
+    ],
+    "color": "#b07a1a",
+    "grade": {
+      "en": "Kāṭhiāwāṛ, Kutch and the Gujarat states, under the Bombay government",
+      "hi": "काठियावाड़, कच्छ और गुजरात के राज्य, बंबई सरकार के अधीन"
+    },
+    "reading": "CUTCH.—A native state under the poli- tical superintendence of the government of Bombay.",
+    "page": {
+      "en": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Cutch",
+      "hi": "Edward Thornton, A Gazetteer of the Territories under the Government of the East-India Company (1857), s.v. Cutch"
+    }
+  }
+]

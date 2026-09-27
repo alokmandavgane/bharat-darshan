@@ -2450,6 +2450,16 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-27, eighty-fourth round: the Company's India and the princely states, c. 1857 CE. "Kingdoms and empires"
+  gains its fifteenth and last planned era, from Edward Thornton's Gazetteer of 1857 and Smith's Oxford History (1919).
+  - **The areas:** British India as one polity in seven shades (Bengal, the North-Western Provinces, Oudh, the Panjab,
+    Nagpur, Madras, Bombay); Hyderabad (Berar assigned, disputed), Mysore (British-managed), Travancore, Cochin,
+    Gwalior, Indore, Baroda, Jammu and Kashmir; the grouped Rājputāna, Central India, and Kathiawar and Kutch states.
+  - **Capitals:** nine; the grouped states have none. No evidence pins.
+  - **Headword citations:** Thornton's OCR has no usable page numbers, so its cites are 's.v. Bengal'; the gazetteer
+    tool accepts that form and the card prints it without 'p.'.
+  - Gwalior, Indore and Baroda take short names to fit western India at country zoom. All twelve names show at
+    1280x800; 48 tests and the build pass.
 - 2026-09-27, eighty-third round: the Marāṭhās and the successor states, c. 1760 CE. "Kingdoms and empires" gains its
   fourteenth era, from four chronicles in Elliot and Dowson vol. VIII (1877) and Smith's Oxford History (1919).
   - **The areas:** the Marāṭhā confederacy in two shades (the Peshwa's Deccan; the Sindhia, Holkar, Gaekwad and Bhonsle
