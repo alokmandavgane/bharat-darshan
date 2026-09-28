@@ -1,0 +1,962 @@
+[
+  {
+    "id": "british",
+    "status": "draft",
+    "name": {
+      "en": "British India",
+      "hi": "ब्रिटिश भारत"
+    },
+    "category": "british",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2,
+      "lon": 84.2
+    },
+    "regions": [
+      "IN-BR"
+    ],
+    "blurb": {
+      "en": "British India on the eve of independence: the Governors' Provinces and the Chief Commissioners' Provinces, 'pink' on the map beside the 'yellow' of the States.",
+      "hi": "स्वतंत्रता की पूर्वसंध्या पर ब्रिटिश भारत: गवर्नरों के प्रांत और मुख्य आयुक्तों के प्रांत, मानचित्र पर रियासतों के 'पीले' के साथ 'गुलाबी'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "hyderabad",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.9,
+      "lon": 78.3
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "blurb": {
+      "en": "The Niẓām's Hyderabad, 82,313 square miles; it did not accede in 1947 and stood outside the Dominion until September 1948. Berar, its sovereign territory, was run as part of the Central Provinces.",
+      "hi": "निज़ाम का हैदराबाद, 82,313 वर्ग मील; इसने 1947 में विलय नहीं किया और सितंबर 1948 तक डोमिनियन से बाहर रहा। इसका संप्रभु क्षेत्र बरार मध्य प्रांत के अंग के रूप में चलाया जाता था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "kashmir",
+    "status": "draft",
+    "name": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.3,
+      "lon": 76.2
+    },
+    "regions": [
+      "IN-LA"
+    ],
+    "blurb": {
+      "en": "The Maharaja's Jammu and Kashmir, the largest State at 84,471 square miles; it had not acceded on 15 August 1947 and acceded to India on 26 October.",
+      "hi": "महाराजा का जम्मू और कश्मीर, 84,471 वर्ग मील के साथ सबसे बड़ी रियासत; 15 अगस्त 1947 को इसका विलय नहीं हुआ था और 26 अक्टूबर को यह भारत में शामिल हुआ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "mysore",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 13.5,
+      "lon": 76.3
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "blurb": {
+      "en": "Mysore under its Wodeyar Maharaja, 'a unit larger than the Irish Free State and having twice its population'.",
+      "hi": "अपने वोडेयार महाराजा के अधीन मैसूर, 'आयरिश फ़्री स्टेट से बड़ी इकाई और उसकी दुगुनी जनसंख्या वाली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "travancore",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.9,
+      "lon": 77.1
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "Travancore, a densely peopled State on the south-west coast, joined with Cochin in July 1949.",
+      "hi": "त्रावणकोर, दक्षिण-पश्चिमी तट पर घनी आबादी वाली रियासत, जुलाई 1949 में कोचीन से जुड़ी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "cochin",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.35,
+      "lon": 76.35
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "blurb": {
+      "en": "Cochin, the smaller of the two south-western States, ruled from Ernakulam.",
+      "hi": "कोचीन, दोनों दक्षिण-पश्चिमी रियासतों में छोटी, एर्नाकुलम से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "baroda",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.6,
+      "lon": 72.4
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Gaekwad's Baroda, 8,236 square miles in several blocks among Bombay and Kathiawar.",
+      "hi": "गायकवाड़ का बड़ौदा, बंबई और काठियावाड़ के बीच कई खंडों में 8,236 वर्ग मील।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "gwalior",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "category": "gwalior",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.6,
+      "lon": 77.9
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Sindhia's Gwalior, the largest State of Central India.",
+      "hi": "सिंधिया का ग्वालियर, मध्य भारत की सबसे बड़ी रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "indore",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.9,
+      "lon": 75.6
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Holkar's Indore, the second of the two major States of Malwa.",
+      "hi": "होल्कर का इंदौर, मालवा की दो बड़ी रियासतों में दूसरी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "malwa",
+    "status": "draft",
+    "name": {
+      "en": "Malwa",
+      "hi": "मालवा"
+    },
+    "category": "malwa",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.95,
+      "lon": 74.7
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The smaller Malwa States of the Central India Agency — Dewas, Dhar, Ratlam, Jhabua, Alirajpur, Barwani, Rajgarh and others — joined to Gwalior and Indore in Madhya Bharat in 1948.",
+      "hi": "मध्य भारत एजेंसी की छोटी मालवा रियासतें — देवास, धार, रतलाम, झाबुआ, अलीराजपुर, बड़वानी, राजगढ़ और अन्य — जो 1948 में मध्य भारत में ग्वालियर और इंदौर से जुड़ीं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "bhopal",
+    "status": "draft",
+    "name": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "category": "bhopal",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.05,
+      "lon": 77.55
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Nawab's Bhopal, 6,921 square miles, 'lying almost at the centre of the main system of communications in India'.",
+      "hi": "नवाब का भोपाल, 6,921 वर्ग मील, 'भारत के संचार के मुख्य तंत्र के लगभग केंद्र में स्थित'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "rewa",
+    "status": "draft",
+    "name": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    },
+    "category": "rewa",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.9,
+      "lon": 81.9
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "Rewa, the chief State of Baghelkhand, with its own government even inside Vindhya Pradesh in 1948.",
+      "hi": "रीवा, बघेलखंड की प्रमुख रियासत, 1948 में विंध्य प्रदेश के भीतर भी अपनी अलग सरकार के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "bundelkhand",
+    "status": "draft",
+    "name": {
+      "en": "Bundelkhand",
+      "hi": "बुंदेलखंड"
+    },
+    "category": "bundelkhand",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.3,
+      "lon": 79.8
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "blurb": {
+      "en": "The Bundelkhand States — Orchha, Datia, Panna, Chhatarpur, Charkhari and some thirty more — among the 35 'Bundelkhand and Baghelkhand States'.",
+      "hi": "बुंदेलखंड की रियासतें — ओरछा, दतिया, पन्ना, छतरपुर, चरखारी और लगभग तीस अन्य — 35 'बुंदेलखंड और बघेलखंड रियासतों' में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "jodhpur",
+    "status": "draft",
+    "name": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "category": "jodhpur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 72.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rathor State of Jodhpur (Marwar), one of 'the important Rajputana States'.",
+      "hi": "जोधपुर (मारवाड़) की राठौड़ रियासत, 'महत्वपूर्ण राजपूताना रियासतों' में से एक।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.1,
+      "lon": 76.0
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Kachhwaha State of Jaipur.",
+      "hi": "जयपुर की कछवाहा रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "udaipur",
+    "status": "draft",
+    "name": {
+      "en": "Mewar",
+      "hi": "मेवाड़"
+    },
+    "category": "udaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.5,
+      "lon": 74.9
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Sisodia State of Mewar, whose Maharana became Maharajpramukh of Rajasthan for life in 1949.",
+      "hi": "मेवाड़ की सिसोदिया रियासत, जिसके महाराणा 1949 में आजीवन राजस्थान के महाराजप्रमुख बने।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "bikaner",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.4,
+      "lon": 73.6
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Rathor State of Bikaner in the Thar.",
+      "hi": "थार में बीकानेर की राठौड़ रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "jaisalmer",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.0,
+      "lon": 71.0
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The Bhati State of Jaisalmer, the last to join Rajasthan with Jaipur, Jodhpur and Bikaner in 1949.",
+      "hi": "जैसलमेर की भाटी रियासत, जो 1949 में जयपुर, जोधपुर और बीकानेर के साथ राजस्थान में अंत में शामिल हुई।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "rajputana",
+    "status": "draft",
+    "name": {
+      "en": "Rajputana States",
+      "hi": "राजपूताना रियासतें"
+    },
+    "category": "rajputana",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.85,
+      "lon": 72.9
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "blurb": {
+      "en": "The smaller Rajputana States: Kota, Bundi, Tonk, Jhalawar, Dungarpur, Banswara, Partabgarh and Sirohi in the south, Alwar, Bharatpur, Dholpur and Karauli in the east.",
+      "hi": "छोटी राजपूताना रियासतें: दक्षिण में कोटा, बूंदी, टोंक, झालावाड़, डूंगरपुर, बांसवाड़ा, प्रतापगढ़ और सिरोही, पूर्व में अलवर, भरतपुर, धौलपुर और करौली।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "patiala",
+    "status": "draft",
+    "name": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    },
+    "category": "patiala",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.2,
+      "lon": 75.9
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "The Maharaja of Patiala's State, the chief of the Punjab States, 'stretching up to Simla'.",
+      "hi": "पटियाला के महाराजा की रियासत, पंजाब की रियासतों में प्रमुख, 'शिमला तक फैली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "east-punjab",
+    "status": "draft",
+    "name": {
+      "en": "East Punjab States",
+      "hi": "पूर्वी पंजाब की रियासतें"
+    },
+    "category": "east-punjab",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.9,
+      "lon": 75.2
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "blurb": {
+      "en": "Jind, Nabha, Kapurthala, Faridkot, Malerkotla, Nalagarh and Kalsia, which joined Patiala in 1948; Nabha and Malerkotla lie within districts drawn with Patiala.",
+      "hi": "जींद, नाभा, कपूरथला, फ़रीदकोट, मलेरकोटला, नालागढ़ और कलसिया, जो 1948 में पटियाला से जुड़ीं; नाभा और मलेरकोटला पटियाला के साथ दिखाए ज़िलों में हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "hill-states",
+    "status": "draft",
+    "name": {
+      "en": "Punjab Hill States",
+      "hi": "पंजाब की पहाड़ी रियासतें"
+    },
+    "category": "hill-states",
+    "priority": 1,
+    "anchor": {
+      "lat": 31.6,
+      "lon": 77.0
+    },
+    "regions": [
+      "IN-HP"
+    ],
+    "blurb": {
+      "en": "The Punjab (Simla) Hill States — Chamba, Mandi, Suket, Sirmur, Bashahr, Bilaspur and the smaller hill chiefships — 21 States of 10,600 square miles.",
+      "hi": "पंजाब (शिमला) की पहाड़ी रियासतें — चंबा, मंडी, सुकेत, सिरमौर, बुशहर, बिलासपुर और छोटी पहाड़ी ठकुराइयाँ — 10,600 वर्ग मील की 21 रियासतें।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "tehri",
+    "status": "draft",
+    "name": {
+      "en": "Tehri",
+      "hi": "टिहरी"
+    },
+    "category": "tehri",
+    "priority": 2,
+    "anchor": {
+      "lat": 31.0,
+      "lon": 79.1
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "blurb": {
+      "en": "Tehri-Garhwal in the Himalayas, 4,516 square miles, between the United Provinces' Garhwal and Dehra Dun.",
+      "hi": "हिमालय में टिहरी-गढ़वाल, 4,516 वर्ग मील, संयुक्त प्रांत के गढ़वाल और देहरादून के बीच।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "rampur",
+    "status": "draft",
+    "name": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "priority": 2,
+    "anchor": {
+      "lat": 28.8,
+      "lon": 79.05
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Nawab's Rampur, 894 square miles, 'almost an island in the United Provinces'.",
+      "hi": "नवाब का रामपुर, 894 वर्ग मील, 'संयुक्त प्रांत में लगभग एक द्वीप'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "benares",
+    "status": "draft",
+    "name": {
+      "en": "Benares",
+      "hi": "बनारस"
+    },
+    "category": "benares",
+    "priority": 2,
+    "anchor": {
+      "lat": 25.4,
+      "lon": 82.55
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "blurb": {
+      "en": "The Maharaja of Benares's State, 866 square miles, an enclave in the United Provinces (Bhadohi, with Ramnagar and Chakia).",
+      "hi": "बनारस के महाराजा की रियासत, 866 वर्ग मील, संयुक्त प्रांत में एक अंतःक्षेत्र (भदोही, रामनगर और चकिया के साथ)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "kathiawar",
+    "status": "draft",
+    "name": {
+      "en": "Kathiawar",
+      "hi": "काठियावाड़"
+    },
+    "category": "kathiawar",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.5,
+      "lon": 70.8
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Kathiawar States of the Western India States Agency — Nawanagar, Bhavnagar, Porbandar, Gondal, Morvi, Dhrangadhra and some 200 more — 222 States and Estates.",
+      "hi": "पश्चिमी भारत रियासत एजेंसी की काठियावाड़ रियासतें — नवानगर, भावनगर, पोरबंदर, गोंडल, मोरवी, ध्रांगध्रा और लगभग 200 अन्य — 222 रियासतें और जागीरें।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "junagadh",
+    "status": "draft",
+    "name": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    },
+    "category": "junagadh",
+    "priority": 3,
+    "anchor": {
+      "lat": 21.0,
+      "lon": 70.6
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "Junagadh, one of the three States that had not acceded by 15 August 1947; its Nawab left for Pakistan and India took over on 9 November 1947.",
+      "hi": "जूनागढ़, उन तीन रियासतों में से एक जिनका 15 अगस्त 1947 तक विलय नहीं हुआ था; इसके नवाब पाकिस्तान चले गए और भारत ने 9 नवंबर 1947 को इसे अपने हाथ लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "kutch",
+    "status": "draft",
+    "name": {
+      "en": "Kutch",
+      "hi": "कच्छ"
+    },
+    "category": "kutch",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.9,
+      "lon": 70.0
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Rao's Kutch, 17,249 square miles, much of it the Rann.",
+      "hi": "राव का कच्छ, 17,249 वर्ग मील, जिसका बड़ा भाग रण है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "gujarat-states",
+    "status": "draft",
+    "name": {
+      "en": "Gujarat States",
+      "hi": "गुजरात की रियासतें"
+    },
+    "category": "gujarat-states",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.85,
+      "lon": 73.7
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "blurb": {
+      "en": "The Gujarat States — Idar, Palanpur, Rajpipla, the Dangs and some 140 more — merged in Bombay in 1948.",
+      "hi": "गुजरात की रियासतें — ईडर, पालनपुर, राजपीपला, डांग और लगभग 140 अन्य — जो 1948 में बंबई में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "deccan-states",
+    "status": "draft",
+    "name": {
+      "en": "Deccan States",
+      "hi": "दक्कन की रियासतें"
+    },
+    "category": "deccan-states",
+    "priority": 2,
+    "anchor": {
+      "lat": 17.0,
+      "lon": 74.8
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "The seventeen Deccan States — Sangli, Miraj, Jath, Aundh, Bhor, Sawantwadi, Janjira and others — mostly scattered among Bombay's districts; drawn here by Sangli.",
+      "hi": "सत्रह दक्कन रियासतें — सांगली, मिरज, जत, औंध, भोर, सावंतवाड़ी, जंजीरा और अन्य — अधिकतर बंबई के ज़िलों में बिखरी; यहाँ सांगली से दिखाई गई हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "kolhapur",
+    "status": "draft",
+    "name": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    },
+    "category": "kolhapur",
+    "priority": 2,
+    "anchor": {
+      "lat": 16.55,
+      "lon": 74.1
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "blurb": {
+      "en": "Kolhapur, the largest of the Maratha States of the west coast, 3,219 square miles.",
+      "hi": "कोल्हापुर, पश्चिमी तट की मराठा रियासतों में सबसे बड़ी, 3,219 वर्ग मील।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "orissa-states",
+    "status": "draft",
+    "name": {
+      "en": "Orissa States",
+      "hi": "उड़ीसा की रियासतें"
+    },
+    "category": "orissa-states",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.0,
+      "lon": 84.4
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "The Orissa States of the Eastern States Agency — Keonjhar, Dhenkanal, Gangpur, Bonai, Patna, Kalahandi, Sonepur, Nayagarh and others — merged in Orissa on 1 January 1948.",
+      "hi": "पूर्वी रियासत एजेंसी की उड़ीसा रियासतें — क्योंझर, ढेंकानाल, गंगपुर, बोनई, पटना, कालाहांडी, सोनपुर, नयागढ़ और अन्य — जो 1 जनवरी 1948 को उड़ीसा में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "chhattisgarh-states",
+    "status": "draft",
+    "name": {
+      "en": "Chhattisgarh",
+      "hi": "छत्तीसगढ़"
+    },
+    "category": "chhattisgarh-states",
+    "priority": 1,
+    "anchor": {
+      "lat": 20.0,
+      "lon": 81.7
+    },
+    "regions": [
+      "IN-CG"
+    ],
+    "blurb": {
+      "en": "The Chhattisgarh States — Bastar, Kanker, Surguja, Korea, Jashpur, Raigarh, Nandgaon, Kawardha and others — merged in the Central Provinces on 1 January 1948.",
+      "hi": "छत्तीसगढ़ की रियासतें — बस्तर, कांकेर, सरगुजा, कोरिया, जशपुर, रायगढ़, नांदगाँव, कवर्धा और अन्य — जो 1 जनवरी 1948 को मध्य प्रांत में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "mayurbhanj",
+    "status": "draft",
+    "name": {
+      "en": "Mayurbhanj",
+      "hi": "मयूरभंज"
+    },
+    "category": "mayurbhanj",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.9,
+      "lon": 86.3
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "blurb": {
+      "en": "Mayurbhanj, 4,034 square miles, the one Eastern State that stayed out of the merger of December 1947.",
+      "hi": "मयूरभंज, 4,034 वर्ग मील, एकमात्र पूर्वी रियासत जो दिसंबर 1947 के विलय से बाहर रही।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "cooch-behar",
+    "status": "draft",
+    "name": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    },
+    "category": "cooch-behar",
+    "priority": 2,
+    "anchor": {
+      "lat": 26.3,
+      "lon": 89.4
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "blurb": {
+      "en": "The Maharaja of Cooch Behar's State, 1,321 square miles, between East Bengal, Jalpaiguri and Assam.",
+      "hi": "कूच बिहार के महाराजा की रियासत, 1,321 वर्ग मील, पूर्वी बंगाल, जलपाईगुड़ी और असम के बीच।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "tripura",
+    "status": "draft",
+    "name": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "category": "tripura",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.8,
+      "lon": 91.7
+    },
+    "regions": [
+      "IN-TR"
+    ],
+    "blurb": {
+      "en": "Tripura, 4,049 square miles, on the north-east border, under a Regent Maharani for the minor Ruler.",
+      "hi": "त्रिपुरा, 4,049 वर्ग मील, पूर्वोत्तर सीमा पर, नाबालिग शासक के लिए रीजेंट महारानी के अधीन।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "manipur",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.8,
+      "lon": 93.9
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "blurb": {
+      "en": "Manipur, a border State 'surrounded for the most part by tribal hill areas in Assam', bounded east by Burma.",
+      "hi": "मणिपुर, एक सीमांत रियासत, 'अधिकतर असम के जनजातीय पहाड़ी क्षेत्रों से घिरी', पूर्व में बर्मा से लगी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "khasi",
+    "status": "draft",
+    "name": {
+      "en": "Khasi States",
+      "hi": "खासी रियासतें"
+    },
+    "category": "khasi",
+    "priority": 2,
+    "anchor": {
+      "lat": 25.35,
+      "lon": 91.1
+    },
+    "regions": [
+      "IN-ML"
+    ],
+    "blurb": {
+      "en": "The Khasi Hill States, some 25 small chiefships ruled by Siems, 'for the most part occupied by tribal people'.",
+      "hi": "खासी पहाड़ी रियासतें, सिएमों द्वारा शासित लगभग 25 छोटी सरदारियाँ, 'अधिकतर जनजातीय लोगों से बसी'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "sikkim",
+    "status": "draft",
+    "name": {
+      "en": "Sikkim",
+      "hi": "सिक्किम"
+    },
+    "category": "sikkim",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.6,
+      "lon": 88.5
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "blurb": {
+      "en": "Sikkim, 'under the External Affairs Department' unlike other States, on the northern frontier.",
+      "hi": "सिक्किम, अन्य रियासतों के विपरीत 'विदेश विभाग के अधीन', उत्तरी सीमा पर।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  },
+  {
+    "id": "pudukkottai",
+    "status": "draft",
+    "name": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    },
+    "category": "pudukkottai",
+    "priority": 2,
+    "anchor": {
+      "lat": 10.4,
+      "lon": 78.8
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "blurb": {
+      "en": "The Tondaiman's Pudukkottai, the one Madras State large enough to draw; Banganapalle and Sandur were smaller.",
+      "hi": "तोंडैमान का पुदुक्कोट्टै, मद्रास की एकमात्र रियासत जो दिखाने लायक बड़ी है; बंगनपल्ले और संडूर छोटी थीं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ]
+  }
+]

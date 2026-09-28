@@ -1,0 +1,302 @@
+{
+  "id": "independence-capitals",
+  "type": "points",
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Capitals of 1947 CE",
+    "hi": "1947 ई. की राजधानियाँ"
+  },
+  "icon": "temple",
+  "default_on": false,
+  "country_view": "markers",
+  "categories": [
+    {
+      "id": "british",
+      "color": "#d8b8b0",
+      "title": {
+        "en": "British India",
+        "hi": "ब्रिटिश भारत"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "hyderabad",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Hyderabad",
+        "hi": "हैदराबाद"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kashmir",
+      "color": "#6a8fb0",
+      "title": {
+        "en": "Jammu and Kashmir",
+        "hi": "जम्मू और कश्मीर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "travancore",
+      "color": "#3f7f5a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "cochin",
+      "color": "#6a9a4a",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "baroda",
+      "color": "#a3765f",
+      "title": {
+        "en": "Baroda",
+        "hi": "बड़ौदा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "gwalior",
+      "color": "#b0894a",
+      "title": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "indore",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Indore",
+        "hi": "इंदौर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bhopal",
+      "color": "#4a7a8a",
+      "title": {
+        "en": "Bhopal",
+        "hi": "भोपाल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "rewa",
+      "color": "#9a5a5a",
+      "title": {
+        "en": "Rewa",
+        "hi": "रीवा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "jodhpur",
+      "color": "#c07050",
+      "title": {
+        "en": "Jodhpur",
+        "hi": "जोधपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "jaipur",
+      "color": "#d09060",
+      "title": {
+        "en": "Jaipur",
+        "hi": "जयपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "udaipur",
+      "color": "#a04040",
+      "title": {
+        "en": "Udaipur (Mewar)",
+        "hi": "उदयपुर (मेवाड़)"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "bikaner",
+      "color": "#c8a070",
+      "title": {
+        "en": "Bikaner",
+        "hi": "बीकानेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "jaisalmer",
+      "color": "#e0b080",
+      "title": {
+        "en": "Jaisalmer",
+        "hi": "जैसलमेर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "patiala",
+      "color": "#5a7a3a",
+      "title": {
+        "en": "Patiala",
+        "hi": "पटियाला"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "tehri",
+      "color": "#4a6a8a",
+      "title": {
+        "en": "Tehri-Garhwal",
+        "hi": "टिहरी-गढ़वाल"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "rampur",
+      "color": "#3a8a6a",
+      "title": {
+        "en": "Rampur",
+        "hi": "रामपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "benares",
+      "color": "#6a5a9a",
+      "title": {
+        "en": "Benares",
+        "hi": "बनारस"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "junagadh",
+      "color": "#8a4a6a",
+      "title": {
+        "en": "Junagadh",
+        "hi": "जूनागढ़"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kutch",
+      "color": "#9a8a5a",
+      "title": {
+        "en": "Kutch",
+        "hi": "कच्छ"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "kolhapur",
+      "color": "#c06a40",
+      "title": {
+        "en": "Kolhapur",
+        "hi": "कोल्हापुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "mayurbhanj",
+      "color": "#5a8a7a",
+      "title": {
+        "en": "Mayurbhanj",
+        "hi": "मयूरभंज"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "cooch-behar",
+      "color": "#4a7a9a",
+      "title": {
+        "en": "Cooch Behar",
+        "hi": "कूच बिहार"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "tripura",
+      "color": "#9a6a4a",
+      "title": {
+        "en": "Tripura",
+        "hi": "त्रिपुरा"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "manipur",
+      "color": "#7a5a8a",
+      "title": {
+        "en": "Manipur",
+        "hi": "मणिपुर"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "sikkim",
+      "color": "#5a6a9a",
+      "title": {
+        "en": "Sikkim",
+        "hi": "सिक्किम"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pudukkottai",
+      "color": "#8a6a9a",
+      "title": {
+        "en": "Pudukkottai",
+        "hi": "पुदुक्कोट्टै"
+      },
+      "icon": "pin"
+    }
+  ],
+  "fields": {
+    "polity": {
+      "type": "name",
+      "label": {
+        "en": "Capital of",
+        "hi": "किसकी राजधानी"
+      }
+    },
+    "identified": {
+      "type": "name",
+      "label": {
+        "en": "Identification",
+        "hi": "पहचान"
+      }
+    }
+  },
+  "note": {
+    "en": "New Delhi, Hyderabad, Srinagar, Mysore, Trivandrum, Ernakulam, Baroda, Gwalior (Lashkar), Indore, Bhopal, Rewa, Jodhpur, Jaipur, Udaipur, Bikaner, Jaisalmer, Patiala, Narendranagar, Rampur, Ramnagar, Junagadh, Bhuj, Kolhapur, Baripada, Cooch Behar, Agartala, Imphal, Gangtok, Pudukkottai. The grouped states have no single capital.",
+    "hi": "नई दिल्ली, हैदराबाद, श्रीनगर, मैसूर, त्रिवेंद्रम, एर्नाकुलम, बड़ौदा, ग्वालियर (लश्कर), इंदौर, भोपाल, रीवा, जोधपुर, जयपुर, उदयपुर, बीकानेर, जैसलमेर, पटियाला, नरेंद्रनगर, रामपुर, रामनगर, जूनागढ़, भुज, कोल्हापुर, बारीपदा, कूच बिहार, अगरतला, इंफाल, गंगटोक, पुदुक्कोट्टै। समूहित रियासतों की कोई एक राजधानी नहीं।"
+  },
+  "sources": [
+    "white-paper-1950",
+    "memoranda-1940",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ]
+}

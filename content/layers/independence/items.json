@@ -1,0 +1,2269 @@
+[
+  {
+    "id": "british-held",
+    "status": "draft",
+    "name": {
+      "en": "British India",
+      "hi": "ब्रिटिश भारत"
+    },
+    "category": "british",
+    "rank": 1,
+    "districts": [
+      24,
+      25,
+      26,
+      28,
+      29,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      49,
+      50,
+      51,
+      52,
+      55,
+      57,
+      58,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      119,
+      132,
+      133,
+      134,
+      135,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      293,
+      294,
+      295,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      384,
+      386,
+      387,
+      388,
+      389,
+      390,
+      394,
+      396,
+      397,
+      398,
+      399,
+      404,
+      405,
+      406,
+      409,
+      410,
+      411,
+      412,
+      427,
+      428,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      466,
+      467,
+      473,
+      474,
+      482,
+      483,
+      484,
+      485,
+      488,
+      491,
+      492,
+      493,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      526,
+      527,
+      528,
+      529,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      561,
+      562,
+      563,
+      564,
+      565,
+      569,
+      575,
+      576,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      630,
+      631,
+      632,
+      633,
+      638,
+      639,
+      640
+    ],
+    "verse": "United  Provinces (read: United Provinces)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "certain, after White Paper 1950",
+      "hi": "निश्चित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "British India on the eve of independence: the Governors' Provinces and the Chief Commissioners' Provinces, 'pink' on the map beside the 'yellow' of the States.",
+      "hi": "स्वतंत्रता की पूर्वसंध्या पर ब्रिटिश भारत: गवर्नरों के प्रांत और मुख्य आयुक्तों के प्रांत, मानचित्र पर रियासतों के 'पीले' के साथ 'गुलाबी'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#d8b8b0",
+    "grade": {
+      "en": "British India: the provinces",
+      "hi": "ब्रिटिश भारत: प्रांत"
+    },
+    "reading": "To the north-east of Bombay, separating Bombay and the Central Provinces from the United Provinces, lay the main mass of Central India States which included Gwalior, Indore land Bewa.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "New Delhi",
+      "hi": "नई दिल्ली"
+    }
+  },
+  {
+    "id": "hyderabad-held",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "rank": 1,
+    "districts": [
+      536,
+      537,
+      535,
+      538,
+      539,
+      540,
+      541,
+      534,
+      532,
+      533,
+      515,
+      514,
+      523,
+      513,
+      511,
+      512,
+      524,
+      525,
+      558,
+      579,
+      580,
+      559,
+      560
+    ],
+    "verse": "Hyderabad",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 113",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 113"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Niẓām's Hyderabad, 82,313 square miles; it did not accede in 1947 and stood outside the Dominion until September 1948. Berar, its sovereign territory, was run as part of the Central Provinces.",
+      "hi": "निज़ाम का हैदराबाद, 82,313 वर्ग मील; इसने 1947 में विलय नहीं किया और सितंबर 1948 तक डोमिनियन से बाहर रहा। इसका संप्रभु क्षेत्र बरार मध्य प्रांत के अंग के रूप में चलाया जाता था।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#5f86a3",
+    "grade": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "reading": "The State of Jammu and Kashmir with \"a terri- tory of 84,471 square miles and the Hyderabad State closely following it with a territory of 82,313 square miles constituted the largest territorial units amongst the States.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 17",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 17"
+    },
+    "capital": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    }
+  },
+  {
+    "id": "kashmir-held",
+    "status": "draft",
+    "name": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "category": "kashmir",
+    "rank": 1,
+    "districts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "verse": "Jammu  and  Kashmir",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 111",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 111"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Maharaja's Jammu and Kashmir, the largest State at 84,471 square miles; it had not acceded on 15 August 1947 and acceded to India on 26 October.",
+      "hi": "महाराजा का जम्मू और कश्मीर, 84,471 वर्ग मील के साथ सबसे बड़ी रियासत; 15 अगस्त 1947 को इसका विलय नहीं हुआ था और 26 अक्टूबर को यह भारत में शामिल हुआ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#6a8fb0",
+    "grade": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "reading": "The State of Jammu and Kashmir acceded to India on October 26, 1947.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 111",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 111"
+    },
+    "capital": {
+      "en": "Srinagar",
+      "hi": "श्रीनगर"
+    }
+  },
+  {
+    "id": "mysore-held",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "rank": 1,
+    "districts": [
+      566,
+      567,
+      570,
+      571,
+      572,
+      573,
+      574,
+      577,
+      578,
+      581,
+      582,
+      583,
+      584,
+      568
+    ],
+    "verse": "Mysore",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Mysore under its Wodeyar Maharaja, 'a unit larger than the Irish Free State and having twice its population'.",
+      "hi": "अपने वोडेयार महाराजा के अधीन मैसूर, 'आयरिश फ़्री स्टेट से बड़ी इकाई और उसकी दुगुनी जनसंख्या वाली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#2f7f8a",
+    "grade": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "reading": "Further south figured the States of Hyderabad and Mysore, the latter a unit larger than the Irish Free State and having twice its population.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    }
+  },
+  {
+    "id": "travancore-held",
+    "status": "draft",
+    "name": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "category": "travancore",
+    "rank": 1,
+    "districts": [
+      601,
+      600,
+      599,
+      598,
+      597,
+      596,
+      629
+    ],
+    "verse": "Travancore",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 55",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 55"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Travancore, a densely peopled State on the south-west coast, joined with Cochin in July 1949.",
+      "hi": "त्रावणकोर, दक्षिण-पश्चिमी तट पर घनी आबादी वाली रियासत, जुलाई 1949 में कोचीन से जुड़ी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#3f7f5a",
+    "grade": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "reading": "The United State of Travancore and Cochin was formed by the integration of the two southern-most States lying on the south-west coast of the Indian Peninsula, namely, Travancore and Cochin.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 55",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 55"
+    },
+    "capital": {
+      "en": "Trivandrum",
+      "hi": "त्रिवेंद्रम"
+    }
+  },
+  {
+    "id": "cochin-held",
+    "status": "draft",
+    "name": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "category": "cochin",
+    "rank": 1,
+    "districts": [
+      595,
+      594
+    ],
+    "verse": "Cochin",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 55",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 55"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Cochin, the smaller of the two south-western States, ruled from Ernakulam.",
+      "hi": "कोचीन, दोनों दक्षिण-पश्चिमी रियासतों में छोटी, एर्नाकुलम से शासित।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#6a9a4a",
+    "grade": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "reading": "The United State of Travancore and Cochin was formed by the integration of the two southern-most States lying on the south-west coast of the Indian Peninsula, namely, Travancore and Cochin.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 55",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 55"
+    },
+    "capital": {
+      "en": "Ernakulam",
+      "hi": "एर्नाकुलम"
+    }
+  },
+  {
+    "id": "baroda-held",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "rank": 1,
+    "districts": [
+      486,
+      471,
+      470,
+      480,
+      490
+    ],
+    "verse": "Baroda",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 43",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 43"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Gaekwad's Baroda, 8,236 square miles in several blocks among Bombay and Kathiawar.",
+      "hi": "गायकवाड़ का बड़ौदा, बंबई और काठियावाड़ के बीच कई खंडों में 8,236 वर्ग मील।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#a3765f",
+    "grade": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "reading": "Another State, this time a large administrative unit, taken over by the Bombay Government was Baroda which had an area of 8,236 square miles with a population of about 3 millions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 43",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 43"
+    },
+    "capital": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    }
+  },
+  {
+    "id": "gwalior-held",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "category": "gwalior",
+    "rank": 1,
+    "districts": [
+      421,
+      419,
+      420,
+      423,
+      458,
+      459,
+      435,
+      436,
+      433,
+      432,
+      443,
+      418
+    ],
+    "verse": "Gwalior",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 50",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 50"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sindhia's Gwalior, the largest State of Central India.",
+      "hi": "सिंधिया का ग्वालियर, मध्य भारत की सबसे बड़ी रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#b0894a",
+    "grade": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "reading": "The United State of Gwalior, Indore and Malwa, otherwise known as Madhya Bharat, comprises 20 States in Central India including the major States of Gwalior and Indore.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 50",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 50"
+    },
+    "capital": {
+      "en": "Gwalior (Lashkar)",
+      "hi": "ग्वालियर (लश्कर)"
+    }
+  },
+  {
+    "id": "indore-held",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "rank": 1,
+    "districts": [
+      439,
+      440
+    ],
+    "verse": "Indore",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 50",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 50"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Holkar's Indore, the second of the two major States of Malwa.",
+      "hi": "होल्कर का इंदौर, मालवा की दो बड़ी रियासतों में दूसरी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#8a6a3a",
+    "grade": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "reading": "The United State of Gwalior, Indore and Malwa, otherwise known as Madhya Bharat, comprises 20 States in Central India including the major States of Gwalior and Indore.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 50",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 50"
+    },
+    "capital": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    }
+  },
+  {
+    "id": "malwa-held",
+    "status": "draft",
+    "name": {
+      "en": "Malwa",
+      "hi": "मालवा"
+    },
+    "category": "malwa",
+    "rank": 1,
+    "districts": [
+      437,
+      438,
+      434,
+      464,
+      465,
+      441,
+      442
+    ],
+    "verse": "Malwa",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 50",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 50"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The smaller Malwa States of the Central India Agency — Dewas, Dhar, Ratlam, Jhabua, Alirajpur, Barwani, Rajgarh and others — joined to Gwalior and Indore in Madhya Bharat in 1948.",
+      "hi": "मध्य भारत एजेंसी की छोटी मालवा रियासतें — देवास, धार, रतलाम, झाबुआ, अलीराजपुर, बड़वानी, राजगढ़ और अन्य — जो 1948 में मध्य भारत में ग्वालियर और इंदौर से जुड़ीं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#c0a060",
+    "grade": {
+      "en": "Malwa States",
+      "hi": "मालवा की रियासतें"
+    },
+    "reading": "The United State of Gwalior, Indore and Malwa, otherwise known as Madhya Bharat, comprises 20 States in Central India including the major States of Gwalior and Indore.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 50",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 50"
+    }
+  },
+  {
+    "id": "bhopal-held",
+    "status": "draft",
+    "name": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "category": "bhopal",
+    "rank": 1,
+    "districts": [
+      444,
+      445,
+      446
+    ],
+    "verse": "Bhopal",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 47",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 47"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawab's Bhopal, 6,921 square miles, 'lying almost at the centre of the main system of communications in India'.",
+      "hi": "नवाब का भोपाल, 6,921 वर्ग मील, 'भारत के संचार के मुख्य तंत्र के लगभग केंद्र में स्थित'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#4a7a8a",
+    "grade": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "reading": "119. Bhopal was one of the major States taken over for administration by the Centre. Lying almost at the centre of the main system of com- munications in India, the State had an area of 6,921 square miles with a population of 785,322 and a revenue of about Rs. 13,600,000.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 47",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 47"
+    },
+    "capital": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    }
+  },
+  {
+    "id": "rewa-held",
+    "status": "draft",
+    "name": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    },
+    "category": "rewa",
+    "rank": 1,
+    "districts": [
+      430,
+      462,
+      463,
+      460,
+      431,
+      461
+    ],
+    "verse": "Rewa",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 48",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 48"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Rewa, the chief State of Baghelkhand, with its own government even inside Vindhya Pradesh in 1948.",
+      "hi": "रीवा, बघेलखंड की प्रमुख रियासत, 1948 में विंध्य प्रदेश के भीतर भी अपनी अलग सरकार के साथ।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#9a5a5a",
+    "grade": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    },
+    "reading": "Por some time after the inauguration of the Union, there were actually two Governments functioning, one for Rewa and an- cther for Bundelkhand States.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 48",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 48"
+    },
+    "capital": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    }
+  },
+  {
+    "id": "bundelkhand-held",
+    "status": "draft",
+    "name": {
+      "en": "Bundelkhand",
+      "hi": "बुंदेलखंड"
+    },
+    "category": "bundelkhand",
+    "rank": 1,
+    "districts": [
+      422,
+      424,
+      425,
+      426,
+      429
+    ],
+    "verse": "Bundelkhand  and  Baghelkhand  States (read: Bundelkhand and Baghelkhand States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 48",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 48"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Bundelkhand States — Orchha, Datia, Panna, Chhatarpur, Charkhari and some thirty more — among the 35 'Bundelkhand and Baghelkhand States'.",
+      "hi": "बुंदेलखंड की रियासतें — ओरछा, दतिया, पन्ना, छतरपुर, चरखारी और लगभग तीस अन्य — 35 'बुंदेलखंड और बघेलखंड रियासतों' में।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#b07a7a",
+    "grade": {
+      "en": "Bundelkhand States",
+      "hi": "बुंदेलखंड की रियासतें"
+    },
+    "reading": "122. The United State of Vindhya Pradesh, which covered an area of 24,600 sq. miles with a population of 3,569,455 and an annual revenue of about Rs. 25 millions was formed in April 1948. It comprised 35 States known as Bundelkhand and Baghelkhand States.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 48",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 48"
+    }
+  },
+  {
+    "id": "jodhpur-held",
+    "status": "draft",
+    "name": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "category": "jodhpur",
+    "rank": 1,
+    "districts": [
+      113,
+      115,
+      112,
+      118,
+      116
+    ],
+    "verse": "Jodhpur",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rathor State of Jodhpur (Marwar), one of 'the important Rajputana States'.",
+      "hi": "जोधपुर (मारवाड़) की राठौड़ रियासत, 'महत्वपूर्ण राजपूताना रियासतों' में से एक।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#c07050",
+    "grade": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "reading": "Among the States of this group, which constituted the largest unit of Indian States, were the important Bajputana States of Bikaner, Jaipur, Jodhpur and Udaipur.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    }
+  },
+  {
+    "id": "jaipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "rank": 1,
+    "districts": [
+      110,
+      109,
+      111,
+      103,
+      108
+    ],
+    "verse": "Jaipur",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kachhwaha State of Jaipur.",
+      "hi": "जयपुर की कछवाहा रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#d09060",
+    "grade": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "reading": "Among the States of this group, which constituted the largest unit of Indian States, were the important Bajputana States of Bikaner, Jaipur, Jodhpur and Udaipur.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    }
+  },
+  {
+    "id": "udaipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Mewar",
+      "hi": "मेवाड़"
+    },
+    "category": "udaipur",
+    "rank": 1,
+    "districts": [
+      130,
+      123,
+      126,
+      122
+    ],
+    "verse": "Udaipur",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Sisodia State of Mewar, whose Maharana became Maharajpramukh of Rajasthan for life in 1949.",
+      "hi": "मेवाड़ की सिसोदिया रियासत, जिसके महाराणा 1949 में आजीवन राजस्थान के महाराजप्रमुख बने।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#a04040",
+    "grade": {
+      "en": "Udaipur (Mewar)",
+      "hi": "उदयपुर (मेवाड़)"
+    },
+    "reading": "Among the States of this group, which constituted the largest unit of Indian States, were the important Bajputana States of Bikaner, Jaipur, Jodhpur and Udaipur.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    }
+  },
+  {
+    "id": "bikaner-held",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "rank": 1,
+    "districts": [
+      101,
+      102,
+      99,
+      100
+    ],
+    "verse": "Bikaner",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rathor State of Bikaner in the Thar.",
+      "hi": "थार में बीकानेर की राठौड़ रियासत।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#c8a070",
+    "grade": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "reading": "Among the States of this group, which constituted the largest unit of Indian States, were the important Bajputana States of Bikaner, Jaipur, Jodhpur and Udaipur.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    }
+  },
+  {
+    "id": "jaisalmer-held",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "rank": 1,
+    "districts": [
+      114
+    ],
+    "verse": "Jaisal- \nmer (read: Jaisalmer)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 54",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 54"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Bhati State of Jaisalmer, the last to join Rajasthan with Jaipur, Jodhpur and Bikaner in 1949.",
+      "hi": "जैसलमेर की भाटी रियासत, जो 1949 में जयपुर, जोधपुर और बीकानेर के साथ राजस्थान में अंत में शामिल हुई।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#e0b080",
+    "grade": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "reading": "As a result of these negotiations, a fresh Covenant (Appendix XL) was signed providing for the integration of the three .major States of Eajputana, viz.y Jaipur, Jodhpur and Bikaner and the State of Jaisal- mer with the former Eajasthan Union to form the United State of Eajas- than. A special feature of this Union is the appionfment for his life-time of the present Euler of Mewar as Maharajpramukh of the Union.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 54",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 54"
+    },
+    "capital": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    }
+  },
+  {
+    "id": "rajputana-held",
+    "status": "draft",
+    "name": {
+      "en": "Rajputana States",
+      "hi": "राजपूताना रियासतें"
+    },
+    "category": "rajputana",
+    "rank": 1,
+    "districts": [
+      127,
+      128,
+      121,
+      120,
+      129,
+      124,
+      125,
+      131,
+      117,
+      104,
+      105,
+      106,
+      107
+    ],
+    "verse": "Bajputana  States (read: Rajputana States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The smaller Rajputana States: Kota, Bundi, Tonk, Jhalawar, Dungarpur, Banswara, Partabgarh and Sirohi in the south, Alwar, Bharatpur, Dholpur and Karauli in the east.",
+      "hi": "छोटी राजपूताना रियासतें: दक्षिण में कोटा, बूंदी, टोंक, झालावाड़, डूंगरपुर, बांसवाड़ा, प्रतापगढ़ और सिरोही, पूर्व में अलवर, भरतपुर, धौलपुर और करौली।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#b89a70",
+    "grade": {
+      "en": "Other Rajputana States",
+      "hi": "अन्य राजपूताना रियासतें"
+    },
+    "reading": "The Eajasthan Union was originally formed by the smaller Eaj- Putana States in the south-east, namely Banswara (including Kushalgarh, Bundi, Dungarpur, Jhalawar, Kishengarh, Kotah, Partabgarh, Shahpura and Tonk.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 53",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 53"
+    }
+  },
+  {
+    "id": "patiala-held",
+    "status": "draft",
+    "name": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    },
+    "category": "patiala",
+    "rank": 1,
+    "districts": [
+      48,
+      53,
+      54,
+      46,
+      47,
+      40,
+      84
+    ],
+    "verse": "Patiala",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Maharaja of Patiala's State, the chief of the Punjab States, 'stretching up to Simla'.",
+      "hi": "पटियाला के महाराजा की रियासत, पंजाब की रियासतों में प्रमुख, 'शिमला तक फैली'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#5a7a3a",
+    "grade": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    },
+    "reading": "These States lay in three separate blocks- The main block com- prised the territories of the Patiala, Nabha, Jind, Malerkotla and Earidkot States in the heart of the East Punjab. It formed a fairly compact tract.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 52",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 52"
+    },
+    "capital": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    }
+  },
+  {
+    "id": "east-punjab-held",
+    "status": "draft",
+    "name": {
+      "en": "East Punjab States",
+      "hi": "पूर्वी पंजाब की रियासतें"
+    },
+    "category": "east-punjab",
+    "rank": 1,
+    "districts": [
+      77,
+      36,
+      45
+    ],
+    "verse": "East  Punjab  States (read: East Punjab States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 52",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 52"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Jind, Nabha, Kapurthala, Faridkot, Malerkotla, Nalagarh and Kalsia, which joined Patiala in 1948; Nabha and Malerkotla lie within districts drawn with Patiala.",
+      "hi": "जींद, नाभा, कपूरथला, फ़रीदकोट, मलेरकोटला, नालागढ़ और कलसिया, जो 1948 में पटियाला से जुड़ीं; नाभा और मलेरकोटला पटियाला के साथ दिखाए ज़िलों में हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#7a9a5a",
+    "grade": {
+      "en": "East Punjab States",
+      "hi": "पूर्वी पंजाब की रियासतें"
+    },
+    "reading": "The Patiala and East Punjab States Union comprises the six salute States of Patiala, Kapurthala, Jind, Nabha, Earidkot and Malerkotla .■and ’the two non-salute States of Nalagarh and Kalsia.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 52",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 52"
+    }
+  },
+  {
+    "id": "hill-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Punjab Hill States",
+      "hi": "पंजाब की पहाड़ी रियासतें"
+    },
+    "category": "hill-states",
+    "rank": 1,
+    "districts": [
+      23,
+      27,
+      30,
+      32,
+      31,
+      33,
+      34
+    ],
+    "verse": "East  Punjab  Hill  States (read: East Punjab Hill States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 46-47",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 46-47"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Punjab (Simla) Hill States — Chamba, Mandi, Suket, Sirmur, Bashahr, Bilaspur and the smaller hill chiefships — 21 States of 10,600 square miles.",
+      "hi": "पंजाब (शिमला) की पहाड़ी रियासतें — चंबा, मंडी, सुकेत, सिरमौर, बुशहर, बिलासपुर और छोटी पहाड़ी ठकुराइयाँ — 10,600 वर्ग मील की 21 रियासतें।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#6a8a6a",
+    "grade": {
+      "en": "Punjab Hill States",
+      "hi": "पंजाब की पहाड़ी रियासतें"
+    },
+    "reading": "117. The group of East Punjab Hill States included the State of Bilaspur, which had an area of 453 square miles with a population of 110,000.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 47",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 47"
+    }
+  },
+  {
+    "id": "tehri-held",
+    "status": "draft",
+    "name": {
+      "en": "Tehri",
+      "hi": "टिहरी"
+    },
+    "category": "tehri",
+    "rank": 1,
+    "districts": [
+      59,
+      56
+    ],
+    "verse": "Tehri-Garhwal",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Tehri-Garhwal in the Himalayas, 4,516 square miles, between the United Provinces' Garhwal and Dehra Dun.",
+      "hi": "हिमालय में टिहरी-गढ़वाल, 4,516 वर्ग मील, संयुक्त प्रांत के गढ़वाल और देहरादून के बीच।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#4a6a8a",
+    "grade": {
+      "en": "Tehri-Garhwal",
+      "hi": "टिहरी-गढ़वाल"
+    },
+    "reading": "One of^ these, Tehrt Garhwab is situated in the Himalayas hounded on the north by the Himachal Pradesh and the other sides by the Garhw^al and D'ehra Dun Districts of the United Provinces. The State had an area' of 4,516 square miles with a population of about 397,000 and a revenue of about Es. 3,700,000.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 44",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 44"
+    },
+    "capital": {
+      "en": "Narendranagar",
+      "hi": "नरेंद्रनगर"
+    }
+  },
+  {
+    "id": "rampur-held",
+    "status": "draft",
+    "name": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "rank": 1,
+    "districts": [
+      136
+    ],
+    "verse": "Eampur (read: Rampur)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 44-45",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 44-45"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Nawab's Rampur, 894 square miles, 'almost an island in the United Provinces'.",
+      "hi": "नवाब का रामपुर, 894 वर्ग मील, 'संयुक्त प्रांत में लगभग एक द्वीप'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#3a8a6a",
+    "grade": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    },
+    "reading": "110. Another State which was almost an island in the United Provinces and had to depend on that Province for all its essential’needs was Eampur* It had an area of 894 square miles with a population of 477,^000 and a revenue of about rupees ten millions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 44",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 44"
+    },
+    "capital": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    }
+  },
+  {
+    "id": "benares-held",
+    "status": "draft",
+    "name": {
+      "en": "Benares",
+      "hi": "बनारस"
+    },
+    "category": "benares",
+    "rank": 1,
+    "districts": [
+      198
+    ],
+    "verse": "Benares",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 44",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 44"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Maharaja of Benares's State, 866 square miles, an enclave in the United Provinces (Bhadohi, with Ramnagar and Chakia).",
+      "hi": "बनारस के महाराजा की रियासत, 866 वर्ग मील, संयुक्त प्रांत में एक अंतःक्षेत्र (भदोही, रामनगर और चकिया के साथ)।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#6a5a9a",
+    "grade": {
+      "en": "Benares",
+      "hi": "बनारस"
+    },
+    "reading": "Another State which formed a small enclave within the United Provinces w^as Benares which had an area of 866 square miles with a population of over 450,000 and a revenue of about Es. 3,500,000.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 44",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 44"
+    },
+    "capital": {
+      "en": "Ramnagar",
+      "hi": "रामनगर"
+    }
+  },
+  {
+    "id": "kathiawar-held",
+    "status": "draft",
+    "name": {
+      "en": "Kathiawar",
+      "hi": "काठियावाड़"
+    },
+    "category": "kathiawar",
+    "rank": 1,
+    "districts": [
+      475,
+      476,
+      477,
+      478,
+      481
+    ],
+    "verse": "Kathiawar",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 50",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 50"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Kathiawar States of the Western India States Agency — Nawanagar, Bhavnagar, Porbandar, Gondal, Morvi, Dhrangadhra and some 200 more — 222 States and Estates.",
+      "hi": "पश्चिमी भारत रियासत एजेंसी की काठियावाड़ रियासतें — नवानगर, भावनगर, पोरबंदर, गोंडल, मोरवी, ध्रांगध्रा और लगभग 200 अन्य — 222 रियासतें और जागीरें।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#c09a50",
+    "grade": {
+      "en": "Kathiawar States",
+      "hi": "काठियावाड़ की रियासतें"
+    },
+    "reading": "126. This form of consolidation of States was first adopted in Kathia- war, covering 222 States and Estates (449 units if calculated on the basis of further fragmentation according to the number of share-holders), with varying territories and jurisdictions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 49",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 49"
+    }
+  },
+  {
+    "id": "junagadh-held",
+    "status": "draft",
+    "name": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    },
+    "category": "junagadh",
+    "rank": 1,
+    "districts": [
+      479
+    ],
+    "verse": "Junagadh",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 113-114",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 113-114"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Junagadh, one of the three States that had not acceded by 15 August 1947; its Nawab left for Pakistan and India took over on 9 November 1947.",
+      "hi": "जूनागढ़, उन तीन रियासतों में से एक जिनका 15 अगस्त 1947 तक विलय नहीं हुआ था; इसके नवाब पाकिस्तान चले गए और भारत ने 9 नवंबर 1947 को इसे अपने हाथ लिया।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#8a4a6a",
+    "grade": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    },
+    "reading": "After the Nawab of Junagadh liad left the State for Pakistan, the administration of this State was taken 114 over by the Government of India on November 9, 1947, at tlio request of the Nawab’s Council.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 113",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 113"
+    },
+    "capital": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    }
+  },
+  {
+    "id": "kutch-held",
+    "status": "draft",
+    "name": {
+      "en": "Kutch",
+      "hi": "कच्छ"
+    },
+    "category": "kutch",
+    "rank": 1,
+    "districts": [
+      468
+    ],
+    "verse": "Kutch",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 47",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 47"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Rao's Kutch, 17,249 square miles, much of it the Rann.",
+      "hi": "राव का कच्छ, 17,249 वर्ग मील, जिसका बड़ा भाग रण है।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#9a8a5a",
+    "grade": {
+      "en": "Kutch",
+      "hi": "कच्छ"
+    },
+    "reading": "118. Another important State which was taken over under Central administration was Kutch. This State has an area of 17,249 Sq. miles, of which 8,461 miles is inhabited by a population of a little over half a million.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 47",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 47"
+    },
+    "capital": {
+      "en": "Bhuj",
+      "hi": "भुज"
+    }
+  },
+  {
+    "id": "gujarat-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Gujarat States",
+      "hi": "गुजरात की रियासतें"
+    },
+    "category": "gujarat-states",
+    "rank": 1,
+    "districts": [
+      469,
+      472,
+      487,
+      489
+    ],
+    "verse": "Gujarat  States (read: Gujarat States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 42",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 42"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Gujarat States — Idar, Palanpur, Rajpipla, the Dangs and some 140 more — merged in Bombay in 1948.",
+      "hi": "गुजरात की रियासतें — ईडर, पालनपुर, राजपीपला, डांग और लगभग 140 अन्य — जो 1948 में बंबई में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#b08a60",
+    "grade": {
+      "en": "Gujarat States",
+      "hi": "गुजरात की रियासतें"
+    },
+    "reading": "The total area covered by the States, estates, talukas and thanas in Gujarat numbering 144 (or 289 if the units are subdivided according t« -the number of the shareholders) was nearly 17,680 square miles, with a population of about 2*7 millions and a total revenue of rupees 16*5 mil- lions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 42",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 42"
+    }
+  },
+  {
+    "id": "deccan-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Deccan States",
+      "hi": "दक्कन की रियासतें"
+    },
+    "category": "deccan-states",
+    "rank": 1,
+    "districts": [
+      531
+    ],
+    "verse": "Deccan  States (read: Deccan States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 41",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 41"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The seventeen Deccan States — Sangli, Miraj, Jath, Aundh, Bhor, Sawantwadi, Janjira and others — mostly scattered among Bombay's districts; drawn here by Sangli.",
+      "hi": "सत्रह दक्कन रियासतें — सांगली, मिरज, जत, औंध, भोर, सावंतवाड़ी, जंजीरा और अन्य — अधिकतर बंबई के ज़िलों में बिखरी; यहाँ सांगली से दिखाई गई हैं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#a07a50",
+    "grade": {
+      "en": "Deccan States",
+      "hi": "दक्कन की रियासतें"
+    },
+    "reading": "The seventeen Deccan States thus merged in Bombay QQver.ed on area of 7,651 square miles with a population of about 1-T imiiUoHs and a revenue of about Rs. 14,200,000.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 41",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 41"
+    }
+  },
+  {
+    "id": "kolhapur-held",
+    "status": "draft",
+    "name": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    },
+    "category": "kolhapur",
+    "rank": 1,
+    "districts": [
+      530
+    ],
+    "verse": "Kolhapur",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 42",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 42"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Kolhapur, the largest of the Maratha States of the west coast, 3,219 square miles.",
+      "hi": "कोल्हापुर, पश्चिमी तट की मराठा रियासतों में सबसे बड़ी, 3,219 वर्ग मील।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#c06a40",
+    "grade": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    },
+    "reading": "101. Kolhapur, the remaining State in Decean had an area of 3,219 square miles and a population of a little over one million.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 42",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 42"
+    },
+    "capital": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    }
+  },
+  {
+    "id": "orissa-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Orissa States",
+      "hi": "उड़ीसा की रियासतें"
+    },
+    "category": "orissa-states",
+    "rank": 1,
+    "districts": [
+      375,
+      383,
+      374,
+      393,
+      395,
+      385,
+      391,
+      373,
+      392
+    ],
+    "verse": "Orissa  and  Chhattisgarh  States (read: Orissa and Chhattisgarh States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 40-41",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 40-41"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Orissa States of the Eastern States Agency — Keonjhar, Dhenkanal, Gangpur, Bonai, Patna, Kalahandi, Sonepur, Nayagarh and others — merged in Orissa on 1 January 1948.",
+      "hi": "पूर्वी रियासत एजेंसी की उड़ीसा रियासतें — क्योंझर, ढेंकानाल, गंगपुर, बोनई, पटना, कालाहांडी, सोनपुर, नयागढ़ और अन्य — जो 1 जनवरी 1948 को उड़ीसा में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#7a8a4a",
+    "grade": {
+      "en": "Orissa States",
+      "hi": "उड़ीसा की रियासतें"
+    },
+    "reading": "97. The Orissa and Chhattisgarh States number ng l>9 covered an area of about 56,000 square miles with a revenue of rupees 20 millions axA a population of 7 millions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 40",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 40"
+    }
+  },
+  {
+    "id": "chhattisgarh-states-held",
+    "status": "draft",
+    "name": {
+      "en": "Chhattisgarh",
+      "hi": "छत्तीसगढ़"
+    },
+    "category": "chhattisgarh-states",
+    "rank": 1,
+    "districts": [
+      414,
+      413,
+      416,
+      417,
+      415,
+      401,
+      400,
+      402,
+      403,
+      408,
+      407
+    ],
+    "verse": "Chhattisgarh  and  Orissa  States (read: Chhattisgarh and Orissa States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Chhattisgarh States — Bastar, Kanker, Surguja, Korea, Jashpur, Raigarh, Nandgaon, Kawardha and others — merged in the Central Provinces on 1 January 1948.",
+      "hi": "छत्तीसगढ़ की रियासतें — बस्तर, कांकेर, सरगुजा, कोरिया, जशपुर, रायगढ़, नांदगाँव, कवर्धा और अन्य — जो 1 जनवरी 1948 को मध्य प्रांत में विलीन हुईं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#8a9a5a",
+    "grade": {
+      "en": "Chhattisgarh States",
+      "hi": "छत्तीसगढ़ की रियासतें"
+    },
+    "reading": "Southwards in the eastern portion of India the next block of Indian State territory was to be found in a chain of small States, which were known as the Chhattisgarh and Orissa States.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    }
+  },
+  {
+    "id": "mayurbhanj-held",
+    "status": "draft",
+    "name": {
+      "en": "Mayurbhanj",
+      "hi": "मयूरभंज"
+    },
+    "category": "mayurbhanj",
+    "rank": 1,
+    "districts": [
+      376
+    ],
+    "verse": "Mayurbhanj",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 41",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 41"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Mayurbhanj, 4,034 square miles, the one Eastern State that stayed out of the merger of December 1947.",
+      "hi": "मयूरभंज, 4,034 वर्ग मील, एकमात्र पूर्वी रियासत जो दिसंबर 1947 के विलय से बाहर रही।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#5a8a7a",
+    "grade": {
+      "en": "Mayurbhanj",
+      "hi": "मयूरभंज"
+    },
+    "reading": "99. The only Easoern State which was not affected by the merger negotiations in December 1947 was Mayurbhanj which had an areat of 4,034 square miles and a population of a little under one million.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 41",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 41"
+    },
+    "capital": {
+      "en": "Baripada",
+      "hi": "बारीपदा"
+    }
+  },
+  {
+    "id": "cooch-behar-held",
+    "status": "draft",
+    "name": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    },
+    "category": "cooch-behar",
+    "rank": 1,
+    "districts": [
+      329
+    ],
+    "verse": "Cooch  Behar (read: Cooch Behar)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 45",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 45"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Maharaja of Cooch Behar's State, 1,321 square miles, between East Bengal, Jalpaiguri and Assam.",
+      "hi": "कूच बिहार के महाराजा की रियासत, 1,321 वर्ग मील, पूर्वी बंगाल, जलपाईगुड़ी और असम के बीच।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#4a7a9a",
+    "grade": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    },
+    "reading": "Cooch Behar is situated on the north-east of Tndi» bounded on the south by East Bengal, north by Jalpaiguri District of West Bengal and on the west by Assam. It had an area of 1,321 square miles with a population of about 641,000 and a revenue of abo-ut Rs. 10' millions.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 45",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 45"
+    },
+    "capital": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    }
+  },
+  {
+    "id": "tripura-held",
+    "status": "draft",
+    "name": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "category": "tripura",
+    "rank": 1,
+    "districts": [
+      289,
+      290,
+      291,
+      292
+    ],
+    "verse": "Tripura",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 48",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 48"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Tripura, 4,049 square miles, on the north-east border, under a Regent Maharani for the minor Ruler.",
+      "hi": "त्रिपुरा, 4,049 वर्ग मील, पूर्वोत्तर सीमा पर, नाबालिग शासक के लिए रीजेंट महारानी के अधीन।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#9a6a4a",
+    "grade": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "reading": "120. Another State on the north-east border of India taken over for Central administration was Tripura 'which had an area of 4,049 square fmilpg and a population of over half a million.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 48",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 48"
+    },
+    "capital": {
+      "en": "Agartala",
+      "hi": "अगरतला"
+    }
+  },
+  {
+    "id": "manipur-held",
+    "status": "draft",
+    "name": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "category": "manipur",
+    "rank": 1,
+    "districts": [
+      277,
+      278,
+      276,
+      275,
+      274,
+      280,
+      272,
+      273,
+      279
+    ],
+    "verse": "Manipur",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 48",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 48"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Manipur, a border State 'surrounded for the most part by tribal hill areas in Assam', bounded east by Burma.",
+      "hi": "मणिपुर, एक सीमांत रियासत, 'अधिकतर असम के जनजातीय पहाड़ी क्षेत्रों से घिरी', पूर्व में बर्मा से लगी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#7a5a8a",
+    "grade": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "reading": "121. Manipur is another border State which has great strategic mportance. It is surrounded for the most part by tribal hill areas in .Assam; on the east it is bounded by the tribal territories of Burma.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 48",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 48"
+    },
+    "capital": {
+      "en": "Imphal",
+      "hi": "इंफाल"
+    }
+  },
+  {
+    "id": "khasi-held",
+    "status": "draft",
+    "name": {
+      "en": "Khasi States",
+      "hi": "खासी रियासतें"
+    },
+    "category": "khasi",
+    "rank": 1,
+    "districts": [
+      298,
+      296,
+      297
+    ],
+    "verse": "Khasi  HiU  States (read: Khasi Hill States)",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 45",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 45"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Khasi Hill States, some 25 small chiefships ruled by Siems, 'for the most part occupied by tribal people'.",
+      "hi": "खासी पहाड़ी रियासतें, सिएमों द्वारा शासित लगभग 25 छोटी सरदारियाँ, 'अधिकतर जनजातीय लोगों से बसी'।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#6a7a4a",
+    "grade": {
+      "en": "Khasi Hill States",
+      "hi": "खासी पहाड़ी रियासतें"
+    },
+    "reading": "The Khasi HiU States on the north cast of India were not affected by the process of integration until the inaugura- tion of the new Constitution.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 45",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 45"
+    }
+  },
+  {
+    "id": "sikkim-held",
+    "status": "draft",
+    "name": {
+      "en": "Sikkim",
+      "hi": "सिक्किम"
+    },
+    "category": "sikkim",
+    "rank": 1,
+    "districts": [
+      241,
+      244,
+      243,
+      242
+    ],
+    "verse": "Sikkim",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 19",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 19"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "Sikkim, 'under the External Affairs Department' unlike other States, on the northern frontier.",
+      "hi": "सिक्किम, अन्य रियासतों के विपरीत 'विदेश विभाग के अधीन', उत्तरी सीमा पर।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#5a6a9a",
+    "grade": {
+      "en": "Sikkim",
+      "hi": "सिक्किम"
+    },
+    "reading": "The yellow and pink map of pre-Parbition India showed the Baluchistan States and the States of Kashmir and Sikkim (the last one sometimes shown in pale green to indicate that unlike other States it was under the External Afiairs Department) on the frontiers of India.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 19",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 19"
+    },
+    "capital": {
+      "en": "Gangtok",
+      "hi": "गंगटोक"
+    }
+  },
+  {
+    "id": "pudukkottai-held",
+    "status": "draft",
+    "name": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    },
+    "category": "pudukkottai",
+    "rank": 1,
+    "districts": [
+      621
+    ],
+    "verse": "Pudukkottai",
+    "locus": {
+      "en": "White Paper on Indian States, White Paper 44",
+      "hi": "रियासतों पर श्वेत पत्र, White Paper 44"
+    },
+    "identified": {
+      "en": "likely, after White Paper 1950",
+      "hi": "संभावित, White Paper 1950 के अनुसार"
+    },
+    "blurb": {
+      "en": "The Tondaiman's Pudukkottai, the one Madras State large enough to draw; Banganapalle and Sandur were smaller.",
+      "hi": "तोंडैमान का पुदुक्कोट्टै, मद्रास की एकमात्र रियासत जो दिखाने लायक बड़ी है; बंगनपल्ले और संडूर छोटी थीं।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474"
+    ],
+    "color": "#8a6a9a",
+    "grade": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    },
+    "reading": "Agreements similar to those signed by the Eulers of other smaller States were also signed by the Eulers of Banganapalle and Pudukkottai on 18th and 29th February, 1948, res- pectively. The territories of these [States which formed an area of 1,444 square miles with a population of about 470,000 were interspersed with those of the Madras Province.",
+    "page": {
+      "en": "Ministry of States, Government of India, White Paper on Indian States (1950), p. 44",
+      "hi": "Ministry of States, Government of India, White Paper on Indian States (1950), पृ. 44"
+    },
+    "capital": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    }
+  }
+]

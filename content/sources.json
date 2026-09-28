@@ -1377,6 +1377,42 @@
         "en": "The Ahom chronicle with a parallel English translation, for Kāmatā, the Chutiyas and the Kacharis in c. 1330, the Kacharis, the Koch and Manipur in c. 1525, the Kacharis and Jaintia in c. 1605, and Manipur in c. 1760 and 1780 CE. Published by the Assam Administration.",
         "hi": "अहोम वृत्तांत, समानांतर अंग्रेज़ी अनुवाद सहित, लगभग 1330 ई. के कामता, चुटिया और कछारी, लगभग 1525 के कछारी, कोच और मणिपुर, लगभग 1605 के कछारी और जयंतिया, और लगभग 1760 और 1780 ई. के मणिपुर के लिए। असम प्रशासन द्वारा प्रकाशित।"
       }
+    },
+    "white-paper-1950": {
+      "title": {
+        "en": "Ministry of States, White Paper on Indian States (1950)",
+        "hi": "रियासत मंत्रालय, रियासतों पर श्वेत पत्र (1950)"
+      },
+      "publisher": {
+        "en": "Government of India Press, Delhi",
+        "hi": "भारत सरकार मुद्रणालय, दिल्ली"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.207474",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The Government of India's account of the States' accession and integration, 1947-50, with each State's area; for c. 1947.",
+        "hi": "रियासतों के विलय और एकीकरण, 1947-50, का भारत सरकार का विवरण, हर रियासत के क्षेत्रफल सहित; लगभग 1947 के लिए।"
+      }
+    },
+    "memoranda-1940": {
+      "title": {
+        "en": "Memoranda on the Indian States, 1940",
+        "hi": "मेमोरेंडा ऑन द इंडियन स्टेट्स, 1940"
+      },
+      "publisher": {
+        "en": "Government of India, Delhi",
+        "hi": "भारत सरकार, दिल्ली"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.35376",
+      "use": "facts",
+      "licence": "public-domain",
+      "retrieved": "2026-09",
+      "note": {
+        "en": "The official handbook of the States by Agency, for their capitals in c. 1947.",
+        "hi": "एजेंसी-वार रियासतों की आधिकारिक पुस्तिका, लगभग 1947 में उनकी राजधानियों के लिए।"
+      }
     }
   }
 }

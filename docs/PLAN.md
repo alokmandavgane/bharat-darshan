@@ -2450,6 +2450,15 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-09-28, ninety-first round: a seventeenth era, 1947 — the princely states on the eve of independence. From the
+  Ministry of States' White Paper on Indian States (1950) and the Memoranda on the Indian States (1940), fetched on
+  approval: British India as the remainder, and 39 States or groups — the large States singly (Hyderabad, Kashmir,
+  Mysore, Travancore, Cochin, Baroda, Gwalior, Indore, Bhopal, Rewa, Jodhpur, Jaipur, Mewar, Bikaner, Jaisalmer,
+  Patiala, Kutch, Mayurbhanj, Tripura, Manipur, Sikkim ...), the small by group (Malwa, Bundelkhand, the other
+  Rajputana, East Punjab, Punjab Hill, Kathiawar, Gujarat, Deccan, Orissa, Chhattisgarh and Khasi States). The French
+  and Portuguese possessions stay blank (the White Paper never names them). New polity kinds state, states and
+  protectorate; name markers may carry `label.priority` (2-3 wait for a closer view): Tehri, the Khasi States and
+  Junagadh do at 1280x800. Every other name shows; 48 tests and the build pass.
 - 2026-09-28, ninetieth round: the north-east from two Buranjis in English (Bhuyan's Tungkhungia Buranji, 1933;
   Barua's Ahom-Buranji, 1930), fetched on approval. 14 polities: Kāmatā, the Chutiyās and the Kacharis in c. 1330;
   the Kacharis of Dimapur, Bisva Siṃha's Koch kingdom and Manipur in c. 1525; the Kacharis of Maibong and Jaintia in

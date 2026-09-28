@@ -71,7 +71,10 @@
     "salbai-capitals",
     "company",
     "company-names",
-    "company-capitals"
+    "company-capitals",
+    "independence",
+    "independence-names",
+    "independence-capitals"
   ],
   "relief": 10,
   "status": "draft",
@@ -406,6 +409,26 @@
         "company",
         "company-names",
         "company-capitals"
+      ]
+    },
+    {
+      "id": "independence",
+      "display": {
+        "en": "1947 CE",
+        "hi": "1947 ई."
+      },
+      "title": {
+        "en": "The princely states on the eve of independence",
+        "hi": "स्वतंत्रता की पूर्वसंध्या पर रियासतें"
+      },
+      "blurb": {
+        "en": "India on 14 August 1947: the British provinces and the 562 States, drawn singly where large and by group where small, from the Ministry of States' White Paper on Indian States (1950).",
+        "hi": "14 अगस्त 1947 को भारत: ब्रिटिश प्रांत और 562 रियासतें, बड़ी अकेले और छोटी समूहों में, रियासत मंत्रालय के श्वेत पत्र (1950) से।"
+      },
+      "layers": [
+        "independence",
+        "independence-names",
+        "independence-capitals"
       ]
     }
   ],

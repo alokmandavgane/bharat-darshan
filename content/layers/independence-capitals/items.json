@@ -1,0 +1,959 @@
+[
+  {
+    "id": "british-capital",
+    "status": "draft",
+    "name": {
+      "en": "New Delhi",
+      "hi": "नई दिल्ली"
+    },
+    "category": "british",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.6139,
+      "lon": 77.209
+    },
+    "regions": [
+      "IN-DL"
+    ],
+    "polity": {
+      "en": "British India",
+      "hi": "ब्रिटिश भारत"
+    },
+    "identified": {
+      "en": "certain, placed at New Delhi",
+      "hi": "निश्चित, New Delhi पर"
+    },
+    "blurb": {
+      "en": "The capital of British India.",
+      "hi": "ब्रिटिश भारत की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/New_Delhi"
+    ]
+  },
+  {
+    "id": "hyderabad-capital",
+    "status": "draft",
+    "name": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "category": "hyderabad",
+    "priority": 1,
+    "anchor": {
+      "lat": 17.385,
+      "lon": 78.4867
+    },
+    "regions": [
+      "IN-TS"
+    ],
+    "polity": {
+      "en": "Hyderabad",
+      "hi": "हैदराबाद"
+    },
+    "identified": {
+      "en": "certain, placed at Hyderabad",
+      "hi": "निश्चित, Hyderabad पर"
+    },
+    "blurb": {
+      "en": "The capital of Hyderabad.",
+      "hi": "हैदराबाद की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Hyderabad_State"
+    ]
+  },
+  {
+    "id": "kashmir-capital",
+    "status": "draft",
+    "name": {
+      "en": "Srinagar",
+      "hi": "श्रीनगर"
+    },
+    "category": "kashmir",
+    "priority": 1,
+    "anchor": {
+      "lat": 34.0837,
+      "lon": 74.7973
+    },
+    "regions": [
+      "IN-JK"
+    ],
+    "polity": {
+      "en": "Jammu and Kashmir",
+      "hi": "जम्मू और कश्मीर"
+    },
+    "identified": {
+      "en": "certain, placed at Srinagar (Jammu in winter)",
+      "hi": "निश्चित, Srinagar (Jammu in winter) पर"
+    },
+    "blurb": {
+      "en": "The capital of Jammu and Kashmir.",
+      "hi": "जम्मू और कश्मीर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Srinagar"
+    ]
+  },
+  {
+    "id": "mysore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "category": "mysore",
+    "priority": 1,
+    "anchor": {
+      "lat": 12.2958,
+      "lon": 76.6394
+    },
+    "regions": [
+      "IN-KA"
+    ],
+    "polity": {
+      "en": "Mysore",
+      "hi": "मैसूर"
+    },
+    "identified": {
+      "en": "likely, placed at Mysore (Bangalore the seat of government)",
+      "hi": "संभावित, Mysore (Bangalore the seat of government) पर"
+    },
+    "blurb": {
+      "en": "The capital of Mysore.",
+      "hi": "मैसूर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Kingdom_of_Mysore"
+    ]
+  },
+  {
+    "id": "travancore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Trivandrum",
+      "hi": "त्रिवेंद्रम"
+    },
+    "category": "travancore",
+    "priority": 1,
+    "anchor": {
+      "lat": 8.5241,
+      "lon": 76.9366
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Travancore",
+      "hi": "त्रावणकोर"
+    },
+    "identified": {
+      "en": "certain, placed at Thiruvananthapuram",
+      "hi": "निश्चित, Thiruvananthapuram पर"
+    },
+    "blurb": {
+      "en": "The capital of Travancore.",
+      "hi": "त्रावणकोर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Kingdom_of_Travancore"
+    ]
+  },
+  {
+    "id": "cochin-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ernakulam",
+      "hi": "एर्नाकुलम"
+    },
+    "category": "cochin",
+    "priority": 1,
+    "anchor": {
+      "lat": 9.9816,
+      "lon": 76.2999
+    },
+    "regions": [
+      "IN-KL"
+    ],
+    "polity": {
+      "en": "Cochin",
+      "hi": "कोचीन"
+    },
+    "identified": {
+      "en": "certain, placed at Ernakulam",
+      "hi": "निश्चित, Ernakulam पर"
+    },
+    "blurb": {
+      "en": "The capital of Cochin.",
+      "hi": "कोचीन की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Kingdom_of_Cochin"
+    ]
+  },
+  {
+    "id": "baroda-capital",
+    "status": "draft",
+    "name": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "category": "baroda",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.3072,
+      "lon": 73.1812
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Baroda",
+      "hi": "बड़ौदा"
+    },
+    "identified": {
+      "en": "certain, placed at Vadodara",
+      "hi": "निश्चित, Vadodara पर"
+    },
+    "blurb": {
+      "en": "The capital of Baroda.",
+      "hi": "बड़ौदा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Baroda_State"
+    ]
+  },
+  {
+    "id": "gwalior-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gwalior (Lashkar)",
+      "hi": "ग्वालियर (लश्कर)"
+    },
+    "category": "gwalior",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2183,
+      "lon": 78.1828
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Gwalior",
+      "hi": "ग्वालियर"
+    },
+    "identified": {
+      "en": "certain, placed at Lashkar, Gwalior",
+      "hi": "निश्चित, Lashkar, Gwalior पर"
+    },
+    "blurb": {
+      "en": "The capital of Gwalior.",
+      "hi": "ग्वालियर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Gwalior_State"
+    ]
+  },
+  {
+    "id": "indore-capital",
+    "status": "draft",
+    "name": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "category": "indore",
+    "priority": 1,
+    "anchor": {
+      "lat": 22.7196,
+      "lon": 75.8577
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Indore",
+      "hi": "इंदौर"
+    },
+    "identified": {
+      "en": "certain, placed at Indore",
+      "hi": "निश्चित, Indore पर"
+    },
+    "blurb": {
+      "en": "The capital of Indore.",
+      "hi": "इंदौर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Indore_State"
+    ]
+  },
+  {
+    "id": "bhopal-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "category": "bhopal",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.2599,
+      "lon": 77.4126
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Bhopal",
+      "hi": "भोपाल"
+    },
+    "identified": {
+      "en": "certain, placed at Bhopal",
+      "hi": "निश्चित, Bhopal पर"
+    },
+    "blurb": {
+      "en": "The capital of Bhopal.",
+      "hi": "भोपाल की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Bhopal_State"
+    ]
+  },
+  {
+    "id": "rewa-capital",
+    "status": "draft",
+    "name": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    },
+    "category": "rewa",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.5362,
+      "lon": 81.3037
+    },
+    "regions": [
+      "IN-MP"
+    ],
+    "polity": {
+      "en": "Rewa",
+      "hi": "रीवा"
+    },
+    "identified": {
+      "en": "certain, placed at Rewa",
+      "hi": "निश्चित, Rewa पर"
+    },
+    "blurb": {
+      "en": "The capital of Rewa.",
+      "hi": "रीवा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Rewa_State"
+    ]
+  },
+  {
+    "id": "jodhpur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "category": "jodhpur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.2389,
+      "lon": 73.0243
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jodhpur",
+      "hi": "जोधपुर"
+    },
+    "identified": {
+      "en": "certain, placed at Jodhpur",
+      "hi": "निश्चित, Jodhpur पर"
+    },
+    "blurb": {
+      "en": "The capital of Jodhpur.",
+      "hi": "जोधपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Jodhpur_State"
+    ]
+  },
+  {
+    "id": "jaipur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "category": "jaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9124,
+      "lon": 75.7873
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jaipur",
+      "hi": "जयपुर"
+    },
+    "identified": {
+      "en": "certain, placed at Jaipur",
+      "hi": "निश्चित, Jaipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Jaipur.",
+      "hi": "जयपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Jaipur_State"
+    ]
+  },
+  {
+    "id": "udaipur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Udaipur",
+      "hi": "उदयपुर"
+    },
+    "category": "udaipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.5854,
+      "lon": 73.7125
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Mewar",
+      "hi": "मेवाड़"
+    },
+    "identified": {
+      "en": "certain, placed at Udaipur",
+      "hi": "निश्चित, Udaipur पर"
+    },
+    "blurb": {
+      "en": "The capital of Mewar.",
+      "hi": "मेवाड़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Udaipur_State"
+    ]
+  },
+  {
+    "id": "bikaner-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "category": "bikaner",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.0229,
+      "lon": 73.3119
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Bikaner",
+      "hi": "बीकानेर"
+    },
+    "identified": {
+      "en": "certain, placed at Bikaner",
+      "hi": "निश्चित, Bikaner पर"
+    },
+    "blurb": {
+      "en": "The capital of Bikaner.",
+      "hi": "बीकानेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Bikaner_State"
+    ]
+  },
+  {
+    "id": "jaisalmer-capital",
+    "status": "draft",
+    "name": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "category": "jaisalmer",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.9157,
+      "lon": 70.9083
+    },
+    "regions": [
+      "IN-RJ"
+    ],
+    "polity": {
+      "en": "Jaisalmer",
+      "hi": "जैसलमेर"
+    },
+    "identified": {
+      "en": "certain, placed at Jaisalmer",
+      "hi": "निश्चित, Jaisalmer पर"
+    },
+    "blurb": {
+      "en": "The capital of Jaisalmer.",
+      "hi": "जैसलमेर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Jaisalmer_State"
+    ]
+  },
+  {
+    "id": "patiala-capital",
+    "status": "draft",
+    "name": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    },
+    "category": "patiala",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.3398,
+      "lon": 76.3869
+    },
+    "regions": [
+      "IN-PB"
+    ],
+    "polity": {
+      "en": "Patiala",
+      "hi": "पटियाला"
+    },
+    "identified": {
+      "en": "certain, placed at Patiala",
+      "hi": "निश्चित, Patiala पर"
+    },
+    "blurb": {
+      "en": "The capital of Patiala.",
+      "hi": "पटियाला की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Patiala_State"
+    ]
+  },
+  {
+    "id": "tehri-capital",
+    "status": "draft",
+    "name": {
+      "en": "Narendranagar",
+      "hi": "नरेंद्रनगर"
+    },
+    "category": "tehri",
+    "priority": 1,
+    "anchor": {
+      "lat": 30.1622,
+      "lon": 78.2873
+    },
+    "regions": [
+      "IN-UK"
+    ],
+    "polity": {
+      "en": "Tehri",
+      "hi": "टिहरी"
+    },
+    "identified": {
+      "en": "likely, placed at Narendranagar (Tehri until 1925)",
+      "hi": "संभावित, Narendranagar (Tehri until 1925) पर"
+    },
+    "blurb": {
+      "en": "The capital of Tehri.",
+      "hi": "टिहरी की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Tehri_Garhwal_(princely_state)"
+    ]
+  },
+  {
+    "id": "rampur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    },
+    "category": "rampur",
+    "priority": 1,
+    "anchor": {
+      "lat": 28.8103,
+      "lon": 79.0269
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Rampur",
+      "hi": "रामपुर"
+    },
+    "identified": {
+      "en": "certain, placed at Rampur",
+      "hi": "निश्चित, Rampur पर"
+    },
+    "blurb": {
+      "en": "The capital of Rampur.",
+      "hi": "रामपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Rampur_State"
+    ]
+  },
+  {
+    "id": "benares-capital",
+    "status": "draft",
+    "name": {
+      "en": "Ramnagar",
+      "hi": "रामनगर"
+    },
+    "category": "benares",
+    "priority": 1,
+    "anchor": {
+      "lat": 25.2677,
+      "lon": 83.0263
+    },
+    "regions": [
+      "IN-UP"
+    ],
+    "polity": {
+      "en": "Benares",
+      "hi": "बनारस"
+    },
+    "identified": {
+      "en": "certain, placed at Ramnagar Fort, Varanasi",
+      "hi": "निश्चित, Ramnagar Fort, Varanasi पर"
+    },
+    "blurb": {
+      "en": "The capital of Benares.",
+      "hi": "बनारस की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Benares_State"
+    ]
+  },
+  {
+    "id": "junagadh-capital",
+    "status": "draft",
+    "name": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    },
+    "category": "junagadh",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.5222,
+      "lon": 70.4579
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Junagadh",
+      "hi": "जूनागढ़"
+    },
+    "identified": {
+      "en": "certain, placed at Junagadh",
+      "hi": "निश्चित, Junagadh पर"
+    },
+    "blurb": {
+      "en": "The capital of Junagadh.",
+      "hi": "जूनागढ़ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Junagadh_State"
+    ]
+  },
+  {
+    "id": "kutch-capital",
+    "status": "draft",
+    "name": {
+      "en": "Bhuj",
+      "hi": "भुज"
+    },
+    "category": "kutch",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.242,
+      "lon": 69.6669
+    },
+    "regions": [
+      "IN-GJ"
+    ],
+    "polity": {
+      "en": "Kutch",
+      "hi": "कच्छ"
+    },
+    "identified": {
+      "en": "certain, placed at Bhuj",
+      "hi": "निश्चित, Bhuj पर"
+    },
+    "blurb": {
+      "en": "The capital of Kutch.",
+      "hi": "कच्छ की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Cutch_State"
+    ]
+  },
+  {
+    "id": "kolhapur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    },
+    "category": "kolhapur",
+    "priority": 1,
+    "anchor": {
+      "lat": 16.705,
+      "lon": 74.2433
+    },
+    "regions": [
+      "IN-MH"
+    ],
+    "polity": {
+      "en": "Kolhapur",
+      "hi": "कोल्हापुर"
+    },
+    "identified": {
+      "en": "certain, placed at Kolhapur",
+      "hi": "निश्चित, Kolhapur पर"
+    },
+    "blurb": {
+      "en": "The capital of Kolhapur.",
+      "hi": "कोल्हापुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Kolhapur_State"
+    ]
+  },
+  {
+    "id": "mayurbhanj-capital",
+    "status": "draft",
+    "name": {
+      "en": "Baripada",
+      "hi": "बारीपदा"
+    },
+    "category": "mayurbhanj",
+    "priority": 1,
+    "anchor": {
+      "lat": 21.9347,
+      "lon": 86.735
+    },
+    "regions": [
+      "IN-OD"
+    ],
+    "polity": {
+      "en": "Mayurbhanj",
+      "hi": "मयूरभंज"
+    },
+    "identified": {
+      "en": "certain, placed at Baripada",
+      "hi": "निश्चित, Baripada पर"
+    },
+    "blurb": {
+      "en": "The capital of Mayurbhanj.",
+      "hi": "मयूरभंज की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Mayurbhanj_State"
+    ]
+  },
+  {
+    "id": "cooch-behar-capital",
+    "status": "draft",
+    "name": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    },
+    "category": "cooch-behar",
+    "priority": 1,
+    "anchor": {
+      "lat": 26.324,
+      "lon": 89.451
+    },
+    "regions": [
+      "IN-WB"
+    ],
+    "polity": {
+      "en": "Cooch Behar",
+      "hi": "कूच बिहार"
+    },
+    "identified": {
+      "en": "certain, placed at Cooch Behar",
+      "hi": "निश्चित, Cooch Behar पर"
+    },
+    "blurb": {
+      "en": "The capital of Cooch Behar.",
+      "hi": "कूच बिहार की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Cooch_Behar_State"
+    ]
+  },
+  {
+    "id": "tripura-capital",
+    "status": "draft",
+    "name": {
+      "en": "Agartala",
+      "hi": "अगरतला"
+    },
+    "category": "tripura",
+    "priority": 1,
+    "anchor": {
+      "lat": 23.8315,
+      "lon": 91.2868
+    },
+    "regions": [
+      "IN-TR"
+    ],
+    "polity": {
+      "en": "Tripura",
+      "hi": "त्रिपुरा"
+    },
+    "identified": {
+      "en": "certain, placed at Agartala",
+      "hi": "निश्चित, Agartala पर"
+    },
+    "blurb": {
+      "en": "The capital of Tripura.",
+      "hi": "त्रिपुरा की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Tripura_(princely_state)"
+    ]
+  },
+  {
+    "id": "manipur-capital",
+    "status": "draft",
+    "name": {
+      "en": "Imphal",
+      "hi": "इंफाल"
+    },
+    "category": "manipur",
+    "priority": 1,
+    "anchor": {
+      "lat": 24.817,
+      "lon": 93.9368
+    },
+    "regions": [
+      "IN-MN"
+    ],
+    "polity": {
+      "en": "Manipur",
+      "hi": "मणिपुर"
+    },
+    "identified": {
+      "en": "certain, placed at Kangla, Imphal",
+      "hi": "निश्चित, Kangla, Imphal पर"
+    },
+    "blurb": {
+      "en": "The capital of Manipur.",
+      "hi": "मणिपुर की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Manipur_(princely_state)"
+    ]
+  },
+  {
+    "id": "sikkim-capital",
+    "status": "draft",
+    "name": {
+      "en": "Gangtok",
+      "hi": "गंगटोक"
+    },
+    "category": "sikkim",
+    "priority": 1,
+    "anchor": {
+      "lat": 27.3389,
+      "lon": 88.6065
+    },
+    "regions": [
+      "IN-SK"
+    ],
+    "polity": {
+      "en": "Sikkim",
+      "hi": "सिक्किम"
+    },
+    "identified": {
+      "en": "certain, placed at Gangtok",
+      "hi": "निश्चित, Gangtok पर"
+    },
+    "blurb": {
+      "en": "The capital of Sikkim.",
+      "hi": "सिक्किम की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Kingdom_of_Sikkim"
+    ]
+  },
+  {
+    "id": "pudukkottai-capital",
+    "status": "draft",
+    "name": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    },
+    "category": "pudukkottai",
+    "priority": 1,
+    "anchor": {
+      "lat": 10.3797,
+      "lon": 78.8205
+    },
+    "regions": [
+      "IN-TN"
+    ],
+    "polity": {
+      "en": "Pudukkottai",
+      "hi": "पुदुक्कोट्टै"
+    },
+    "identified": {
+      "en": "certain, placed at Pudukkottai",
+      "hi": "निश्चित, Pudukkottai पर"
+    },
+    "blurb": {
+      "en": "The capital of Pudukkottai.",
+      "hi": "पुदुक्कोट्टै की राजधानी।"
+    },
+    "sources": [
+      "https://archive.org/details/in.ernet.dli.2015.207474",
+      "https://en.wikipedia.org/wiki/Pudukkottai_State"
+    ]
+  }
+]

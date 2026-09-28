@@ -1,0 +1,386 @@
+{
+  "id": "independence-names",
+  "type": "points",
+  "marker": "label",
+  "names_first": true,
+  "group": "history-kingdoms",
+  "title": {
+    "en": "Names: 1947 CE",
+    "hi": "नाम: 1947 ई."
+  },
+  "icon": "map",
+  "default_on": false,
+  "categories": [
+    {
+      "id": "british",
+      "color": "#d8b8b0",
+      "title": {
+        "en": "British India",
+        "hi": "ब्रिटिश भारत"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "hyderabad",
+      "color": "#5f86a3",
+      "title": {
+        "en": "Hyderabad",
+        "hi": "हैदराबाद"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kashmir",
+      "color": "#6a8fb0",
+      "title": {
+        "en": "Jammu and Kashmir",
+        "hi": "जम्मू और कश्मीर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mysore",
+      "color": "#2f7f8a",
+      "title": {
+        "en": "Mysore",
+        "hi": "मैसूर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "travancore",
+      "color": "#3f7f5a",
+      "title": {
+        "en": "Travancore",
+        "hi": "त्रावणकोर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cochin",
+      "color": "#6a9a4a",
+      "title": {
+        "en": "Cochin",
+        "hi": "कोचीन"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "baroda",
+      "color": "#a3765f",
+      "title": {
+        "en": "Baroda",
+        "hi": "बड़ौदा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "gwalior",
+      "color": "#b0894a",
+      "title": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "indore",
+      "color": "#8a6a3a",
+      "title": {
+        "en": "Indore",
+        "hi": "इंदौर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "malwa",
+      "color": "#c0a060",
+      "title": {
+        "en": "Malwa States",
+        "hi": "मालवा की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bhopal",
+      "color": "#4a7a8a",
+      "title": {
+        "en": "Bhopal",
+        "hi": "भोपाल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rewa",
+      "color": "#9a5a5a",
+      "title": {
+        "en": "Rewa",
+        "hi": "रीवा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bundelkhand",
+      "color": "#b07a7a",
+      "title": {
+        "en": "Bundelkhand States",
+        "hi": "बुंदेलखंड की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jodhpur",
+      "color": "#c07050",
+      "title": {
+        "en": "Jodhpur",
+        "hi": "जोधपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jaipur",
+      "color": "#d09060",
+      "title": {
+        "en": "Jaipur",
+        "hi": "जयपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "udaipur",
+      "color": "#a04040",
+      "title": {
+        "en": "Udaipur (Mewar)",
+        "hi": "उदयपुर (मेवाड़)"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "bikaner",
+      "color": "#c8a070",
+      "title": {
+        "en": "Bikaner",
+        "hi": "बीकानेर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "jaisalmer",
+      "color": "#e0b080",
+      "title": {
+        "en": "Jaisalmer",
+        "hi": "जैसलमेर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rajputana",
+      "color": "#b89a70",
+      "title": {
+        "en": "Other Rajputana States",
+        "hi": "अन्य राजपूताना रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "patiala",
+      "color": "#5a7a3a",
+      "title": {
+        "en": "Patiala",
+        "hi": "पटियाला"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "east-punjab",
+      "color": "#7a9a5a",
+      "title": {
+        "en": "East Punjab States",
+        "hi": "पूर्वी पंजाब की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "hill-states",
+      "color": "#6a8a6a",
+      "title": {
+        "en": "Punjab Hill States",
+        "hi": "पंजाब की पहाड़ी रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "tehri",
+      "color": "#4a6a8a",
+      "title": {
+        "en": "Tehri-Garhwal",
+        "hi": "टिहरी-गढ़वाल"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "rampur",
+      "color": "#3a8a6a",
+      "title": {
+        "en": "Rampur",
+        "hi": "रामपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "benares",
+      "color": "#6a5a9a",
+      "title": {
+        "en": "Benares",
+        "hi": "बनारस"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kathiawar",
+      "color": "#c09a50",
+      "title": {
+        "en": "Kathiawar States",
+        "hi": "काठियावाड़ की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "junagadh",
+      "color": "#8a4a6a",
+      "title": {
+        "en": "Junagadh",
+        "hi": "जूनागढ़"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kutch",
+      "color": "#9a8a5a",
+      "title": {
+        "en": "Kutch",
+        "hi": "कच्छ"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "gujarat-states",
+      "color": "#b08a60",
+      "title": {
+        "en": "Gujarat States",
+        "hi": "गुजरात की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "deccan-states",
+      "color": "#a07a50",
+      "title": {
+        "en": "Deccan States",
+        "hi": "दक्कन की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "kolhapur",
+      "color": "#c06a40",
+      "title": {
+        "en": "Kolhapur",
+        "hi": "कोल्हापुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "orissa-states",
+      "color": "#7a8a4a",
+      "title": {
+        "en": "Orissa States",
+        "hi": "उड़ीसा की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "chhattisgarh-states",
+      "color": "#8a9a5a",
+      "title": {
+        "en": "Chhattisgarh States",
+        "hi": "छत्तीसगढ़ की रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "mayurbhanj",
+      "color": "#5a8a7a",
+      "title": {
+        "en": "Mayurbhanj",
+        "hi": "मयूरभंज"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "cooch-behar",
+      "color": "#4a7a9a",
+      "title": {
+        "en": "Cooch Behar",
+        "hi": "कूच बिहार"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "tripura",
+      "color": "#9a6a4a",
+      "title": {
+        "en": "Tripura",
+        "hi": "त्रिपुरा"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "manipur",
+      "color": "#7a5a8a",
+      "title": {
+        "en": "Manipur",
+        "hi": "मणिपुर"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "khasi",
+      "color": "#6a7a4a",
+      "title": {
+        "en": "Khasi Hill States",
+        "hi": "खासी पहाड़ी रियासतें"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "sikkim",
+      "color": "#5a6a9a",
+      "title": {
+        "en": "Sikkim",
+        "hi": "सिक्किम"
+      },
+      "icon": "map"
+    },
+    {
+      "id": "pudukkottai",
+      "color": "#8a6a9a",
+      "title": {
+        "en": "Pudukkottai",
+        "hi": "पुदुक्कोट्टै"
+      },
+      "icon": "map"
+    }
+  ],
+  "note": {
+    "en": "The kingdoms' names, laid on the map.",
+    "hi": "राज्यों के नाम, मानचित्र पर।"
+  },
+  "sources": [
+    "white-paper-1950",
+    "memoranda-1940",
+    "census-2011",
+    "datameet-maps",
+    "wikipedia"
+  ]
+}
