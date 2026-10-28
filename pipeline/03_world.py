@@ -122,7 +122,7 @@ def main():
     s1 = pack.write(p1, h16, 'int16', 'plane', kind='world-heights', units='m', km_per_px=km_per_px,
                     width_km=round(km[0], 1), height_km=round(km[1], 1), scale=SCALE,
                     source=f'terrarium z{ZOOM}')
-    s2 = pack.write(p2, shade, 'uint8', 'plane', kind='world-shade', km_per_px=km_per_px * 2,
+    s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='world-shade', km_per_px=km_per_px * 2,
                     channels_meaning=['ao', 'coast'], coast_range_km=dem.COAST_RANGE_KM,
                     ao_curve={'h_ref': dem.H_REF, 'gamma': dem.GAMMA, 'exaggeration': dem.AO_EXAG})
     print(f'  {width}x{height}: {km_per_px:.1f} km/px, heights {h16.min()}..{h16.max()} m, '

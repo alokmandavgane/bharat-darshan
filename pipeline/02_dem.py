@@ -311,10 +311,10 @@ def main():
         s1 = pack.write(p1, h16, 'int16', 'plane', kind='heights', units='m', km_per_px=km_per_px,
                         min=int(h16.min()), max=int(h16.max()), ocean_step_m=OCEAN_STEP_M,
                         land_threshold_m=-OCEAN_STEP_M / 2, source=f'terrarium z{args.zoom}, box {f}')
-        s2 = pack.write(p2, shade, 'uint8', 'plane', kind='shade', km_per_px=km_per_px * 2,
+        s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='shade', km_per_px=km_per_px * 2,
                         channels_meaning=['ao', 'coast'], coast_range_km=COAST_RANGE_KM,
                         ao_curve={'h_ref': H_REF, 'gamma': GAMMA, 'exaggeration': AO_EXAG})
-        s3 = pack.write(p3, borders, 'uint8', 'plane', kind='border-sdf', range_px=BORDER_RANGE_PX,
+        s3 = pack.write(p3, borders, 'uint8', 'plane', planar=True, kind='border-sdf', range_px=BORDER_RANGE_PX,
                         km_per_px=km_per_px, channels_meaning=['internal', 'external'])
         s4 = pack.write(p4, edge, 'uint8', 'plane', kind='india-sdf', range_px=EDGE_RANGE_PX,
                         km_per_px=km_per_px, zero=128)

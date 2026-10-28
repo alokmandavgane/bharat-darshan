@@ -42,7 +42,19 @@ export function decodePack(raw) {
   } else {
     throw new Error(`pack dtype ${dtype}`);
   }
-  undoPredictor(data, width, height, channels, predictor);
+  if (header.layout === 'planar' && channels > 1) {
+    // One channel after another (pack.py, planar=True): undo each plane on its own, then
+    // interleave, so every caller still gets the samples the usual way round.
+    const planes = data, plane = width * height;
+    data = dtype === 'int16' ? new Int16Array(count) : new Uint8Array(count);
+    for (let c = 0; c < channels; c++) {
+      const p = planes.subarray(c * plane, (c + 1) * plane);
+      undoPredictor(p, width, height, 1, predictor);
+      for (let i = 0; i < plane; i++) data[i * channels + c] = p[i];
+    }
+  } else {
+    undoPredictor(data, width, height, channels, predictor);
+  }
   return { header, data, width, height, channels };
 }
 
