@@ -2477,12 +2477,27 @@ docs/DEPLOY.md).
     on average, with nothing to see side by side. The site is 54 MB. Not done: the AO as
     WebP q80 (another 5 MB, lossy, needs an image texture path); rounding heights to 4 m
     (8 MB, but it would terrace the plains).
-  - **`npm run data` does not reproduce the committed outlines on this Mac** (Python 3.14,
-    numpy 2.5.3): step 01 moves two to ten points in eight outlines and India's, up to
-    10 km in Kerala, and that carries into those states' ids and edge rasters and the India
-    edge field. The round above reran only steps 02, 03, 06 and 05 over the committed
-    outlines so as not to ship it. Worth finding out which machine's output is right before
-    the next full rebuild.
+  - **`npm run data` does not reproduce the committed outlines on this Mac**, and the
+    reason is the numpy build, not the version. `npm run data` runs `python3`, which here
+    is Homebrew's Python 3.14 with Homebrew's numpy 2.5.3 (installed 2026-10-03, built
+    against OpenBLAS); the project `.venv` has the pip wheel of the same 2.5.3, built against
+    Accelerate, and traced from the committed ID raster it reproduces all 37 outlines byte
+    for byte, as the machine that built them did. The tracer smooths each loop with
+    `np.convolve`, whose inner loop is a BLAS dot product: the two builds sum in a different
+    order and the smoothed loop differs by under 1e-12 px. Douglas-Peucker at 0.2 px then
+    keeps a different vertex where two are all but tied on a near-straight run, and the
+    loops are sorted by an area computed with `np.dot`, so multi-loop files can come out in
+    another order. Twelve files change, by up to 10 km vertex to vertex, but as curves the
+    two builds' outlines are at most 0.39 km apart (a quarter of a 1.71 km pixel; tolerance
+    0.34 km plus 0.1 km rounding). Neither was more right. **Fixed**: `contour.py` no longer
+    goes through BLAS -- the blur adds its weighted shifts in a fixed order and the area is
+    a `math.fsum` -- and the full pipeline run under both interpreters now writes all 424
+    files under `public/data` byte for byte the same. The outlines changed once for it:
+    eleven of them, at most 0.39 km as curves from the committed ones, which moves a few
+    dozen mask pixels at the edge of seven state packages, the edge fields and coastal
+    shadow beside them, and the India edge field; the state views show no difference.
+    `shapefile.py` and `topo.py` still take ring areas with `np.dot`, for orientation and
+    the order states are rasterised in, where a last-bit difference has not mattered so far.
   - **Considered, not decided: moving to tools.alokm.com/darshan** to consolidate the
     owner's subdomains. A Pages project takes a whole hostname, not a path, so it means a
     Worker with static assets on the route `tools.alokm.com/darshan/*` (or a router Worker

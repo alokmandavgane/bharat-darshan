@@ -6,10 +6,17 @@ staircase is low-pass filtered along its arc length, and the result is simplifie
 Douglas-Peucker. Coordinates start on pixel corners (col, row) and end within about a
 pixel of them, so a loop can be scaled to any tier's grid.
 
+Nothing here goes through BLAS (np.dot, np.convolve): those sum in an order that depends
+on how numpy was built, Accelerate and OpenBLAS differed in the last bits, and
+Douglas-Peucker turned that into a different vertex wherever two were all but tied. The
+sums are made in a fixed order instead, so every machine traces the same loops.
+
 The state view draws these loops as the walls of a lifted block and fills them for its
 top surface (pipeline/06_states.py), five times finer than the raster they came from,
 so the smoothing has to remove the staircase rather than round its corners.
 """
+import math
+
 import numpy as np
 
 
@@ -124,7 +131,7 @@ def simplify(loop, tol):
 
 def shoelace(loop):
     x, y = loop[:, 0], loop[:, 1]
-    return 0.5 * float(np.dot(x, np.roll(y, -1)) - np.dot(y, np.roll(x, -1)))
+    return 0.5 * math.fsum((x * np.roll(y, -1) - y * np.roll(x, -1)).tolist())
 
 
 def _resample(loop, step):
@@ -166,7 +173,10 @@ def _smooth(loop, sigma):
     k = np.exp(-0.5 * (np.arange(-r, r + 1) * SMOOTH_STEP / sigma) ** 2)
     k /= k.sum()
     pad = np.vstack([pts[-r:], pts, pts[:r]])
-    return np.column_stack([np.convolve(pad[:, i], k, 'valid') for i in (0, 1)])
+    out = np.zeros_like(pts)
+    for j, w in enumerate(k):           # the convolution, one weighted shift at a time
+        out += w * pad[j:j + len(pts)]
+    return out
 
 
 def trace(mask, tol=0.2, min_area=3.0, sigma=1.2):
