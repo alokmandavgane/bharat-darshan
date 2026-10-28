@@ -2459,16 +2459,30 @@ docs/DEPLOY.md).
     1200x630 (`scale: 'css'`), and `og:image:width/height` say so. All 68 were re-rendered
     from the current app with `FORCE=1`, among them the eight pages that had none (bharatavarsha,
     divisions, kingdoms, mahabharata, rama-exile, sugriva, biosphere, wildlife): 33 of 33 pages have their own
-    card now, 5.8 MB in all, the largest 98 KB. The site is 70 MB. `.claude/launch.json`
+    card now, 5.8 MB in all, the largest 98 KB; the site went to 70 MB. `.claude/launch.json`
     gains a `bharat-darshan-preview` entry, the server the tool renders against.
-  - **Measured, not done: the state packages.** Heights are cropped at 0.35 km a pixel from
-    the zoom-8 mosaic, which is about 0.55 km a pixel at India's latitudes, so most of the
-    pixels are interpolation the GPU's LINEAR filter would do anyway; at 0.55 km they are
-    10.7 MB instead of 23.5 (the mask and edge fields could stay at 0.35, but check how the
-    block pairs textures of different sizes). The shade's two channels gzip to 9.5 MB
-    interleaved and 7.5 MB stored one after the other, losslessly; the AO as WebP q80 brings
-    it to 2.5 MB but needs an image texture path. Rounding heights to 4 m saves 8 MB but
-    would terrace the plains. All of it together with the cards: 79 MB to about 47.
+  - **The state packages, 35 MB to 21.** Heights were cropped at 0.35 km a pixel from the
+    zoom-8 mosaic, whose own pixel is 0.49-0.60 km across India, so most of them were
+    interpolation the GPU's LINEAR filter does anyway. Each unit's heights are now cropped
+    at the mosaic's pixel along its own northern edge (`heights_km_per_px` in the state
+    index; 0.49 for Ladakh, 0.60 for Kerala): 23.5 MB to 11.9. The mask, the edge field and
+    the ambient occlusion still come from the 0.35 km crop, and the index's `km_per_px`
+    stays 0.35, so the closest zoom is unchanged; the block already takes the heights'
+    texel size from the texture. Packs gain a planar layout (`pack.write(planar=True)`,
+    `"layout": "planar"`, both decoders), one channel after another: every shade and border
+    pack is about a fifth smaller with identical samples, the state shade 9.5 MB to 7.5 and
+    the first view 1,271 KB to 1,214. Checked: all 41 planar packs decode to the old samples
+    in Python and in `pack.js`, `test/pack.test.js` covers the layout, and Ladakh, Kerala and
+    Maharashtra at their default framing and closest zoom differ from before by under 2/255
+    on average, with nothing to see side by side. The site is 54 MB. Not done: the AO as
+    WebP q80 (another 5 MB, lossy, needs an image texture path); rounding heights to 4 m
+    (8 MB, but it would terrace the plains).
+  - **`npm run data` does not reproduce the committed outlines on this Mac** (Python 3.14,
+    numpy 2.5.3): step 01 moves two to ten points in eight outlines and India's, up to
+    10 km in Kerala, and that carries into those states' ids and edge rasters and the India
+    edge field. The round above reran only steps 02, 03, 06 and 05 over the committed
+    outlines so as not to ship it. Worth finding out which machine's output is right before
+    the next full rebuild.
   - **Considered, not decided: moving to tools.alokm.com/darshan** to consolidate the
     owner's subdomains. A Pages project takes a whole hostname, not a path, so it means a
     Worker with static assets on the route `tools.alokm.com/darshan/*` (or a router Worker
@@ -3118,7 +3132,7 @@ docs/DEPLOY.md).
   round). Raw downloads are cached in `pipeline/raw/`, previews land in `pipeline/tmp/`.
 - `public/data/`: committed outputs for two tiers, 960x1024 (first view, 1.15 MB) and
   1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`. 24 layers and 14
-  plates; the first-view tier is 1,271 KB of the 1.5 MB budget and every layer past the
+  plates; the first-view tier is 1,214 KB of the 1.5 MB budget and every layer past the
   default set is lazily loaded.
 - `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
   names (Hindi spellings pending review), native-script names where they differ.
@@ -3235,7 +3249,7 @@ docs/DEPLOY.md).
 4. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
-   question 1: they are about 1 MB each, 36 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
+   question 1: they are about 0.6 MB each, 21 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
 5. Settle open questions 6-7.
