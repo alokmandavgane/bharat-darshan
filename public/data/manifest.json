@@ -13758,20 +13758,20 @@
    "sha256": "1dbca1b3ae0e"
   },
   "regions/india-edge-1024.bin.gz": {
-   "size": 44836,
-   "sha256": "568a3c12bd63"
+   "size": 44830,
+   "sha256": "7b584bf7f635"
   },
   "regions/india-edge-2048.bin.gz": {
-   "size": 96423,
-   "sha256": "1d728256888a"
+   "size": 96444,
+   "sha256": "fe634862b99d"
   },
   "regions/states-borders-1024.bin.gz": {
-   "size": 112925,
-   "sha256": "049e0b54d226"
+   "size": 112922,
+   "sha256": "45bd89909d23"
   },
   "regions/states-borders-2048.bin.gz": {
-   "size": 245656,
-   "sha256": "de0438633506"
+   "size": 245660,
+   "sha256": "e835607e78c7"
   },
   "regions/states-ids-1024.bin.gz": {
    "size": 12825,
@@ -13787,11 +13787,11 @@
   },
   "regions/outlines/andaman-and-nicobar-islands.json": {
    "size": 9191,
-   "sha256": "ac3d1f3ac7d3"
+   "sha256": "7983047805a3"
   },
   "regions/outlines/andhra-pradesh.json": {
    "size": 13014,
-   "sha256": "a44ab852daf7"
+   "sha256": "a6ac707b2fa1"
   },
   "regions/outlines/arunachal-pradesh.json": {
    "size": 7885,
@@ -13802,8 +13802,8 @@
    "sha256": "24ee101c264d"
   },
   "regions/outlines/bihar.json": {
-   "size": 7404,
-   "sha256": "c17f3e55d98a"
+   "size": 7419,
+   "sha256": "b3cbd07bbad0"
   },
   "regions/outlines/chandigarh.json": {
    "size": 303,
@@ -13826,20 +13826,20 @@
    "sha256": "1181dc649b04"
   },
   "regions/outlines/gujarat.json": {
-   "size": 13260,
-   "sha256": "fa2ec9298e1f"
+   "size": 13261,
+   "sha256": "4d30e3ae5817"
   },
   "regions/outlines/haryana.json": {
    "size": 7037,
-   "sha256": "cb4ebc346c9a"
+   "sha256": "b01b37107761"
   },
   "regions/outlines/himachal-pradesh.json": {
    "size": 4997,
    "sha256": "e3422c5b53f7"
   },
   "regions/outlines/india.json": {
-   "size": 71358,
-   "sha256": "90a403645b65"
+   "size": 71359,
+   "sha256": "f60fa5d30425"
   },
   "regions/outlines/jammu-and-kashmir.json": {
    "size": 4645,
@@ -13855,11 +13855,11 @@
   },
   "regions/outlines/kerala.json": {
    "size": 5292,
-   "sha256": "7fed665d7dba"
+   "sha256": "fabc5c796956"
   },
   "regions/outlines/ladakh.json": {
    "size": 9885,
-   "sha256": "242ef3eeccc6"
+   "sha256": "25f07b896ec3"
   },
   "regions/outlines/lakshadweep.json": {
    "size": 2869,
@@ -13867,7 +13867,7 @@
   },
   "regions/outlines/madhya-pradesh.json": {
    "size": 19411,
-   "sha256": "959d222c0118"
+   "sha256": "7ed65dd65c50"
   },
   "regions/outlines/maharashtra.json": {
    "size": 14718,
@@ -13891,7 +13891,7 @@
   },
   "regions/outlines/odisha.json": {
    "size": 8362,
-   "sha256": "eb35a540cc10"
+   "sha256": "8ef8012976ab"
   },
   "regions/outlines/puducherry.json": {
    "size": 1678,
@@ -13903,7 +13903,7 @@
   },
   "regions/outlines/rajasthan.json": {
    "size": 15250,
-   "sha256": "2e1464d9ca1f"
+   "sha256": "ca2c98971041"
   },
   "regions/outlines/sikkim.json": {
    "size": 1351,
@@ -14898,20 +14898,20 @@
    "sha256": "5c8031574aa8"
   },
   "states/bihar-edge.bin.gz": {
-   "size": 46374,
-   "sha256": "d58ca191dbbe"
+   "size": 46342,
+   "sha256": "48a34a321e99"
   },
   "states/bihar-heights.bin.gz": {
-   "size": 219085,
-   "sha256": "a9eafdca6da3"
+   "size": 219071,
+   "sha256": "f5fb9ba75003"
   },
   "states/bihar-ids.bin.gz": {
    "size": 6494,
-   "sha256": "355fc3312114"
+   "sha256": "9dbc20682fd1"
   },
   "states/bihar-shade.bin.gz": {
-   "size": 198297,
-   "sha256": "2f19213a5ab0"
+   "size": 198284,
+   "sha256": "a1ba21050e7e"
   },
   "states/chandigarh-edge.bin.gz": {
    "size": 1162,
@@ -14994,36 +14994,36 @@
    "sha256": "e07fedaf3c8f"
   },
   "states/gujarat-edge.bin.gz": {
-   "size": 79672,
-   "sha256": "6eac1f4eedd8"
+   "size": 79676,
+   "sha256": "8aba5a4e818b"
   },
   "states/gujarat-heights.bin.gz": {
-   "size": 454765,
-   "sha256": "e12f15d30f9b"
+   "size": 454778,
+   "sha256": "1540779d6169"
   },
   "states/gujarat-ids.bin.gz": {
-   "size": 11426,
-   "sha256": "5116d5a78b20"
+   "size": 11425,
+   "sha256": "5be911511cfb"
   },
   "states/gujarat-shade.bin.gz": {
-   "size": 369283,
-   "sha256": "f018e3835158"
+   "size": 369236,
+   "sha256": "54156d4df5ef"
   },
   "states/haryana-edge.bin.gz": {
-   "size": 39348,
-   "sha256": "b6bff614b44c"
+   "size": 39349,
+   "sha256": "e112b3aa7289"
   },
   "states/haryana-heights.bin.gz": {
-   "size": 127312,
-   "sha256": "a6e703f3c56c"
+   "size": 127316,
+   "sha256": "fb852e71eb1c"
   },
   "states/haryana-ids.bin.gz": {
-   "size": 5214,
-   "sha256": "0f2f2970de31"
+   "size": 5213,
+   "sha256": "141ebe79f413"
   },
   "states/haryana-shade.bin.gz": {
-   "size": 109229,
-   "sha256": "0dcc6bc08c4d"
+   "size": 109226,
+   "sha256": "28e1f5e9e5c9"
   },
   "states/himachal-pradesh-edge.bin.gz": {
    "size": 29753,
@@ -15043,7 +15043,7 @@
   },
   "states/index.json": {
    "size": 11211,
-   "sha256": "774d9e95101c"
+   "sha256": "b511ee299349"
   },
   "states/jammu-and-kashmir-edge.bin.gz": {
    "size": 27209,
@@ -15094,36 +15094,36 @@
    "sha256": "aaf8acd3f778"
   },
   "states/kerala-edge.bin.gz": {
-   "size": 35545,
-   "sha256": "1862414f6858"
+   "size": 35455,
+   "sha256": "c9a282b0e560"
   },
   "states/kerala-heights.bin.gz": {
-   "size": 183939,
-   "sha256": "640a14592c8e"
+   "size": 183940,
+   "sha256": "12f65ce41efb"
   },
   "states/kerala-ids.bin.gz": {
-   "size": 5064,
-   "sha256": "f858d724ddde"
+   "size": 5067,
+   "sha256": "993eedb4ec66"
   },
   "states/kerala-shade.bin.gz": {
-   "size": 127590,
-   "sha256": "5b4e4c17d408"
+   "size": 127539,
+   "sha256": "e2da63056503"
   },
   "states/ladakh-edge.bin.gz": {
-   "size": 64584,
-   "sha256": "bf812d08c2c3"
+   "size": 64589,
+   "sha256": "4f0024f6935c"
   },
   "states/ladakh-heights.bin.gz": {
-   "size": 1163389,
-   "sha256": "d861063e4952"
+   "size": 1163390,
+   "sha256": "ddaa643f8a4d"
   },
   "states/ladakh-ids.bin.gz": {
    "size": 10375,
-   "sha256": "911636788df0"
+   "sha256": "d7fbab35d4d6"
   },
   "states/ladakh-shade.bin.gz": {
-   "size": 428780,
-   "sha256": "0e12040ad61c"
+   "size": 428752,
+   "sha256": "4d7642cce6b7"
   },
   "states/lakshadweep-edge.bin.gz": {
    "size": 13297,
@@ -15238,20 +15238,20 @@
    "sha256": "7cbcd6278c37"
   },
   "states/odisha-edge.bin.gz": {
-   "size": 64648,
-   "sha256": "60fb18975e6d"
+   "size": 64651,
+   "sha256": "92f9614e0f8d"
   },
   "states/odisha-heights.bin.gz": {
-   "size": 574059,
-   "sha256": "3e793b4b0bb1"
+   "size": 574041,
+   "sha256": "71b4abaab08a"
   },
   "states/odisha-ids.bin.gz": {
    "size": 9697,
-   "sha256": "45ab620565b4"
+   "sha256": "660e9d118241"
   },
   "states/odisha-shade.bin.gz": {
-   "size": 357047,
-   "sha256": "072009788fe0"
+   "size": 357051,
+   "sha256": "4956cdd2632c"
   },
   "states/puducherry-edge.bin.gz": {
    "size": 10872,
@@ -15286,8 +15286,8 @@
    "sha256": "343e52fd8bac"
   },
   "states/rajasthan-edge.bin.gz": {
-   "size": 103311,
-   "sha256": "ae1c5f60ebd9"
+   "size": 103299,
+   "sha256": "0a9e2a306627"
   },
   "states/rajasthan-heights.bin.gz": {
    "size": 959790,
@@ -15295,11 +15295,11 @@
   },
   "states/rajasthan-ids.bin.gz": {
    "size": 16898,
-   "sha256": "a3f56823b1e3"
+   "sha256": "2cd4c0a01632"
   },
   "states/rajasthan-shade.bin.gz": {
-   "size": 629225,
-   "sha256": "cb9c88fd0e41"
+   "size": 629203,
+   "sha256": "b4bc0b403a7a"
   },
   "states/sikkim-edge.bin.gz": {
    "size": 8218,
