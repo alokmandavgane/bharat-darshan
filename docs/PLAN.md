@@ -2450,6 +2450,33 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-10-28: the site's footprint, and the share cards at 1200x630. The built site was 79 MB
+  in 557 files: the 36 state packages 35 MB (heights 23.5, shade 9.5), share cards 16 MB,
+  layer JSON 11 MB (about 3 MB on the wire, since Cloudflare compresses JSON), country terrain
+  6 MB, code 210 KB gzipped. A first visit is still about 1.5 MB; the rest loads on demand.
+  - **Share cards** were 2400x1260 at about 300 KB each, half of them over the ~300 KB
+    WhatsApp is said to accept. `tools/share-image.mjs` still draws at 2x but saves at
+    1200x630 (`scale: 'css'`), and `og:image:width/height` say so. All 68 were re-rendered
+    from the current app with `FORCE=1`, among them the eight pages that had none (bharatavarsha,
+    divisions, kingdoms, mahabharata, rama-exile, sugriva, biosphere, wildlife): 33 of 33 pages have their own
+    card now, 5.8 MB in all, the largest 98 KB. The site is 70 MB. `.claude/launch.json`
+    gains a `bharat-darshan-preview` entry, the server the tool renders against.
+  - **Measured, not done: the state packages.** Heights are cropped at 0.35 km a pixel from
+    the zoom-8 mosaic, which is about 0.55 km a pixel at India's latitudes, so most of the
+    pixels are interpolation the GPU's LINEAR filter would do anyway; at 0.55 km they are
+    10.7 MB instead of 23.5 (the mask and edge fields could stay at 0.35, but check how the
+    block pairs textures of different sizes). The shade's two channels gzip to 9.5 MB
+    interleaved and 7.5 MB stored one after the other, losslessly; the AO as WebP q80 brings
+    it to 2.5 MB but needs an image texture path. Rounding heights to 4 m saves 8 MB but
+    would terrace the plains. All of it together with the cards: 79 MB to about 47.
+  - **Considered, not decided: moving to tools.alokm.com/darshan** to consolidate the
+    owner's subdomains. A Pages project takes a whole hostname, not a path, so it means a
+    Worker with static assets on the route `tools.alokm.com/darshan/*` (or a router Worker
+    in front of pages.dev), `base: '/darshan/'` and the new `SITE_URL` in vite.config.js,
+    and the root-relative paths made relative: four `/data/` fetches, the font, `url.js`
+    reading and writing the prefix, `_headers` and `_redirects`. Keep darshan.alokm.com as a
+    301 for a few months.
+
 - 2026-09-28, ninety-first round: a seventeenth era, 1947 — the princely states on the eve of independence. From the
   Ministry of States' White Paper on Indian States (1950) and the Memoranda on the Indian States (1940), fetched on
   approval: British India as the remainder, and 39 States or groups — the large States singly (Hyderabad, Kashmir,
@@ -3143,7 +3170,7 @@ docs/DEPLOY.md).
 ### Next
 
 0. **Phase 6, continued.** Plates, the contents page, the source registry and the share
-   shells are in. The share cards are rendered: 14 of 14 pages have their own, made with
+   shells are in. The share cards are rendered: 33 of 33 pages have their own, at 1200x630, made with
    `node tools/share-image.mjs` against a running server (Playwright is a tool here, not a
    dependency; `PLAYWRIGHT_MODULE` points at an npx copy). Re-run it with `ONLY=<page>
    FORCE=1` whenever a page's map changes. Everything else in Phase 6 is built and its exit is met: ten pages
