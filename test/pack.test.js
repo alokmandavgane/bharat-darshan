@@ -1,10 +1,12 @@
 // @ts-check
 // The raster container (pipeline/lib/pack.py). A planar pack stores one channel after
 // another; the decoder must hand back exactly what the interleaved pack of the same
-// samples gives, for every predictor and both sample types. Run `npm test`.
+// samples gives, for every predictor and both sample types. A heights pack may be stored
+// in steps along the rendered curve, and metresTable must turn it back into metres.
+// Run `npm test`.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { decodePack } from '../src/engine/pack.js';
+import { decodePack, metresTable } from '../src/engine/pack.js';
 
 /** pack.py's write, without the gzip: residuals with wrapping arithmetic, then the bytes. */
 function encode(samples, width, height, channels, dtype, predictor, planar) {
@@ -50,4 +52,19 @@ test('a planar pack decodes to the same samples as an interleaved one', () => {
       assert.equal(planar.data.constructor, Typed);
     }
   }
+});
+
+test('heights decode to metres, on the curve or not', () => {
+  const plain = metresTable({});
+  for (const v of [-32768, -500, -25, 0, 1, 2048, 32767]) assert.equal(plain[v & 0xffff], v);
+  // pipeline/02_dem.py HEIGHT_CURVE: one step looks like 1 m does at 30 m
+  const curve = { gamma: 0.65, h_ref: 8000, step: 0.65 * (30 / 8000) ** 0.65 / 30 };
+  const t = metresTable({ curve });
+  assert.equal(metresTable({ curve: { ...curve } }), t, 'one table per curve');
+  for (const v of [-11000, -500, -25, 0]) assert.equal(t[v & 0xffff], v, 'the sea and fill stay metres');
+  const code = (h) => Math.round((h / 8000) ** 0.65 / curve.step);
+  for (const [h, tol] of [[5, 0.3], [30, 0.5], [300, 1.2], [3000, 2.6], [8848, 4]]) {
+    assert.ok(Math.abs(t[code(h)] - h) <= tol, `${h} m comes back as ${t[code(h)]}`);
+  }
+  for (let q = 1; q < 2000; q++) assert.ok(t[q] > t[q - 1], 'codes rise with height');
 });

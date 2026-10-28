@@ -102,6 +102,30 @@ def read(path):
     return header, out.astype(DTYPES[header['dtype']])
 
 
+def encode_curve(h_m, curve):
+    """int16 codes for heights in metres, stepped evenly along the rendered curve.
+
+    curve: {"gamma", "h_ref", "step"} -- the renderer lifts h to (h / h_ref) ** gamma, and a
+    code is that value over `step`. Heights at or below zero (the sea, fill) stay metres,
+    which the codes cannot collide with. Write the dict into the header as "curve"."""
+    h = np.asarray(h_m, dtype=np.float64)
+    q = np.round((np.maximum(h, 0.0) / curve['h_ref']) ** curve['gamma'] / curve['step'])
+    return np.where(h > 0, np.minimum(q, 32767), np.clip(np.round(h), -32768, 0)).astype(np.int16)
+
+
+def decode_curve(codes, curve):
+    """Inverse of encode_curve: metres (float64) for int16 codes."""
+    q = np.asarray(codes, dtype=np.float64)
+    land = curve['h_ref'] * (np.maximum(q, 0.0) * curve['step']) ** (1.0 / curve['gamma'])
+    return np.where(q > 0, land, q)
+
+
+def read_metres(path):
+    """read() for a heights pack, decoded to metres whether or not it was written on a curve."""
+    header, a = read(path)
+    return header, (decode_curve(a, header['curve']) if 'curve' in header else a.astype(np.float64))
+
+
 if __name__ == '__main__':
     import tempfile
     rng = np.random.default_rng(1)
@@ -112,4 +136,9 @@ if __name__ == '__main__':
             write(p, a, dtype, pred, planar=planar)
             hdr, b = read(p)
             assert np.array_equal(a.astype(DTYPES[dtype]), b), (dtype, pred, planar)
+    curve = {'gamma': 0.65, 'h_ref': 8000.0, 'step': 0.65 * (30 / 8000) ** 0.65 / 30}
+    h = np.array([-11000.0, -25.0, 0.0, 0.01, 5.0, 30.0, 300.0, 3000.0, 8848.0])
+    back = decode_curve(encode_curve(h, curve), curve)
+    assert np.array_equal(back[:3], h[:3]) and back[3] == 0.0, back
+    assert np.all(np.abs(back[4:] - h[4:]) <= [0.3, 0.5, 1.2, 2.6, 4.0]), back - h
     print('pack ok')

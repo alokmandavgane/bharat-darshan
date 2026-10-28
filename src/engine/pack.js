@@ -58,6 +58,32 @@ export function decodePack(raw) {
   return { header, data, width, height, channels };
 }
 
+const metresOf = new Map();
+
+/**
+ * Metres for every value an int16 heights pack can hold, indexed by its 16 bits
+ * (`table[data[i] & 0xffff]`). A pack with a `curve` header (pipeline/02_dem.py,
+ * HEIGHT_CURVE) stores land as even steps along the rendered curve, h_ref * (q * step)
+ * ^ (1 / gamma), and the sea in metres; one without stores metres throughout. Built once
+ * per curve, so decoding a tier is a lookup per texel.
+ * @returns {Float32Array}
+ */
+export function metresTable(header) {
+  const c = header?.curve;
+  const key = c ? `${c.gamma}/${c.h_ref}/${c.step}` : 'm';
+  let t = metresOf.get(key);
+  if (!t) {
+    t = new Float32Array(65536);
+    for (let q = -32768; q < 32768; q++) {
+      // Codes past about 1,900 are higher than anything on Earth and never stored; capped
+      // at int16's own reach so they stay inside what a half float can hold.
+      t[q & 0xffff] = c && q > 0 ? Math.min(c.h_ref * Math.pow(q * c.step, 1 / c.gamma), 32767) : q;
+    }
+    metresOf.set(key, t);
+  }
+  return t;
+}
+
 function undoPredictor(d, w, h, c, predictor) {
   const stride = w * c;
   if (predictor === 'none') return;

@@ -94,7 +94,7 @@ def height_loader(out, states):
     def get():
         if 'h' not in cache:
             finest = max(states['tiers'], key=int)
-            _, h = pack.read(os.path.join(out, 'terrain', f'heights-{finest}.bin.gz'))
+            _, h = pack.read_metres(os.path.join(out, 'terrain', f'heights-{finest}.bin.gz'))
             cache['h'] = h[:, :, 0]
         return cache['h']
     return get

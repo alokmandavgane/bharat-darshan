@@ -5,6 +5,7 @@ import {
   ClampToEdgeWrapping, DataTexture, DataUtils, HalfFloatType, LinearFilter, NearestFilter,
   RedFormat, RepeatWrapping, RGFormat, RGBAFormat, UnsignedByteType,
 } from 'three';
+import { metresTable } from './pack.js';
 
 function finish(tex, filter) {
   tex.magFilter = filter;
@@ -19,25 +20,29 @@ function finish(tex, filter) {
 }
 
 /**
- * Every int16's half-float bits, indexed by the int16's own bits: built once (65,536
- * conversions, about 1 ms), it makes a whole tier's conversion a table lookup per
- * texel, half the time of converting each one, with the same bits.
+ * Every stored int16's half-float bits, indexed by the int16's own bits and decoded to
+ * metres on the way (metresTable: a curve-stepped pack or plain metres): built once per
+ * kind of pack (65,536 conversions, about 1 ms), it makes a whole tier's conversion a
+ * table lookup per texel, half the time of converting each one, with the same bits.
  */
-let halfOf = null;
-function halfTable() {
-  if (!halfOf) {
-    halfOf = new Uint16Array(65536);
-    for (let v = -32768; v < 32768; v++) halfOf[v & 0xffff] = DataUtils.toHalfFloat(v);
+const halfOf = new WeakMap();
+function halfTable(header) {
+  const metres = metresTable(header);
+  let t = halfOf.get(metres);
+  if (!t) {
+    t = new Uint16Array(65536);
+    for (let i = 0; i < 65536; i++) t[i] = DataUtils.toHalfFloat(metres[i]);
+    halfOf.set(metres, t);
   }
-  return halfOf;
+  return t;
 }
 
-/** int16 metres -> R16F. Half floats are exact to 2048 m and within 4 m at 8 km, fine for relief. */
+/** Heights pack -> R16F metres. Half floats are exact to 2048 m and within 4 m at 8 km, fine for relief. */
 export function heightTexture(pack) {
   const n = pack.width * pack.height;
   const half = new Uint16Array(n);
   const src = new Uint16Array(pack.data.buffer, pack.data.byteOffset, n);
-  const lut = halfTable();
+  const lut = halfTable(pack.header);
   for (let i = 0; i < n; i++) half[i] = lut[src[i]];
   return finish(new DataTexture(half, pack.width, pack.height, RedFormat, HalfFloatType), LinearFilter);
 }

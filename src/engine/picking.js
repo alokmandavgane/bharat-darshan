@@ -2,6 +2,7 @@
 // Region picking on the CPU: the pointer ray meets the displaced heightfield, then the
 // ID raster says which state is there (PLAN.md section 6). Pure maths, no three.js.
 import { basis, groundPoint, projector } from './camera-math.js';
+import { metresTable } from './pack.js';
 
 /**
  * Wrap a tier's decoded packs for sampling in scene km.
@@ -19,6 +20,8 @@ export function createHeightfield(tier, sizeKm, mesh) {
   const { width: iw, height: ih, data: idd } = tier.ids;
   const nx = mesh.cols + 1, nz = mesh.rows + 1;
   const texelKm = Math.min(sizeKm.w / mesh.cols, sizeKm.h / mesh.rows);
+  const metres = metresTable(tier.heights.header);
+  const m = (i) => metres[hd[i] & 0xffff];     // decoded before blending, as the GPU's texels are
 
   /** Bilinear read of the raw heightmap at texture coordinates (u, v in 0..1), as the GPU does. */
   function rasterM(u, v) {
@@ -26,8 +29,8 @@ export function createHeightfield(tier, sizeKm, mesh) {
     const x0 = Math.floor(x), y0 = Math.floor(y);
     const x1 = Math.min(x0 + 1, hw - 1), y1 = Math.min(y0 + 1, hh - 1);
     const fx = x - x0, fy = y - y0;
-    return (hd[y0 * hw + x0] * (1 - fx) + hd[y0 * hw + x1] * fx) * (1 - fy)
-      + (hd[y1 * hw + x0] * (1 - fx) + hd[y1 * hw + x1] * fx) * fy;
+    return (m(y0 * hw + x0) * (1 - fx) + m(y0 * hw + x1) * fx) * (1 - fy)
+      + (m(y1 * hw + x0) * (1 - fx) + m(y1 * hw + x1) * fx) * fy;
   }
 
   const verts = new Float32Array(nx * nz);

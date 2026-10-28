@@ -56,6 +56,15 @@ BBOX = (grid.LON_MIN, grid.LAT_MIN, grid.LON_MAX, grid.LAT_MAX)
 # Vertical curve used for the baked AO; must stay in step with the terrain shader:
 # y_km = EXAG * (h / H_REF) ** GAMMA * H_REF / 1000
 H_REF, GAMMA, AO_EXAG = 8000.0, 0.65, 12.0
+# Heights are stored as even steps along that curve, not in metres (pack.encode_curve):
+# it lifts low ground far more than high, 1 m at 10 m standing nine times taller than
+# 1 m at 6000 m, so a metre is too coarse on a delta and needlessly fine on a ridge. One
+# step looks like 1 m does at 30 m: 0.5 m at 5 m, 1.5 m at 100 m, 6.4 m at 6000 m (where
+# the half-float texture keeps only every fourth metre anyway). Every heights pack --
+# country tiers, world, states -- is written this way; src/engine/pack.js decodes it.
+CURVE_STEP_AT_M = 30.0
+HEIGHT_CURVE = {'gamma': GAMMA, 'h_ref': H_REF,
+                'step': GAMMA * (CURVE_STEP_AT_M / H_REF) ** GAMMA / CURVE_STEP_AT_M}
 COAST_RANGE_KM = 30.0
 OCEAN_STEP_M = 25.0
 BORDER_RANGE_PX = 8
@@ -308,7 +317,8 @@ def main():
         p2 = os.path.join(out_dir, f'shade-{height}.bin.gz')
         p3 = os.path.join(args.out, 'regions', f'states-borders-{height}.bin.gz')
         p4 = os.path.join(args.out, 'regions', f'india-edge-{height}.bin.gz')
-        s1 = pack.write(p1, h16, 'int16', 'plane', kind='heights', units='m', km_per_px=km_per_px,
+        s1 = pack.write(p1, pack.encode_curve(h, HEIGHT_CURVE), 'int16', 'plane', kind='heights',
+                        units='m', curve=HEIGHT_CURVE, km_per_px=km_per_px,
                         min=int(h16.min()), max=int(h16.max()), ocean_step_m=OCEAN_STEP_M,
                         land_threshold_m=-OCEAN_STEP_M / 2, source=f'terrarium z{args.zoom}, box {f}')
         s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='shade', km_per_px=km_per_px * 2,

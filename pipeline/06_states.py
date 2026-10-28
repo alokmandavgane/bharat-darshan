@@ -7,7 +7,8 @@ step crops a much finer raster out of the elevation mosaic for each unit, masked
 that unit, so entering a state can swap the block's textures for its own.
 
 Per unit, over its bounding box padded by PAD_KM, at KM_PER_PX unless noted:
-  states/<slug>-heights.bin.gz   int16 metres, at the mosaic's own pixel size (see below)
+  states/<slug>-heights.bin.gz   int16 steps along the rendered curve (02_dem.HEIGHT_CURVE), at
+                                 the mosaic's own pixel size (see below)
   states/<slug>-shade.bin.gz     uint8 2ch planar, half resolution: ambient occlusion, coastal shadow
   states/<slug>-ids.bin.gz       uint8 state id (the mask the block discards against)
   states/<slug>-edge.bin.gz      uint8 signed distance to the unit's own outline, 128 on it
@@ -172,7 +173,7 @@ def main():
         # stays for the ambient occlusion, which is baked as it always was.
         src_km = max(args.km_per_px, source_km_per_px(args.zoom, rect))
         hs_m, hs_w, hs_h = crop(mosaic, xr, args.zoom, rect, src_km)
-        hs16 = np.clip(np.round(bleed(hs_m, loops, rect, hs_w, hs_h, src_km)), -32768, 32767).astype(np.int16)
+        hs16 = pack.encode_curve(bleed(hs_m, loops, rect, hs_w, hs_h, src_km), dem.HEIGHT_CURVE)
 
         # Shade mirrors 02_dem.py exactly: half resolution, two channels, ambient
         # occlusion and coastal shadow. The shader reads .rg, so a single channel here
@@ -197,6 +198,8 @@ def main():
             rel = f'states/{u["slug"]}-{name}.bin.gz'
             km = {'heights': src_km, 'shade': args.km_per_px * 2}.get(name, args.km_per_px)
             meta = {'km_per_px': round(km, 4), 'unit': u['id']}
+            if name == 'heights':
+                meta |= {'units': 'm', 'curve': dem.HEIGHT_CURVE}
             if name == 'shade':
                 meta |= {'channels_meaning': ['ao', 'coast'], 'coast_range_km': dem.COAST_RANGE_KM}
             if name == 'edge':

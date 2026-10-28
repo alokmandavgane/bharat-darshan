@@ -2475,8 +2475,27 @@ docs/DEPLOY.md).
     in Python and in `pack.js`, `test/pack.test.js` covers the layout, and Ladakh, Kerala and
     Maharashtra at their default framing and closest zoom differ from before by under 2/255
     on average, with nothing to see side by side. The site is 54 MB. Not done: the AO as
-    WebP q80 (another 5 MB, lossy, needs an image texture path); rounding heights to 4 m
-    (8 MB, but it would terrace the plains).
+    WebP q80 (another 5 MB, lossy, needs an image texture path).
+  - **Heights stored along the rendered curve.** The pixel scale first: heights are 16.4 km
+    a pixel for the world, 3.42 and 1.71 km for the country tiers, 0.49-0.60 km in a state,
+    where at the closest zoom a texel is about four screen pixels. Vertically the curve
+    `12 * (h/8000)^0.65 * 8` stands 1 m at 10 m elevation 81 m tall in the scene and 1 m at
+    6000 m only 8.6 m, and the half-float texture already keeps just every second metre
+    above 2048 m and every fourth above 4096 m. Measured options for the state heights:
+    rounding to the half-float grid -2% (lossless as drawn), plain 4 m -33% (invisible on
+    the Gangetic plain, but a faint ripple on the Rann of Kutch at the closest zoom), and
+    steps even along the curve -9% to -20% -- smaller than it sounds because half the land
+    is under 300 m, where the curve wants finer steps, not coarser. The owner chose the
+    curve, one step looking like 1 m does at 30 m (0.5 m at 5 m, 1.5 m at 100 m, 6.4 m at
+    6000 m; `02_dem.HEIGHT_CURVE`), for every heights pack: `pack.encode_curve` writes
+    codes and a `curve` header, the sea and fill stay metres, and `metresTable` in
+    `pack.js` decodes for `heightTexture` (its half-float table now goes through it) and
+    for picking, which blends decoded metres as the GPU does. State heights 11.9 MB to 9.5,
+    the country tiers 0.89 and 3.51 MB to 0.75 and 2.94, the first view 1,214 KB to 1,071;
+    the site is 50 MB. The Rann, Ladakh and the home view on both tiers differ from before
+    only along the rivers, which ride the surface; the Rann's ripple is not there. Rivers
+    are pointed downstream from the decoded heights, and 136 short runs on flat ground
+    turned round where whole metres had tied: 37 more joins now flow on into the next run.
   - **`npm run data` does not reproduce the committed outlines on this Mac**, and the
     reason is the numpy build, not the version. `npm run data` runs `python3`, which here
     is Homebrew's Python 3.14 with Homebrew's numpy 2.5.3 (installed 2026-10-03, built
@@ -3147,7 +3166,7 @@ docs/DEPLOY.md).
   round). Raw downloads are cached in `pipeline/raw/`, previews land in `pipeline/tmp/`.
 - `public/data/`: committed outputs for two tiers, 960x1024 (first view, 1.15 MB) and
   1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`. 24 layers and 14
-  plates; the first-view tier is 1,214 KB of the 1.5 MB budget and every layer past the
+  plates; the first-view tier is 1,071 KB of the 1.5 MB budget and every layer past the
   default set is lazily loaded.
 - `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
   names (Hindi spellings pending review), native-script names where they differ.
@@ -3170,7 +3189,9 @@ docs/DEPLOY.md).
   flats in Kutch, Khambhat, the Sundarbans) are dropped. Natural Earth was not needed.
 - Tiers are rectangular and named by height (960x1024, 1920x2048): the grid is taller
   than wide, and square textures wasted a fifth of every byte.
-- Heights: int16 metres, exact on land. Ocean quantised to 25 m and forced to <= -25 m,
+- Heights: int16, land as even steps along the rendered curve (one step looks like 1 m does
+  at 30 m; `02_dem.HEIGHT_CURVE`, decoded by `metresTable` in `pack.js`), the sea in
+  metres. Ocean quantised to 25 m and forced to <= -25 m,
   so the shader reads land as "filtered height > -12.5 m": a smooth coastline with no
   mask channel, and half the bytes the noisy sea floor cost. AO and coastal shadow
   are baked at half resolution (AO reads fine upsampled; full resolution cost 4x).
@@ -3264,7 +3285,7 @@ docs/DEPLOY.md).
 4. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
-   question 1: they are about 0.6 MB each, 21 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
+   question 1: they are about 0.5 MB each, 19 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
 5. Settle open questions 6-7.

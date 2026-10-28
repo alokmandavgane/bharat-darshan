@@ -119,7 +119,8 @@ def main():
     out = os.path.join(args.out, 'terrain')
     p1 = os.path.join(out, 'world-heights.bin.gz')
     p2 = os.path.join(out, 'world-shade.bin.gz')
-    s1 = pack.write(p1, h16, 'int16', 'plane', kind='world-heights', units='m', km_per_px=km_per_px,
+    s1 = pack.write(p1, pack.encode_curve(h, dem.HEIGHT_CURVE), 'int16', 'plane', kind='world-heights',
+                    units='m', curve=dem.HEIGHT_CURVE, km_per_px=km_per_px,
                     width_km=round(km[0], 1), height_km=round(km[1], 1), scale=SCALE,
                     source=f'terrarium z{ZOOM}')
     s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='world-shade', km_per_px=km_per_px * 2,
