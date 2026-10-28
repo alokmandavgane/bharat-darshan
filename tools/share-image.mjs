@@ -76,7 +76,9 @@ for (const card of todo) {
   await page.mouse.move(4, 4);
   await page.mouse.move(6, 6);
   await page.waitForTimeout(800);
-  await page.screenshot({ path, type: 'jpeg', quality: 86, timeout: 120000 });
+  // Drawn at 2x for clean edges, saved at 1200x630 (scale: 'css'): the 2400x1260 cards
+  // averaged 300 KB and half of them were over the ~300 KB WhatsApp is said to accept.
+  await page.screenshot({ path, type: 'jpeg', quality: 86, scale: 'css', timeout: 120000 });
   console.log(`wrote ${path}`);
   made += 1;
   await page.close();

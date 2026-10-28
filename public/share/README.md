@@ -4,8 +4,8 @@ Served from https://darshan.alokm.com/share/.
 
 | File | Size | Made by | Use |
 |------|------|---------|-----|
-| `og-en.jpg`, `og-hi.jpg` | 2400×1260 | `tools/share-image.mjs` | Open Graph and Twitter cards, referenced from `index.html` per language shell |
-| `og-<lang>-<plate>.jpg` | 2400×1260 | `tools/share-image.mjs` | One per page of the atlas per language, so a page pasted into a chat shows that page. `vite.config.js` uses one when it exists and falls back to the language card when it does not |
+| `og-en.jpg`, `og-hi.jpg` | 1200×630 | `tools/share-image.mjs` | Open Graph and Twitter cards, referenced from `index.html` per language shell |
+| `og-<lang>-<plate>.jpg` | 1200×630 | `tools/share-image.mjs` | One per page of the atlas per language, so a page pasted into a chat shows that page. `vite.config.js` uses one when it exists and falls back to the language card when it does not |
 | `qr.png` | 1640×2020 | `tools/qr-image.py` | QR to the site with the bilingual title, print resolution |
 | `qr-800.png` | 800×985 | `tools/qr-image.py` | The same, for chat and slides |
 | `qr-plain-800.png` | 800×800 | `tools/qr-image.py` | QR alone, no title |
