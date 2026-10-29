@@ -2450,6 +2450,28 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-10-29: the app runs under a path as well as at a domain's root, for the move to
+  apps.alokm.com/darshan/ (one Cloudflare Pages site for the owner's apps, assembled by
+  `/Users/alokm/dev/alokm-apps`; darshan.alokm.com becomes a 301 there). This settles the
+  "considered, not decided" note under 2026-10-28, by a different route: a path on a shared
+  Pages site rather than a Worker. How to build it is in [docs/DEPLOY.md](DEPLOY.md).
+  - **The path is Vite's `--base`**: `DATA_BASE` is `${import.meta.env.BASE_URL}data/` and
+    every fetch goes through it (the fine ids and the shell's plates and sources had their
+    own `/data/`); `url.js` takes the base off a path it reads and puts it on one it writes,
+    with `test/url.test.js` for both. The favicons and the font are rewritten by Vite.
+  - **The address is `SITE_URL`**: the root shell's head is now rewritten from it like the
+    per-language and per-page shells, and so is `span.site`, the address on the share cards.
+    A root build writes the same HTML as before apart from two comments, and the same URLs.
+  - **Found on the way: the four rewrites in `_redirects` had never run.** Pages drops a rule
+    whose target ends in `index.html` as an infinite loop, so `/hi/state/kerala` got the
+    English root shell (live on darshan.alokm.com too). The targets are directories now, and
+    two rules cover `/atlas/*` and `/state/*` without a language, which under a path would
+    otherwise get the apps landing page; there can be no catch-all, as Pages rewrites
+    before it serves files.
+  - **Left for the move itself**: the share cards and the QR codes still say and encode
+    darshan.alokm.com, which will keep working as a redirect. public/share/README.md has
+    the commands to render them for the new address.
+
 - 2026-10-29: ambient occlusion computed on the GPU instead of shipped. It was 7.3 MB of
   the 8.2 MB of shade packs, and the heights the client already has decide all of it.
   `src/engine/occlusion.js` runs `shaders/occlusion.frag.glsl` once per raster as it
