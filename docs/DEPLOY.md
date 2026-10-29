@@ -20,9 +20,14 @@ facts about the code: packs are fetched with `?v=<sha256>` from `manifest.json` 
 `/data/*` is immutable) and the app gunzips `*.bin.gz` itself (so no
 `Content-Encoding` is set). `public/_redirects` holds four 200 rewrites, one per
 language for a state inside the country and inside a page, so that a `/hi/...` deep
-link gets the Hindi shell (and a page's own card) rather than the root one; every
-other unknown path falls back to `index.html`, which Pages does on its own when the
-build has no `404.html`. Do not add a `404.html` without adding a rewrite rule.
+link gets the Hindi shell (and a page's own card) rather than the root one, and two
+more for the same paths without a language. Their targets are directories (`/hi/`):
+Pages drops a rule whose target ends in `index.html` as an infinite loop, which is why
+the first four never ran until 2026-10-29 (`wrangler pages dev` prints the warning).
+There is no catch-all rule: Pages applies a rewrite before the files, so `/*` would
+hide every one of them. Every other unknown path falls back to the site root's
+`index.html`, which Pages does on its own when the build has no `404.html`. Do not add
+a `404.html` without adding a rewrite rule.
 
 ## Limits to keep in mind
 

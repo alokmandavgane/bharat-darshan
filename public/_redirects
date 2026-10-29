@@ -2,7 +2,15 @@
 # a state inside a language or a page. Without these the host answers such a link with
 # the root shell, which is English, so a pasted /hi/... link previewed in English.
 # Paths with a shell of their own (/hi/, /hi/atlas/<page>/) are served as files.
-/en/state/*                 /en/index.html                 200
-/hi/state/*                 /hi/index.html                 200
-/en/atlas/:page/state/*     /en/atlas/:page/index.html     200
-/hi/atlas/:page/state/*     /hi/atlas/:page/index.html     200
+# The targets are directories, not .../index.html: Pages drops a rule whose target ends
+# in index.html as an infinite loop (it strips the name and would match again).
+/en/state/*                 /en/                 200
+/hi/state/*                 /hi/                 200
+/en/atlas/:page/state/*     /en/atlas/:page/     200
+/hi/atlas/:page/state/*     /hi/atlas/:page/     200
+# The same without a language (the x-default links of a page's shell). At a domain's root
+# the host would fall back to the root shell anyway; under a path of one (apps.alokm.com/
+# darshan/) its fallback is that site's own root, so these have to be said. There is no
+# catch-all: Pages applies a rewrite before the files, and /* would hide every one of them.
+/state/*                    /                    200
+/atlas/*                    /                    200
