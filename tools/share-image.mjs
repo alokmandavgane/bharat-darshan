@@ -7,7 +7,8 @@
 // Run against a server:  npm run preview   then   node tools/share-image.mjs
 // Needs Playwright with Chromium (global install, or `npx playwright install chromium`
 // and then PLAYWRIGHT_MODULE=~/.npm/_npx/<hash>/node_modules/playwright); it is a tool,
-// not a project dependency. Set BASE to point at another server, SWIFTSHADER=1 on a
+// not a project dependency. Set BASE to point at another server (with the path, for a
+// build made with --base: BASE=http://localhost:4173/darshan), SWIFTSHADER=1 on a
 // machine without a GPU, FORCE=1 to redo cards that already exist, ONLY=<id> (or
 // ONLY=langs) to do one page, LANGS=en to do one language.
 import { createRequire } from 'node:module';

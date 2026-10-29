@@ -29,6 +29,24 @@ hide every one of them. Every other unknown path falls back to the site root's
 `index.html`, which Pages does on its own when the build has no `404.html`. Do not add
 a `404.html` without adding a rewrite rule.
 
+## Under a path: apps.alokm.com/darshan/
+
+The same code serves at a domain's root and under a path of one. The path comes from
+Vite's `--base` (`import.meta.env.BASE_URL` in the code: the data packs, the routes in
+`src/state/url.js`) and the absolute URLs from `SITE_URL` (`vite.config.js`: canonical,
+hreflang, Open Graph and Twitter tags, and the address on the share card's title block):
+
+```
+SITE_URL=https://apps.alokm.com/darshan npx vite build --base /darshan/
+```
+
+`/Users/alokm/dev/alokm-apps` (`deploy.sh`, `WITH_DARSHAN=1`) builds it that way and
+moves `_headers` and `_redirects` to its own site root with every path prefixed by
+`/darshan`, so both files here keep root-relative paths. There, the host's fallback for
+an unknown path is the apps landing page rather than this app, which is why the rules
+without a language matter. To check a build locally, assemble it there and run
+`npx --yes wrangler@4.151.0 pages dev site --port 8788`.
+
 ## Limits to keep in mind
 
 - 25 MiB per file. A single 4096² 16-bit heightmap exceeds this: tile it or move it

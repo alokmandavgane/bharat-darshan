@@ -4,7 +4,9 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import { defineConfig } from 'vite';
 
-const SITE = process.env.SITE_URL || 'https://darshan.alokm.com';
+// Where the site is served, without a trailing slash; a build under a path of a domain
+// gives that path here and to `--base` (apps.alokm.com/darshan, see docs/DEPLOY.md).
+const SITE = (process.env.SITE_URL || 'https://darshan.alokm.com').replace(/\/+$/, '');
 const NAME = { en: 'Bharat Darshan', hi: 'भारत दर्शन' };
 
 /** Per-language head metadata; index.html holds the English values, the plugin swaps them. */
@@ -123,6 +125,14 @@ function shells(langs = ['en', 'hi']) {
     name: 'bd-shells',
     apply: 'build',
     enforce: 'post',
+    // The root shell is the English one (index.html holds its values for darshan.alokm.com),
+    // rewritten the same way so that it follows SITE_URL too, and so does the address on the
+    // share card's title block.
+    transformIndexHtml(html) {
+      const re = /(<span class="site">)[^<]*(<\/span>)/;
+      if (!re.test(html)) throw new Error('index.html: no span.site to rewrite');
+      return rewriteHead(html, languageMeta('en', 'public')).replace(re, `$1${SITE.replace(/^https?:\/\//, '')}$2`);
+    },
     async writeBundle(options) {
       const dir = options.dir || 'dist';
       const html = await readFile(`${dir}/index.html`, 'utf8');

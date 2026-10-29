@@ -9,13 +9,22 @@
 //   ...?month=10                the scrubber: only what falls in that month
 //   ...?relief=18&cam=x,z,zoom,yaw,pitch   relief and, once the user has moved, the camera
 //   ...?drafts=1                show unreviewed content (also on in dev builds)
-// History API only.
+// History API only. The routes sit under the site's base path, which is '/' at a domain's
+// root and '/darshan/' under apps.alokm.com (Vite's `--base`): /darshan/hi/state/kerala.
 
 export const LANGS = ['en', 'hi'];
 export const DEFAULT_RELIEF = 12;
+// Read with `?.` so the module also loads outside Vite, where there is no import.meta.env.
+export const BASE = import.meta.env?.BASE_URL || '/';
 
-export function readUrl(loc = location) {
-  const parts = loc.pathname.split('/').filter(Boolean);
+/** The route below the base: '/darshan/hi/state/kerala' -> '/hi/state/kerala'. */
+function routeOf(pathname, base) {
+  const root = base.replace(/\/$/, '');
+  return pathname === root || pathname.startsWith(`${root}/`) ? pathname.slice(root.length) : pathname;
+}
+
+export function readUrl(loc = location, base = BASE) {
+  const parts = routeOf(loc.pathname, base).split('/').filter(Boolean);
   const lang = LANGS.includes(parts[0]) ? parts[0] : null;
   const rest = lang ? parts.slice(1) : parts;
   const q = new URLSearchParams(loc.search);
@@ -51,10 +60,10 @@ export function readUrl(loc = location) {
 const PASS_THROUGH = ['quality', 'poster'];
 
 export function buildUrl({ lang, view = null, plate = null, state = null, layers = null, item = null,
-                           month = null, relief, cam = null, drafts = false }) {
+                           month = null, relief, cam = null, drafts = false }, base = BASE) {
   // A state view is a page inside a plate, so a link can carry both: /en/atlas/rivers
   // becomes /en/atlas/rivers/state/kerala rather than losing the page it was opened from.
-  const path = '/' + [lang, ...(plate ? ['atlas', plate] : []), ...(view ? ['state', view] : [])]
+  const path = base + [lang, ...(plate ? ['atlas', plate] : []), ...(view ? ['state', view] : [])]
     .filter(Boolean).join('/');
   const q = new URLSearchParams();
   if (!view && state) q.set('state', state);

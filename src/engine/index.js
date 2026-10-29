@@ -758,7 +758,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (!fineIds) {
       const rel = manifest.tiers['2048']?.ids;
       if (!rel) return null;
-      const pack = await loadPack(`/data/${rel}?v=${manifest.files?.[rel]?.sha256 || ''}`);
+      const pack = await loadPack(`${DATA_BASE}${rel}?v=${manifest.files?.[rel]?.sha256 || ''}`);
       fineIds = { texture: byteTexture(pack, { nearest: true }), width: pack.width, height: pack.height };
     }
     return fineIds;

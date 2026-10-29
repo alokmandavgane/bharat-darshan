@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#efe9dc">
   <!-- Drawn by tools/favicon.py. The sized .ico comes first so browsers that read SVG
-       still pick the SVG; the paths are absolute because every shell shares this head. -->
+       still pick the SVG; the paths are absolute because every shell shares this head,
+       and the build puts the base path (`--base`) in front of them. -->
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="description" content="An interactive 3D map of India's geography and culture, in English and Hindi.">
   <title>Bharat Darshan · भारत दर्शन</title>
+  <!-- The site's own URLs below, and span.site, are rewritten at build from SITE_URL
+       (vite.config.js); these are their values for darshan.alokm.com. -->
   <link rel="canonical" href="https://darshan.alokm.com/en/">
   <link rel="alternate" hreflang="en" href="https://darshan.alokm.com/en/">
   <link rel="alternate" hreflang="hi" href="https://darshan.alokm.com/hi/">

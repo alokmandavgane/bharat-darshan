@@ -2,7 +2,9 @@
 // Fetches manifest.json and the raster packs of one tier. Nothing here knows three.js.
 import { loadPack } from './pack.js';
 
-export const DATA_BASE = '/data/';
+// Under the site's base path, so the same build works at a domain's root and under a
+// path of one (apps.alokm.com/darshan/): Vite sets BASE_URL from `--base`, '/' by default.
+export const DATA_BASE = `${import.meta.env.BASE_URL}data/`;
 
 export async function loadJson(path) {
   const res = await fetch(DATA_BASE + path);

@@ -4,6 +4,7 @@
 // from i18n.
 import { DEFAULT_CAMERA, kmPerPixel, wrapYaw } from '../engine/camera-math.js';
 import { FILL_TYPES } from '../engine/choropleth.js';
+import { DATA_BASE } from '../engine/data.js';
 import { stepEpisode } from '../engine/episodes.js';
 import { currentLanguage, formatNumber, pick, t } from '../i18n/index.js';
 import { DEFAULT_RELIEF } from '../state/url.js';
@@ -1360,7 +1361,7 @@ export function createShell(root, store, link = null) {
   store.subscribe('item', later(renderSheet, renderSteps));
   store.subscribe('index', later(renderList));
   // The atlas's own pages, fetched once. They are small and they are the way in.
-  fetch('/data/plates.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
+  fetch(`${DATA_BASE}plates.json`).then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (!d) return;
     store.set('plates', d);
     const wanted = store.get('plate');
@@ -1373,7 +1374,7 @@ export function createShell(root, store, link = null) {
   store.subscribe('sources', later(renderLayerList, renderStrip, renderSheet, renderCredits));
   // The source registry: every dataset once, which the legends, the pages and the credits
   // all resolve their ids through (PLAN.md section 5, "Source registry").
-  fetch('/data/sources.json').then((r) => (r.ok ? r.json() : null)).then((d) => {
+  fetch(`${DATA_BASE}sources.json`).then((r) => (r.ok ? r.json() : null)).then((d) => {
     if (d) store.set('sources', d);
   }).catch(() => {});
   store.subscribe('tour', later(renderSteps));

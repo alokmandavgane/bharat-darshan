@@ -1,6 +1,7 @@
 # Share assets
 
-Served from https://darshan.alokm.com/share/.
+Served from `<SITE_URL>/share/`: https://darshan.alokm.com/share/ at the root, or
+https://apps.alokm.com/darshan/share/ under a path (docs/DEPLOY.md).
 
 | File | Size | Made by | Use |
 |------|------|---------|-----|
@@ -22,7 +23,17 @@ ONLY=rivers node tools/share-image.mjs
 ```
 
 The QR codes encode `https://darshan.alokm.com` at error-correction level H and were
-checked to decode down to 200 px. Their title is set in Yatra One, the face the site
+checked to decode down to 200 px. Both tools follow the site's address: the cards show
+the address that `SITE_URL` gave the build they were rendered from, and `qr-image.py`
+encodes `SITE_URL`. Once the site has moved, render them again for its new address:
+
+```
+SITE_URL=https://apps.alokm.com/darshan npx vite build --base /darshan/
+npx vite preview --base /darshan/
+BASE=http://localhost:4173/darshan FORCE=1 node tools/share-image.mjs
+SITE_URL=https://apps.alokm.com/darshan/ python3 tools/qr-image.py
+```
+ Their title is set in Yatra One, the face the site
 self-hosts; `tools/fonts/` holds the TrueType build because Pillow cannot read woff2,
 under the licence already recorded in `public/fonts/YatraOne-OFL.txt`.
 
