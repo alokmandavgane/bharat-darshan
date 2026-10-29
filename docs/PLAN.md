@@ -2483,6 +2483,13 @@ docs/DEPLOY.md).
     the 1024 -> 2048 swap and state to state to country all hold, with a steady texture
     count. The two-to-four "GPU stall due to ReadPixels" warnings under SwiftShader were
     there before this change.
+  - **A favicon, and no .DS_Store in the build.** Every first page load logged a 404 for
+    `/favicon.ico`. `tools/favicon.py` draws भ in Yatra One on a terracotta counter
+    (`--accent` lit from the upper left, `--accent-ink` letter) into `public/favicon.svg`,
+    `favicon.ico` (16/32/48) and a square 180 px `apple-touch-icon.png`, 15 KB in all;
+    index.html links them for every shell. Vite copied Finder's `public/.DS_Store` into
+    dist/, which a deploy from a Mac would have shipped; a `bd-no-finder-files` step in
+    vite.config.js takes it out again. The deploy is now 575 files, 37.0 MB.
 
 - 2026-10-28: the site's footprint, and the share cards at 1200x630. The built site was 79 MB
   in 557 files: the 36 state packages 35 MB (heights 23.5, shade 9.5), share cards 16 MB,

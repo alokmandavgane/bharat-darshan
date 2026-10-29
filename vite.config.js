@@ -1,6 +1,7 @@
 // @ts-check
 import { existsSync } from 'node:fs';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { basename, join } from 'node:path';
 import { defineConfig } from 'vite';
 
 const SITE = process.env.SITE_URL || 'https://darshan.alokm.com';
@@ -143,8 +144,26 @@ function shells(langs = ['en', 'hi']) {
     },
   };
 }
+/**
+ * Vite copies public/ as it finds it, and Finder leaves a .DS_Store in any folder it has
+ * shown; git ignores them, but a build on a Mac would ship them. This takes them out of
+ * dist/ again.
+ */
+function noFinderFiles() {
+  return {
+    name: 'bd-no-finder-files',
+    apply: 'build',
+    async writeBundle(options) {
+      const dir = options.dir || 'dist';
+      const found = (await readdir(dir, { recursive: true })).filter((p) => basename(p) === '.DS_Store');
+      await Promise.all(found.map((p) => rm(join(dir, p))));
+      if (found.length) this.info(`left out ${found.length} .DS_Store`);
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [shells()],
+  plugins: [shells(), noFinderFiles()],
   build: {
     target: 'es2020',
     sourcemap: false,
