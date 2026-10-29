@@ -26,15 +26,15 @@
    "edge": "regions/india-edge-1024.bin.gz",
    "borders": "regions/states-borders-1024.bin.gz",
    "ids": "regions/states-ids-1024.bin.gz",
-   "heights": "terrain/heights-1024.bin.gz",
-   "shade": "terrain/shade-1024.bin.gz"
+   "coast": "terrain/coast-1024.bin.gz",
+   "heights": "terrain/heights-1024.bin.gz"
   },
   "2048": {
    "edge": "regions/india-edge-2048.bin.gz",
    "borders": "regions/states-borders-2048.bin.gz",
    "ids": "regions/states-ids-2048.bin.gz",
-   "heights": "terrain/heights-2048.bin.gz",
-   "shade": "terrain/shade-2048.bin.gz"
+   "coast": "terrain/coast-2048.bin.gz",
+   "heights": "terrain/heights-2048.bin.gz"
   }
  },
  "regions": {
@@ -44,7 +44,7 @@
  "states": "states/index.json",
  "world": {
   "heights": "terrain/world-heights.bin.gz",
-  "shade": "terrain/world-shade.bin.gz"
+  "coast": "terrain/world-coast.bin.gz"
  },
  "layers": [
   {
@@ -14833,6 +14833,10 @@
    "size": 345,
    "sha256": "f771dc009577"
   },
+  "states/andaman-and-nicobar-islands-coast.bin.gz": {
+   "size": 27962,
+   "sha256": "c41bab9836ed"
+  },
   "states/andaman-and-nicobar-islands-edge.bin.gz": {
    "size": 42929,
    "sha256": "e61f95324c4a"
@@ -14845,9 +14849,9 @@
    "size": 6360,
    "sha256": "123422e0641f"
   },
-  "states/andaman-and-nicobar-islands-shade.bin.gz": {
-   "size": 76478,
-   "sha256": "77899f9acba4"
+  "states/andhra-pradesh-coast.bin.gz": {
+   "size": 51662,
+   "sha256": "9ff117579c4a"
   },
   "states/andhra-pradesh-edge.bin.gz": {
    "size": 94190,
@@ -14861,9 +14865,9 @@
    "size": 15315,
    "sha256": "bb7a939bd950"
   },
-  "states/andhra-pradesh-shade.bin.gz": {
-   "size": 397321,
-   "sha256": "bbad27d34d99"
+  "states/arunachal-pradesh-coast.bin.gz": {
+   "size": 29250,
+   "sha256": "06df112c94c4"
   },
   "states/arunachal-pradesh-edge.bin.gz": {
    "size": 53055,
@@ -14877,9 +14881,9 @@
    "size": 7256,
    "sha256": "54c3bb28cd10"
   },
-  "states/arunachal-pradesh-shade.bin.gz": {
-   "size": 244528,
-   "sha256": "7946d76ae944"
+  "states/assam-coast.bin.gz": {
+   "size": 31828,
+   "sha256": "da73ff3a85ec"
   },
   "states/assam-edge.bin.gz": {
    "size": 56108,
@@ -14893,9 +14897,9 @@
    "size": 8344,
    "sha256": "36f088b62f92"
   },
-  "states/assam-shade.bin.gz": {
-   "size": 225578,
-   "sha256": "5c8031574aa8"
+  "states/bihar-coast.bin.gz": {
+   "size": 25518,
+   "sha256": "6c5ea9d1636f"
   },
   "states/bihar-edge.bin.gz": {
    "size": 46342,
@@ -14909,9 +14913,9 @@
    "size": 6494,
    "sha256": "9dbc20682fd1"
   },
-  "states/bihar-shade.bin.gz": {
-   "size": 198284,
-   "sha256": "a1ba21050e7e"
+  "states/chandigarh-coast.bin.gz": {
+   "size": 558,
+   "sha256": "f5926ff6d9ab"
   },
   "states/chandigarh-edge.bin.gz": {
    "size": 1162,
@@ -14925,9 +14929,9 @@
    "size": 280,
    "sha256": "1ae8d7903361"
   },
-  "states/chandigarh-shade.bin.gz": {
-   "size": 1444,
-   "sha256": "47320706ac69"
+  "states/chhattisgarh-coast.bin.gz": {
+   "size": 34904,
+   "sha256": "b7b3b544395f"
   },
   "states/chhattisgarh-edge.bin.gz": {
    "size": 62503,
@@ -14941,9 +14945,9 @@
    "size": 9425,
    "sha256": "467b4b433d96"
   },
-  "states/chhattisgarh-shade.bin.gz": {
-   "size": 316566,
-   "sha256": "06309c626f05"
+  "states/dadra-and-nagar-haveli-and-daman-and-diu-coast.bin.gz": {
+   "size": 4051,
+   "sha256": "852bbcf654ae"
   },
   "states/dadra-and-nagar-haveli-and-daman-and-diu-edge.bin.gz": {
    "size": 5171,
@@ -14957,9 +14961,9 @@
    "size": 883,
    "sha256": "ed9f072b4478"
   },
-  "states/dadra-and-nagar-haveli-and-daman-and-diu-shade.bin.gz": {
-   "size": 11776,
-   "sha256": "96d7f8321c23"
+  "states/delhi-coast.bin.gz": {
+   "size": 1699,
+   "sha256": "d480d55f56d0"
   },
   "states/delhi-edge.bin.gz": {
    "size": 3746,
@@ -14973,9 +14977,9 @@
    "size": 639,
    "sha256": "34d1702ea5b8"
   },
-  "states/delhi-shade.bin.gz": {
-   "size": 6872,
-   "sha256": "c0f1443492d9"
+  "states/goa-coast.bin.gz": {
+   "size": 3069,
+   "sha256": "cccf9b1823cb"
   },
   "states/goa-edge.bin.gz": {
    "size": 6613,
@@ -14989,9 +14993,9 @@
    "size": 961,
    "sha256": "38c5cc371bd1"
   },
-  "states/goa-shade.bin.gz": {
-   "size": 17418,
-   "sha256": "e07fedaf3c8f"
+  "states/gujarat-coast.bin.gz": {
+   "size": 38735,
+   "sha256": "87c59bcbb997"
   },
   "states/gujarat-edge.bin.gz": {
    "size": 79676,
@@ -15005,9 +15009,9 @@
    "size": 11425,
    "sha256": "5be911511cfb"
   },
-  "states/gujarat-shade.bin.gz": {
-   "size": 369236,
-   "sha256": "54156d4df5ef"
+  "states/haryana-coast.bin.gz": {
+   "size": 19940,
+   "sha256": "e69a1917a3e5"
   },
   "states/haryana-edge.bin.gz": {
    "size": 39349,
@@ -15021,9 +15025,9 @@
    "size": 5213,
    "sha256": "141ebe79f413"
   },
-  "states/haryana-shade.bin.gz": {
-   "size": 109226,
-   "sha256": "28e1f5e9e5c9"
+  "states/himachal-pradesh-coast.bin.gz": {
+   "size": 16472,
+   "sha256": "e3e3c17b3a58"
   },
   "states/himachal-pradesh-edge.bin.gz": {
    "size": 29753,
@@ -15037,13 +15041,13 @@
    "size": 4048,
    "sha256": "c232b5ed6546"
   },
-  "states/himachal-pradesh-shade.bin.gz": {
-   "size": 154960,
-   "sha256": "506d66bf9c71"
-  },
   "states/index.json": {
-   "size": 11207,
-   "sha256": "a29368c74a18"
+   "size": 11202,
+   "sha256": "c0bd55b815da"
+  },
+  "states/jammu-and-kashmir-coast.bin.gz": {
+   "size": 14829,
+   "sha256": "64e507e49471"
   },
   "states/jammu-and-kashmir-edge.bin.gz": {
    "size": 27209,
@@ -15057,9 +15061,9 @@
    "size": 3772,
    "sha256": "f3d53c62246b"
   },
-  "states/jammu-and-kashmir-shade.bin.gz": {
-   "size": 148372,
-   "sha256": "063cd1da6624"
+  "states/jharkhand-coast.bin.gz": {
+   "size": 27056,
+   "sha256": "997e7b479ca7"
   },
   "states/jharkhand-edge.bin.gz": {
    "size": 50243,
@@ -15073,9 +15077,9 @@
    "size": 6978,
    "sha256": "17cfdbdcc423"
   },
-  "states/jharkhand-shade.bin.gz": {
-   "size": 210888,
-   "sha256": "bac8999dbb8b"
+  "states/karnataka-coast.bin.gz": {
+   "size": 42553,
+   "sha256": "ee0a9652bb9b"
   },
   "states/karnataka-edge.bin.gz": {
    "size": 78992,
@@ -15089,9 +15093,9 @@
    "size": 11581,
    "sha256": "dd5ec716b43f"
   },
-  "states/karnataka-shade.bin.gz": {
-   "size": 406987,
-   "sha256": "aaf8acd3f778"
+  "states/kerala-coast.bin.gz": {
+   "size": 17845,
+   "sha256": "7788440ff9d6"
   },
   "states/kerala-edge.bin.gz": {
    "size": 35455,
@@ -15105,9 +15109,9 @@
    "size": 5067,
    "sha256": "993eedb4ec66"
   },
-  "states/kerala-shade.bin.gz": {
-   "size": 127539,
-   "sha256": "e2da63056503"
+  "states/ladakh-coast.bin.gz": {
+   "size": 39209,
+   "sha256": "b6a8fea6b70b"
   },
   "states/ladakh-edge.bin.gz": {
    "size": 64589,
@@ -15121,9 +15125,9 @@
    "size": 10375,
    "sha256": "d7fbab35d4d6"
   },
-  "states/ladakh-shade.bin.gz": {
-   "size": 428752,
-   "sha256": "4d7642cce6b7"
+  "states/lakshadweep-coast.bin.gz": {
+   "size": 17304,
+   "sha256": "ec921cab64e4"
   },
   "states/lakshadweep-edge.bin.gz": {
    "size": 13297,
@@ -15137,9 +15141,9 @@
    "size": 2444,
    "sha256": "1532ea9179bb"
   },
-  "states/lakshadweep-shade.bin.gz": {
-   "size": 28469,
-   "sha256": "c4e68d0ed1dd"
+  "states/madhya-pradesh-coast.bin.gz": {
+   "size": 61625,
+   "sha256": "e25341072f9d"
   },
   "states/madhya-pradesh-edge.bin.gz": {
    "size": 119342,
@@ -15153,9 +15157,9 @@
    "size": 17968,
    "sha256": "882027871d13"
   },
-  "states/madhya-pradesh-shade.bin.gz": {
-   "size": 628850,
-   "sha256": "3ca48a2ead73"
+  "states/maharashtra-coast.bin.gz": {
+   "size": 55376,
+   "sha256": "ada7be7e1c2b"
   },
   "states/maharashtra-edge.bin.gz": {
    "size": 97390,
@@ -15169,9 +15173,9 @@
    "size": 15946,
    "sha256": "7d9d6efec6a5"
   },
-  "states/maharashtra-shade.bin.gz": {
-   "size": 612445,
-   "sha256": "87f508368103"
+  "states/manipur-coast.bin.gz": {
+   "size": 6969,
+   "sha256": "7032ea4e08c5"
   },
   "states/manipur-edge.bin.gz": {
    "size": 14728,
@@ -15185,9 +15189,9 @@
    "size": 2001,
    "sha256": "1bd6de180017"
   },
-  "states/manipur-shade.bin.gz": {
-   "size": 66976,
-   "sha256": "d266d6015c8f"
+  "states/meghalaya-coast.bin.gz": {
+   "size": 8289,
+   "sha256": "4e68dac18901"
   },
   "states/meghalaya-edge.bin.gz": {
    "size": 18820,
@@ -15201,9 +15205,9 @@
    "size": 2412,
    "sha256": "c5baa618d127"
   },
-  "states/meghalaya-shade.bin.gz": {
-   "size": 70515,
-   "sha256": "1eb9e41d108e"
+  "states/mizoram-coast.bin.gz": {
+   "size": 7322,
+   "sha256": "405da9c54f4a"
   },
   "states/mizoram-edge.bin.gz": {
    "size": 16742,
@@ -15217,9 +15221,9 @@
    "size": 2453,
    "sha256": "0bfa1709f0c6"
   },
-  "states/mizoram-shade.bin.gz": {
-   "size": 68621,
-   "sha256": "d28e101c74e2"
+  "states/nagaland-coast.bin.gz": {
+   "size": 8625,
+   "sha256": "0d5444ee792b"
   },
   "states/nagaland-edge.bin.gz": {
    "size": 17094,
@@ -15233,9 +15237,9 @@
    "size": 2364,
    "sha256": "1176eaa2cbdd"
   },
-  "states/nagaland-shade.bin.gz": {
-   "size": 61119,
-   "sha256": "7cbcd6278c37"
+  "states/odisha-coast.bin.gz": {
+   "size": 36030,
+   "sha256": "dee429687c48"
   },
   "states/odisha-edge.bin.gz": {
    "size": 64651,
@@ -15249,9 +15253,9 @@
    "size": 9697,
    "sha256": "660e9d118241"
   },
-  "states/odisha-shade.bin.gz": {
-   "size": 357051,
-   "sha256": "4956cdd2632c"
+  "states/puducherry-coast.bin.gz": {
+   "size": 9644,
+   "sha256": "fea275984730"
   },
   "states/puducherry-edge.bin.gz": {
    "size": 10872,
@@ -15265,9 +15269,9 @@
    "size": 5047,
    "sha256": "e8aef2546d6e"
   },
-  "states/puducherry-shade.bin.gz": {
-   "size": 23643,
-   "sha256": "52faac859cb1"
+  "states/punjab-coast.bin.gz": {
+   "size": 16323,
+   "sha256": "1ab3d3c1e842"
   },
   "states/punjab-edge.bin.gz": {
    "size": 29784,
@@ -15281,9 +15285,9 @@
    "size": 4016,
    "sha256": "51f063e5d271"
   },
-  "states/punjab-shade.bin.gz": {
-   "size": 101663,
-   "sha256": "343e52fd8bac"
+  "states/rajasthan-coast.bin.gz": {
+   "size": 58618,
+   "sha256": "4b2f9e2bb1ee"
   },
   "states/rajasthan-edge.bin.gz": {
    "size": 103299,
@@ -15297,9 +15301,9 @@
    "size": 16898,
    "sha256": "2cd4c0a01632"
   },
-  "states/rajasthan-shade.bin.gz": {
-   "size": 629203,
-   "sha256": "b4bc0b403a7a"
+  "states/sikkim-coast.bin.gz": {
+   "size": 3450,
+   "sha256": "8912ebd1f3da"
   },
   "states/sikkim-edge.bin.gz": {
    "size": 8218,
@@ -15313,9 +15317,9 @@
    "size": 1208,
    "sha256": "c11b4670233d"
   },
-  "states/sikkim-shade.bin.gz": {
-   "size": 26038,
-   "sha256": "f66c7f761d7d"
+  "states/tamil-nadu-coast.bin.gz": {
+   "size": 32428,
+   "sha256": "7a5dcd9fc61c"
   },
   "states/tamil-nadu-edge.bin.gz": {
    "size": 59262,
@@ -15329,9 +15333,9 @@
    "size": 9079,
    "sha256": "90b1549f805f"
   },
-  "states/tamil-nadu-shade.bin.gz": {
-   "size": 289934,
-   "sha256": "93b7e97e91d9"
+  "states/telangana-coast.bin.gz": {
+   "size": 24441,
+   "sha256": "0b48a579af70"
   },
   "states/telangana-edge.bin.gz": {
    "size": 46314,
@@ -15345,9 +15349,9 @@
    "size": 6838,
    "sha256": "d281c0c08db9"
   },
-  "states/telangana-shade.bin.gz": {
-   "size": 243492,
-   "sha256": "6ed32870007e"
+  "states/tripura-coast.bin.gz": {
+   "size": 6031,
+   "sha256": "237dbf5cd11d"
   },
   "states/tripura-edge.bin.gz": {
    "size": 12444,
@@ -15361,9 +15365,9 @@
    "size": 1843,
    "sha256": "228988b1af19"
   },
-  "states/tripura-shade.bin.gz": {
-   "size": 38257,
-   "sha256": "22882d10cdf7"
+  "states/uttar-pradesh-coast.bin.gz": {
+   "size": 54583,
+   "sha256": "7a741984d8e2"
   },
   "states/uttar-pradesh-edge.bin.gz": {
    "size": 98808,
@@ -15377,9 +15381,9 @@
    "size": 15279,
    "sha256": "89394a9c925f"
   },
-  "states/uttar-pradesh-shade.bin.gz": {
-   "size": 451793,
-   "sha256": "bce158e974e6"
+  "states/uttarakhand-coast.bin.gz": {
+   "size": 16746,
+   "sha256": "66e8e8d976f5"
   },
   "states/uttarakhand-edge.bin.gz": {
    "size": 29366,
@@ -15393,9 +15397,9 @@
    "size": 3882,
    "sha256": "534fc5d96d96"
   },
-  "states/uttarakhand-shade.bin.gz": {
-   "size": 149389,
-   "sha256": "bedeb105c85c"
+  "states/west-bengal-coast.bin.gz": {
+   "size": 35382,
+   "sha256": "4bc436922036"
   },
   "states/west-bengal-edge.bin.gz": {
    "size": 71490,
@@ -15409,9 +15413,13 @@
    "size": 10169,
    "sha256": "c1d138d79713"
   },
-  "states/west-bengal-shade.bin.gz": {
-   "size": 231591,
-   "sha256": "52b1b02d753d"
+  "terrain/coast-1024.bin.gz": {
+   "size": 6352,
+   "sha256": "d927d5243a1e"
+  },
+  "terrain/coast-2048.bin.gz": {
+   "size": 22913,
+   "sha256": "5899704d9f3a"
   },
   "terrain/heights-1024.bin.gz": {
    "size": 745293,
@@ -15421,21 +15429,13 @@
    "size": 2941090,
    "sha256": "3525f8bbef1c"
   },
-  "terrain/shade-1024.bin.gz": {
-   "size": 127535,
-   "sha256": "60ed1a812e04"
-  },
-  "terrain/shade-2048.bin.gz": {
-   "size": 539961,
-   "sha256": "9f408ccf175e"
+  "terrain/world-coast.bin.gz": {
+   "size": 320,
+   "sha256": "ccad17063675"
   },
   "terrain/world-heights.bin.gz": {
    "size": 402394,
    "sha256": "04a94a5f4880"
-  },
-  "terrain/world-shade.bin.gz": {
-   "size": 38478,
-   "sha256": "8bd74ba6eb18"
   }
  }
 }
