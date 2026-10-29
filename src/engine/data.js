@@ -26,17 +26,17 @@ function versioned(manifest, rel) {
 export async function loadTier(manifest, tier) {
   const t = manifest.tiers[tier];
   if (!t) throw new Error(`no tier ${tier} in manifest`);
-  const [heights, shade, ids, borders, edge] = await Promise.all(
-    [t.heights, t.shade, t.ids, t.borders, t.edge].map((rel) => (rel ? loadPack(versioned(manifest, rel)) : null)));
-  return { tier, heights, shade, ids, borders, edge };
+  const [heights, coast, ids, borders, edge] = await Promise.all(
+    [t.heights, t.coast, t.ids, t.borders, t.edge].map((rel) => (rel ? loadPack(versioned(manifest, rel)) : null)));
+  return { tier, heights, coast, ids, borders, edge };
 }
 
 /** The wide backdrop, fetched the first time Surroundings is switched on. */
 export async function loadWorld(manifest) {
   const w = manifest.world;
   if (!w) return null;
-  const [heights, shade] = await Promise.all([w.heights, w.shade].map((rel) => loadPack(versioned(manifest, rel))));
-  return { heights, shade };
+  const [heights, coast] = await Promise.all([w.heights, w.coast].map((rel) => loadPack(versioned(manifest, rel))));
+  return { heights, coast };
 }
 
 export async function loadStates(manifest) {
@@ -56,10 +56,10 @@ export async function loadStateIndex(manifest) {
  * @param {AbortSignal} [signal]
  */
 export async function loadStatePackage(manifest, entry, signal) {
-  const [heights, shade, ids, edge] = await Promise.all(
-    [entry.heights, entry.shade, entry.ids, entry.edge]
+  const [heights, coast, ids, edge] = await Promise.all(
+    [entry.heights, entry.coast, entry.ids, entry.edge]
       .map((rel) => loadPack(versioned(manifest, rel), signal)));
-  return { heights, shade, ids, edge, rect: entry.rect };
+  return { heights, coast, ids, edge, rect: entry.rect };
 }
 
 /** Bounding box of every unit together, in scene km: [x0, z0, x1, z1]. */

@@ -66,7 +66,7 @@ def main():
     tiers = {}
     for rel in files:
         base = os.path.basename(rel)
-        for prefix, key in (('heights-', 'heights'), ('shade-', 'shade'), ('states-ids-', 'ids'),
+        for prefix, key in (('heights-', 'heights'), ('coast-', 'coast'), ('states-ids-', 'ids'),
                             ('states-borders-', 'borders'), ('india-edge-', 'edge')):
             if base.startswith(prefix) and base.endswith('.bin.gz'):
                 h = base[len(prefix):-len('.bin.gz')]
@@ -99,7 +99,7 @@ def main():
                                              'fields', 'scale', 'height', 'unit', 'note', 'sources') if k in L}
                           | {'path': f'layers/{n}'}
                           | ({'subgroup': eras[L['id']]} if L['id'] in eras else {}))
-    world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'shade')
+    world = {k: f'terrain/world-{k}.bin.gz' for k in ('heights', 'coast')
              if os.path.exists(os.path.join(out, 'terrain', f'world-{k}.bin.gz'))}
     manifest = {
         'version': 1,

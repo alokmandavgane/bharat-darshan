@@ -31,7 +31,7 @@ export const PALETTE = {
   tops: [80, 250, 600, 1200, 2500, 5400, 9000],
   // The `plain` base style (PLAN.md section 5, "Base styles"): one warm clay for a
   // thematic page, whose own colours would otherwise fight the hypsometric bands. The
-  // relief is still all there -- the light and the baked occlusion carry it alone, which
+  // relief is still all there -- the light and the occlusion carry it alone, which
   // is what a clay model looks like before anyone paints heights onto it.
   clay: '#e8cb9c',
 };
@@ -66,9 +66,10 @@ export function gridGeometry(cols, rows, rect = [0, 0, 1, 1]) {
 }
 
 /**
- * @param {{ tierData: any, grid: number, sizeKm: { w: number, h: number } }} opts
+ * @param {{ tierData: any, grid: number, sizeKm: { w: number, h: number }, occlusion: any }} opts
+ *   occlusion: createOcclusion's, which turns a tier's heights and coast pack into uShade
  */
-export function createTerrain({ tierData, grid, sizeKm }) {
+export function createTerrain({ tierData, grid, sizeKm, occlusion }) {
   const cols = Math.max(16, Math.round((grid * sizeKm.w) / sizeKm.h));
   const geometry = gridGeometry(cols, grid);
   geometry.boundingSphere = new Sphere(new Vector3(0, 0, 0), Math.hypot(sizeKm.w, sizeKm.h) / 2 + 400);
@@ -179,9 +180,10 @@ export function createTerrain({ tierData, grid, sizeKm }) {
   const siblings = new Set();
   /** Swap in another tier's rasters (e.g. 2048 after the 1024 first view). */
   function setTier(data) {
+    const height = heightTexture(data.heights);
     const next = {
-      uHeight: heightTexture(data.heights),
-      uShade: byteTexture(data.shade),
+      uHeight: height,
+      uShade: occlusion.shadeTexture(height, data.coast),
       uIds: byteTexture(data.ids, { nearest: true }),
       uBorders: byteTexture(data.borders),
     };

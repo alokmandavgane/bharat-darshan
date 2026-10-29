@@ -9,7 +9,8 @@ that unit, so entering a state can swap the block's textures for its own.
 Per unit, over its bounding box padded by PAD_KM, at KM_PER_PX unless noted:
   states/<slug>-heights.bin.gz   int16 steps along the rendered curve (02_dem.HEIGHT_CURVE), at
                                  the mosaic's own pixel size (see below)
-  states/<slug>-shade.bin.gz     uint8 2ch planar, half resolution: ambient occlusion, coastal shadow
+  states/<slug>-coast.bin.gz     uint8 at half resolution: coastal shadow, and the engine's
+                                 ambient occlusion parameters (02_dem.ao_params)
   states/<slug>-ids.bin.gz       uint8 state id (the mask the block discards against)
   states/<slug>-edge.bin.gz      uint8 signed distance to the unit's own outline, 128 on it
 
@@ -18,8 +19,9 @@ The heights are stored no finer than the mosaic they come from: a zoom 8 pixel i
 0.35 km stored two and a half times the pixels for nothing but interpolation, which the
 GPU's LINEAR filtering does anyway. Each unit takes the mosaic's pixel at its own northern
 edge, where the pixels are smallest, so no unit loses anything, and the heights shrink by
-more than half. The mask, the edge field and the ambient occlusion still come from the 0.35 km
-crop, and the state index keeps KM_PER_PX, which is what sets the closest zoom.
+more than half. The mask, the edge field and the coast map are still drawn on the 0.35 km
+grid, and the state index keeps KM_PER_PX, which is what sets the closest zoom. The ambient
+occlusion is not shipped: the engine computes it from the heights (src/engine/occlusion.js).
 
 The mask is the unit's smoothed outline from step 1 filled at this resolution, not the
 country ID raster resampled: that raster is 1.7 km per pixel, and stamping its staircase
@@ -62,11 +64,16 @@ BLEED_KM = 10.0         # real heights kept this far outside it (walls, ambient 
 EDGE_RANGE_PX = 6       # half-width of the unit's signed edge field, in package pixels
 
 
+def grid_size(rect, km_px):
+    """Pixels across and down a scene-km rect at km_px."""
+    x0, z0, x1, z1 = rect
+    return max(16, int(round((x1 - x0) / km_px))), max(16, int(round((z1 - z0) / km_px)))
+
+
 def crop(mosaic, xr, zoom, rect, km_px):
     """Sample the mosaic over a scene-km rect at km_px. Returns heights and the size."""
     x0, z0, x1, z1 = rect
-    w = max(16, int(round((x1 - x0) / km_px)))
-    h = max(16, int(round((z1 - z0) / km_px)))
+    w, h = grid_size(rect, km_px)
     sx = x0 + (np.arange(w) + 0.5) * (x1 - x0) / w
     sz = z0 + (np.arange(h) + 0.5) * (z1 - z0) / h
     SX, SZ = np.meshgrid(sx, sz)
@@ -159,53 +166,45 @@ def main():
             continue
         x0, z0, x1, z1 = u['bbox']
         rect = [x0 - PAD_KM, z0 - PAD_KM, x1 + PAD_KM, z1 + PAD_KM]
-        h_m, w, h = crop(mosaic, xr, args.zoom, rect, args.km_per_px)
+        w, h = grid_size(rect, args.km_per_px)
         with open(os.path.join(out_root, 'regions', 'outlines', f'{u["slug"]}.json'), encoding='utf-8') as f:
             loops = json.load(f)['loops']
         rings = unit_rings(loops, rect, w, h)
         inside = unit_mask(rings, w, h)
-        h_m = bleed(h_m, loops, rect, w, h, args.km_per_px)
 
         ids = np.where(inside, u['id'], 0).astype(np.uint8)
-        h16 = np.clip(np.round(h_m), -32768, 32767).astype(np.int16)
 
-        # What ships: the same ground at the mosaic's own pixel size. The fine crop above
-        # stays for the ambient occlusion, which is baked as it always was.
+        # The heights at the mosaic's own pixel size; the engine computes the ambient
+        # occlusion from these, at the coast map's size.
         src_km = max(args.km_per_px, source_km_per_px(args.zoom, rect))
         hs_m, hs_w, hs_h = crop(mosaic, xr, args.zoom, rect, src_km)
         hs16 = pack.encode_curve(bleed(hs_m, loops, rect, hs_w, hs_h, src_km), dem.HEIGHT_CURVE)
 
-        # Shade mirrors 02_dem.py exactly: half resolution, two channels, ambient
-        # occlusion and coastal shadow. The shader reads .rg, so a single channel here
-        # leaves the coast term at zero and the whole block renders black.
-        hh = dem.box_down(h16.astype(np.float32), 2)
+        # The coast map mirrors 02_dem.py: half resolution, distance to the unit's land.
         land2 = dem.box_down(inside.astype(np.float32), 2) >= 0.5
-        ao = dem.ambient_occlusion(hh, args.km_per_px * 2)
         r = int(np.ceil(dem.COAST_RANGE_KM / (args.km_per_px * 2)))
         d = dem.bounded_distance(land2, r)
-        coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
-        shade = np.dstack([np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
-                           np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
+        coast = np.clip(np.round(np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0)) * 255), 0, 255).astype(np.uint8)
         edge = unit_edge(rings, inside, w, h)
 
         files, size = {}, 0
         for name, arr, dtype, pred in (
             ('heights', hs16, 'int16', 'plane'),
-            ('shade', shade, 'uint8', 'plane'),
+            ('coast', coast, 'uint8', 'plane'),
             ('ids', ids, 'uint8', 'left'),
             ('edge', edge, 'uint8', 'plane'),
         ):
             rel = f'states/{u["slug"]}-{name}.bin.gz'
-            km = {'heights': src_km, 'shade': args.km_per_px * 2}.get(name, args.km_per_px)
+            km = {'heights': src_km, 'coast': args.km_per_px * 2}.get(name, args.km_per_px)
             meta = {'km_per_px': round(km, 4), 'unit': u['id']}
             if name == 'heights':
                 meta |= {'units': 'm', 'curve': dem.HEIGHT_CURVE}
-            if name == 'shade':
-                meta |= {'channels_meaning': ['ao', 'coast'], 'coast_range_km': dem.COAST_RANGE_KM}
+            if name == 'coast':
+                meta |= {'coast_range_km': dem.COAST_RANGE_KM, 'ao': dem.ao_params()}
             if name == 'edge':
                 meta |= {'range_px': EDGE_RANGE_PX, 'zero': 128}
             size += pack.write(os.path.join(out_root, rel), arr, dtype, predictor=pred,
-                               planar=name == 'shade', kind=f'state-{name}', **meta)
+                               kind=f'state-{name}', **meta)
             files[name] = rel
         total += size
         index[u['slug']] = {

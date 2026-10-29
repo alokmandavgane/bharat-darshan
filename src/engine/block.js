@@ -72,10 +72,10 @@ export function blockDimensions(unit) {
 }
 
 /**
- * @param {{ unit: any, material: any, sizeKm: { w: number, h: number }, idsTexture: any, idsTexel: [number, number] }} opts
+ * @param {{ unit: any, material: any, sizeKm: { w: number, h: number }, idsTexture: any, idsTexel: [number, number], occlusion: any }} opts
  *   material: a sibling of the terrain material (own uniforms, shared textures)
  */
-export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
+export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel, occlusion }) {
   const [x0, z0, x1, z1] = unit.bbox;
   // uv rectangle of the bbox, padded by two id texels so the discard edge is never clipped
   const pad = [idsTexel[0] * 2, idsTexel[1] * 2];
@@ -118,9 +118,10 @@ export function createBlock({ unit, material, sizeKm, idsTexture, idsTexel }) {
    * the country plate needs to cut its socket on the same curve.
    */
   function setPackage(pkg, sizeKm) {
+    const height = heightTexture(pkg.heights);
     const next = {
-      uHeight: heightTexture(pkg.heights),
-      uShade: byteTexture(pkg.shade),
+      uHeight: height,
+      uShade: occlusion.shadeTexture(height, pkg.coast),
       uIds: byteTexture(pkg.ids, { nearest: true }),
       uStateEdge: byteTexture(pkg.edge),
     };

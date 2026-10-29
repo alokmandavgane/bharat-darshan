@@ -8,8 +8,9 @@ down, India in the middle one -- from a low zoom of the same elevation source, a
 engine lays it under the plate as a backdrop.
 
 Outputs:
-  terrain/world-heights.bin.gz   int16 metres over the wide rect
-  terrain/world-shade.bin.gz     uint8 x2 at half resolution: ambient occlusion, coast
+  terrain/world-heights.bin.gz   int16 steps along the rendered curve over the wide rect
+  terrain/world-coast.bin.gz     uint8 at half resolution: coastal shadow, and the engine's
+                                 ambient occlusion parameters (02_dem.ao_params)
 
 It is not on the first view: the backdrop is fetched the first time Surroundings is
 switched on, and nothing else depends on it.
@@ -99,33 +100,30 @@ def main():
     h16 = np.clip(np.round(h), -32768, 32767).astype(np.int16)
 
     km_per_px = km[1] / height
-    hh = dem.box_down(h16.astype(np.float32), 2)
     land2 = dem.box_down(land.astype(np.float32), 2) >= 0.5
     # The plate searches its horizon about 45 km out; at this pitch that is three cells,
     # not thirteen, or the backdrop's hills would shade each other across 200 km and the
     # sheet would read far darker than the plate it hands over to.
     reach = dem.AO_STEPS[-1] * (grid.HEIGHT_KM / 1024) * 2
+    # The engine computes it (src/engine/occlusion.js); the coast pack says how.
     steps = tuple(s for s in dem.AO_STEPS if s * km_per_px * 2 <= reach) or (1,)
-    ao = dem.ambient_occlusion(hh, km_per_px * 2, steps=steps)
     print(f'  ambient occlusion: {len(steps)} steps, reaching {max(steps) * km_per_px * 2:.0f} km')
     # The same coastal shadow the plate bakes, in km. Widening it here was what made the
     # sea change tone across the band where the two sheets hand over.
     r = max(1, int(np.ceil(dem.COAST_RANGE_KM / (km_per_px * 2))))
     d = dem.bounded_distance(land2, r)
     coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
-    shade = np.dstack([np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
-                       np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
+    coast8 = np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)
 
     out = os.path.join(args.out, 'terrain')
     p1 = os.path.join(out, 'world-heights.bin.gz')
-    p2 = os.path.join(out, 'world-shade.bin.gz')
+    p2 = os.path.join(out, 'world-coast.bin.gz')
     s1 = pack.write(p1, pack.encode_curve(h, dem.HEIGHT_CURVE), 'int16', 'plane', kind='world-heights',
                     units='m', curve=dem.HEIGHT_CURVE, km_per_px=km_per_px,
                     width_km=round(km[0], 1), height_km=round(km[1], 1), scale=SCALE,
                     source=f'terrarium z{ZOOM}')
-    s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='world-shade', km_per_px=km_per_px * 2,
-                    channels_meaning=['ao', 'coast'], coast_range_km=dem.COAST_RANGE_KM,
-                    ao_curve={'h_ref': dem.H_REF, 'gamma': dem.GAMMA, 'exaggeration': dem.AO_EXAG})
+    s2 = pack.write(p2, coast8, 'uint8', 'plane', kind='world-coast', km_per_px=km_per_px * 2,
+                    coast_range_km=dem.COAST_RANGE_KM, ao=dem.ao_params(steps))
     print(f'  {width}x{height}: {km_per_px:.1f} km/px, heights {h16.min()}..{h16.max()} m, '
           f'land {land.mean() * 100:.1f}%; wrote {os.path.relpath(p1, ROOT)} ({s1 / 1024:.0f} KB), '
           f'{os.path.relpath(p2, ROOT)} ({s2 / 1024:.0f} KB)')

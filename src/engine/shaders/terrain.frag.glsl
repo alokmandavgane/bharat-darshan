@@ -1,10 +1,10 @@
 // The clay / paper look (PLAN.md section 3): banded hypsometric colour, one soft key
-// light from the north-west with wrap, baked AO, paper grain, flat ocean with a baked
+// light from the north-west with wrap, ambient occlusion, paper grain, flat ocean with a baked
 // coastal shadow, lighter desaturated neighbours, scored borders from distance fields.
 uniform sampler2D uHeight;     // R16F metres, LINEAR
 uniform vec2 uHeightTexel;     // 1 / heightmap size
 uniform vec4 uLocalRect;       // country-uv rect the bound rasters cover; (0,0,1,1) is the country tier
-uniform sampler2D uShade;      // r: ambient occlusion, g: coastal shadow (half res, LINEAR)
+uniform sampler2D uShade;      // r: ambient occlusion (occlusion.js), g: coastal shadow (half res, LINEAR)
 uniform sampler2D uIds;        // r: state id / 255 (NEAREST)
 uniform sampler2D uIndiaEdge;  // signed distance to India's outline: 0.5 on it, up inside
 uniform float uEdgeRangeKm;    // distance the field reaches, each way
@@ -240,7 +240,7 @@ void main() {
   vec3 light = sky * 0.50 + sun * 0.62 * diff;
   float ao = mix(1.0, shade.r, 0.75);
   // The base style. A thematic page asks for `plain` and the bands give way to one clay,
-  // so the page's own colours are the only colours on the model; the light and the baked
+  // so the page's own colours are the only colours on the model; the light and the
   // occlusion carry the relief by themselves. Physical pages keep the bands.
   vec3 albedo = mix(bandColour(h), uClay, uPlain);
   // A choropleth tints the clay rather than covering it: the value replaces the

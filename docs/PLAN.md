@@ -347,9 +347,9 @@ Desktop / tablet landscape:
   photo textures. A tiny tiling grain texture multiplied over everything.
 - **Light.** One soft key light from the north-west (cartographic convention) plus
   generous ambient; north-west of the *screen*, so it holds its place as the model
-  turns (D13, F4), with wrap lighting so shaded slopes never go black. Baked ambient
-  occlusion from the pipeline gives the tactile creases: valleys darker, ridges
-  lighter.
+  turns (D13, F4), with wrap lighting so shaded slopes never go black. Ambient
+  occlusion, computed from the heights on the GPU at load, gives the tactile creases:
+  valleys darker, ridges lighter.
 - **Colour.** A restrained banded hypsometric palette, 6-8 bands with soft edges
   (coastal plain, plains, plateau, hills, mountains, high mountains, snow), warm and
   desaturated. Thematic layers tint by multiplication so relief still reads.
@@ -370,7 +370,7 @@ Desktop / tablet landscape:
 - **Motion.** Short, springy, restrained. Mountains grow when relief toggles; state
   lift about 400 ms; respects `prefers-reduced-motion`.
 - Why it is also cheaper: no imagery downloads, textures compress well, smooth clay
-  hides a coarse mesh, AO can be baked at low resolution.
+  hides a coarse mesh, AO is computed at low resolution from the heights already loaded.
 
 ### Languages: English + Hindi at launch (D9)
 
@@ -2450,6 +2450,40 @@ docs/DEPLOY.md).
     comes into its own from about 1,500 km of view height in; whether it wants to open
     closer than the home view is a look question for the owner.
 
+- 2026-10-29: ambient occlusion computed on the GPU instead of shipped. It was 7.3 MB of
+  the 8.2 MB of shade packs, and the heights the client already has decide all of it.
+  `src/engine/occlusion.js` runs `shaders/occlusion.frag.glsl` once per raster as it
+  arrives -- country tier, world backdrop, state package -- into an RG8 render target the
+  size of the old shade map: r the occlusion, g the coastal shadow copied from the pack,
+  so the terrain shader still reads `uShade` and is unchanged. The shader is a port of
+  `02_dem.ambient_occlusion` (8 directions, the steepest rise to each step, on the curve
+  lifted at 12x); LINEAR filtering at a half-resolution texel centre is the pipeline's 2x2
+  box. The pipeline now ships one-channel `coast-*` packs (`terrain/coast-{H}`,
+  `terrain/world-coast`, `states/<slug>-coast`) whose header carries `ao: {steps,
+  exaggeration, gamma, h_ref}` (`02_dem.ao_params`; the backdrop's two steps from
+  03_world), and keeps `ambient_occlusion` for the previews and as the reference. 06_states
+  no longer crops a 0.35 km heightfield at all; the mask, edge and coast are drawn on that
+  grid from the outlines. A lost context comes back with its targets empty, so
+  `occlusion.restore()` redraws them on `webglcontextrestored`; `window.bd.engine` gains
+  `renderer` and `block` to read them back.
+  - **Sizes**: state packages 18.9 MB to 12.3, the country and world shade 706 KB to 30 KB
+    of coast, the first view 1,071 KB to 952, `public/data` 36.6 MB to 29.3, the built site
+    50 MB to 42.
+  - **Checked**: read back from the app, the GPU occlusion matches the pipeline's
+    `ambient_occlusion` run on what the GPU sees (the shipped heights as half floats,
+    sampled bilinearly) to 1-2/255 at p99 everywhere, and SwiftShader gives the Mac GPU's
+    result to 1/255. Against the old baked AO the country tiers and the backdrop are the
+    same (max 3/255). Inside a state the mean is the same (within 2.4/255) but single texels
+    move by 3-10/255 on average, up to about 50 at p99 in the Himalaya: the old AO came
+    from a 0.35 km resample of the zoom-8 mosaic, the new from the shipped 0.5-0.6 km
+    heights, and at 12x a few tens of metres turns a horizon a long way. On screen the
+    home view on both tiers differs by at most 6/255; Ladakh, Uttarakhand, Kerala and
+    Sikkim at default framing and closest zoom, and the Rann at its closest, show only fine
+    noise in the creases, nothing to tell apart side by side. Context loss and restore,
+    the 1024 -> 2048 swap and state to state to country all hold, with a steady texture
+    count. The two-to-four "GPU stall due to ReadPixels" warnings under SwiftShader were
+    there before this change.
+
 - 2026-10-28: the site's footprint, and the share cards at 1200x630. The built site was 79 MB
   in 557 files: the 36 state packages 35 MB (heights 23.5, shade 9.5), share cards 16 MB,
   layer JSON 11 MB (about 3 MB on the wire, since Cloudflare compresses JSON), country terrain
@@ -3161,12 +3195,12 @@ docs/DEPLOY.md).
   `02_dem.py`, `05_manifest.py` and `build.py`, plus a TopoJSON reader (`lib/topo.py`),
   the district source (`lib/districts.py`) and a batched, cached, retrying Wikidata
   client (`lib/wikidata.py`). `npm run data` rebuilds everything in about 40 s; it was
-  reproducible byte for byte and is now reproducible everywhere but three pixels of the
-  two `shade` rasters, which drift by one between numpy versions (see the thirty-fifth
-  round). Raw downloads are cached in `pipeline/raw/`, previews land in `pipeline/tmp/`.
+  reproducible byte for byte, and is again under either numpy build since 2026-10-28; the
+  ambient occlusion, whose rounding drifted by one between numpy versions (see the
+  thirty-fifth round), is no longer shipped. Raw downloads are cached in `pipeline/raw/`, previews land in `pipeline/tmp/`.
 - `public/data/`: committed outputs for two tiers, 960x1024 (first view, 1.15 MB) and
   1920x2048 (4.4 MB), plus `regions/states.json` and `manifest.json`. 24 layers and 14
-  plates; the first-view tier is 1,071 KB of the 1.5 MB budget and every layer past the
+  plates; the first-view tier is 952 KB of the 1.5 MB budget and every layer past the
   default set is lazily loaded.
 - `content/states/states.json`: the 36 units with ids, ISO codes, English and Hindi
   names (Hindi spellings pending review), native-script names where they differ.
@@ -3193,8 +3227,10 @@ docs/DEPLOY.md).
   at 30 m; `02_dem.HEIGHT_CURVE`, decoded by `metresTable` in `pack.js`), the sea in
   metres. Ocean quantised to 25 m and forced to <= -25 m,
   so the shader reads land as "filtered height > -12.5 m": a smooth coastline with no
-  mask channel, and half the bytes the noisy sea floor cost. AO and coastal shadow
-  are baked at half resolution (AO reads fine upsampled; full resolution cost 4x).
+  mask channel, and half the bytes the noisy sea floor cost. The coastal shadow is baked
+  at half resolution (`coast-*` packs); the ambient occlusion is computed at that same
+  size on the GPU at load (`src/engine/occlusion.js`, a port of
+  `02_dem.ambient_occlusion`, with its steps and curve in each coast pack's `ao` header).
   Border distance fields are made in the DEM step because the coast must be excluded.
 - The 1024 tier always loads first (first-view budget); medium and high quality tiers
   swap the 2048 tier in afterwards. No 4096 tier yet (zoom-8 tiles are cached).
@@ -3202,7 +3238,7 @@ docs/DEPLOY.md).
   NEAREST, so highlight fills will be texel-stepped at country zoom; the border lines
   come from the distance fields and stay smooth at any zoom.
 - Vertical curve `y_km = exag * (h / 8000)^0.65 * 8`; default exaggeration 12, which
-  is also what the baked AO assumes.
+  is also what the ambient occlusion assumes (`ao.exaggeration` in the coast headers).
 - Camera fit uses India's convex hull (computed from the ID raster) rather than its
   bounding box, so the turned view is tight. Padding comes from the header, the
   controls and the sheet peek, or from the side panel on wide pointer screens.
@@ -3285,7 +3321,7 @@ docs/DEPLOY.md).
 4. Phase 1, remaining: review the drafted facts and places (flip `status`, then turn
    the drafts default off in `src/main.js`; the tour then visits reviewed places only),
    lazy hi-res state packages (needs open
-   question 1: they are about 0.5 MB each, 19 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
+   question 1: they are about 0.34 MB each, 12.3 MB in all, too much for git), the poster image (needs open question 6), context-loss test on iOS,
    WebGL sprites for markers if the DOM ones ever get slow (they are fine at 50).
    Done on 2026-09-21: layer state in the URL, and the card carousel.
 5. Settle open questions 6-7.

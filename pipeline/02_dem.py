@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Step 2: elevation tiles -> heightmap and shade maps on the project grid.
+"""Step 2: elevation tiles -> heightmap, coast and border maps on the project grid.
 
 Source: AWS Terrain Tiles, "Terrarium" PNG encoding (h = R*256 + G + B/256 - 32768 m),
 https://registry.opendata.aws/terrain-tiles/ . Open data; attribution required for
@@ -16,11 +16,14 @@ noisy sea floor costs on the wire and lets the shader read land as "filtered hei
 > -12.5 m", which gives a smooth coastline without a separate mask.
 
 Outputs, per tier H:
-  terrain/heights-{H}.bin.gz         int16 metres, full tier resolution
-  terrain/shade-{H}.bin.gz           uint8 x2 at half resolution: baked ambient occlusion and
-                                     coastal shadow (ocean pixels near land). AO reads fine
-                                     when upsampled (PLAN.md section 3); full resolution would
-                                     cost 4x the bytes.
+  terrain/heights-{H}.bin.gz         int16 steps along the rendered curve (HEIGHT_CURVE), full
+                                     tier resolution
+  terrain/coast-{H}.bin.gz           uint8 at half resolution: coastal shadow (ocean pixels
+                                     near land), and in its header the parameters the engine
+                                     computes the ambient occlusion with (ao_params). The
+                                     occlusion itself is not shipped: the heights decide all
+                                     of it, and baked it was 7.3 MB of the 8.2 the shade maps
+                                     weighed across the site.
   regions/india-edge-{H}.bin.gz      uint8: signed distance to India's own outline, 128 on the
                                      line, rising inside and falling outside over range_px
                                      pixels. The cut-out's silhouette is drawn from this rather
@@ -135,8 +138,18 @@ def shift(a, dy, dx, fill=0.0):
 AO_STEPS = (1, 2, 3, 5, 8, 13)
 
 
+def ao_params(steps=AO_STEPS):
+    """What the engine computes a raster's ambient occlusion with (src/engine/occlusion.js),
+    written into the header of the coast pack it is drawn at the size of."""
+    return {'steps': list(steps), 'exaggeration': AO_EXAG, 'gamma': GAMMA, 'h_ref': H_REF}
+
+
 def ambient_occlusion(h_m, km_per_px, steps=AO_STEPS):
     """Horizon-based sky visibility on the exaggerated terrain, 8 directions x 6 distances.
+
+    The engine computes the occlusion it draws itself, on the GPU at load
+    (src/engine/shaders/occlusion.frag.glsl); this is the reference that shader ports, and what the
+    previews are shaded with. Keep the two in step.
 
     `steps` are in cells, so how far the horizon is searched in km follows the raster's
     own pitch. A coarser raster wanting the same look has to ask for fewer of them, or
@@ -296,16 +309,16 @@ def main():
         h = np.where(land, np.maximum(h, 0.0), ocean)
         h16 = np.clip(np.round(h), -32768, 32767).astype(np.int16)
 
-        # Shade maps at half resolution: AO on the 2x2-averaged heights, coast distance in km.
+        # The coast map at half resolution, distance in km. The occlusion on the 2x2-averaged
+        # heights is only for the preview: the engine computes the one it draws.
         hh = box_down(h16.astype(np.float32), 2)
         land2 = box_down(land.astype(np.float32), 2) >= 0.5
-        ao = ambient_occlusion(hh, km_per_px * 2)
         r = int(np.ceil(COAST_RANGE_KM / (km_per_px * 2)))
         d = bounded_distance(land2, r)
         coast = np.where(land2, 0.0, 1.0 - np.clip(d / r, 0.0, 1.0))
-        shade = np.dstack([
-            np.clip(np.round(ao * 255), 0, 255).astype(np.uint8),
-            np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)])
+        coast8 = np.clip(np.round(coast * 255), 0, 255).astype(np.uint8)
+        shade = np.dstack([np.clip(np.round(ambient_occlusion(hh, km_per_px * 2) * 255), 0, 255).astype(np.uint8),
+                           coast8])
 
         seg_int, seg_ext = border_segments(os.path.join(args.out, 'regions', 'outlines'),
                                            ids, land, width, height)
@@ -314,16 +327,15 @@ def main():
         print(f'  border lines: {len(seg_int)} state segments, {len(seg_ext)} international')
 
         p1 = os.path.join(out_dir, f'heights-{height}.bin.gz')
-        p2 = os.path.join(out_dir, f'shade-{height}.bin.gz')
+        p2 = os.path.join(out_dir, f'coast-{height}.bin.gz')
         p3 = os.path.join(args.out, 'regions', f'states-borders-{height}.bin.gz')
         p4 = os.path.join(args.out, 'regions', f'india-edge-{height}.bin.gz')
         s1 = pack.write(p1, pack.encode_curve(h, HEIGHT_CURVE), 'int16', 'plane', kind='heights',
                         units='m', curve=HEIGHT_CURVE, km_per_px=km_per_px,
                         min=int(h16.min()), max=int(h16.max()), ocean_step_m=OCEAN_STEP_M,
                         land_threshold_m=-OCEAN_STEP_M / 2, source=f'terrarium z{args.zoom}, box {f}')
-        s2 = pack.write(p2, shade, 'uint8', 'plane', planar=True, kind='shade', km_per_px=km_per_px * 2,
-                        channels_meaning=['ao', 'coast'], coast_range_km=COAST_RANGE_KM,
-                        ao_curve={'h_ref': H_REF, 'gamma': GAMMA, 'exaggeration': AO_EXAG})
+        s2 = pack.write(p2, coast8, 'uint8', 'plane', kind='coast', km_per_px=km_per_px * 2,
+                        coast_range_km=COAST_RANGE_KM, ao=ao_params())
         s3 = pack.write(p3, borders, 'uint8', 'plane', planar=True, kind='border-sdf', range_px=BORDER_RANGE_PX,
                         km_per_px=km_per_px, channels_meaning=['internal', 'external'])
         s4 = pack.write(p4, edge, 'uint8', 'plane', kind='india-sdf', range_px=EDGE_RANGE_PX,

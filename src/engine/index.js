@@ -7,6 +7,7 @@ import { FILL_TYPES, fillLookup, prismLookup } from './choropleth.js';
 import { createLines } from './lines.js';
 import { createGraticule } from './graticule.js';
 import { createWorld } from './world.js';
+import { createOcclusion } from './occlusion.js';
 import { basis, DEFAULT_CAMERA, fitBounds, groundAnchor, MAX_MAGNIFY, projector, setZoomFloor, unwrapYaw, wrapYaw, ZOOM_MIN } from './camera-math.js';
 import { DATA_BASE, loadJson, loadManifest, loadStatePackage, loadStateIndex, loadStates, loadTier, loadWorld, unionBbox } from './data.js';
 import { createIdle } from './idle.js';
@@ -42,6 +43,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, quality.dprCap));
   renderer.setClearColor(0x000000, 0);   // the page's paper shows through where the model fades out
   renderer.autoClear = false;            // render() clears once, then draws the backdrop and the model
+  const occlusion = createOcclusion(renderer);
   const scene = new Scene();
   const backdrop = new Scene();          // the wide sheet behind the model, on its own depth buffer
   const camera = new OrthographicCamera(-1, 1, 1, -1, 200, 16000);
@@ -768,7 +770,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (level.name !== 'state' || level.id !== unit.id) return;   // the user moved on meanwhile
     const idsW = fine ? fine.width : terrain.uniforms.uIds.value.image.width;
     const idsH = fine ? fine.height : terrain.uniforms.uIds.value.image.height;
-    block = createBlock({ unit, material: terrain.siblingMaterial(), sizeKm, idsTexture: fine?.texture, idsTexel: [1 / idsW, 1 / idsH] });
+    block = createBlock({ unit, material: terrain.siblingMaterial(), sizeKm, idsTexture: fine?.texture, idsTexel: [1 / idsW, 1 / idsH], occlusion });
     scene.add(block.group);
     lines?.setBlock(block.material.uniforms, unit.id, block.grid);
     raised = { id: unit.id, km: 0 };
@@ -1123,7 +1125,8 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
   });
 
   canvas.addEventListener('webglcontextlost', (e) => { e.preventDefault(); store.set('status', 'context-lost'); });
-  canvas.addEventListener('webglcontextrestored', () => { store.set('status', 'ready'); invalidate(); });
+  // three.js uploads its data textures again by itself; the occlusion lives only on the GPU.
+  canvas.addEventListener('webglcontextrestored', () => { occlusion.restore(); store.set('status', 'ready'); invalidate(); });
 
   /**
    * The entrance (PLAN.md section 3, "The missing wow" 2). On a cold load of the home
@@ -1176,7 +1179,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     sizeKm = { w: manifest.grid.width_km, h: manifest.grid.height_km };
     countryKmPerPx = sizeKm.h / first.heights.height;
     refreshZoomFloor();
-    terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm });
+    terrain = createTerrain({ tierData: first, grid: quality.grid, sizeKm, occlusion });
     field = createHeightfield(first, sizeKm, terrain.grid);
     tierIds = first;
     publishBounds();                      // the mask needs the raster, which only exists now
@@ -1280,7 +1283,7 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     if (worldLoad || store.get('saveData')) return;
     worldLoad = loadWorld(manifest).then((data) => {
       if (!data || !terrain || world) return;
-      world = createWorld({ data, terrain, grid: Math.round(quality.grid / 2) });
+      world = createWorld({ data, terrain, grid: Math.round(quality.grid / 2), occlusion });
       world.mesh.visible = !!store.get('surroundings');
       world.setCurve({ exag: terrain.uniforms.uExag.value, gamma: terrain.uniforms.uGamma.value,
                        hRef: terrain.uniforms.uHRef.value });
@@ -1300,6 +1303,9 @@ export function createEngine({ canvas, store, labelContainer, markerContainer, l
     get terrain() { return terrain; },
     get marks() { return marks; },
     get world() { return world; },
-    dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); marks?.dispose(); terrain?.dispose(); block?.dispose(); renderer.dispose(); },
+    get block() { return block; },
+    // The ambient occlusion exists only on the GPU (occlusion.js); reading it back needs this.
+    get renderer() { return renderer; },
+    dispose() { choroLook?.dispose(); world?.dispose(); lines?.dispose(); marks?.dispose(); terrain?.dispose(); block?.dispose(); occlusion.dispose(); renderer.dispose(); },
   };
 }

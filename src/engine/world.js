@@ -10,19 +10,20 @@
 // opaque and it shows only through the rim the plate fades out over.
 import { Mesh, Vector2, Vector4 } from 'three';
 import { gridGeometry } from './terrain.js';
-import { byteTexture, heightTexture, zeroTexture } from './textures.js';
+import { heightTexture, zeroTexture } from './textures.js';
 
 /**
- * @param {{ data: any, terrain: any, grid: number }} opts  data: the world pack pair
+ * @param {{ data: any, terrain: any, grid: number, occlusion: any }} opts  data: the world pack pair
  */
-export function createWorld({ data, terrain, grid }) {
+export function createWorld({ data, terrain, grid, occlusion }) {
   const sizeKm = {
     w: data.heights.header.width_km,
     h: data.heights.header.height_km,
   };
   const material = terrain.siblingMaterial({ independent: true });
-  const owned = [heightTexture(data.heights), byteTexture(data.shade), zeroTexture()];
-  const [height, shade, zero] = owned;
+  const height = heightTexture(data.heights);
+  const owned = [height, occlusion.shadeTexture(height, data.coast), zeroTexture()];
+  const [, shade, zero] = owned;
   const u = material.uniforms;
   // Its own rasters, and a black stand-in for every sampler a backdrop never reads: no
   // ids, no borders, no outline fields. A zero India field reads as "not India", which

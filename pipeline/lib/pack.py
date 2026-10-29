@@ -7,7 +7,7 @@ header: {"width", "height", "channels", "dtype": "uint8"|"int16", "predictor":
 The payload is the prediction residual of the row-major, channel-interleaved samples,
 little-endian, computed with wrapping arithmetic in the sample type. With "layout":
 "planar" the residuals are stored a whole channel at a time instead, which gzips a
-fifth smaller when the channels are unrelated (ambient occlusion and coast). Predictors:
+fifth smaller when the channels are unrelated (the two border fields). Predictors:
   left:  pred = sample to the left (0 at column 0)
   plane: pred = left + up - upleft (0 outside the raster)
 "plane" behaves like PNG's filters and shrinks smooth data (heights) markedly;
